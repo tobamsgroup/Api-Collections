@@ -1,0 +1,31 @@
+info:
+  name: Bookmark a talent
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/organisation/tech-talents/67b661d7c84dd7079b9e7d56/bookmark?role=talent"
+  params:
+    - name: role
+      value: talent
+      type: query
+  auth:
+    type: bearer
+    token: "{{client_access}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test('"savedMentees" includes the menteeId from request parameters', function () {
+                const talentId = req.getUrl().path[4]
+                expect(res.getBody().data.savedTalents).to.include(talentId);
+            }
+        );
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

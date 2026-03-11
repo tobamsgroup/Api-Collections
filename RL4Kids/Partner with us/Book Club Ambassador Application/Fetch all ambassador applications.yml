@@ -1,0 +1,130 @@
+info:
+  name: Fetch all ambassador applications
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/book-club-ambassadors"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/book-club-ambassadors"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1777"
+        - name: ETag
+          value: W/"6f1-MXAnamMmQUg5HX9ddtqmN9uLgV0"
+        - name: Date
+          value: Wed, 18 Jun 2025 14:23:20 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Requests fetched successfully",
+              "timestamp": "2025-06-18T14:23:20.359Z",
+              "path": "/api/v1/book-club-ambassador",
+              "service": "RL4KIDS",
+              "version": "1.0.0",
+              "data": {
+                  "currentCount": 2,
+                  "totalCount": 2,
+                  "applications": [
+                      {
+                          "_id": "68529fec09e8265a2c3730e4",
+                          "basicInfo": {
+                              "firstName": "Jane",
+                              "lastName": "Doe",
+                              "email": "jane.adoe@example.com",
+                              "phoneNumber": "+2348012345678",
+                              "country": "Nigeria",
+                              "state": "Lagos"
+                          },
+                          "additionalInfo": {
+                              "educationExperience": "5 years teaching English in secondary school.",
+                              "ambassadorReason": "I want to inspire a love of reading in my community.",
+                              "uploadedIdUrl": "http://res.cloudinary.com/djmta0726/image/upload/v1750245117/rl4kids/book-club-ambassador/iL6RUTL-akatsuki-wallpaper-hd.jpg",
+                              "bookClubType": "Local Book Club"
+                          },
+                          "localClubInfo": {
+                              "organisationName": "Green Schools",
+                              "organisationType": "School",
+                              "intendedStartDate": "2024-09-01T00:00:00.000Z",
+                              "requiredBookManual": "Online Digital",
+                              "estimatedChildren": 20
+                          },
+                          "createdAt": "2025-06-18T11:15:56.881Z",
+                          "updatedAt": "2025-06-18T11:15:56.881Z"
+                      },
+                      {
+                          "_id": "68529f7709e8265a2c3730e0",
+                          "basicInfo": {
+                              "firstName": "Jane",
+                              "lastName": "Doe",
+                              "email": "jane.doe@example.com",
+                              "phoneNumber": "+2348012345678",
+                              "country": "Nigeria",
+                              "state": "Lagos"
+                          },
+                          "additionalInfo": {
+                              "educationExperience": "5 years teaching English in secondary school.",
+                              "ambassadorReason": "I want to inspire a love of reading in my community.",
+                              "idUploadUrl": "http://res.cloudinary.com/djmta0726/image/upload/v1750245117/rl4kids/book-club-ambassador/iL6RUTL-akatsuki-wallpaper-hd.jpg",
+                              "bookClubType": "Online Digital Book Club"
+                          },
+                          "localClubInfo": {
+                              "organisationName": "Green Schools",
+                              "organisationType": "School",
+                              "intendedStartDate": "2024-09-01T00:00:00.000Z",
+                              "estimatedChildren": 20
+                          },
+                          "createdAt": "2025-06-18T11:13:59.329Z",
+                          "updatedAt": "2025-06-18T11:13:59.329Z"
+                      }
+                  ]
+              }
+          }

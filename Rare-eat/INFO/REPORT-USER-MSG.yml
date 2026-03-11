@@ -1,0 +1,26 @@
+info:
+  name: REPORT-USER-MSG
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{URL}}/info/create/report"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"title\": \"hello\",\r
+
+      \    \"content\": \"I will like to make request for a free food and a free delivery as i will like to taste and be your ambassador.\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

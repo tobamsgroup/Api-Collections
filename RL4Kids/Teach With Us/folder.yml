@@ -1,0 +1,7 @@
+info:
+  name: Teach With Us
+  type: folder
+  seq: 13
+
+request:
+  auth: inherit

@@ -1,0 +1,21 @@
+info:
+  name: Compare multiple plans
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{BASE}}/plans/compare"
+  body:
+    type: json
+    data: |-
+      {
+          "planIds": ["688772e850412d1e84333088"]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

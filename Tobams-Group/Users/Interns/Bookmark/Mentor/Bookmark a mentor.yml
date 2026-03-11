@@ -1,0 +1,25 @@
+info:
+  name: Bookmark a mentor
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{BASE}}/interns/mentors/67b66148ad4271308086ad75/bookmark"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test('"savedMentors" includes the mentorId from request parameters', function () {
+                const mentorId = req.getUrl().path[4]
+                expect(res.getBody().data.savedMentors).to.include(mentorId);
+            }
+        );
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

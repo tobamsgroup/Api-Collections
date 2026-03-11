@@ -1,0 +1,21 @@
+info:
+  name: Suspend/pause subscription plan (p)
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: "{{URL}}/subscription/billing_plan/suspend?sub_Id=I-A8KUVJC8HSPK"
+  params:
+    - name: sub_Id
+      value: I-A8KUVJC8HSPK
+      type: query
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

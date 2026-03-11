@@ -1,0 +1,82 @@
+info:
+  name: Create Badge
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/badges"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Quick Adapter\",\r
+
+      \    \"description\": \"Strategy\",\r
+
+      \    \"type\": \"All Series\",\r
+
+      \    \"category\": \"Strategy\",\r
+
+      \    \"subcategory\": \"Series 6\",\r
+
+      \    \"imageUrl\": \"https://res.cloudinary.com/dddiqpeib/image/upload/v1770198244/rl4kids/badges/quick%20adapter.png\"               \r
+
+      }\r
+
+      \r
+
+      \r
+
+      // enum type {\r
+
+      //   LEARNING_JOURNEY = 'Learning Journey',\r
+
+      //   ALL_SERIES = 'All Series',\r
+
+      // }\r
+
+      \r
+
+      // enum category {\r
+
+      //   LEARNING_PROGRESS = 'Learning Progress',\r
+
+      //   CONSISTENCY = 'Consistency',\r
+
+      //   SKILL_MASTERY = 'Skill Mastery',\r
+
+      //   MOTIVATION = 'Motivation',\r
+
+      //   SPECIAL_OCCASION = 'Special Occasion',\r
+
+      //   MISSION = 'Mission/Mini-game',\r
+
+      //   GENERIC = 'Generic',\r
+
+      //   SUSTAINABILITY = 'Sustainability',\r
+
+      //   FINANCE = 'Finance',\r
+
+      //   LEADERSHIP = 'Leadership',\r
+
+      //   ENTREPRENEURSHIP = 'Entrepreneurship',\r
+
+      //   STRATEGY = 'Strategy',\r
+
+      // }\r
+
+      \r
+
+      //  BadgeSubcategory = Series 1 , Series 2, ...\r
+
+      \r
+
+      \r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

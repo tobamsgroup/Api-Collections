@@ -1,0 +1,823 @@
+info:
+  name: CREATE PRODUCT
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/companies/product/create"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"productId\": \"REB1298\",\r
+
+      \  \"productName\": \"Jollof Rice MIlk\",\r
+
+      \  \"category\": \"6582bc421089abe989701955\", \r
+
+      \  \"subcategory\": \"6582c11420766c5370743956\",\r
+
+      \  \"description\": \"Jollof rice is a legendary one-pot rice dish that is popular in many West African countries. It is ubiquitous in Nigeria, Cameroon, Ghana, Liberia, Togo, and Sierra Leone. In fact, this is the most popular party food in West Africa and has been gaining momentum elsewhere in East Africa. Our Rare Eat Jollof Rice is an easy, flavourful and perfectly cooked African classic dish. Rare Eat Jollof rice mix is made with fresh tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices\",\r
+
+      \  \"ingredient\": \"De-starched Rice, tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices.\",\r
+
+      \  \"nutritionalInfo\": \"Amount Per Serving Size – 100g Calories 265 Energy 1108KJ Total Fat 7.5g Saturated Fat 0.6g Sodium 239mg Potassium 121mg Total Carbohydrates 29g Dietary Fibre 0.8g Sugars 1.4g Protein 2.7g Vitamin A – 3% Vitamin C – 10% Calcium 1.5% Iron 5% \",\r
+
+      \  \"howToPrepare\": \"Cooks from frozen in 20 - 25 mins From Defrost 20 mins\",\r
+
+      \  \"dietaryInfo\": \"Allergy – Product may contain nuts Suitable for Vegetarians No added Sugar\",\r
+
+      \  \"storageInfo\": \"Keep Frozen (See Best before) Refrigerate and consume within 3 days Address International House, 64 Nile Street, London N1 7SR United Kingdom - Website - www.rareeat.com - Email - theteam@rareeat.com Instagram - @rareeat.uk, Facebook - @rareeat, Twitter - @rareeat\",\r
+
+      \  \"extra\": \"Made with 100% natural and organic ingredients\",\r
+
+      \  \"base_price\": 7.99,\r
+
+      \  \"spice_level\": [\"Hot\",\"Mild\", \"Medium\"],\r
+
+      \  \"size\": [\"900g\"],\r
+
+      \  \"side_protein\": [\"Beef\", \"Chicken\"],\r
+
+      \  \"numbers_of_pack\": [\"single\", \"pack of 5\", \"pack of 10\"],\r
+
+      \  \"search_tags\": [\"Jollof\", \"Africa jollof\", \"Nigeria jollof\"],\r
+
+      \  \r
+
+      \  \"variation_combination\": [\r
+
+      \    {\r
+
+      \      \"number_of_pack\": \"single\",\r
+
+      \      \"size\": \"900g\",\r
+
+      \      \"side_protein\": \"Beef\",\r
+
+      \      \"price\": 7.99,\r
+
+      \      \"discount_price\": 7.00,\r
+
+      \      \"subscriptiom_price\": 6.99,\r
+
+      \      \"SKU\": \"SKU123\",\r
+
+      \      \"stock_quantity\": 100\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"number_of_pack\": \"single\",\r
+
+      \      \"size\": \"900g\",\r
+
+      \      \"side_protein\": \"Chicken\",\r
+
+      \      \"price\": 7.99,\r
+
+      \      \"discount_price\": 7.00,\r
+
+      \      \"subscriptiom_price\": 6.99,\r
+
+      \      \"SKU\": \"SKU123\",\r
+
+      \      \"stock_quantity\": 100\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"number_of_pack\": \"single\",\r
+
+      \      \"size\": \"900g\",\r
+
+      \      \"side_protein\": \"Turkey\",\r
+
+      \      \"price\": 7.99,\r
+
+      \      \"discount_price\": 7.00,\r
+
+      \      \"subscriptiom_price\": 6.99,\r
+
+      \      \"SKU\": \"SKU123\",\r
+
+      \      \"stock_quantity\": 100\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"number_of_pack\": \"pack of 5\",\r
+
+      \      \"size\": \"900g\",\r
+
+      \      \"side_protein\": \"Vegan\",\r
+
+      \      \"price\": 37.99,\r
+
+      \      \"discount_price\": 7.00,\r
+
+      \      \"subscriptiom_price\": 36.99,\r
+
+      \      \"SKU\": \"SKU123\",\r
+
+      \      \"stock_quantity\": 100\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"number_of_pack\": \"pack of 5\",\r
+
+      \      \"size\": \"900g\",\r
+
+      \      \"side_protein\": \"Beef\",\r
+
+      \      \"price\": 37.99,\r
+
+      \      \"discount_price\": 7.00,\r
+
+      \      \"subscriptiom_price\": 36.99,\r
+
+      \      \"SKU\": \"SKU123\",\r
+
+      \      \"stock_quantity\": 100\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"number_of_pack\": \"pack of 5\",\r
+
+      \      \"size\": \"900g\",\r
+
+      \      \"side_protein\": \"Chicken\",\r
+
+      \      \"price\": 37.99,\r
+
+      \      \"discount_price\": 7.00,\r
+
+      \      \"subscriptiom_price\": 36.99,\r
+
+      \      \"SKU\": \"SKU123\",\r
+
+      \      \"stock_quantity\": 100\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"number_of_pack\": \"pack of 10\",\r
+
+      \      \"size\": \"900g\",\r
+
+      \      \"side_protein\": \"Beef\",\r
+
+      \      \"price\": 75,\r
+
+      \      \"discount_price\": 74.00,\r
+
+      \      \"subscriptiom_price\": 75,\r
+
+      \      \"SKU\": \"SKU123\",\r
+
+      \      \"stock_quantity\": 100\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"number_of_pack\": \"pack of 10\",\r
+
+      \      \"size\": \"900g\",\r
+
+      \      \"side_protein\": \"Chicken\",\r
+
+      \      \"price\": 75,\r
+
+      \      \"discount_price\": 74.00,\r
+
+      \      \"subscriptiom_price\": 74,\r
+
+      \      \"SKU\": \"SKU123\",\r
+
+      \      \"stock_quantity\": 100\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"number_of_pack\": \"pack of 10\",\r
+
+      \      \"size\": \"900g\",\r
+
+      \      \"side_protein\": \"Turkey\",\r
+
+      \      \"price\": 75,\r
+
+      \      \"discount_price\": 74.00,\r
+
+      \      \"subscriptiom_price\": 74,\r
+
+      \      \"SKU\": \"SKU123\",\r
+
+      \      \"stock_quantity\": 100\r
+
+      \    }\r
+
+      \  ]\r
+
+      }\r\n"
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        let product = {
+          "productId": "REB129",
+          "productName": "Jollof Rice",
+          "category": "6582bc421089abe989701955", 
+          "subcategory": "6582c11420766c5370743956",
+          "description": "Jollof rice is a legendary one-pot rice dish that is popular in many West African countries. It is ubiquitous in Nigeria, Cameroon, Ghana, Liberia, Togo, and Sierra Leone. In fact, this is the most popular party food in West Africa and has been gaining momentum elsewhere in East Africa. Our Rare Eat Jollof Rice is an easy, flavourful and perfectly cooked African classic dish. Rare Eat Jollof rice mix is made with fresh tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices",
+          "ingredient": "De-starched Rice, tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices.",
+          "nutritionalInfo": "Amount Per Serving Size – 100g Calories 265 Energy 1108KJ Total Fat 7.5g Saturated Fat 0.6g Sodium 239mg Potassium 121mg Total Carbohydrates 29g Dietary Fibre 0.8g Sugars 1.4g Protein 2.7g Vitamin A – 3% Vitamin C – 10% Calcium 1.5% Iron 5% ",
+          "howToPrepare": "Cooks from frozen in 20 - 25 mins From Defrost 20 mins",
+          "dietaryInfo": "Allergy – Product may contain nuts Suitable for Vegetarians No added Sugar",
+          "storageInfo": "Keep Frozen (See Best before) Refrigerate and consume within 3 days Address International House, 64 Nile Street, London N1 7SR United Kingdom - Website - www.rareeat.com - Email - theteam@rareeat.com Instagram - @rareeat.uk, Facebook - @rareeat, Twitter - @rareeat",
+          "extra": "Made with 100% natural and organic ingredients",
+          "base_price": 7.99,
+          "spice_level": ["Hot","Mild", "Medium"],
+          "size": ["900g"],
+          "side_protein": [],
+          "numbers_of_pack": ["single", "pack of 5", "pack of 10"],
+          "search_tags": ["Jollof", "Africa jollof", "Nigeria jollof"],
+          
+          "variation_combination": [
+            {
+              "number_of_pack": "single",
+              "size": "900g",
+              "side_protein": null,
+              "price": 7.99,
+              "discount_price": 7.00,
+              "subscriptiom_price": 6.99,
+              "SKU": "SKU123",
+              "stock_quantity": 100
+            },
+            {
+              "number_of_pack": "single",
+              "size": "900g",
+              "side_protein": null,
+              "price": 7.99,
+              "discount_price": 7.00,
+              "subscriptiom_price": 6.99,
+              "SKU": "SKU123",
+              "stock_quantity": 100
+            },
+            {
+              "number_of_pack": "single",
+              "size": "900g",
+              "side_protein": null,
+              "price": 7.99,
+              "discount_price": 7.00,
+              "subscriptiom_price": 6.99,
+              "SKU": "SKU123",
+              "stock_quantity": 100
+            },
+            {
+              "number_of_pack": "pack of 5",
+              "size": "900g",
+              "side_protein": null,
+              "price": 37.99,
+              "discount_price": 7.00,
+              "subscriptiom_price": 36.99,
+              "SKU": "SKU123",
+              "stock_quantity": 100
+            },
+            {
+              "number_of_pack": "pack of 5",
+              "size": "900g",
+              "side_protein": null,
+              "price": 37.99,
+              "discount_price": 7.00,
+              "subscriptiom_price": 36.99,
+              "SKU": "SKU123",
+              "stock_quantity": 100
+            },
+            {
+              "number_of_pack": "pack of 5",
+              "size": "900g",
+              "side_protein": null,
+              "price": 37.99,
+              "discount_price": 7.00,
+              "subscriptiom_price": 36.99,
+              "SKU": "SKU123",
+              "stock_quantity": 100
+            },
+            {
+              "number_of_pack": "pack of 10",
+              "size": "900g",
+              "side_protein": null,
+              "price": 75,
+              "discount_price": 74.00,
+              "subscriptiom_price": 75,
+              "SKU": "SKU123",
+              "stock_quantity": 100
+            },
+            {
+              "number_of_pack": "pack of 10",
+              "size": "900g",
+              "side_protein": null,
+              "price": 75,
+              "discount_price": 74.00,
+              "subscriptiom_price": 74,
+              "SKU": "SKU123",
+              "stock_quantity": 100
+            },
+            {
+              "number_of_pack": "pack of 10",
+              "size": "900g",
+              "side_protein": null,
+              "price": 75,
+              "discount_price": 74.00,
+              "subscriptiom_price": 74,
+              "SKU": "SKU123",
+              "stock_quantity": 100
+            }
+          ]
+        } ;
+
+        // Convert the product object to a JSON string
+        let productString = JSON.stringify(product);
+
+        // Set the product object as a global variable
+        bru.setGlobalEnvVar('product', productString);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: CREATE PRODUCT
+    request:
+      url: "{{URL}}/companies/product/create"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"productId\": \"REJR001\",\r
+
+          \  \"productName\": \"Jollof Rice\",\r
+
+          //   \"productImage\": [\"image1.jpg\", \"image2.jpg\"],\r
+
+          \  \"category\": \"65524ef422a120f3ad92ba0e\", \r
+
+          \  \"subcategory\": \"6552502e22a120f3ad92ba1b\",\r
+
+          \  \"description\": \"Jollof rice is a legendary one-pot rice dish that is popular in many West African countries. It is ubiquitous in Nigeria, Cameroon, Ghana, Liberia, Togo, and Sierra Leone. In fact, this is the most popular party food in West Africa and has been gaining momentum elsewhere in East Africa. Our Rare Eat Jollof Rice is an easy, flavourful and perfectly cooked African classic dish. Rare Eat Jollof rice mix is made with fresh tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices\",\r
+
+          \  \"ingredient\": \"De-starched Rice, tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices.\",\r
+
+          \  \"nutritionalInfo\": \"Amount Per Serving Size – 100g Calories 265 Energy 1108KJ Total Fat 7.5g Saturated Fat 0.6g Sodium 239mg Potassium 121mg Total Carbohydrates 29g Dietary Fibre 0.8g Sugars 1.4g Protein 2.7g Vitamin A – 3% Vitamin C – 10% Calcium 1.5% Iron 5% \",\r
+
+          \  \"howToPrepare\": \"Cooks from frozen in 20 - 25 mins From Defrost 20 mins\",\r
+
+          \  \"dietaryInfo\": \"Allergy – Product may contain nuts Suitable for Vegetarians No added Sugar\",\r
+
+          \  \"storageInfo\": \"Keep Frozen (See Best before) Refrigerate and consume within 3 days Address International House, 64 Nile Street, London N1 7SR United Kingdom - Website - www.rareeat.com - Email - theteam@rareeat.com Instagram - @rareeat.uk, Facebook - @rareeat, Twitter - @rareeat\",\r
+
+          \  \"extra\": \"Made with 100% natural and organic ingredients\",\r
+
+          \  \"base_price\": 7.99,\r
+
+          \  \"spice_level\": [\"Hot\",\"Mild\", \"Medium\"],\r
+
+          \  \"size\": [\"900g\"],\r
+
+          \  \"side_protein\": [],\r
+
+          \  \"numbers_of_pack\": [\"single\", \"pack of 5\", \"pack of 10\"],\r
+
+          \  \"search_tags\": [\"Jollof\", \"Africa jollof\", \"Nigeria jollof\"],\r
+
+          \  \r
+
+          \  \"variation_combination\": [\r
+
+          \    {\r
+
+          \      \"spice_level\": \"Hot\",\r
+
+          \      \"number_of_packs\": \"single\",\r
+
+          \      \"size\": \"900g\",\r
+
+          \      \"side_protein\": null,\r
+
+          \      \"price\": 7.99,\r
+
+          \      \"discount_price\": 7.00,\r
+
+          \      \"subscriptiom_price\": 6.99,\r
+
+          \      \"sales_price\": 7.49,\r
+
+          \      \"SKU\": \"SKU123\",\r
+
+          \      \"stock_quantity\": 100\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"spice_level\": \"Mild\",\r
+
+          \      \"number_of_packs\": \"single\",\r
+
+          \      \"size\": \"900g\",\r
+
+          \      \"side_protein\": null,\r
+
+          \      \"price\": 7.99,\r
+
+          \      \"discount_price\": 7.00,\r
+
+          \      \"subscriptiom_price\": 6.99,\r
+
+          \      \"sales_price\": 7.49,\r
+
+          \      \"SKU\": \"SKU123\",\r
+
+          \      \"stock_quantity\": 100\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"spice_level\": \"Medium\",\r
+
+          \      \"number_of_packs\": \"single\",\r
+
+          \      \"size\": \"900g\",\r
+
+          \      \"side_protein\": null,\r
+
+          \      \"price\": 7.99,\r
+
+          \      \"discount_price\": 7.00,\r
+
+          \      \"subscriptiom_price\": 6.99,\r
+
+          \      \"sales_price\": 7.49,\r
+
+          \      \"SKU\": \"SKU123\",\r
+
+          \      \"stock_quantity\": 100\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"spice_level\": \"Hot\",\r
+
+          \      \"number_of_packs\": \"pack of 5\",\r
+
+          \      \"size\": \"900g\",\r
+
+          \      \"side_protein\": null,\r
+
+          \      \"price\": 37.99,\r
+
+          \      \"discount_price\": 7.00,\r
+
+          \      \"subscriptiom_price\": 36.99,\r
+
+          \      \"sales_price\": 37.49,\r
+
+          \      \"SKU\": \"SKU123\",\r
+
+          \      \"stock_quantity\": 100\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"spice_level\": \"Medium\",\r
+
+          \      \"number_of_packs\": \"pack of 5\",\r
+
+          \      \"size\": \"900g\",\r
+
+          \      \"side_protein\": null,\r
+
+          \      \"price\": 37.99,\r
+
+          \      \"discount_price\": 7.00,\r
+
+          \      \"subscriptiom_price\": 36.99,\r
+
+          \      \"sales_price\": 37.49,\r
+
+          \      \"SKU\": \"SKU123\",\r
+
+          \      \"stock_quantity\": 100\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"spice_level\": \"Mild\",\r
+
+          \      \"number_of_packs\": \"pack of 5\",\r
+
+          \      \"size\": \"900g\",\r
+
+          \      \"side_protein\": null,\r
+
+          \      \"price\": 37.99,\r
+
+          \      \"discount_price\": 7.00,\r
+
+          \      \"subscriptiom_price\": 36.99,\r
+
+          \      \"sales_price\": 37.49,\r
+
+          \      \"SKU\": \"SKU123\",\r
+
+          \      \"stock_quantity\": 100\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"spice_level\": \"Hot\",\r
+
+          \      \"number_of_packs\": \"pack of 10\",\r
+
+          \      \"size\": \"900g\",\r
+
+          \      \"side_protein\": null,\r
+
+          \      \"price\": 75,\r
+
+          \      \"discount_price\": 74.00,\r
+
+          \      \"subscriptiom_price\": 75,\r
+
+          \      \"sales_price\": 74,\r
+
+          \      \"SKU\": \"SKU123\",\r
+
+          \      \"stock_quantity\": 100\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"spice_level\": \"Mild\",\r
+
+          \      \"number_of_packs\": \"pack of 10\",\r
+
+          \      \"size\": \"900g\",\r
+
+          \      \"side_protein\": null,\r
+
+          \      \"price\": 75,\r
+
+          \      \"discount_price\": 74.00,\r
+
+          \      \"subscriptiom_price\": 74,\r
+
+          \      \"sales_price\": 75,\r
+
+          \      \"SKU\": \"SKU123\",\r
+
+          \      \"stock_quantity\": 100\r
+
+          \    },\r
+
+          \    {\r
+
+          \      \"spice_level\": \"Medium\",\r
+
+          \      \"number_of_packs\": \"pack of 10\",\r
+
+          \      \"size\": \"900g\",\r
+
+          \      \"side_protein\": null,\r
+
+          \      \"price\": 75,\r
+
+          \      \"discount_price\": 74.00,\r
+
+          \      \"subscriptiom_price\": 74,\r
+
+          \      \"sales_price\": 75,\r
+
+          \      \"SKU\": \"SKU123\",\r
+
+          \      \"stock_quantity\": 100\r
+
+          \    }\r
+
+          \  ]\r
+
+          }\r\n"
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: RateLimit-Policy
+          value: 20;w=60
+        - name: RateLimit
+          value: limit=20, remaining=19, reset=60
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "4027"
+        - name: ETag
+          value: W/"fbb-eTqQV2AyFL6OfzzOB+RM3kW3bWk"
+        - name: Date
+          value: Tue, 12 Dec 2023 12:52:59 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "msg": "Product created successfully",
+              "productDetails": {
+                  "productId": "REJR001",
+                  "productName": "Jollof Rice",
+                  "productImage": [],
+                  "category": "65524ef422a120f3ad92ba0e",
+                  "subcategory": "6552502e22a120f3ad92ba1b",
+                  "description": "Jollof rice is a legendary one-pot rice dish that is popular in many West African countries. It is ubiquitous in Nigeria, Cameroon, Ghana, Liberia, Togo, and Sierra Leone. In fact, this is the most popular party food in West Africa and has been gaining momentum elsewhere in East Africa. Our Rare Eat Jollof Rice is an easy, flavourful and perfectly cooked African classic dish. Rare Eat Jollof rice mix is made with fresh tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices",
+                  "ingredient": "De-starched Rice, tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices.",
+                  "nutritionalInfo": "Amount Per Serving Size – 100g Calories 265 Energy 1108KJ Total Fat 7.5g Saturated Fat 0.6g Sodium 239mg Potassium 121mg Total Carbohydrates 29g Dietary Fibre 0.8g Sugars 1.4g Protein 2.7g Vitamin A – 3% Vitamin C – 10% Calcium 1.5% Iron 5% ",
+                  "howToPrepare": "Cooks from frozen in 20 - 25 mins From Defrost 20 mins",
+                  "dietaryInfo": "Allergy – Product may contain nuts Suitable for Vegetarians No added Sugar",
+                  "storageInfo": "Keep Frozen (See Best before) Refrigerate and consume within 3 days Address International House, 64 Nile Street, London N1 7SR United Kingdom - Website - www.rareeat.com - Email - theteam@rareeat.com Instagram - @rareeat.uk, Facebook - @rareeat, Twitter - @rareeat",
+                  "extra": "Made with 100% natural and organic ingredients",
+                  "base_price": 7.99,
+                  "spice_level": [
+                      "Hot",
+                      "Mild",
+                      "Medium"
+                  ],
+                  "size": [
+                      "900g"
+                  ],
+                  "side_protein": [],
+                  "numbers_of_pack": [
+                      "single",
+                      "pack of 5",
+                      "pack of 10"
+                  ],
+                  "search_tags": [
+                      "Jollof",
+                      "Africa jollof",
+                      "Nigeria jollof"
+                  ],
+                  "variation_combination": [
+                      {
+                          "spice_level": "Hot",
+                          "number_of_packs": "single",
+                          "size": "900g",
+                          "side_protein": null,
+                          "price": 7.99,
+                          "discount_price": 7,
+                          "subscriptiom_price": 6.99,
+                          "sales_price": 7.49,
+                          "SKU": "SKU123",
+                          "stock_quantity": 100,
+                          "_id": "657857ab1d22579b1a5148db"
+                      },
+                      {
+                          "spice_level": "Mild",
+                          "number_of_packs": "single",
+                          "size": "900g",
+                          "side_protein": null,
+                          "price": 7.99,
+                          "discount_price": 7,
+                          "subscriptiom_price": 6.99,
+                          "sales_price": 7.49,
+                          "SKU": "SKU123",
+                          "stock_quantity": 100,
+                          "_id": "657857ab1d22579b1a5148dc"
+                      },
+                      {
+                          "spice_level": "Medium",
+                          "number_of_packs": "single",
+                          "size": "900g",
+                          "side_protein": null,
+                          "price": 7.99,
+                          "discount_price": 7,
+                          "subscriptiom_price": 6.99,
+                          "sales_price": 7.49,
+                          "SKU": "SKU123",
+                          "stock_quantity": 100,
+                          "_id": "657857ab1d22579b1a5148dd"
+                      },
+                      {
+                          "spice_level": "Hot",
+                          "number_of_packs": "pack of 5",
+                          "size": "900g",
+                          "side_protein": null,
+                          "price": 37.99,
+                          "discount_price": 7,
+                          "subscriptiom_price": 36.99,
+                          "sales_price": 37.49,
+                          "SKU": "SKU123",
+                          "stock_quantity": 100,
+                          "_id": "657857ab1d22579b1a5148de"
+                      },
+                      {
+                          "spice_level": "Medium",
+                          "number_of_packs": "pack of 5",
+                          "size": "900g",
+                          "side_protein": null,
+                          "price": 37.99,
+                          "discount_price": 7,
+                          "subscriptiom_price": 36.99,
+                          "sales_price": 37.49,
+                          "SKU": "SKU123",
+                          "stock_quantity": 100,
+                          "_id": "657857ab1d22579b1a5148df"
+                      },
+                      {
+                          "spice_level": "Mild",
+                          "number_of_packs": "pack of 5",
+                          "size": "900g",
+                          "side_protein": null,
+                          "price": 37.99,
+                          "discount_price": 7,
+                          "subscriptiom_price": 36.99,
+                          "sales_price": 37.49,
+                          "SKU": "SKU123",
+                          "stock_quantity": 100,
+                          "_id": "657857ab1d22579b1a5148e0"
+                      },
+                      {
+                          "spice_level": "Hot",
+                          "number_of_packs": "pack of 10",
+                          "size": "900g",
+                          "side_protein": null,
+                          "price": 75,
+                          "discount_price": 74,
+                          "subscriptiom_price": 75,
+                          "sales_price": 74,
+                          "SKU": "SKU123",
+                          "stock_quantity": 100,
+                          "_id": "657857ab1d22579b1a5148e1"
+                      },
+                      {
+                          "spice_level": "Mild",
+                          "number_of_packs": "pack of 10",
+                          "size": "900g",
+                          "side_protein": null,
+                          "price": 75,
+                          "discount_price": 74,
+                          "subscriptiom_price": 74,
+                          "sales_price": 75,
+                          "SKU": "SKU123",
+                          "stock_quantity": 100,
+                          "_id": "657857ab1d22579b1a5148e2"
+                      },
+                      {
+                          "spice_level": "Medium",
+                          "number_of_packs": "pack of 10",
+                          "size": "900g",
+                          "side_protein": null,
+                          "price": 75,
+                          "discount_price": 74,
+                          "subscriptiom_price": 74,
+                          "sales_price": 75,
+                          "SKU": "SKU123",
+                          "stock_quantity": 100,
+                          "_id": "657857ab1d22579b1a5148e3"
+                      }
+                  ],
+                  "_id": "657857ab1d22579b1a5148da",
+                  "createdAt": "2023-12-12T12:52:59.234Z",
+                  "updatedAt": "2023-12-12T12:52:59.234Z",
+                  "__v": 0
+              }
+          }

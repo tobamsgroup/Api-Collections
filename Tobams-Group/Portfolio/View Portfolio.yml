@@ -1,0 +1,187 @@
+info:
+  name: View Portfolio
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{BASE}}/portfolio/details/67182239bad7612a1c48de97"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Reference error
+    request:
+      url: "{{@harek}}/portfolio/details/65e8319c3afd7855e182bee"
+      method: GET
+    response:
+      statusText: "500"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "55"
+        - name: ETag
+          value: W/"37-dj9sxytXOCxkSTzfc8JrbVqliYI"
+        - name: Date
+          value: Fri, 08 Mar 2024 18:31:10 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Invalid Article Reference"
+          }
+  - name: Not found
+    request:
+      url: "{{@harek}}/portfolio/details/65e8319c3afd7855e182bee4"
+      method: GET
+    response:
+      statusText: "404"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "47"
+        - name: ETag
+          value: W/"2f-lP51/nJ0me4Qz2AowvBzi8s/+zg"
+        - name: Date
+          value: Fri, 08 Mar 2024 18:32:54 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Project not found"
+          }
+  - name: Success
+    request:
+      url: "{{@harek}}/portfolio/details/65eb4fdb96f77a75a371ad1f"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "416"
+        - name: ETag
+          value: W/"1a0-UpYZmJnQiKDGRxZ57KFKYsWL8as"
+        - name: Date
+          value: Fri, 08 Mar 2024 18:33:50 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "data": {
+                  "_id": "65eb4fdb96f77a75a371ad1f",
+                  "title": "Rare Eat",
+                  "description": "This is the description",
+                  "challenges": "This was the challenge behind the solution",
+                  "solution": "This is the soluiton",
+                  "coverPhoto": "https://res.cloudinary.com/uploads/image754608757.png",
+                  "category": [
+                      "Mobile App Development"
+                  ],
+                  "icon": "https://res.cloudinary.com/uploads/image7546757.png",
+                  "createdAt": "2024-03-08T17:50:19.327Z"
+              }
+          }
+
+docs: With this endpoint you can view a particular portfolio project by parsing a valid portfolio `ObjectId` as params. A `Reference Error` is returned if an invalid `ObjectId` is parsed as params, a `Not Found Error` when the `ObjectId` is invalid and `Success` response when the request is valid

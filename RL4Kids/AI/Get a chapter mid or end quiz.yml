@@ -1,0 +1,17 @@
+info:
+  name: Get a chapter mid or end quiz
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/ai/quiz/6836c8b91607a7982ff81fe6/end"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

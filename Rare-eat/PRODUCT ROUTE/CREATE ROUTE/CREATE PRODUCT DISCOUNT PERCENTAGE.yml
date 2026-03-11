@@ -1,0 +1,21 @@
+info:
+  name: CREATE PRODUCT DISCOUNT PERCENTAGE
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{URL}}/companies/product/discount_percentage"
+  body:
+    type: json
+    data: "{\r
+
+      \   \"product_price_percentage\": 4\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

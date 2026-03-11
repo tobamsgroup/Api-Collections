@@ -1,0 +1,215 @@
+info:
+  name: filter by contract type &/or location
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{URL}}/job_in_house/filter?contractType=FullTime&location=Remote&page=0&limit=10"
+  params:
+    - name: contractType
+      value: FullTime
+      type: query
+    - name: location
+      value: Remote
+      type: query
+    - name: page
+      value: "0"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+  body:
+    type: json
+    data: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{URL}}/job_in_house/filter?contractType=FullTime&location=Remote&page=0&limit=10"
+      method: GET
+      params:
+        - name: contractType
+          value: FullTime
+          type: query
+        - name: location
+          value: Remote
+          type: query
+        - name: page
+          value: "0"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "5792"
+        - name: ETag
+          value: W/"16a0-UyzCdaZlCQy61Rzf9CEO/aaCGQ0"
+        - name: Date
+          value: Wed, 31 Jul 2024 01:30:18 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "data": {
+                  "count": 3,
+                  "result": [
+                      {
+                          "_id": "669a8ccd5d56670ab45aed2b",
+                          "userId": "6690035b5921cf3d45a3d725",
+                          "companyName": "Tobams Group",
+                          "title": "Product (Ui/Ux) Designer",
+                          "jobDescription": "As a Product Designer, you will be a crucial member of our dynamic and innovative team responsible for crafting exceptional user experiences and visually stunning products. You will collaborate closely with cross-functional teams, including product managers, engineers, and user researchers, to translate ideas into intuitive and visually appealing designs. Your role will be essential in driving the success of our products and enhancing customer satisfaction.",
+                          "contractType": "FullTime",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "responsibilities": [
+                              "User-Centric Design: Create user-centric designs by understanding user needs, conducting research, and empathizing with user pain points to deliver seamless and intuitive product experiences.",
+                              "Interface Design: Develop wireframes, mockups, and interactive prototypes to design visually appealing and user-friendly interfaces that align with the product’s goals and brand identity.",
+                              "Design System Management: Establish and maintain design systems, style guides, and UI components to ensure design consistency across various platforms and products.",
+                              "Collaborative Ideation: Collaborate with product managers, engineers, and other stakeholders in brainstorming sessions, idea generation, and concept development to foster a creative and collaborative environment.",
+                              "Usability Testing: Participate in usability testing and gather user feedback to iteratively improve designs and optimize product usability.",
+                              "Continuous Learning: Stay up-to-date with industry trends, best practices, and emerging technologies in design to bring fresh perspectives and innovative solutions to our products.",
+                              "Agile Workflow: Work in an agile development environment, delivering designs and assets in a timely manner to support the development process.",
+                              "Accessibility: Ensure designs adhere to accessibility guidelines and make products inclusive to users with diverse needs.",
+                              "Visual Design: Create visually appealing designs, incorporating colors, typography, and graphics that align with the product’s overall aesthetic and brand guidelines."
+                          ],
+                          "skill": [
+                              "Illustrator",
+                              "Photoshop",
+                              "XD",
+                              "Sketch",
+                              "Figma",
+                              "HTML",
+                              "CSS",
+                              "JavaScript"
+                          ],
+                          "benefits": [],
+                          "extraText": "Our company values creativity, innovation, and a passion for delivering exceptional products to our users. As a Product Designer, you will play a vital role in shaping the future of our products and contributing to our mission of providing outstanding user experiences. Join our team and embark on a rewarding journey of designing products that impact and improve the lives of millions of users worldwide.",
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": 2000000,
+                          "salaryMaxRange": 5000000,
+                          "owner": "In-House"
+                      },
+                      {
+                          "_id": "669a8ed55d56670ab45aed2e",
+                          "userId": "6690035b5921cf3d45a3d725",
+                          "companyName": "Tobams Group",
+                          "title": "Wordpress Developer Intern",
+                          "jobDescription": "We are seeking a skilled WordPress Developer intern to join our team. As a WordPress Developer, you will play a crucial role in designing and developing custom websites and web applications using WordPress as the primary platform. Your expertise in WordPress theme and plugin development, along with your knowledge of web technologies, will enable you to create exceptional user experiences and robust solutions.",
+                          "contractType": "FullTime",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "responsibilities": [
+                              "Design, implement, and manage websites using wordpress.",
+                              "Manage the front-end and back-end website development.",
+                              "Customize and extend existing WordPress themes and plugins to meet specific project needs.",
+                              "Implement responsive design principles to ensure seamless user experiences across different devices.",
+                              "Monitoring, reviewing and revising the performance of live websites.",
+                              "Collaborate with designers and project managers to translate client requirements into functional WordPress websites.",
+                              "Conduct thorough testing and debugging to ensure the delivery of high-quality websites.",
+                              "Stay updated with the latest WordPress updates, trends, and emerging technologies in web development.",
+                              "Optimize website performance and security through code optimization and implementing best practices."
+                          ],
+                          "skill": [
+                              "MySQL",
+                              "PHP",
+                              "HTML",
+                              "CSS",
+                              "JavaScript"
+                          ],
+                          "benefits": [],
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": 1000000,
+                          "salaryMaxRange": 3500000,
+                          "owner": "In-House"
+                      },
+                      {
+                          "_id": "66a978598e297eba4ccf9d9a",
+                          "userId": "6690035b5921cf3d45a3d725",
+                          "companyName": "Tobams Group",
+                          "title": "Social Media Manager",
+                          "jobDescription": "As a Social Media Manager at Tobams Group. This position offers an exciting opportunity to work on diverse projects and contribute to the success of our organization.",
+                          "contractType": "FullTime",
+                          "location": "Remote",
+                          "region": [
+                              "Abuja"
+                          ],
+                          "responsibilities": [
+                              "Prepare clear and concise documentation of business requirements, process flows, and analysis findings.",
+                              "Create reports and presentations to communicate analysis results and recommendations to stakeholders.",
+                              "Identify opportunities for process optimization and participate in improvement initiatives.",
+                              "Assist in project planning, monitoring, and resolution of project-related issues.",
+                              "Collaborate with quality assurance teams to ensure solutions meet business requirements.",
+                              "Engage with stakeholders to understand their needs and manage expectations."
+                          ],
+                          "skill": [
+                              "Socials Mgt",
+                              "Problem-solving",
+                              "Communication",
+                              "Interpersonal Abilities",
+                              "Advert"
+                          ],
+                          "benefits": [
+                              "Valuable hands-on experience.",
+                              "Opportunity for permanent employment based on performance."
+                          ],
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": 2000000,
+                          "salaryMaxRange": 4500000,
+                          "owner": "In-House"
+                      }
+                  ]
+              }
+          }

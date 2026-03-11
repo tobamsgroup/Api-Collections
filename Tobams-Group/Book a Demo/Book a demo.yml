@@ -1,0 +1,44 @@
+info:
+  name: Book a demo
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/request-demo"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"companyName\": \"Tech Innovations Inc.\",\r
+
+      \  \"industry\": \"Software Development\",\r
+
+      \  \"organisationSize\": \"1-10\",\r
+
+      \  \"country\": \"United States\",\r
+
+      \  \"fullname\": \"John Doe\",\r
+
+      \  \"jobTitle\": \"HR Manager\",\r
+
+      \  \"workEmail\": \"john.doe@techinnovations.com\",\r
+
+      \  \"phoneNumber\":\"12323434456\",\r
+
+      \  \"usagePlan\": [\"recruitment\", \"talent-sourcing\"],\r
+
+      \  \"primaryGoal\": \"To streamline our hiring process and reduce time-to-hire\",\r
+
+      \  \"additionalDetails\": \"We are looking to integrate your platform with our existing HRIS system.\",\r
+
+      \  \"agree\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

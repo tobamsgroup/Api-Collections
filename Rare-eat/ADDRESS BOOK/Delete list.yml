@@ -1,0 +1,17 @@
+info:
+  name: Delete list
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{URL}}/user/address-book/delete/6569eb7eee82f501044a4441"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

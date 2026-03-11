@@ -1,0 +1,126 @@
+info:
+  name: Create Assessment courses
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/courses/create"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Career Development\",\r
+
+      \    \"price\": 120000,\r
+
+      \    \"productType\": \"assessment\",\r
+
+      \    \"keyFocus\": [\"Technical Skills\", \"Soft Skills\", \"Leadership Skills\"],\r
+
+      \    \"description\": \"Ready to land your dream role? Assess your career readiness, sharpen essential soft skills, and unlock your leadership potential to stand out in today’s competitive job market. This assessment is MANDATORY  to join the TG platform and access tailored opportunities.\",\r
+
+      \    \"isMandatory\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Create Assessment courses
+    request:
+      url: "{{BASE}}/courses/create"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\": \"Career Development\",\r
+
+          \    \"price\": 120000,\r
+
+          \    \"productType\": \"assessment\",\r
+
+          \    \"keyFocus\": [\"Technical Skills\", \"Soft Skills\", \"Leadership Skills\"],\r
+
+          \    \"description\": \"Ready to land your dream role? Assess your career readiness, sharpen essential soft skills, and unlock your leadership potential to stand out in today’s competitive job market. This assessment is MANDATORY  to join the TG platform and access tailored opportunities.\",\r
+
+          \    \"isMandatory\": true\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "604"
+        - name: ETag
+          value: W/"25c-9se5D7BoI3zb5Pq7V/z8TWxMc2o"
+        - name: Set-Cookie
+          value: connect.sid=s%3A1NISGdzABTeCee9ON8YHm4R97HMzKdIK.98XyswoVtMTyLWYjyLPxB7Tt2s1VK8paQlkKJCyYhbY; Path=/; HttpOnly
+        - name: Date
+          value: Tue, 24 Dec 2024 06:36:36 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Product created successfully!",
+              "data": {
+                  "name": "Career Development",
+                  "price": 120000,
+                  "keyFocus": [
+                      "Technical Skills",
+                      "Soft Skills",
+                      "Leadership Skills"
+                  ],
+                  "description": "Ready to land your dream role? Assess your career readiness, sharpen essential soft skills, and unlock your leadership potential to stand out in today’s competitive job market. This assessment is MANDATORY  to join the TG platform and access tailored opportunities.",
+                  "features": [],
+                  "isMandatory": true,
+                  "_id": "676a567340e02eff51e6cc25",
+                  "createdAt": "2024-12-24T06:36:36.290Z",
+                  "updatedAt": "2024-12-24T06:36:36.290Z"
+              }
+          }

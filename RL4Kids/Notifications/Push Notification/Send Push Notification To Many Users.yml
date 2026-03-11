@@ -1,0 +1,28 @@
+info:
+  name: Send Push Notification To Many Users
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/push-notifications/send-to-multiple-users"
+  body:
+    type: json
+    data: " {\r
+
+      \            \"title\": \"Testing\",\r
+
+      \            \"message\": \"Batch Notification sent to you!\",\r
+
+      \            \"userIds\": [\"696a446b790b9d1fd444d8f8\", \"696a446b79039d1fd444d8f8\"]\r
+
+      \ }"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

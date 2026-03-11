@@ -1,0 +1,196 @@
+info:
+  name: Get a client posted jobs
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{BASE}}/job_client/organisations?page=1&limit=10"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+  auth:
+    type: bearer
+    token: "{{org_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get a client posted jobs
+    request:
+      url: "{{BASE}}/job_client/organisations?page=1&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "6150"
+        - name: ETag
+          value: W/"1806-ZC1Xw2uFbNXY5GksF95Q4R8fqo8"
+        - name: Date
+          value: Tue, 25 Mar 2025 10:07:59 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Organisation posted jobs fetched successfully",
+              "data": {
+                  "currentCount": 1,
+                  "totalCount": 1,
+                  "jobs": [
+                      {
+                          "_id": "67d95578b3ea8eee43ef5ce4",
+                          "userId": "67bf2c6a974a6b52304105a0",
+                          "companyName": "Tobams Group Affliates",
+                          "title": "Business Development & Marketing Manager",
+                          "jobDescription": "Tobams Group is a leading consultancy focused on transforming training, development, and education in entrepreneurship, career, and talent development. Our flagship initiative, Recycled Learning, is an innovative learning management system (LMS) for kids, incorporating books, digital platforms, and AI-driven learning solutions. We are actively engaging community governments, schools, universities, and corporations to adopt Recycled Learning as a sustainable education solution. Our mission is to bridge educational gaps, enhance learning experiences, and create opportunities for young learners through a technology-driven approach.",
+                          "contractType": "Full-time",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Position Overview": [
+                                      "We are seeking a highly experienced and results-driven Business Development & Marketing Manager to spearhead the business expansion and client engagement efforts for Recycled Learning and other Tobams Group products. This is a high-profile role, requiring an individual with a strong sales, business development, and marketing background, with a proven track record of securing large-scale deals and partnerships. This role is primarily commission-based, with a competitive basic salary and an attractive 10% commission on every business deal closed. The ideal candidate must have the ability to strategically position the product, build lasting relationships, and drive high-value partnerships with government agencies, educational institutions, corporations, and private sector organization."
+                                  ]
+                              },
+                              {
+                                  "Key Responsibilities:": []
+                              },
+                              {
+                                  "Business Development & Client Acquisition": [
+                                      "Develop and execute a comprehensive business development strategy to attract and onboard community governments, schools, universities, and corporations.",
+                                      "Identify, engage, and negotiate partnerships with decision-makers, procurement officers, and key stakeholders in education and training sectors",
+                                      "Proactively research and identify new market opportunities, including tendering for government contracts and corporate learning programs.",
+                                      "Generate leads, conduct pitches, and close high-value deals for the implementation of Recycled Learning solutions."
+                                  ]
+                              },
+                              {
+                                  "Marketing & Brand Growth": [
+                                      "Develop and implement a marketing strategy to increase brand awareness and market penetration.",
+                                      "Lead the creation of marketing materials, digital campaigns, and promotional content that effectively communicate the value of Recycled Learning.",
+                                      "Organize and represent the company at industry conferences, exhibitions, and networking events to increase visibility and partnership opportunities.",
+                                      "Collaborate with the internal content development team to align product messaging with customer needs."
+                                  ]
+                              },
+                              {
+                                  "Sales Strategy & Revenue Growth": [
+                                      "Drive sales efforts through effective negotiation, pricing strategies, and closing tactics.",
+                                      "Develop and maintain a strong sales pipeline, ensuring a consistent flow of new business opportunities.",
+                                      "Work closely with the finance and leadership teams to create customized pricing models for different client segments.",
+                                      "Consistently achieve and exceed sales targets, ensuring a strong revenue stream"
+                                  ]
+                              },
+                              {
+                                  "Stakeholder Engagement & Relationship Management": [
+                                      "Build and maintain long-term relationships with key government officials, school administrators, university deans, corporate executives, and learning & development managers.",
+                                      "Work closely with partners and investors to explore co-funding and sponsorship opportunities.",
+                                      "Establish strategic alliances with international organizations for global expansion."
+                                  ]
+                              },
+                              {
+                                  "Performance Tracking & Reporting": [
+                                      "Develop key performance indicators (KPIs) to measure and track business development success.",
+                                      "Prepare and present detailed reports on sales, revenue, client acquisition, and market trends to leadership.",
+                                      "Continuously analyze competitor strategies and market trends to refine business development approaches."
+                                  ]
+                              },
+                              {
+                                  "Key Qualifications & Experience": [
+                                      "Minimum 7-10 years of experience in business development, sales, or marketing, preferably in the education, edtech, or training sectors.",
+                                      "Proven track record of closing large-scale deals and building high-value partnerships.",
+                                      "Extensive experience engaging with government bodies, educational institutions, and corporate organizations.",
+                                      "Strong negotiation, communication, and presentation skills.",
+                                      "Experience in developing and executing marketing campaigns and brand strategies.",
+                                      "Ability to work independently with a **strong entrepreneurial mindset.",
+                                      "Understanding of learning management systems (LMS), AI-driven education, and sustainability education is a plus."
+                                  ]
+                              },
+                              {
+                                  "Compensation & Benefits": [
+                                      "Basic Salary: Competitive",
+                                      "Commission: 10% of every business deal closed.",
+                                      "Flexible working arrangement (remote & on-site as needed).",
+                                      "High earning potential based on performance.",
+                                      "Opportunity to work with a pioneering team in sustainability and AI-driven education."
+                                  ]
+                              },
+                              {
+                                  "How To Apply": [
+                                      "Interested candidates should submit their CV and a cover letter detailing their relevant experience and achievements in business development.",
+                                      "Applications should be sent to theteam@tobamsgroup.com with the subject “Business Development & Marketing Manager – Tobams Group"
+                                  ]
+                              }
+                          ],
+                          "extraText": "Join Us & Make an Impact! This is a rare opportunity to be at the forefront of educational innovation and sustainability-driven learning. If you are an ambitious, target-driven professional looking for high earning potential and the chance to drive real change in education, we would love to hear from you!",
+                          "applicationCount": 2,
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": 200000,
+                          "salaryMaxRange": 500000,
+                          "owner": "Client",
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-03-18T11:14:00.771Z",
+                          "updatedAt": "2025-03-21T11:00:36.394Z"
+                      }
+                  ]
+              }
+          }

@@ -1,0 +1,22 @@
+info:
+  name: update CORPORATE profile picture
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{URL}}/user/corporate/profile/picture-update/651d29dda08780509eff6d08"
+  body:
+    type: multipart-form
+    data:
+      - name: image
+        type: file
+        value:
+          - /C:/Users/HP/Desktop/L.jpeg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

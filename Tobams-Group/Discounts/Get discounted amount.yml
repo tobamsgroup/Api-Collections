@@ -1,0 +1,261 @@
+info:
+  name: Get discounted amount
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/discounts/amount?amount=45000&code=SAVE20TG&organization=Tobams Group&purpose=assessment"
+  params:
+    - name: amount
+      value: "45000"
+      type: query
+    - name: code
+      value: SAVE20TG
+      type: query
+    - name: organization
+      value: Tobams Group
+      type: query
+    - name: purpose
+      value: assessment
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Inactive code error
+    request:
+      url: "{{BASE}}/discounts/amount"
+      method: GET
+      body:
+        type: json
+        data: |-
+          {
+              "amount": 45000,
+              "code": "SAVE100TG",
+              "organization": "Tobams Group",
+              "purpose": "assessment"
+          }
+    response:
+      statusText: "400"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1757582891354-0pbf0f042
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "88"
+        - name: ETag
+          value: W/"58-CNAirQ3URCMIp8gm9EnH99fDvVU"
+        - name: Date
+          value: Thu, 11 Sep 2025 09:28:11 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "error": "BadRequestError",
+              "message": "Discount code is no longer valid"
+          }
+  - name: Invalid discount code error
+    request:
+      url: "{{BASE}}/discounts/amount"
+      method: GET
+      body:
+        type: json
+        data: |-
+          {
+              "amount": 45000,
+              "code": "SAVE500TG",
+              "organization": "Tobams Group",
+              "purpose": "assessment"
+          }
+    response:
+      statusText: "404"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1757582957637-uwvgt323s
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "75"
+        - name: ETag
+          value: W/"4b-6Yf9bRyoHJFN1AxZSAEhcIt6S4U"
+        - name: Date
+          value: Thu, 11 Sep 2025 09:29:18 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "error": "NotFoundError",
+              "message": "Invalid discount code"
+          }
+  - name: Success
+    request:
+      url: "{{BASE}}/discounts/amount?amount=45000&code=SAVE50TG&organization=Tobams Group&purpose=subscription"
+      method: GET
+      params:
+        - name: amount
+          value: "45000"
+          type: query
+        - name: code
+          value: SAVE50TG
+          type: query
+        - name: organization
+          value: Tobams Group
+          type: query
+        - name: purpose
+          value: subscription
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1757782123997-nok4zwgqz
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "200"
+        - name: ETag
+          value: W/"c8-LkGZc9SOrneTn1o4UycCsjTQXyw"
+        - name: Date
+          value: Sat, 13 Sep 2025 16:48:44 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Discount calculated successfully",
+              "data": {
+                  "originalAmount": "45000",
+                  "discount": {
+                      "code": "SAVE50TG",
+                      "type": "percentage",
+                      "value": 50,
+                      "discountAmount": 22500
+                  },
+                  "finalAmount": 22500
+              }
+          }

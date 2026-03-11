@@ -1,0 +1,257 @@
+info:
+  name: Get my mentorship requests
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{BASE}}/mentorship/requests/users?type=sent"
+  params:
+    - name: type
+      value: sent
+      type: query
+      description: '"sent" or "received"'
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: (sent)
+    request:
+      url: "{{BASE}}/mentorship/users?type=sent"
+      method: GET
+      params:
+        - name: type
+          value: sent
+          type: query
+          description: '"sent" or "received"'
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "3234"
+        - name: ETag
+          value: W/"ca2-G7SdHItTpao3NnQgGQDqKKdhY+0"
+        - name: Date
+          value: Fri, 28 Feb 2025 11:39:21 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Sent mentorship requests fetched successfully",
+              "data": [
+                  {
+                      "content": {
+                          "name": "Sarah Johnson",
+                          "message": "My name is Sarah Johnson, and I’m an intern in product design at Creative Minds Studio. \nI’ve been following your work on the UX Redesign Project for BloomTech, and I deeply admire your approach to creating impactful and user-centered designs.\n\nI’m currently working on refining my skills in prototyping and building user flows for a project aimed at improving educational apps. I believe your guidance would be invaluable as I navigate these areas. Your expertise in designing seamless user experiences and leading innovative projects really resonates with the direction I want to grow in, and I would be honored to learn from you.\n\nIf you’re open to it, I’d love to discuss how we could structure a mentorship that aligns with your availability and expertise.\n\nThank you for considering my request. I look forward to hearing from you! 😊"
+                      },
+                      "_id": "67c0388cb8b986bbf6257e4d",
+                      "senderId": "67b66148ad4271308086ad89",
+                      "receiverId": "67b661d7c84dd7079b9e7d56",
+                      "mentorshipType": "One-to-One",
+                      "status": "Accepted",
+                      "createdAt": "2025-02-27T10:03:56.629Z",
+                      "updatedAt": "2025-02-27T17:10:39.608Z",
+                      "receiver": {
+                          "_id": "67b661d7c84dd7079b9e7d56",
+                          "title": "Backend Developer",
+                          "occupation": "Software Engineer",
+                          "firstName": "Vincent",
+                          "lastName": "Rosenbaum",
+                          "photo": "default.jpg",
+                          "skills": [
+                              "NextJS",
+                              "Communication",
+                              "Django"
+                          ],
+                          "mentorshipType": "One-on-One",
+                          "currentCompany": "Connelly Inc",
+                          "currentRole": "Senior Data Manager",
+                          "rating": 0
+                      }
+                  },
+                  {
+                      "content": {
+                          "name": "Sarah Johnson",
+                          "message": "My name is Sarah Johnson, and I’m an intern in product design at Creative Minds Studio. \nI’ve been following your work on the UX Redesign Project for BloomTech, and I deeply admire your approach to creating impactful and user-centered designs.\n\nI’m currently working on refining my skills in prototyping and building user flows for a project aimed at improving educational apps. I believe your guidance would be invaluable as I navigate these areas. Your expertise in designing seamless user experiences and leading innovative projects really resonates with the direction I want to grow in, and I would be honored to learn from you.\n\nIf you’re open to it, I’d love to discuss how we could structure a mentorship that aligns with your availability and expertise.\n\nThank you for considering my request. I look forward to hearing from you! 😊"
+                      },
+                      "_id": "67c046fcc6b8e861f5955476",
+                      "senderId": "67b66148ad4271308086ad89",
+                      "receiverId": "67b66148ad4271308086ad75",
+                      "mentorshipType": "One-to-One",
+                      "status": "Pending",
+                      "createdAt": "2025-02-27T11:05:32.984Z",
+                      "updatedAt": "2025-02-27T11:05:32.984Z",
+                      "receiver": {
+                          "_id": "67b66148ad4271308086ad75",
+                          "title": "Project Manager",
+                          "occupation": "Machine Learning Engineer",
+                          "bio": "Collum accusantium terebro tactus denego deprimo.",
+                          "firstName": "Eliezer",
+                          "lastName": "Green",
+                          "photo": "default.jpg",
+                          "skills": [
+                              "Data Visualization",
+                              "Strategic Planning",
+                              "Agile Methodologies"
+                          ],
+                          "mentorshipType": "Group",
+                          "companyName": "Lindgren - Hintz",
+                          "rating": 0,
+                          "yearsOfExperience": "3-5 years",
+                          "availability": [
+                              {
+                                  "days": [
+                                      "MON",
+                                      "WEEKDAYS"
+                                  ],
+                                  "times": [
+                                      "9:00 AM",
+                                      "11:00 AM",
+                                      "12:00 PM"
+                                  ],
+                                  "_id": "67b66149ad4271308086adaa"
+                              }
+                          ]
+                      }
+                  }
+              ]
+          }
+  - name: (received)
+    request:
+      url: "{{BASE}}/mentorship/users?type=received"
+      method: GET
+      params:
+        - name: type
+          value: received
+          type: query
+          description: '"sent" or "received"'
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1458"
+        - name: ETag
+          value: W/"5b2-Tfg/ZqCktZFFTKLM2RCWbZibW2E"
+        - name: Date
+          value: Fri, 28 Feb 2025 11:40:37 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "",
+              "data": [
+                  {
+                      "content": {
+                          "name": "Sarah Johnson",
+                          "message": "My name is Sarah Johnson, and I’m an intern in product design at Creative Minds Studio. \nI’ve been following your work on the UX Redesign Project for BloomTech, and I deeply admire your approach to creating impactful and user-centered designs.\n\nI’m currently working on refining my skills in prototyping and building user flows for a project aimed at improving educational apps. I believe your guidance would be invaluable as I navigate these areas. Your expertise in designing seamless user experiences and leading innovative projects really resonates with the direction I want to grow in, and I would be honored to learn from you.\n\nIf you’re open to it, I’d love to discuss how we could structure a mentorship that aligns with your availability and expertise.\n\nThank you for considering my request. I look forward to hearing from you! 😊"
+                      },
+                      "_id": "67c044bdc6b8e861f595546a",
+                      "senderId": "67b661d7c84dd7079b9e7d44",
+                      "receiverId": "67b66148ad4271308086ad89",
+                      "mentorshipType": "One-to-One",
+                      "status": "Accepted",
+                      "createdAt": "2025-02-27T10:55:57.584Z",
+                      "updatedAt": "2025-02-27T17:00:34.876Z",
+                      "sender": {
+                          "_id": "67b661d7c84dd7079b9e7d44",
+                          "title": "Data Analyst",
+                          "occupation": "Machine Learning Engineer",
+                          "firstName": "Gilberto",
+                          "lastName": "Tremblay",
+                          "photo": "default.jpg",
+                          "skills": [
+                              "Data Visualization",
+                              "AngularJS",
+                              "Public Speaking"
+                          ],
+                          "mentorshipType": "Group",
+                          "rating": 0
+                      }
+                  }
+              ]
+          }

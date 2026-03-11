@@ -1,0 +1,52 @@
+info:
+  name: REGISTER CORPORATE Copy
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/auth/corporate/register"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"isVerified\": \"true\",//please verify before allowing registration,\r
+
+      \    \"userId\": \"f54846dc-bbf7-4897-bbe5-cb99fad55ee3\",\r
+
+      \    \"email\": \"olacorporate@gmail.com\",\r
+
+      \    \"phoneNumber\": \"07012312415\",\r
+
+      \    \"businessName\": \"mikkymouse\",\r
+
+      \    \"location\": \"OAU\",\r
+
+      \    \"address\": \"ajanlekoko avenue\",\r
+
+      \    \"postalCode\": \"093455\",\r
+
+      \    \"bussinessRegisterationNumber\": \"7823834933293\",\r
+
+      \    \"taxIdentificationNumber\": \"7823834933293\",\r
+
+      \    \"website\": \"https://www.mikky.com\",\r
+
+      \    \"termsAndConditions\": true,\r
+
+      \    \"newsletterInterest\": false\r
+
+      \    //\"linkedInAccount\": \"https://www.linkedin.com/in/bola\",\r
+
+      \    //\"instagramAccount\": \"https://www.instagram.com/bola\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

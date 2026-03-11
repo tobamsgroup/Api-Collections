@@ -1,0 +1,123 @@
+info:
+  name: Create discount
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/discounts/create"
+  body:
+    type: json
+    data: |-
+      {
+          "uid": "development",  // user uid (uuid)
+          "code": "SAVE01TG",
+          "organization": "Tobams Group",
+          "purposes": ["assessment"], // assessment, subscription, training
+          "type": "percentage",
+          "value": 100,
+          "maxRedemptions": 10000, // Optional
+          "expiresAt": "2030-07-01", // Optional
+          "isActive": true // Optional
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/discounts/create"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "uid": "development",
+              "code": "SAVE20TG",
+              "organization": "TobamsGroup",
+              "purpose": "assessment",
+              "type": "percentage",
+              "value": 20,
+              "maxRedemptions": 10000, // Optional
+              "expiresAt": "2030-07-01", // Optional
+              "isActive": true // Optional
+
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1757582519713-ioyom2a9w
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "399"
+        - name: ETag
+          value: W/"18f-9S6GDNdRRIVGT/arRmZFfRoBBqU"
+        - name: Date
+          value: Thu, 11 Sep 2025 09:22:00 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Discount created successfully",
+              "data": {
+                  "uid": "developmentsss",
+                  "code": "SAVE20TG",
+                  "organization": "TobamsGroup",
+                  "purposes": ["assessment"],
+                  "type": "percentage",
+                  "value": 20,
+                  "maxRedemptions": 10000,
+                  "redemptions": 0,
+                  "expiresAt": "2030-07-01T00:00:00.000Z",
+                  "isActive": true,
+                  "_id": "68c294b8ed73e18a3801285b",
+                  "createdAt": "2025-09-11T09:22:00.347Z",
+                  "updatedAt": "2025-09-11T09:22:00.347Z"
+              }
+          }

@@ -1,0 +1,294 @@
+info:
+  name: find all talents with pagination Copy
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{BASE}}/talents/?page=1&limit=11"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "11"
+      type: query
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{URL}}/talent/all?pageNumber=0&limit=10"
+      method: GET
+      params:
+        - name: pageNumber
+          value: "0"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "3747"
+        - name: ETag
+          value: W/"ea3-PtQjxBRsePD6Cd8Gumn/q5GJklY"
+        - name: Date
+          value: Tue, 30 Jul 2024 20:23:01 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Talent found",
+              "data": {
+                  "count": 7,
+                  "result": [
+                      {
+                          "Contact": {
+                              "email": "enamesit@gmail.com",
+                              "telephone": "+2340970087834"
+                          },
+                          "_id": "66796918a60b9a5e0a28e16a",
+                          "password": "$2a$10$qZMtdEoCz9rLMS/YSOTGAucNVmtiS0vL/8oImwnJS3sm3wGNluP7C",
+                          "role": "Talent",
+                          "isVerified": true,
+                          "MFA": false,
+                          "accountStatus": "Active",
+                          "notificationPreference": [
+                              "Email",
+                              "Push",
+                              "Sms"
+                          ],
+                          "briefBio": "This is my ver brief professional summary",
+                          "firstName": "Inem2",
+                          "lastName": "Udo 2",
+                          "institutionOfStudy": "KNUST",
+                          "jobsAppliedTo": [
+                              "6679723187f86c6e2225c7a8",
+                              "6677800dae318fc5a67f3642",
+                              "66777f81ae318fc5a67f363d"
+                          ],
+                          "savedJobs": [
+                              "66777f81ae318fc5a67f363d"
+                          ],
+                          "skills": []
+                      },
+                      {
+                          "Contact": {
+                              "telephone": "+2340998888888",
+                              "email": "inem.udousoro@tobamsgroup.com"
+                          },
+                          "experience": {
+                              "experienceYear": "2-3 years"
+                          },
+                          "_id": "667a9152dd346f097f881ee0",
+                          "password": "$2a$10$Zk77Ak9zS/d7a9.egLyfC.ii8M0K1UmKtO/wXzNqCN/R0TZBZjLzW",
+                          "role": "Talent",
+                          "isVerified": true,
+                          "MFA": true,
+                          "accountStatus": "Active",
+                          "notificationPreference": [
+                              "Email",
+                              "Push",
+                              "Sms"
+                          ],
+                          "briefBio": "This is my professional summary",
+                          "firstName": "InemTobams",
+                          "lastName": "UdoGroup",
+                          "skills": [
+                              "HTML",
+                              "OOP",
+                              "CSS",
+                              "JAVA",
+                              "JAVASCRIPT"
+                          ],
+                          "institutionOfStudy": "Afe Babalola University",
+                          "location": {
+                              "country": "Nigeria",
+                              "state": "Lagos",
+                              "city": "Egbeda"
+                          },
+                          "jobsAppliedTo": [
+                              "667a805338d13808521275e7"
+                          ],
+                          "savedJobs": []
+                      },
+                      {
+                          "Contact": {
+                              "telephone": "+2349847583434",
+                              "email": "rolatzarza@gmail.com"
+                          },
+                          "degree": {
+                              "degreeType": "Master's Degree",
+                              "areaOfStudy": "Business and Administration",
+                              "discipline": "computer science"
+                          },
+                          "experience": {
+                              "employmentStatus": "Employed",
+                              "areaOfExpertise": "Backend Development",
+                              "workExperience": "Organization",
+                              "experienceLevel": "Intermediate",
+                              "experienceYear": "4-5 years"
+                          },
+                          "_id": "668028766e646e68051d67a7",
+                          "password": "$2a$10$VsOask4M6qJDY6JfCcQndemjevWzED4d6oh7qyeX0pHBga4W3NCpC",
+                          "role": "Talent",
+                          "isVerified": false,
+                          "MFA": false,
+                          "accountStatus": "Active",
+                          "notificationPreference": [
+                              "Email",
+                              "Push",
+                              "Sms"
+                          ],
+                          "firstName": "InemTobams",
+                          "lastName": "UdoGroup",
+                          "skills": [
+                              "HTML",
+                              "OOP",
+                              "CSS",
+                              "JAVA",
+                              "JAVASCRIPT"
+                          ],
+                          "jobsAppliedTo": [],
+                          "savedJobs": [],
+                          "briefBio": "This is my professional summary",
+                          "institutionOfStudy": "Afe Babalola University",
+                          "location": {
+                              "country": "Nigeria",
+                              "state": "Lagos",
+                              "city": "Ikeja"
+                          }
+                      },
+                      {
+                          "Contact": {
+                              "email": "inem3.udousoro@tobamsgroup.com",
+                              "telephone": "+2340970555999"
+                          },
+                          "_id": "668faa2b908875c6faf22928",
+                          "password": "$2a$10$v4voppih0TmgWHjn1nMMhOzgSPZINztip6ThMmj7Nuk70C3j6QEsS",
+                          "role": "Talent",
+                          "isVerified": true,
+                          "MFA": false,
+                          "accountStatus": "Active",
+                          "notificationPreference": [
+                              "Email",
+                              "Push",
+                              "Sms"
+                          ],
+                          "firstName": "Refactored",
+                          "lastName": "UserModel",
+                          "skills": [],
+                          "jobsAppliedTo": [],
+                          "savedJobs": []
+                      },
+                      {
+                          "Contact": {
+                              "email": "abdulrasaqolarewaju88@gmail.com",
+                              "telephone": "+2340972222999"
+                          },
+                          "_id": "66966772885d2969399859f7",
+                          "password": "$2a$10$SQ/hXMlRURIEkbaWDsLsKe6BYiFuKPUeXbzLgT0wWYhvBhUJC/uLC",
+                          "role": "Talent",
+                          "isVerified": false,
+                          "MFA": false,
+                          "accountStatus": "Active",
+                          "notificationPreference": [
+                              "Email",
+                              "Push",
+                              "Sms"
+                          ],
+                          "firstName": "Refa",
+                          "lastName": "User",
+                          "skills": [],
+                          "jobsAppliedTo": [],
+                          "savedJobs": []
+                      },
+                      {
+                          "Contact": {
+                              "email": "olareign007@gmail.com",
+                              "telephone": "+2340972222999"
+                          },
+                          "_id": "669667d0885d2969399859fe",
+                          "password": "$2a$10$RQCqS7OAgqHufCNjqsiXJuk24bAIZTLJUJUIzC2409u9/R8pcqNZu",
+                          "role": "Talent",
+                          "isVerified": false,
+                          "MFA": false,
+                          "accountStatus": "Active",
+                          "notificationPreference": [
+                              "Email",
+                              "Push",
+                              "Sms"
+                          ],
+                          "firstName": "Refa",
+                          "lastName": "User",
+                          "skills": [],
+                          "jobsAppliedTo": [],
+                          "savedJobs": []
+                      },
+                      {
+                          "Contact": {
+                              "email": "finaldays@gmail.com",
+                              "telephone": "+234097222111"
+                          },
+                          "_id": "66a94152ae6b097012f43d20",
+                          "password": "$2a$10$wIpkOmv2vh1ImS.fil2oAOG.2egFZf9N.KoYNJi2KtPkgdvHNSGX6",
+                          "role": "Talent",
+                          "isVerified": false,
+                          "MFA": false,
+                          "accountStatus": "Active",
+                          "notificationPreference": [
+                              "Email",
+                              "Push",
+                              "Sms"
+                          ],
+                          "firstName": "Days",
+                          "lastName": "Final",
+                          "skills": [],
+                          "jobsAppliedTo": [],
+                          "savedJobs": []
+                      }
+                  ]
+              }
+          }

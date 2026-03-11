@@ -1,0 +1,24 @@
+info:
+  name: DELETE PRODUCT SUBCATEGORY
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{URL}}/companies/product/delete/sub-categories/6582c11420766c5370743956"
+  body:
+    type: json
+    data: "{\r
+
+      \    // 65827fbe7536982b6afcde2c\r
+
+      \    // 6582c11420766c5370743956\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

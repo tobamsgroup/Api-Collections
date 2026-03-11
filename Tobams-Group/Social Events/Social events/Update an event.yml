@@ -1,0 +1,15 @@
+info:
+  name: Update an event
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{BASE}}/social_events/67a36e1e79f9a0d10c3ee9eb"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

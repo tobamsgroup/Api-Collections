@@ -1,0 +1,119 @@
+info:
+  name: Update other profile data
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{BASE}}/interns"
+  body:
+    type: json
+    data: |-
+      {
+          // "skills": ["JavaScript", "AWS"],
+          "skills": ["Reactjs", "Nextjs", "Tailwind CSS", "Redux"],
+          "bio": "String",
+          "portfolioLink": "https://example.com/portfolio",
+          "linkText": "View my portfolio",
+          "occupation": "Software Engineer",
+          "internshipPreferences": {
+              "role": ["Software Developer", "Data Analyst"],
+              "industryOfInterest": ["Technology", "Finance"],
+              "preferredLocation": ["New York", "San Francisco"],
+              "workMode": ["Remote"],
+              "duration": ["6 months"],
+              "internshipType": ["Full-time"]
+          },
+          "mentorPreferences": {
+              "role": ["Senior Developer", "Project Manager"],
+              "industryOfInterest": ["Technology", "Healthcare"],
+              "experienceLevel": ["Mid-Level"],
+              "mentorshipType": ["Group"]
+          },
+          "yearsOfExperience": "2 years"
+      }
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update other profile data
+    request:
+      url: "{{BASE}}/interns"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              // "skills": ["JavaScript", "AWS"],
+              "skills": ["Reactjs", "Nextjs", "Tailwind CSS", "Redux"],
+              "bio": "String",
+              "portfolioLink": "https://example.com/portfolio",
+              "linkText": "View my portfolio",
+              "occupation": "Software Engineer",
+              "internshipPreferences": {
+                  "role": ["Software Developer", "Data Analyst"],
+                  "industryOfInterest": ["Technology", "Finance"],
+                  "preferredLocation": ["New York", "San Francisco"],
+                  "workType": "Full-time",
+                  "workMode": ["Remote"],
+                  "duration": ["6 months"],
+                  "internshipType": ["Paid"]
+              },
+              "mentorPreferences": {
+                  "role": ["Senior Developer", "Project Manager"],
+                  "industryOfInterest": ["Technology", "Healthcare"],
+                  "experienceLevel": ["Mid-Level"],
+                  "mentorshipType": ["Group"]
+              },
+              "yearsOfExperience": "2 years"
+          }
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update other profile data (for admin)
+    request:
+      url: "{{BASE}}/interns?userId=0"
+      method: PATCH
+      params:
+        - name: userId
+          value: "0"
+          type: query
+      body:
+        type: json
+        data: |-
+          {
+              // "skills": ["JavaScript", "AWS"],
+              "skills": ["Reactjs", "Nextjs", "Tailwind CSS", "Redux"],
+              "bio": "String",
+              "portfolioLink": "https://example.com/portfolio",
+              "linkText": "View my portfolio",
+              "occupation": "Software Engineer",
+             "internshipPreferences": {
+                  "role": ["Software Developer", "Data Analyst"],
+                  "industryOfInterest": ["Technology", "Finance"],
+                  "preferredLocation": ["New York", "San Francisco"],
+                  "workType": "Full-time",
+                  "workMode": ["Remote"],
+                  "duration": ["6 months"],
+                  "internshipType": ["Paid"]
+              },
+              "mentorPreferences": {
+                  "role": ["Senior Developer", "Project Manager"],
+                  "industryOfInterest": ["Technology", "Healthcare"],
+                  "experienceLevel": ["Mid-Level"],
+                  "mentorshipType": ["Group"]
+              },
+              "yearsOfExperience": "2 years"
+          }
+    response:
+      body:
+        type: text
+        data: ""

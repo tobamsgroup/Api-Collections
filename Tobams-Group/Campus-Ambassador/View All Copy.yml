@@ -1,0 +1,46 @@
+info:
+  name: View All Copy
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{BASE}}/ambassador/view/all"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"firstName\": \"Taofeeq\",\r
+
+      \    \"lastName\": \"abdulrasaq\",\r
+
+      \    \"Contact\": {\r
+
+      \        \"telephone\": \"+2347069786151\",\r
+
+      \        \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\"\r
+
+      \    },\r
+
+      \    \"nameOfUniversity\": \"Eksu\",\r
+
+      \    \"courseOfStudy\": \"Chemistry\",\r
+
+      \    \"currentLevel\": \"Graduate\",\r
+
+      \    \"bio\": \"I am a backend Nodejs developer with maximum years permitted of experience\",\r
+
+      \    \"reasonsToBecomeAmbassador\": \"I wanna chop una money run\",\r
+
+      \    \"howDidYouHearAboutUS\": \"Tell a friend to tell a friend\",\r
+
+      \    \"fileData\": \"hbfdyvkenknvdbfhsmjskbdjknjx dhnrl\"\r
+
+      \ }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

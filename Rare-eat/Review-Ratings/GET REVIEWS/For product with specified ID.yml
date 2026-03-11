@@ -1,0 +1,22 @@
+info:
+  name: For product with specified ID
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{URL}}/review-rating/product_review"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"productId\": \"65cf8a63bef40ff3f023e6ce\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

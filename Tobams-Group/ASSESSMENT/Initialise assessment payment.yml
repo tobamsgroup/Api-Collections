@@ -1,0 +1,34 @@
+info:
+  name: Initialise assessment payment
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{BASE}}/pay/initialize?paymentProvider=paystack&purpose=assessment"
+  params:
+    - name: paymentProvider
+      value: paystack
+      type: query
+    - name: purpose
+      value: assessment
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+          "email": "fawaz.abdganiyu+i@tobamsgroup.com",
+          "productId": "productId",
+          "amount": 100,
+          // "discountCode": "req.body.discountCode",
+          // "programInterest": "req.body.programInterest,"
+          "assessmentRetry":  false, // default to false
+          "userId": "68dece0eaf800636dbe2e5bd"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

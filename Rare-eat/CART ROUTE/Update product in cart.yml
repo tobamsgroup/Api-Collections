@@ -1,0 +1,64 @@
+info:
+  name: Update product in cart
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{URL}}/cart/update_product_cart/6552543022a120f3ad92ba2e"
+  body:
+    type: json
+    data: |-
+      {
+          "quantity": 10,
+          "packs": 5,
+          "productType": "BEEF"
+      }
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update product in cart
+    request:
+      url: "{{URL}}/cart/update_product_cart/652e28c79742a3210b4076a3"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "quantity": 10,
+              "productType": "chicken"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "71"
+        - name: ETag
+          value: W/"47-XvBnfEv+Tvbb80aeeuyv2xcY2vQ"
+        - name: Date
+          value: Wed, 18 Oct 2023 06:37:22 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Product in cart has been updated successfully",
+              "data": null
+          }

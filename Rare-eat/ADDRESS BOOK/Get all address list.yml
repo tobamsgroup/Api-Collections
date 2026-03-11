@@ -1,0 +1,17 @@
+info:
+  name: Get all address list
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{LIVE}}/user/address-book"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

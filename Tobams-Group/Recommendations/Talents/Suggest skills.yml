@@ -1,0 +1,21 @@
+info:
+  name: Suggest skills
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{BASE}}/recommendations/?type=skills"
+  params:
+    - name: type
+      value: skills
+      type: query
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

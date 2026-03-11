@@ -1,0 +1,17 @@
+info:
+  name: Get mentor's current One-to-One mentorship
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{BASE}}/mentorship/requests/ongoing_one-to-one"
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

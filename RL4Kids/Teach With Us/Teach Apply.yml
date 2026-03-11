@@ -1,0 +1,54 @@
+info:
+  name: Teach Apply
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/teach/apply"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"firstName\": \"John\",\r
+
+      \  \"lastName\": \"Doe\",\r
+
+      \  \"email\": \"john.doe@example.com\",\r
+
+      \  \"phoneNumber\": \"+1234567890\",\r
+
+      \  \"country\": \"Nigeria\",\r
+
+      \  \"state\": \"Lagos\",\r
+
+      \  \"city\": \"Ikeja\",\r
+
+      \  \"streetAddress\": \"123 Main Street\",\r
+
+      \  \"highestQualification\": \"Doctor of Philosophy (PhD)\", //Doctor of Philosophy (PhD), Bachelor's degrees (BSc), Master's degrees (MSc), Other\r
+
+      \  \"fieldOfStudy\": \"Education\",\r
+
+      \  \"certifications\": \"PGDE, Montessori\",\r
+
+      \  \"hasTeachingExperience\": true,\r
+
+      \  \"yearsOfExperience\": 5,\r
+
+      \  \"subjectsTaught\": \"Mathematics, Science\",\r
+
+      \  \"preferredTopics\": [\"Think Sustainability\", \"Think Leadership\"], // Think Sustainability, Think Entrepreneurship, Think Leadership, Think Strategy, Think Finance, Think Technology\r
+
+      \  \"motivation\": \"I am passionate about teaching and making a difference.\",\r
+
+      \  \"attachments\": [\"https://example.com/cv.pdf\", \"https://example.com/certificate.jpg\"]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,96 @@
+info:
+  name: talent by email
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{BASE}}/talent/email/finaldays@gmail.com"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoicm9sYXR6YXJ6YUBnbWFpbC5jb20iLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNzIxOTI3MzExLCJleHAiOjE3NTM0NjMzMTF9.mptu9ZXstg-PtlDvgKXljJQYP3AXmr28kjMvW_xz9No
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{URL}}/talent/email/finaldays@gmail.com"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "496"
+        - name: ETag
+          value: W/"1f0-o9wiAuGvATvtPdIi6tMn47SSpis"
+        - name: Date
+          value: Tue, 30 Jul 2024 20:06:41 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Talent found",
+              "data": [
+                  {
+                      "Contact": {
+                          "email": "finaldays@gmail.com",
+                          "telephone": "+234097222111"
+                      },
+                      "_id": "66a94152ae6b097012f43d20",
+                      "password": "$2a$10$wIpkOmv2vh1ImS.fil2oAOG.2egFZf9N.KoYNJi2KtPkgdvHNSGX6",
+                      "role": "Talent",
+                      "isVerified": false,
+                      "MFA": false,
+                      "accountStatus": "Active",
+                      "notificationPreference": [
+                          "Email",
+                          "Push",
+                          "Sms"
+                      ],
+                      "firstName": "Days",
+                      "lastName": "Final",
+                      "skills": [],
+                      "jobsAppliedTo": [],
+                      "savedJobs": [],
+                      "createdAt": "2024-07-30T19:38:58.187Z",
+                      "updatedAt": "2024-07-30T19:38:58.187Z"
+                  }
+              ]
+          }

@@ -1,0 +1,184 @@
+info:
+  name: Upload multiple files
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:5500/api/v1/series/seed
+  body:
+    type: multipart-form
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/upload/multiple"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: files
+            type: file
+            value:
+              - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+              - /Users/fawazabdganiyu/Documents/Tobams Group/Procrastination.pages
+              - /Users/fawazabdganiyu/Documents/Tobams Group/tobamstest.admins.json
+          - name: folder
+            type: text
+            value: test
+            description: Can be any string for grouping common asset
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "2402"
+        - name: ETag
+          value: W/"962-lJsyYAj93rG1d0q2ywfccyAMyS0"
+        - name: Date
+          value: Thu, 08 May 2025 14:48:43 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "message": "Files uploaded successfully",
+              "timestamp": "2025-05-08T14:48:39.904Z",
+              "path": "/api/v1/upload/multiple",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": [
+                  {
+                      "asset_id": "75c38e0332bf5ef2fa8ee938173d7324",
+                      "public_id": "rl4kids/test/iL6RUTL-akatsuki-wallpaper-hd",
+                      "version": 1746714890,
+                      "version_id": "7cb22e319f72e859e061963a88918670",
+                      "signature": "207ec4685878d8778c3b1255cdcf9ad760c4ad6b",
+                      "width": 999,
+                      "height": 799,
+                      "format": "jpg",
+                      "resource_type": "image",
+                      "created_at": "2025-05-08T14:34:50Z",
+                      "tags": [],
+                      "bytes": 23080,
+                      "type": "upload",
+                      "etag": "d562799f15382c2843a0b6619524d5b9",
+                      "placeholder": false,
+                      "url": "http://res.cloudinary.com/djmta0726/image/upload/v1746714890/rl4kids/test/iL6RUTL-akatsuki-wallpaper-hd.jpg",
+                      "secure_url": "https://res.cloudinary.com/djmta0726/image/upload/v1746714890/rl4kids/test/iL6RUTL-akatsuki-wallpaper-hd.jpg",
+                      "asset_folder": "rl4kids/test",
+                      "display_name": "iL6RUTL-akatsuki-wallpaper-hd",
+                      "overwritten": true,
+                      "original_filename": "file",
+                      "api_key": "639857646837561"
+                  },
+                  {
+                      "asset_id": "b242edfc6fbeb6854cf2efdc5cdceac6",
+                      "public_id": "rl4kids/test/Procrastination",
+                      "version": 1746714890,
+                      "version_id": "909bd85b867d9198079a68f9fb28f690",
+                      "signature": "699e9ca65a5d64f5aef0735b1c5f4f8b374cefb5",
+                      "resource_type": "raw",
+                      "created_at": "2025-05-08T14:34:50Z",
+                      "tags": [],
+                      "bytes": 322997,
+                      "type": "upload",
+                      "etag": "d94b7877635024ab15b8746df3184cf4",
+                      "placeholder": false,
+                      "url": "http://res.cloudinary.com/djmta0726/raw/upload/v1746714890/rl4kids/test/Procrastination",
+                      "secure_url": "https://res.cloudinary.com/djmta0726/raw/upload/v1746714890/rl4kids/test/Procrastination",
+                      "asset_folder": "rl4kids/test",
+                      "display_name": "Procrastination",
+                      "overwritten": true,
+                      "original_filename": "file",
+                      "api_key": "639857646837561"
+                  },
+                  {
+                      "asset_id": "1c2797b7873d99789ee2b36f33445ebd",
+                      "public_id": "rl4kids/test/tobamstest",
+                      "version": 1746714890,
+                      "version_id": "909bd85b867d9198079a68f9fb28f690",
+                      "signature": "517d4b8e7084c3d543506b9a386a9f6619065b22",
+                      "resource_type": "raw",
+                      "created_at": "2025-05-08T14:34:50Z",
+                      "tags": [],
+                      "bytes": 432,
+                      "type": "upload",
+                      "etag": "62e50e37018d94c7a2fe3ca237f71704",
+                      "placeholder": false,
+                      "url": "http://res.cloudinary.com/djmta0726/raw/upload/v1746714890/rl4kids/test/tobamstest",
+                      "secure_url": "https://res.cloudinary.com/djmta0726/raw/upload/v1746714890/rl4kids/test/tobamstest",
+                      "asset_folder": "rl4kids/test",
+                      "display_name": "tobamstest",
+                      "overwritten": true,
+                      "original_filename": "file",
+                      "api_key": "639857646837561"
+                  }
+              ]
+          }
+  - name: Unexpected number of files
+    request:
+      url: "{{base_url}}/upload/multiple"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: files
+            type: file
+            value:
+              - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+              - /Users/fawazabdganiyu/Documents/Tobams Group/Procrastination.pages
+              - /Users/fawazabdganiyu/Documents/Tobams Group/tobamstest.admins.json
+              - /Users/fawazabdganiyu/Documents/Tobams Group/TobamsGroup.dev_courses.json
+              - /Users/fawazabdganiyu/Documents/Tobams Group/TobamsGroup.dev_mentors.json
+              - /Users/fawazabdganiyu/Documents/Tobams Group/TobamsGroup.dev_talents.json
+          - name: folder
+            type: text
+            value: test
+            description: Can be any string for grouping common asset
+    response:
+      statusText: "400"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "177"
+        - name: ETag
+          value: W/"b1-LymvUgOg/EulTTVb26sljiYseDY"
+        - name: Date
+          value: Thu, 08 May 2025 14:52:58 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-05-08T14:52:58.154Z",
+              "path": "/api/v1/upload/multiple",
+              "message": "Unexpected field - files",
+              "error": "BadRequestException",
+              "service": "RL4Kids"
+          }

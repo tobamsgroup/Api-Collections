@@ -1,0 +1,22 @@
+info:
+  name: Validate
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/uuids/validate"
+  body:
+    type: json
+    data: |-
+      {
+          "email": "fawazStudent@gmail.com",
+          "uuid": "TG-1S"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,187 @@
+info:
+  name: View All
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/testimonials/all?page=0&limit=10"
+  params:
+    - name: page
+      value: "0"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/testimonials/all?page=0&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "0"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "887"
+        - name: ETag
+          value: W/"377-eEJUuDGdd/r4ZxOYBXVqNdAaWbI"
+        - name: Date
+          value: Wed, 27 Mar 2024 14:05:56 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "testimonies": {
+                  "list": [
+                      {
+                          "Author": {
+                              "fullName": "James Hamilton",
+                              "role": "Product Manager",
+                              "company": "Resingal Corps"
+                          },
+                          "_id": "65e1c23ea68692d04afcd1f7",
+                          "comment": "Tobams Group engineers are just so amazing, they keep to their timings"
+                      },
+                      {
+                          "Author": {
+                              "fullName": "James Hamilton",
+                              "role": "Product Manager",
+                              "company": "Resingal Corps"
+                          },
+                          "_id": "65eeddce2a4d67b2a2b2fe84",
+                          "comment": "Tobams Group engineers are just so amazing, they keep to their timings"
+                      },
+                      {
+                          "Author": {
+                              "fullName": "James Hamilton",
+                              "role": "Product Manager",
+                              "company": "Resingal Corps"
+                          },
+                          "_id": "66042074801057be49b94203",
+                          "comment": "Tobams Group engineers are just so amazing, they keep to their timings"
+                      },
+                      {
+                          "Author": {
+                              "fullName": "James Hamilton",
+                              "role": "Product Manager",
+                              "company": "Resingal Corps"
+                          },
+                          "_id": "6604209c801057be49b94205",
+                          "comment": "Tobams Group engineers are just so amazing, they keep to their timings"
+                      }
+                  ],
+                  "count": 4
+              }
+          }
+  - name: Page exceeded
+    request:
+      url: "{{BASE}}/testimonials/all?page=5&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "5"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      statusText: "206"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "57"
+        - name: ETag
+          value: W/"39-EcjQ4ACVL1yI0afRFeVz+zLK8o0"
+        - name: Date
+          value: Wed, 27 Mar 2024 14:07:19 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "testimonies": "There are no testimonies"
+          }
+
+docs: |-
+  ## View all Testimonials
+
+  This is paginated request endpoint. The request limit is limited to 10 documents per page. The `page number` is parsed as a number param

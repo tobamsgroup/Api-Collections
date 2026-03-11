@@ -1,0 +1,404 @@
+info:
+  name: Suggest connections
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/recommendations/?type=connection"
+  params:
+    - name: type
+      value: connection
+      type: query
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Suggest connections with connection status
+    request:
+      url: "{{BASE}}/recommendations/?type=connection"
+      method: GET
+      params:
+        - name: type
+          value: connection
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 28 Jan 2026 15:18:28 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: CF-RAY
+          value: 9c5176421e1f4f00-LHR
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: Content-Encoding
+          value: br
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"883-H8k6nj0lfgd8vzB66B319KMNZew"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 13a8e8dc-1ee1-48e1
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1769613502450-h3cqq6yw6
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Recommended connection retrieved successfully",
+              "data": [
+                  {
+                      "_id": "692036dc786d845942868f78",
+                      "title": "Backend Developer",
+                      "occupation": "Backend Developer",
+                      "bio": "I am a backend developer with innovative and problem solving skills, and great mindset.",
+                      "firstName": "Fawaz",
+                      "lastName": "Abdganiyu",
+                      "email": "fawaz.abdganiyu@tobamsgroup.com",
+                      "location": {
+                          "country": "Nigeria",
+                          "state": "Nigeria",
+                          "city": "Saki"
+                      },
+                      "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1767173233469_TSTS1CH5_7.png",
+                      "profile": "Talent",
+                      "skills": [
+                          "Backend Development",
+                          "Communication",
+                          "Problem solving",
+                          "Web Development",
+                          "Laravel",
+                          "Total Station",
+                          "Redux"
+                      ],
+                      "mentorshipType": [
+                          "Peer-to-Peer",
+                          "Group",
+                          "One-to-One"
+                      ],
+                      "currentCompany": "Meta",
+                      "currentRole": "Software Engineer",
+                      "averageRating": 0,
+                      "isPeer": false,
+                      "createdAt": "2025-11-21T09:54:36.892Z",
+                      "updatedAt": "2026-01-20T11:56:32.526Z",
+                      "yearsOfExperience": "03"
+                  },
+                  {
+                      "_id": "690c58c445047c4e4030fe01",
+                      "title": "Dev",
+                      "occupation": "Dev",
+                      "bio": "I am Great",
+                      "firstName": "Ericsson",
+                      "lastName": "Raphael",
+                      "email": "ericssonraphael@gmail.com",
+                      "location": {
+                          "country": "Nigeria",
+                          "state": "Nigeria",
+                          "city": "Lagos"
+                      },
+                      "profile": "Talent",
+                      "skills": [
+                          "Backend",
+                          "Express",
+                          "Nextjs",
+                          "Nestjs"
+                      ],
+                      "mentorshipType": [
+                          "Peer to Peer",
+                          "One to One",
+                          "Group"
+                      ],
+                      "averageRating": 0,
+                      "isPeer": false,
+                      "createdAt": "2025-11-06T08:13:57.006Z",
+                      "updatedAt": "2026-01-16T09:45:50.237Z",
+                      "yearsOfExperience": "4"
+                  },
+                  {
+                      "_id": "690b9906ea45abf381cde4ab",
+                      "occupation": "Backend Developer",
+                      "firstName": "Fawaz",
+                      "lastName": "Abdganiyu",
+                      "email": "fawazabdganiyu@gmail.com",
+                      "location": {
+                          "country": "Nigeria",
+                          "state": "Nigeria",
+                          "city": "Saki"
+                      },
+                      "profile": "Intern",
+                      "skills": [],
+                      "mentorshipType": [],
+                      "averageRating": 0,
+                      "isPeer": false,
+                      "createdAt": "2025-11-05T18:35:50.061Z",
+                      "updatedAt": "2025-12-30T13:13:09.790Z"
+                  },
+                  {
+                      "_id": "6968d3f49f11096d75483a4a",
+                      "occupation": "Backend Developer",
+                      "bio": "Backend Developer Intern",
+                      "firstName": "Adeyeye",
+                      "lastName": "Omokorede",
+                      "email": "lordkratos365@gmail.com",
+                      "profile": "Intern",
+                      "skills": [
+                          "node",
+                          "javascript",
+                          "expressjs",
+                          "mongoDB",
+                          "AWS",
+                          "backend"
+                      ],
+                      "mentorshipType": [],
+                      "averageRating": 0,
+                      "isPeer": false,
+                      "createdAt": "2026-01-15T11:48:04.261Z",
+                      "updatedAt": "2026-01-15T12:02:56.065Z"
+                  }
+              ]
+          }
+  - name: Suggest connections
+    request:
+      url: "{{BASE}}/recommendations/?type=connection"
+      method: GET
+      params:
+        - name: type
+          value: connection
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 29 Jan 2026 10:53:05 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: CF-RAY
+          value: 9c582ed7fd6d9db0-LHR
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: Content-Encoding
+          value: br
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"8a4-SsZTps4UbuTiSGQekF5rj0PtePA"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 453452d8-7442-4c1b
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1769683977649-37pyc6jpr
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Recommended connection retrieved successfully",
+              "data": [
+                  {
+                      "_id": "692036dc786d845942868f78",
+                      "title": "Backend Developer",
+                      "occupation": "Backend Developer",
+                      "bio": "I am a backend developer with innovative and problem solving skills, and great mindset.",
+                      "firstName": "Fawaz",
+                      "lastName": "Abdganiyu",
+                      "email": "fawaz.abdganiyu@tobamsgroup.com",
+                      "location": {
+                          "country": "Nigeria",
+                          "state": "Nigeria",
+                          "city": "Saki"
+                      },
+                      "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1767173233469_TSTS1CH5_7.png",
+                      "profile": "Talent",
+                      "skills": [
+                          "Backend Development",
+                          "Communication",
+                          "Problem solving",
+                          "Web Development",
+                          "Laravel",
+                          "Total Station",
+                          "Redux"
+                      ],
+                      "mentorshipType": [
+                          "Peer-to-Peer",
+                          "Group",
+                          "One-to-One"
+                      ],
+                      "currentCompany": "Meta",
+                      "currentRole": "Software Engineer",
+                      "averageRating": 0,
+                      "createdAt": "2025-11-21T09:54:36.892Z",
+                      "updatedAt": "2026-01-20T11:56:32.526Z",
+                      "yearsOfExperience": "03",
+                      "isPeer": false
+                  },
+                  {
+                      "_id": "690c58c445047c4e4030fe01",
+                      "title": "Dev",
+                      "occupation": "Dev",
+                      "bio": "I am Great",
+                      "firstName": "Ericsson",
+                      "lastName": "Raphael",
+                      "email": "ericssonraphael@gmail.com",
+                      "location": {
+                          "country": "Nigeria",
+                          "state": "Nigeria",
+                          "city": "Lagos"
+                      },
+                      "photo": "",
+                      "profile": "Talent",
+                      "skills": [
+                          "Backend",
+                          "Express",
+                          "Nextjs",
+                          "Nestjs"
+                      ],
+                      "mentorshipType": [
+                          "Peer to Peer",
+                          "One to One",
+                          "Group"
+                      ],
+                      "averageRating": 0,
+                      "createdAt": "2025-11-06T08:13:57.006Z",
+                      "updatedAt": "2026-01-16T09:45:50.237Z",
+                      "yearsOfExperience": "4",
+                      "isPeer": false
+                  },
+                  {
+                      "_id": "690b9906ea45abf381cde4ab",
+                      "occupation": "Backend Developer",
+                      "firstName": "Fawaz",
+                      "lastName": "Abdganiyu",
+                      "email": "fawazabdganiyu@gmail.com",
+                      "location": {
+                          "country": "Nigeria",
+                          "state": "Nigeria",
+                          "city": "Saki"
+                      },
+                      "photo": "",
+                      "profile": "Intern",
+                      "skills": [],
+                      "mentorshipType": [],
+                      "averageRating": 0,
+                      "createdAt": "2025-11-05T18:35:50.061Z",
+                      "updatedAt": "2025-12-30T13:13:09.790Z",
+                      "isPeer": false
+                  },
+                  {
+                      "_id": "6968d3f49f11096d75483a4a",
+                      "occupation": "Backend Developer",
+                      "bio": "Backend Developer Intern",
+                      "firstName": "Adeyeye",
+                      "lastName": "Omokorede",
+                      "email": "lordkratos365@gmail.com",
+                      "photo": "",
+                      "profile": "Intern",
+                      "skills": [
+                          "node",
+                          "javascript",
+                          "expressjs",
+                          "mongoDB",
+                          "AWS",
+                          "backend"
+                      ],
+                      "mentorshipType": [],
+                      "averageRating": 0,
+                      "createdAt": "2026-01-15T11:48:04.261Z",
+                      "updatedAt": "2026-01-15T12:02:56.065Z",
+                      "isPeer": false
+                  }
+              ]
+          }

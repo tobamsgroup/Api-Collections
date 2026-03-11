@@ -1,0 +1,524 @@
+info:
+  name: Suggest group mentorship
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{BASE}}/recommendations/?type=group-mentorship"
+  params:
+    - name: type
+      value: group-mentorship
+      type: query
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Suggest group mentorship
+    request:
+      url: "{{BASE}}/recommendations/?type=group-mentorship"
+      method: GET
+      params:
+        - name: type
+          value: group-mentorship
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 30 Jan 2026 09:40:44 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: CF-RAY
+          value: 9c6002673a328897-LHR
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: Content-Encoding
+          value: br
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"2542-mcgAR27FJI5RMOzDOfGl3YywrG4"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 9c9452f8-e08b-461a
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1769766043116-gp13xnnnd
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Recommended group-mentorship retrieved successfully",
+              "data": [
+                  {
+                      "_id": "69722a0ca1c3ce0b69010c55",
+                      "photo": "",
+                      "skills": [
+                          "Computer Engineering",
+                          "Frontend skills",
+                          "Computer Science",
+                          "requirement gathering",
+                          "API Integration",
+                          "Communication",
+                          "Networking"
+                      ],
+                      "description": "Developer's relation group",
+                      "createdAt": "2026-01-22T13:45:48.338Z",
+                      "updatedAt": "2026-01-22T13:45:48.338Z",
+                      "roomName": "Bliss devRel",
+                      "roomTypes": "group",
+                      "mentorshipData": {
+                          "duration": "6 Months",
+                          "startDate": "2026-02-01T00:00:00.000Z",
+                          "endDate": "2026-07-31T00:00:00.000Z",
+                          "timeZone": "GMT + 1",
+                          "availability": "Weekdays",
+                          "startTime": "09:00 AM",
+                          "endTime": "03:00 PM",
+                          "isActive": true
+                      },
+                      "createdBy": {
+                          "_id": "695399c5314500ddfa21d9b0",
+                          "title": "Backend Developer",
+                          "firstName": "Jibola",
+                          "lastName": "Paul",
+                          "email": "jibolapaul11@gmail.com",
+                          "location": {
+                              "country": "Nigeria",
+                              "city": "Lagos"
+                          },
+                          "photo": "",
+                          "profile": "Mentor",
+                          "skills": [
+                              "Communication",
+                              "Leadership",
+                              "Collaboration",
+                              "Agile Methodologies"
+                          ],
+                          "mentorshipType": [
+                              "Group",
+                              "One-on-One"
+                          ],
+                          "averageRating": 0,
+                          "companyName": "Interswitch",
+                          "status": "Approved",
+                          "createdAt": "2025-12-30T09:22:13.925Z",
+                          "updatedAt": "2026-01-20T12:07:27.063Z",
+                          "yearsOfExperience": "3-5 years",
+                          "availability": [
+                              {
+                                  "days": [
+                                      "Weekdays"
+                                  ],
+                                  "times": [
+                                      "09:00 AM - 04:00 PM"
+                                  ],
+                                  "_id": "6954eda578e46ba978bb5a60"
+                              },
+                              {
+                                  "days": [
+                                      "Weekends"
+                                  ],
+                                  "times": [
+                                      "10:00 AM - 03:00 PM"
+                                  ],
+                                  "_id": "6954eda578e46ba978bb5a61"
+                              }
+                          ]
+                      },
+                      "members": [
+                          {
+                              "userId": "695399c5314500ddfa21d9b0",
+                              "fullName": "Jibola Paul",
+                              "occupation": "Backend Developer",
+                              "role": "Mentor",
+                              "joinedAt": "2026-01-22T13:45:48.331Z"
+                          }
+                      ],
+                      "limit": 8,
+                      "aboutGroup": "Bliss Tutors is a developer-focused learning and relations group dedicated to building strong connections between developers, tools, and real-world problem-solving.\nAt our core, we sit at the intersection of education, community, and technology. We help developers not only learn how to build, but also understand why things work, how to communicate technical ideas clearly, and how to grow within modern engineering ecosystems.\nThrough hands-on tutoring, technical workshops, community sessions, and developer advocacy, we empower developers to:\nMaster practical skills\n\nShare knowledge confidently\nEngage meaningfully with tools, platforms, and teams\nWe believe great developer experiences are built through clarity, empathy, and continuous learning. Bliss Tutors exists to bridge the gap between developers and opportunity — turning curiosity into capability and capability into impact.\nWhere developers learn, connect, and thrive.",
+                      "isApplied": false,
+                      "isMember": false
+                  },
+                  {
+                      "_id": "696e2254d17960f1ca64c76b",
+                      "photo": "",
+                      "skills": [
+                          "Backend Engineering",
+                          "Frontend skills",
+                          "Nodejs",
+                          "React",
+                          "Typescript"
+                      ],
+                      "description": "Group for TG Developers",
+                      "createdAt": "2026-01-19T12:23:48.475Z",
+                      "updatedAt": "2026-01-21T16:02:15.660Z",
+                      "roomName": "Tobams Developers",
+                      "roomTypes": "group",
+                      "mentorshipData": {
+                          "duration": "3 Months",
+                          "startDate": "2026-01-19T00:00:00.000Z",
+                          "endDate": "2026-04-19T00:00:00.000Z",
+                          "timeZone": "GMT + 1",
+                          "availability": "Weekdays",
+                          "startTime": "08:00 AM",
+                          "endTime": "10:00 PM",
+                          "isActive": true
+                      },
+                      "createdBy": {
+                          "_id": "695399c5314500ddfa21d9b0",
+                          "title": "Backend Developer",
+                          "firstName": "Jibola",
+                          "lastName": "Paul",
+                          "email": "jibolapaul11@gmail.com",
+                          "location": {
+                              "country": "Nigeria",
+                              "city": "Lagos"
+                          },
+                          "photo": "",
+                          "profile": "Mentor",
+                          "skills": [
+                              "Communication",
+                              "Leadership",
+                              "Collaboration",
+                              "Agile Methodologies"
+                          ],
+                          "mentorshipType": [
+                              "Group",
+                              "One-on-One"
+                          ],
+                          "averageRating": 0,
+                          "companyName": "Interswitch",
+                          "status": "Approved",
+                          "createdAt": "2025-12-30T09:22:13.925Z",
+                          "updatedAt": "2026-01-20T12:07:27.063Z",
+                          "yearsOfExperience": "3-5 years",
+                          "availability": [
+                              {
+                                  "days": [
+                                      "Weekdays"
+                                  ],
+                                  "times": [
+                                      "09:00 AM - 04:00 PM"
+                                  ],
+                                  "_id": "6954eda578e46ba978bb5a60"
+                              },
+                              {
+                                  "days": [
+                                      "Weekends"
+                                  ],
+                                  "times": [
+                                      "10:00 AM - 03:00 PM"
+                                  ],
+                                  "_id": "6954eda578e46ba978bb5a61"
+                              }
+                          ]
+                      },
+                      "members": [
+                          {
+                              "userId": "695399c5314500ddfa21d9b0",
+                              "fullName": "Jibola Paul",
+                              "occupation": "Backend Developer",
+                              "role": "Mentor",
+                              "joinedAt": "2026-01-19T12:23:48.472Z"
+                          },
+                          {
+                              "userId": "692036dc786d845942868f78",
+                              "fullName": "Fawaz Abdganiyu",
+                              "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1767173233469_TSTS1CH5_7.png",
+                              "occupation": "Backend Developer",
+                              "role": "Talent",
+                              "joinedAt": "2026-01-21T10:44:07.994Z"
+                          },
+                          {
+                              "userId": "690c58c445047c4e4030fe01",
+                              "fullName": "Ericsson Raphael",
+                              "occupation": "Dev",
+                              "role": "Talent",
+                              "joinedAt": "2026-01-21T16:02:15.658Z"
+                          }
+                      ],
+                      "limit": 10,
+                      "aboutGroup": "Group for TG Developers",
+                      "isApplied": false,
+                      "isMember": false
+                  },
+                  {
+                      "_id": "695db043f03a420a3cf6a6e5",
+                      "photo": "",
+                      "skills": [
+                          "Backend Engineering",
+                          "Data Engineering",
+                          "Web Development",
+                          "Nodejs",
+                          "React"
+                      ],
+                      "description": "Mentorship on core system design methodologies",
+                      "createdAt": "2026-01-07T01:00:51.059Z",
+                      "updatedAt": "2026-01-07T01:03:52.343Z",
+                      "roomName": "System Design Mentorship",
+                      "roomTypes": "group",
+                      "mentorshipData": {
+                          "isActive": true,
+                          "duration": "6 Months",
+                          "startDate": "2026-01-05T00:00:00.000Z",
+                          "endDate": "2026-06-05T00:00:00.000Z",
+                          "timeZone": "GMT + 1",
+                          "availability": "Weekends",
+                          "startTime": "07:00 PM",
+                          "endTime": "08:00 PM"
+                      },
+                      "createdBy": {
+                          "_id": "695dad50f03a420a3cf6a646",
+                          "title": "Software Engineer",
+                          "firstName": "Ericsson",
+                          "lastName": "Raphael",
+                          "email": "ericssonraphael@outlook.com",
+                          "location": {
+                              "country": "Nigeria",
+                              "city": "Lagos"
+                          },
+                          "photo": "",
+                          "profile": "Mentor",
+                          "skills": [
+                              "Leadership",
+                              "Communication",
+                              "Collaboration",
+                              "Agile Methodologies"
+                          ],
+                          "mentorshipType": [],
+                          "averageRating": 0,
+                          "companyName": "Tobams",
+                          "status": "Approved",
+                          "createdAt": "2026-01-07T00:48:16.973Z",
+                          "updatedAt": "2026-01-07T01:08:53.279Z",
+                          "yearsOfExperience": "3-5 years",
+                          "availability": []
+                      },
+                      "members": [
+                          {
+                              "userId": "695dad50f03a420a3cf6a646",
+                              "fullName": "Ericsson Raphael",
+                              "_id": "695db043f03a420a3cf6a6e6",
+                              "joinedAt": "2026-01-07T01:00:51.057Z"
+                          }
+                      ],
+                      "limit": 3,
+                      "aboutGroup": "This group is to educate junior Engineers on System Design Principles",
+                      "isApplied": false,
+                      "isMember": false
+                  },
+                  {
+                      "_id": "69720fe20d8290fcb79e6b31",
+                      "photo": "",
+                      "skills": [
+                          "Backend Engineering",
+                          "Web Development",
+                          "NodeJs"
+                      ],
+                      "description": "Learn Backend Development with the Hokage",
+                      "createdAt": "2026-01-22T11:54:10.049Z",
+                      "updatedAt": "2026-01-22T11:54:10.049Z",
+                      "roomName": "Junin Class",
+                      "roomTypes": "group",
+                      "mentorshipData": {
+                          "duration": "6 Months",
+                          "startDate": "2026-01-22T00:00:00.000Z",
+                          "endDate": "2026-07-22T00:00:00.000Z",
+                          "timeZone": "GMT + 1",
+                          "availability": "Weekdays",
+                          "startTime": "08:00 AM",
+                          "endTime": "06:00 PM",
+                          "isActive": true
+                      },
+                      "createdBy": {
+                          "_id": "694a7af3af239e8238541f84",
+                          "title": "Backend Developer",
+                          "firstName": "Omokorede",
+                          "lastName": "Adeyeye",
+                          "email": "omokorede.adeyeye@tobamsgroup.com",
+                          "location": {
+                              "country": "Nigeria",
+                              "city": "Ikeja"
+                          },
+                          "photo": "",
+                          "profile": "Mentor",
+                          "skills": [
+                              "Communication",
+                              "Collaboration",
+                              "SEO"
+                          ],
+                          "mentorshipType": [
+                              "One on One"
+                          ],
+                          "averageRating": 0,
+                          "companyName": "Tobams",
+                          "status": "Approved",
+                          "createdAt": "2025-12-23T11:20:19.342Z",
+                          "updatedAt": "2026-01-05T14:05:53.072Z",
+                          "yearsOfExperience": "3-5 years",
+                          "availability": [
+                              {
+                                  "days": [
+                                      "Weekdays"
+                                  ],
+                                  "times": [
+                                      "08:00 AM - 11:00 PM"
+                                  ],
+                                  "_id": "6953a7ca314500ddfa21dae0"
+                              }
+                          ]
+                      },
+                      "members": [
+                          {
+                              "userId": "694a7af3af239e8238541f84",
+                              "fullName": "Omokorede Adeyeye",
+                              "occupation": "Backend Developer",
+                              "role": "Mentor",
+                              "joinedAt": "2026-01-22T11:54:10.045Z"
+                          }
+                      ],
+                      "limit": 6,
+                      "aboutGroup": "Learning System design as a perk",
+                      "isApplied": false,
+                      "isMember": false
+                  },
+                  {
+                      "_id": "697222eaf243a9893d5cc58f",
+                      "photo": "",
+                      "skills": [
+                          "communication",
+                          "teaching",
+                          "Computer Engineering",
+                          "Networking",
+                          "Computer Science"
+                      ],
+                      "description": "For developer tutors",
+                      "createdAt": "2026-01-22T13:15:22.870Z",
+                      "updatedAt": "2026-01-22T13:15:22.870Z",
+                      "roomName": "Bliss Tutors",
+                      "roomTypes": "group",
+                      "mentorshipData": {
+                          "duration": "6 Months",
+                          "startDate": "2026-01-25T00:00:00.000Z",
+                          "endDate": "2026-07-24T00:00:00.000Z",
+                          "timeZone": "GMT + 1",
+                          "availability": "Weekdays",
+                          "startTime": "08:00 AM",
+                          "endTime": "06:00 PM",
+                          "isActive": true
+                      },
+                      "createdBy": {
+                          "_id": "695399c5314500ddfa21d9b0",
+                          "title": "Backend Developer",
+                          "firstName": "Jibola",
+                          "lastName": "Paul",
+                          "email": "jibolapaul11@gmail.com",
+                          "location": {
+                              "country": "Nigeria",
+                              "city": "Lagos"
+                          },
+                          "photo": "",
+                          "profile": "Mentor",
+                          "skills": [
+                              "Communication",
+                              "Leadership",
+                              "Collaboration",
+                              "Agile Methodologies"
+                          ],
+                          "mentorshipType": [
+                              "Group",
+                              "One-on-One"
+                          ],
+                          "averageRating": 0,
+                          "companyName": "Interswitch",
+                          "status": "Approved",
+                          "createdAt": "2025-12-30T09:22:13.925Z",
+                          "updatedAt": "2026-01-20T12:07:27.063Z",
+                          "yearsOfExperience": "3-5 years",
+                          "availability": [
+                              {
+                                  "days": [
+                                      "Weekdays"
+                                  ],
+                                  "times": [
+                                      "09:00 AM - 04:00 PM"
+                                  ],
+                                  "_id": "6954eda578e46ba978bb5a60"
+                              },
+                              {
+                                  "days": [
+                                      "Weekends"
+                                  ],
+                                  "times": [
+                                      "10:00 AM - 03:00 PM"
+                                  ],
+                                  "_id": "6954eda578e46ba978bb5a61"
+                              }
+                          ]
+                      },
+                      "members": [
+                          {
+                              "userId": "695399c5314500ddfa21d9b0",
+                              "fullName": "Jibola Paul",
+                              "occupation": "Backend Developer",
+                              "role": "Mentor",
+                              "joinedAt": "2026-01-22T13:15:22.864Z"
+                          }
+                      ],
+                      "limit": 10,
+                      "aboutGroup": "Bliss Tutors is a developer-focused tutoring group committed to helping beginners and growing engineers build real, job-ready skills with confidence.\nWe believe learning to code shouldn’t be confusing, intimidating, or purely theoretical. At Bliss Tutors, we break complex concepts into clear, practical lessons and guide learners through hands-on projects that reflect real-world development challenges.\nOur tutors are active developers who understand both the fundamentals and the realities of modern software development. We don’t just teach syntax — we teach how to think like a developer, collaborate effectively, write clean code, and continuously grow in a fast-evolving tech space.\n\nWhether you’re starting from scratch, switching careers, or leveling up your skills, Bliss Tutors provides a supportive learning environment where growth, consistency, and clarity come first.\nLearn. Build. Grow — with Bliss.",
+                      "isApplied": false,
+                      "isMember": false
+                  }
+              ]
+          }

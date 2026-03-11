@@ -1,0 +1,302 @@
+info:
+  name: Parent or teacher login
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/login/guardian"
+  body:
+    type: json
+    data: |-
+      {
+          //"email": "taofeeq.abdulrasaq@tobamsgroup.com",
+          "email": "abdulrasaqolarewaju88@gmail.com",
+          "password": "Passme",
+          "rememberMe": false
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        bru.setEnvVar("access", res.getBody().data.accessToken);
+        bru.setEnvVar("refresh", res.getBody().data.refreshToken);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Parent or teacher login
+    request:
+      url: "{{base_url}}/auth/login/guardian"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "email": "fawaz.abdganiyu@tobamsgroup.com",
+              "password": "Passme"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1201"
+        - name: ETag
+          value: W/"4b1-CfTJL7AL+tXGm/aYL+OkSF1MK2g"
+        - name: Date
+          value: Fri, 02 May 2025 15:14:27 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Guardian logged in successfully",
+              "timestamp": "2025-05-02T15:14:26.932Z",
+              "path": "/api/v1/auth/login/guardian",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "_id": "68109c367a8ba93e1d9c6820",
+                  "password": "$2b$10$q0las8NIxEDFRpj/zcp/9ucqtQlhC/CJJzN2yZlsIWCbf4JF3.dyG",
+                  "role": "Teacher",
+                  "kidIds": [
+                      "6810b45ba9ab7912bf855fce",
+                      "6810b91685aa1ebb3cfeba56",
+                      "6810b9a88a4e0c7d78f9be6d",
+                      "6810c467eeed7379fec1c916",
+                      "6814d53717fdac7596f79121",
+                      "6814dba98aad5dedc55ced61"
+                  ],
+                  "email": "fawaz.abdganiyu@tobamsgroup.com",
+                  "createdAt": "2025-04-29T09:30:30.084Z",
+                  "updatedAt": "2025-05-02T14:50:19.308Z",
+                  "isVerified": true,
+                  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwOWMzNjdhOGJhOTNlMWQ5YzY4MjAiLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dUB0b2JhbXNncm91cC5jb20iLCJyb2xlIjoiVGVhY2hlciIsImlhdCI6MTc0NjE5ODg2NywiZXhwIjoxNzQ2Mjg1MjY3fQ.8IMkkUffitKGZuGZWnL0HAfDobGE8Nq0nRs03tuTE5Q",
+                  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwOWMzNjdhOGJhOTNlMWQ5YzY4MjAiLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dUB0b2JhbXNncm91cC5jb20iLCJyb2xlIjoiVGVhY2hlciIsImlhdCI6MTc0NjE5ODg2NywiZXhwIjoxNzQ2ODAzNjY3fQ.6KC7jr4oETO6dlPzsb-ib7V6KYMeLJoXrF83UvPpn6c",
+                  "expiresIn": "86400000 milliseconds"
+              }
+          }
+  - name: login {rememberMe=false}
+    request:
+      url: "{{base_url}}/auth/login/guardian"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+              "password": "Passme",
+              "rememberMe": false
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: Date
+          value: Mon, 05 May 2025 12:17:02 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "628"
+        - name: Connection
+          value: keep-alive
+        - name: access-control-allow-origin
+          value: "*"
+        - name: Content-Encoding
+          value: br
+        - name: etag
+          value: W/"41b-v0Zw1am7fstzhXAXeN3N3pghyQg"
+        - name: rndr-id
+          value: eea9af0a-3b6c-4881
+        - name: vary
+          value: Accept-Encoding
+        - name: x-powered-by
+          value: Express
+        - name: x-render-origin-server
+          value: Render
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 93b02c09a89c01f3-CDG
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Guardian logged in successfully",
+              "timestamp": "2025-05-05T12:17:02.044Z",
+              "path": "/api/v1/auth/login/guardian",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "_id": "6818a9bd0f2a1049ffcc6720",
+                  "password": "$2b$10$56Z2AVSVEOzxPNX7Z5xs2uU/gy4051oFyKsHmyJZrdtaHs4l6PCaK",
+                  "role": "teacher",
+                  "kidIds": [],
+                  "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+                  "createdAt": "2025-05-05T12:06:21.429Z",
+                  "updatedAt": "2025-05-05T12:07:44.370Z",
+                  "isVerified": true,
+                  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODE4YTliZDBmMmExMDQ5ZmZjYzY3MjAiLCJlbWFpbCI6InRhb2ZlZXEuYWJkdWxyYXNhcUB0b2JhbXNncm91cC5jb20iLCJyb2xlIjoidGVhY2hlciIsImlhdCI6MTc0NjQ0NzQyMiwiZXhwIjoxNzQ2NTMzODIyfQ.cGqljdZsOcL2vbxp40pBSrzilh5UCUWNL9q3cnMAm8g",
+                  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODE4YTliZDBmMmExMDQ5ZmZjYzY3MjAiLCJlbWFpbCI6InRhb2ZlZXEuYWJkdWxyYXNhcUB0b2JhbXNncm91cC5jb20iLCJyb2xlIjoidGVhY2hlciIsImlhdCI6MTc0NjQ0NzQyMiwiZXhwIjoxNzQ3MDUyMjIyfQ.oIW1gCSULcTlFTRen43u9l8uly7pf5TgBXbJC2ftiSk",
+                  "expiresIn": "86400000 milliseconds"
+              }
+          }
+  - name: login {remeberMe=true}
+    request:
+      url: "{{base_url}}/auth/login/guardian"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+              "password": "Passme",
+              "rememberMe": true
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: Date
+          value: Mon, 05 May 2025 12:18:09 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "634"
+        - name: Connection
+          value: keep-alive
+        - name: access-control-allow-origin
+          value: "*"
+        - name: Content-Encoding
+          value: br
+        - name: etag
+          value: W/"41d-5B9WTohs9SNlrVxYU8KB5NrVdxw"
+        - name: rndr-id
+          value: 73207ec8-5a24-4a61
+        - name: vary
+          value: Accept-Encoding
+        - name: x-powered-by
+          value: Express
+        - name: x-render-origin-server
+          value: Render
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 93b02dc808736f36-CDG
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Guardian logged in successfully",
+              "timestamp": "2025-05-05T12:18:09.393Z",
+              "path": "/api/v1/auth/login/guardian",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "_id": "6818a9bd0f2a1049ffcc6720",
+                  "password": "$2b$10$56Z2AVSVEOzxPNX7Z5xs2uU/gy4051oFyKsHmyJZrdtaHs4l6PCaK",
+                  "role": "teacher",
+                  "kidIds": [],
+                  "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+                  "createdAt": "2025-05-05T12:06:21.429Z",
+                  "updatedAt": "2025-05-05T12:07:44.370Z",
+                  "isVerified": true,
+                  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODE4YTliZDBmMmExMDQ5ZmZjYzY3MjAiLCJlbWFpbCI6InRhb2ZlZXEuYWJkdWxyYXNhcUB0b2JhbXNncm91cC5jb20iLCJyb2xlIjoidGVhY2hlciIsImlhdCI6MTc0NjQ0NzQ4OSwiZXhwIjoxNzQ2NTMzODg5fQ.5ntObl-KvBRjh6PlbYi3Cw7BZAMKopN8-wetbd2pUgI",
+                  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODE4YTliZDBmMmExMDQ5ZmZjYzY3MjAiLCJlbWFpbCI6InRhb2ZlZXEuYWJkdWxyYXNhcUB0b2JhbXNncm91cC5jb20iLCJyb2xlIjoidGVhY2hlciIsImlhdCI6MTc0NjQ0NzQ4OSwiZXhwIjoxNzQ5MDM5NDg5fQ.Ef1CwRNiLVZOUEPo8l-nHk9UkpKgBBYIORFkx4YdNpk",
+                  "expiresIn": "2592000000 milliseconds"
+              }
+          }
+
+docs: |-
+  # Guardian/Parent/Teacher Login
+
+  ## Overview
+  This endpoint authenticates guardians, parents, or teachers in the RL4Kids system. Upon successful authentication, it returns access and refresh tokens along with the user's profile information.
+
+  ## Authentication
+  **No authentication required** - This is a public login endpoint.
+
+  ## Request Body Parameters
+
+  The request accepts a JSON payload with the following parameters:
+
+  | Parameter | Type | Required | Description |
+  |-----------|------|----------|-------------|
+  | `email` | string | Yes | The email address of the guardian/parent/teacher account |
+  | `password` | string | Yes | The user's password |
+  | `rememberMe` | boolean | No | If set to `true`, extends the session duration for persistent login. Defaults to `false` |
+
+  ### Example Request Body
+  ```json
+  {
+    "email": "user@example.com",
+    "password": "YourPassword123",
+    "rememberMe": false
+  }
+  ```
+
+  ## Success Response
+
+  **Status Code:** `201 Created`
+
+  The response includes:
+  - **User Details**: Complete user profile including `_id`, `email`, `role`, `kidIds`, verification status, and timestamps
+  - **Access Token**: JWT token for authenticating subsequent API requests
+  - **Refresh Token**: Token used to obtain new access tokens when they expire
+  - **Expiration Time**: Token validity period in milliseconds (typically 86400000ms = 24 hours)
+
+  ### Example Response
+  ```json
+  {
+    "statusCode": 200,
+    "message": "Guardian logged in successfully",
+    "data": {
+      "_id": "68fa60b45fa8660a37eaa6e1",
+      "email": "user@example.com",
+      "role": "teacher",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+      "expiresIn": "86400000 milliseconds"
+    }
+  }
+  ```
+
+  ## Automated Token Management
+
+  ⚠️ **Important**: This request includes a post-response script that automatically saves the authentication tokens to environment variables:
+  - `access` - Stores the access token
+  - `refresh` - Stores the refresh token
+
+  These tokens are automatically available for use in subsequent authenticated requests in the collection.
+
+  ## Usage Notes
+
+  1. **First-Time Setup**: Ensure the `base_url` variable is set in your active environment
+  2. **Token Storage**: After successful login, tokens are automatically saved - no manual copying required
+  3. **Role-Based Access**: The endpoint works for all guardian roles (parent, teacher, etc.)
+  4. **Session Persistence**: Use `rememberMe: true` for longer session duration
+  5. **Saved Examples**: Check the saved examples for different login scenarios and response variations

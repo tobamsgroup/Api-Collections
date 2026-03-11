@@ -1,0 +1,164 @@
+info:
+  name: Update a work experience item
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/interns/?update=add"
+  params:
+    - name: update
+      value: add
+      type: query
+      description: This can be "add", "update", or "remove". It depends on the intended operation.
+  body:
+    type: json
+    data: |-
+      {
+          "workExperience":
+          {
+            "jobTitle": "Software Developer",
+            "employmentType": "Internship",
+            "companyName": "Tech Company",
+            "location": "Lagos, Nigeria",
+            "locationType": "On-site",
+            "isWorkingHere": true,
+            "startDate": "2021-06-01T00:00:00.000Z",
+            //"endDate": "2021-12-01T00:00:00.000Z",
+            "description": "Worked on developing web applications using JavaScript and Node.js.",
+            "skills": ["JavaScript", "Node.js"]
+          }
+      }
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update a work experience item (add)
+    request:
+      url: "{{BASE}}/interns/?update=add"
+      method: PATCH
+      params:
+        - name: update
+          value: add
+          type: query
+          description: This can be "add", "update", or "remove". It depends on the intended operation.
+      body:
+        type: json
+        data: |-
+          {
+              "workExperience":
+              {
+                "jobTitle": "Software Developer Intern",
+                "employmentType": "Internship",
+                "companyName": "Tech Company",
+                "location": "Lagos, Nigeria",
+                "locationType": "On-site",
+                "isWorkingHere": true,
+                "startDate": "2021-06-01T00:00:00.000Z",
+                //"endDate": "2021-12-01T00:00:00.000Z",
+                "description": "Worked on developing web applications using JavaScript and Node.js.",
+                "skills": ["JavaScript", "Node.js"]
+              }
+          }
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update a work experience item (update)
+    request:
+      url: "{{BASE}}/interns/?update=update"
+      method: PATCH
+      params:
+        - name: update
+          value: update
+          type: query
+          description: This can be "add", "update", or "remove". It depends on the intended operation.
+      body:
+        type: json
+        data: |-
+          {
+              "workExperience":
+              {
+                  "_id": "67a50f2c915c49006bab06f8",
+                "jobTitle": "Software Developer Intern",
+                "employmentType": "Internship",
+                "companyName": "Tech Company",
+                "location": "Lagos, Nigeria",
+                "locationType": "On-site",
+                "isWorkingHere": true,
+                "startDate": "2021-06-01T00:00:00.000Z",
+                "endDate": "2021-12-01T00:00:00.000Z",
+                "description": "Worked on developing web applications using JavaScript and Node.js.",
+                "skills": ["JavaScript", "Node.js"]
+              }
+          }
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update a work experience item (remove)
+    request:
+      url: "{{BASE}}/interns/?update=remove"
+      method: PATCH
+      params:
+        - name: update
+          value: remove
+          type: query
+          description: This can be "add", "update", or "remove". It depends on the intended operation.
+      body:
+        type: json
+        data: |-
+          {
+              "workExperience":
+              {
+                  "_id": "67a50eb5915c49006bab06e3",
+                "jobTitle": "Software Developer Intern",
+                "employmentType": "Internship"
+              }
+          }
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update a work experience item
+    request:
+      url: "{{BASE}}/interns/?update=add&userId"
+      method: PATCH
+      params:
+        - name: update
+          value: add
+          type: query
+          description: This can be "add", "update", or "remove". It depends on the intended operation.
+        - name: userId
+          value: ""
+          type: query
+          description: Include for admin operation
+      body:
+        type: json
+        data: |-
+          {
+              "workExperience":
+              {
+                "jobTitle": "Software Developer Intern",
+                "employmentType": "Internship",
+                "companyName": "Tech Company",
+                "location": "Lagos, Nigeria",
+                "locationType": "On-site",
+                "isWorkingHere": false,
+                "startDate": "2021-06-01T00:00:00.000Z",
+                "endDate": "2021-12-01T00:00:00.000Z",
+                "description": "Worked on developing web applications using JavaScript and Node.js.",
+                "skills": ["JavaScript", "Node.js"]
+              }
+          }
+    response:
+      body:
+        type: text
+        data: ""

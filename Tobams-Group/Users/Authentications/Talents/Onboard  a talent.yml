@@ -1,0 +1,142 @@
+info:
+  name: Onboard  a talent
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/sign-up"
+  body:
+    type: json
+    data: "{\r
+
+      \  // BaseUser Fields (Required unless specified)\r
+
+      \    \"telephone\": \"+1555123456\",\r
+
+      \    \"email\": \"fawazabdganiyu@gmail.com\",\r
+
+      \    \"location\": {\r
+
+      \      \"country\": \"Nigeria\",\r
+
+      \      \"state\": \"Oyo State\",\r
+
+      \      \"city\": \"Saki\"\r
+
+      \    },\r
+
+      \    \"firstName\": \"Fawaz\",\r
+
+      \    \"lastName\": \"Abdganiyu\",\r
+
+      \    \"title\": \"Software Developer\",\r
+
+      \    \"role\": \"Talent\", // Required\r
+
+      \    \"password\": \"Password123!\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{URL}}/talent/sign-up"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"firstName\": \"Days\",\r
+
+          \    \"lastName\": \"Final\",\r
+
+          \    \"email\": \"finaldays@gmail.com\",\r
+
+          \    \"telephone\": \"+234097222111\",\r
+
+          \    \"password\": \"123456\",\r
+
+          \    \"role\": \"Talent\",\r
+
+          \    \"type\": \"emailOtp\"\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "496"
+        - name: ETag
+          value: W/"1f0-hmGtMoqoTVKHy3ELs1NxqaC2bcc"
+        - name: Date
+          value: Tue, 30 Jul 2024 19:39:05 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Talent created",
+              "data": {
+                  "Contact": {
+                      "email": "finaldays@gmail.com",
+                      "telephone": "+234097222111"
+                  },
+                  "password": "$2a$10$wIpkOmv2vh1ImS.fil2oAOG.2egFZf9N.KoYNJi2KtPkgdvHNSGX6",
+                  "role": "Talent",
+                  "isVerified": false,
+                  "MFA": false,
+                  "accountStatus": "Active",
+                  "notificationPreference": [
+                      "Email",
+                      "Push",
+                      "Sms"
+                  ],
+                  "firstName": "Days",
+                  "lastName": "Final",
+                  "skills": [],
+                  "jobsAppliedTo": [],
+                  "savedJobs": [],
+                  "_id": "66a94152ae6b097012f43d20",
+                  "createdAt": "2024-07-30T19:38:58.187Z",
+                  "updatedAt": "2024-07-30T19:38:58.187Z"
+              }
+          }

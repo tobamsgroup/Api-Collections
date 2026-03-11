@@ -1,0 +1,368 @@
+info:
+  name: Register a mentor
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/sign-up"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"email\": \"FawazMentor11@gmail.com\",\r
+
+      \  \"firstName\": \"Fawaz\",\r
+
+      \  \"lastName\": \"Abdganiyu\",\r
+
+      \  \"telephone\": \"+1234567890\",\r
+
+      \  \"location\": {\r
+
+      \    \"country\": \"Nigeria\",\r
+
+      \    \"city\": \"Saki\"\r
+
+      \  },\r
+
+      \  \"bio\": \"Experienced technology mentor with over 10 years in software development.\",\r
+
+      \  \"role\": \"Mentor\",\r
+
+      \  \"linkedInURL\": \"https://www.linkedin.com/in/johndoe\",\r
+
+      \  \"languages\": \"English, Spanish\",\r
+
+      \  \"title\": \"Software Engineer\",\r
+
+      \  \"companyName\": \"Tech Solutions Inc.\",\r
+
+      \  \"industry\": \"Technology\",\r
+
+      \  \"otherIndustry\": \"Software Development\",\r
+
+      \  \"yearsOfExperience\": \"3-5 years\",\r
+
+      \  \"anyProfessionalCertifications\": true,\r
+
+      \  \"certifications\": [\r
+
+      \    \"Certified Scrum Master\",\r
+
+      \    \"AWS Certified Solutions Architect\"\r
+
+      \  ],\r
+
+      \  \"primaryExpertise\": \"Development & Technology\",\r
+
+      \  \"other\": \"Cloud Computing\",\r
+
+      \  \"secondaryExpertise\": \"DevOps\",\r
+
+      \  \"disciplines\": [\r
+
+      \    \"UI/UX Design\",\r
+
+      \    \"Game Design\"\r
+
+      \  ],\r
+
+      \  \"tools\": [\r
+
+      \    \"Jira\",\r
+
+      \    \"AWS\",\r
+
+      \    \"Airtable\"\r
+
+      \  ],\r
+
+      \  \"skills\": [\r
+
+      \    \"SEO\",\r
+
+      \    \"Agile Methodologies\",\r
+
+      \    \"Strategic Planning\"\r
+
+      \  ],\r
+
+      \  \"previousMentorshipExperience\": true,\r
+
+      \  \"previousMentorshipExperienceDescription\": \"Mentored junior developers in previous roles.\",\r
+
+      \  \"mentoringDisciplines\": [\r
+
+      \    \"UI Design\",\r
+
+      \    \"Game Design\"\r
+
+      \  ],\r
+
+      \  \"mentorshipAim\": \"Help mentees grow in their careers and achieve their goals.\"\r
+
+      }\r
+
+      \r
+
+      // {\r
+
+      //    \"telephone\": \"+1987654321\",\r
+
+      //     \"email\": \"fawazmentor@gmail.com\",\r
+
+      //     \"location\": {\r
+
+      //       \"country\": \"Canada\"\r
+
+      //     },\r
+
+      //   \"firstName\": \"Fawaz\",\r
+
+      //   \"lastName\": \"Abdganiyu\",\r
+
+      //   \"title\": \"Senior Technology Mentor\",\r
+
+      //   \"role\": \"Mentor\", // Required\r
+
+      //   \"password\": \"Password123!\",\r
+
+      //   \"isVerified\": false,\r
+
+      //   \"MFA\": true,\r
+
+      //   \"accountStatus\": \"ACTIVE\",\r
+
+      //   \"notificationPreference\": [\"EMAIL\", \"IN_APP\"],\r
+
+      //   \"social\": {\r
+
+      //     \"linkedIn\": \"https://linkedin.com/in/sarahthompson\",\r
+
+      //     \"twitter\": \"https://twitter.com/techmentor\"\r
+
+      //   },\r
+
+      \r
+
+      //   \"bio\": \"Experienced technology mentor with over 10 years in software development.\",\r
+
+      //   \"city\": \"Toronto\",\r
+
+      //   \"languages\": [\"English\", \"French\"],\r
+
+      //   \"availability\": {\r
+
+      //     \"location\": [\"Only Virtual\"],\r
+
+      //     \"frequency\": [\"weekly\"],\r
+
+      //     \"duration\": [\"30 minutes\"],\r
+
+      //     \"schedule\": [\"weekends\"]\r
+
+      //   },\r
+
+      //   \"experience\": {\r
+
+      //     \"jobTitle\": \"Senior Software Engineer\",\r
+
+      //     \"companyName\": \"Tech Giants Inc.\",\r
+
+      //     \"industry\": \"Technology\", // Enum Options: 'Technology' | 'Healthcare' | 'Finance' | 'Manufacturing' | 'Retail' | 'Energy' | 'Transportation and Logistics' | 'Real Estate' | 'Hospitality and Tourism' | 'Entertainment and Media'\r
+
+      //     \"yearsOfExperience\": \"less than 3 years\", // Enum Options: 'less than 3 years'| '3-5 years'| '6-10 years' | '10 years and above',\r
+
+      //     \"anyProfessionalCertifications\": true,\r
+
+      //     \"certifications\": [\"AWS Certified Solutions Architect\", \"Certified ScrumMaster\"]\r
+
+      //   },\r
+
+      //   \"skillsAndExpertise\": {\r
+
+      //     \"primaryExpertise\": \"Development & Technology\", // Enum Options: 'Leadership and Management' | 'Product Management' | 'Design and Creativity' | 'Marketing and Content Creation' | 'Development & Technology' | 'Data & Business Analysis' | 'AI & Advanced Technology' | 'Video & Content Creation' | 'Other Professional Skills'\r
+
+      //     \"secondaryExpertise\": [\"Machine Learning\", \"Cloud Computing\"],\r
+
+      //     \"disciplines\": [\"Frontend Development\", \"Backend Development\"], // Enum Options: 'Business Strategy' | 'UI Design' | 'UI/UX Design' | 'Graphic Design' | 'UX Research' | 'Industrial Design' | 'Motion Design' | 'Game Design' | 'Brand/Identity Design' | 'Multimedia Design' | '3D Design' | 'XR Design' | 'Product Design' | 'Interaction Design' | 'Customer Experience' | 'UX Testing' | 'Frontend Development' | 'Backend Development' | 'Full Stack' | 'Project Management' | 'Content Writing' | 'AI/ML Engineering' | 'QA Engineer' | 'Data Science' | 'Data Engineering' | 'Marketing Strategy' | 'Artificial Intelligence' | 'Content Production' | 'Financial Analysis' | 'Sustainability Practices' | 'Educational Development' | 'Product Marketing' | 'Business Transformation' | 'OutSystems'\r
+
+      //     \"tools\": [\"AWS\", \"Miro\"], // Enum Options: 'Microsoft Office Suite' | 'Figma' | 'Adobe Creative Suite' | 'Adobe Illustrator' | 'Adobe Photoshop' | 'Adobe XD' | 'Affinity' | 'Airtable' | 'AWS' | 'Axure' | 'BigML' | 'Trello' | 'Jira' | 'ClickUp' | 'Asana' | 'Tableau' | 'Google Analytics' | 'Python/R Programming' | 'SQL/MySQL' | 'AWS/Cloud Computing' | 'Miro' | 'Framer' | 'Wordpress' | 'Webflow' | 'ChatGPT' | 'Notion' | 'PowerBI' | 'Instagram' | 'Tiktok' | 'Facebook' | 'Google Workspace' | 'Content Writing' | 'Zapier' | 'Vimeo' | 'Youtube'\r
+
+      //     \"skills\": [\"Communication\", \"Leadership\"] // Enum Options: 'Communication' | 'Collaboration' | 'Leadership' | 'SEO' | 'Strategic Planning' | 'Agile Methodologies' | 'Data Visualization' | 'Public Speaking' | 'Market Research'\r
+
+      //   },\r
+
+      //   \"mentoringPreferences\": {\r
+
+      //     \"previousMentoringExperience\": true,\r
+
+      //     \"previousMentoringExperienceDescription\": [\"Mentored over 50 students in technology\"],\r
+
+      //     \"mentoringDisciplines\": \"UI Design\", // Enum Options: 'Business Strategy' | 'UI Design' | 'UI/UX Design' | 'Graphic Design' | 'UX Research' | 'Industrial Design' | 'Motion Design' | 'Game Design' | 'Brand/Identity Design' | 'Multimedia Design' | '3D Design' | 'XR Design' | 'Product Design' | 'Interaction Design' | 'Customer Experience' | 'UX Testing' | 'Frontend Development' | 'Backend Development' | 'Full Stack' | 'Project Management' | 'Content Writing' | 'AI/ML Engineering' | 'QA Engineer' | 'Data Science' | 'Data Engineering' | 'Marketing Strategy' | 'Artificial Intelligence' | 'Content Production' | 'Financial Analysis' | 'Sustainability Practices' | 'Educational Development' | 'Product Marketing' | 'Business Transformation' | 'OutSystems'\r
+
+      //     \"mentorshipAim\": \"To help mentees develop their technical skills and career paths.\",\r
+
+      //     \"communicationStyle\": [\"Direct\", \"Collaborative\"], // Enum Options: 'Direct' | 'Collaborative' | 'Supportive' | 'Hands-on'\r
+
+      //     \"schedule\": [\"Flexible\"], // Enum Options: 'Flexible' | 'Fixed'\r
+
+      //     \"mentorshipStyle\": [\"Hands-on\"] // Enum Options: 'Hands-on' | 'Guided' | 'Observational'\r
+
+      //   },\r
+
+      // //   \"mentees\": [\r
+
+      // //     \"60d5ec49f1b2c8b1f8e4e1a2\", // Example ObjectId for mentee\r
+
+      // //     \"60d5ec49f1b2c8b1f8e4e1a3\"  // Example ObjectId for mentee\r
+
+      // //   ],\r
+
+      //   \"portfolio\": \"https://sarahthompson.dev\",\r
+
+      //   \"portfolioLinkText\": \"Personal Portfolio\"\r
+
+      //  // \"rating\": 4.5,\r
+
+      // //   \"reviews\": [\r
+
+      // //     {\r
+
+      // //       \"talent\": \"60d5ec49f1b2c8b1f8e4e1a4\", // Example ObjectId for talent\r
+
+      // //       \"comment\": \"Sarah was an excellent mentor, very knowledgeable!\",\r
+
+      // //       \"rating\": 5,\r
+
+      // //       \"date\": \"2023-01-15T00:00:00Z\"\r
+
+      // //     }\r
+
+      // //   ]\r
+
+      // }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: create
+    request:
+      url: "{{URL}}/client/sign-up"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"companyName\": \"Truth Farm\",\r
+
+          \    \"companySize\": \"10-49\",\r
+
+          \    \"email\": \"ename4@gmail.com\",\r
+
+          \    \"industry\": \"Energy\",\r
+
+          \    \"password\": \"123456\",\r
+
+          \    \"role\": \"Client\",\r
+
+          \    \"telephone\": \"+2347044444561\",\r
+
+          \    \"website\": \"https://www.truthFarm.com\",\r
+
+          \    \"type\": \"emailOtp\"\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "517"
+        - name: ETag
+          value: W/"205-vTub+yRh8ejiHBGLMqEN/7kfzw4"
+        - name: Date
+          value: Tue, 30 Jul 2024 07:40:50 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Client created",
+              "data": {
+                  "Contact": {
+                      "email": "ename4@gmail.com",
+                      "telephone": "+2347044444561"
+                  },
+                  "password": "$2a$10$pjZ8rBkCPr081PgEURRkWeT6/PhmwjBri5QsiQaxasdghAFGr79Xe",
+                  "role": "Client",
+                  "isVerified": false,
+                  "MFA": false,
+                  "accountStatus": "Active",
+                  "notificationPreference": [
+                      "Email",
+                      "Push",
+                      "Sms"
+                  ],
+                  "companyName": "Truth Farm",
+                  "companySize": "10-49",
+                  "industry": "Energy",
+                  "website": "https://www.truthFarm.com",
+                  "_id": "66a898fca99212e0828a2682",
+                  "createdAt": "2024-07-30T07:40:44.794Z",
+                  "updatedAt": "2024-07-30T07:40:44.794Z"
+              }
+          }
+
+docs: |-
+  `IndustryTypes { "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Energy", "Transportation and Logistics", "Real Estate", "Hospitality and Tourism", "Entertainment and Media",}`
+
+  CompanySizeTypes {
+
+  ZERO_TO_NINE = "0-9", //Micro-Enterprise
+
+  TEN_TO_FORTY_NINE = "10-49", //Small Business
+
+  FIFTY_TO_ONE_HUNDRED_NINETY_NINE = "50-249", //Medium-Sized Business
+
+  TWO_HUNDRED_TO_FIVE_HUNDRED_NINETY_NINE = "250-999", //Large Enterprise
+
+  ABOVE_ONE_THOUSAND = "1000 and above", //Very Large Enterprise
+
+  }

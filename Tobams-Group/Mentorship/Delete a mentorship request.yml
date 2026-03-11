@@ -1,0 +1,15 @@
+info:
+  name: Delete a mentorship request
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{BASE}}/mentorship/requests/67c0388cb8b986bbf6257e4d"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

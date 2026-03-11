@@ -1,0 +1,95 @@
+info:
+  name: organisation by email
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{URL}}/organisation/email/ename4@gmail.com"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoicm9sYXR6YXJ6YUBnbWFpbC5jb20iLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNzIxOTI3MzExLCJleHAiOjE3NTM0NjMzMTF9.mptu9ZXstg-PtlDvgKXljJQYP3AXmr28kjMvW_xz9No
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{URL}}/client/email/ename4@gmail.com"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "517"
+        - name: ETag
+          value: W/"205-G90PpHH98f+QZmYNUWfTDY/AGhQ"
+        - name: Date
+          value: Tue, 30 Jul 2024 09:17:13 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Client found",
+              "data": [
+                  {
+                      "Contact": {
+                          "email": "ename4@gmail.com",
+                          "telephone": "+2347044444561"
+                      },
+                      "_id": "66a898fca99212e0828a2682",
+                      "password": "$2a$10$pjZ8rBkCPr081PgEURRkWeT6/PhmwjBri5QsiQaxasdghAFGr79Xe",
+                      "role": "Client",
+                      "isVerified": false,
+                      "MFA": false,
+                      "accountStatus": "Active",
+                      "notificationPreference": [
+                          "Email",
+                          "Push",
+                          "Sms"
+                      ],
+                      "companyName": "Truth Farm",
+                      "companySize": "10-49",
+                      "industry": "Energy",
+                      "website": "https://www.truthFarm.com",
+                      "createdAt": "2024-07-30T07:40:44.794Z",
+                      "updatedAt": "2024-07-30T07:40:44.794Z"
+                  }
+              ]
+          }

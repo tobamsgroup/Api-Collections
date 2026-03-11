@@ -1,0 +1,262 @@
+info:
+  name: Update Talent Profile
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{BASE}}/talents/675bf7829a1531ce65eff35b"
+  body:
+    type: json
+    data: "{\r
+
+      \  // BaseUser Fields (Required unless specified)\r
+
+      \  \"personalInfo\": {\r
+
+      \    \"telephone\": \"+1555123456\",\r
+
+      \    \"email\": \"talent.developer@example.com\",\r
+
+      \    \"location\": {\r
+
+      \      \"country\": \"United States\",\r
+
+      \      \"state\": \"New York\",\r
+
+      \      \"city\": \"New York City\"\r
+
+      \    }\r
+
+      \  },\r
+
+      \  \"firstName\": \"Alex\",\r
+
+      \  \"lastName\": \"Rodriguez\",\r
+
+      \  \"title\": \"Software Developer\",\r
+
+      \  \"role\": \"Talent\", // Required\r
+
+      \  \"password\": \"TalentPro2023!\",\r
+
+      \  \"notificationPreference\": [\"EMAIL\"],\r
+
+      \  \"social\": {\r
+
+      \    \"github\": \"https://github.com/alexdev\",\r
+
+      \    \"linkedIn\": \"https://linkedin.com/in/alexrodriguez\"\r
+
+      \  },\r
+
+      \r
+
+      \  // Talent Specific Fields\r
+
+      \  \"briefBio\": \"Passionate software developer with expertise in web technologies\", // Optional\r
+
+      \  \"occupation\": \"Software Developer\", // Optional\r
+
+      \  \"portfolioLink\": \"https://alexportfolio.com\",\r
+
+      \  \"linkText\": \"Personal Projects\",\r
+
+      \  \"skills\": [\"JavaScript\", \"React\", \"Node.js\", \"Python\"], // Required\r
+
+      \r
+
+      \  \"educations\": [\r
+
+      \    {\r
+
+      \      \"school\": \"Tech University\",\r
+
+      \      \"degree\": \"High School Diploma\", // Enum Options: 'High School Diploma' | 'Associate Degree' | 'Bachelor's Degree' | 'Master's Degree' | 'Doctorate Degree' | 'Professional Degree'\r
+
+      \      \"fieldOfStudy\": \"Engineering\", // Enum Options: 'Arts and Humanities' | 'Business and Administration' | 'Computer Science and IT' | 'Education' | 'Engineering' | 'Health and Medicine' | 'Law' | 'Natural Sciences' | 'Social Sciences' | 'More Options'\r
+
+      \      \"grade\": \"3.8\",\r
+
+      \      \"startDate\": \"2017-09-01\",\r
+
+      \      \"endDate\": \"2021-06-30\",\r
+
+      \      \"isStudyingHere\": false,\r
+
+      \      \"description\": \"Computer Science major\",\r
+
+      \      \"skills\": [\"Algorithms\", \"Data Structures\"]\r
+
+      \    }\r
+
+      \  ],\r
+
+      \r
+
+      \  \"workExperiences\": [\r
+
+      \    {\r
+
+      \      \"jobTitle\": \"Junior Software Engineer\",\r
+
+      \      \"employmentType\": \"Full-time\", // Enum Options: 'Full-time' | 'Part-time' | 'Contract' | 'Internship' | 'Freelance' | 'Apprenticeship'\r
+
+      \      \"companyName\": \"Tech Startup\",\r
+
+      \      \"location\": \"Remote\",\r
+
+      \      \"workMode\": \"Remote\",\r
+
+      \      \"isWorkingHere\": false,\r
+
+      \      \"startDate\": \"2021-07-15\",\r
+
+      \      \"endDate\": \"2022-12-31\",\r
+
+      \      \"description\": \"Developed web applications\",\r
+
+      \      \"skills\": [\"React\", \"TypeScript\", \"GraphQL\"]\r
+
+      \    }\r
+
+      \  ],\r
+
+      \r
+
+      \  \"internshipPreferences\": {\r
+
+      \    \"role\": [\"Frontend Developer\", \"Full Stack Developer\"],\r
+
+      \    \"industryOfInterest\": [\"Technology\", \"Fintech\"],\r
+
+      \    \"preferredLocation\": [\"Remote\", \"New York\"],\r
+
+      \    \"workMode\": \"Hybrid\",\r
+
+      \    \"duration\": \"6 months\",\r
+
+      \    \"internshipType\": \"Paid\"\r
+
+      \  },\r
+
+      \r
+
+      \  \"mentorPreferences\": {\r
+
+      \    \"role\": [\"Technical Mentorship\"],\r
+
+      \    \"industryOfInterest\": [\"Software Development\"],\r
+
+      \    \"experienceLevel\": \"Entry Level\",\r
+
+      \    \"mentorshipType\": \"Career Guidance\"\r
+
+      \  }\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzViZjc4MjlhMTUzMWNlNjVlZmYzNWIiLCJlbWFpbCI6IkZhd2F6VGFsZW50QGV4YW1wbGUuY29tIiwicm9sZSI6IlRhbGVudCIsImlhdCI6MTczNDA4NDM4MywiZXhwIjoxNzM0MDg0NjgzfQ.stzQKwMo3HPr_LTWWwU22a_oS_vK83qLPWxDpMv44uM
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{URL}}/talent/sign-up"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"firstName\": \"Days\",\r
+
+          \    \"lastName\": \"Final\",\r
+
+          \    \"email\": \"finaldays@gmail.com\",\r
+
+          \    \"telephone\": \"+234097222111\",\r
+
+          \    \"password\": \"123456\",\r
+
+          \    \"role\": \"Talent\",\r
+
+          \    \"type\": \"emailOtp\"\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "496"
+        - name: ETag
+          value: W/"1f0-hmGtMoqoTVKHy3ELs1NxqaC2bcc"
+        - name: Date
+          value: Tue, 30 Jul 2024 19:39:05 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Talent created",
+              "data": {
+                  "Contact": {
+                      "email": "finaldays@gmail.com",
+                      "telephone": "+234097222111"
+                  },
+                  "password": "$2a$10$wIpkOmv2vh1ImS.fil2oAOG.2egFZf9N.KoYNJi2KtPkgdvHNSGX6",
+                  "role": "Talent",
+                  "isVerified": false,
+                  "MFA": false,
+                  "accountStatus": "Active",
+                  "notificationPreference": [
+                      "Email",
+                      "Push",
+                      "Sms"
+                  ],
+                  "firstName": "Days",
+                  "lastName": "Final",
+                  "skills": [],
+                  "jobsAppliedTo": [],
+                  "savedJobs": [],
+                  "_id": "66a94152ae6b097012f43d20",
+                  "createdAt": "2024-07-30T19:38:58.187Z",
+                  "updatedAt": "2024-07-30T19:38:58.187Z"
+              }
+          }

@@ -1,0 +1,30 @@
+info:
+  name: Get All Activities with or without Filter
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/activities?type=Badge&category=Think Sustainability&dateFrom=2025-05-01&dateTo=2025-05-30"
+  params:
+    - name: type
+      value: Badge
+      type: query
+    - name: category
+      value: Think Sustainability
+      type: query
+    - name: dateFrom
+      value: 2025-05-01
+      type: query
+    - name: dateTo
+      value: 2025-05-30
+      type: query
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

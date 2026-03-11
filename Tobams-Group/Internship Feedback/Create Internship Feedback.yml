@@ -1,0 +1,54 @@
+info:
+  name: Create Internship Feedback
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{BASE}}/internship-feedback"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"fawazintern@gmail.com\",\r
+
+      \  \"learningExperienceRating\": \"Excellent\", // Enum: Excellent, Good, Average, Poor\r
+
+      \  \"valuableSkills\": \"Teamwork, Communication, Problem-solving\",\r
+
+      \  \"relevantTasks\": \"Strongly Agree\", // Enum: Strongly Agree, Agree, Neutral, Disagree, Strongly Disagree\r
+
+      \  \"mentorshipRating\": \"Very Satisfied\", // Enum: Very Satisfied, Satisfied, Neutral, Dissatisfied, Very Dissatisfied\r
+
+      \  \"mentorshipImprovement\": \"More frequent check-ins and personalized guidance.\",\r
+
+      \  \"workEnvironmentRating\": \"Good\", // Enum: Excellent, Good, Average, Poor\r
+
+      \  \"teamInclusion\": true,\r
+
+      \  \"workEnvironmentSuggestions\": \"Organize more team-building activities.\",\r
+
+      \  \"skillsDevelopmentRating\": \"Excellent\", // Enum: Excellent, Good, Average, Poor\r
+
+      \  \"skillsImproved\": \"JavaScript, React, Node.js\",\r
+
+      \  \"programDurationRating\": \"Good\", // Enum: Excellent, Good, Average, Poor\r
+
+      \  \"programExpectationsMet\": \"Agree\", // Enum: Strongly Agree, Agree, Neutral, Disagree, Strongly Disagree\r
+
+      \  \"rewardingAspect\": \"The opportunity to work on real-world projects.\",\r
+
+      \  \"programImprovements\": \"Provide more structured training sessions.\",\r
+
+      \  \"additionalComments\": \"Overall, a great internship experience!\"\r
+
+      }\r\n"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2FhMDZiMjUzOWQ5ZjAzMmYzMjQxZjciLCJlbWFpbCI6ImlzcmFlbC5hZGlndW5AdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6IkludGVybiIsImlhdCI6MTc0NDkwNzQyOCwiZXhwIjoxNzQ0OTkzODI4fQ.9TQW75TmuKqATb3Du-XcBHskR1cy9AMcfP1MY5KOVDk
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

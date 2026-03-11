@@ -1,0 +1,54 @@
+info:
+  name: ADMIN CREATE ORDER
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{URL}}/admin/order/create"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\",\r
+
+      \    \"items\": [\r
+
+      \                {\r
+
+      \                    \"productId\": \"65814d74e30b7e9305d6d24d\",\r
+
+      \                    \"variation_Id\": \"6552543022a120f3ad92ba2e\",\r
+
+      \                    \"quantity\": 2,\r
+
+      \                    \"side_protein\": \"Chicken\",\r
+
+      \                    \"spice_level\": \"Hot\",\r
+
+      \                    \"number_of_pack\": \"Single\",\r
+
+      \                    \"size\": \"900g\",\r
+
+      \                    \"price\": 23.84, //Concluded price\r
+
+      \                    \"SKU\": \"REJOO1\"\r
+
+      \                }\r
+
+      \            ],//items of the cart,\r
+
+      \    \"bill\": 123.54, //total bill of the cart,\r
+
+      \    \"shippingAddressId\": \"9934r8f48349233er\"//the billing Id\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,7 @@
+info:
+  name: Tech Talent form
+  type: folder
+  seq: 15
+
+request:
+  auth: inherit

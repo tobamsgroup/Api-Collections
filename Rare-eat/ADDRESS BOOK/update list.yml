@@ -1,0 +1,32 @@
+info:
+  name: update list
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{URL}}/user/address-book/update/65382457e60e97e36f0014b7"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"address\": \"no1, adefila street, lajoriin, ilorin\",\r
+
+      \    \"city\": \"ofa\",\r
+
+      \    \"state\": \"kwara\",\r
+
+      \    \"country\": \"Nigeria\",\r
+
+      \    \"postalcode\": 98472\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

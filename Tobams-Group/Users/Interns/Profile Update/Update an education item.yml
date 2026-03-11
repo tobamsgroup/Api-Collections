@@ -1,0 +1,106 @@
+info:
+  name: Update an education item
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{BASE}}/interns/?update=update"
+  params:
+    - name: update
+      value: update
+      type: query
+      description: This can be "add", "update", or "remove". It depends on the intended operation.
+  body:
+    type: json
+    data: |-
+      {
+        "education":
+          {
+          "_id": "67a3314a531c6cfe35c89493",
+            "school": "University of Ibadan",
+            "degree": "Bachelor's Degree",
+            "fieldOfStudy": "Computer Science and IT",
+            "grade": "First Class",
+            "startDate": "2018-09-01T00:00:00.000Z",
+            "endDate": "2022-06-01T00:00:00.000Z",
+            "isStudyingHere": true,
+            "description": "Studied various aspects of computer science including algorithms, data structures, and software engineering.",
+            "skills": ["C++", "Python"]
+          }
+        
+      }
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update an education item
+    request:
+      url: "{{DEV_BASE}}/interns/?update=add"
+      method: PATCH
+      params:
+        - name: update
+          value: add
+          type: query
+      body:
+        type: json
+        data: |-
+          {
+            "education":
+              {
+                "school": "University of Ibadan",
+                "degree": "Bachelor's Degree",
+                "fieldOfStudy": "Computer Science and IT",
+                "grade": "First Class",
+                "startDate": "2018-09-01T00:00:00.000Z",
+                "endDate": "2022-06-01T00:00:00.000Z",
+                "isStudyingHere": true,
+                "description": "Studied various aspects of computer science including algorithms, data structures, and software engineering.",
+                "skills": ["C++", "Python"]
+              }
+            
+          }
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update an education item by admin
+    request:
+      url: "{{BASE}}/interns/?update=update&userId=88998"
+      method: PATCH
+      params:
+        - name: update
+          value: update
+          type: query
+        - name: userId
+          value: "88998"
+          type: query
+      body:
+        type: json
+        data: |-
+          {
+            "education":
+              {
+                "school": "University of Ibadan",
+                "degree": "Bachelor's Degree",
+                "fieldOfStudy": "Computer Science and IT",
+                "grade": "First Class",
+                "startDate": "2018-09-01T00:00:00.000Z",
+                "endDate": "2022-06-01T00:00:00.000Z",
+                "isStudyingHere": true,
+                "description": "Studied various aspects of computer science including algorithms, data structures, and software engineering.",
+                "skills": ["C++", "Python"]
+              }
+            
+          }
+    response:
+      body:
+        type: text
+        data: ""

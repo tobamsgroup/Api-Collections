@@ -1,0 +1,26 @@
+info:
+  name: Create Lesson
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/book/lesson"
+  body:
+    type: json
+    data: |-
+      {
+          "chapterId":"688b12ae524dba2a76efc437",
+          "title":"Investing in Yourself",
+          "durationMinutes":"",
+          "index": 1
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

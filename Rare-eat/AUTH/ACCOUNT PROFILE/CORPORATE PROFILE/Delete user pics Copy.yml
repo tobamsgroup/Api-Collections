@@ -1,0 +1,19 @@
+info:
+  name: Delete user pics Copy
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{URL}}/user/corporate/profile/picture-delete/:id'"
+  params:
+    - name: id'
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,27 @@
+info:
+  name: Bookmark a mentorship group
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{BASE}}/talents/mentorship-group/67ce252955ec18df53a3f510/bookmark"
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test('"savedMentors" includes the mentorId from request parameters', function () {
+                const mentorId = req.getUrl().path[4]
+                expect(res.getBody().data.savedMentors).to.include(mentorId);
+            }
+        );
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,81 @@
+info:
+  name: Get kid by ID
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/kid/681de6a22c2b02c83017105c"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get kid by ID
+    request:
+      url: "{{base_url}}/kid/68245c5ab820c260ad0f9b51"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 15 May 2025 14:30:03 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "304"
+        - name: Connection
+          value: keep-alive
+        - name: access-control-allow-origin
+          value: "*"
+        - name: Content-Encoding
+          value: br
+        - name: etag
+          value: W/"1ce-xJaJswG0FeXEk0oBXmcZkO6NtkY"
+        - name: rndr-id
+          value: 357c5e45-2394-4db3
+        - name: vary
+          value: Accept-Encoding
+        - name: x-powered-by
+          value: Express
+        - name: x-render-origin-server
+          value: Render
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 940354bb285eb49d-LHR
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Kid fetched successfully",
+              "timestamp": "2025-05-15T14:30:02.939Z",
+              "path": "/api/v1/kid/68245c5ab820c260ad0f9b51",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "picture": "",
+                  "_id": "68245c5ab820c260ad0f9b51",
+                  "username": "dareman",
+                  "name": "Dare Man",
+                  "age": 8,
+                  "preferredLearningTopics": [
+                      "Think Sustainability"
+                  ],
+                  "role": "kid",
+                  "guardianId": "68236dfe0997507e9faf7887",
+                  "createdAt": "2025-05-14T09:03:22.981Z",
+                  "updatedAt": "2025-05-15T14:28:54.201Z"
+              }
+          }

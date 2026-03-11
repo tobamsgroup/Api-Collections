@@ -1,0 +1,26 @@
+info:
+  name: Create and Update a Time Record
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/kid/analytics/time-tracking"
+  body:
+    type: json
+    data: |-
+      {
+      //   "taskId": "68fa14272a2e04c2808ed511",
+        "taskName": "Reading Chapter 2",
+        "taskType": "quiz",
+        "timeSpentMinutes": 32
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

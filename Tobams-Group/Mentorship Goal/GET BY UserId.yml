@@ -1,0 +1,108 @@
+info:
+  name: GET BY UserId
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{BASE}}/mentorship/goal/67b65c0c2478ee6593c4983a"
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GET BY MENTORSHIP ID Copy
+    request:
+      url: "{{BASE}}/mentorship/goal/user/67b65c0c2478ee6593c4983a"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "961"
+        - name: ETag
+          value: W/"3c1-4au2ARPisrA4ia7pYCJEhpCGILw"
+        - name: Date
+          value: Fri, 04 Apr 2025 18:18:47 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Goals retrieved successfully",
+              "data": {
+                  "goals": [
+                      {
+                          "_id": "67efbcd6510754824e4e1523",
+                          "userId": "67b65c0c2478ee6593c4983a",
+                          "mentorshipId": "67c0388cb8b986bbf6257e4d",
+                          "title": "Learn Advanced Product Management",
+                          "description": "Master product management skills including market research, product strategy, and roadmap planning",
+                          "status": "Not Started",
+                          "startDate": "2024-03-15T00:00:00.000Z",
+                          "endDate": "2024-06-15T00:00:00.000Z",
+                          "createdAt": "2025-04-04T11:04:54.969Z",
+                          "updatedAt": "2025-04-04T11:04:54.969Z"
+                      },
+                      {
+                          "_id": "67effaa201799f39ac86c234",
+                          "userId": "67b65c0c2478ee6593c4983a",
+                          "mentorshipId": "67c046fcc6b8e861f5955476",
+                          "title": "Understanding Frontend Development",
+                          "description": "What is needed to know about Frontend Development.",
+                          "status": "Not Started",
+                          "startDate": "2025-04-05T00:00:00.000Z",
+                          "endDate": "2025-05-05T00:00:00.000Z",
+                          "createdAt": "2025-04-04T15:28:34.861Z",
+                          "updatedAt": "2025-04-04T15:28:34.861Z"
+                      }
+                  ],
+                  "total": 2,
+                  "page": 1,
+                  "totalPages": 1
+              }
+          }

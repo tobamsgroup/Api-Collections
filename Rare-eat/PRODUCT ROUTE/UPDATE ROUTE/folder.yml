@@ -1,0 +1,7 @@
+info:
+  name: UPDATE ROUTE
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

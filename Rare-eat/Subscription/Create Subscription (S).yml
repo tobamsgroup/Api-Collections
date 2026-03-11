@@ -1,0 +1,202 @@
+info:
+  name: Create Subscription (S)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/subscription/stripe/initialize_subscription"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjMWNiN2QxZS0xNGNkLTRmN2YtOGRmMS05YTZhMTJmY2JiZTEiLCJpYXQiOjE3MTc3NTQ2MDcsImV4cCI6MTcxODE4NjYwN30.Jpd8opYOj_2PbF9h6ZSvwRxkEfZk_YqHLii3XYErJHs
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "meal" : "65d03243f5b9ac463bb4781f",
+          "frequency": "MONTHLY",
+          "day": 31,//if frequency monthly && yearly 1 - 31
+          // "month": 367,//if frequency yearly
+          // "date_timestamp": 1710243504,//if frequency is weekly or daily pass in timestamp // must not above 7 days  the creation date(for weekly)
+          "duration": "8",
+          "delivery_address": "65dddfdd9c119b45e8aecb42"//1710223504
+      }
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Create Subscription (S)
+    request:
+      url: "{{URL}}/subscription/stripe/initialize_subscription"
+      method: POST
+      headers:
+        - name: Authorization
+          value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjMWNiN2QxZS0xNGNkLTRmN2YtOGRmMS05YTZhMTJmY2JiZTEiLCJpYXQiOjE3MTc3NTQ2MDcsImV4cCI6MTcxODE4NjYwN30.Jpd8opYOj_2PbF9h6ZSvwRxkEfZk_YqHLii3XYErJHs
+          disabled: true
+      body:
+        type: json
+        data: |-
+          {
+              "meal" : "65d03243f5b9ac463bb4781f",
+              "frequency": "MONTHLY",
+              "day": 31,//if frequency monthly && yearly 1 - 31
+              // "month": 367,//if frequency yearly
+              // "date_timestamp": 1710243504,//if frequency is weekly or daily pass in timestamp // must not above 7 days  the creation date(for weekly)
+              "payment_method_id": "pm_card_visa",
+              "duration": "8",
+              "delivery_address": "65dddfdd9c119b45e8aecb42"//1710223504
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "2851"
+        - name: ETag
+          value: W/"b23-pIp8l0Vf73VHZg38ZFNmRP41tpk"
+        - name: Date
+          value: Fri, 07 Jun 2024 10:19:28 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Payment has been initialized",
+              "data": {
+                  "session": {
+                      "id": "cs_test_a1M62iP0GTwQfIl1YeMWhjRyNs4Khw9xB2E1QT35UwrtD5FhmTwWaHHFWM",
+                      "object": "checkout.session",
+                      "after_expiration": null,
+                      "allow_promotion_codes": null,
+                      "amount_subtotal": 250000,
+                      "amount_total": 250000,
+                      "automatic_tax": {
+                          "enabled": false,
+                          "liability": null,
+                          "status": null
+                      },
+                      "billing_address_collection": null,
+                      "cancel_url": "https://rareeat.netlify.app/subscription/checkout/error",
+                      "client_reference_id": null,
+                      "client_secret": null,
+                      "consent": null,
+                      "consent_collection": null,
+                      "created": 1717755580,
+                      "currency": "gbp",
+                      "currency_conversion": null,
+                      "custom_fields": [],
+                      "custom_text": {
+                          "after_submit": null,
+                          "shipping_address": null,
+                          "submit": null,
+                          "terms_of_service_acceptance": null
+                      },
+                      "customer": "cus_Q17cF0neiEv2tR",
+                      "customer_creation": null,
+                      "customer_details": {
+                          "address": null,
+                          "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+                          "name": null,
+                          "phone": null,
+                          "tax_exempt": "none",
+                          "tax_ids": null
+                      },
+                      "customer_email": null,
+                      "expires_at": 1717841980,
+                      "invoice": null,
+                      "invoice_creation": null,
+                      "livemode": false,
+                      "locale": null,
+                      "metadata": {
+                          "productName": "65d03243f5b9ac463bb4781f",
+                          "userId": "3794ef09-d2c8-40f2-b695-e7c1aac04589"
+                      },
+                      "mode": "subscription",
+                      "payment_intent": null,
+                      "payment_link": null,
+                      "payment_method_collection": "always",
+                      "payment_method_configuration_details": null,
+                      "payment_method_options": {
+                          "card": {
+                              "request_three_d_secure": "automatic"
+                          }
+                      },
+                      "payment_method_types": [
+                          "card"
+                      ],
+                      "payment_status": "unpaid",
+                      "phone_number_collection": {
+                          "enabled": false
+                      },
+                      "recovered_from": null,
+                      "saved_payment_method_options": {
+                          "allow_redisplay_filters": [
+                              "always"
+                          ],
+                          "payment_method_remove": null,
+                          "payment_method_save": null
+                      },
+                      "setup_intent": null,
+                      "shipping_address_collection": null,
+                      "shipping_cost": null,
+                      "shipping_details": null,
+                      "shipping_options": [],
+                      "status": "open",
+                      "submit_type": null,
+                      "subscription": null,
+                      "success_url": "https://rareeat.netlify.app/subscription/checkout/success",
+                      "total_details": {
+                          "amount_discount": 0,
+                          "amount_shipping": 0,
+                          "amount_tax": 0
+                      },
+                      "ui_mode": "hosted",
+                      "url": "https://checkout.stripe.com/c/pay/cs_test_a1M62iP0GTwQfIl1YeMWhjRyNs4Khw9xB2E1QT35UwrtD5FhmTwWaHHFWM#fidkdWxOYHwnPyd1blpxYHZxWjA0SH13bUlCTVR9V2dwc0R1aG9Ocnc2X05cc2FGPW1wbWJTVm5BR0hJNTRUV0hCVzdHX1ExfWNzfWFpPUxUQH9rR3ZubWBWYmNEaH9cdmBzNUhoZjd0M0t2NTV0Sz1EXDBdUicpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"
+                  },
+                  "subscription": {
+                      "subId": "fc818b4b-7dc0-47cb-9e25-02181d9a47bc",
+                      "userId": "3794ef09-d2c8-40f2-b695-e7c1aac04589",
+                      "userInfo": {
+                          "name": "Taofeeq Abdulrasaq",
+                          "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+                          "phone_number": "07012312415",
+                          "role": "standard"
+                      },
+                      "meal": "65d03243f5b9ac463bb4781f",
+                      "delivery_address": "65dddfdd9c119b45e8aecb42",
+                      "amount": 2500,
+                      "duration": "3",
+                      "startDate": "2024-06-07T10:09:24.413Z",
+                      "frequency": "MONTHLY",
+                      "billing_map": {
+                          "day": 31
+                      },
+                      "status": "PENDING",
+                      "_id": "6662deafdc8f18420e153d09",
+                      "nextCycle": "2024-07-07T10:09:24.413Z",
+                      "__v": 0
+                  }
+              }
+          }

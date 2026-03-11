@@ -1,0 +1,15 @@
+info:
+  name: job by ID
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{URL}}/job-apply/65e616b42acf83a9a2608d31"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,38 @@
+info:
+  name: Get all subscription
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{URL}}/admin/subscription/all"
+  params:
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "3"
+      type: query
+      disabled: true
+    - name: startDate
+      value: 2023-12-04
+      type: query
+      disabled: true
+    - name: endDate
+      value: 2023-12-05
+      type: query
+      disabled: true
+    - name: status
+      value: CANCELLED
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

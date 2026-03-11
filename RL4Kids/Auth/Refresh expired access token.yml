@@ -1,0 +1,71 @@
+info:
+  name: Refresh expired access token
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/refresh-token"
+  body:
+    type: json
+    data: |-
+      {
+          "refreshToken": "{{refresh}}"
+      }
+  auth:
+    type: bearer
+    token: "{{"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        bru.setEnvVar("access", res.getBody().data.accessToken);
+        bru.setEnvVar("refresh", res.getBody().data.refreshToken);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/auth/refresh-token"
+      method: POST
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "762"
+        - name: ETag
+          value: W/"2fa-U402co9b4fg/3d52MCdh/pwDthc"
+        - name: Date
+          value: Sat, 03 May 2025 14:12:22 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Token refreshed successfully",
+              "timestamp": "2025-05-03T14:10:29.431Z",
+              "path": "/api/v1/auth/refresh-token",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwOWMzNjdhOGJhOTNlMWQ5YzY4MjAiLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dUB0b2JhbXNncm91cC5jb20iLCJyb2xlIjoiVGVhY2hlciIsImlhdCI6MTc0NjI4MTQ0NCwiZXhwIjoxNzQ2MzY3ODQ0fQ.UwVFcMeZHmgW_aaJ1_lcAuj-LHCL7I6JVkES3ekdek8",
+                  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwOWMzNjdhOGJhOTNlMWQ5YzY4MjAiLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dUB0b2JhbXNncm91cC5jb20iLCJyb2xlIjoiVGVhY2hlciIsImlhdCI6MTc0NjI4MTQ0NCwiZXhwIjoxNzQ2ODg2MjQ0fQ.yI0jY_9-ih7p0B2btUazQkrzGjhfamoa_Fn55Mz_1VU",
+                  "expiresIn": "86400000 milliseconds"
+              }
+          }

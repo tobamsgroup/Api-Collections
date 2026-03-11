@@ -1,0 +1,240 @@
+info:
+  name: Create a group
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/mentorship/groups"
+  body:
+    type: json
+    data: |-
+      {
+          "name": "Creative Ad Strategistss",
+          "description": "Advertising strategy, campaign management, and creative storytelling.",
+          "aboutGroup": "Group Focus\nThis group is dedicated to nurturing aspiring and experienced product designers who are passionate about crafting intuitive, user-friendly digital experiences. Our focus is on building strong foundations in UI/UX design, from understanding the fundamentals of design principles to mastering advanced tools like Figma and Sketch. You'll dive deep into user research, wireframing, prototyping, and usability testing, all while learning how to communicate effectively with stakeholders and developers.\n\nKey Topics Covered\n-User Research & Empathy Mapping\n-Wireframing & Prototyping\n-Visual Design Principles\n-Usability Testing\n-Design Systems\n-Collaboration with Developers\n\nWhy join?\nWhether you’re new to the field or looking to refine your design skills, this group provides hands-on guidance to enhance your portfolio and prepare for real-world challenges. With personalized feedback on your design projects and collaborative group critiques, you’ll gain the confidence and expertise to take on complex design problems.\n\nAvailability\nWe offer weekly mentoring sessions, design sprints, and interactive workshops. Flexible time slots are available to accommodate different schedules.",
+          "skills": ["Comunication", "Computer Science", "UI Design"],
+          "limit": 5,
+          "duration": "3 Month",
+          "startDate": "2025-07-22T22:32:44.087+00:00",
+          "endDate": "2025-10-22T22:32:44.087+00:00",
+          "timeZone": "GMT +1",
+           "availability": [
+              {
+                  "days": ["MON", "TUE"],
+                  "times": ["10:00 AM", "1:00 PM", "10:00 PM"]
+              },
+              // {
+              //     "days": ["WEEKENDS"],
+              //     "times": ["10:00 AM", "1:00 PM", "10:00 PM"]
+              // },
+              {
+                  "days": ["MON", "TUE"],
+                  "times": ["10:00 AM - 1:00 PM", "10:00 PM"]
+              },
+              {
+                  "days": ["MON", "TUE"],
+                  "times": [
+                      "10:00 AM",
+                      "1:00 PM",
+                      "10:00 PM"
+                  ],
+                  "_id": "67b84d72ab89ac59aaf73a0f"
+              },
+              {
+                  "days": [
+                      "MON",
+                      "TUE"
+                  ],
+                  "times": [
+                      "10:00 AM - 1:00 PM",
+                      "10:00 PM"
+                  ],
+                  "_id": "67b84d72ab89ac59aaf73a10"
+              }
+          ],
+          "startTime": "9:00 AM",
+          "endTime": "10:00 AM"
+      }
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/mentorship/groups"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "name": "Creative Ad Strategists",
+              "description": "Advertising strategy, campaign management, and creative storytelling.",
+              "aboutGroup": "Group Focus\nThis group is dedicated to nurturing aspiring and experienced product designers who are passionate about crafting intuitive, user-friendly digital experiences. Our focus is on building strong foundations in UI/UX design, from understanding the fundamentals of design principles to mastering advanced tools like Figma and Sketch. You'll dive deep into user research, wireframing, prototyping, and usability testing, all while learning how to communicate effectively with stakeholders and developers.\n\nKey Topics Covered\n-User Research & Empathy Mapping\n-Wireframing & Prototyping\n-Visual Design Principles\n-Usability Testing\n-Design Systems\n-Collaboration with Developers\n\nWhy join?\nWhether you’re new to the field or looking to refine your design skills, this group provides hands-on guidance to enhance your portfolio and prepare for real-world challenges. With personalized feedback on your design projects and collaborative group critiques, you’ll gain the confidence and expertise to take on complex design problems.\n\nAvailability\nWe offer weekly mentoring sessions, design sprints, and interactive workshops. Flexible time slots are available to accommodate different schedules.",
+              "skills": ["Comunication", "Computer Science", "UI Design"],
+              "limit": 7,
+              "duration": "3 Month",
+              "startDate": "23-04-2025",
+              "endDate": " 23-07-2025",
+              "timeZone": "GMT +1",
+              "availability": "availability",
+              "startTime": "9:00 AM",
+              "endTime": "10:00 AM"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1988"
+        - name: ETag
+          value: W/"7c4-88rneLfNdmfwvHTiUAf5DPFpcB4"
+        - name: Date
+          value: Sun, 09 Mar 2025 22:13:16 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Group created successfully",
+              "data": {
+                  "roomName": "Creative Ad Strategistss",
+                  "participants": [],
+                  "members": [
+                      {
+                          "userId": "67b66148ad4271308086ad89",
+                          "fullName": "Fawaz Agara",
+                          "title": "Software Engineer",
+                          "_id": "67d94df1b3ea8eee43ef5c9c",
+                          "joinedAt": "2025-03-18T10:41:53.486Z"
+                      }
+                  ],
+                  "roomTypes": "group",
+                  "description": "Advertising strategy, campaign management, and creative storytelling.",
+                  "admin": [
+                      "67b66148ad4271308086ad89"
+                  ],
+                  "createdBy": "Fawaz Agara",
+                  "aboutGroup": "Group Focus\nThis group is dedicated to nurturing aspiring and experienced product designers who are passionate about crafting intuitive, user-friendly digital experiences. Our focus is on building strong foundations in UI/UX design, from understanding the fundamentals of design principles to mastering advanced tools like Figma and Sketch. You'll dive deep into user research, wireframing, prototyping, and usability testing, all while learning how to communicate effectively with stakeholders and developers.\n\nKey Topics Covered\n-User Research & Empathy Mapping\n-Wireframing & Prototyping\n-Visual Design Principles\n-Usability Testing\n-Design Systems\n-Collaboration with Developers\n\nWhy join?\nWhether you’re new to the field or looking to refine your design skills, this group provides hands-on guidance to enhance your portfolio and prepare for real-world challenges. With personalized feedback on your design projects and collaborative group critiques, you’ll gain the confidence and expertise to take on complex design problems.\n\nAvailability\nWe offer weekly mentoring sessions, design sprints, and interactive workshops. Flexible time slots are available to accommodate different schedules.",
+                  "skills": [
+                      "Comunication",
+                      "Computer Science",
+                      "UI Design"
+                  ],
+                  "limit": 5,
+                  "permissions": {
+                      "userId": [
+                          "create",
+                          "edit",
+                          "delete",
+                          "remove",
+                          "restrict"
+                      ]
+                  },
+                  "mentorshipData": {
+                      "duration": "3 Month",
+                      "startDate": "2025-07-22T22:32:44.087Z",
+                      "endDate": "2025-10-22T22:32:44.087Z",
+                      "timeZone": "GMT +1",
+                      "availability": [
+                          {
+                              "days": [
+                                  "MON",
+                                  "TUE"
+                              ],
+                              "times": [
+                                  "10:00 AM",
+                                  "1:00 PM",
+                                  "10:00 PM"
+                              ],
+                              "_id": "67d94df1b3ea8eee43ef5c9d"
+                          },
+                          {
+                              "days": [
+                                  "MON",
+                                  "TUE"
+                              ],
+                              "times": [
+                                  "10:00 AM - 1:00 PM",
+                                  "10:00 PM"
+                              ],
+                              "_id": "67d94df1b3ea8eee43ef5c9e"
+                          },
+                          {
+                              "days": [
+                                  "MON",
+                                  "TUE"
+                              ],
+                              "times": [
+                                  "10:00 AM",
+                                  "1:00 PM",
+                                  "10:00 PM"
+                              ],
+                              "_id": "67b84d72ab89ac59aaf73a0f"
+                          },
+                          {
+                              "days": [
+                                  "MON",
+                                  "TUE"
+                              ],
+                              "times": [
+                                  "10:00 AM - 1:00 PM",
+                                  "10:00 PM"
+                              ],
+                              "_id": "67b84d72ab89ac59aaf73a10"
+                          }
+                      ],
+                      "startTime": "9:00 AM",
+                      "endTime": "10:00 AM",
+                      "isActive": true
+                  },
+                  "rules": [],
+                  "_id": "67d94df1b3ea8eee43ef5c9b",
+                  "createdAt": "2025-03-18T10:41:53.508Z",
+                  "updatedAt": "2025-03-18T10:41:53.508Z"
+              }
+          }

@@ -1,0 +1,22 @@
+info:
+  name: Resend otp
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{URL}}/auth/user/resend_otp"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"francisolatinwo@gmail.com\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

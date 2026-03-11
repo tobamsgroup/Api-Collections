@@ -1,0 +1,99 @@
+info:
+  name: Handle Paypal Webhook Copy
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{LIVE}}/webhooks/create"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Handle Paypal Webhook
+    request:
+      url: "{{URL}}/webhooks/create"
+      method: POST
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1147"
+        - name: ETag
+          value: W/"47b-MzhaoJlSr44g0CsQcnUmkDsrZqc"
+        - name: Date
+          value: Tue, 14 Nov 2023 16:15:32 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "webhook has been created successfully",
+              "data": {
+                  "response": {
+                      "id": "1PL88524T4992824L",
+                      "url": "https://97de-102-89-32-215.ngrok-free.app/api/v1/webhooks/paypal_webhooks",
+                      "event_types": [
+                          {
+                              "name": "PAYMENT.CAPTURE.DECLINED",
+                              "description": "This event is triggered when a payment capture is declined."
+                          },
+                          {
+                              "name": "PAYMENT.CAPTURE.COMPLETED",
+                              "description": "A payment capture completes."
+                          },
+                          {
+                              "name": "PAYMENT.CAPTURE.PENDING",
+                              "description": "The state of a payment capture changes to pending."
+                          },
+                          {
+                              "name": "CHECKOUT.ORDER.APPROVED",
+                              "description": "An order has been approved by buyer."
+                          },
+                          {
+                              "name": "PAYMENT.CAPTURE.REVERSED",
+                              "description": "PayPal reverses a payment capture."
+                          },
+                          {
+                              "name": "CHECKOUT.CHECKOUT.BUYER-APPROVED",
+                              "description": "Express checkout payment is created and approved by buyer."
+                          }
+                      ],
+                      "links": [
+                          {
+                              "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks/1PL88524T4992824L",
+                              "rel": "self",
+                              "method": "GET"
+                          },
+                          {
+                              "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks/1PL88524T4992824L",
+                              "rel": "update",
+                              "method": "PATCH"
+                          },
+                          {
+                              "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks/1PL88524T4992824L",
+                              "rel": "delete",
+                              "method": "DELETE"
+                          }
+                      ]
+                  }
+              }
+          }

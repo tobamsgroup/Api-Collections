@@ -1,0 +1,112 @@
+info:
+  name: Top Categories
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{LIVE}}/admin/analytics/category?status=processing&month=3&year=2024"
+  params:
+    - name: status
+      value: processing
+      type: query
+    - name: month
+      value: "3"
+      type: query
+    - name: year
+      value: "2024"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Top Categories
+    request:
+      url: "{{URL}}/admin/analytics/testing/order?status=processing&month=3&year=2024"
+      method: GET
+      params:
+        - name: status
+          value: processing
+          type: query
+        - name: month
+          value: "3"
+          type: query
+        - name: year
+          value: "2024"
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "429"
+        - name: ETag
+          value: W/"1ad-LnuZD1BXj3rqNlJHRvSArUx4H48"
+        - name: Date
+          value: Tue, 16 Apr 2024 13:29:47 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Total Customer!",
+              "data": {
+                  "result": [
+                      {
+                          "categoryId": "Vegan",
+                          "totalQuantity": 5
+                      },
+                      {
+                          "categoryId": "Red Beans",
+                          "totalQuantity": 1
+                      },
+                      {
+                          "categoryId": "Peppersoup",
+                          "totalQuantity": 3
+                      },
+                      {
+                          "categoryId": "Stew",
+                          "totalQuantity": 4
+                      },
+                      {
+                          "categoryId": "Jollof Rice",
+                          "totalQuantity": 3
+                      },
+                      {
+                          "categoryId": "Fish",
+                          "totalQuantity": 2
+                      },
+                      {
+                          "categoryId": "Soup",
+                          "totalQuantity": 1
+                      },
+                      {
+                          "categoryId": "Suya",
+                          "totalQuantity": 1
+                      },
+                      {
+                          "categoryId": "Spice",
+                          "totalQuantity": 1
+                      }
+                  ]
+              }
+          }

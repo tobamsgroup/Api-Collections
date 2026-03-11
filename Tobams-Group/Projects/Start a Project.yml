@@ -1,0 +1,233 @@
+info:
+  name: Start a Project
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/projects"
+  body:
+    type: json
+    data: |-
+      {
+        "firstName": "Inemsit",
+        "lastName": "Udousoro",
+        "company": "Blackberry Inc",
+        "country": "Wales",
+        "email": "harry_p30@yahoo.com",
+        "telephone": "+2347068687200",
+        "projectStack": ["Tech Talent Solutions"],
+        "description":"I need an app for my hospital"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{@harek}}/projects"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "firstName": "Batossai",
+              "lastName": "Himmura",
+              "company": "Blackberry Inc",
+              "country": "Wales",
+              "email": "harek@potterincorporated.com",
+              "telephone": "+2347068687200",
+              "projectStack": [
+                  "Mobile App Development"
+              ],
+              "description": "I need an app for my hospital"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "42"
+        - name: ETag
+          value: W/"2a-ipmx8dETLQaAbB8w/Rdhyrj0X6M"
+        - name: Date
+          value: Fri, 08 Mar 2024 16:53:57 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Proposal sent"
+          }
+  - name: Validation error
+    request:
+      url: "{{@harek}}/projects"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "firstName": "Saisito",
+              "lastName": "Himmura",
+              "company": "Blackberry Inc",
+              "country": "Wales",
+              "email": "harek@potterincorporated.com",
+              "telephone": "2347068687200",
+              "projectStack": [
+                  "Mobile App Development"
+              ],
+              "description": "I need an app for my hospital"
+          }
+    response:
+      statusText: "406"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "80"
+        - name: ETag
+          value: W/"50-Kjrpel7x6GYlSdqBYAQclrjF39Y"
+        - name: Date
+          value: Fri, 08 Mar 2024 17:05:38 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "2347068687200 isn't a valid E.164 telephone format"
+          }
+  - name: Validation error[project stack]
+    request:
+      url: "{{@harek}}/projects"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "firstName": "Saisito",
+              "lastName": "Himmura",
+              "company": "Blackberry Inc",
+              "country": "Wales",
+              "email": "harek@potterincorporated.com",
+              "telephone": "+2347068687200",
+              "projectStack": [
+                  "Mobile App "
+              ],
+              "description": "I need an app for my hospital"
+          }
+    response:
+      statusText: "406"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "79"
+        - name: ETag
+          value: W/"4f-s9kADlAsVdWnPFDQYGRi1jvDkPA"
+        - name: Date
+          value: Fri, 08 Mar 2024 17:08:13 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "[Mobile App ] isn't part of the services we offer"
+          }
+
+docs: This endpoint is for clients trying to request for TobamsGroup Innovative service. Upon successful request, a mail is sent to the `admin` email address from where a follow up can be carried out. A `success` response is returned when all `body` params are valid, a `Validation Error` is returned when one or more of the required fields are missing and a `Server Error` when there is a mismatch on the input requesTparams or something went wrong on the server. On the project stacks the request string must match the following type of service offered by Tobams `[`"Mobile App Development", "Website Design and Development", "Creative and Digital Media", 'Digital Marketing'`]`. It will throw a `Validation Error` if none is matching

@@ -1,0 +1,15 @@
+info:
+  name: Updaate event application by its ID
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{BASE}}/social_events/applications/67a36e1e79f9a0d10c3ee9eb"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

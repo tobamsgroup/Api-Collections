@@ -1,0 +1,133 @@
+info:
+  name: Create Combo meal
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/subscription/combo_meal/create"
+  body:
+    type: json
+    data: |-
+      {
+          "plan_name": "Premium Plan",
+          "productsList": [
+              {
+                  "product_name": "Jollof rice",
+                  "variation_id": "65cf8a63bef40ff3f023e6cf",
+                  "product_id": "65cf8a63bef40ff3f023e6ce",
+                  "number_of_pack": "single",
+                  "stock_quantity": 100,
+                  "side_protein": "Beef",
+                  "spice_level": "HOT",
+                  "quantity": "1",
+                  "image": "",
+                  "price": 6.99,
+                  "size": "900",
+                  "SKU": "SKU123"
+              },
+              {
+                  "product_name": "Jollof rice mix",
+                  "variation_id": "65cf8a63bef40ff3f023e6cf",
+                  "product_id": "65cf8a63bef40ff3f023e6ce",
+                  "number_of_pack": "pack of 2",
+                  "stock_quantity": 100,
+                  "side_protein": "Chicken",
+                  "spice_level": "MILD",
+                  "quantity": "1",
+                  "image": "",
+                  "price": 6.99,
+                  "size": "900",
+                  "SKU": "SKU124"
+              }
+          ],
+          "discount_value": 6.99,
+          "duration": "3 MONTH",
+          "amount": 200,
+          "image": "https://res.cloudinary.com/dddiqpeib/image/upload/v1704876526/Products/product-659be09c653e5e7970b3a57f.jpg",//https://res.cloudinary.com/dddiqpeib/image/upload/v1704876526/Products/product-659be09c653e5e7970b3a57f.jpg
+          // "created_by": "Guest",
+          "user_created": true,
+          "user_info": {
+              "name": "Abdulrasaq",
+              "email": "abdulrasaq.taofeeq@tobamsgroup.com",
+              "role": "STANDARD"
+          },
+          "mapper": "WEEKLY",//["WEEKLY","MONTLY","DAILY","YEARLY"]
+          "frequency": 4
+          // "SKU": "",
+          // "description": "",
+      }
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Create Combo meal
+    request:
+      url: "{{URL}}/subscription/combo_meal/create"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "meal": [
+                  {
+                  "productId":"654cb2220508eb4f20e1d81a"
+                  }
+              ],
+              "pack": 1,
+              "name": "Elite combo",
+              "description": "Jollof rice with a suya package and an organic drink",
+              "price": 1000,
+              "SKU": "SKU-10293",
+              "discountValue": 10
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "421"
+        - name: ETag
+          value: W/"1a5-/jJm2IebVcklODt7M/WSKLMxfXA"
+        - name: Date
+          value: Sun, 12 Nov 2023 08:11:52 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Combo Meal has been created successfully",
+              "data": {
+                  "meal": [
+                      {
+                          "productId": "654cb2220508eb4f20e1d81a"
+                      }
+                  ],
+                  "pack": 1,
+                  "price": 1000,
+                  "image": "https://example.com/combo.jpg",
+                  "name": "Elite combo",
+                  "discountValue": 10,
+                  "description": "Jollof rice with a suya package and an organic drink",
+                  "SKU": "SKU-10293",
+                  "_id": "655088c8759b039b6fc93716",
+                  "createdAt": "2023-11-12T08:11:52.330Z",
+                  "updatedAt": "2023-11-12T08:11:52.330Z",
+                  "__v": 0
+              }
+          }

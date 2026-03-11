@@ -1,0 +1,30 @@
+info:
+  name: Get Events from Google Calendar
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/api/calendar/retrieve"
+  body:
+    type: json
+    data: "{ // For the tokens object, just parse all that is returned upon google authentication\r
+
+      \    \"tokens\":{\r
+
+      \  \"access_token\": \"ya29.a0AfH6SM...\",\r
+
+      \  \"refresh_token\": \"1//0gGqv...\",\r
+
+      \  \"id_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjU...\"\r
+
+      }\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

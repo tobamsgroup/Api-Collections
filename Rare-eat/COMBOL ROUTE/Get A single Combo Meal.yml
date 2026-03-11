@@ -1,0 +1,24 @@
+info:
+  name: Get A single Combo Meal
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{URL}}/subscription/combo_meal/single?mealId=65582bfd1cf4f89935a5f0dc"
+  params:
+    - name: mealId
+      value: 65582bfd1cf4f89935a5f0dc
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

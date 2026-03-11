@@ -1,0 +1,14 @@
+info:
+  name: Weekly Report Summary
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/admin/weekly-report/summary"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

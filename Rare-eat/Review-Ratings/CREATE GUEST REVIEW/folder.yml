@@ -1,0 +1,7 @@
+info:
+  name: CREATE GUEST REVIEW
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

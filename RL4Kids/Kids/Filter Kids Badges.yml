@@ -1,0 +1,27 @@
+info:
+  name: Filter Kids Badges
+  type: http
+  seq: 14
+
+http:
+  method: GET
+  url: "{{base_url}}/kid/badges/68fa61bf5fa8660a37eaa6ee/?category=Learning Journey&type&subcategory"
+  params:
+    - name: category
+      value: Learning Journey
+      type: query
+    - name: type
+      value: ""
+      type: query
+    - name: subcategory
+      value: ""
+      type: query
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

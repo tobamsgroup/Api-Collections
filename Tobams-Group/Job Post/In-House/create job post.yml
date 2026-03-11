@@ -1,0 +1,288 @@
+info:
+  name: create job post
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/job_in_house/job-post"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"companyName\": \"Tobams Group\",\r
+
+      \    \"title\": \"Associate Social Media Manager\",\r
+
+      \    \"jobDescription\": \"We are seeking a creative, strategic, and proactive Associate Social Media Manager to join our dynamic team. In this role, you will manage our digital presence across multiple platforms, craft engaging multimedia content, and help shape the brand's storytelling voice. You will collaborate closely with internal teams to execute impactful campaigns that drive engagement, strengthen brand identity, and expand our global audience. This is a fully remote role suited for a self-motivated professional who thrives in a fast-paced, creative, and collaborative environment.\",\r
+
+      \    \"contractType\": \"Full-time\",\r
+
+      \    \"location\": \"Remote\",\r
+
+      \    \"region\": [\r
+
+      \        \"Africa\"\r
+
+      \    ],\r
+
+      \    \"jobData\": [\r
+
+      \      {\r
+
+      \        \"Key Responsibilities\": [\r
+
+      \            \"Develop, plan, and manage compelling content across all social platforms — including Instagram, LinkedIn, TikTok, YouTube, and X (Twitter).\",\r
+
+      \            \"Create, edit, and produce high-quality multimedia content (short-form videos, graphics, and reels).\",\r
+
+      \            \"Use tools such as Adobe Premiere Pro, CapCut, Canva, and AI-powered editing tools.\",\r
+
+      \            \"Foster authentic online relationships and respond to comments, messages, and conversations that align with the brand's tone and values.\",\r
+
+      \            \"Identify emerging social media trends and monitor competitors.\",\r
+
+      \            \"Translate insights into actionable growth strategies.\",\r
+
+      \            \"Track, analyze, and report on key performance metrics to evaluate content effectiveness and engagement.\",\r
+
+      \            \"Work closely with the Marketing, Design, and Product teams to ensure social content aligns with broader campaign goals and organizational strategy.\",\r
+
+      \            \"Bring the brand's vision to life through thoughtful storytelling and apply visual creativity while maintaining a consistent voice across all digital touchpoints.\"\r
+
+      \        ]\r
+
+      \      }, \r
+
+      \      {\r
+
+      \        \"Required Qualifications\": [\r
+
+      \          \"1–3 years of hands-on experience in social media management, content creation, or digital marketing.\",\r
+
+      \          \"Proficiency in video editing (Premiere Pro, CapCut).\",\r
+
+      \          \"Proficiency in graphic design (Canva, Adobe Creative Suite).\",\r
+
+      \          \"Familiarity with AI-based tools for content optimization.\",\r
+
+      \          \"A strong eye for aesthetics, storytelling, and audience engagement.\",\r
+
+      \          \"Exceptional written and verbal communication skills.\",\r
+
+      \          \"Ability to manage multiple projects simultaneously and meet deadlines in a remote work environment.\",\r
+
+      \          \"Independent, innovative, and results-driven mindset.\",\r
+
+      \          \"Passion for staying ahead of digital and creative trends.\"\r
+
+      \        ]\r
+
+      \      },\r
+
+      \    //   {\r
+
+      \    //     \"Nice-to-Have Skills\": [\r
+
+      \    //         \"Experience with social media analytics tools and platforms.\",\r
+
+      \    //         \"Knowledge of paid social media advertising campaigns.\",\r
+
+      \    //         \"Understanding of SEO and content marketing principles.\",\r
+
+      \    //         \"Experience working with cross-functional teams in a remote environment.\",\r
+
+      \    //         \"Portfolio showcasing previous social media campaigns and content creation work.\"\r
+
+      \    //     ]\r
+
+      \    //   },\r
+
+      \      {\r
+
+      \        \"What We Offer\": [\r
+
+      \          \"A collaborative, global, and innovation-driven team environment.\",\r
+
+      \          \"Opportunities for growth, learning, and creative experimentation.\",\r
+
+      \          \"Flexible remote working arrangements.\",\r
+
+      \          \"The chance to shape and elevate a fast-growing digital brand.\",\r
+
+      \          \"Professional development opportunities in digital marketing and content strategy.\"\r
+
+      \        ]\r
+
+      \      }\r
+
+      \    ],\r
+
+      \    \"extraText\": \"Reports To: Lead Social Media Manager\",\r
+
+      \    \"currencySymbol\": \"N\",\r
+
+      \    \"salaryMinRange\": null,\r
+
+      \    \"salaryMaxRange\": null\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{URL}}/job_in_house/job-post"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"companyName\": \"Tobams Group\",\r
+
+          \    \"title\": \"Social Media Manager\",\r
+
+          \    \"jobDescription\": \"As a Social Media Manager at Tobams Group. This position offers an exciting opportunity to work on diverse projects and contribute to the success of our organization.\",\r
+
+          \    \"contractType\": \"FullTime\",\r
+
+          \    \"location\": \"Remote\",\r
+
+          \    \"region\": [\r
+
+          \        \"Africa\"\r
+
+          \    ],\r
+
+          \    \"responsibilities\": [\r
+
+          \        \"Prepare clear and concise documentation of business requirements, process flows, and analysis findings.\",\r
+
+          \        \"Create reports and presentations to communicate analysis results and recommendations to stakeholders.\",\r
+
+          \        \"Identify opportunities for process optimization and participate in improvement initiatives.\",\r
+
+          \        \"Assist in project planning, monitoring, and resolution of project-related issues.\",\r
+
+          \        \"Collaborate with quality assurance teams to ensure solutions meet business requirements.\",\r
+
+          \        \"Engage with stakeholders to understand their needs and manage expectations.\"\r
+
+          \    ],\r
+
+          \    \"skill\": [\r
+
+          \        \"Socials Mgt\", \"Problem-solving\", \"Communication\", \"Interpersonal Abilities\", \"Advert\"\r
+
+          \    ],\r
+
+          \    \"benefits\": [\r
+
+          \        \"Valuable hands-on experience.\", \r
+
+          \        \"Opportunity for permanent employment based on performance.\"\r
+
+          \    ],\r
+
+          \    // \"extraText\": \"Our company values creativity, innovation, and a passion for delivering exceptional products to our users. As a Product Designer, you will play a vital role in shaping the future of our products and contributing to our mission of providing outstanding user experiences. Join our team and embark on a rewarding journey of designing products that impact and improve the lives of millions of users worldwide.\",\r
+
+          \    \"currencySymbol\": \"N\",\r
+
+          \    \"salaryMinRange\": 2000000,\r
+
+          \    \"salaryMaxRange\": 4500000\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1398"
+        - name: ETag
+          value: W/"576-NwpJbfGxHDTpYdRkY7lGkiHR16U"
+        - name: Date
+          value: Tue, 30 Jul 2024 23:33:46 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Job Post Created successfully",
+              "data": {
+                  "userId": "6690035b5921cf3d45a3d725",
+                  "companyName": "Tobams Group",
+                  "title": "Social Media Manager",
+                  "jobDescription": "As a Social Media Manager at Tobams Group. This position offers an exciting opportunity to work on diverse projects and contribute to the success of our organization.",
+                  "contractType": "FullTime",
+                  "location": "Remote",
+                  "region": [
+                      "Africa"
+                  ],
+                  "responsibilities": [
+                      "Prepare clear and concise documentation of business requirements, process flows, and analysis findings.",
+                      "Create reports and presentations to communicate analysis results and recommendations to stakeholders.",
+                      "Identify opportunities for process optimization and participate in improvement initiatives.",
+                      "Assist in project planning, monitoring, and resolution of project-related issues.",
+                      "Collaborate with quality assurance teams to ensure solutions meet business requirements.",
+                      "Engage with stakeholders to understand their needs and manage expectations."
+                  ],
+                  "skill": [
+                      "Socials Mgt",
+                      "Problem-solving",
+                      "Communication",
+                      "Interpersonal Abilities",
+                      "Advert"
+                  ],
+                  "benefits": [
+                      "Valuable hands-on experience.",
+                      "Opportunity for permanent employment based on performance."
+                  ],
+                  "postStatus": "Open",
+                  "currencySymbol": "N",
+                  "salaryMinRange": 2000000,
+                  "salaryMaxRange": 4500000,
+                  "owner": "In-House",
+                  "_id": "66a978598e297eba4ccf9d9a",
+                  "createdAt": "2024-07-30T23:33:45.722Z",
+                  "updatedAt": "2024-07-30T23:33:45.722Z"
+              }
+          }

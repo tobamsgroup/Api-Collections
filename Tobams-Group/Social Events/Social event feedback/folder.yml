@@ -1,0 +1,7 @@
+info:
+  name: Social event feedback
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

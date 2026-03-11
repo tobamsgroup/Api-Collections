@@ -1,0 +1,90 @@
+info:
+  name: updating order checkout details
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{URL}}/cart/save_delivery_details"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"orderId\": \"f139f044-9a84-404f-98ab-ba622c506426\",\r
+
+      \    \"shippingAddressId\": \"6570d8778c43447a903404b7\",//the billing Id\r
+
+      \    \"billingAddressId\": \"6570d8778c43447a903404b7\",// the shipping Id\r
+
+      \    \"fullname\": \"olareign ola\",\r
+
+      \    \"phonenumber\":\"+44098930384\",\r
+
+      \    \"email\": \"mailfordevtest404@gmail.com\",\r
+
+      \    \"role\":\"guest\", // role to update the guest user details\r
+
+      \    \"isGuest\": true // this comes in true whenever you are passing a guest order and false when it is a register order\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Checkout a cart
+    request:
+      url: "{{URL}}/cart/submit_cart"
+      method: PATCH
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "564"
+        - name: ETag
+          value: W/"234-M+9vQtgVHrld6HsSe8hVxQwz72U"
+        - name: Date
+          value: Tue, 24 Oct 2023 23:20:55 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "An order has been created, please proceed to payment",
+              "data": {
+                  "order": {
+                      "userId": "0b65eb86-b1d4-4337-9e96-dbe365570434",
+                      "status": "PENDING",
+                      "date": "2023-10-24T23:09:32.472Z",
+                      "_id": "65385155f911a4034b5a92e0",
+                      "orderId": "46be1d0b-009c-4513-ba91-0b612754f8bd",
+                      "productDetails": [
+                          {
+                              "productId": "652d9c943106f3b571eff507",
+                              "name": "chicken skewer",
+                              "quantity": 3,
+                              "spiceLevel": "Mild",
+                              "weight": "200g",
+                              "image": "https://res.cloudinary.com/dddiqpeib/image/upload/v1697552541/Dev-product-images/tmp-3-1697552527402_vpfhyp.jpg",
+                              "_id": "65385156f911a4034b5a92e6"
+                          }
+                      ],
+                      "__v": 1
+                  }
+              }
+          }

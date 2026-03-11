@@ -1,0 +1,25 @@
+info:
+  name: Draft a job post
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{BASE}}/job_in_house/drafts"
+  body:
+    type: json
+    data: |-
+      {
+          "title": "Software development",
+          "companyName": "Tobams Group",
+          "contactType": "Full-time"
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

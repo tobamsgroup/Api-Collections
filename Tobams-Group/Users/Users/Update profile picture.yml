@@ -1,0 +1,31 @@
+info:
+  name: Update profile picture
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/users/profile-picture"
+  body:
+    type: multipart-form
+    data:
+      - name: ""
+        type: file
+        value: []
+      - name: file
+        type: file
+        value:
+          - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+      - name: currentPhoto
+        type: text
+        value: https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1743514652550_iL6RUTL-akatsuki-wallpaper-hd.jpg
+        description: Include current photo url if it exist with the new file
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

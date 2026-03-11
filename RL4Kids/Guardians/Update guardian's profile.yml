@@ -1,0 +1,78 @@
+info:
+  name: Update guardian's profile
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{base_url}}/guardian/681ddd3d0fafb09649480024"
+  body:
+    type: json
+    data: |-
+      {
+          "firstName": "Fawaz",
+          "lastName": "Abdganiyu"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/guardian/681ddd3d0fafb09649480024"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "firstName": "Fawaz",
+              "lastName": "Abdganiyu"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "462"
+        - name: ETag
+          value: W/"1ce-FT+Lndf7FA0Z2BovB9FGahPPhZ8"
+        - name: Date
+          value: Fri, 09 May 2025 14:37:09 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "User updated successfully",
+              "timestamp": "2025-05-09T14:37:09.957Z",
+              "path": "/api/v1/guardian/681ddd3d0fafb09649480024",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "_id": "681ddd3d0fafb09649480024",
+                  "email": "fawazabdganiyu@tobamsgroup.com",
+                  "isVerified": false,
+                  "kidIds": [
+                      "681de6a22c2b02c83017105c"
+                  ],
+                  "role": "teacher",
+                  "createdAt": "2025-05-09T10:47:25.382Z",
+                  "updatedAt": "2025-05-09T14:37:09.973Z",
+                  "firstName": "Fawaz",
+                  "lastName": "Abdganiyu"
+              }
+          }

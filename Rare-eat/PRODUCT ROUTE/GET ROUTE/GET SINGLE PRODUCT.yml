@@ -1,0 +1,20 @@
+info:
+  name: GET SINGLE PRODUCT
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{URL}}/companies/product/single/65814d74e30b7e9305d6d24d"
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

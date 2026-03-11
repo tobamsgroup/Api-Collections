@@ -1,0 +1,18 @@
+info:
+  name: Update MFA
+  type: http
+  seq: 16
+
+http:
+  method: PATCH
+  url: "{{BASE}}/auth/update-mfa/fawazabdganiyu@gmail.com"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzJlODQ3ODM0MTcyYzI0MGM2NGY2YmIiLCJlbWFpbCI6ImZhd2F6YWJkZ2FuaXl1QGdtYWlsLmNvbSIsInJvbGUiOiJJbnRlcm4iLCJpYXQiOjE3MzIwMDQ3NDksImV4cCI6MTczMjAwNjE4OX0.i4iTDDrC3cIiPD7DtVHdOoBa-x_fzDHRnRRwM9a1KiA
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

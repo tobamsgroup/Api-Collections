@@ -1,0 +1,93 @@
+info:
+  name: Get My cart
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{LIVE}}/cart/my_cart"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get My cart
+    request:
+      url: "{{URL}}/cart/my_cart"
+      method: GET
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Allow-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "586"
+        - name: ETag
+          value: W/"24a-kdSeOc3YsB+UlGE3NOMDw0RCtls"
+        - name: Date
+          value: Thu, 16 Nov 2023 08:16:01 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "User cart fetched successfully",
+              "data": {
+                  "number_of_items": 1,
+                  "cart": {
+                      "_id": "654ce0ec0508eb4f20e1d828",
+                      "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                      "bill": 247.288,
+                      "items": [
+                          {
+                              "product": {
+                                  "_id": "6552543022a120f3ad92ba2e",
+                                  "productName": "jollof rice",
+                                  "productImage": "example.jpeg",
+                                  "category": {
+                                      "category": "JOLLOF RICE"
+                                  },
+                                  "subcategories": {
+                                      "subcategory": "JOLLOF RICE"
+                                  },
+                                  "price": 7.99
+                              },
+                              "calculatedPrice": 153.408,
+                              "quantity": 2,
+                              "packs": 10,
+                              "size": "200g",
+                              "spiceLevel": "Mild hot",
+                              "productType": "BEEF"
+                          }
+                      ],
+                      "createdAt": "2023-11-09T13:38:52.198Z",
+                      "updatedAt": "2023-11-15T14:05:50.458Z",
+                      "__v": 12
+                  }
+              }
+          }

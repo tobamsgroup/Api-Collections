@@ -1,0 +1,203 @@
+info:
+  name: GET ALL PRODUCT
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{URL}}/companies/product/all"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GET ALL PRODUCT
+    request:
+      url: "{{URL}}/companies/product/all"
+      method: GET
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "3629"
+        - name: ETag
+          value: W/"e2d-pL9NiZqBSsSWqkLfhiL2pYLUePk"
+        - name: Date
+          value: Tue, 20 Feb 2024 13:43:53 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "productList": [
+                  {
+                      "_id": "65cf8a63bef40ff3f023e6ce",
+                      "productId": "REB1298",
+                      "productName": "Jollof Rice MIlk",
+                      "productImage": [],
+                      "category": null,
+                      "subcategory": null,
+                      "description": "Jollof rice is a legendary one-pot rice dish that is popular in many West African countries. It is ubiquitous in Nigeria, Cameroon, Ghana, Liberia, Togo, and Sierra Leone. In fact, this is the most popular party food in West Africa and has been gaining momentum elsewhere in East Africa. Our Rare Eat Jollof Rice is an easy, flavourful and perfectly cooked African classic dish. Rare Eat Jollof rice mix is made with fresh tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices",
+                      "ingredient": "De-starched Rice, tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices.",
+                      "nutritionalInfo": "Amount Per Serving Size – 100g Calories 265 Energy 1108KJ Total Fat 7.5g Saturated Fat 0.6g Sodium 239mg Potassium 121mg Total Carbohydrates 29g Dietary Fibre 0.8g Sugars 1.4g Protein 2.7g Vitamin A – 3% Vitamin C – 10% Calcium 1.5% Iron 5% ",
+                      "howToPrepare": "Cooks from frozen in 20 - 25 mins From Defrost 20 mins",
+                      "dietaryInfo": "Allergy – Product may contain nuts Suitable for Vegetarians No added Sugar",
+                      "storageInfo": "Keep Frozen (See Best before) Refrigerate and consume within 3 days Address International House, 64 Nile Street, London N1 7SR United Kingdom - Website - www.rareeat.com - Email - theteam@rareeat.com Instagram - @rareeat.uk, Facebook - @rareeat, Twitter - @rareeat",
+                      "extra": "Made with 100% natural and organic ingredients",
+                      "base_price": 7.99,
+                      "spice_level": [
+                          "Hot",
+                          "Mild",
+                          "Medium"
+                      ],
+                      "size": [
+                          "900g"
+                      ],
+                      "side_protein": [
+                          "Beef",
+                          "Chicken"
+                      ],
+                      "numbers_of_pack": [
+                          "single",
+                          "pack of 5",
+                          "pack of 10"
+                      ],
+                      "search_tags": [
+                          "Jollof",
+                          "Africa jollof",
+                          "Nigeria jollof"
+                      ],
+                      "variation_combination": [
+                          {
+                              "number_of_pack": "single",
+                              "size": "900g",
+                              "side_protein": "Beef",
+                              "price": 7.99,
+                              "discount_price": 7,
+                              "subscriptiom_price": 6.99,
+                              "SKU": "SKU123",
+                              "stock_quantity": 100,
+                              "_id": "65cf8a63bef40ff3f023e6cf"
+                          },
+                          {
+                              "number_of_pack": "single",
+                              "size": "900g",
+                              "side_protein": "Chicken",
+                              "price": 7.99,
+                              "discount_price": 7,
+                              "subscriptiom_price": 6.99,
+                              "SKU": "SKU123",
+                              "stock_quantity": 100,
+                              "_id": "65cf8a63bef40ff3f023e6d0"
+                          },
+                          {
+                              "number_of_pack": "single",
+                              "size": "900g",
+                              "side_protein": "Turkey",
+                              "price": 7.99,
+                              "discount_price": 7,
+                              "subscriptiom_price": 6.99,
+                              "SKU": "SKU123",
+                              "stock_quantity": 100,
+                              "_id": "65cf8a63bef40ff3f023e6d1"
+                          },
+                          {
+                              "number_of_pack": "pack of 5",
+                              "size": "900g",
+                              "side_protein": "Vegan",
+                              "price": 37.99,
+                              "discount_price": 7,
+                              "subscriptiom_price": 36.99,
+                              "SKU": "SKU123",
+                              "stock_quantity": 100,
+                              "_id": "65cf8a63bef40ff3f023e6d2"
+                          },
+                          {
+                              "number_of_pack": "pack of 5",
+                              "size": "900g",
+                              "side_protein": "Beef",
+                              "price": 37.99,
+                              "discount_price": 7,
+                              "subscriptiom_price": 36.99,
+                              "SKU": "SKU123",
+                              "stock_quantity": 100,
+                              "_id": "65cf8a63bef40ff3f023e6d3"
+                          },
+                          {
+                              "number_of_pack": "pack of 5",
+                              "size": "900g",
+                              "side_protein": "Chicken",
+                              "price": 37.99,
+                              "discount_price": 7,
+                              "subscriptiom_price": 36.99,
+                              "SKU": "SKU123",
+                              "stock_quantity": 100,
+                              "_id": "65cf8a63bef40ff3f023e6d4"
+                          },
+                          {
+                              "number_of_pack": "pack of 10",
+                              "size": "900g",
+                              "side_protein": "Beef",
+                              "price": 75,
+                              "discount_price": 74,
+                              "subscriptiom_price": 75,
+                              "SKU": "SKU123",
+                              "stock_quantity": 100,
+                              "_id": "65cf8a63bef40ff3f023e6d5"
+                          },
+                          {
+                              "number_of_pack": "pack of 10",
+                              "size": "900g",
+                              "side_protein": "Chicken",
+                              "price": 75,
+                              "discount_price": 74,
+                              "subscriptiom_price": 74,
+                              "SKU": "SKU123",
+                              "stock_quantity": 100,
+                              "_id": "65cf8a63bef40ff3f023e6d6"
+                          },
+                          {
+                              "number_of_pack": "pack of 10",
+                              "size": "900g",
+                              "side_protein": "Turkey",
+                              "price": 75,
+                              "discount_price": 74,
+                              "subscriptiom_price": 74,
+                              "SKU": "SKU123",
+                              "stock_quantity": 100,
+                              "_id": "65cf8a63bef40ff3f023e6d7"
+                          }
+                      ],
+                      "createdAt": "2024-02-16T16:16:35.564Z",
+                      "updatedAt": "2024-02-16T16:16:35.564Z",
+                      "__v": 0
+                  }
+              ]
+          }

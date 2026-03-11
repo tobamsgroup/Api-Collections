@@ -1,0 +1,24 @@
+info:
+  name: Request Peer-to-Peer conection
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{BASE}}/users/potential-peers/:userId/:targetId"
+  params:
+    - name: userId
+      value: ""
+      type: path
+    - name: targetId
+      value: ""
+      type: path
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,7 @@
+info:
+  name: Weekly Activities
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

@@ -1,0 +1,27 @@
+info:
+  name: Create an admin
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{URL}}/admin/auth/create"
+  body:
+    type: json
+    data: |-
+      {
+          "firstname": "Francis",
+          "lastname": "Olatinwo",
+          "middlename": "Olamide",
+          "role": "Product Manager",
+          "email": "francisolatinwo@gmail.com"
+      }
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

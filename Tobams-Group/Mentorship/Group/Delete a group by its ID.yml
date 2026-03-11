@@ -1,0 +1,17 @@
+info:
+  name: Delete a group by its ID
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{BASE}}/mentorship/groups/67ce1fcc7c3e3d456eae1db4"
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

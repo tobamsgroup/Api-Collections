@@ -1,0 +1,14 @@
+info:
+  name: Weekly Report EnQ
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BASE}}/admin/weekly-report/enqueue"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

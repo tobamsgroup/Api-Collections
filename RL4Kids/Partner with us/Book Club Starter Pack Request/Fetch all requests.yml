@@ -1,0 +1,118 @@
+info:
+  name: Fetch all requests
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/book-club-starter-packs"
+  body:
+    type: text
+    data: |-
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane.doe@example.com",
+        "organization": "Green Schools",
+        "intendedUse": "Community",
+        "numberOfChildren": 15,
+        "packType": "Physical",
+        "address": "123 Main Street, Lagos"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/book-club-starter-packs"
+      method: GET
+      body:
+        type: text
+        data: |-
+          {
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "jane.doe@example.com",
+            "organization": "Green Schools",
+            "intendedUse": "Community",
+            "numberOfChildren": 15,
+            "packType": "Physical",
+            "address": "123 Main Street, Lagos"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "547"
+        - name: ETag
+          value: W/"223-WV+psflZeHs3OosdL+ufM8w5uoM"
+        - name: Date
+          value: Wed, 18 Jun 2025 04:00:42 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Requests fetched successfully",
+              "timestamp": "2025-06-18T04:00:42.503Z",
+              "path": "/api/v1/book-club-starter-pack",
+              "service": "RL4KIDS",
+              "version": "1.0.0",
+              "data": {
+                  "currentCount": 1,
+                  "totalCount": 1,
+                  "requests": [
+                      {
+                          "_id": "6852397fb6a715253681d03b",
+                          "firstName": "Jane",
+                          "lastName": "Doe",
+                          "email": "jane.doe@example.com",
+                          "organization": "Green Schools",
+                          "intendedUse": "Community",
+                          "numberOfChildren": 15,
+                          "packType": "Physical",
+                          "address": "123 Main Street, Lagos",
+                          "createdAt": "2025-06-18T03:58:55.448Z",
+                          "updatedAt": "2025-06-18T03:58:55.448Z"
+                      }
+                  ]
+              }
+          }

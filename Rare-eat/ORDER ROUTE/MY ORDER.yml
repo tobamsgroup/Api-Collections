@@ -1,0 +1,80 @@
+info:
+  name: MY ORDER
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{LIVE}}/order/my_orders"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMTQxMmNkOS02NTdkLTQwOTMtYWE2OS1iYTI0YWYxZGJkMzIiLCJpYXQiOjE3MDQ5NjY4MTUsImV4cCI6MTcwNTM5ODgxNX0.Fa4yY9BLPluPXA-IZOA_Yw0DGGZyQvQE_Rj3muONWsk
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: MY ORDER
+    request:
+      url: "{{URL}}/order/my_orders"
+      method: GET
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "437"
+        - name: ETag
+          value: W/"1b5-boi3F/TyuHBqs21GSYBYH6y0Pww"
+        - name: Date
+          value: Thu, 09 Nov 2023 14:09:03 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "User Orders has been generated successfully",
+              "data": {
+                  "orders": [
+                      {
+                          "_id": "654ce7b1df1f8a334f5afa05",
+                          "status": "PENDING",
+                          "date": "2023-11-09T14:04:03.424Z",
+                          "orderId": "027ed3bb-9164-40be-a34d-c7c10747ed24",
+                          "productDetails": [
+                              {
+                                  "productId": "654cb2220508eb4f20e1d81a",
+                                  "name": "chicken skewer",
+                                  "quantity": 1,
+                                  "spiceLevel": "Mild hot",
+                                  "weight": "200g",
+                                  "price": 24.09,
+                                  "image": "example.jpeg",
+                                  "_id": "654ce7b2df1f8a334f5afa0b"
+                              }
+                          ],
+                          "price": 231.264
+                      }
+                  ]
+              }
+          }

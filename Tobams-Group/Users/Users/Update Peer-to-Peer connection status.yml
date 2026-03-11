@@ -1,0 +1,24 @@
+info:
+  name: Update Peer-to-Peer connection status
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{BASE}}/users/potential-peers/:userId/:targetId"
+  params:
+    - name: userId
+      value: ""
+      type: path
+    - name: targetId
+      value: ""
+      type: path
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

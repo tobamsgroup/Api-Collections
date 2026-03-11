@@ -1,0 +1,38 @@
+info:
+  name: job by ID Copy_1
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/job_client/65e5bbea8978f57aaee3e8a1"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"jobDescription\": \"Visuals Tobams creator\",\r
+
+      \    \"contractType\": \"Contract\",\r
+
+      \    \"location\": \"Remote\",\r
+
+      \    \"responsibilities\": [\r
+
+      \        \"html\", \"css\"\r
+
+      \    ],\r
+
+      \    \"qualificationAndSkill\": [\r
+
+      \        \"B.Sc\", \"M.Sc\"\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

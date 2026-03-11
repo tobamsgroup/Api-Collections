@@ -1,0 +1,73 @@
+info:
+  name: Create a course
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/courses"
+  body:
+    type: json
+    data: |-
+      {
+          "name": "Computer software development",
+          "description": "Important development course",
+          "category": "Career Development",
+          "price": "100",
+          "status": "status", // specific
+          "imageUrl": "file",
+          "courseUrl": "string"
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Create a course
+    request:
+      url: "{{DEV_BASE}}/courses"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "name": "number 89",
+              "description": "string",
+              "category": "string",
+              "price": "string",
+              "status": "string", // specific
+              "imageUrl": "file",
+              "courseUrl": "string"
+          }
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Course created successfully",
+              "data": {
+                  "name": "string",
+                  "description": "string",
+                  "category": "string",
+                  "price": "string",
+                  "status": "string",
+                  "imageUrl": "file",
+                  "courseUrl": "string",
+                  "_id": "67a3b73e39a3ccf8c2903ebc",
+                  "createdAt": "2025-02-05T19:08:46.529Z",
+                  "updatedAt": "2025-02-05T19:08:46.529Z"
+              }
+          }

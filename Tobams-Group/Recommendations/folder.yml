@@ -1,0 +1,9 @@
+info:
+  name: Recommendations
+  type: folder
+  seq: 19
+
+request:
+  auth:
+    type: bearer
+    token: "{{admin_access}}"

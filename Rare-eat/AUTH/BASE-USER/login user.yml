@@ -1,0 +1,89 @@
+info:
+  name: login user
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{URL}}/auth/user/login"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\",\r
+
+      \    \"password\": \"P@ssW0rd\"\r
+
+      }"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: bru.setEnvVar("jwt", res.getBody().token);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: login user
+    request:
+      url: "{{URL}}/auth/user/login"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"email\": \"francis@gmail.com\",\r
+
+          \    \"password\": \"P@ssW0rd\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "680"
+        - name: ETag
+          value: W/"2a8-CJeHhe+IOlGp0KNBvWWKjzE2p2A"
+        - name: Date
+          value: Fri, 24 Nov 2023 10:13:48 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "An OTP has been sent to your mail, kindly verrify to proceed",
+              "Data": {
+                  "id": "654b6801bd26688e2245451a",
+                  "email": "francis@gmail.com",
+                  "phonenumber": 8010045678,
+                  "role": "retailer",
+                  "firstname": "styles",
+                  "lastname": "mike",
+                  "picture": "https://res.cloudinary.com/dddiqpeib/image/upload/v1700170339/Dev-profile-pics/tmp-3-1700170336989_q5dlod.jpg",
+                  "isVerified": true,
+                  "multiFactorAuthentication": true,
+                  "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                  "isVerifiedTime": 1699440792885
+              },
+              "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZmE4OGJiZS1kNmJjLTQ2ODItYTg2OS03Y2FkZjNmYzMxMWMiLCJpYXQiOjE3MDA4MjA4MjMsImV4cCI6MTcwMTI1MjgyM30.ktR3DRLQaS106gOpE9gjc7Y_43WbBrs7Kg1VXdRL4Q0"
+          }

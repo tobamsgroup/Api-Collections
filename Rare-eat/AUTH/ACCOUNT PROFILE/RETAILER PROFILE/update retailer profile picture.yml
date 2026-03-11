@@ -1,0 +1,22 @@
+info:
+  name: update retailer profile picture
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{URL}}/user/retailer/profile/picture-update/6509cf7f584a9f73976135ce"
+  body:
+    type: multipart-form
+    data:
+      - name: image
+        type: file
+        value:
+          - /C:/Users/HP/Desktop/L.jpeg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

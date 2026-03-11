@@ -1,0 +1,17 @@
+info:
+  name: Logout
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/logout"
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

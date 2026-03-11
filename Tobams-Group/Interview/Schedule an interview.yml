@@ -1,0 +1,133 @@
+info:
+  name: Schedule an interview
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{BASE}}/interviews/schedule"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"role\": \"Business Development & Marketing Manager\",\r
+
+      \  \"jobPostId\": \"6941a7eef0746ae602693990\",\r
+
+      \  \"applicantId\": \"691ec925d5b3456cd06e5ce0\",\r
+
+      \  \"message\": \"Congratulations! You have been shortlisted for an interview. We are impressed with your qualifications and would like to proceed with the next step in the hiring process.\\n\\nPlease accept the interview schedule to let us know if it is suitable for you or if you would like to reschedule.\\nThank you\",\r
+
+      \  \"date\": \"2028-03-15T00:00:00.000Z\",\r
+
+      \  \"startTime\": \"10:00 AM\",\r
+
+      \  \"endTime\": \"11:00 AM\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{org_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/interviews/schedule"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"role\": \"Business Development & Marketing Manager\",\r
+
+          \  \"jobPostId\": \"6941a7eef0746ae602693990\",\r
+
+          \  \"applicantId\": \"691ec925d5b3456cd06e5ce0\",\r
+
+          \  \"message\": \"Congratulations! You have been shortlisted for an interview. We are impressed with your qualifications and would like to proceed with the next step in the hiring process.\\n\\nPlease accept the interview schedule to let us know if it is suitable for you or if you would like to reschedule.\\nThank you\",\r
+
+          \  \"date\": \"2028-03-15T00:00:00.000Z\",\r
+
+          \  \"startTime\": \"10:00 AM\",\r
+
+          \  \"endTime\": \"11:00 AM\"\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1766844920185-5oqprbbs6
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "837"
+        - name: ETag
+          value: W/"345-X/h+2lKltpfB8RDDwgOaykCmVfc"
+        - name: Date
+          value: Sat, 27 Dec 2025 14:15:28 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Interview scheduled successfully",
+              "data": {
+                  "companyName": "Progress Hub",
+                  "companyId": "694fe5a0f25f5a8a99b11376",
+                  "role": "Business Development & Marketing Manager",
+                  "jobPostId": "6941a7eef0746ae602693990",
+                  "applicantId": "691ec925d5b3456cd06e5ce0",
+                  "message": "Congratulations! You have been shortlisted for an interview. We are impressed with your qualifications and would like to proceed with the next step in the hiring process.\n\nPlease accept the interview schedule to let us know if it is suitable for you or if you would like to reschedule.\nThank you",
+                  "date": "2028-03-15T00:00:00.000Z",
+                  "startTime": "10:00 AM",
+                  "endTime": "11:00 AM",
+                  "status": "Pending",
+                  "meetLink": "https://meet.google.com/jip-rhii-eaf",
+                  "_id": "694fe9fdd5b7639cb19b1ef6",
+                  "createdAt": "2025-12-27T14:15:25.317Z",
+                  "updatedAt": "2025-12-27T14:15:25.317Z"
+              }
+          }

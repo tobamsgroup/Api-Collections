@@ -1,0 +1,19 @@
+info:
+  name: Get events by date
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{BASE}}/social_events/search/date?date="
+  params:
+    - name: date
+      value: ""
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

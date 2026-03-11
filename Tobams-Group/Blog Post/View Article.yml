@@ -1,0 +1,182 @@
+info:
+  name: View Article
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{BASE}}/blog/details/6716f9bcc1d65074661c6a66"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Reference error
+    request:
+      url: "{{@harek}}/blog/details/65de9ea4a9f867ae3a2ce88d5"
+      method: GET
+    response:
+      statusText: "500"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "55"
+        - name: ETag
+          value: W/"37-dj9sxytXOCxkSTzfc8JrbVqliYI"
+        - name: Date
+          value: Fri, 01 Mar 2024 11:15:37 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Invalid Article Reference"
+          }
+  - name: Not found
+    request:
+      url: "{{@harek}}/blog/details/65de9ea4a9f867ae3a2ce88d"
+      method: GET
+    response:
+      statusText: "404"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "47"
+        - name: ETag
+          value: W/"2f-Z67PI51zhhhWY37kNaPgp050UBc"
+        - name: Date
+          value: Fri, 01 Mar 2024 11:16:20 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Article not found"
+          }
+  - name: Success
+    request:
+      url: "{{@harek}}/blog/details/65e04b39f73e155e42631719"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "299"
+        - name: ETag
+          value: W/"12b-aF32ftKCo791LEfMsfXS96plGXc"
+        - name: Date
+          value: Fri, 01 Mar 2024 11:22:36 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "data": {
+                  "_id": "65e04b39f73e155e42631719",
+                  "title": "Irony of loneliness",
+                  "content": "<h1>Mindfullness</h1><br><p>This is the content of mindfullness</p>",
+                  "duration": "2 minutes read",
+                  "photo": "https://res.cloudinary.com/upload/Blog/5645454k54.png",
+                  "createdAt": "2024-02-29T09:15:37.450Z"
+              }
+          }
+
+docs: With this endpoint you can view a particular testimonial by providing a valid testimonial `ObjectId` a `Reference Error` is returned if an invalid ObjectId is parsed as params, a `Not Found Error` when the `ObjectId` is invalid and `Success` response when the request is valid

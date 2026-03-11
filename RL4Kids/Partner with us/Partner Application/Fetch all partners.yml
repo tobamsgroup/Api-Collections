@@ -1,0 +1,179 @@
+info:
+  name: Fetch all partners
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/partner-applications"
+  body:
+    type: text
+    data: |-
+      {
+            "organisationInfo": {
+              "name": "Future Leaders Foundation",
+              "type": "NGO",
+              "contactPersonName": "Aisha Mohammed",
+              "contactPersonRole": "Program Coordinator",
+              "email": "aisha@futureleaders.org",
+              "phoneNumber": "+2348034567890",
+              "country": "Nigeria"
+            },
+            "partnershipDetails": {
+              "formOfPartnership": "Collaborate to Develop Custom Educational Solutions",
+              "studentAgeGroup": "7-14",
+              "programsOfInterest": ["Think Sustainability", "Think Entrepreneurship", "Think Technology", "Think Strategy"],
+              "estimatedStudents": 500,
+              "goal": "To provide free technology education to underprivileged children in our community",
+              "questionsOrComments": "We would like to know more about the teacher training program"
+            }
+          }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/partner-applications"
+      method: GET
+      body:
+        type: text
+        data: |-
+          {
+                "organisationInfo": {
+                  "name": "Future Leaders Foundation",
+                  "type": "NGO",
+                  "contactPersonName": "Aisha Mohammed",
+                  "contactPersonRole": "Program Coordinator",
+                  "email": "aisha@futureleaders.org",
+                  "phoneNumber": "+2348034567890",
+                  "country": "Nigeria"
+                },
+                "partnershipDetails": {
+                  "formOfPartnership": "Collaborate to Develop Custom Educational Solutions",
+                  "studentAgeGroup": "7-14",
+                  "programsOfInterest": ["Think Sustainability", "Think Entrepreneurship", "Think Technology", "Think Strategy"],
+                  "estimatedStudents": 500,
+                  "goal": "To provide free technology education to underprivileged children in our community",
+                  "questionsOrComments": "We would like to know more about the teacher training program"
+                }
+              }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1806"
+        - name: ETag
+          value: W/"70e-uCgQKGN7DqCO09/VADq+VgfMy5c"
+        - name: Date
+          value: Tue, 17 Jun 2025 15:04:13 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Partner applications fetched successfully",
+              "timestamp": "2025-06-17T15:04:13.008Z",
+              "path": "/api/v1/partner-applications",
+              "service": "RL4KIDS",
+              "version": "1.0.0",
+              "data": {
+                  "currentCount": 2,
+                  "totalCount": 2,
+                  "applications": [
+                      {
+                          "_id": "685183bec7e662741382137a",
+                          "organisationInfo": {
+                              "name": "Future Leaders Foundation",
+                              "type": "NGO",
+                              "contactPersonName": "Aisha Mohammed",
+                              "contactPersonRole": "Program Coordinator",
+                              "email": "aishah@futureleaders.org",
+                              "phoneNumber": "+2348034567890",
+                              "country": "Nigeria"
+                          },
+                          "partnershipDetails": {
+                              "formOfPartnership": "Collaborate to Develop Custom Educational Solutions",
+                              "studentAgeGroup": "7-14",
+                              "programsOfInterest": [
+                                  "Think Sustainability",
+                                  "Think Entrepreneurship",
+                                  "Think Technology",
+                                  "Think Strategy"
+                              ],
+                              "estimatedStudents": 500,
+                              "goal": "To provide free technology education to underprivileged children in our community",
+                              "questionsOrComments": "We would like to know more about the teacher training program"
+                          },
+                          "createdAt": "2025-06-17T15:03:26.639Z",
+                          "updatedAt": "2025-06-17T15:03:26.639Z"
+                      },
+                      {
+                          "_id": "685181eadee2ec143dbee063",
+                          "organisationInfo": {
+                              "name": "Future Leaders Foundation",
+                              "type": "NGO",
+                              "contactPersonName": "Aisha Mohammed",
+                              "contactPersonRole": "Program Coordinator",
+                              "email": "aisha@futureleaders.org",
+                              "phoneNumber": "+2348034567890",
+                              "country": "Nigeria"
+                          },
+                          "partnershipDetails": {
+                              "formOfPartnership": "Collaborate to Develop Custom Educational Solutions",
+                              "studentAgeGroup": "7-14",
+                              "programsOfInterest": [
+                                  "Think Sustainability",
+                                  "Think Entrepreneurship",
+                                  "Think Technology",
+                                  "Think Strategy"
+                              ],
+                              "estimatedStudents": 500,
+                              "goal": "To provide free technology education to underprivileged children in our community",
+                              "questionsOrComments": "We would like to know more about the teacher training program"
+                          },
+                          "createdAt": "2025-06-17T14:55:38.622Z",
+                          "updatedAt": "2025-06-17T14:55:38.622Z"
+                      }
+                  ]
+              }
+          }

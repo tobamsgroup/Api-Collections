@@ -1,0 +1,74 @@
+info:
+  name: Kid profile creation
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/signup/kid"
+  body:
+    type: json
+    data: |-
+      {
+          "guardianId": "68fa60b45fa8660a37eaa6e1",
+          "name": "abdulrasaq bilal",
+          "username": "AbduBilal-olareign",
+          "age": 12,
+          "preferredLearningTopics": "Think Sustainability",
+          "password": "Passme",
+          "role": "kid"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/auth/signup/kid"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "guardianId": "681ddd3d0fafb09649480024",
+              "name": "Sulaiman Solomon",
+              "username": "Solomon2322",
+              "age": 8,
+              "preferredLearningTopics": "Think Entrepreneurship",
+              "password": "Passme",
+              "role": "kid"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "175"
+        - name: ETag
+          value: W/"af-46Yp1+h1OWaHwjPxWp0djbF/qHU"
+        - name: Date
+          value: Fri, 09 May 2025 15:05:14 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "message": "Child profile created successfully",
+              "timestamp": "2025-05-09T15:05:13.663Z",
+              "path": "/api/v1/auth/signup/kid",
+              "service": "RL4Kids",
+              "version": "1.0.0"
+          }

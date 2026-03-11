@@ -1,0 +1,34 @@
+info:
+  name: Update a group info
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/mentorship/groups/67d94df1b3ea8eee43ef5c9b"
+  body:
+    type: json
+    data: |-
+      {
+          // "name": "Creative Ad Strategists",
+          // "description": "Advertising strategy, campaign management, and creative storytelling.",
+          // "aboutGroup": "Group Focus\nThis group is dedicated to nurturing aspiring and experienced product designers who are passionate about crafting intuitive, user-friendly digital experiences. Our focus is on building strong foundations in UI/UX design, from understanding the fundamentals of design principles to mastering advanced tools like Figma and Sketch. You'll dive deep into user research, wireframing, prototyping, and usability testing, all while learning how to communicate effectively with stakeholders and developers.\n\nKey Topics Covered\n-User Research & Empathy Mapping\n-Wireframing & Prototyping\n-Visual Design Principles\n-Usability Testing\n-Design Systems\n-Collaboration with Developers\n\nWhy join?\nWhether you’re new to the field or looking to refine your design skills, this group provides hands-on guidance to enhance your portfolio and prepare for real-world challenges. With personalized feedback on your design projects and collaborative group critiques, you’ll gain the confidence and expertise to take on complex design problems.\n\nAvailability\nWe offer weekly mentoring sessions, design sprints, and interactive workshops. Flexible time slots are available to accommodate different schedules.",
+          // "skills": ["Comunication", "Computer Science", "UI Design"],
+          // "limit": 7,
+          "duration": 6,
+          "startDate": "2025-01-01T00:00:00.000Z",
+          "endDate": "2025-06-30T00:00:00.000Z",
+          "timeZone": "GMT +1",
+          "availability": "Weekends",
+          "startTime": "9:00 AM",
+          "endTime": "10:00 AM"
+      }
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,21 @@
+info:
+  name: ACTIVATE A BILLING PLAN (p)
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{URL}}/subscription/billing_plan/activate?plan_id=P-83C839640L235931HMVNDEDY"
+  params:
+    - name: plan_id
+      value: P-83C839640L235931HMVNDEDY
+      type: query
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

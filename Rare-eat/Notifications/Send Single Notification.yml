@@ -1,0 +1,25 @@
+info:
+  name: Send Single Notification
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:5050/api/v1/notifications/send/single
+  body:
+    type: json
+    data: |-
+      {
+          "userId":"65af72862175eb158d3bf742",
+          "message":{
+              "title":"You are welcome",
+              "content":"Welcome to rareeat, Home of frozen to cook foods"
+          }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

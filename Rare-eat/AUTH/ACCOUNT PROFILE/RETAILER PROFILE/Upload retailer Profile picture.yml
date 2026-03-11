@@ -1,0 +1,22 @@
+info:
+  name: Upload retailer Profile picture
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LIVE}}/user/retailer/profile/picture-upload"
+  body:
+    type: multipart-form
+    data:
+      - name: ""
+        type: file
+        value:
+          - /C:/Users/HP/Desktop/All/pp.jpeg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,96 @@
+info:
+  name: Upload CV
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/upload/cv"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /C:/Users/HP/Downloads/User-Centered_Design.pdf
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Upload CV
+    request:
+      url: "{{BASE}}/upload/cv"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - /C:/Users/HP/Downloads/1610534843Unit 3 Strategic Planning.pdf
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "335"
+        - name: ETag
+          value: W/"14f-3XhngqIc1AcFNoigsi+e2DDaInI"
+        - name: Date
+          value: Sun, 30 Jun 2024 11:45:02 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "status": true,
+              "data": {
+                  "status": true,
+                  "data": {
+                      "url": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1719747892876_1610534843Unit%203%20Strategic%20Planning.pdf",
+                      "uniqueKey": "uploads/1719747892876_1610534843Unit 3 Strategic Planning.pdf",
+                      "Bucket": "dev-talent-form-test",
+                      "value": "\"aa1f866b0ef6ea652f15ec6a695567f7\""
+                  }
+              }
+          }
+
+docs: |-
+  This endpoint is for all file uploads across the Tobams web application. It takes it's file as a `formData` and uploads to the CDN and responds with the uploaded file information as an object. The `secure_url` is the `url` where the file can be accessed on the cloud. This url is what the client has to parse to the server as a `String` after the file has been successfully uploaded on the cloud.
+
+  N/B: Take not of the `params` you must set a `directory` as a `query` `params` just to keep things a little bit clean up there at the CDN server.

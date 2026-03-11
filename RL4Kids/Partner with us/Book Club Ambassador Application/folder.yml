@@ -1,0 +1,7 @@
+info:
+  name: Book Club Ambassador Application
+  type: folder
+  seq: 4
+
+request:
+  auth: inherit

@@ -1,0 +1,145 @@
+info:
+  name: Create fresh profile after assessment result
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/talents"
+  headers:
+    - name: Authorization
+      value: Bearer {{intern_access}}
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          // "title": "Backend Develope",
+          // "bio": "Problem solver",
+          // "skills": ["web development"],
+          // "educations": [
+          //     // {
+          //     //     "school": "University of Ibadan"
+                  
+          //     // }
+
+          // ],
+          // "workExperiences": [
+          //     // {
+          //     //     "comapanyName": "ALX"
+          //     // }
+          // ],
+          // "certifications": [
+          //     // {
+          //     //     "certificateTitle": "BSc."
+          //     // }
+          // ],
+          // "internshipPreference": {
+          //     "role": ["Backend Developer"],
+          //     "industryOfInterest": ["Tech", "Education", "Real Estate"],
+          //     "preferredLocation": ["Nigeria", "US", "UK"],
+          //     "workMode": "Remote",
+          //     "duration": " 6 Months",
+          //     "internshipType": "Paid"
+          // },
+          // "mentorPreference": {
+          //     "role": ["Backend Developer"],
+          //     "industryOfInterest": ["Tech", "Education", "Real Estate"],
+          //     "experienceLevel": "Mid-Level",
+          //     "mentorshipType": "Group"
+
+          // }
+          "personalInfo": {
+              "location": {
+                  "city": "Saki",
+                  "country": "Nigeria"
+              },
+              "firstName": "Fawaz",
+              "lastName": "Talent"
+          },
+          "briefBio": "A passionate software developer with experience in building web applications.",
+          "occupation": "Software Developer",
+          "portfolioLink": "https://example.com/portfolio",
+          "linkText": "View my portfolio",
+          "skill":  "Node.js",
+          "education":
+          {
+            "school": "University of Lagos",
+            "degree": "Bachelor's Degree",
+            "fieldOfStudy": "Computer Science and IT",
+            "grade": "First Class",
+            "startDate": "2018-09-01T00:00:00.000Z",
+            "endDate": "2022-06-01T00:00:00.000Z",
+            "isStudyingHere": false,
+            "description": "Studied various aspects of computer science including algorithms, data structures, and software engineering.",
+            "skills": ["C++", "Python"]
+          },
+        "workExperience": 
+          {
+            "jobTitle": "Software Developer Intern",
+            "employmentType": "Internship",
+            "companyName": "Tech Company",
+            "location": "Lagos, Nigeria",
+            "locationType": "On-site",
+            "isWorkingHere": false,
+            "startDate": "2021-06-01T00:00:00.000Z",
+            "endDate": "2021-12-01T00:00:00.000Z",
+            "description": "Worked on developing web applications using JavaScript and Node.js.",
+            "skills": ["JavaScript", "Node.js"]
+          },
+          // {
+          //   "jobTitle": "Junior Software Developer",
+          //   "employmentType": "Full-time",
+          //   "companyName": "Another Tech Company",
+          //   "location": "Abuja, Nigeria",
+          //   "locationType": "Remote",
+          //   "isWorkingHere": true,
+          //   "startDate": "2022-01-01T00:00:00.000Z",
+          //   "endDate": "2022-06-01T00:00:00.000Z",
+          //   "description": "Developing and maintaining web applications using React and Node.js.",
+          //   "skills": ["React", "Node.js"]
+          // },
+          // {
+          //   "jobTitle": "Freelance Developer",
+          //   "employmentType": "Freelance",
+          //   "companyName": "Freelance",
+          //   "location": "Remote",
+          //   "locationType": "Remote",
+          //   "isWorkingHere": false,
+          //   "startDate": "2020-01-01T00:00:00.000Z",
+          //   "endDate": "2021-05-31T00:00:00.000Z",
+          //   "description": "Worked on various freelance projects involving web development and mobile app development.",
+          //   "skills": ["JavaScript", "React Native"]
+          // }
+        "certification":
+          {
+            "certificateTitle": "Certified JavaScript Developer",
+            "institution": "Certification Authority",
+            "dateObtained": "2021-01-01",
+            "expiryDate": "2023-01-01"
+          }
+        ,
+        "internshipPreferences": {
+          "role": ["Software Developer"],
+          "industryOfInterest": ["Technology"],
+          "preferredLocation": ["Remote"],
+          "workMode": "Remote",
+          "duration": "6 Months",
+          "internshipType": "Paid"
+        },
+        "mentorPreferences": {
+          "role": ["Software Engineer"],
+          "industryOfInterest": ["Technology"],
+          "experienceLevel": "Senior",
+          "mentorshipType": "Group"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

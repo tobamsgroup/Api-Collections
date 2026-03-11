@@ -1,0 +1,1258 @@
+info:
+  name: Get all jobs
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/jobs"
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/jobs"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "35195"
+        - name: ETag
+          value: W/"897b-3tbuCGQB37/0u/pTHd/+mZu3qmI"
+        - name: Date
+          value: Sat, 05 Apr 2025 07:01:26 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "All posted job retrieved successfully",
+              "data": {
+                  "currentCount": 12,
+                  "totalCount": 14,
+                  "jobs": [
+                      {
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "_id": "6779024e76e2ceead659295a",
+                          "companyName": "Tobams Group",
+                          "title": "Career Development Consultant",
+                          "jobDescription": "The Career Development Consultant will be responsible for designing, customizing, and delivering career development training aligned with the workshop's objectives. The consultant will play a key role in inspiring students, equipping them with practical tools, and providing insights into the future of work and personal branding. This position is ideal for professionals passionate about career coaching, employability skills, and student empowerment. The consultant will work closely with Tobams Group to ensure the program is engaging, relevant, and impactful.",
+                          "contractType": "Contract",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Key Responsibilities": [
+                                      "Develop workshop content aligned with the objectives outlined Clients proposal.",
+                                      "Customize sessions to suit the needs of Nigerian university students, incorporating local and global career trends.",
+                                      "Create interactive materials, including case studies, exercises, and practical tools.",
+                                      "Developing adaptability and resilience in dynamic job markets.",
+                                      "Building a Personal Brand: Mastering networking and professional identity.",
+                                      "Use innovative teaching techniques to ensure active student participation and retention of concepts.",
+                                      "Share real-life examples, industry insights, and actionable strategies during the training sessions.",
+                                      "Evaluation and Feedback: Assess students’ understanding and engagement through pre- and post-training evaluations.",
+                                      "Provide a detailed report on the workshop's outcomes, including recommendations for future sessions.",
+                                      "Stakeholder Collaboration: Collaborate with Tobams Group’s team to align content with organizational goals.",
+                                      "Liaise with University representatives to ensure seamless program delivery."
+                                  ]
+                              },
+                              {
+                                  "Key Qualifications and Skills:": [
+                                      "Bachelor's degree or Advanced degree, certifications in Career Development, Coaching, or Employability Training are an advantage.",
+                                      "Minimum of 5 years of experience in career development, employability training, or a related field.",
+                                      "Proven track record of delivering impactful workshops or training sessions, particularly for university students.",
+                                      "Strong understanding of Nigerian labor market trends and global career development practices.",
+                                      "Exceptional facilitation and presentation skills with the ability to engage diverse audiences.",
+                                      "Expertise in topics such as adaptability, resilience, personal branding, and networking.",
+                                      "Strong interpersonal and communication skills, with the ability to connect with students and inspire confidence.",
+                                      "Ability to design and deliver training materials using various methodologies (e.g., case studies, role-playing, group discussions).",
+                                      "Knowledge of digital tools and platforms for virtual or hybrid workshop delivery."
+                                  ]
+                              },
+                              {
+                                  "Desirable Attributes": [
+                                      "Passionate about student empowerment and career development.",
+                                      "Culturally aware, with the ability to relate training content to the Nigerian context.",
+                                      "Innovative and creative thinker who can design engaging and memorable learning experiences.",
+                                      "Strong organizational skills, with attention to detail and the ability to meet deadlines."
+                                  ]
+                              },
+                              {
+                                  "What We Offer": [
+                                      "Competitive remuneration based on experience and expertise.",
+                                      "Opportunity to work with a dynamic team committed to transforming education and career development.",
+                                      "Potential for long-term collaboration on future projects across Nigeria and beyond.",
+                                      "A platform to impact the next generation of professionals and contribute to sustainable growth in the Nigerian education sector."
+                                  ]
+                              },
+                              {
+                                  "Application Process": [
+                                      "Interested candidates should submit the following:",
+                                      "A detailed CV highlighting relevant experience and achievements.",
+                                      "A cover letter outlining why you are the ideal candidate for this role, including examples of past workshops or training sessions delivered.",
+                                      "A sample training agenda or content (if available) demonstrating your expertise."
+                                  ]
+                              },
+                              {
+                                  "Equal Opportunity Statement": [
+                                      "Tobams Group is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all consultants and team members.",
+                                      "We look forward to receiving your application and exploring how your expertise can contribute to the success of this transformative workshop!"
+                                  ]
+                              }
+                          ],
+                          "extraText": "",
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": null,
+                          "salaryMaxRange": null,
+                          "owner": "In-House",
+                          "createdAt": "2025-01-04T09:41:34.800Z",
+                          "applicationCount": 1,
+                          "deadlineDate": ""
+                      },
+                      {
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "_id": "678627a442ba92331072d7b6",
+                          "companyName": "Tobams Group",
+                          "title": "Associate Frontend Developer",
+                          "jobDescription": "We are seeking a talented and driven Associate Frontend Developer with over 3 years of experience specializing in Next.js. In this role, you will collaborate with cross-functional teams to deliver high-quality, scalable, and user-friendly web applications. This is an excellent opportunity to work on cutting-edge projects and contribute to a dynamic team.",
+                          "contractType": "Contract",
+                          "location": "Remote",
+                          "region": [
+                              "Anywhere"
+                          ],
+                          "jobData": [
+                              {
+                                  "Key Responsibilities": [
+                                      "Develop and maintain responsive, performant, and user-friendly web applications using Next.js.",
+                                      "Build reusable components and front-end libraries for future use.",
+                                      "Ensure the technical feasibility of UI/UX designs and implement best practices for front-end development.",
+                                      "Optimize applications for speed, scalability, and cross-browser compatibility.",
+                                      "Collaborate with designers, product managers, and back-end developers to create seamless user experiences.",
+                                      "Stay updated with emerging technologies, frameworks, and tools to improve the development process.",
+                                      "Debug, troubleshoot, and resolve front-end performance issues and bugs."
+                                  ]
+                              },
+                              {
+                                  "Required Skills and Experience": [
+                                      "3+ years of professional experience in front-end development with a strong focus on Next.js.",
+                                      "Proficiency in JavaScript, TypeScript, and modern ES6+ standards.",
+                                      "Strong understanding of React.js, Redux, and related libraries.",
+                                      "Familiarity with RESTful APIs.",
+                                      "Hands-on experience with version control tools like Git.",
+                                      "Solid understanding of front-end performance optimization and SEO principles.",
+                                      "Knowledge of testing frameworks such as Cypress.",
+                                      "Previous experience in Agile/Scrum development methodologies.",
+                                      "Strong communication and problem-solving skills."
+                                  ]
+                              }
+                          ],
+                          "postStatus": "Open",
+                          "owner": "In-House",
+                          "createdAt": "2025-01-14T09:00:20.717Z",
+                          "applicationCount": 169,
+                          "deadlineDate": ""
+                      },
+                      {
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "_id": "67a4a9801cbc13cfa96200dc",
+                          "companyName": "Tobams Group",
+                          "title": "Wordpress Developer Intern",
+                          "jobDescription": "We are seeking a skilled WordPress Developer intern to join our team. As a WordPress Developer, you will play a crucial role in designing and developing custom websites and web applications using WordPress as the primary platform. Your expertise in WordPress theme and plugin development, along with your knowledge of web technologies, will enable you to create exceptional user experiences and robust solutions.",
+                          "contractType": "Internship",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Key Responsibilities": [
+                                      "Design, implement, and manage websites using wordpress",
+                                      "Manage the front-end and back-end website development",
+                                      "Customize and extend existing WordPress themes and plugins to meet specific project needs.",
+                                      "Implement responsive design principles to ensure seamless user experiences across different devices.",
+                                      "Monitoring, reviewing and revising the performance of live websites.",
+                                      "Collaborate with designers and project managers to translate client requirements into functional WordPress websites.",
+                                      "Conduct thorough testing and debugging to ensure the delivery of high-quality websites.",
+                                      "Stay updated with the latest WordPress updates, trends, and emerging technologies in web development.",
+                                      "Optimize website performance and security through code optimization and implementing best practices."
+                                  ]
+                              },
+                              {
+                                  "Qualifications and Skills:": [
+                                      "A deep understanding of WordPress and its defined best practices.",
+                                      "Strong understanding of responsive design principles and mobile-first development.",
+                                      "Knowledge of web performance optimization techniques and SEO best practices.",
+                                      "Ability to work collaboratively in a team environment and effectively communicate project progress.",
+                                      "Proficiency in HTML, CSS, JavaScript, PHP and MySQL.",
+                                      "Good communication skills",
+                                      "An understanding of the structure of a wordpress website from themes and plugins to the requisite files.",
+                                      "A deep understanding of wordpress admin panel.",
+                                      "Common knowledge of wordpress issues and conflicts."
+                                  ]
+                              }
+                          ],
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": null,
+                          "salaryMaxRange": null,
+                          "owner": "In-House",
+                          "createdAt": "2025-02-06T12:22:24.437Z",
+                          "applicationCount": 2,
+                          "deadlineDate": ""
+                      },
+                      {
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "_id": "67532398bec98bc52ebb81d7",
+                          "companyName": "Tobams Group",
+                          "title": "Product Designer",
+                          "jobDescription": "As a Product Designer, you will be a crucial member of our dynamic and innovative team responsible for crafting exceptional user experiences and visually stunning products. You will collaborate closely with cross-functional teams, including product managers, engineers, and user researchers, to translate ideas into intuitive and visually appealing designs. Your role will be essential in driving the success of our products and enhancing customer satisfaction.",
+                          "contractType": "Full-Time",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Key Responsibilities": [
+                                      "User-Centric Design: Create user-centric designs by understanding user needs, conducting research, and empathizing with user pain points to deliver seamless and intuitive product experiences.",
+                                      "Interface Design: Develop wireframes, mockups, and interactive prototypes to design visually appealing and user-friendly interfaces that align with the product’s goals and brand identity.",
+                                      "Design System Management: Establish and maintain design systems, style guides, and UI components to ensure design consistency across various platforms and products.",
+                                      "Collaborative Ideation: Collaborate with product managers, engineers, and other stakeholders in brainstorming sessions, idea generation, and concept development to foster a creative and collaborative environment.",
+                                      "Usability Testing: Participate in usability testing and gather user feedback to iteratively improve designs and optimize product usability.",
+                                      "Continuous Learning: Stay up-to-date with industry trends, best practices, and emerging technologies in design to bring fresh perspectives and innovative solutions to our products.",
+                                      "Agile Workflow: Work in an agile development environment, delivering designs and assets in a timely manner to support the development process.",
+                                      "Accessibility: Ensure designs adhere to accessibility guidelines and make products inclusive to users with diverse needs.",
+                                      "Visual Design: Create visually appealing designs, incorporating colors, typography, and graphics that align with the product’s overall aesthetic and brand guidelines."
+                                  ]
+                              },
+                              {
+                                  "Qualifications and Skills:": [
+                                      "Bachelor’s degree in Graphic Design, Interaction Design, Human-Computer Interaction, or a related field. Relevant work experience will also be considered.",
+                                      "Proven experience as a Product Designer or UI/UX Designer, showcasing a strong portfolio of previous projects that demonstrate your design process and problem-solving skills.",
+                                      "Proficiency in design tools such as Figma, or similar software.",
+                                      "Solid understanding of user-centered design principles, information architecture, and interaction design.",
+                                      "Strong visual design skills with a keen eye for detail and an ability to create compelling and aesthetically pleasing designs.",
+                                      "Familiarity with design systems, responsive design, and mobile-first design principles.",
+                                      "Excellent communication skills, both verbal and written, to effectively collaborate with cross-functional teams and articulate design concepts.",
+                                      "Ability to work in a fast-paced, collaborative environment and manage multiple projects simultaneously."
+                                  ]
+                              }
+                          ],
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": null,
+                          "salaryMaxRange": null,
+                          "owner": "In-House",
+                          "createdAt": "2024-12-06T16:17:28.418Z",
+                          "extraText": "Our company values creativity, innovation, and a passion for delivering exceptional products to our users. As a Product Designer, you will play a vital role in shaping the future of our products and contributing to our mission of providing outstanding user experiences. Join our team and embark on a rewarding journey of designing products that impact and improve the lives of millions of users worldwide.",
+                          "applicationCount": 1,
+                          "deadlineDate": ""
+                      },
+                      {
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "_id": "672dfb22862b0900d0d7e03d",
+                          "companyName": "Tobams Group",
+                          "title": "Frontend Developer Intern",
+                          "jobDescription": "We are searching for a dynamic and motivated Intern React/React Native Developer to contribute to a groundbreaking project. As an Intern React/React Native Developer, you will be key in crafting user interfaces for web and mobile applications. This internship offers an exciting opportunity to work on innovative projects, collaborate with cross-functional teams, and gain hands-on experience with cutting-edge technologies.",
+                          "contractType": "Internship",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Key Responsibilities": [
+                                      "Develop user interfaces using React and React Native frameworks.",
+                                      "Work closely with designers, product managers, and backend developers to comprehend and translate requirements into functional user interfaces.",
+                                      "Implement code following best practices and coding standards under the guidance of senior developers.",
+                                      "Support in optimizing application performance for web and mobile platforms.",
+                                      "Engage in thorough testing and debugging to ensure application quality and reliability."
+                                  ]
+                              },
+                              {
+                                  "Qualifications and Skills:": [
+                                      "Basic experience developing user interfaces using React and React Native is a plus.",
+                                      "Familiarity with JavaScript and a keen interest in front-end development practices.",
+                                      "Understanding of web and mobile development principles, including responsive design.",
+                                      "Eagerness to learn and work with state management libraries such as Redux or MobX.",
+                                      "Exposure to RESTful APIs and asynchronous programming is advantageous."
+                                  ]
+                              }
+                          ],
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": null,
+                          "salaryMaxRange": null,
+                          "owner": "In-House",
+                          "createdAt": "2024-11-08T11:50:58.510Z",
+                          "applicationCount": 100,
+                          "deadlineDate": ""
+                      },
+                      {
+                          "_id": "67f0d3e4ebbe24451cda2465",
+                          "userId": "67a5cc1979d0ca2bb26ded37",
+                          "companyName": "Tobams Group & Recycled Learning",
+                          "title": "Business Development & Marketing Manager",
+                          "jobDescription": "Tobams Group is a leading consultancy focused on transforming training, development, and education in entrepreneurship, career, and talent development. Our flagship initiative, Recycled Learning, is an innovative learning management system (LMS) for kids, incorporating books, digital platforms, and AI-driven learning solutions. We are actively engaging community governments, schools, universities, and corporations to adopt Recycled Learning as a sustainable education solution. Our mission is to bridge educational gaps, enhance learning experiences, and create opportunities for young learners through a technology-driven approach.",
+                          "contractType": "Full-time",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Position Overview": [
+                                      "We are seeking a highly experienced and results-driven Business Development & Marketing Manager to spearhead the business expansion and client engagement efforts for Recycled Learning and other Tobams Group products. This is a high-profile role, requiring an individual with a strong sales, business development, and marketing background, with a proven track record of securing large-scale deals and partnerships. This role is primarily commission-based, with a competitive basic salary and an attractive 10% commission on every business deal closed. The ideal candidate must have the ability to strategically position the product, build lasting relationships, and drive high-value partnerships with government agencies, educational institutions, corporations, and private sector organization."
+                                  ]
+                              },
+                              {
+                                  "Key Responsibilities:": []
+                              },
+                              {
+                                  "Business Development & Client Acquisition": [
+                                      "Develop and execute a comprehensive business development strategy to attract and onboard community governments, schools, universities, and corporations.",
+                                      "Identify, engage, and negotiate partnerships with decision-makers, procurement officers, and key stakeholders in education and training sectors",
+                                      "Proactively research and identify new market opportunities, including tendering for government contracts and corporate learning programs.",
+                                      "Generate leads, conduct pitches, and close high-value deals for the implementation of Recycled Learning solutions."
+                                  ]
+                              },
+                              {
+                                  "Marketing & Brand Growth": [
+                                      "Develop and implement a marketing strategy to increase brand awareness and market penetration.",
+                                      "Lead the creation of marketing materials, digital campaigns, and promotional content that effectively communicate the value of Recycled Learning.",
+                                      "Organize and represent the company at industry conferences, exhibitions, and networking events to increase visibility and partnership opportunities.",
+                                      "Collaborate with the internal content development team to align product messaging with customer needs."
+                                  ]
+                              },
+                              {
+                                  "Sales Strategy & Revenue Growth": [
+                                      "Drive sales efforts through effective negotiation, pricing strategies, and closing tactics.",
+                                      "Develop and maintain a strong sales pipeline, ensuring a consistent flow of new business opportunities.",
+                                      "Work closely with the finance and leadership teams to create customized pricing models for different client segments.",
+                                      "Consistently achieve and exceed sales targets, ensuring a strong revenue stream"
+                                  ]
+                              },
+                              {
+                                  "Stakeholder Engagement & Relationship Management": [
+                                      "Build and maintain long-term relationships with key government officials, school administrators, university deans, corporate executives, and learning & development managers.",
+                                      "Work closely with partners and investors to explore co-funding and sponsorship opportunities.",
+                                      "Establish strategic alliances with international organizations for global expansion."
+                                  ]
+                              },
+                              {
+                                  "Performance Tracking & Reporting": [
+                                      "Develop key performance indicators (KPIs) to measure and track business development success.",
+                                      "Prepare and present detailed reports on sales, revenue, client acquisition, and market trends to leadership.",
+                                      "Continuously analyze competitor strategies and market trends to refine business development approaches."
+                                  ]
+                              },
+                              {
+                                  "Key Qualifications & Experience": [
+                                      "Minimum 7-10 years of experience in business development, sales, or marketing, preferably in the education, edtech, or training sectors.",
+                                      "Proven track record of closing large-scale deals and building high-value partnerships.",
+                                      "Extensive experience engaging with government bodies, educational institutions, and corporate organizations.",
+                                      "Strong negotiation, communication, and presentation skills.",
+                                      "Experience in developing and executing marketing campaigns and brand strategies.",
+                                      "Ability to work independently with a **strong entrepreneurial mindset.",
+                                      "Understanding of learning management systems (LMS), AI-driven education, and sustainability education is a plus."
+                                  ]
+                              },
+                              {
+                                  "Compensation & Benefits": [
+                                      "Basic Salary: Competitive",
+                                      "Commission: 10% of every business deal closed.",
+                                      "Flexible working arrangement (remote & on-site as needed).",
+                                      "High earning potential based on performance.",
+                                      "Opportunity to work with a pioneering team in sustainability and AI-driven education."
+                                  ]
+                              },
+                              {
+                                  "How To Apply": [
+                                      "Interested candidates should submit their CV and a cover letter detailing their relevant experience and achievements in business development.",
+                                      "Applications should be sent to theteam@tobamsgroup.com with the subject “Business Development & Marketing Manager – Tobams Group"
+                                  ]
+                              }
+                          ],
+                          "extraText": "Join Us & Make an Impact! This is a rare opportunity to be at the forefront of educational innovation and sustainability-driven learning. If you are an ambitious, target-driven professional looking for high earning potential and the chance to drive real change in education, we would love to hear from you!",
+                          "applicationCount": 0,
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": null,
+                          "salaryMaxRange": null,
+                          "owner": "In-House",
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "createdAt": "2025-04-05T06:55:32.578Z"
+                      },
+                      {
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "_id": "6677800dae318fc5a67f3642",
+                          "userId": "6677639406ed5b97ecc57ec0",
+                          "companyName": "Google",
+                          "title": "Backend Engineer",
+                          "jobDescription": "This is the description for Never Analyst Intern",
+                          "contractType": "Internship",
+                          "location": "Remote",
+                          "region": [
+                              "Africa",
+                              "Asia",
+                              "America",
+                              "Austrialia"
+                          ],
+                          "responsibilities": [
+                              "Deploy",
+                              "Relational Database",
+                              "Payment Gateway"
+                          ],
+                          "benefits": [
+                              "Vacations",
+                              "accomodation"
+                          ],
+                          "extraText": "This is an optional extra text",
+                          "postStatus": "Open",
+                          "currencySymbol": "$",
+                          "salaryMinRange": 1500,
+                          "salaryMaxRange": 3000,
+                          "isPostVerifiedByAdmin": "Approved",
+                          "createdAt": "2024-06-23T01:53:17.029Z",
+                          "owner": "Client",
+                          "skill": [
+                              "GO",
+                              "PYTHON",
+                              "CLOUD COMPUTING",
+                              "VB.NET"
+                          ],
+                          "applicationCount": 1
+                      },
+                      {
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "_id": "667a805338d13808521275e7",
+                          "userId": "6677639406ed5b97ecc57ec0",
+                          "companyName": "Tesla Inc.",
+                          "title": "Hardware Engineer",
+                          "jobDescription": "This is the description for Never Analyst Intern",
+                          "contractType": "Internship",
+                          "location": "Remote",
+                          "region": [
+                              "Africa",
+                              "Asia",
+                              "America",
+                              "Austrialia"
+                          ],
+                          "responsibilities": [
+                              "Deploy",
+                              "Relational Database",
+                              "Payment Gateway"
+                          ],
+                          "benefits": [
+                              "Vacations",
+                              "accomodation"
+                          ],
+                          "extraText": "This is an optional extra text",
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": 200000,
+                          "salaryMaxRange": 500000,
+                          "owner": "Client",
+                          "isPostVerifiedByAdmin": "Approved",
+                          "createdAt": "2024-06-25T08:31:15.826Z",
+                          "skill": [
+                              "JAVA",
+                              "PYTHON",
+                              "CLOUD COMPUTING",
+                              "OOP"
+                          ],
+                          "applicationCount": 1
+                      },
+                      {
+                          "applicationCount": 0,
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "_id": "66aa92c460b591078becdf39",
+                          "userId": "6690035b5921cf3d45a3d725",
+                          "companyName": "Dangote Group Limited",
+                          "title": "It Specialist",
+                          "jobDescription": "As a IT Specialist at Dangote Group Limited, you will play a pivotal role in analyzing business requirements and providing insights that drive strategic decisions.",
+                          "contractType": "FullTime",
+                          "location": "Hybrid",
+                          "region": [
+                              "Belgium",
+                              "France"
+                          ],
+                          "responsibilities": [
+                              "Assist in project planning."
+                          ],
+                          "skill": [
+                              "Computer Science, Communication, Interpersonal Abilities"
+                          ],
+                          "benefits": [
+                              "Exposure to diverse projects and industries."
+                          ],
+                          "extraText": "Our company values creativity, innovation, and a passion for delivering exceptional products to our users",
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": 1500000,
+                          "salaryMaxRange": 2000000,
+                          "owner": "Client",
+                          "isPostVerifiedByAdmin": "Approved",
+                          "createdAt": "2024-07-31T19:38:44.531Z"
+                      },
+                      {
+                          "_id": "67d95cfb0b44aad1ccf50a20",
+                          "userId": "67d95cac0b44aad1ccf50a18",
+                          "companyName": "Tobams Group Affliates",
+                          "title": "Business Development & Marketing Manager",
+                          "jobDescription": "Tobams Group is a leading consultancy focused on transforming training, development, and education in entrepreneurship, career, and talent development. Our flagship initiative, Recycled Learning, is an innovative learning management system (LMS) for kids, incorporating books, digital platforms, and AI-driven learning solutions. We are actively engaging community governments, schools, universities, and corporations to adopt Recycled Learning as a sustainable education solution. Our mission is to bridge educational gaps, enhance learning experiences, and create opportunities for young learners through a technology-driven approach.",
+                          "contractType": "Full-time",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Position Overview": [
+                                      "We are seeking a highly experienced and results-driven Business Development & Marketing Manager to spearhead the business expansion and client engagement efforts for Recycled Learning and other Tobams Group products. This is a high-profile role, requiring an individual with a strong sales, business development, and marketing background, with a proven track record of securing large-scale deals and partnerships. This role is primarily commission-based, with a competitive basic salary and an attractive 10% commission on every business deal closed. The ideal candidate must have the ability to strategically position the product, build lasting relationships, and drive high-value partnerships with government agencies, educational institutions, corporations, and private sector organization."
+                                  ]
+                              },
+                              {
+                                  "Key Responsibilities:": []
+                              },
+                              {
+                                  "Business Development & Client Acquisition": [
+                                      "Develop and execute a comprehensive business development strategy to attract and onboard community governments, schools, universities, and corporations.",
+                                      "Identify, engage, and negotiate partnerships with decision-makers, procurement officers, and key stakeholders in education and training sectors",
+                                      "Proactively research and identify new market opportunities, including tendering for government contracts and corporate learning programs.",
+                                      "Generate leads, conduct pitches, and close high-value deals for the implementation of Recycled Learning solutions."
+                                  ]
+                              },
+                              {
+                                  "Marketing & Brand Growth": [
+                                      "Develop and implement a marketing strategy to increase brand awareness and market penetration.",
+                                      "Lead the creation of marketing materials, digital campaigns, and promotional content that effectively communicate the value of Recycled Learning.",
+                                      "Organize and represent the company at industry conferences, exhibitions, and networking events to increase visibility and partnership opportunities.",
+                                      "Collaborate with the internal content development team to align product messaging with customer needs."
+                                  ]
+                              },
+                              {
+                                  "Sales Strategy & Revenue Growth": [
+                                      "Drive sales efforts through effective negotiation, pricing strategies, and closing tactics.",
+                                      "Develop and maintain a strong sales pipeline, ensuring a consistent flow of new business opportunities.",
+                                      "Work closely with the finance and leadership teams to create customized pricing models for different client segments.",
+                                      "Consistently achieve and exceed sales targets, ensuring a strong revenue stream"
+                                  ]
+                              },
+                              {
+                                  "Stakeholder Engagement & Relationship Management": [
+                                      "Build and maintain long-term relationships with key government officials, school administrators, university deans, corporate executives, and learning & development managers.",
+                                      "Work closely with partners and investors to explore co-funding and sponsorship opportunities.",
+                                      "Establish strategic alliances with international organizations for global expansion."
+                                  ]
+                              },
+                              {
+                                  "Performance Tracking & Reporting": [
+                                      "Develop key performance indicators (KPIs) to measure and track business development success.",
+                                      "Prepare and present detailed reports on sales, revenue, client acquisition, and market trends to leadership.",
+                                      "Continuously analyze competitor strategies and market trends to refine business development approaches."
+                                  ]
+                              },
+                              {
+                                  "Key Qualifications & Experience": [
+                                      "Minimum 7-10 years of experience in business development, sales, or marketing, preferably in the education, edtech, or training sectors.",
+                                      "Proven track record of closing large-scale deals and building high-value partnerships.",
+                                      "Extensive experience engaging with government bodies, educational institutions, and corporate organizations.",
+                                      "Strong negotiation, communication, and presentation skills.",
+                                      "Experience in developing and executing marketing campaigns and brand strategies.",
+                                      "Ability to work independently with a **strong entrepreneurial mindset.",
+                                      "Understanding of learning management systems (LMS), AI-driven education, and sustainability education is a plus."
+                                  ]
+                              },
+                              {
+                                  "Compensation & Benefits": [
+                                      "Basic Salary: Competitive",
+                                      "Commission: 10% of every business deal closed.",
+                                      "Flexible working arrangement (remote & on-site as needed).",
+                                      "High earning potential based on performance.",
+                                      "Opportunity to work with a pioneering team in sustainability and AI-driven education."
+                                  ]
+                              },
+                              {
+                                  "How To Apply": [
+                                      "Interested candidates should submit their CV and a cover letter detailing their relevant experience and achievements in business development.",
+                                      "Applications should be sent to theteam@tobamsgroup.com with the subject “Business Development & Marketing Manager – Tobams Group"
+                                  ]
+                              }
+                          ],
+                          "extraText": "Join Us & Make an Impact! This is a rare opportunity to be at the forefront of educational innovation and sustainability-driven learning. If you are an ambitious, target-driven professional looking for high earning potential and the chance to drive real change in education, we would love to hear from you!",
+                          "applicationCount": 1,
+                          "postStatus": "Open",
+                          "currencySymbol": "N",
+                          "salaryMinRange": 200000,
+                          "salaryMaxRange": 500000,
+                          "owner": "Client",
+                          "duration": "3 months",
+                          "status": "Published",
+                          "visibleTo": "All",
+                          "isPostVerifiedByAdmin": "Approved",
+                          "createdAt": "2025-03-18T11:46:03.720Z"
+                      },
+                      {
+                          "_id": "67ed87d484f868b4a93557c9",
+                          "userId": "67bf2c6a974a6b52304105a0",
+                          "companyName": "Collindigson Group of Companies",
+                          "title": "Full-Stack Developer & Ml Trainer",
+                          "jobDescription": "Collindigson Group is a leading technology, consulting, and construction firm driving innovation in infrastructure development and digital transformation across Africa and Europe. We're seeking an experienced HR Manager to oversee talent strategy for our 300+ workforce across technical, consulting, and construction teams. This role will champion our culture of excellence while scaling our people operations during rapid growth.",
+                          "contractType": "Internship",
+                          "location": "Remote",
+                          "region": [
+                              "Africa",
+                              "Asia",
+                              "Europe"
+                          ],
+                          "jobData": [
+                              {
+                                  "Key Responsibilities": [
+                                      "Build RESTful APIs (Node.js/Django) and integrate third-party services (payment gateways, geospatial APIs).",
+                                      "Optimize applications for performance, security, and cross-platform compatibility.",
+                                      "Develop and deploy AI/ML models (predictive maintenance, cost estimation, NLP chatbots) for construction and consulting use cases.",
+                                      "Fine-tune pre-trained models (TensorFlow, PyTorch, Hugging Face) for domain-specific tasks",
+                                      "Conduct workshops and bootcamps for engineers, consultants, and clients",
+                                      "Work with construction teams to digitize workflows using AI/ML.",
+                                      "Implement MLOps pipelines (Docker, Kubernetes, MLflow) for model deployment and monitoring."
+                                  ]
+                              },
+                              {
+                                  "Qualifications and Experience": [
+                                      "5+ years in full-stack development (JavaScript, Python, React, Node.js/Django).",
+                                      "3+ years in Machine Learning (model training, deployment, and optimization).",
+                                      "Portfolio of deployed web apps and ML projects (GitHub, live demos).",
+                                      "Strong communication skills for training and stakeholder presentations.",
+                                      "AI/ML Libraries: Scikit-learn, TensorFlow, OpenCV, LangChain."
+                                  ]
+                              },
+                              {
+                                  "Compensation and Benefits": [
+                                      "Salary: ₦500,000 – ₦800,000/month (negotiable based on expertise).",
+                                      "Performance Bonuses: Up to 15% annual bonus for project success.",
+                                      "Remote Flexibility: Work from anywhere with occasional on-site meetings.",
+                                      "Learning Budget: Annual allowance for certifications (AWS, Google ML Engineer, etc.).",
+                                      "Cutting-Edge Projects: Work on AI-driven construction and smart city initiatives."
+                                  ]
+                              },
+                              {
+                                  "How to Apply": [
+                                      "Submit your resume, GitHub profile, and a 1-minute Loom video explaining your experience in full-stack dev + ML",
+                                      "Applications should be sent to careers@collindigson.com with the subject “Full-Stack Developer & ML Trainer – [Your Name]"
+                                  ]
+                              }
+                          ],
+                          "extraText": "At Collindigson, we’re bridging tech and infrastructure with AI. You’ll build tools that optimize construction projects, train teams on futuristic skills, and shape the future of smart cities. If you’re passionate about code, AI, and real-world impact, let’s build something revolutionary!",
+                          "applicationCount": 0,
+                          "postStatus": "Open",
+                          "currencySymbol": "₦",
+                          "salaryMinRange": 500000,
+                          "salaryMaxRange": 800000,
+                          "owner": "Client",
+                          "duration": "6 - 12 Months",
+                          "deadlineDate": "2025-04-28",
+                          "status": "Published",
+                          "visibleTo": "Interns",
+                          "isPostVerifiedByAdmin": "Approved",
+                          "createdAt": "2025-04-02T18:54:12.903Z"
+                      },
+                      {
+                          "_id": "67ed886984f868b4a93557d2",
+                          "userId": "67bf2c6a974a6b52304105a0",
+                          "companyName": "Collindigson Group of Companies",
+                          "title": "Human Resource Manager",
+                          "jobDescription": "Collindigson Group is a leading technology, consulting, and construction firm driving innovation in infrastructure development and digital transformation across Africa and Europe. We're seeking an experienced HR Manager to oversee talent strategy for our 300+ workforce across technical, consulting, and construction teams. This role will champion our culture of excellence while scaling our people operations during rapid growth.",
+                          "contractType": "Full-time",
+                          "location": "Remote",
+                          "region": [
+                              "Africa",
+                              "Asia",
+                              "Europe",
+                              "South America"
+                          ],
+                          "jobData": [
+                              {
+                                  "Key Responsibilities": [
+                                      "Build RESTful APIs (Node.js/Django) and integrate third-party services (payment gateways, geospatial APIs).",
+                                      "Optimize applications for performance, security, and cross-platform compatibility.",
+                                      "Develop and deploy AI/ML models (predictive maintenance, cost estimation, NLP chatbots) for construction and consulting use cases.",
+                                      "Fine-tune pre-trained models (TensorFlow, PyTorch, Hugging Face) for domain-specific tasks",
+                                      "Conduct workshops and bootcamps for engineers, consultants, and clients",
+                                      "Work with construction teams to digitize workflows using AI/ML."
+                                  ]
+                              },
+                              {
+                                  "Qualifications and Experience": [
+                                      "5+ years in full-stack development (JavaScript, Python, React, Node.js/Django).",
+                                      "3+ years in Machine Learning (model training, deployment, and optimization).",
+                                      "Portfolio of deployed web apps and ML projects (GitHub, live demos).",
+                                      "Strong communication skills for training and stakeholder presentations."
+                                  ]
+                              },
+                              {
+                                  "Compensation and Benefits": [
+                                      "Salary: ₦500,000 – ₦800,000/month (negotiable based on expertise).",
+                                      "Performance Bonuses: Up to 15% annual bonus for project success.",
+                                      "Remote Flexibility: Work from anywhere with occasional on-site meetings.",
+                                      "Learning Budget: Annual allowance for certifications (AWS, Google ML Engineer, etc.).",
+                                      "Cutting-Edge Projects: Work on AI-driven construction and smart city initiatives."
+                                  ]
+                              },
+                              {
+                                  "How to Apply": [
+                                      "Submit your resume, GitHub profile, and a 1-minute Loom video explaining your experience in full-stack dev + ML",
+                                      "Applications should be sent to careers@collindigson.com with the subject “Full-Stack Developer & ML Trainer – [Your Name]"
+                                  ]
+                              }
+                          ],
+                          "extraText": "At Collindigson, we’re bridging tech and infrastructure with AI. You’ll build tools that optimize construction projects, train teams on futuristic skills, and shape the future of smart cities. If you’re passionate about code, AI, and real-world impact, let’s build something revolutionary!",
+                          "applicationCount": 0,
+                          "postStatus": "Open",
+                          "currencySymbol": "₦",
+                          "salaryMinRange": 500000,
+                          "salaryMaxRange": 800000,
+                          "owner": "Client",
+                          "duration": "3+ Years",
+                          "deadlineDate": "2025-04-24",
+                          "status": "Published",
+                          "visibleTo": "Talents",
+                          "isPostVerifiedByAdmin": "Approved",
+                          "createdAt": "2025-04-02T18:56:41.177Z"
+                      }
+                  ]
+              }
+          }
+  - name: Get all jobs
+    request:
+      url: "{{BASE}}/jobs"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 03 Feb 2026 09:37:38 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: CF-RAY
+          value: 9c80f35b1d0d83df-LHR
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: Content-Encoding
+          value: br
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"2f64-BZO/gP1bvZ/zPmLGzPZFEAIlvKs"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: ed37f43f-d9e2-45aa
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1770111456898-1t3z2za7m
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "All posted jobs retrieved successfully",
+              "data": {
+                  "currentCount": 10,
+                  "totalCount": 37,
+                  "jobs": [
+                      {
+                          "_id": "6801567d578019ddec349c70",
+                          "userId": "68015495578019ddec349c17",
+                          "companyName": "Collindigson Group of Companies",
+                          "title": "Machine Learning Developer",
+                          "jobDescription": "Machine Learning Developer",
+                          "contractType": "Full-time",
+                          "location": "Remote",
+                          "region": [
+                              "Africa",
+                              "Asia",
+                              "Europe"
+                          ],
+                          "jobData": [
+                              {
+                                  "Key Responsibilities": [
+                                      "Train our platform with your machine learning skills."
+                                  ]
+                              },
+                              {
+                                  "Benefits": [
+                                      "Learning and Free Health Insurance"
+                                  ]
+                              }
+                          ],
+                          "extraText": "Machine Learning Developer Extra Text",
+                          "applicationCount": 0,
+                          "postStatus": "Open",
+                          "currencySymbol": "₦",
+                          "salaryMinRange": 800000,
+                          "salaryMaxRange": 1200000,
+                          "owner": "Client",
+                          "duration": "6 - 12 Months",
+                          "deadlineDate": "2025-04-30",
+                          "status": "Published",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-04-17T19:29:01.610Z",
+                          "visibility": "All",
+                          "isApplied": false
+                      },
+                      {
+                          "_id": "68015696578019ddec349c79",
+                          "userId": "68015495578019ddec349c17",
+                          "companyName": "Collindigson Group of Companies",
+                          "title": "Machine Learning Developer",
+                          "jobDescription": "Machine Learning Developer",
+                          "contractType": "Full-time",
+                          "location": "Remote",
+                          "region": [
+                              "Africa",
+                              "Asia",
+                              "Europe"
+                          ],
+                          "jobData": [
+                              {
+                                  "Key Responsibilities": [
+                                      "Train our platform with your machine learning skills."
+                                  ]
+                              },
+                              {
+                                  "Benefits": [
+                                      "Learning and Free Health Insurance"
+                                  ]
+                              }
+                          ],
+                          "extraText": "Machine Learning Developer Extra Text",
+                          "applicationCount": 0,
+                          "postStatus": "Open",
+                          "currencySymbol": "₦",
+                          "salaryMinRange": 800000,
+                          "salaryMaxRange": 1200000,
+                          "owner": "Client",
+                          "duration": "6 - 12 Months",
+                          "deadlineDate": "2025-04-30",
+                          "status": "Published",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-04-17T19:29:26.857Z",
+                          "visibility": "All",
+                          "isApplied": false
+                      },
+                      {
+                          "_id": "686519c9d83df753df842146",
+                          "userId": "6865179998f0bca3fcb312ec",
+                          "companyName": "Ite Ego International",
+                          "title": " Senior Product Designer",
+                          "jobDescription": " Design intuitive and elegant interfaces across web and mobile products. Lead design sprints, guide junior designers, and ensure user-centric approaches in all product features.",
+                          "contractType": "Full-time",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [],
+                          "extraText": "5+ years of experience in product design\nMastery of Figma, Sketch, Adobe XD\nStrong UX research capabilities\nExcellent collaboration and storytelling skills",
+                          "applicationCount": 1,
+                          "postStatus": "Open",
+                          "currencySymbol": "₦",
+                          "salaryMinRange": 1300000,
+                          "salaryMaxRange": 1800000,
+                          "owner": "Client",
+                          "duration": "3 - 6 Months",
+                          "deadlineDate": "2025-07-25",
+                          "status": "Published",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-07-02T11:36:41.964Z",
+                          "visibility": "Interns",
+                          "isApplied": true
+                      },
+                      {
+                          "_id": "6939672aebee9f28afd74f71",
+                          "userId": "69395794ebee9f28afd74f33",
+                          "companyName": "New Things",
+                          "title": "Sales Manager",
+                          "jobDescription": "You will manage sales",
+                          "contractType": "Full-time",
+                          "location": "Hybrid",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Business Development & Client Acquisition": [
+                                      "Develop and execute a comprehensive business development strategy to attract and onboard community governments, schools, universities, and corporations",
+                                      "Identify, engage, and negotiate partnerships with decision-makers, procurement officers, and key stakeholders in education and training sectors"
+                                  ]
+                              },
+                              {
+                                  "Sales Strategy & Revenue Growth": [
+                                      "Develop and maintain a strong sales pipeline, ensuring a consistent flow of new business opportunities.",
+                                      "Work closely with the finance and leadership teams to create customized pricing models for different client segments."
+                                  ]
+                              },
+                              {
+                                  "Performance Tracking and Reporting": [
+                                      "Work closely with the finance and leadership teams to create customized pricing models for different client segments"
+                                  ]
+                              },
+                              {
+                                  "Stakeholder Engagement and Relationship Management": [
+                                      "Build and maintain long-term relationships with key government officials, school administrators, university deans, corporate executives, and learning & development managers.",
+                                      "Establish strategic alliances with international organizations for global expansion."
+                                  ]
+                              }
+                          ],
+                          "extraText": "Join us and Make an Impact! This is a rare opportunity to be at the forefront of educational innovation and sustainability-driven learning. If you are an ambitious, target-driven professional looking for high earning potential and the chance to drive real change in education, we would love to hear from you and can't wait to receive you!",
+                          "applicationCount": 0,
+                          "postStatus": "Open",
+                          "currencySymbol": "₦",
+                          "salaryMinRange": 250000,
+                          "salaryMaxRange": 300000,
+                          "owner": "Client",
+                          "duration": "6 - 12 Months",
+                          "deadlineDate": "2026-01-04",
+                          "status": "Published",
+                          "visibility": "Interns",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-12-10T12:27:22.742Z",
+                          "isApplied": false
+                      },
+                      {
+                          "_id": "693ac40ba15253f517fcef60",
+                          "userId": "69395794ebee9f28afd74f33",
+                          "companyName": "New Things",
+                          "title": "Chief Business Manager",
+                          "jobDescription": "Just do your job",
+                          "contractType": "Full-time",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Key Resposibilities": [
+                                      "Resposibilities",
+                                      "Resposibilities 2"
+                                  ]
+                              },
+                              {
+                                  "Overviewssssssssssssss": [
+                                      "Overview 1",
+                                      "Overview 2"
+                                  ]
+                              }
+                          ],
+                          "extraText": "Extra text again and edited",
+                          "applicationCount": 0,
+                          "postStatus": "Open",
+                          "currencySymbol": "₦",
+                          "salaryMinRange": 350000,
+                          "salaryMaxRange": 450000,
+                          "owner": "Client",
+                          "duration": "6 - 12 Months",
+                          "deadlineDate": "2026-01-10",
+                          "status": "Published",
+                          "visibility": "Interns",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-12-11T13:15:55.917Z",
+                          "isApplied": false
+                      },
+                      {
+                          "_id": "693af131a15253f517fcf0b7",
+                          "userId": "692f062b96b1c0a661282679",
+                          "companyName": "Olareign Cop",
+                          "title": "Backend Developer",
+                          "jobDescription": "Tobams Group is a global innovation and talent-development company dedicated to transforming how people learn, grow, and connect through AI-driven education, sustainability, and digital empowerment. The CTO will serve as the architect and innovation leader for all Tobams Group's technology initiatives. This role demands a bold, forward-thinking leader who can translate the company's ambitious vision into scalable, world-class digital solutions. You will drive AI strategy, technology architecture, platform scalability, and innovation culture across multiple business units - including Recycled Learning, Rare Eat, and other global projects. The ideal candidate will combine deep technical expertise with strategic leadership, a passion for AI in education, and the ability to build and manage high-performing global teams.",
+                          "contractType": "Full-time",
+                          "location": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Technology Vision & Leadership": [
+                                      "Define and execute Tobams Group's overall technology roadmap across AI, EdTech, sustainability, and data-driven learning ecosystems.",
+                                      "Build the long-term technology strategy that aligns with the company's mission to democratize access to quality learning globally.",
+                                      "Serve as the principal advisor to the CEO and executive team on emerging technologies, AI ethics, scalability, and innovation priorities.",
+                                      "Foster a culture of innovation, experimentation, and excellence within the technology and product teams."
+                                  ]
+                              },
+                              {
+                                  "Product & Platform Development": [
+                                      "Oversee the architecture, design, and deployment of AI-powered platforms, including Recycled Learning adaptive learning system, Recycled Learning for Kids (AI-augmented learning platform), Tobams Group dashboards and analytics tools, and Global Teacher Learning Management System (LMS).",
+                                      "Ensure all systems are scalable, secure, and data-driven, supporting millions of users globally.",
+                                      "Lead the integration of personalized learning algorithms, gamified experiences, and adaptive assessment engines."
+                                  ]
+                              }
+                          ],
+                          "extraText": "Reports To: Chief Executive Officer (CEO). Department: Technology & Innovation. Future Potential: This role has the potential to evolve into a Co-Founder position for the right candidate, as Tobams Group continues to scale globally.",
+                          "applicationCount": 0,
+                          "postStatus": "Open",
+                          "currencySymbol": "₦",
+                          "salaryMinRange": 250,
+                          "salaryMaxRange": 100,
+                          "owner": "Client",
+                          "duration": "3 - 6 Months",
+                          "deadlineDate": "2025-12-11",
+                          "status": "Published",
+                          "visibility": "Interns",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-12-11T16:28:33.790Z",
+                          "isApplied": false
+                      },
+                      {
+                          "_id": "693af64fa15253f517fcf1a6",
+                          "userId": "692f062b96b1c0a661282679",
+                          "companyName": "Olareign Cop",
+                          "title": "Chief Technology Officer ",
+                          "jobDescription": "Tobams Group is a global innovation and talent-development company dedicated to transforming how people learn, grow, and connect through AI-driven education, sustainability, and digital empowerment. The CTO will serve as the architect and innovation leader for all Tobams Group's technology initiatives. This role demands a bold, forward-thinking leader who can translate the company's ambitious vision into scalable, world-class digital solutions. You will drive AI strategy, technology architecture, platform scalability, and innovation culture across multiple business units - including Recycled Learning, Rare Eat, and other global projects. The ideal candidate will combine deep technical expertise with strategic leadership, a passion for AI in education, and the ability to build and manage high-performing global teams.",
+                          "contractType": "Part-time",
+                          "location": "On-site",
+                          "region": [
+                              "Africa",
+                              "Asia"
+                          ],
+                          "jobData": [
+                              {
+                                  "Partnerships & Innovation Ecosystem": [
+                                      "Forge and manage strategic partnerships with AI labs, EdTech organizations, universities, and industry bodies.",
+                                      "Represent Tobams Group at conferences, innovation summits, and investor meetings as a technology thought leader."
+                                  ]
+                              }
+                          ],
+                          "extraText": "Reports To: Chief Executive Officer (CEO). Department: Technology & Innovation. Future Potential: This role has the potential to evolve into a Co-Founder position for the right candidate, as Tobams Group continues to scale globally.",
+                          "applicationCount": 0,
+                          "postStatus": "Open",
+                          "currencySymbol": "$",
+                          "salaryMinRange": 100,
+                          "salaryMaxRange": 200,
+                          "owner": "Client",
+                          "duration": "6 - 12 Months",
+                          "deadlineDate": "2025-12-11",
+                          "status": "Published",
+                          "visibility": "Interns",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-12-11T16:50:23.109Z",
+                          "isApplied": false
+                      },
+                      {
+                          "_id": "694254f4a00d4e4658c33712",
+                          "userId": "69395794ebee9f28afd74f33",
+                          "companyName": "New Things",
+                          "title": "Test Job",
+                          "jobDescription": "Test job description",
+                          "contractType": "Contract",
+                          "location": "Lagos, Nigeria",
+                          "jobType": "On-site",
+                          "region": [
+                              "Africa",
+                              "Europe"
+                          ],
+                          "jobData": [
+                              {
+                                  "Responsibilities": [
+                                      "Responsibilities 1",
+                                      "Responsibilities 2"
+                                  ]
+                              },
+                              {
+                                  "Functions": [
+                                      "Functions 1",
+                                      "Functions 2"
+                                  ]
+                              }
+                          ],
+                          "extraText": "Extra text here",
+                          "applicationCount": 1,
+                          "postStatus": "Open",
+                          "currencySymbol": "₦",
+                          "salaryMinRange": 300000,
+                          "salaryMaxRange": 350000,
+                          "owner": "Client",
+                          "duration": "6 - 12 Months",
+                          "deadlineDate": "2025-12-29",
+                          "status": "Published",
+                          "visibility": "All",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-12-17T07:00:04.332Z",
+                          "isApplied": false
+                      },
+                      {
+                          "_id": "69456564af239e8238541b15",
+                          "userId": "690c63fc45047c4e4030fee3",
+                          "companyName": "Ericsson",
+                          "title": "Backend & Frontend Developer",
+                          "jobDescription": "hhhhhhhhhhhhhhhhh",
+                          "contractType": "Full-time",
+                          "location": "Lagos, Nigeria",
+                          "jobType": "On-site",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "yyyyyyyyyyy": []
+                              }
+                          ],
+                          "extraText": "hiiiiiiiiiiiiiiiiiiii",
+                          "applicationCount": 2,
+                          "postStatus": "Open",
+                          "currencySymbol": "$",
+                          "salaryMinRange": 200000,
+                          "salaryMaxRange": 4000000,
+                          "owner": "Client",
+                          "duration": "6 - 12 Months",
+                          "deadlineDate": "2026-02-02",
+                          "status": "Published",
+                          "visibility": "All",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-12-19T14:47:00.926Z",
+                          "isApplied": false
+                      },
+                      {
+                          "_id": "694569a1af239e8238541c39",
+                          "userId": "690c63fc45047c4e4030fee3",
+                          "companyName": "Ericsson",
+                          "title": "Fullstack Developer",
+                          "jobDescription": "An experienced backend Developer",
+                          "contractType": "Full-time",
+                          "location": "Lagos, Nigeria",
+                          "jobType": "Remote",
+                          "region": [
+                              "Africa"
+                          ],
+                          "jobData": [
+                              {
+                                  "Code Architecturing": []
+                              },
+                              {
+                                  "Write/Read Code": []
+                              }
+                          ],
+                          "extraText": "Only experienced developers should apply",
+                          "applicationCount": 2,
+                          "postStatus": "Open",
+                          "currencySymbol": "$",
+                          "salaryMinRange": 200000,
+                          "salaryMaxRange": 4000000,
+                          "owner": "Client",
+                          "duration": "1 - 3 Years",
+                          "deadlineDate": "2026-02-02",
+                          "status": "Published",
+                          "visibility": "All",
+                          "isPostVerifiedByAdmin": "Pending Approval",
+                          "createdAt": "2025-12-19T15:05:05.642Z",
+                          "isApplied": false
+                      }
+                  ]
+              }
+          }

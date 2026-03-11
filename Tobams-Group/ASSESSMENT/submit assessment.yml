@@ -1,0 +1,633 @@
+info:
+  name: submit assessment
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{BASE}}/assessment/submit"
+  body:
+    type: json
+    data: |-
+      {
+          "uuid": "TG-1XIN",
+          "sessionId": "fawaz.abdganiyu+i_1761082952205_6267593f",
+          "answers": [
+              {
+                  "questionId": "q_1697049132_1",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_2",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_3",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_4",
+                  "selectedOption": "c"
+              },
+              {
+                  "questionId": "q_1697049132_5",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_6",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_7",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_8",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_9",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_10",
+                  "selectedOption": "b"
+              },
+              {
+                  "questionId": "q_1697049132_11",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_12",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_13",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_14",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_15",
+                  "selectedOption": "b"
+              },
+              {
+                  "questionId": "q_1697049132_16",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_17",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_18",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_19",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_20",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_21",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_22",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_23",
+                  "selectedOption": "b"
+              },
+              {
+                  "questionId": "q_1697049132_24",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_25",
+                  "selectedOption": "b"
+              },
+              {
+                  "questionId": "q_1697049132_26",
+                  "selectedOption": "b"
+              },
+              {
+                  "questionId": "q_1697049132_27",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_28",
+                  "selectedOption": "b"
+              },
+              {
+                  "questionId": "q_1697049132_29",
+                  "selectedOption": "a"
+              },
+              {
+                  "questionId": "q_1697049132_30",
+                  "selectedOption": "a"
+              }
+          ],
+          "timeSpent": 1800 
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: submit assessment
+    request:
+      url: "{{BASE}}/assessment/submit"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "uuid": "TG-3XOR",
+              "sessionId": "fawaz.abdganiyu+org_1756888265988_38546f03",
+              "answers": [
+                  {
+                      "questionId": "q_1633036801_1",
+                      "selectedOption": "b"
+                  },
+                  {
+                      "questionId": "q_1633036802_2",
+                      "selectedOption": "d"
+                  },
+                  {
+                      "questionId": "q_1633036803_3",
+                      "selectedOption": "c"
+                  },
+                  {
+                      "questionId": "q_1633036804_4",
+                      "selectedOption": "d"
+                  },
+                  {
+                      "questionId": "q_1633036805_5",
+                      "selectedOption": "a"
+                  },
+                  {
+                      "questionId": "q_1633036806_6",
+                      "selectedOption": "a"
+                  },
+                  {
+                      "questionId": "q_1633036807_7",
+                      "selectedOption": "c"
+                  },
+                  {
+                      "questionId": "q_1633036808_8",
+                      "selectedOption": "a"
+                  },
+                  {
+                      "questionId": "q_1633036809_9",
+                      "selectedOption": "a"
+                  },
+                  {
+                      "questionId": "q_1633036810_10",
+                      "selectedOption": "b"
+                  },
+                  {
+                      "questionId": "q_1633036811_11",
+                      "selectedOption": "c"
+                  },
+                  {
+                      "questionId": "q_1633036812_12",
+                      "selectedOption": "d"
+                  },
+                  {
+                      "questionId": "q_1633036813_13",
+                      "selectedOption": "c"
+                  },
+                  {
+                      "questionId": "q_1633036814_14",
+                      "selectedOption": "b"
+                  },
+                  {
+                      "questionId": "q_1633036815_15",
+                      "selectedOption": "c"
+                  },
+                  {
+                      "questionId": "q_1633036816_16",
+                      "selectedOption": "a"
+                  },
+                  {
+                      "questionId": "q_1633036817_17",
+                      "selectedOption": "d"
+                  },
+                  {
+                      "questionId": "q_1633036818_18",
+                      "selectedOption": "b"
+                  },
+                  {
+                      "questionId": "q_1633036819_19",
+                      "selectedOption": "b"
+                  },
+                  {
+                      "questionId": "q_1633036820_20",
+                      "selectedOption": "d"
+                  },
+                  {
+                      "questionId": "q_1633036821_21",
+                      "selectedOption": "c"
+                  },
+                  {
+                      "questionId": "q_1633036822_22",
+                      "selectedOption": "d"
+                  },
+                  {
+                      "questionId": "q_1633036823_23",
+                      "selectedOption": "b"
+                  },
+                  {
+                      "questionId": "q_1633036824_24",
+                      "selectedOption": "d"
+                  },
+                  {
+                      "questionId": "q_1633036825_25",
+                      "selectedOption": "c"
+                  },
+                  {
+                      "questionId": "q_1633036826_26",
+                      "selectedOption": "c"
+                  },
+                  {
+                      "questionId": "q_1633036827_27",
+                      "selectedOption": "d"
+                  },
+                  {
+                      "questionId": "q_1633036828_28",
+                      "selectedOption": "d"
+                  },
+                  {
+                      "questionId": "q_1633036829_29",
+                      "selectedOption": "c"
+                  },
+                  {
+                      "questionId": "q_1633036830_30",
+                      "selectedOption": "d"
+                  }
+              ],
+              "timeSpent": 1800 // optional in seconds
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1756892435331-vvfnup127
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "5577"
+        - name: ETag
+          value: W/"15c9-/T3X8uTBuTcSrD0eZGr9qSDHHd4"
+        - name: Date
+          value: Wed, 03 Sep 2025 09:40:35 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Assessment scored successfully.",
+              "data": {
+                  "overallScore": {
+                      "percentage": 22,
+                      "totalPoints": 79,
+                      "earnedPoints": 17
+                  },
+                  "sectionBreakdown": [
+                      {
+                          "section": "Database Management",
+                          "category": "backend",
+                          "percentage": 33,
+                          "totalPoints": 6,
+                          "earnedPoints": 2,
+                          "recommendation": "Professional Development and Continuous Learning"
+                      },
+                      {
+                          "section": "APIs",
+                          "category": "backend",
+                          "percentage": 0,
+                          "totalPoints": 7,
+                          "earnedPoints": 0,
+                          "recommendation": "Professional Development and Continuous Learning"
+                      },
+                      {
+                          "section": "Security",
+                          "category": "backend",
+                          "percentage": 27,
+                          "totalPoints": 11,
+                          "earnedPoints": 3,
+                          "recommendation": "Professional Development and Continuous Learning"
+                      },
+                      {
+                          "section": "Caching",
+                          "category": "backend",
+                          "percentage": 0,
+                          "totalPoints": 6,
+                          "earnedPoints": 0,
+                          "recommendation": "Professional Development and Continuous Learning"
+                      },
+                      {
+                          "section": "Microservices",
+                          "category": "backend",
+                          "percentage": 0,
+                          "totalPoints": 9,
+                          "earnedPoints": 0,
+                          "recommendation": "Professional Development and Continuous Learning"
+                      },
+                      {
+                          "section": "Networking",
+                          "category": "backend",
+                          "percentage": 0,
+                          "totalPoints": 7,
+                          "earnedPoints": 0,
+                          "recommendation": "Professional Networking Skills"
+                      },
+                      {
+                          "section": "Business Models",
+                          "category": "entrepreneurship",
+                          "percentage": 0,
+                          "totalPoints": 3,
+                          "earnedPoints": 0,
+                          "recommendation": "Professional Development and Continuous Learning"
+                      },
+                      {
+                          "section": "Startup Funding",
+                          "category": "entrepreneurship",
+                          "percentage": 100,
+                          "totalPoints": 3,
+                          "earnedPoints": 3,
+                          "recommendation": null
+                      },
+                      {
+                          "section": "Leadership",
+                          "category": "entrepreneurship",
+                          "percentage": 33,
+                          "totalPoints": 9,
+                          "earnedPoints": 3,
+                          "recommendation": "Entrepreneurial Leadership"
+                      },
+                      {
+                          "section": "Marketing",
+                          "category": "entrepreneurship",
+                          "percentage": 60,
+                          "totalPoints": 5,
+                          "earnedPoints": 3,
+                          "recommendation": null
+                      },
+                      {
+                          "section": "Business Strategy",
+                          "category": "entrepreneurship",
+                          "percentage": 0,
+                          "totalPoints": 5,
+                          "earnedPoints": 0,
+                          "recommendation": "Professional Development and Continuous Learning"
+                      },
+                      {
+                          "section": "Finance",
+                          "category": "entrepreneurship",
+                          "percentage": 0,
+                          "totalPoints": 5,
+                          "earnedPoints": 0,
+                          "recommendation": "Entrepreneurial Finance"
+                      },
+                      {
+                          "section": "Operations",
+                          "category": "entrepreneurship",
+                          "percentage": 100,
+                          "totalPoints": 3,
+                          "earnedPoints": 3,
+                          "recommendation": null
+                      }
+                  ],
+                  "questionResults": [
+                      {
+                          "questionId": "q_1633036801_1",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'c'"
+                      },
+                      {
+                          "questionId": "q_1633036802_2",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036803_3",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'd'"
+                      },
+                      {
+                          "questionId": "q_1633036804_4",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'a'"
+                      },
+                      {
+                          "questionId": "q_1633036805_5",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'c'"
+                      },
+                      {
+                          "questionId": "q_1633036806_6",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'c'"
+                      },
+                      {
+                          "questionId": "q_1633036807_7",
+                          "isCorrect": true,
+                          "pointsEarned": 2,
+                          "explanation": "Correct answer selected"
+                      },
+                      {
+                          "questionId": "q_1633036808_8",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'c'"
+                      },
+                      {
+                          "questionId": "q_1633036809_9",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036810_10",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'd'"
+                      },
+                      {
+                          "questionId": "q_1633036811_11",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036812_12",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036813_13",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036814_14",
+                          "isCorrect": true,
+                          "pointsEarned": 3,
+                          "explanation": "Correct answer selected"
+                      },
+                      {
+                          "questionId": "q_1633036815_15",
+                          "isCorrect": true,
+                          "pointsEarned": 3,
+                          "explanation": "Correct answer selected"
+                      },
+                      {
+                          "questionId": "q_1633036816_16",
+                          "isCorrect": true,
+                          "pointsEarned": 3,
+                          "explanation": "Correct answer selected"
+                      },
+                      {
+                          "questionId": "q_1633036817_17",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036818_18",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'c'"
+                      },
+                      {
+                          "questionId": "q_1633036819_19",
+                          "isCorrect": true,
+                          "pointsEarned": 3,
+                          "explanation": "Correct answer selected"
+                      },
+                      {
+                          "questionId": "q_1633036820_20",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036821_21",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'd'"
+                      },
+                      {
+                          "questionId": "q_1633036822_22",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036823_23",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'c'"
+                      },
+                      {
+                          "questionId": "q_1633036824_24",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'c'"
+                      },
+                      {
+                          "questionId": "q_1633036825_25",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036826_26",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036827_27",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036828_28",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'b'"
+                      },
+                      {
+                          "questionId": "q_1633036829_29",
+                          "isCorrect": true,
+                          "pointsEarned": 3,
+                          "explanation": "Correct answer selected"
+                      },
+                      {
+                          "questionId": "q_1633036830_30",
+                          "isCorrect": false,
+                          "pointsEarned": 0,
+                          "explanation": "Correct answer was option 'c'"
+                      }
+                  ],
+                  "submittedAt": "2025-09-03T09:40:35.368Z"
+              }
+          }

@@ -1,0 +1,7 @@
+info:
+  name: Mentee View
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

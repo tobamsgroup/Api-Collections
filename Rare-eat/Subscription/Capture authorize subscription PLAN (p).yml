@@ -1,0 +1,76 @@
+info:
+  name: Capture authorize subscription PLAN (p)
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{URL}}/subscription/paypal-subscription/capture_authorize_payment?sub_Id=I-A8KUVJC8HSPK"
+  params:
+    - name: sub_Id
+      value: I-A8KUVJC8HSPK
+      type: query
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Capture authorize subscription PLAN (p)
+    request:
+      url: "{{URL}}/subscription/paypal-subscription/capture_authorize_payment?sub_Id=I-A8KUVJC8HSPK"
+      method: PATCH
+      params:
+        - name: sub_Id
+          value: I-A8KUVJC8HSPK
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "419"
+        - name: ETag
+          value: W/"1a3-ZFuuU8/n4WXSFdjQ4bv9JpdqInc"
+        - name: Date
+          value: Sun, 12 Nov 2023 13:56:08 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "request has been processed successfully",
+              "data": {
+                  "result": {
+                      "name": "RESOURCE_NOT_FOUND",
+                      "message": "The specified resource does not exist.",
+                      "debug_id": "5e4871372de1a",
+                      "details": [
+                          {
+                              "issue": "INVALID_RESOURCE_ID",
+                              "description": "Requested resource ID was not found."
+                          }
+                      ],
+                      "links": [
+                          {
+                              "href": "https://developer.paypal.com/docs/api/v1/billing/subscriptions#RESOURCE_NOT_FOUND",
+                              "rel": "information_link",
+                              "method": "GET"
+                          }
+                      ]
+                  }
+              }
+          }

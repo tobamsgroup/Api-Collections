@@ -1,0 +1,36 @@
+info:
+  name: Guest General Review not associated with a product
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{URL}}/review-rating/guest-review"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"fullName\": \"Jane Doe\",\r
+
+      \  \"phoneNumber\": \"07064591358\",\r
+
+      \  \"role\": \"guest\",\r
+
+      \  \"email\": \"enamesit@gmail.com\",\r
+
+      \  \"location\": \"Lagos\",\r
+
+      \  \"comment\": \"I recommend this app to everyone\",\r
+
+      \  \"rating\": 1,\r
+
+      \  \"isGuest\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

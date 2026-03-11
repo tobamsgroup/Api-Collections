@@ -1,0 +1,32 @@
+info:
+  name: Update Internship Feedback
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/internship-feedback/68096460d54b1527051ed739"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"learningExperienceRating\": \"Good\", // Enum: Excellent, Good, Average, Poor\r
+
+      \    \"relevantTasks\": \"Agree\", // Enum: Strongly Agree, Agree, Neutral, Disagree, Strongly Disagree\r
+
+      \    \"mentorshipRating\": \"Satisfied\", // Enum: Very Satisfied, Satisfied, Neutral, Dissatisfied, Very Dissatisfied\r
+
+      \    \"workEnvironmentRating\": \"Average\", // Enum: Excellent, Good, Average, Poor\r
+
+      \    \"teamInclusion\": false\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2FhMDZiMjUzOWQ5ZjAzMmYzMjQxZjciLCJlbWFpbCI6ImlzcmFlbC5hZGlndW5AdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6IkludGVybiIsImlhdCI6MTc0NDkwNzQyOCwiZXhwIjoxNzQ0OTkzODI4fQ.9TQW75TmuKqATb3Du-XcBHskR1cy9AMcfP1MY5KOVDk
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

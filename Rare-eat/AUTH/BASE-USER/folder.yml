@@ -1,0 +1,7 @@
+info:
+  name: BASE-USER
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

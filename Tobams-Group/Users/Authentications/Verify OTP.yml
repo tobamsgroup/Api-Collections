@@ -1,0 +1,151 @@
+info:
+  name: Verify OTP
+  type: http
+  seq: 15
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/verify-otp"
+  body:
+    type: json
+    data: |-
+      {
+          "email":  "fawaz.abdganiyu+i2@tobamsgroup.com",
+          "type": "emailOtp", // 2FAOtp, forgotPasswordOtp, emailOtp
+          "otp": "424947"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Verify OTP
+    request:
+      url: "{{BASE}}/auth/verify-otp"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "email": "fawaz.abdganiyu+o@tobamsgroup.com",
+              "type": "emailOtp", // 2FAOtp, forgotPasswordOtp, emailOtp
+              "otp": "183365"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1757946687778-aki5pz2dm
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "1130"
+        - name: ETag
+          value: W/"46a-7dghBWmLR9uQTQgewBS3tHX8Vxo"
+        - name: Date
+          value: Mon, 15 Sep 2025 14:31:30 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "OTP verified successfully",
+              "data": {
+                  "generatedId": "TG-5XOR",
+                  "discountCode": "SAVE20TG",
+                  "data": {
+                      "hiringNeeds": {
+                          "coreValues": [],
+                          "preferredJobType": []
+                      },
+                      "_id": "68c28d7b1c9761621d300e34",
+                      "userId": {
+                          "Contact": {
+                              "email": "fawaz.abdganiyu+o@tobamsgroup.com",
+                              "telephone": "+2348179656740"
+                          },
+                          "social": {
+                              "facebook": "",
+                              "linkedIn": "",
+                              "github": "",
+                              "twitter": ""
+                          },
+                          "hasPassedAssessment": false,
+                          "hasTakenAssessment": false,
+                          "_id": "68c28d7b1c9761621d300e33",
+                          "companyName": "Progress Hub",
+                          "role": "Organisation",
+                          "isVerified": true,
+                          "MFA": false,
+                          "accountStatus": "Active",
+                          "notificationPreference": [
+                              "Email",
+                              "Push",
+                              "Sms"
+                          ],
+                          "photo": "",
+                          "blockedUsers": [],
+                          "averageRating": 0,
+                          "ratingCount": 0,
+                          "isOnline": false,
+                          "lastSeen": "Active now",
+                          "chatRequests": [],
+                          "createdAt": "2025-09-11T08:51:08.587Z",
+                          "updatedAt": "2025-09-15T14:31:28.809Z",
+                          "uuid": "TG-5XOR"
+                      },
+                      "companyName": "Progress Hub",
+                      "companySize": "10-49",
+                      "industry": "Technology",
+                      "openPositionsCount": 0,
+                      "candidatesCount": 0,
+                      "recentHiresCount": 0,
+                      "savedInterns": [],
+                      "savedTalents": [],
+                      "savedEvents": [],
+                      "subscriptionType": "Free-trial",
+                      "createdAt": "2025-09-11T08:51:07.380Z",
+                      "updatedAt": "2025-09-11T08:51:07.380Z"
+                  }
+              }
+          }

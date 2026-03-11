@@ -1,0 +1,20 @@
+info:
+  name: GET ALL PRODUCT  CATEGORY
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{LIVE}}/companies/product/all/categories"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

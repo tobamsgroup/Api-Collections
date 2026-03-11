@@ -1,0 +1,7 @@
+info:
+  name: Internship Feedback
+  type: folder
+  seq: 30
+
+request:
+  auth: inherit

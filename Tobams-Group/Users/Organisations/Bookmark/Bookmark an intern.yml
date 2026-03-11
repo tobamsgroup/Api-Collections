@@ -1,0 +1,31 @@
+info:
+  name: Bookmark an intern
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{BASE}}/organisation/tech-talents/67b65c0c2478ee6593c4983a/bookmark?role=intern"
+  params:
+    - name: role
+      value: intern
+      type: query
+  auth:
+    type: bearer
+    token: "{{client_access}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test('"savedMentees" includes the menteeId from request parameters', function () {
+                const internId = req.getUrl().path[4]
+                expect(res.getBody().data.savedInterns).to.include(internId);
+            }
+        );
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,7 @@
+info:
+  name: Push Notification
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

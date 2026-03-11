@@ -1,0 +1,109 @@
+info:
+  name: Get user's payment details
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: "{{BASE}}/subscriptions/transactions/:reference"
+  params:
+    - name: reference
+      value: 54zw9jh9n3
+      type: path
+      description: the transaction reference ID
+  auth:
+    type: bearer
+    token: "{{org_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/subscriptions/transactions/:reference"
+      method: GET
+      params:
+        - name: reference
+          value: 54zw9jh9n3
+          type: path
+          description: the transaction reference ID
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1755568833127-vwjbkmtsg
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "592"
+        - name: ETag
+          value: W/"250-3upSVvpeChTAkEVJmGjWT+MK7wg"
+        - name: Date
+          value: Tue, 19 Aug 2025 02:00:34 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Payment details retrieved successfully",
+              "data": {
+                  "_id": "68a3b1ee9957f005607f84f0",
+                  "userId": "689efbb9295f4209b71bc6e0",
+                  "customerId": "CUS_crpt246m11we8vs",
+                  "serviceProvider": "Paystack",
+                  "paymentMethod": "card",
+                  "transactionId": "5252213058",
+                  "subscription": {
+                      "planId": "688783b694a57ed0100af0ea",
+                      "subscriptionId": "68a3b1ee9957f005607f84ee",
+                      "planName": "Basic - monthly",
+                      "planCode": "PLN_lz6k17ncgylxmej",
+                      "planPrice": "45000",
+                      "interval": "monthly"
+                  },
+                  "referenceId": "54zw9jh9n3",
+                  "paymentStatus": "success",
+                  "createdAt": "2025-08-18T23:06:22.909Z",
+                  "updatedAt": "2025-08-18T23:06:22.909Z"
+              }
+          }

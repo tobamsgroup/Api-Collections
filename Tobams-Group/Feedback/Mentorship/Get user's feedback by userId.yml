@@ -1,0 +1,145 @@
+info:
+  name: Get user's feedback by userId
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/feedbacks/users?userId=67b65c0c2478ee6593c4983a&requestType=received&feedbackType=Mentorship"
+  params:
+    - name: userId
+      value: 67b65c0c2478ee6593c4983a
+      type: query
+      description: Not neccessary if the request is for the current logged in user
+    - name: requestType
+      value: received
+      type: query
+      description: '"sent" or "received"'
+    - name: feedbackType
+      value: Mentorship
+      type: query
+      description: Type of feedback according to design or usage
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/feedbacks/users?userId=67b65c0c2478ee6593c4983a&requestType=received&feedbackType=Mentorship"
+      method: GET
+      params:
+        - name: userId
+          value: 67b65c0c2478ee6593c4983a
+          type: query
+          description: Not neccessary if the request is for the current logged in user
+        - name: requestType
+          value: received
+          type: query
+          description: '"sent" or "received"'
+        - name: feedbackType
+          value: Mentorship
+          type: query
+          description: Type of feedback according to design or usage
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "964"
+        - name: ETag
+          value: W/"3c4-r1fg+DNCiCaUBvoUqgtN6Vq73ko"
+        - name: Set-Cookie
+          value: connect.sid=s%3AEbfCKDOYD4yRmNihT2vpGLL_8y1syFUu.XqDTDx74f4PdAQaF%2F%2FFqDGPKm6gNn610dZeY0uwr%2Fxs; Path=/; HttpOnly
+        - name: Date
+          value: Mon, 03 Mar 2025 19:21:36 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Received feedbacks fetched successfully",
+              "data": [
+                  {
+                      "_id": "67c5de9ca0d16e27b7878864",
+                      "reviewerId": "67b66148ad4271308086ad89",
+                      "receiverId": "67b65c0c2478ee6593c4983a",
+                      "type": "Mentorship",
+                      "feedback": "This is a test feedback",
+                      "rating": 4,
+                      "createdAt": "2025-03-03T16:53:48.819Z",
+                      "updatedAt": "2025-03-03T16:53:48.819Z",
+                      "reviewer": {
+                          "firstName": "Fawaz",
+                          "lastName": "Agara",
+                          "companyName": "Hilpert LLC",
+                          "occupation": "tests",
+                          "title": "Software Engineer",
+                          "photo": "default.jpg",
+                          "averageRating": 0
+                      }
+                  },
+                  {
+                      "_id": "67c5e625a030539bc4ff798a",
+                      "reviewerId": "67b66148ad4271308086ada4",
+                      "receiverId": "67b65c0c2478ee6593c4983a",
+                      "type": "Mentorship",
+                      "feedback": "This is a test feedback",
+                      "rating": 5,
+                      "createdAt": "2025-03-03T17:25:57.836Z",
+                      "updatedAt": "2025-03-03T17:25:57.836Z",
+                      "reviewer": {
+                          "firstName": "Minerva",
+                          "lastName": "Kuhlman",
+                          "companyName": "Mayert, Heathcote and Hansen",
+                          "occupation": "UI Designer",
+                          "title": "Software Engineer",
+                          "photo": "default.jpg",
+                          "averageRating": 0
+                      }
+                  }
+              ]
+          }

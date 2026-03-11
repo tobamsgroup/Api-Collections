@@ -1,0 +1,22 @@
+info:
+  name: resume subscription
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{URL}}/pay/paypal/resume-subscription"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"subscriptionId\": \"\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

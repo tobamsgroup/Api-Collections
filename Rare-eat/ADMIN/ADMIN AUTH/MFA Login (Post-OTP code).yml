@@ -1,0 +1,27 @@
+info:
+  name: MFA Login (Post-OTP code)
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{URL}}/admin/auth/mfa_login"
+  body:
+    type: json
+    data: |-
+      {
+          "email":"francisolatinwo@gmail.com",
+          "otp": "373498"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: bru.setEnvVar("ajwt", res.getBody().data.token);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: CONTACT US
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{URL}}/info/contact_us/mail"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"fullname\": \"Abdulrasaq Taofeeq\",\r
+
+      \    \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\",\r
+
+      \    \"subject\": \"Testing\",\r
+
+      \    \"message\": \"Hello here...\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

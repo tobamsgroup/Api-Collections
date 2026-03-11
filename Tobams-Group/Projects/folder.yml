@@ -1,0 +1,11 @@
+info:
+  name: Projects
+  type: folder
+  seq: 7
+
+request:
+  auth: inherit
+
+docs:
+  content: This endpoint is for client sending their project proposal. Written documentation on how to request a proposal for starting a project is available by providing the required fields and as well as choosing the right services `projectStack`. It has the endpoint to `view one` project details and `view all` project. The `view all` endpoint is a paginated endpoint where by the `page number` is parsed as params. Each endpoint comes with example responsed of `success`, `Server Error`, `Validation Error` and `Not found` responses
+  type: text/markdown

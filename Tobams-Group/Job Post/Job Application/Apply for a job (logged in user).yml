@@ -1,0 +1,66 @@
+info:
+  name: Apply for a job (logged in user)
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{BASE}}/job-apply/"
+  body:
+    type: json
+    data: |-
+      {
+          "fullName": "Fawaz Agara",
+          "phoneNumber": "+2340970087834",
+          "email": "paul.elugbaju@tobamsgroup.com",
+          "location": "Lokoja, Kogi State",
+          "country": "Nigeria",
+          "bio": "Here is my brief bio",
+          "portfolioLink": "portfolio Link",
+          "resume": "image url in cloudinary",
+          "coverLetter": "cover letter url",
+          "postId": "686519c9d83df753df842146",
+          "jobTitle": "Senior Product Designer",
+          "organisationId" : "6865179998f0bca3fcb312ec"
+          // "owner": "In-House" // For in house job application only
+      }
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Apply for a job (logged in user)
+    request:
+      url: "{{BASE}}/job-apply/"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "fullName": "Fawaz Abdganiyu",
+              "phoneNumber": "+2340970087834",
+              "email": "fawaztalent@gmail.com",
+              "location": "Lokoja, Kogi State",
+              "country": "Nigeria",
+              "bio": "Here is my brief bio",
+              "portfolioLink": "portfolio Link",
+              "resume": "image url in cloudinary",
+              "coverLetter": "cover letter url",
+              "postId": "67d95578b3ea8eee43ef5ce4",
+              "jobTitle": "Software Engineer",
+              "organisationId" : "67bf2c6a974a6b52304105a0"
+              // "owner": "In-House" // For in house job application only
+          }
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: ""

@@ -1,0 +1,22 @@
+info:
+  name: Upload CV
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/upload/cv"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /Users/fawazabdganiyu/Downloads/br12.jpg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

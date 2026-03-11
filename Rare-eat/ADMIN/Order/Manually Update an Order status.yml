@@ -1,0 +1,24 @@
+info:
+  name: Manually Update an Order status
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{URL}}/admin/order/update_status?orderId=8670d540-575e-4367-aaf7-12b427a975fa&status=PROCESSING"
+  params:
+    - name: orderId
+      value: 8670d540-575e-4367-aaf7-12b427a975fa
+      type: query
+    - name: status
+      value: PROCESSING
+      type: query
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

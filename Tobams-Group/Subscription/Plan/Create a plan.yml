@@ -1,0 +1,431 @@
+info:
+  name: Create a plan
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/plans"
+  body:
+    type: json
+    data: |-
+      {
+          "name": "Premium", // Free-trial, Basic, Standard, Premium
+          "currency": "NGN", // GBP, NGN
+          "monthlyPrice": 220000,
+          "annualPrice": 2000000,
+          "annualDiscount": "Save ₦640,000 (24%)", // Optional
+          "features": {
+              "jobListingsPerMonth": 1000,
+              "internshipListings": true, // Default true
+              "targetAudience": "Both", // Optional, default Interns, Interns, Talents, or Both
+              "talentPooSearch": true, // Default false
+              "filteringTools": "AI-Powered", // None, Basic, Standard, AI-Powered
+              "featuredJobPromotions": 5,
+              "inAppMessaging": true, // Default false
+              "analyticsLevel": "Full + Export", // None, Standard, Advanced, Full + Export
+              "teamMembersAllowed": 15, // Min 1
+              "priorityListing": true, // Default false
+              "customerSupport": "Dedicated" // Community, Email,  Priority Email, Dedicated
+          }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Empty plans
+    request:
+      url: "{{BASE}}/plans"
+      method: GET
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - /C:/Users/HP/Downloads/User-Centered_Design.pdf
+            disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "75"
+        - name: ETag
+          value: W/"4b-TNe+AT1lzVw6jFH5T7dk0bWstz4"
+        - name: Set-Cookie
+          value: connect.sid=s%3Ad_yIbTMWwN3uQ5elQzoDlU_vLRTobTYC.A3iUhsAmd3BR7GYV7FVNTvp1ToxVagJguhpDEJyCrQ8; Path=/; HttpOnly
+        - name: Date
+          value: Mon, 28 Jul 2025 05:48:18 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Plans fetched successfully",
+              "data": [],
+              "count": 0
+          }
+  - name: Create a (Basic) plan
+    request:
+      url: "{{BASE}}/plans"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "name": "Basic", // Free-trial, Basic, Standard, Premium
+              "currency": "GBP", // GBP, NGN
+              "monthlyPrice": 89,
+              "annualPrice": 899,
+              "annualDiscount": "Save $169 (16%)", // Optional
+              "features": {
+                  "jobListingsPerMonth": 10,
+                  "internshipListings": true, // Default true
+                  "targetAudience": "Interns", // Optional, default Interns, Interns, Talents, or Both
+                  "talentPooSearch": false, // Default false
+                  "filteringTools": "Basic", // None, Basic, Standard, AI-Powered
+                  "featuredJobPromotions": 0,
+                  "inAppMessaging": false, // Default false
+                  "analyticsLevel": "None", // None, Standard, Advanced, Full + Export
+                  "teamMembersAllowed": 1, // Min 1
+                  "priorityListing": false, // Default false
+                  "customerSupport": "Email" // Community, Email,  Priority Email, Dedicated
+              }
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Request-ID
+          value: 1753711542115-b81u9zmss
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "591"
+        - name: ETag
+          value: W/"24f-JsLbymIv4M1RqFdtE32htrfy6iA"
+        - name: Date
+          value: Mon, 28 Jul 2025 14:05:43 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Plan created successfully",
+              "data": {
+                  "name": "Basic",
+                  "currency": "NGN",
+                  "monthlyPrice": 45000,
+                  "annualPrice": 450000,
+                  "annualDiscount": "Save ₦90,000 (17%)",
+                  "features": {
+                      "jobListingsPerMonth": 10,
+                      "internshipListings": true,
+                      "targetAudience": "Interns",
+                      "talentPoolSearch": false,
+                      "filteringTools": "Basic",
+                      "featuredJobPromotions": 0,
+                      "inAppMessaging": false,
+                      "analyticsLevel": "None",
+                      "teamMembersAllowed": 1,
+                      "priorityListing": false,
+                      "customerSupport": "Email"
+                  },
+                  "isActive": true,
+                  "_id": "688783b694a57ed0100af0ea",
+                  "createdAt": "2025-07-28T14:05:42.925Z",
+                  "updatedAt": "2025-07-28T14:05:42.925Z"
+              }
+          }
+  - name: Create a (Standard) plan
+    request:
+      url: "{{BASE}}/plans"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "name": "Standard", // Free-trial, Basic, Standard, Premium
+              "currency": "NGN", // GBP, NGN
+              "monthlyPrice": 110000,
+              "annualPrice": 1050000,
+              "annualDiscount": "Save ₦270,000 (21%)", // Optional
+              "features": {
+                  "jobListingsPerMonth": 30,
+                  "internshipListings": true, // Default true
+                  "targetAudience": "Both", // Optional, default Interns, Interns, Talents, or Both
+                  "talentPooSearch": true, // Default false
+                  "filteringTools": "Standard", // None, Basic, Standard, AI-Powered
+                  "featuredJobPromotions": 2,
+                  "inAppMessaging": true, // Default false
+                  "analyticsLevel": "Advanced", // None, Standard, Advanced, Full + Export
+                  "teamMembersAllowed": 5, // Min 1
+                  "priorityListing": true, // Default false
+                  "customerSupport": "Priority Email" // Community, Email,  Priority Email, Dedicated
+              }
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Request-ID
+          value: 1753767657188-wvrqfeg7q
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "609"
+        - name: ETag
+          value: W/"261-9UH53eTa+i8GDIJbJqib7USKJ3g"
+        - name: Date
+          value: Tue, 29 Jul 2025 05:41:05 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Plan created successfully",
+              "data": {
+                  "name": "Standard",
+                  "currency": "NGN",
+                  "monthlyPrice": 110000,
+                  "annualPrice": 1050000,
+                  "annualDiscount": "Save ₦270,000 (21%)",
+                  "features": {
+                      "jobListingsPerMonth": 30,
+                      "internshipListings": true,
+                      "targetAudience": "Both",
+                      "talentPoolSearch": false,
+                      "filteringTools": "Standard",
+                      "featuredJobPromotions": 2,
+                      "inAppMessaging": true,
+                      "analyticsLevel": "Advanced",
+                      "teamMembersAllowed": 5,
+                      "priorityListing": false,
+                      "customerSupport": "Priority Email"
+                  },
+                  "isActive": true,
+                  "_id": "68885ef0fc5e5f12ac1ce94c",
+                  "createdAt": "2025-07-29T05:41:04.966Z",
+                  "updatedAt": "2025-07-29T05:41:04.966Z"
+              }
+          }
+  - name: Create a (Premium) plan
+    request:
+      url: "{{BASE}}/plans"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "name": "Premium", // Free-trial, Basic, Standard, Premium
+              "currency": "GBP", // GBP, NGN
+              "monthlyPrice": 349,
+              "annualPrice": 3299,
+              "annualDiscount": "Save $889 (21%)", // Optional
+              "features": {
+                  "jobListingsPerMonth": 1000,
+                  "internshipListings": true, // Default true
+                  "targetAudience": "Both", // Optional, default Interns, Interns, Talents, or Both
+                  "talentPooSearch": true, // Default false
+                  "filteringTools": "AI-Powered", // None, Basic, Standard, AI-Powered
+                  "featuredJobPromotions": 5,
+                  "inAppMessaging": true, // Default false
+                  "analyticsLevel": "Full + Export", // None, Standard, Advanced, Full + Export
+                  "teamMembersAllowed": 15, // Min 1
+                  "priorityListing": true, // Default false
+                  "customerSupport": "Dedicated" // Community, Email,  Priority Email, Dedicated
+              }
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Request-ID
+          value: 1753768014995-7m0fy3unp
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "612"
+        - name: ETag
+          value: W/"264-5zUTIV/g6cUMorNl9BFytYBK+IQ"
+        - name: Date
+          value: Tue, 29 Jul 2025 05:46:56 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Plan created successfully",
+              "data": {
+                  "name": "Premium",
+                  "currency": "NGN",
+                  "monthlyPrice": 220000,
+                  "annualPrice": 2000000,
+                  "annualDiscount": "Save ₦640,000 (24%)",
+                  "features": {
+                      "jobListingsPerMonth": 1000,
+                      "internshipListings": true,
+                      "targetAudience": "Both",
+                      "talentPoolSearch": false,
+                      "filteringTools": "AI-Powered",
+                      "featuredJobPromotions": 5,
+                      "inAppMessaging": true,
+                      "analyticsLevel": "Full + Export",
+                      "teamMembersAllowed": 15,
+                      "priorityListing": true,
+                      "customerSupport": "Dedicated"
+                  },
+                  "isActive": true,
+                  "_id": "68886050fc5e5f12ac1ce94f",
+                  "createdAt": "2025-07-29T05:46:56.627Z",
+                  "updatedAt": "2025-07-29T05:46:56.627Z"
+              }
+          }

@@ -1,0 +1,294 @@
+info:
+  name: Get courses by query parameter(s)
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/courses?name&minPrice&maxPrice&category&page&limit&search"
+  params:
+    - name: name
+      value: ""
+      type: query
+      description: Request by course name
+    - name: minPrice
+      value: ""
+      type: query
+      description: By mininum price range
+    - name: maxPrice
+      value: ""
+      type: query
+      description: By max price range
+    - name: category
+      value: ""
+      type: query
+      description: By course category
+    - name: page
+      value: ""
+      type: query
+      description: By page number (default 1)
+    - name: limit
+      value: ""
+      type: query
+      description: By number of items (default 10)
+    - name: search
+      value: ""
+      type: query
+      description: By any keyword
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get courses by name query parameter
+    request:
+      url: "{{BASE}}/courses?name=string&page=1&limit=10"
+      method: GET
+      params:
+        - name: name
+          value: string
+          type: query
+        - name: minPrice
+          value: ""
+          type: query
+          disabled: true
+        - name: maxPrice
+          value: ""
+          type: query
+          disabled: true
+        - name: category
+          value: ""
+          type: query
+          disabled: true
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Get courses by price range query parameter(s)
+    request:
+      url: "{{BASE}}/courses?minPrice=30000&maxPrice=50000&page&limit"
+      method: GET
+      params:
+        - name: name
+          value: ""
+          type: query
+          disabled: true
+        - name: minPrice
+          value: "30000"
+          type: query
+        - name: maxPrice
+          value: "50000"
+          type: query
+        - name: category
+          value: ""
+          type: query
+          disabled: true
+        - name: page
+          value: ""
+          type: query
+        - name: limit
+          value: ""
+          type: query
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Get courses by course category query parameter
+    request:
+      url: "{{BASE}}/courses?category&page&limit"
+      method: GET
+      params:
+        - name: name
+          value: ""
+          type: query
+          disabled: true
+        - name: minPrice
+          value: ""
+          type: query
+          disabled: true
+        - name: maxPrice
+          value: ""
+          type: query
+          disabled: true
+        - name: category
+          value: ""
+          type: query
+        - name: page
+          value: ""
+          type: query
+        - name: limit
+          value: ""
+          type: query
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Get courses by no query parameter(s)
+    request:
+      url: "{{BASE}}/courses?page&limit"
+      method: GET
+      params:
+        - name: name
+          value: ""
+          type: query
+          disabled: true
+        - name: minPrice
+          value: ""
+          type: query
+          disabled: true
+        - name: maxPrice
+          value: ""
+          type: query
+          disabled: true
+        - name: category
+          value: ""
+          type: query
+          disabled: true
+        - name: page
+          value: ""
+          type: query
+        - name: limit
+          value: ""
+          type: query
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Get courses by search query parameter(s)
+    request:
+      url: "{{BASE}}/courses?page&limit&search="
+      method: GET
+      params:
+        - name: name
+          value: ""
+          type: query
+          description: Request by course name
+          disabled: true
+        - name: minPrice
+          value: ""
+          type: query
+          description: By mininum price range
+          disabled: true
+        - name: maxPrice
+          value: ""
+          type: query
+          description: By max price range
+          disabled: true
+        - name: category
+          value: ""
+          type: query
+          description: By course category
+          disabled: true
+        - name: page
+          value: ""
+          type: query
+          description: By page number (default 1)
+        - name: limit
+          value: ""
+          type: query
+          description: By number of items (default 10)
+        - name: search
+          value: ""
+          type: query
+          description: By any keyword
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Courses retrieved successfully",
+              "data": {
+                  "matchedCount": 6,
+                  "currentCount": 6,
+                  "courses": [
+                      {
+                          "_id": "67a3b73e39a3ccf8c2903ebc",
+                          "name": "string",
+                          "description": "string",
+                          "category": "string",
+                          "price": "string",
+                          "status": "string",
+                          "imageUrl": "file",
+                          "courseUrl": "string",
+                          "createdAt": "2025-02-05T19:08:46.529Z",
+                          "updatedAt": "2025-02-05T19:08:46.529Z"
+                      },
+                      {
+                          "_id": "67a42ecbd32cedd3189269d1",
+                          "name": "string 89",
+                          "description": "string",
+                          "category": "string",
+                          "price": "string",
+                          "status": "string",
+                          "imageUrl": "file",
+                          "courseUrl": "string",
+                          "createdAt": "2025-02-06T03:38:51.072Z",
+                          "updatedAt": "2025-02-06T03:38:51.072Z"
+                      },
+                      {
+                          "_id": "67a42ed1d32cedd3189269d8",
+                          "name": "string 9",
+                          "description": "string",
+                          "category": "string",
+                          "price": "string",
+                          "status": "string",
+                          "imageUrl": "file",
+                          "courseUrl": "string",
+                          "createdAt": "2025-02-06T03:38:57.981Z",
+                          "updatedAt": "2025-02-06T03:38:57.981Z"
+                      },
+                      {
+                          "_id": "67a42edcd32cedd3189269e2",
+                          "name": "string 99",
+                          "description": "string",
+                          "category": "string",
+                          "price": "string",
+                          "status": "string",
+                          "imageUrl": "file",
+                          "courseUrl": "string",
+                          "createdAt": "2025-02-06T03:39:08.534Z",
+                          "updatedAt": "2025-02-06T03:39:08.534Z"
+                      },
+                      {
+                          "_id": "67a42f2ad32cedd3189269ec",
+                          "name": "number 89",
+                          "description": "string",
+                          "category": "string",
+                          "price": "string",
+                          "status": "string",
+                          "imageUrl": "file",
+                          "courseUrl": "string",
+                          "createdAt": "2025-02-06T03:40:26.724Z",
+                          "updatedAt": "2025-02-06T03:40:26.724Z"
+                      },
+                      {
+                          "_id": "67a42f34d32cedd3189269f3",
+                          "name": "number",
+                          "description": "string",
+                          "category": "string",
+                          "price": "string",
+                          "status": "string",
+                          "imageUrl": "file",
+                          "courseUrl": "string",
+                          "createdAt": "2025-02-06T03:40:36.755Z",
+                          "updatedAt": "2025-02-06T03:40:36.755Z"
+                      }
+                  ]
+              }
+          }

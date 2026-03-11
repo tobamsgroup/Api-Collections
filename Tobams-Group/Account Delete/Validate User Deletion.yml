@@ -1,0 +1,22 @@
+info:
+  name: Validate User Deletion
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/validate-deletion"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"email\": \"ericssonraphael@outlook.com\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

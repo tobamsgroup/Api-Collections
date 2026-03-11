@@ -1,0 +1,23 @@
+info:
+  name: Reset monthly usage
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BASE}}/subscriptions/admin/reset-usage"
+  body:
+    type: text
+    data: |-
+      {
+          "period": "weekly" // 'daily' | 'weekly' | 'monthly'
+      }
+  auth:
+    type: bearer
+    token: "{{org_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

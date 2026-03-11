@@ -1,0 +1,42 @@
+info:
+  name: get All registered Interest Data
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{BASE}}/interest-entrepreneurship/"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"firstName\": \"John\",\r
+
+      \  \"lastName\": \"Doe\",\r
+
+      \  \"email\": \"john.doe@example.com\",\r
+
+      \  \"phoneNumber\": \"+11234567890\",\r
+
+      \  \"ageRange\": \"25-34\",\r
+
+      \  \"country\": \"Nigeria\",\r
+
+      \  \"state\": \"Lagos\",\r
+
+      \  \"city\": \"Ikeja\",\r
+
+      \  \"courseInterest\": [\"Data Analysis\", \"Project Management\"],\r
+
+      \  \"reasonForJoining\": \"To gain new skills for career advancement.\",\r
+
+      \  \"howDidYouHearAboutTheCourse\": \"Social Media\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

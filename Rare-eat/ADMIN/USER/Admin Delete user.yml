@@ -1,0 +1,17 @@
+info:
+  name: Admin Delete user
+  type: http
+  seq: 2
+
+http:
+  method: DELETE
+  url: "{{URL}}/admin/user/all_users"
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

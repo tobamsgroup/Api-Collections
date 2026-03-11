@@ -1,0 +1,159 @@
+info:
+  name: UPDATE PRODUCT
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{base_url}}/companies/product/update/69317f5cc680938225583a55"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"base_price\":11.99,\r
+
+      \ \"variation_combination\": [\r
+
+      \                {\r
+
+      \                    \"number_of_pack\": \"Single\",\r
+
+      \                    \"size\": \"1000\",\r
+
+      \                    \"side_protein\": \"\",\r
+
+      \                    \"price\": 11.99,\r
+
+      \                    \"discount_price\": 11.40,\r
+
+      \                    \"subscriptiom_price\": 11.99,\r
+
+      \                    \"SKU\": \"REBPD_001\",\r
+
+      \                    \"stock_quantity\": 100,\r
+
+      \                    \"_id\": \"69317f5cc680938225583a56\"\r
+
+      \                }\r
+
+      \            ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: UPDATE PRODUCT
+    request:
+      url: "{{URL}}/companies/product/update/65f143361904b491af81adf6"
+      method: PATCH
+      body:
+        type: json
+        data: "{\r
+
+          \    \"category\": [\"6582e73b44918b2910452c24\",\"6582e73b44918b2910452c24\"],\r
+
+          \    \"subcategory\": [\"6582e77a44918b2910452c29\",\"6582e77a44918b2910452c29\",\"6582e77a44918b2910452c29\"]\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "3001"
+        - name: ETag
+          value: W/"bb9-zbo2LefwPCvY9fVKMThLqNsxnas"
+        - name: Date
+          value: Sun, 17 Mar 2024 16:16:07 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "productAttribute": {
+                  "_id": "65f143361904b491af81adf6",
+                  "productId": "REJR001",
+                  "productName": "Jollof Rice",
+                  "productImage": [
+                      "https://res.cloudinary.com/dddiqpeib/image/upload/v1704876526/Products/product-659be09c653e5e7970b3a57f.jpg"
+                  ],
+                  "category": [
+                      "6582e73b44918b2910452c24",
+                      "6582e73b44918b2910452c24"
+                  ],
+                  "subcategory": [
+                      "6582e77a44918b2910452c29",
+                      "6582e77a44918b2910452c29",
+                      "6582e77a44918b2910452c29"
+                  ],
+                  "description": "Jollof rice is a legendary one-pot rice dish that is popular in many West African countries.\n\nIt is ubiquitous in Nigeria, Cameroon, Ghana, Liberia, Togo, and Sierra Leone. In fact, this is the most popular party food in West Africa and has been gaining momentum elsewhere in East Africa.\n\nOur Rare Eat Jollof Rice is an easy, flavourful and perfectly cooked African classic dish.\n\nRare Eat Jollof rice is made with de-starched rice, tomatoes, tomato paste, onions, scotch bonnet peppers, salt, and spices.",
+                  "ingredient": "De-starched Rice, tomatoes, tomato paste, onions, scotch bonnet peppers, salt, spices.",
+                  "nutritionalInfo": "Amount Per Serving Size – 100g,\nCalories 265,\nEnergy 1108KJ,\nTotal Fat 7.5g,\nSaturated Fat 0.6g ,\nSodium 239mg ,\nPotassium 121mg ,\nTotal Carbohydrates 29g ,\nDietary Fibre 0.8g ,\nSugars 1.4g ,\nProtein 2.7g ,\nVitamin A – 3%,\nVitamin C – 10%,\nCalcium 1.5%,\nIron 5%,\n*Percent Daily Values are based on a 2,000-calorie diet. Your daily values may be higher or lower depending on your calorie needs.\n",
+                  "howToPrepare": "From Frozen\nEmpty the sachet content into a pot, of boiling water (300ml) ,\nCook on medium heat,\nAfter 10 mins of cooking mix pot content gently for 30 secs,\nAllow to cook further for 10-15 mins,\nServe accordingly\n\nFrom Defrost\nEmpty the sachet content into a pot, of boiling water (250ml), \nCook on medium heat,\nMix pot content gently for 30secs ,\nAllow to cook further for 10-15 mins,\nServe accordingly\n\n",
+                  "dietaryInfo": "*Allergy – Product may contain nuts, \nSuitable for Vegetarians,\nNo added Sugar\n",
+                  "storageInfo": "Keep Frozen (See Best before)\nRefrigerate and consume within 3 days \n\nAddress \nInternational House, 64 Nile Street, London N1 7SR United Kingdom\n- Website - www.rareeat.com\n- Email - theteam@rareeat.com\nInstagram - @rareeat.uk, Facebook - @rareeat, Twitter - @rareeat\n",
+                  "extra": "Made with 100% natural and organic ingredients",
+                  "base_price": 7.99,
+                  "spice_level": [
+                      "Hot",
+                      "Mild",
+                      "Medium"
+                  ],
+                  "size": [
+                      "900"
+                  ],
+                  "side_protein": [],
+                  "numbers_of_pack": [
+                      "Pack of 5",
+                      "Pack of 10"
+                  ],
+                  "search_tags": [],
+                  "variation_combination": [
+                      {
+                          "number_of_pack": "Pack of 5",
+                          "size": "900",
+                          "side_protein": null,
+                          "price": 37.99,
+                          "discount_price": 37.99,
+                          "subscriptiom_price": 36.99,
+                          "SKU": "REJRP5",
+                          "stock_quantity": 50,
+                          "_id": "659be09c653e5e7970b3a580"
+                      },
+                      {
+                          "number_of_pack": "Pack of 10",
+                          "size": "900",
+                          "side_protein": null,
+                          "price": 75,
+                          "discount_price": 75,
+                          "subscriptiom_price": 74,
+                          "SKU": "REJRP10",
+                          "stock_quantity": 82,
+                          "_id": "659be09c653e5e7970b3a581"
+                      }
+                  ],
+                  "__v": 0,
+                  "createdAt": "2024-03-13T06:09:58.403Z",
+                  "updatedAt": "2024-03-17T16:16:06.977Z"
+              }
+          }

@@ -1,0 +1,7 @@
+info:
+  name: Mentor View
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

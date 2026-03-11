@@ -1,0 +1,21 @@
+info:
+  name: Remove a job from bookmark Copy
+  type: http
+  seq: 10
+
+http:
+  method: PATCH
+  url: "{{BASE}}/talents/jobs/67532398bec98bc52ebb81d7/bookmark?bookmark=false"
+  params:
+    - name: bookmark
+      value: "false"
+      type: query
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

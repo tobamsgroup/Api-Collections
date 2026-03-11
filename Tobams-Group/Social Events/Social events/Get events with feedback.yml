@@ -1,0 +1,15 @@
+info:
+  name: Get events with feedback
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{BASE}}/social_events/with/feedback/67a36e1e79f9a0d10c3ee9eb"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

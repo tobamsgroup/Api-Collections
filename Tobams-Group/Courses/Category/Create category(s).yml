@@ -1,0 +1,125 @@
+info:
+  name: Create category(s)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/courses/category"
+  params:
+    - name: ""
+      value: "true"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "name": "string 6",
+          "description": "string"
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Create a category
+    request:
+      url: "{{BASE}}/courses/category"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      params:
+        - name: ""
+          value: "true"
+          type: query
+          disabled: true
+      body:
+        type: json
+        data: |-
+          {
+              "name": "string 6",
+              "description": "string"
+          }
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Course category(s) created successfully",
+              "data": {
+                  "name": "string 6",
+                  "description": "string",
+                  "courses": [],
+                  "_id": "67a3a7ae55b776d944b74114",
+                  "createdAt": "2025-02-05T18:02:22.465Z",
+                  "updatedAt": "2025-02-05T18:02:22.465Z"
+              }
+          }
+  - name: Create multiple categories
+    request:
+      url: "{{BASE}}/courses/category"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      params:
+        - name: ""
+          value: "true"
+          type: query
+          disabled: true
+      body:
+        type: json
+        data: |-
+          {
+              "multi": [
+                  {
+                  "name": "string",
+                  "description": "string"
+              },
+              {
+                  "name": "string 1",
+                  "description": "string 1"
+              }
+              ]
+          }
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Course category(s) created successfully",
+              "data": [
+                  {
+                      "name": "string",
+                      "description": "string",
+                      "courses": [],
+                      "_id": "67a3b342f3adc64320af7538",
+                      "createdAt": "2025-02-05T18:51:46.746Z",
+                      "updatedAt": "2025-02-05T18:51:46.746Z"
+                  },
+                  {
+                      "name": "string 1",
+                      "description": "string 1",
+                      "courses": [],
+                      "_id": "67a3b342f3adc64320af753a",
+                      "createdAt": "2025-02-05T18:51:46.749Z",
+                      "updatedAt": "2025-02-05T18:51:46.749Z"
+                  }
+              ]
+          }

@@ -1,0 +1,22 @@
+info:
+  name: delete plan
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{URL}}/pay/paypal/delete-plan"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"planId\": \"P-07Y12534PU469621DMYYBIWY\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,9 @@
+info:
+  name: Tech talents job applications Copy
+  type: folder
+  seq: 1
+
+request:
+  auth:
+    type: bearer
+    token: "{{client_access}}"

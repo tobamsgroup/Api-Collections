@@ -1,0 +1,9 @@
+info:
+  name: Tech talents job applications
+  type: folder
+  seq: 2
+
+request:
+  auth:
+    type: bearer
+    token: "{{client_access}}"

@@ -1,0 +1,201 @@
+info:
+  name: New Portfolio
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/portfolio"
+  body:
+    type: json
+    data: |-
+      
+      {
+        "title":"Tobams Logic",
+        "challenges": "This was the challenge behind the solution",
+        "solution":"This is the soluiton",
+        "description":"This is the description",
+        "coverPhoto":"https://res.cloudinary.com/uploads/image754608757.png",
+        "icon":"https://res.cloudinary.com/uploads/image7546757.png",
+        "category":["Website Design and Development"]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{@harek}}/portfolio"
+      method: POST
+      body:
+        type: json
+        data: |-
+          
+          {
+            "title":"Tobams Logic",
+            "challenges": "This was the challenge behind the solution",
+            "solution":"This is the soluiton",
+            "description":"This is the description",
+            "coverPhoto":"https://res.cloudinary.com/uploads/image754608757.png",
+            "icon":"https://res.cloudinary.com/uploads/image7546757.png",
+            "category":["Website Design and Development"]
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "31"
+        - name: ETag
+          value: W/"1f-5kW3b2G3C69Ko41gICyek4yemO4"
+        - name: Date
+          value: Fri, 08 Mar 2024 17:57:06 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Portfolio Created"
+          }
+  - name: Server error
+    request:
+      url: "{{@harek}}/portfolio"
+      method: POST
+      body:
+        type: json
+        data: |-
+          
+          {
+            "title":"Tobams Logic",
+            "challenges": "This was the challenge behind the solution",
+            "solution":"This is the soluiton",
+            "description":"This is the description",
+            "coverPhoto":"https://res.cloudinary.com/uploads/image754608757.png",
+            "icon":"https://res.cloudinary.com/uploads/image7546757.png"
+            "category":["Website Design and Development"]
+          }
+    response:
+      statusText: "500"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "91"
+        - name: ETag
+          value: W/"5b-yxUBDguUjHzMz+rNiWu7DAur7HE"
+        - name: Date
+          value: Fri, 08 Mar 2024 17:59:33 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "status": false,
+              "error": "Expected ',' or '}' after property value in JSON at position 308"
+          }
+  - name: Validation error
+    request:
+      url: "{{@harek}}/portfolio"
+      method: POST
+      body:
+        type: json
+        data: |-
+          
+          {
+            "title":"Tobams Logic",
+            "challenges": "This was the challenge behind the solution",
+            "solution":"This is the soluiton",
+            "coverPhoto":"https://res.cloudinary.com/uploads/image754608757.png",
+            "icon":"https://res.cloudinary.com/uploads/image7546757.png",
+            "category":["Website Design and Development"]
+          }
+    response:
+      statusText: "406"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "65"
+        - name: ETag
+          value: W/"41-IrK3cTerqXJ9rRh14dgueEvAQok"
+        - name: Date
+          value: Fri, 08 Mar 2024 18:00:11 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Portfolio should have a description"
+          }
+
+docs: This endpoint is for creating or adding new portfolio project on the database. A `success` response is returned when all `body` params are valid, a `Validation Error` is returned when one or more of the required fields are missing and a `Server Error` when there is a mismatch on the input request params or something went wrong on the server

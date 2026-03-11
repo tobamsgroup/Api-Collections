@@ -1,0 +1,317 @@
+info:
+  name: Internship suggestion
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{BASE}}/recommendations/?type=internship"
+  params:
+    - name: type
+      value: internship
+      type: query
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Internship suggestion
+    request:
+      url: "{{BASE}}/recommendations/?type=internship"
+      method: GET
+      params:
+        - name: type
+          value: internship
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 29 Jan 2026 07:25:28 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: CF-RAY
+          value: 9c56fee4cefdddd7-LHR
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: Content-Encoding
+          value: br
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"2deb-g/yJvzVeORV46JoN5Wwzw/GFAzY"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: c7209cea-ba89-4908
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1769671527534-44yhkye3y
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Recommended internship retrieved successfully",
+              "data": [
+                  {
+                      "_id": "692820bd5e795ceb37985586",
+                      "title": "Business Development Manager",
+                      "location": "Remote",
+                      "companyName": "Tobams Group & Recycled Learning",
+                      "jobDescription": "Tobams Group is a global innovation and talent development company leading transformative work in education, sustainability, and AI-driven learning. Our ecosystem includes: Recycled Learning – an AI-powered adaptive learning platform focused on personalized education, sustainability, and future-ready skills; Recycled Learning for Kids (RLK) – an interactive AI-augmented platform for children aged 7–14; Tobams Group Academy – a learning and talent development hub connecting education, technology, and real-world employability. We are rapidly scaling across global markets and seek experienced Business Development Managers to drive strategic growth.",
+                      "contractType": "Full-time",
+                      "region": [
+                          "Africa"
+                      ],
+                      "jobData": [
+                          {
+                              "Role Overview": [
+                                  "The Business Development Manager (BDM) will lead efforts to expand the reach and revenue of Recycled Learning and the broader Tobams Group education ecosystem.",
+                                  "Identify opportunities, build strategic partnerships, and drive engagement with institutions, corporations, NGOs, and education stakeholders.",
+                                  "A strategic, relationship-driven, and results-focused role requiring strong global market awareness."
+                              ]
+                          },
+                          {
+                              "Strategic Growth & Market Expansion": [
+                                  "Develop and execute business development strategies for Recycled Learning, Tobams Group Academy, and AI-learning products.",
+                                  "Identify and close new business opportunities with schools, corporates, universities, and governments.",
+                                  "Lead market expansion across Africa, Europe, and the Middle East.",
+                                  "Build growth models that accelerate product adoption, revenue, and brand partnerships."
+                              ]
+                          },
+                          {
+                              "Partnership Development & Relationship Management": [
+                                  "Build and manage long-term relationships with high-level stakeholders in education, EdTech, and private sector ecosystems.",
+                                  "Collaborate with leadership to secure alliances, funding partners, and pilot programs.",
+                                  "Represent the company at global events including OEB, GESS, COP, and innovation summits.",
+                                  "Negotiate partnership agreements to ensure mutual value creation."
+                              ]
+                          },
+                          {
+                              "Sales Enablement & Revenue Generation": [
+                                  "Drive B2B and B2I sales for learning platforms, courses, and digital programs.",
+                                  "Create pricing strategies, proposals, and client-specific presentations.",
+                                  "Work with marketing teams on outreach campaigns and engagement content.",
+                                  "Track revenue targets, partnership KPIs, and market performance."
+                              ]
+                          },
+                          {
+                              "Strategic Engagement & Brand Positioning": [
+                                  "Position Tobams Group as a global thought leader in AI-driven learning and sustainability education.",
+                                  "Engage ministries, NGOs, development partners, and policy networks.",
+                                  "Leverage networks to open opportunities for sponsorships, collaborations, and expansions."
+                              ]
+                          },
+                          {
+                              "Cross-Functional Collaboration": [
+                                  "Work with product, design, and tech teams to deeply understand offerings and communicate them effectively.",
+                                  "Provide market intelligence to inform product updates and go-to-market strategies.",
+                                  "Participate in leadership sessions to align business growth with company and investor goals."
+                              ]
+                          },
+                          {
+                              "Required Experience & Qualifications": [
+                                  "7–10+ years in business development, partnerships, or strategic sales (EdTech, education, or AI strongly preferred).",
+                                  "Proven record of closing deals with institutions, corporates, or governments.",
+                                  "Strong understanding of LMS, AI in education, and digital learning ecosystems.",
+                                  "Excellent communication, negotiation, and relationship-building skills.",
+                                  "Experience working in international markets (Africa, UK, EU, GCC).",
+                                  "Bachelor’s or Master’s degree required; MBA is an advantage."
+                              ]
+                          },
+                          {
+                              "Key Competencies": [
+                                  "Strategic Vision & Commercial Acumen.",
+                                  "Strong long-term relationship-building capability.",
+                                  "Highly results-oriented and target-driven.",
+                                  "Global mindset and cultural fluency.",
+                                  "Innovation-driven with passion for education, sustainability, and technology."
+                              ]
+                          },
+                          {
+                              "What We Offer": [
+                                  "A leadership opportunity to shape the global rollout of a transformative AI-powered learning ecosystem.",
+                                  "The chance to work alongside visionary leaders in education, technology, and sustainability.",
+                                  "Competitive compensation with performance-based incentives.",
+                                  "Global exposure and travel opportunities.",
+                                  "A growth trajectory toward senior leadership or regional director roles as the company expands."
+                              ]
+                          },
+                          {
+                              "How To Apply": [
+                                  "Candidates should fill the vacancy form and submit required details for review."
+                              ]
+                          }
+                      ],
+                      "extraText": "Join us in shaping the global future of education through AI, sustainability, and innovative learning ecosystems.",
+                      "applicationCount": 20,
+                      "postStatus": "Open",
+                      "currencySymbol": "N",
+                      "salaryMinRange": null,
+                      "salaryMaxRange": null,
+                      "owner": "In-House",
+                      "duration": "3 months",
+                      "visibility": "Interns",
+                      "status": "Published",
+                      "createdAt": "2025-11-27T00:00:00.000Z",
+                      "updatedAt": "2026-01-19T11:12:45.230Z",
+                      "isApplied": false
+                  },
+                  {
+                      "_id": "6931498680f08ae4c5823fdd",
+                      "title": "Chief Technology Officer - CTO",
+                      "location": "Remote",
+                      "companyName": "Tobams Group",
+                      "jobDescription": "Tobams Group is a global innovation and talent-development company dedicated to transforming how people learn, grow, and connect through AI-driven education, sustainability, and digital empowerment. The CTO will serve as the architect and innovation leader for all Tobams Group's technology initiatives. This role demands a bold, forward-thinking leader who can translate the company's ambitious vision into scalable, world-class digital solutions. You will drive AI strategy, technology architecture, platform scalability, and innovation culture across multiple business units - including Recycled Learning, Rare Eat, and other global projects. The ideal candidate will combine deep technical expertise with strategic leadership, a passion for AI in education, and the ability to build and manage high-performing global teams.",
+                      "contractType": "Full-time",
+                      "region": [
+                          "Africa"
+                      ],
+                      "jobData": [
+                          {
+                              "Technology Vision & Leadership": [
+                                  "Define and execute Tobams Group's overall technology roadmap across AI, EdTech, sustainability, and data-driven learning ecosystems.",
+                                  "Build the long-term technology strategy that aligns with the company's mission to democratize access to quality learning globally.",
+                                  "Serve as the principal advisor to the CEO and executive team on emerging technologies, AI ethics, scalability, and innovation priorities.",
+                                  "Foster a culture of innovation, experimentation, and excellence within the technology and product teams."
+                              ]
+                          },
+                          {
+                              "Product & Platform Development": [
+                                  "Oversee the architecture, design, and deployment of AI-powered platforms, including Recycled Learning adaptive learning system, Recycled Learning for Kids (AI-augmented learning platform), Tobams Group dashboards and analytics tools, and Global Teacher Learning Management System (LMS).",
+                                  "Ensure all systems are scalable, secure, and data-driven, supporting millions of users globally.",
+                                  "Lead the integration of personalized learning algorithms, gamified experiences, and adaptive assessment engines.",
+                                  "Collaborate with Product Design & Learning Experience teams to create intuitive user interfaces and immersive learning journeys."
+                              ]
+                          },
+                          {
+                              "AI, Data, and Automation": [
+                                  "Drive the company's AI strategy, including the use of machine learning, NLP, computer vision, and predictive analytics in learning and talent assessment.",
+                                  "Oversee the development of AI recommendation systems for content, mentorship, and skills-based learning.",
+                                  "Lead the design of data governance frameworks, learning analytics dashboards, and AI model evaluation systems.",
+                                  "Explore partnerships with leading AI and cloud technology providers to accelerate innovation."
+                              ]
+                          },
+                          {
+                              "Technical Architecture & Infrastructure": [
+                                  "Build and maintain a robust, modular, and scalable infrastructure to support multi-tenant LMS and platform solutions.",
+                                  "Champion cloud-native architecture using AWS, GCP, or Azure with CI/CD pipelines and containerized deployments (Docker/Kubernetes).",
+                                  "Ensure systems meet high standards of security, compliance, and data protection (GDPR, COPPA, etc.).",
+                                  "Introduce DevOps and MLOps best practices for rapid iteration and deployment."
+                              ]
+                          },
+                          {
+                              "Team Building & Leadership": [
+                                  "Recruit, mentor, and scale a world-class team of engineers, AI specialists, data scientists, and DevOps professionals.",
+                                  "Lead cross-functional collaboration with Product Design, Learning Experience, and Business Strategy teams.",
+                                  "Establish a strong performance culture built on transparency, accountability, and creative problem-solving."
+                              ]
+                          },
+                          {
+                              "Partnerships & Innovation Ecosystem": [
+                                  "Forge and manage strategic partnerships with AI labs, EdTech organizations, universities, and industry bodies.",
+                                  "Represent Tobams Group at conferences, innovation summits, and investor meetings as a technology thought leader.",
+                                  "Contribute to product roadmaps and fundraising discussions by providing technical insights and scalability projections."
+                              ]
+                          },
+                          {
+                              "Required Experience & Skills": [
+                                  "10+ years of experience in technology leadership roles, preferably in EdTech, AI, SaaS, or platform-based businesses.",
+                                  "Proven record of building and scaling AI-driven learning or data platforms from concept to global deployment.",
+                                  "Deep expertise in machine learning, natural language processing, and adaptive systems.",
+                                  "Strong technical skills in Python, Node.js, React, cloud services (AWS/GCP/Azure), and data pipeline architecture.",
+                                  "Experience integrating LMS/LXP technologies, APIs, and analytics frameworks (xAPI, SCORM, or LTI).",
+                                  "Understanding of AI ethics, data security, and educational technology compliance standards.",
+                                  "Exceptional leadership, communication, and stakeholder management skills.",
+                                  "Entrepreneurial mindset, capable of working across strategy, technology, and business development."
+                              ]
+                          },
+                          {
+                              "Preferred Qualifications": [
+                                  "Master's or PhD in Computer Science, AI, Data Science, or Educational Technology.",
+                                  "Experience leading technology in rapid-growth startups or innovation-driven global organizations.",
+                                  "Proven ability to manage multi-country engineering and product teams.",
+                                  "Prior involvement in AI-EdTech or adaptive learning product development is highly desirable."
+                              ]
+                          },
+                          {
+                              "Personal Attributes": [
+                                  "Visionary with the ability to think big while executing meticulously.",
+                                  "Passionate about using technology to create equitable, sustainable access to learning.",
+                                  "Collaborative and adaptable, thriving in a global, multicultural team.",
+                                  "Strategic thinker who can balance innovation with operational excellence.",
+                                  "Entrepreneurial spirit with a readiness to grow into a Co-Founder capacity as the company scales."
+                              ]
+                          },
+                          {
+                              "What We Offer": [
+                                  "Lead the global technology transformation of one of the most innovative education and sustainability ecosystems.",
+                                  "Shape AI-driven learning systems that impact millions of learners across continents.",
+                                  "Collaborate with visionary leaders, educators, and technologists who believe in sustainable change through innovation.",
+                                  "Build and scale platforms that redefine how talent is discovered, developed, and empowered.",
+                                  "Competitive compensation, equity options, and a potential Co-Founder trajectory for outstanding performance and commitment."
+                              ]
+                          }
+                      ],
+                      "extraText": "Reports To: Chief Executive Officer (CEO). Department: Technology & Innovation. Future Potential: This role has the potential to evolve into a Co-Founder position for the right candidate, as Tobams Group continues to scale globally.",
+                      "applicationCount": 14,
+                      "postStatus": "Open",
+                      "currencySymbol": "N",
+                      "salaryMinRange": null,
+                      "salaryMaxRange": null,
+                      "owner": "In-House",
+                      "duration": "Permanent",
+                      "visibility": "Public",
+                      "status": "Published",
+                      "createdAt": "2025-12-04T00:00:00.000Z",
+                      "updatedAt": "2026-01-26T13:44:34.658Z",
+                      "isApplied": false
+                  }
+              ]
+          }

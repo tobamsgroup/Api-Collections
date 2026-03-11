@@ -1,0 +1,190 @@
+info:
+  name: Create Article
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/blog"
+  body:
+    type: json
+    data: |-
+      {
+          "title": "The Algorithmic Recruiter: Understanding AI's Role in Modern Job Assessment",
+          "category": "Career Tips",
+          "content": "p",
+          "description": "The hiring process has evolved rapidly over the last decade. What was once a purely human-led system where recruiters manually reviewed CVs and conducted interviews has now become increasingly technology-driven. Artificial Intelligence",
+          "duration": "3 mins read",
+          "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1771916018711_br12.jpg"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{@harek}}/blog"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "title": "Resentful Mind",
+            "category": "Mindfullness",
+            "content": "<h1>Resilient mind</h1><br><p>This is the content of Resilient Mind</p>",
+            "duration": "5 minutes read",
+            "photo": "https://res.cloudinary.com/upload/Blog/5645454k54.png"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "29"
+        - name: ETag
+          value: W/"1d-lHioInmtSH+JK25kIQrQ6M/BQgg"
+        - name: Date
+          value: Fri, 01 Mar 2024 11:08:31 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Article Created"
+          }
+  - name: Server error
+    request:
+      url: "{{@harek}}/blog"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "title": "Resentful Mind",
+            "category": "Mindfullness",
+            "content": "<h1>Resilient mind</h1><br><p>This is the content of Resilient Mind</p>",
+            "duration": "5 minutes read",
+            "photo": "https://res.cloudinary.com/upload/Blog/5645454k54.png",
+          }
+    response:
+      statusText: "500"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "88"
+        - name: ETag
+          value: W/"58-uAlMCW7aBQY/Wu2vKeKHqeQ8UVA"
+        - name: Date
+          value: Fri, 01 Mar 2024 11:10:35 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "error": "Expected double-quoted property name in JSON at position 249"
+          }
+  - name: Validation error
+    request:
+      url: "{{@harek}}/blog"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "title": "Resentful Mind",
+            "category": "Mindfullness",
+            "content": "<h1>Resilient mind</h1><br><p>This is the content of Resilient Mind</p>",
+            "duration": "5 minutes read"
+          }
+    response:
+      statusText: "406"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "60"
+        - name: ETag
+          value: W/"3c-No25AcV3pB6R/c2dZ0UhV49rkEE"
+        - name: Date
+          value: Fri, 01 Mar 2024 11:11:27 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "An article should have a photo"
+          }
+
+docs: This endpoint is for creating or adding new testimonial on the database. A `success` response is returned when all `body` params are valid, a `Validation Error` is returned when one or more of the required fields are missing and a `Server Error` when there is a mismatch on the input request params or something went wrong on the server

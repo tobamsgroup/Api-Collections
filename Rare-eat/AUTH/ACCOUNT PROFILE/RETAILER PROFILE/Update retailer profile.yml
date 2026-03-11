@@ -1,0 +1,40 @@
+info:
+  name: Update retailer profile
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{URL}}/user/retailer/profile/update"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"firstName\": \"bola\",\r
+
+      \    \"lastName\": \"tito\",\r
+
+      \    \"businessName\":  \"Item7\",\r
+
+      \    \"businessAddress\": \"Nanya\",\r
+
+      \    \"city\": \"lagos\",\r
+
+      \    \"postalCode\": \"094383\",\r
+
+      \    \"website\": \"https://www.itemseven.com\",\r
+
+      \    \"instagramAccount\":  \"https://www.itemseven.com\",\r
+
+      \    \"phoneNumber\": \"08094749554\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Send OTP
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/send-otp"
+  body:
+    type: json
+    data: |-
+      {
+          "email": "fawaz.abdganiyu+i2@tobamsgroup.com",
+          "type": "emailOtp"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

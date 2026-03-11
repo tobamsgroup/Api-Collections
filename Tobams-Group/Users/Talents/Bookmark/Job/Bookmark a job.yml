@@ -1,0 +1,25 @@
+info:
+  name: Bookmark a job
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{BASE}}/talents/jobs/:jobId/bookmark"
+  headers:
+    - name: ""
+      value: ""
+      disabled: true
+  params:
+    - name: jobId
+      value: 6939672aebee9f28afd74f71
+      type: path
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

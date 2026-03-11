@@ -1,0 +1,79 @@
+info:
+  name: Save Push Tokens
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{URL}}/notifications/save/mobile-token?userId=f140aaf7-633a-44ae-a448-3e48445ae872"
+  params:
+    - name: userId
+      value: f140aaf7-633a-44ae-a448-3e48445ae872
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+          "token":"mobolajitoken"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: "{{URL}}/notifications/save/mobile-token?userId=f140aaf7-633a-44ae-a448-3e48445ae872"
+      method: POST
+      params:
+        - name: userId
+          value: f140aaf7-633a-44ae-a448-3e48445ae872
+          type: query
+      body:
+        type: json
+        data: |-
+          {
+              "token":"mobolajitoken"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "173"
+        - name: ETag
+          value: W/"ad-NZ6jl2pATYr5t0lhqS7zDaaXDX0"
+        - name: Date
+          value: Wed, 29 May 2024 17:54:46 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Success",
+              "data": {
+                  "token": "mobolajitoken",
+                  "_id": "66576be648899f78413434d4",
+                  "createdAt": "2024-05-29T17:54:46.600Z",
+                  "updatedAt": "2024-05-29T17:54:46.600Z",
+                  "__v": 0
+              }
+          }

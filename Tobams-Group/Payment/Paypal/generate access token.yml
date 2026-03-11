@@ -1,0 +1,23 @@
+info:
+  name: generate access token
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://api-m.sandbox.paypal.com/v1/oauth2/token
+  body:
+    type: form-urlencoded
+    data:
+      - name: grant_type
+        value: client_credentials
+  auth:
+    type: basic
+    username: ASjoMkPMw5tddkWr0xPc2nADA_5C172KLhNKS7ltkngc4to8qYPtPOVZj3JPjilDtDzG-aacFx2dED7I
+    password: EDIR3JDISiOpzfi2sU9ImS5f0A3-m255gEesjPDTAOH52HzWnop7r3eUbEGR99WzVFuvgyrh4czCGJMO
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

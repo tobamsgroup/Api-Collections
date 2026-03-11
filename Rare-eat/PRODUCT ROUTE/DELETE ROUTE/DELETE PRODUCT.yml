@@ -1,0 +1,18 @@
+info:
+  name: DELETE PRODUCT
+  type: http
+  seq: 1
+
+http:
+  method: DELETE
+  url: "{{URL}}/companies/product/delete/657857ab1d22579b1a5148da"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

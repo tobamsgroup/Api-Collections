@@ -1,0 +1,27 @@
+info:
+  name: Process subscription renewal
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{BASE}}/subscriptions/:subscriptionId/renew"
+  params:
+    - name: subscriptionId
+      value: ""
+      type: path
+  body:
+    type: text
+    data: |-
+      {
+          "period": "weekly" // 'daily' | 'weekly' | 'monthly'
+      }
+  auth:
+    type: bearer
+    token: "{{org_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

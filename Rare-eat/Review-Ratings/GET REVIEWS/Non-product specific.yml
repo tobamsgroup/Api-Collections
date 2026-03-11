@@ -1,0 +1,15 @@
+info:
+  name: Non-product specific
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{URL}}/review-rating/non-product_review"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

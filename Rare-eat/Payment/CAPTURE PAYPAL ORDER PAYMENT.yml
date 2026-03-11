@@ -1,0 +1,189 @@
+info:
+  name: CAPTURE PAYPAL ORDER PAYMENT
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{URL}}/order/capture_paypal_payment?order_id=4KM88181AH754501A"
+  params:
+    - name: order_id
+      value: 4KM88181AH754501A
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"orderId\": \"7964229a-a7a9-4821-aa3b-7f79e65df2e5\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: CAPTURE PAYPAL ORDER PAYMENT
+    request:
+      url: "{{URL}}/order/capture_paypal_payment?order_id=5DT39810M7191180E"
+      method: POST
+      params:
+        - name: order_id
+          value: 5DT39810M7191180E
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Allow-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1900"
+        - name: ETag
+          value: W/"76c-WDh4XKOGJT99/ViF6Q43twuN9W4"
+        - name: Date
+          value: Sun, 19 Nov 2023 07:36:24 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Payment has been initialized successfully",
+              "data": {
+                  "result": {
+                      "id": "5DT39810M7191180E",
+                      "status": "COMPLETED",
+                      "payment_source": {
+                          "paypal": {
+                              "email_address": "sb-flzwa28021680@personal.example.com",
+                              "account_id": "66SBDSBG6RJD2",
+                              "account_status": "VERIFIED",
+                              "name": {
+                                  "given_name": "John",
+                                  "surname": "Doe"
+                              },
+                              "address": {
+                                  "country_code": "US"
+                              }
+                          }
+                      },
+                      "purchase_units": [
+                          {
+                              "reference_id": "027ed3bb-9164-40be-a34d-c7c10747ed24",
+                              "shipping": {
+                                  "name": {
+                                      "full_name": "John Doe"
+                                  },
+                                  "address": {
+                                      "address_line_1": "1 Main St",
+                                      "admin_area_2": "San Jose",
+                                      "admin_area_1": "CA",
+                                      "postal_code": "95131",
+                                      "country_code": "US"
+                                  }
+                              },
+                              "payments": {
+                                  "captures": [
+                                      {
+                                          "id": "73A71976526460417",
+                                          "status": "COMPLETED",
+                                          "amount": {
+                                              "currency_code": "GBP",
+                                              "value": "231.26"
+                                          },
+                                          "final_capture": true,
+                                          "seller_protection": {
+                                              "status": "ELIGIBLE",
+                                              "dispute_categories": [
+                                                  "ITEM_NOT_RECEIVED",
+                                                  "UNAUTHORIZED_TRANSACTION"
+                                              ]
+                                          },
+                                          "seller_receivable_breakdown": {
+                                              "gross_amount": {
+                                                  "currency_code": "GBP",
+                                                  "value": "231.26"
+                                              },
+                                              "paypal_fee": {
+                                                  "currency_code": "GBP",
+                                                  "value": "8.46"
+                                              },
+                                              "net_amount": {
+                                                  "currency_code": "GBP",
+                                                  "value": "222.80"
+                                              },
+                                              "receivable_amount": {
+                                                  "currency_code": "USD",
+                                                  "value": "279.06"
+                                              },
+                                              "exchange_rate": {
+                                                  "source_currency": "GBP",
+                                                  "target_currency": "USD",
+                                                  "value": "1.252526175080041"
+                                              }
+                                          },
+                                          "links": [
+                                              {
+                                                  "href": "https://api.sandbox.paypal.com/v2/payments/captures/73A71976526460417",
+                                                  "rel": "self",
+                                                  "method": "GET"
+                                              },
+                                              {
+                                                  "href": "https://api.sandbox.paypal.com/v2/payments/captures/73A71976526460417/refund",
+                                                  "rel": "refund",
+                                                  "method": "POST"
+                                              },
+                                              {
+                                                  "href": "https://api.sandbox.paypal.com/v2/checkout/orders/5DT39810M7191180E",
+                                                  "rel": "up",
+                                                  "method": "GET"
+                                              }
+                                          ],
+                                          "create_time": "2023-11-19T07:36:26Z",
+                                          "update_time": "2023-11-19T07:36:26Z"
+                                      }
+                                  ]
+                              }
+                          }
+                      ],
+                      "payer": {
+                          "name": {
+                              "given_name": "John",
+                              "surname": "Doe"
+                          },
+                          "email_address": "sb-flzwa28021680@personal.example.com",
+                          "payer_id": "66SBDSBG6RJD2",
+                          "address": {
+                              "country_code": "US"
+                          }
+                      },
+                      "links": [
+                          {
+                              "href": "https://api.sandbox.paypal.com/v2/checkout/orders/5DT39810M7191180E",
+                              "rel": "self",
+                              "method": "GET"
+                          }
+                      ]
+                  }
+              }
+          }

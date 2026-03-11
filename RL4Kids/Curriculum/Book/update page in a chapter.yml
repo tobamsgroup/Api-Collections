@@ -1,0 +1,29 @@
+info:
+  name: update page in a chapter
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{base_url}}/book/:chapterId/pages/:pageIndex"
+  params:
+    - name: chapterId
+      value: ""
+      type: path
+    - name: pageIndex
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "index":1,
+          "title":"Wonders in the atmosphere"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

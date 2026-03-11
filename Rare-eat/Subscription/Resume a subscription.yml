@@ -1,0 +1,21 @@
+info:
+  name: Resume a subscription
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{URL}}/subscription/stripe/resume_subscription?subscriptionId=sub_1OqOHCAO0ZHyQSViSftZYg5b"
+  params:
+    - name: subscriptionId
+      value: sub_1OqOHCAO0ZHyQSViSftZYg5b
+      type: query
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

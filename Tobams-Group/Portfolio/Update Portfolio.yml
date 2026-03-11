@@ -1,0 +1,278 @@
+info:
+  name: Update Portfolio
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/portfolio/67182239bad7612a1c48de97"
+  body:
+    type: json
+    data: |-
+      {
+          "title": "Tobams Logic",
+          "challenges": "This was the challenge behind the solution",
+          "solution": "This is the soluiton",
+          "description": "This is the description",
+          "coverPhoto": "https://res.cloudinary.com/uploads/image754608757.png",
+          "icon": "https://res.cloudinary.com/uploads/image7546757.png",
+          "category": [
+              "Creative Content Design",
+              "Website Design and Development"
+          ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{@harek}}/portfolio/65eb4fdb96f77a75a371ad1f"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "title": "Tobams Logic",
+              "challenges": "This was the challenge behind the solution",
+              "solution": "This is the soluiton",
+              "description": "This is the description",
+              "coverPhoto": "https://res.cloudinary.com/uploads/image754608757.png",
+              "icon": "https://res.cloudinary.com/uploads/image7546757.png",
+              "category": [
+                  "Creative Content Design",
+                  "Website Design and Development"
+              ]
+          }
+    response:
+      statusText: "202"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "44"
+        - name: ETag
+          value: W/"2c-e5/XH1vTXu6tAsmzSAx8F9lmVyI"
+        - name: Date
+          value: Fri, 08 Mar 2024 18:37:55 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Project Updated"
+          }
+  - name: Server error
+    request:
+      url: "{{@harek}}/portfolio/65eb4fdb96f77a75a371ad1f"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "title": "Tobams Logic",
+              "challenges": "This was the challenge behind the solution",
+              "solution": "This is the soluiton",
+              "description": "This is the description"
+              "coverPhoto": "https://res.cloudinary.com/uploads/image754608757.png",
+              "icon": "https://res.cloudinary.com/uploads/image7546757.png",
+              "category": [
+                  "Creative Content Design",
+                  "Website Design and Development"
+              ]
+          }
+    response:
+      statusText: "500"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "91"
+        - name: ETag
+          value: W/"5b-IhMfAiBhD91lguQlJNr39L+hN90"
+        - name: Date
+          value: Fri, 08 Mar 2024 18:40:40 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "status": false,
+              "error": "Expected ',' or '}' after property value in JSON at position 184"
+          }
+  - name: Reference Error
+    request:
+      url: "{{@harek}}/portfolio/65eb4fdb96f77a75a371ad1"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "title": "Tobams Logic",
+              "challenges": "This was the challenge behind the solution",
+              "solution": "This is the soluiton",
+              "description": "This is the description",
+              "coverPhoto": "https://res.cloudinary.com/uploads/image754608757.png",
+              "icon": "https://res.cloudinary.com/uploads/image7546757.png",
+              "category": [
+                  "Creative Content Design",
+                  "Website Design and Development"
+              ]
+          }
+    response:
+      statusText: "500"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "57"
+        - name: ETag
+          value: W/"39-X4tnfU23Om/KJLhakg8f6fZWhAU"
+        - name: Date
+          value: Fri, 08 Mar 2024 18:43:15 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Invalid Portfolio Reference"
+          }
+  - name: Not found
+    request:
+      url: "{{@harek}}/portfolio/65eb4fdb96f77a75a371ad1a"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "title": "Tobams Logic",
+              "challenges": "This was the challenge behind the solution",
+              "solution": "This is the soluiton",
+              "description": "This is the description",
+              "coverPhoto": "https://res.cloudinary.com/uploads/image754608757.png",
+              "icon": "https://res.cloudinary.com/uploads/image7546757.png",
+              "category": [
+                  "Creative Content Design",
+                  "Website Design and Development"
+              ]
+          }
+    response:
+      statusText: "404"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "47"
+        - name: ETag
+          value: W/"2f-lP51/nJ0me4Qz2AowvBzi8s/+zg"
+        - name: Date
+          value: Fri, 08 Mar 2024 18:43:36 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Project not found"
+          }
+
+docs: With this endpoint, you can update an portfolio record by parseing the portfolio `ObjectId` alongside the `body` params. Upon `success` request, a `202` response is returned. `Reference error` is returned when there is an invalid `ObjectId` and a `Not found` error is returned when the `ObjectId` is valid mongoose `ObjectId` but not tied to any doucument. `Server error` is returned when there is a mismatch on either the request body or from the server.

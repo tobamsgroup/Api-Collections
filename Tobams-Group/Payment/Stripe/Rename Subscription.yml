@@ -1,0 +1,24 @@
+info:
+  name: Rename Subscription
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/pay/subscriptions/{{subscriptionId}}/disable?purpose=subscription&paymentProvider=stripe"
+  params:
+    - name: purpose
+      value: subscription
+      type: query
+    - name: paymentProvider
+      value: stripe
+      type: query
+  auth:
+    type: bearer
+    token: "{{org_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

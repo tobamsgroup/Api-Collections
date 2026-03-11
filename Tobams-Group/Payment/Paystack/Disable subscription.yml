@@ -1,0 +1,23 @@
+info:
+  name: Disable subscription
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BASE}}/pay/payStack/disable-subscription"
+  body:
+    type: json
+    data: |-
+      {
+          "subscriptionCode": "SUB_2oz4qrr4hlqgvi6"
+      }
+  auth:
+    type: bearer
+    token: "{{org_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

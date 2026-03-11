@@ -1,0 +1,30 @@
+info:
+  name: REPORT-ADMIN-MSG
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{URL}}/info/create/report/response"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNDJkNTMyODktNTk2YS00YWY4LTk1YzUtNzQ2NDAwOTJjZTE5IiwiaWF0IjoxNzA3ODUwOTE4LCJleHAiOjE3MDgyODI5MTh9.L4P8m-TLM8M_6qrnEoffYUQNvqTF_GSYu800Xy3qGyI
+  body:
+    type: json
+    data: "{\r
+
+      \    \"ticket\": \"30589280\",\r
+
+      \    \"closed\": false,\r
+
+      \    \"title\": \"hello\",\r
+
+      \    \"content\": \"I will like to make request for a free food and a free delivery as i will like to taste and be your ambassador.\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

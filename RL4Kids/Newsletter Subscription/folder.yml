@@ -1,0 +1,7 @@
+info:
+  name: Newsletter Subscription
+  type: folder
+  seq: 15
+
+request:
+  auth: inherit

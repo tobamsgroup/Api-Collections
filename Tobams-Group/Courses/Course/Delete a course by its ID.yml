@@ -1,0 +1,27 @@
+info:
+  name: Delete a course by its ID
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{BASE}}/courses/67acb72fa37536f72343b28f"
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Delete a course by its ID
+    request:
+      url: "{{BASE}}/courses/67a3b79c39a3ccf8c2903ec3"
+      method: DELETE
+    response:
+      body:
+        type: text
+        data: ""

@@ -1,0 +1,23 @@
+info:
+  name: Get A Users Orders
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{URL}}/getOrder"
+  body:
+    type: json
+    data: |-
+      {
+          "orderId":"5093b882-f50d-458d-a766-e47c02ef8804"
+      }
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

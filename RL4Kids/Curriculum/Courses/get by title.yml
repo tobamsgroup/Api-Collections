@@ -1,0 +1,34 @@
+info:
+  name: get by title
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/courses/681e73d2c0ffc2b6c4d67e24?populate=false"
+  params:
+    - name: populate
+      value: "false"
+      type: query
+  body:
+    type: json
+    data: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get personalized Listed course
+    request:
+      url: "{{base_url}}/courses/u/681e153fea2666fb3e156329"
+      method: GET
+      body:
+        type: json
+        data: ""
+    response:
+      body:
+        type: text
+        data: ""

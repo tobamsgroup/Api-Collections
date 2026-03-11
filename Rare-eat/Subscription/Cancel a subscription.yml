@@ -1,0 +1,21 @@
+info:
+  name: Cancel a subscription
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{URL}}/subscription/stripe/cancel_subscription?subscriptionId=sub_1OrYLHAO0ZHyQSVi0dJZgUrd"
+  params:
+    - name: subscriptionId
+      value: sub_1OrYLHAO0ZHyQSVi0dJZgUrd
+      type: query
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Admin Verify OTP
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{URL}}/admin/auth/verify_otp"
+  body:
+    type: json
+    data: |-
+      {
+          "email": "francisolatinwo@gmail.com",
+          "otp": "923466"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

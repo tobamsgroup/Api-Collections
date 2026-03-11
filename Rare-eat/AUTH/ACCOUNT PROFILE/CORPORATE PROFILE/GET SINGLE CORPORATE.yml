@@ -1,0 +1,82 @@
+info:
+  name: GET SINGLE CORPORATE
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{URL}}/user/corporate/profile/81916727-f10a-464f-afbd-985f55ce0832"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZTFhZGNiZi01NjE0LTRhOGItODBmZC1lZmQ3NDEyNGRhZGIiLCJpYXQiOjE2OTk4Nzg3MjEsImV4cCI6MTcwMDMxMDcyMX0.FGQnLAqapOAR_Mmnx7KjU2wnV89lt0p4piCv3GYgyIw
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GET SINGLE CORPORATE
+    request:
+      url: "{{URL}}/user/corporate/profile/61af3c3e-79d5-409d-a7b8-cd5270db1e07"
+      method: GET
+      headers:
+        - name: Authorization
+          value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlZTFhZGNiZi01NjE0LTRhOGItODBmZC1lZmQ3NDEyNGRhZGIiLCJpYXQiOjE2OTk4Nzg3MjEsImV4cCI6MTcwMDMxMDcyMX0.FGQnLAqapOAR_Mmnx7KjU2wnV89lt0p4piCv3GYgyIw
+      body:
+        type: text
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Allow-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "495"
+        - name: ETag
+          value: W/"1ef-yeyr8PLHKSom4M4kLskFiTEzIms"
+        - name: Date
+          value: Tue, 21 Nov 2023 09:35:20 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "userDetails": {
+                  "_id": "655722ffe19934e2778e2917",
+                  "email": "bola123@gmail.com",
+                  "businessName": "mikkymouse",
+                  "address": "ajanlekoko avenue",
+                  "location": "OAU",
+                  "postalCode": "093455",
+                  "bussinessRegisterationNumber": "7823834933293",
+                  "taxIdentificationNumber": "7823834933293",
+                  "website": "https://www.mikky.com",
+                  "newsletterInterest": false,
+                  "termsAndConditions": true,
+                  "userId": "61af3c3e-79d5-409d-a7b8-cd5270db1e07",
+                  "createdAt": "2023-11-17T08:23:27.658Z",
+                  "updatedAt": "2023-11-17T08:23:27.658Z",
+                  "addressBooks": []
+              }
+          }

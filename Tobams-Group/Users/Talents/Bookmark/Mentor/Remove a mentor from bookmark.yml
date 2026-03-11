@@ -1,0 +1,31 @@
+info:
+  name: Remove a mentor from bookmark
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/talents/mentors/67b66148ad4271308086ad75/bookmark?bookmark=false"
+  params:
+    - name: bookmark
+      value: "false"
+      type: query
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test('"savedMentors" does not include the mentorId from request parameters', function () {
+                const mentorId = req.getUrl().path[4]
+                expect(res.getBody().data.savedMentors).to.not.include(mentorId);
+            }
+        );
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

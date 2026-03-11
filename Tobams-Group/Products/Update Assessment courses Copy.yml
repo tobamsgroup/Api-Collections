@@ -1,0 +1,19 @@
+info:
+  name: Update Assessment courses Copy
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: "{{BASE}}/courses/delete/:id"
+  params:
+    - name: id
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

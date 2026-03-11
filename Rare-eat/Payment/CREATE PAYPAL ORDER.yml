@@ -1,0 +1,156 @@
+info:
+  name: CREATE PAYPAL ORDER
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{URL}}/order/create_paypal_order?orderId=b69220f5-9953-4f6c-b457-f5032f84ed79"
+  params:
+    - name: orderId
+      value: b69220f5-9953-4f6c-b457-f5032f84ed79
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"userId\":\"GUEST-cce88113-c3f4-4d7e-bbbd-fe9f91b11151\", //for both guest and user\r
+
+      \    \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\" //same as above\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: CREATE PAYPAL ORDER
+    request:
+      url: "{{URL}}/order/createPayPalOrder?orderId=9d8c2ac4-cc2b-4c37-aec6-0e7b982acb9b"
+      method: PATCH
+      params:
+        - name: orderId
+          value: 9d8c2ac4-cc2b-4c37-aec6-0e7b982acb9b
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "629"
+        - name: ETag
+          value: W/"275-8Sbq0Io/XraCOH0aSczPOs2D5m4"
+        - name: Date
+          value: Thu, 02 Nov 2023 06:08:44 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Payment has been initialized successfully",
+              "data": {
+                  "result": {
+                      "name": "UNPROCESSABLE_ENTITY",
+                      "details": [
+                          {
+                              "field": "/purchase_units/@reference_id=='9d8c2ac4-cc2b-4c37-aec6-0e7b982acb9b'/shipping/address",
+                              "issue": "MISSING_SHIPPING_ADDRESS",
+                              "description": "The shipping address is required when `shipping_preference=SET_PROVIDED_ADDRESS`."
+                          }
+                      ],
+                      "message": "The requested action could not be performed, semantically incorrect, or failed business validation.",
+                      "debug_id": "12e2ca6370fc8",
+                      "links": [
+                          {
+                              "href": "https://developer.paypal.com/docs/api/orders/v2/#error-MISSING_SHIPPING_ADDRESS",
+                              "rel": "information_link",
+                              "method": "GET"
+                          }
+                      ]
+                  }
+              }
+          }
+  - name: CREATE PAYPAL ORDER
+    request:
+      url: "{{LIVE}}/order/create_paypal_order?orderId=b69220f5-9953-4f6c-b457-f5032f84ed79"
+      method: PATCH
+      params:
+        - name: orderId
+          value: b69220f5-9953-4f6c-b457-f5032f84ed79
+          type: query
+      body:
+        type: json
+        data: "{\r
+
+          \    \"userId\":\"GUEST-cce88113-c3f4-4d7e-bbbd-fe9f91b11151\", //for both guest and user\r
+
+          \    \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\" //same as above\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Sat, 18 May 2024 09:11:23 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: CF-Ray
+          value: 885ab82cd98006d7-CPT
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: ETag
+          value: W/"d2-I1wzAd17e4zyeS3Ys2Sh4kpDBLM"
+        - name: Vary
+          value: Accept-Encoding
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: rndr-id
+          value: d1a453e1-80e2-47e8
+        - name: x-powered-by
+          value: Express
+        - name: x-render-origin-server
+          value: Render
+        - name: Server
+          value: cloudflare
+        - name: Content-Encoding
+          value: br
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Payment has been initialized successfully",
+              "data": {
+                  "order_id": "2KF00418UM390134T",
+                  "approvalUrl": {
+                      "href": "https://www.paypal.com/checkoutnow?token=2KF00418UM390134T",
+                      "rel": "approve",
+                      "method": "GET"
+                  }
+              }
+          }

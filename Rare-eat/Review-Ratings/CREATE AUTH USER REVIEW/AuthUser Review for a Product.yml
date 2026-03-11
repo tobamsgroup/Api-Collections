@@ -1,0 +1,30 @@
+info:
+  name: AuthUser Review for a Product
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/review-rating/create-review"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"productId\": \"65cf8a63bef40ff3f023e6ce\",\r
+
+      \  \"location\": \"Abuja\",\r
+
+      \  \"comment\": \"This product rocks\",\r
+
+      \  \"rating\": 4\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

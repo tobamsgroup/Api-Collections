@@ -1,0 +1,173 @@
+info:
+  name: Get upgrade recommendation for current plan
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{BASE}}/plans/upgrade/Free-trial?currency="
+  params:
+    - name: currency
+      value: ""
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/plans/upgrade/Free-trial?currency=GBP"
+      method: GET
+      params:
+        - name: currency
+          value: GBP
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Request-ID
+          value: 1753872408868-dpv2tgnqe
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "583"
+        - name: ETag
+          value: W/"247-wtoN8eSSTM+108Jo5d2LC7Hon8o"
+        - name: Date
+          value: Wed, 30 Jul 2025 10:46:49 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Upgrade recommendation found",
+              "data": {
+                  "_id": "688861b71e201b5806cc95a9",
+                  "name": "Basic",
+                  "currency": "GBP",
+                  "monthlyPrice": 89,
+                  "annualPrice": 899,
+                  "annualDiscount": "Save $169 (16%)",
+                  "features": {
+                      "jobListingsPerMonth": 10,
+                      "internshipListings": true,
+                      "targetAudience": "Interns",
+                      "talentPoolSearch": false,
+                      "filteringTools": "Basic",
+                      "featuredJobPromotions": 0,
+                      "inAppMessaging": false,
+                      "analyticsLevel": "None",
+                      "teamMembersAllowed": 1,
+                      "priorityListing": false,
+                      "customerSupport": "Email"
+                  },
+                  "isActive": true,
+                  "createdAt": "2025-07-29T05:52:55.980Z",
+                  "updatedAt": "2025-07-29T05:52:55.980Z"
+              }
+          }
+  - name: Misssing plan currency
+    request:
+      url: "{{BASE}}/plans/upgrade/Free-trial?currency="
+      method: GET
+      params:
+        - name: currency
+          value: ""
+          type: query
+    response:
+      statusText: "400"
+      headers:
+        - name: X-Request-ID
+          value: 1753872459456-16c6gvmdr
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "53"
+        - name: ETag
+          value: W/"35-hnE23254WcOb5B3Xj5GdO5vgTOs"
+        - name: Date
+          value: Wed, 30 Jul 2025 10:47:39 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "error": "currency invalid currency"
+          }

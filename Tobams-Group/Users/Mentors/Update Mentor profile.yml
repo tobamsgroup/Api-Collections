@@ -1,0 +1,336 @@
+info:
+  name: Update Mentor profile
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/mentors"
+  body:
+    type: json
+    data: "// {\r
+
+      //   // BaseUser Fields (Required unless specified)\r
+
+      //     \"telephone\": \"+1987654321\",\r
+
+      //     \"email\": \"mentor.expert@example.com\",\r
+
+      //       \"country\": \"Canada\",\r
+
+      //       \"state\": \"Ontario\",\r
+
+      //       \"city\": \"Toronto\",\r
+
+      //   \"firstName\": \"Sarah\",\r
+
+      //   \"lastName\": \"Thompson\",\r
+
+      //   \"title\": \"Senior Technology Mentor\",\r
+
+      //  \"role\": \"Mentor\", // Required\r
+
+      //   \"password\": \"MentorExpert2023!\",\r
+
+      //   \"isVerified\": false,\r
+
+      //   \"MFA\": true,\r
+
+      //   \"accountStatus\": \"ACTIVE\",\r
+
+      //   \"notificationPreference\": [\"EMAIL\", \"IN_APP\"],\r
+
+      //   \"social\": {\r
+
+      //     \"linkedIn\": \"https://linkedin.com/in/sarahthompson\",\r
+
+      //     \"twitter\": \"https://twitter.com/techmentor\"\r
+
+      //   },\r
+
+      \r
+
+      //   // Mentor Specific Fields\r
+
+      //   \"bio\": \"Experienced technology mentor with 10+ years in software development\", // Required, max 1000 chars\r
+
+      //   \"occupation\": \"Software Engineering\", // Required, Enum Options: 'Product Management', 'Product Design', 'Digital Marketing', 'Content Creation', 'Social Media Management', 'Cyber Security Analysis', 'Business Analysis', 'Video Content Creation', 'Frontend Development', 'Backend Development', 'WordPress Development', 'Graphic Design', 'AI Consultancy', 'Data Analysis', 'Data Science', 'Software Engineering', 'Data Engineering', 'Machine Learning', 'UI/UX Design', 'DevOps', 'Others(Please specify)'\r
+
+      \r
+
+      //   \"yearsOfExperience\": 12, // Required, min 0\r
+
+      \  \r
+
+      // //   \"availability\": {\r
+
+      // //     \"location\": [\"Only Virtual\"], // Optional\r
+
+      // //     \"frequency\": [\"weekly\"], // Optional\r
+
+      // //     \"duration\": [\"30 minutes\"], // Optional\r
+
+      // //     \"schedule\": [\"weekends\"] // Optional\r
+
+      // //   },\r
+
+      \r
+
+      //   \"education\": [\r
+
+      //     {\r
+
+      //       \"school\": \"University of Technology\",\r
+
+      //       \"degree\": \"High School Diploma\", // Enum Options: 'High School Diploma' | 'Associate Degree' | 'Bachelor's Degree' | 'Master's Degree' | 'Doctorate Degree' | 'Professional Degree'\r
+
+      //       \"fieldOfStudy\": \"Engineering\", // Enum Options: 'Arts and Humanities' | 'Business and Administration' | 'Computer Science and IT' | 'Education' | 'Engineering' | 'Health and Medicine' | 'Law' | 'Natural Sciences' | 'Social Sciences' | 'More Options'\r
+
+      //       \"grade\": \"A\",\r
+
+      //       \"startDate\": \"2010-09-01\",\r
+
+      //       \"endDate\": \"2012-06-30\",\r
+
+      //       \"currentlyStudyHere\": false,\r
+
+      //       \"description\": \"Advanced software engineering program\",\r
+
+      //       \"skills\": [\"Machine Learning\", \"Cloud Computing\"]\r
+
+      //     }\r
+
+      //   ],\r
+
+      \r
+
+      //   \"experience\": [\r
+
+      //     {\r
+
+      //       \"jobTitle\": \"Senior Software Engineer\",\r
+
+      //        \"employmentType\": \"Full-Time\", // Enum Options: 'Full-Time' | 'Part-time' | Self-Employed/Entrepreneur | 'Contract' | 'Internship' | 'Freelance/Contractor' | 'Seasonal' | 'Contract'\r
+
+      //       \"companyName\": \"Tech Giants Inc.\",\r
+
+      //       \"location\": \"San Francisco, CA\",\r
+
+      //       \"locationType\": \"Hybrid\", // Remote, On-site, Hybrid\r
+
+      //       \"currentlyWorkHere\": false,\r
+
+      //       \"startDate\": \"2015-01-15\",\r
+
+      //       \"endDate\": \"2022-12-31\",\r
+
+      //       \"description\": \"Led software engineering teams\",\r
+
+      //       \"skills\": [\"React\", \"Node.js\", \"AWS\"]\r
+
+      //     }\r
+
+      //   ],\r
+
+      \r
+
+      //   \"mentoringPreferences\": {\r
+
+      //     \"industry\": [\"Technology\", \"Finance\"],\r
+
+      //     \"communicationStyle\": [\"Direct\", \"Collaborative\"],\r
+
+      //     \"experienceLevel\": [\"mid-career\"],\r
+
+      //     \"schedule\": [\"Flexible\"],\r
+
+      //     \"mentorshipStyle\": [\"Hands-on\"]\r
+
+      //   },\r
+
+      \r
+
+      //   \"portfolio\": \"https://sarahthompson.dev\",\r
+
+      //   \"portfolioLinkText\": \"Personal Portfolio\",\r
+
+      //   \"rating\": 4.5\r
+
+      // }"
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update personal info
+    request:
+      url: "{{BASE}}/mentors"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "firstName": "Fawaz",
+              "lastName": "Agara",
+              "title": "Software Engineer",
+              "yearsOfExperience": "3-5 years",
+              "telephone": "+23479656740",
+              "linkedInURL": "https://delicious-solutions.info/",
+              "linkText": "linkedIn profile"
+
+          }
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update bio
+    request:
+      url: "{{BASE}}/mentors"
+      method: PATCH
+      body:
+        type: json
+        data: "{\r
+
+          \    \"bio\": \"Experienced technology mentor with 10+ years in software development\" // Required, max 1000 chars\r
+
+          }"
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update areas of expertise
+    request:
+      url: "{{BASE}}/mentors"
+      method: PATCH
+      body:
+        type: json
+        data: "{\r
+
+          \    \"areasOfExpertise\": [\"Web Development\", \"Software Engineering\"]\r
+
+          }"
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update mentorship preference
+    request:
+      url: "{{BASE}}/mentors"
+      method: PATCH
+      body:
+        type: json
+        data: "{\r
+
+          \    \"mentorshipType\": [\"Group\", \"One-to-one\"], // e.g \"Group\" or \"One-to-one\" or \"Group, One-to-one\"\r
+
+          \    \"industry\": [\"Engineering\"]\r
+
+          }"
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update availability
+    request:
+      url: "{{BASE}}/mentors"
+      method: PATCH
+      body:
+        type: json
+        data: "{\r
+
+          \    \"availability\": [\r
+
+          \        {\r
+
+          \            \"days\": [\"MON\", \"TUE\"],\r
+
+          \            \"times\": [\"10:00 AM\", \"1:00 PM\", \"10:00 PM\"]\r
+
+          \        },\r
+
+          \        // {\r
+
+          \        //     \"days\": [\"WEEKENDS\"],\r
+
+          \        //     \"times\": [\"10:00 AM\", \"1:00 PM\", \"10:00 PM\"]\r
+
+          \        // },\r
+
+          \        {\r
+
+          \            \"days\": [\"MON\", \"TUE\"],\r
+
+          \            \"times\": [\"10:00 AM - 1:00 PM\", \"10:00 PM\"]\r
+
+          \        },\r
+
+          \        {\r
+
+          \            \"days\": [\"MON\", \"TUE\"],\r
+
+          \            \"times\": [\r
+
+          \                \"10:00 AM\",\r
+
+          \                \"1:00 PM\",\r
+
+          \                \"10:00 PM\"\r
+
+          \            ],\r
+
+          \            \"_id\": \"67b84d72ab89ac59aaf73a0f\"\r
+
+          \        },\r
+
+          \        {\r
+
+          \            \"days\": [\r
+
+          \                \"MON\",\r
+
+          \                \"TUE\"\r
+
+          \            ],\r
+
+          \            \"times\": [\r
+
+          \                \"10:00 AM - 1:00 PM\",\r
+
+          \                \"10:00 PM\"\r
+
+          \            ],\r
+
+          \            \"_id\": \"67b84d72ab89ac59aaf73a10\"\r
+
+          \        }\r
+
+          \    ]\r
+
+          }"
+    response:
+      body:
+        type: text
+        data: ""
+
+docs: |-
+  `IndustryTypes { "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Energy", "Transportation and Logistics", "Real Estate", "Hospitality and Tourism", "Entertainment and Media",}`
+
+  CompanySizeTypes {
+
+  ZERO_TO_NINE = "0-9", //Micro-Enterprise
+
+  TEN_TO_FORTY_NINE = "10-49", //Small Business
+
+  FIFTY_TO_ONE_HUNDRED_NINETY_NINE = "50-249", //Medium-Sized Business
+
+  TWO_HUNDRED_TO_FIVE_HUNDRED_NINETY_NINE = "250-999", //Large Enterprise
+
+  ABOVE_ONE_THOUSAND = "1000 and above", //Very Large Enterprise
+
+  }

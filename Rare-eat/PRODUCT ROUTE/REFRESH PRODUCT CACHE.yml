@@ -1,0 +1,15 @@
+info:
+  name: REFRESH PRODUCT CACHE
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{URL}}/companies/product/update_cache"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

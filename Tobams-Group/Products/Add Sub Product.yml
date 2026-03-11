@@ -1,0 +1,26 @@
+info:
+  name: Add Sub Product
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/products/"
+  body:
+    type: json
+    data: |-
+      
+      {
+        "name":"Fish Yearly Plan",
+        "description":"This is the Pro Fish plan",
+        "features": ["100 job post","40 Hosted Event","support"],
+        "price": 3500,
+        "plans": "year"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

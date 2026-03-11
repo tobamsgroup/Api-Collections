@@ -1,0 +1,24 @@
+info:
+  name: Unsecure Get Single Coupon details
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{LIVE}}/coupon/single_coupon_details?coupon_code=FLEX 2024"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiYjVjOWJjMTItNjFmOC00YTIyLThjZGEtNWIxMjk1MTI5Y2VhIiwiaWF0IjoxNzEwNjg5NDUzLCJleHAiOjE3MTExMjE0NTN9.cECyIwZKx-or2A4VxPR0MMO20QG7_r9qyUMfVRJYKok
+  params:
+    - name: coupon_code
+      value: FLEX 2024
+      type: query
+  body:
+    type: text
+    data: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

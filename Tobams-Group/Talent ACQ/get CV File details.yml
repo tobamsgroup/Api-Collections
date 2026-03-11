@@ -1,0 +1,168 @@
+info:
+  name: get CV File details
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{BASE}}/upload/get/cv"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"key\": \"uploads/1719580407828_National Identity card.pdf\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{@harek}}/upload"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - /home/harek/Downloads/Telegram Desktop/photo_2024-01-08_00-39-01.jpg
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "775"
+        - name: ETag
+          value: W/"307-tmyr67U6/C7IifW1jYUsykfIhnI"
+        - name: Date
+          value: Wed, 28 Feb 2024 02:43:06 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "image": {
+                  "asset_id": "c7d8714dc35744ae496d46374803ee06",
+                  "public_id": "Testimonials/jv6can6ympcpzkgnw2is",
+                  "version": 1709088186,
+                  "version_id": "d9393d7b6837f68e0e8f58d06a2f4468",
+                  "signature": "3c7896ac744038ce23046a6b32547b308b08b0ad",
+                  "width": 640,
+                  "height": 640,
+                  "format": "jpg",
+                  "resource_type": "image",
+                  "created_at": "2024-02-28T02:43:06Z",
+                  "tags": [],
+                  "bytes": 77991,
+                  "type": "upload",
+                  "etag": "72400516a85b26bdfed59a866642fdfb",
+                  "placeholder": false,
+                  "url": "http://res.cloudinary.com/djyghekme/image/upload/v1709088186/Testimonials/jv6can6ympcpzkgnw2is.jpg",
+                  "secure_url": "https://res.cloudinary.com/djyghekme/image/upload/v1709088186/Testimonials/jv6can6ympcpzkgnw2is.jpg",
+                  "folder": "Testimonials",
+                  "original_filename": "4d649826def698a6402a9074d6c3cc09",
+                  "api_key": "132472684277116"
+              }
+          }
+  - name: Error response
+    request:
+      url: "{{@harek}}/upload"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - /home/harek/Documents/dev/file-upload-test/index.html
+    response:
+      statusText: "500"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "65"
+        - name: ETag
+          value: W/"41-Kc4MlC4CVzpFdfdRI+AWp0RzFG4"
+        - name: Date
+          value: Wed, 28 Feb 2024 02:45:31 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "error": "Only image or video files are allowed"
+          }
+
+docs: |-
+  This endpoint is for all file uploads across the Tobams web application. It takes it's file as a `formData` and uploads to the CDN and responds with the uploaded file information as an object. The `secure_url` is the `url` where the file can be accessed on the cloud. This url is what the client has to parse to the server as a `String` after the file has been successfully uploaded on the cloud.
+
+  N/B: Take not of the `params` you must set a `directory` as a `query` `params` just to keep things a little bit clean up there at the CDN server.

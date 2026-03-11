@@ -1,0 +1,24 @@
+info:
+  name: Get All Specific User_Created Combo Meal
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{URL}}/subscription/combo_meal/user/my_combo?user_email=abdulrasaq.taofeeq@tobamsgroup.com"
+  params:
+    - name: user_email
+      value: abdulrasaq.taofeeq@tobamsgroup.com
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

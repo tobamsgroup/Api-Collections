@@ -1,0 +1,22 @@
+info:
+  name: Login as super admin
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+          "email": "theteam@tobamsgroup.com",
+          "password": "Test1234"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

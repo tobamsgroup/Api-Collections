@@ -1,0 +1,49 @@
+info:
+  name: Create an event
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/social_events"
+  body:
+    type: json
+    data: |-
+      {
+        "image": "https://example.com/event-image.jpg",
+        "title": "Patience and Gratitude",
+        "eventType": "Online",
+        "externalLink": "https://example.com/event-image.jpg",
+        "host": "Tobams Group",
+        "interval": {
+          "start": {"date": "2025-04-29", "time": "09:00 AM"},
+          "end": {"date": "2025-04-30", "time": "12:00 PM"}
+        },
+        "timezone": "GMT + 3",
+        "about": "A conference to discuss the latest trends in technology.",
+        "description": "Join us for an exciting tech conference where industry leaders will discuss the latest trends and innovations in technology.",
+        "eventsDetails": {
+          "About the Event: Patience and Gratitude": "Welcome to the Sustainable Development Goals (SDGs) event—an inspiring gathering dedicated to advancing global progress and fostering a shared commitment to sustainability. This event serves as a platform for collaboration, innovation, and dialogue, bringing together diverse stakeholders, thought leaders, and change-makers.",
+          "Key Highlights": [
+              "Insightful Discussions: Engage in thought-provoking conversations led by experts in sustainable development addressing current challenges and opportunities.",
+              "Innovative Solutions: Discover groundbreaking projects and solutions that align with the SDGs, driving positive change across various sectors.",
+              "Networking Opportunities: Connect with like-minded individuals, organizations, and influencers passionate about creating a sustainable future."
+          ]
+          },
+        "extra": "Join us on this journey toward a more sustainable, inclusive, and resilient future. Together, let's transform goals into action and make a lasting difference for generations to come.",
+        "location": "Tech Convention Center, San Francisco, CA",
+        "isPaid": {
+          "status": true,
+          "price": 200.00,
+          "currency": "$"
+        }
+        }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

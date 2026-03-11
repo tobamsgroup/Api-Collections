@@ -1,0 +1,22 @@
+info:
+  name: create plan
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{URL}}/pay/paypal/create-plan"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"productId\": \"662d77c75a555f329e977f59\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

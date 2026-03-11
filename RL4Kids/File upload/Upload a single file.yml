@@ -1,0 +1,97 @@
+info:
+  name: Upload a single file
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/upload/single"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - Bk6ZoyI-2/birthday badge.png
+      - name: folder
+        type: text
+        value: badges
+        description: RLK badges
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Upload a file
+    request:
+      url: "{{base_url}}/upload/single"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+          - name: folder
+            type: text
+            value: test
+            description: Can be any string for grouping common asset
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "994"
+        - name: ETag
+          value: W/"3e2-BkygUb4JBBPwbn+LvL/owqsIBSQ"
+        - name: Date
+          value: Thu, 08 May 2025 14:01:02 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "message": "File uploaded successfully",
+              "timestamp": "2025-05-08T14:00:35.784Z",
+              "path": "/api/v1/upload/single",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "asset_id": "bad1bc2012b2fe58b762082d4405b0ba",
+                  "public_id": "rl4kids/test/iL6RUTL-akatsuki-wallpaper-hd",
+                  "version": 1746712370,
+                  "version_id": "8318297022cb5666e590aacfde400116",
+                  "signature": "56907aeac3dbe7169dcd995ed4b215dd98acbec0",
+                  "width": 999,
+                  "height": 799,
+                  "format": "jpg",
+                  "resource_type": "image",
+                  "created_at": "2025-05-08T13:52:50Z",
+                  "tags": [],
+                  "bytes": 23080,
+                  "type": "upload",
+                  "etag": "d562799f15382c2843a0b6619524d5b9",
+                  "placeholder": false,
+                  "url": "http://res.cloudinary.com/djmta0726/image/upload/v1746712370/rl4kids/test/iL6RUTL-akatsuki-wallpaper-hd.jpg",
+                  "secure_url": "https://res.cloudinary.com/djmta0726/image/upload/v1746712370/rl4kids/test/iL6RUTL-akatsuki-wallpaper-hd.jpg",
+                  "asset_folder": "rl4kids/test",
+                  "display_name": "iL6RUTL-akatsuki-wallpaper-hd",
+                  "overwritten": true,
+                  "original_filename": "file",
+                  "api_key": "639857646837561"
+              }
+          }

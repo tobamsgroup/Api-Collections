@@ -1,0 +1,19 @@
+info:
+  name: Get events by time
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{BASE}}/social_events/search/time?time"
+  params:
+    - name: time
+      value: ""
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,20 @@
+info:
+  name: Super update Admin
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: "{{URL}}/admin/auth/super/update_password/sub_admin"
+  body:
+    type: json
+    data: "{\r\n    \r\n}"
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

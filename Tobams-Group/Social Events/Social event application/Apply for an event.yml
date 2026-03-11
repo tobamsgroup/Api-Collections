@@ -1,0 +1,25 @@
+info:
+  name: Apply for an event
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/social_events/applications/"
+  body:
+    type: json
+    data: |-
+      {
+        "eventId": "60d21b4667d0d8992e610c85",
+        "fullName": "John Doe",
+        "emailAddress": "john.doe@example.com",
+        "companyName": "Talent Company",
+        "phoneNumber": "+1234567890"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

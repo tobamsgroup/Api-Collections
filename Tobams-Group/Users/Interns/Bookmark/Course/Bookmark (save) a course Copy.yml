@@ -1,0 +1,17 @@
+info:
+  name: Bookmark (save) a course Copy
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{BASE}}/interns/courses/67acba8445825261ef08846a/bookmark"
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

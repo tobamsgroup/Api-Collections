@@ -1,0 +1,11 @@
+info:
+  name: Portfolio
+  type: folder
+  seq: 8
+
+request:
+  auth: inherit
+
+docs:
+  content: This endpoint is for Tobams Group portfolio projects. Written documentation on how to `create` portfolio project by providing the required fields and uploading the portfolio `coverPhoto`, optionally the project `icon` alongside with the project `solutions` and `challenges`. It has the endpoint to `view all` the portfolio projects and being able to `view one` and `update` a particular portfolio project. The `deletion` of portfolio project was made available as well just in case the necessity comes. Each enpoint comes with example responsed of `success`, `Server Error` , `Reference Error` and `Not found` responses
+  type: text/markdown

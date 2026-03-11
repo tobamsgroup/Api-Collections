@@ -1,0 +1,28 @@
+info:
+  name: Signup an organisation
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/sign-up"
+  body:
+    type: json
+    data: |-
+      {
+          "companyName": "Progress Hub",
+          "companySize": "10-49",
+          // "firstName": "Fawaz",
+          "email": "fawazabdganiyu+o2@gmail.com",
+          "industry": "Technology",
+          "password": "Password123!",
+          "role": "Organisation",
+          "telephone": "+2348179656740"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,76 @@
+info:
+  name: update order delivery
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{URL}}/order/update/user/order_delivery?orderId=43897281-452b-4b59-bc1a-0a2873329123"
+  params:
+    - name: orderId
+      value: 43897281-452b-4b59-bc1a-0a2873329123
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"tracking_Number\": \"793484344\",\r
+
+      \    \"shipping_date\": \"2-04-24\",\r
+
+      \    \"delivery_schedule\": \"monday 2-04-24\",\r
+
+      \    \"shipping_body\": \"DHL\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Repeat Order
+    request:
+      url: "{{URL}}/order/repeat_my_order"
+      method: PATCH
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "296"
+        - name: ETag
+          value: W/"128-jZ/BhkK5Jo+PCWchXj/BxGE07mU"
+        - name: Date
+          value: Wed, 25 Oct 2023 00:55:25 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "An order has been created, please proceed to payment",
+              "data": {
+                  "order": {
+                      "userId": "0b65eb86-b1d4-4337-9e96-dbe365570434",
+                      "status": "PENDING",
+                      "date": "2023-10-25T00:54:54.690Z",
+                      "_id": "6538677c39d30d8e77a89377",
+                      "orderId": "77b34631-cd07-4942-8a5d-d19ca82313fe",
+                      "productDetails": [],
+                      "__v": 1
+                  }
+              }
+          }

@@ -1,0 +1,132 @@
+info:
+  name: Update discount by uid
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{BASE}}/discounts?resetPurpose=false"
+  params:
+    - name: resetPurpose
+      value: "false"
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+          "uid": "development",  // user uid (uuid) required
+          // "code": "SAVE20TG",
+          "organization": "Tobams Group",
+          "purposes": ["subscription", "assessment"],
+          // "type": "percentage",
+          // "value": 100,
+          // "maxRedemptions": 10000, 
+          // "expiresAt": "2030-07-01", 
+          "isActive": true 
+
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update discount by uid
+    request:
+      url: "{{BASE}}/discounts"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "uid": "developmentsss",  // user uid (uuid) required
+              "code": "SAVE100TG",
+              "organization": "Tobams Group",
+              "purposes": ["subscription"],
+              // "type": "percentage",
+              // "value": 100,
+              // "maxRedemptions": 10000, 
+              // "expiresAt": "2030-07-01", 
+              "isActive": true 
+
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1757801822583-ac98qz815
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "420"
+        - name: ETag
+          value: W/"1a4-0ecab6aRPReVUTBG5U7hOx9Q1J4"
+        - name: Date
+          value: Sat, 13 Sep 2025 22:17:03 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Discount updated successfully",
+              "data": {
+                  "_id": "68c294b8ed73e18a3801285b",
+                  "uid": "developmentsss",
+                  "code": "SAVE100TG",
+                  "organization": "Tobams Group",
+                  "purposes": [
+                      "",
+                      "assessment",
+                      "subscription"
+                  ],
+                  "type": "percentage",
+                  "value": 100,
+                  "maxRedemptions": 10000,
+                  "redemptions": 0,
+                  "expiresAt": "2030-07-01T00:00:00.000Z",
+                  "isActive": true,
+                  "createdAt": "2025-09-11T09:22:00.347Z",
+                  "updatedAt": "2025-09-13T22:17:02.983Z"
+              }
+          }

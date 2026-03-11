@@ -1,0 +1,30 @@
+info:
+  name: REGISTER STANDARD
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/auth/standard/register"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"isverified\": \"true\",//please verify before allowing registration\r
+
+      \    \"gender\": \"male\",\r
+
+      \    \"termsAndCondition\": true,\r
+
+      \    \"newsletterInterest\": false\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

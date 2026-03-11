@@ -1,0 +1,174 @@
+info:
+  name: Get all user CORPORATE
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{URL}}/user/corporate/profile"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get all user CORPORATE
+    request:
+      url: "{{URL}}/user/corporate/profile"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Allow-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "3410"
+        - name: ETag
+          value: W/"d52-sU1VWd7cBpvbXTGYT77WOPDac/U"
+        - name: Date
+          value: Tue, 21 Nov 2023 09:27:42 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "CorporateUser": [
+                  {
+                      "_id": "65568dd08f87d9e0604c04cf",
+                      "email": "francis@gmail.com",
+                      "businessName": "mikkymouse",
+                      "address": "ajanlekoko avenue",
+                      "location": "OAU",
+                      "postalCode": "093455",
+                      "bussinessRegisterationNumber": "7823834933293",
+                      "taxIdentificationNumber": "7823834933293",
+                      "website": "https://www.mikky.com",
+                      "newsletterInterest": false,
+                      "termsAndConditions": true,
+                      "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                      "createdAt": "2023-11-16T21:46:56.457Z",
+                      "updatedAt": "2023-11-16T21:46:56.457Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "655722aee19934e2778e290f",
+                      "email": "bola12@gmail.com",
+                      "businessName": "mikkymouse",
+                      "address": "ajanlekoko avenue",
+                      "location": "OAU",
+                      "postalCode": "093455",
+                      "bussinessRegisterationNumber": "7823834933293",
+                      "taxIdentificationNumber": "7823834933293",
+                      "website": "https://www.mikky.com",
+                      "newsletterInterest": false,
+                      "termsAndConditions": true,
+                      "userId": "3ede00d3-e02f-4920-a058-48511435096c",
+                      "createdAt": "2023-11-17T08:22:06.958Z",
+                      "updatedAt": "2023-11-17T08:22:06.958Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "655722ffe19934e2778e2917",
+                      "email": "bola123@gmail.com",
+                      "businessName": "mikkymouse",
+                      "address": "ajanlekoko avenue",
+                      "location": "OAU",
+                      "postalCode": "093455",
+                      "bussinessRegisterationNumber": "7823834933293",
+                      "taxIdentificationNumber": "7823834933293",
+                      "website": "https://www.mikky.com",
+                      "newsletterInterest": false,
+                      "termsAndConditions": true,
+                      "userId": "61af3c3e-79d5-409d-a7b8-cd5270db1e07",
+                      "createdAt": "2023-11-17T08:23:27.658Z",
+                      "updatedAt": "2023-11-17T08:23:27.658Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "6557243e0c87c31c682ea33d",
+                      "email": "bola123@gmail.com",
+                      "businessName": "mikkymouse",
+                      "address": "ajanlekoko avenue",
+                      "location": "OAU",
+                      "postalCode": "093455",
+                      "bussinessRegisterationNumber": "7823834933293",
+                      "taxIdentificationNumber": "7823834933293",
+                      "website": "https://www.mikky.com",
+                      "newsletterInterest": false,
+                      "termsAndConditions": true,
+                      "userId": "3562d680-dbf7-41b4-b6d0-00b4196ba7f0",
+                      "createdAt": "2023-11-17T08:28:46.753Z",
+                      "updatedAt": "2023-11-17T08:28:46.753Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "655788396ec2afb9a0ec152e",
+                      "email": "ricandybee@gmail.com",
+                      "businessName": "s",
+                      "address": "ajanlekoko avenue",
+                      "location": "OAU",
+                      "postalCode": "093455",
+                      "bussinessRegisterationNumber": "s",
+                      "taxIdentificationNumber": "s",
+                      "website": "https://www.good.com",
+                      "instagramAccount": "https://www.instagram.com/nj",
+                      "linkedInAccount": "https://www.linkedin.com/in/mbj",
+                      "newsletterInterest": true,
+                      "termsAndConditions": true,
+                      "userId": "81916727-f10a-464f-afbd-985f55ce0832",
+                      "createdAt": "2023-11-17T15:35:21.941Z",
+                      "updatedAt": "2023-11-17T15:35:21.941Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "65578a0c6ec2afb9a0ec1555",
+                      "email": "Oginnimobolaji01@gmail.com",
+                      "businessName": "MobolajiBiznez",
+                      "address": "No 108, ologuneru",
+                      "location": "Ibadan Nigeria",
+                      "postalCode": "104102",
+                      "bussinessRegisterationNumber": "809476353",
+                      "taxIdentificationNumber": "3877474994",
+                      "website": "https://mobolajiportfolio.netlify.app",
+                      "newsletterInterest": true,
+                      "termsAndConditions": true,
+                      "userId": "b0a40df7-f533-4e55-82e0-59a95f33039c",
+                      "createdAt": "2023-11-17T15:43:08.626Z",
+                      "updatedAt": "2023-11-17T15:43:08.626Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "655c3e7e3cec89807df42931",
+                      "email": "oginnimobolaji01@gmail.com",
+                      "businessName": "MMMBBBJ",
+                      "address": "Moniya",
+                      "location": "London Nigeria",
+                      "postalCode": "102828",
+                      "bussinessRegisterationNumber": "199920201",
+                      "taxIdentificationNumber": "1181888282",
+                      "website": "https://www.website.com",
+                      "newsletterInterest": true,
+                      "termsAndConditions": true,
+                      "userId": "ac73665f-d5d4-4afc-9520-99be8b58f561",
+                      "createdAt": "2023-11-21T05:22:06.855Z",
+                      "updatedAt": "2023-11-21T05:22:06.855Z",
+                      "__v": 0
+                  }
+              ]
+          }

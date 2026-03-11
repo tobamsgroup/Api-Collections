@@ -1,0 +1,48 @@
+info:
+  name: Create Notification
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/notifications"
+  body:
+    type: json
+    data: " {\r
+
+      \            \"userModel\": \"Kid\",\r
+
+      \            \"title\": \"New Course Available\",\r
+
+      \            \"message\": \"A new sustainability course has been assigned to you!\",\r
+
+      \            \"track\": \"Think Sustainability\",\r
+
+      \            \"type\": \"course_enrolled\",\r
+
+      \            \"targetId\": \"646e1234f12345678901234\",\r
+
+      \            \"targetModel\": \"Course\",\r
+
+      \            \"metadata\": {\r
+
+      \              \"courseName\": \"Introduction to Sustainability\",\r
+
+      \              \"courseLevel\": \"Beginner\",\r
+
+      \              \"startDate\": \"2025-05-20T00:00:00.000Z\",\r
+
+      \              \"dueDate\": \"2025-06-20T00:00:00.000Z\"\r
+
+      \            }\r
+
+      \ }"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

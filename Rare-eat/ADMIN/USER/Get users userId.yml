@@ -1,0 +1,60 @@
+info:
+  name: Get users userId
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{URL}}/manual_send_order"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"orderId\" : \"5093b882-f50d-458d-a766-e47c02ef8804\",\r
+
+      \    \"transactionId\":\"ch_673ZMWAO0ZHyQSVi2R3d6N9Q\",\r
+
+      \    \"amount\":46.24,\r
+
+      \    \"userId\":\"7a084cf5-d2ee-48c7-b07c-9f8ad966f98f\",\r
+
+      \    \"address\": {\r
+
+      \                \"firstname\": \"Elizabeth \",\r
+
+      \                \"lastname\": \"Yomekpe \",\r
+
+      \                \"email\": \"cokerlizzy@aol.com\",\r
+
+      \                \"phonenumber\": \"447958137438\",\r
+
+      \                \"address\": \"74 Birch Row\",\r
+
+      \                \"city\": \"Bromley \",\r
+
+      \                \"state\": \"Kent\",\r
+
+      \                \"country\": \"United Kingdom\",\r
+
+      \                \"postalcode\": \"BR2 8FG\",\r
+
+      \                \"userId\": \"7a084cf5-d2ee-48c7-b07c-9f8ad966f98f\",\r
+
+      \                \"addressType\": \"SHIPPING ADDRESS\",\r
+
+      \                \"createdAt\": \"2024-04-11T07:41:55.412Z\",\r
+
+      \                \"updatedAt\": \"2024-04-11T07:41:55.412Z\"\r
+
+      \            }\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,317 @@
+info:
+  name: Get all user interviews
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/interviews"
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get all user interviews
+    request:
+      url: "{{BASE}}/interviews"
+      method: GET
+      params:
+        - name: ""
+          value: ""
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "2062"
+        - name: ETag
+          value: W/"80e-X0cnFrI+sRFnsWajibbbIHlmguw"
+        - name: Date
+          value: Mon, 24 Mar 2025 10:50:46 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Interviews retrieved successfully",
+              "data": {
+                  "count": 6,
+                  "interviews": [
+                      {
+                          "_id": "67c1d1a7d249829a71370374",
+                          "companyId": "67bf1b8f8b03e7875cb2bf0b",
+                          "role": "Software Engineer",
+                          "jobPostId": "60d21b4667d0d8992e610c86",
+                          "date": "2027-03-15T00:00:00.000Z",
+                          "startTime": "9:00 AM",
+                          "endTime": "10:00 AM",
+                          "status": "Pending",
+                          "applicantId": "67b661d7c84dd7079b9e7d56",
+                          "companyName": "Tobams Affliates"
+                      },
+                      {
+                          "_id": "67c1d1a9d249829a71370378",
+                          "companyId": "67bf1b8f8b03e7875cb2bf0b",
+                          "role": "Software Engineer",
+                          "jobPostId": "60d21b4667d0d8992e610c86",
+                          "date": "2027-03-15T00:00:00.000Z",
+                          "startTime": "9:00 AM",
+                          "endTime": "10:00 AM",
+                          "status": "Pending",
+                          "applicantId": "67b661d7c84dd7079b9e7d56",
+                          "companyName": "Tobams Affliates"
+                      },
+                      {
+                          "_id": "67c1d3d8d249829a71370384",
+                          "companyId": "67bf1b8f8b03e7875cb2bf0b",
+                          "role": "Software Engineer",
+                          "jobPostId": "60d21b4667d0d8992e610c86",
+                          "date": "2027-03-15T00:00:00.000Z",
+                          "startTime": "9:00 AM",
+                          "endTime": "10:00 AM",
+                          "status": "Pending",
+                          "applicantId": "67b661d7c84dd7079b9e7d56",
+                          "companyName": "Tobams Affliates"
+                      },
+                      {
+                          "_id": "67c1d3dad249829a71370388",
+                          "companyId": "67bf1b8f8b03e7875cb2bf0b",
+                          "role": "Software Engineer",
+                          "jobPostId": "60d21b4667d0d8992e610c86",
+                          "date": "2027-03-15T00:00:00.000Z",
+                          "startTime": "9:00 AM",
+                          "endTime": "10:00 AM",
+                          "status": "Pending",
+                          "applicantId": "67b661d7c84dd7079b9e7d56",
+                          "companyName": "Tobams Affliates"
+                      },
+                      {
+                          "_id": "67dd46e3042ec58336e3f772",
+                          "companyName": "Tech Innovations Inc.",
+                          "companyId": "67bf2c6a974a6b52304105a0",
+                          "role": "Software Engineer",
+                          "jobPostId": "67d95578b3ea8eee43ef5ce4",
+                          "applicantId": "67b661d7c84dd7079b9e7d56",
+                          "date": "2025-03-22T11:56:09.270Z",
+                          "startTime": "10:00 AM",
+                          "endTime": "10:30 AM",
+                          "status": "Scheduled",
+                          "meetLink": "https://meet.google.com/abc-xyz"
+                      },
+                      {
+                          "_id": "67dd46e8042ec58336e3f783",
+                          "companyName": "Tech Innovations Inc.",
+                          "companyId": "67bf2c6a974a6b52304105a0",
+                          "role": "Software Engineer",
+                          "jobPostId": "67d95578b3ea8eee43ef5ce4",
+                          "applicantId": "67b661d7c84dd7079b9e7d56",
+                          "date": "2025-03-22T11:56:09.270Z",
+                          "startTime": "10:00 AM",
+                          "endTime": "10:30 AM",
+                          "status": "Scheduled",
+                          "meetLink": "https://meet.google.com/abc-xyz"
+                      }
+                  ]
+              }
+          }
+  - name: Get all scheduled user interviews
+    request:
+      url: "{{BASE}}/interviews?status=Scheduled"
+      method: GET
+      params:
+        - name: status
+          value: Scheduled
+          type: query
+          description: This can be used to get upcoming interviews
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Interviews retrieved successfully",
+              "data": {
+                  "count": 5,
+                  "interviews": [
+                      {
+                          "_id": "67db4e11aa76405694ced37b",
+                          "companyName": "Tech Innovations Inc.",
+                          "companyId": "67bf2c6a974a6b52304105a0",
+                          "role": "Software Development",
+                          "jobPostId": "67d95578b3ea8eee43ef5ce4",
+                          "applicantId": "67b65c0c2478ee6593c4983a",
+                          "date": "2025-03-21T11:56:09.270Z",
+                          "startTime": "10:00 AM",
+                          "endTime": "10:30 AM",
+                          "status": "Scheduled",
+                          "meetLink": "https://meet.google.com/abc-xyz",
+                          "applicant": {
+                              "userId": "67b65c0c2478ee6593c4983a",
+                              "firstName": "Monserrat",
+                              "lastName": "Reynolds",
+                              "occupation": "Fullstack Developer",
+                              "title": "Fullstack Developer",
+                              "photo": "default.jpg",
+                              "email": "fawazintern@gmail.com"
+                          }
+                      },
+                      {
+                          "_id": "67db4e8aaa76405694ced38e",
+                          "companyName": "Tech Innovations Inc.",
+                          "companyId": "67bf2c6a974a6b52304105a0",
+                          "role": "Software Development",
+                          "jobPostId": "67d95578b3ea8eee43ef5ce4",
+                          "applicantId": "67b65c0c2478ee6593c4983a",
+                          "date": "2025-03-21T11:56:09.270Z",
+                          "startTime": "10:00 AM",
+                          "endTime": "10:30 AM",
+                          "status": "Scheduled",
+                          "meetLink": "https://meet.google.com/abc-xyz",
+                          "applicant": {
+                              "userId": "67b65c0c2478ee6593c4983a",
+                              "firstName": "Monserrat",
+                              "lastName": "Reynolds",
+                              "occupation": "Fullstack Developer",
+                              "title": "Fullstack Developer",
+                              "photo": "default.jpg",
+                              "email": "fawazintern@gmail.com"
+                          }
+                      },
+                      {
+                          "_id": "67dd460b042ec58336e3f73b",
+                          "companyName": "Tech Innovations Inc.",
+                          "companyId": "67bf2c6a974a6b52304105a0",
+                          "role": "Software Engineer",
+                          "jobPostId": "67d95578b3ea8eee43ef5ce4",
+                          "applicantId": "67b65c0c2478ee6593c4983a",
+                          "date": "2025-03-22T11:56:09.270Z",
+                          "startTime": "10:00 AM",
+                          "endTime": "10:30 AM",
+                          "status": "Scheduled",
+                          "meetLink": "https://meet.google.com/abc-xyz",
+                          "applicant": {
+                              "userId": "67b65c0c2478ee6593c4983a",
+                              "firstName": "Monserrat",
+                              "lastName": "Reynolds",
+                              "occupation": "Fullstack Developer",
+                              "title": "Fullstack Developer",
+                              "photo": "default.jpg",
+                              "email": "fawazintern@gmail.com"
+                          }
+                      },
+                      {
+                          "_id": "67dd46e3042ec58336e3f772",
+                          "companyName": "Tech Innovations Inc.",
+                          "companyId": "67bf2c6a974a6b52304105a0",
+                          "role": "Software Engineer",
+                          "jobPostId": "67d95578b3ea8eee43ef5ce4",
+                          "applicantId": "67b661d7c84dd7079b9e7d56",
+                          "date": "2025-03-22T11:56:09.270Z",
+                          "startTime": "10:00 AM",
+                          "endTime": "10:30 AM",
+                          "status": "Scheduled",
+                          "meetLink": "https://meet.google.com/abc-xyz",
+                          "applicant": {
+                              "userId": "67b661d7c84dd7079b9e7d56",
+                              "firstName": "Vincent",
+                              "lastName": "Rosenbaum",
+                              "currentCompany": "Connelly Inc",
+                              "currentRole": "Senior Data Manager",
+                              "occupation": "Software Engineer",
+                              "title": "Backend Developer",
+                              "photo": "default.jpg",
+                              "email": "fawaztalent@gmail.com"
+                          }
+                      },
+                      {
+                          "_id": "67dd46e8042ec58336e3f783",
+                          "companyName": "Tech Innovations Inc.",
+                          "companyId": "67bf2c6a974a6b52304105a0",
+                          "role": "Software Engineer",
+                          "jobPostId": "67d95578b3ea8eee43ef5ce4",
+                          "applicantId": "67b661d7c84dd7079b9e7d56",
+                          "date": "2025-03-22T11:56:09.270Z",
+                          "startTime": "10:00 AM",
+                          "endTime": "10:30 AM",
+                          "status": "Scheduled",
+                          "meetLink": "https://meet.google.com/abc-xyz",
+                          "applicant": {
+                              "userId": "67b661d7c84dd7079b9e7d56",
+                              "firstName": "Vincent",
+                              "lastName": "Rosenbaum",
+                              "currentCompany": "Connelly Inc",
+                              "currentRole": "Senior Data Manager",
+                              "occupation": "Software Engineer",
+                              "title": "Backend Developer",
+                              "photo": "default.jpg",
+                              "email": "fawaztalent@gmail.com"
+                          }
+                      }
+                  ]
+              }
+          }
+  - name: Get all cancelled user interviews
+    request:
+      url: "{{BASE}}/interviews?status=Cancelled"
+      method: GET
+      params:
+        - name: status
+          value: Cancelled
+          type: query
+    response:
+      body:
+        type: text
+        data: ""

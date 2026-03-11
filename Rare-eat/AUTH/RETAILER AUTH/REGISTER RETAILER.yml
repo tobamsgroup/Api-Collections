@@ -1,0 +1,50 @@
+info:
+  name: REGISTER RETAILER
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/auth/retailer/register"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"isVerified\": \"true\",//please verify before allowing registration,\r
+
+      \    \"userId\": \"bb8797be-e7a2-4117-8e6a-ece1da419f26\",\r
+
+      \    \"email\": \"rolatz@gmail.com\",\r
+
+      \    \"city\": \"oklahoma\",\r
+
+      \    \"phoneNumber\": 7012213323,//passing the phonenuber from the first step\r
+
+      \    \"businessName\": \"mikkylink\",\r
+
+      \    \"businessAddress\": \"oklahoma, nanya\",\r
+
+      \    \"postalCode\":  \"903748\",\r
+
+      \    \"website\": \"www.mikkylink.com\",\r
+
+      \    \"lastName\": \"mikky\",\r
+
+      \    \"firstName\": \"francis\",\r
+
+      \    \"instagramAccount\": \"https://www.instagram.com/mikkylink\",\r
+
+      \    \"taxIdentificationNumber\": 849349475744,\r
+
+      \    \"BusinessRegistrationNumber\": 7823834933293\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

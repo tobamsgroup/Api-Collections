@@ -1,0 +1,44 @@
+info:
+  name: SUBSCRIBE
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{BASE}}/pay/subscribe"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoidGFvZmVlcS5hYmR1bHJhc2FxQHRvYmFtc2dyb3VwLmNvbSJ9LCJpYXQiOjE3MTc1NzcwNjUsImV4cCI6MTcxNzc0OTg2NX0.8QDkd9pI7SQwsfSxeEeGHu6AKNUxFYlVamVza15F_tw
+  body:
+    type: json
+    data: "{\r
+
+      \    // \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\",\r
+
+      \    \"userId\": \"665cb0891cf2b7a33ebfdfb7\",\r
+
+      \    // \"productId\": \"66585062678ffa988bfc3fca\",\r
+
+      \    \"productId\": \"66603251c72d9dc0ae985521\",\r
+
+      \    \"paymentPlatform\": \"PayStack\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  product ID
+
+  Basic Plan Monthly: 662bbd32fc59321114da8efb
+
+  Basic Plan Yearly: 662bbd06fc59321114da8ef8
+
+  Pro Plan Monthly: 665847a79d655c041cefdf26
+
+  Pro Plan Yearly: 66585062678ffa988bfc3fca

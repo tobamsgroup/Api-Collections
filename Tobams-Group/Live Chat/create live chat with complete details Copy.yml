@@ -1,0 +1,28 @@
+info:
+  name: create live chat with complete details Copy
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/live-chat/"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"Me Live\",\r
+
+      \  \"email\": \"enamesit@gmail.com\",\r
+
+      \  \"phoneNumber\": \"07064861358\",\r
+
+      \  \"complaint\": \"my complaint. kindly assist urgently\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

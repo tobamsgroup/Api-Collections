@@ -1,0 +1,127 @@
+info:
+  name: Get all talents job applications
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/job-apply/tech-talents?role=talent"
+  params:
+    - name: role
+      value: talent
+      type: query
+  auth:
+    type: bearer
+    token: "{{org_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/job-apply/tech-talents?role=intern"
+      method: GET
+      params:
+        - name: role
+          value: intern
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1223"
+        - name: ETag
+          value: W/"4c7-lPhwFeXz+rJjZT1SQQsepVmDypc"
+        - name: Date
+          value: Fri, 28 Mar 2025 11:35:25 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "intern applications fetched successfully",
+              "data": [
+                  {
+                      "_id": "667dcb0af93c71bddb7127d8",
+                      "fullName": "InemTobams UdoGroup",
+                      "phoneNumber": "+2340970089999",
+                      "email": "inem.udousoro@tobamsgroup.com",
+                      "country": "Nigeria",
+                      "bio": "this is a brief summary of me",
+                      "portfolioLink": "portfolio Link",
+                      "attachment": "image url in cloudinary",
+                      "postId": "667a805338d13808521275e7",
+                      "createdAt": "2024-06-27T20:26:50.101Z",
+                      "location": "Lokoja, Kogi State",
+                      "organisationId": "67bf2c6a974a6b52304105a0",
+                      "applicantRole": "Intern",
+                      "stage": "Applied",
+                      "userId": "67b65c0c2478ee6593c4983a",
+                      "jobTitle": "Hardware Engineer",
+                      "resume": "resume url",
+                      "coverLetter": "cover letter url"
+                  },
+                  {
+                      "_id": "67d95f590b44aad1ccf50a4e",
+                      "fullName": "Fawaz Agara",
+                      "phoneNumber": "+2340970087834",
+                      "email": "fawazintern@gmail.com",
+                      "country": "Nigeria",
+                      "bio": "Here is my brief bio",
+                      "portfolioLink": "portfolio Link",
+                      "attachment": "image url in cloudinary",
+                      "postId": "67d95578b3ea8eee43ef5ce4",
+                      "jobTitle": "Software Engineer",
+                      "stage": "Applied",
+                      "applicantRole": "Intern",
+                      "createdAt": "2025-03-18T11:56:09.270Z",
+                      "organisationId": "67bf2c6a974a6b52304105a0",
+                      "userId": "67b65c0c2478ee6593c4983a",
+                      "coverLetter": "cover letter url",
+                      "resume": "resume url",
+                      "location": "Lokoja, Kogi State"
+                  }
+              ]
+          }

@@ -1,0 +1,87 @@
+info:
+  name: Update personal info
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{BASE}}/talents/"
+  body:
+    type: json
+    data: |-
+      {
+          "personalInfo": {
+              "firstName": "Fawaz",
+              "lastName": "Agara",
+              "title": "Software Engineer",
+              "telephone": "+2348179656740",
+              "location": {
+                  "country": "string",
+                  "state": "string",
+                  "city": "string"
+              }
+          }
+      }
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update personal info
+    request:
+      url: "{{BASE}}/talents/"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "personalInfo": {
+                  "firstName": "Fawaz",
+                  "lastName": "Agara",
+                  "title": "string",
+                  "telephone": "+2348179656740",
+                  "location": {
+                      "country": "string",
+                      "state": "string",
+                      "city": "string"
+                  }
+              }
+          }
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update personal info (from admin)
+    request:
+      url: "{{BASE}}/interns/?userId=0"
+      method: PATCH
+      params:
+        - name: userId
+          value: "0"
+          type: query
+      body:
+        type: json
+        data: |-
+          {
+              "personalInfo": {
+                  "firstName": "Fawaz",
+                  "lastName": "Agara",
+                  "title": "Software Engineer",
+                  "telephone": "+2348179656740",
+                  "location": {
+                      "country": "string",
+                      "state": "string",
+                      "city": "string"
+                  }
+              }
+          }
+    response:
+      body:
+        type: text
+        data: ""

@@ -1,0 +1,152 @@
+info:
+  name: ORDER DETAILS
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{URL}}/order/my_order_details?orderId=7c43f16b-8cdd-4543-94ea-29b8a70c3aa9"
+  params:
+    - name: orderId
+      value: 7c43f16b-8cdd-4543-94ea-29b8a70c3aa9
+      type: query
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: ORDER DETAILS
+    request:
+      url: "{{URL}}/order/my_order_details?orderId=ba9a342f-c02c-4762-8119-6ff7758ae305"
+      method: GET
+      params:
+        - name: orderId
+          value: ba9a342f-c02c-4762-8119-6ff7758ae305
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "2449"
+        - name: ETag
+          value: W/"991-FhMikPq6fFExLIA2rvYGimDJi/c"
+        - name: Date
+          value: Tue, 09 Apr 2024 12:56:22 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Order details have been fetched successfully",
+              "data": {
+                  "order": {
+                      "_id": "6614f147ff5099f781ae4e81",
+                      "userId": "5ae96cf2-b581-42b9-82dd-0679352bb634",
+                      "status": "PENDING",
+                      "date": "2024-03-28T19:31:05.339Z",
+                      "payment_mode": null,
+                      "orderId": "ba9a342f-c02c-4762-8119-6ff7758ae305",
+                      "productDetails": [
+                          {
+                              "productId": "659c3aa66e16f13e870289ba",
+                              "variation_Id": "659c3aa66e16f13e870289bb",
+                              "name": "Cat Fish Pepper Soup",
+                              "quantity": 1,
+                              "spice_level": "Hot",
+                              "size": "700g",
+                              "price": 12.99,
+                              "image": "https://res.cloudinary.com/dddiqpeib/image/upload/v1704737449/Products/product-659c3aa66e16f13e870289ba.jpg",
+                              "number_of_pack": "Single Pack",
+                              "side_protein": "",
+                              "SKU": "REPC002",
+                              "_id": "6614f147ff5099f781ae4e83"
+                          },
+                          {
+                              "productId": "659c39636e16f13e870289b2",
+                              "variation_Id": "659c39636e16f13e870289b3",
+                              "name": "Assorted Meat Pepper Soup",
+                              "quantity": 1,
+                              "spice_level": "Hot",
+                              "size": "600g",
+                              "price": 11.99,
+                              "image": "https://res.cloudinary.com/dddiqpeib/image/upload/v1704737126/Products/product-659c39636e16f13e870289b2.jpg",
+                              "number_of_pack": "Single Pack",
+                              "side_protein": "",
+                              "SKU": "REPA003",
+                              "_id": "6614f147ff5099f781ae4e84"
+                          },
+                          {
+                              "productId": "65b281c6d973dd29bc2bb73d",
+                              "variation_Id": "65b281c6d973dd29bc2bb73e",
+                              "name": "Beef Stew",
+                              "quantity": 1,
+                              "spice_level": "Medium",
+                              "size": "800g",
+                              "price": 12.99,
+                              "image": "https://res.cloudinary.com/dddiqpeib/image/upload/v1706197449/Products/product-65b281c6d973dd29bc2bb73d.jpg",
+                              "number_of_pack": "Single Pack",
+                              "side_protein": "",
+                              "SKU": "REBS01",
+                              "_id": "6614f147ff5099f781ae4e85"
+                          },
+                          {
+                              "productId": "659c25f96e16f13e87028948",
+                              "variation_Id": "659c25f96e16f13e8702894a",
+                              "name": "Red Beans (Ewa)",
+                              "quantity": 1,
+                              "spice_level": "Mild",
+                              "size": "1000g",
+                              "price": 11.99,
+                              "image": "https://res.cloudinary.com/dddiqpeib/image/upload/v1704732159/Product/product-659c25f96e16f13e87028948-1704732158774.jpg",
+                              "number_of_pack": "Single Pack",
+                              "side_protein": "Turkey",
+                              "SKU": "REBE001",
+                              "_id": "6614f147ff5099f781ae4e86"
+                          },
+                          {
+                              "productId": "65b28a0fd973dd29bc2bb762",
+                              "variation_Id": "659c25f96e16f13e8702894a",
+                              "name": "Yam Porridge (Asaro)",
+                              "quantity": 1,
+                              "spice_level": "Mild",
+                              "size": "1000g",
+                              "price": 11.99,
+                              "image": "https://res.cloudinary.com/dddiqpeib/image/upload/v1711408397/Product/product-65b28a0fd973dd29bc2bb762-1711408396430.png",
+                              "number_of_pack": "Single Pack",
+                              "side_protein": "Turkey",
+                              "SKU": "REYP001",
+                              "_id": "6614f147ff5099f781ae4e87"
+                          }
+                      ],
+                      "discount": [],
+                      "createdAt": "2024-04-09T07:41:59.072Z",
+                      "updatedAt": "2024-04-09T07:42:08.965Z",
+                      "__v": 1,
+                      "price": 71.94,
+                      "shipping_fee": 9.99,
+                      "delivery": {},
+                      "guestUserInfo": {}
+                  }
+              }
+          }

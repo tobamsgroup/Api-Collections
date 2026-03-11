@@ -1,0 +1,17 @@
+info:
+  name: Get single user
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{LIVE}}/user/standard/profile/654d9ae8cafc5ed8e947e9d4"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

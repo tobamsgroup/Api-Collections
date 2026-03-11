@@ -1,0 +1,155 @@
+info:
+  name: Create/listen to Event Stripe
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/webhooks/payments"
+  headers:
+    - name: x-paystack-signature
+      value: ""
+  body:
+    type: json
+    data: "{\r
+
+      \  \"event\": \"charge.success\",\r
+
+      \  \"data\": {\r
+
+      \    \"id\": 30296123,\r
+
+      \    \"domain\": \"live\",\r
+
+      \    \"status\": \"success\",\r
+
+      \    \"reference\": \"psk12345abcde\",\r
+
+      \    \"amount\": 500000,\r
+
+      \    \"message\": null,\r
+
+      \    \"gateway_response\": \"Successful\",\r
+
+      \    \"paid_at\": \"2025-05-16T10:55:09.000Z\",\r
+
+      \    \"created_at\": \"2025-05-16T10:50:09.000Z\",\r
+
+      \    \"channel\": \"card\",\r
+
+      \    \"currency\": \"NGN\",\r
+
+      \    \"fees\": 7500,\r
+
+      \    \"fees_split\": null,\r
+
+      \    \"customer\": {\r
+
+      \      \"id\": 9382272,\r
+
+      \      \"first_name\": \"Taofeeq\",\r
+
+      \      \"last_name\": \"A.\",\r
+
+      \      \"email\": \"mailfordevtest404@gmail.com\",\r
+
+      \      \"phone\": \"+2348012345678\",\r
+
+      \      \"metadata\": {\r
+
+      \        \"custom_fields\": [\r
+
+      \          {\r
+
+      \            \"display_name\": \"Taofeeq\",\r
+
+      \            \"variable_name\": \"Abdulrasaq\",\r
+
+      \            \"value\": \"MBR1234\"\r
+
+      \          }\r
+
+      \        ]\r
+
+      \      }\r
+
+      \    },\r
+
+      \    \"authorization\": {\r
+
+      \      \"authorization_code\": \"AUTH_j29dksn0z\",\r
+
+      \      \"bin\": \"408408\",\r
+
+      \      \"last4\": \"4081\",\r
+
+      \      \"exp_month\": \"12\",\r
+
+      \      \"exp_year\": \"2026\",\r
+
+      \      \"channel\": \"card\",\r
+
+      \      \"card_type\": \"visa\",\r
+
+      \      \"bank\": \"Test Bank\",\r
+
+      \      \"country_code\": \"NG\",\r
+
+      \      \"reusable\": true,\r
+
+      \      \"signature\": \"SIG_mVRCgGg...\",\r
+
+      \      \"account_name\": null\r
+
+      \    },\r
+
+      \    \"metadata\": {\r
+
+      \      \"userId\": \"682e1d83966154efcb9a87ad\",\r
+
+      \      \"purpose\": \"assessment\",\r
+
+      \      \"order\": {\r
+
+      \        \"productId\": \"676ed33a3f1c9dabce114292\",\r
+
+      \        \"userId\": \"\",\r
+
+      \        \"uuid\": \"TG-3XTA\",\r
+
+      \        \"sumTotal\": \"500000\",\r
+
+      \        \"discountCode\": \"yuweo\",\r
+
+      \        \"skills\": \"backend developer\"\r
+
+      \      }\r
+
+      \    },\r
+
+      \    \"log\": {\r
+
+      \      \"attempts\": 1,\r
+
+      \      \"errors\": null,\r
+
+      \      \"success\": true\r
+
+      \    },\r
+
+      \    \"requested_amount\": 500000,\r
+
+      \    \"pos_transaction_data\": null,\r
+
+      \    \"source\": null\r
+
+      \  }\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

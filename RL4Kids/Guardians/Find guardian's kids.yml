@@ -1,0 +1,91 @@
+info:
+  name: Find guardian's kids
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/guardian/kids"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/guardian/kids"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "968"
+        - name: ETag
+          value: W/"3c8-AYWRNcNzs2BWGb5NSOcBxLYIJRk"
+        - name: Date
+          value: Thu, 15 May 2025 08:32:27 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Guardian's kids fetched successfully",
+              "timestamp": "2025-05-15T08:32:27.389Z",
+              "path": "/api/v1/guardian/kids",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "_id": "681ddd3d0fafb09649480024",
+                  "email": "fawazabdganiyu@tobamsgroup.com",
+                  "isVerified": false,
+                  "kidIds": [
+                      {
+                          "_id": "681de6a22c2b02c83017105c",
+                          "username": "Solomon232",
+                          "name": "Sulaiman Solomon",
+                          "age": 8,
+                          "preferredLearningTopics": [
+                              "Think Entrepreneurship"
+                          ],
+                          "role": "kid",
+                          "guardianId": "681ddd3d0fafb09649480024",
+                          "createdAt": "2025-05-09T11:27:30.737Z",
+                          "updatedAt": "2025-05-09T11:27:30.737Z"
+                      },
+                      {
+                          "_id": "681e19aaceafdcd17cb61216",
+                          "username": "newKid",
+                          "name": "new kid",
+                          "age": 13,
+                          "preferredLearningTopics": [
+                              "Think Entrepreneurship"
+                          ],
+                          "role": "kid",
+                          "guardianId": "681ddd3d0fafb09649480024",
+                          "createdAt": "2025-05-09T15:05:14.744Z",
+                          "updatedAt": "2025-05-09T15:09:37.281Z"
+                      }
+                  ],
+                  "role": "teacher",
+                  "createdAt": "2025-05-09T10:47:25.382Z",
+                  "updatedAt": "2025-05-09T15:05:14.767Z",
+                  "firstName": "Fawaz",
+                  "lastName": "Abdganiyu"
+              }
+          }

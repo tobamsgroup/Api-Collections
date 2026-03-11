@@ -1,0 +1,46 @@
+info:
+  name: Create Demo
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/demo/book"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"fullName\": \"Jane Doe\",\r
+
+      \  \"email\": \"jane.doe@example.com\",\r
+
+      \  \"phoneNumber\": \"+1234567890\",\r
+
+      \  \"role\": \"parent\", // \"admin\", \"teacher\", \"parent\", \"kid\"\r
+
+      \  \"bookingFor\": \"Family\", // \"Family\", \"School\", \"Organisation\", \"Community\", \"NGO\", \"Other\"\r
+
+      \  \"organisationName\": \"Doe Family\",\r
+
+      \  \"country\": \"Nigeria\",\r
+
+      \  \"state\": \"Lagos\",\r
+
+      \  \"city\": \"Ikeja\",\r
+
+      \  \"preferredDemoDate\": \"2024-07-01T10:00:00.000Z\",\r
+
+      \  \"programOfInterest\": \"Think Sustainability\", // \"Think Sustainability\", \"Think Entrepreneurship\", \"Think Leadership\", \"Think Strategy\", \"Think Finance\"\r
+
+      \  \"heardAboutUs\": \"Website\", // \"Website\", \"Instagram\", \"LinkedIn\", \"Referral\", \"Other\"\r
+
+      \  \"others\": \"Saw your ad on social media\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

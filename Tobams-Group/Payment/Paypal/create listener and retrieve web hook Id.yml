@@ -1,0 +1,15 @@
+info:
+  name: create listener and retrieve web hook Id
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{URL}}/event/paypalWebhook"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

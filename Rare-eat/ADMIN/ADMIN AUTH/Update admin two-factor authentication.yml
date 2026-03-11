@@ -1,0 +1,17 @@
+info:
+  name: Update admin two-factor authentication
+  type: http
+  seq: 13
+
+http:
+  method: PATCH
+  url: "{{URL}}/admin/auth/enable_2fa"
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

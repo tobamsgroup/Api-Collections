@@ -1,0 +1,327 @@
+info:
+  name: Fetch a kid assigned learning contents
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/kid/courses/my?content=false"
+  params:
+    - name: content
+      value: "false"
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Fetch a kid assigned learning contents
+    request:
+      url: "{{base_url}}/kid/courses/my"
+      method: GET
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "2623"
+        - name: ETag
+          value: W/"a3f-um0SJX7p61Iug5poqn/HgwfE3Kk"
+        - name: Date
+          value: Tue, 10 Jun 2025 07:09:49 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Kid's assigned courses fetched successfully",
+              "timestamp": "2025-06-10T07:09:49.942Z",
+              "path": "/api/v1/kid/courses/my?content=true",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": [
+                  {
+                      "_id": "6846e7a3d626066dd5921d6d",
+                      "kidId": "681de6a22c2b02c83017105c",
+                      "guardianId": "681ddd3d0fafb09649480024",
+                      "bookId": {
+                          "_id": "68349f157d1701603e0ee883",
+                          "title": "Think Sustainability",
+                          "image": "https://example.com/course-cover.jpg",
+                          "series": [
+                              "68349fed7d1701603e0ee88c"
+                          ],
+                          "createdAt": "2025-05-26T17:04:21.781Z",
+                          "updatedAt": "2025-05-26T17:07:57.846Z"
+                      },
+                      "assignedSeries": [
+                          {
+                              "progress": 0,
+                              "status": "not started",
+                              "completedAt": null,
+                              "seriesId": {
+                                  "_id": "68349fed7d1701603e0ee88c",
+                                  "title": "Series 1: Eco Heroes",
+                                  "overview": {
+                                      "catchPhrase": "Introduction to Heroes",
+                                      "description": "Learn the basics of sustainable living with our Eco Heroes."
+                                  },
+                                  "image": "https://example.com/course-cover.jpg",
+                                  "index": 1,
+                                  "bookId": "68349f157d1701603e0ee883",
+                                  "chapters": [
+                                      "6834a05d7d1701603e0ee894",
+                                      "683a39136947b7ea5a1e71f1",
+                                      "683a47d06c9e84b89581cd0e",
+                                      "683a48626c9e84b89581cd2f"
+                                  ],
+                                  "createdAt": "2025-05-26T17:07:57.831Z",
+                                  "updatedAt": "2025-05-31T00:08:02.908Z"
+                              },
+                              "assignedAt": "2025-06-09T13:54:43.691Z"
+                          }
+                      ],
+                      "assignedChapters": [
+                          {
+                              "progress": 0,
+                              "status": "not started",
+                              "assignedAt": "2025-06-09T13:54:43.692Z",
+                              "completedAt": null,
+                              "chapterId": {
+                                  "_id": "683a39136947b7ea5a1e71f1",
+                                  "title": "Chapter 2: Eco Friendly",
+                                  "description": "",
+                                  "index": 2,
+                                  "seriesId": "68349fed7d1701603e0ee88c",
+                                  "lessons": [
+                                      {
+                                          "_id": "683a48ad6c9e84b89581cd36",
+                                          "title": "Lesson 1: Eco Good",
+                                          "chapterId": "683a39136947b7ea5a1e71f1",
+                                          "content": "",
+                                          "durationMinutes": 0,
+                                          "assignments": [],
+                                          "createdAt": "2025-05-31T00:09:17.008Z",
+                                          "updatedAt": "2025-05-31T00:09:17.008Z"
+                                      }
+                                  ],
+                                  "createdAt": "2025-05-30T23:02:43.743Z",
+                                  "updatedAt": "2025-05-31T00:09:17.161Z"
+                              },
+                              "completedLessons": []
+                          },
+                          {
+                              "progress": 100,
+                              "status": "completed",
+                              "assignedAt": "2025-06-09T14:29:27.548Z",
+                              "completedAt": "2025-06-10T06:43:06.659Z",
+                              "chapterId": {
+                                  "_id": "6834a05d7d1701603e0ee894",
+                                  "title": "Chapter 1: Eco Friendly",
+                                  "description": "",
+                                  "index": 1,
+                                  "seriesId": "68349fed7d1701603e0ee88c",
+                                  "lessons": [
+                                      {
+                                          "_id": "6834ac5b16a2f69fa7350f74",
+                                          "title": "Lesson 1: Eco Friendly",
+                                          "chapterId": "6834a05d7d1701603e0ee894",
+                                          "content": "",
+                                          "durationMinutes": 0,
+                                          "assignments": [],
+                                          "createdAt": "2025-05-26T18:00:59.374Z",
+                                          "updatedAt": "2025-05-26T18:00:59.374Z"
+                                      }
+                                  ],
+                                  "createdAt": "2025-05-26T17:09:49.837Z",
+                                  "updatedAt": "2025-05-26T18:00:59.390Z"
+                              },
+                              "completedLessons": []
+                          }
+                      ],
+                      "assignmentsCompleted": 0,
+                      "totalLearningHours": 0,
+                      "progressPercentage": 25,
+                      "status": "in progress",
+                      "completedAt": null,
+                      "completedAssignments": [],
+                      "badgesUnlocked": [],
+                      "createdAt": "2025-06-09T13:54:43.693Z",
+                      "updatedAt": "2025-06-10T06:43:06.678Z"
+                  }
+              ]
+          }
+  - name: Fetch a kid course progress
+    request:
+      url: "{{base_url}}/kid/courses/my?content=false"
+      method: GET
+      params:
+        - name: content
+          value: "false"
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1770"
+        - name: ETag
+          value: W/"6ea-pb66qXtAryf/DE7YLhzDgPPDzaU"
+        - name: Date
+          value: Tue, 10 Jun 2025 07:20:34 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Kid's assigned courses fetched successfully",
+              "timestamp": "2025-06-10T07:20:34.187Z",
+              "path": "/api/v1/kid/courses/my?content=false",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": [
+                  {
+                      "_id": "6846e7a3d626066dd5921d6d",
+                      "kidId": {
+                          "_id": "681de6a22c2b02c83017105c",
+                          "username": "Solomon232",
+                          "password": "$2b$10$O9iZxakSAt.ioJKla90wBug6LNG6.RAgifHJ8FQFZTqZWlMyhUj72",
+                          "name": "new kid",
+                          "age": 13,
+                          "preferredLearningTopics": [
+                              "Think Leadership"
+                          ],
+                          "role": "kid",
+                          "guardianId": "681ddd3d0fafb09649480024",
+                          "createdAt": "2025-05-09T11:27:30.737Z",
+                          "updatedAt": "2025-06-10T04:31:13.740Z",
+                          "picture": "https://res.cloudinary.com/djmta0726/image/upload/v1746714706/rl4kids/iL6RUTL-akatsuki-wallpaper-hd.jpg",
+                          "lastLogin": "2025-06-10T04:31:13.736Z"
+                      },
+                      "guardianId": "681ddd3d0fafb09649480024",
+                      "bookId": {
+                          "_id": "68349f157d1701603e0ee883",
+                          "title": "Think Sustainability",
+                          "image": "https://example.com/course-cover.jpg",
+                          "series": [
+                              "68349fed7d1701603e0ee88c"
+                          ],
+                          "createdAt": "2025-05-26T17:04:21.781Z",
+                          "updatedAt": "2025-05-26T17:07:57.846Z"
+                      },
+                      "assignedSeries": [
+                          {
+                              "progress": 0,
+                              "status": "not started",
+                              "completedAt": null,
+                              "seriesId": "68349fed7d1701603e0ee88c",
+                              "assignedAt": "2025-06-09T13:54:43.691Z"
+                          }
+                      ],
+                      "assignedChapters": [
+                          {
+                              "progress": 0,
+                              "status": "not started",
+                              "assignedAt": "2025-06-09T13:54:43.692Z",
+                              "completedAt": null,
+                              "chapterId": "683a39136947b7ea5a1e71f1",
+                              "completedLessons": []
+                          },
+                          {
+                              "progress": 100,
+                              "status": "completed",
+                              "assignedAt": "2025-06-09T14:29:27.548Z",
+                              "completedAt": "2025-06-10T06:43:06.659Z",
+                              "chapterId": "6834a05d7d1701603e0ee894",
+                              "completedLessons": []
+                          }
+                      ],
+                      "assignmentsCompleted": 0,
+                      "totalLearningHours": 0,
+                      "progressPercentage": 25,
+                      "status": "in progress",
+                      "completedAt": null,
+                      "completedAssignments": [],
+                      "badgesUnlocked": [],
+                      "createdAt": "2025-06-09T13:54:43.693Z",
+                      "updatedAt": "2025-06-10T06:43:06.678Z"
+                  }
+              ]
+          }

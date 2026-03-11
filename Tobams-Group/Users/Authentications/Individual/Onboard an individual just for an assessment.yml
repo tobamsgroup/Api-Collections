@@ -1,0 +1,31 @@
+info:
+  name: Onboard an individual just for an assessment
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/sign-up"
+  body:
+    type: json
+    data: |
+      {
+          "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+          "role": "Individual",
+          "firstName": "Fawaz",
+          "lastName": "Abdganiyu",
+          "title": "Backend Developer",
+          "telephone": "+2348179656740",
+          "location": {
+              "country": "Nigeria",
+              "state": "Oyo"
+          },
+          "occupation": "Software Engineer"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,83 @@
+info:
+  name: Add product to cart
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{URL}}/cart/create"
+  body:
+    type: json
+    data: |-
+      {
+          "userId": "sdbdu223-3nucu232-3244-32894",
+          "item": [
+              {
+                  "product": "657992a882d01c835f01da54",
+                  "spice_level": "Hot",
+                  "number_of_pack": "single",
+                  "size": "900g",
+                  "side_protein": null,
+                  "sales_price": 7.49,
+                  "quantity":10,
+                  "calculatedPrice": 93.45,
+                  "stock_quantity": 100,
+                  "SKU": "SKU123",
+                  "variation_Id": "657992a882d01c835f01da55",
+                  "prefferedDeliveryDate": "23-12-2023"
+                  }
+              ],
+          "bill": 102.34
+      }
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Add product to cart
+    request:
+      url: "{{URL}}/cart/create"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "product": "652da12b3e613555a5105bce",
+              "spiceLevel": "Mild hot",
+              "price": 5000,
+              "size": "200g",
+              "productType": "beef",
+              "quantity":7
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "69"
+        - name: ETag
+          value: W/"45-CDZeyRhhW3gBHB+dot92uDJDYVo"
+        - name: Date
+          value: Tue, 17 Oct 2023 02:30:48 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Product has been added to cart successfully",
+              "data": null
+          }

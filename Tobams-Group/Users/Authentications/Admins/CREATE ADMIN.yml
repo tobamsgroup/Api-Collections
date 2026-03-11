@@ -1,0 +1,285 @@
+info:
+  name: CREATE ADMIN
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/admin/add"
+  body:
+    type: json
+    data: "{\r
+
+      \    // \"fullName\": \"Isreal Adigun\",\r
+
+      \    // \"email\": \"isrealadigun@tobamsgroup.com\",\r
+
+      \    // \"telephone\": \"+2347069786222\",\r
+
+      \    // \"password\": \"123456\",\r
+
+      \    // \"role\": \"Admin\",\r
+
+      \    // \"privilege\": [\"USER MANAGEMENT\"],\r
+
+      \    // \"type\": \"emailOtp\"  \r
+
+      \    \"fullName\": \"Fawaz Abdganiyu\",\r
+
+      \    \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\",\r
+
+      \    \"telephone\": \"+2348179656740\",\r
+
+      \    \"password\": \"Password123!\",\r
+
+      \    \"role\": \"Admin\",\r
+
+      \    \"privilege\": [\"USER MANAGEMENT\", \"JOB POST MANAGEMENT\"],\r
+
+      \    \"type\": \"emailOtp\" \r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{super_admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: create
+    request:
+      url: "{{URL}}/admin/add"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"fullName\": \"Isreal Adigun\",\r
+
+          \    \"email\": \"isrealadigun@tobamsgroup.com\",\r
+
+          \    \"telephone\": \"+2347069786222\",\r
+
+          \    \"password\": \"123456\",\r
+
+          \    \"role\": \"Admin\",\r
+
+          \    \"privilege\": [\"USER MANAGEMENT\"],\r
+
+          \    \"type\": \"emailOtp\"  \r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "521"
+        - name: ETag
+          value: W/"209-6txVRHsi2eWiRkCJLnbXS7eKIDQ"
+        - name: Date
+          value: Thu, 25 Jul 2024 17:09:47 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Admin Account created",
+              "data": {
+                  "Contact": {
+                      "email": "isrealadigun@tobamsgroup.com",
+                      "telephone": "+2347069786222"
+                  },
+                  "password": "$2a$10$7rFbJ4fXtNhfXK9fr1EuKeqk7HddOraC4MsP5yf8A5cNt6aWSpEqG",
+                  "role": "Admin",
+                  "isVerified": false,
+                  "MFA": false,
+                  "accountStatus": "Active",
+                  "notificationPreference": [
+                      "Email",
+                      "Push",
+                      "Sms"
+                  ],
+                  "firstName": "Isreal",
+                  "lastName": "Adigun",
+                  "privilege": [
+                      "USER MANAGEMENT"
+                  ],
+                  "_id": "66a286da7755217fba8b690a",
+                  "deletedHistory": [],
+                  "createdAt": "2024-07-25T17:09:46.568Z",
+                  "updatedAt": "2024-07-25T17:09:46.568Z"
+              }
+          }
+  - name: duplicate error
+    request:
+      url: "{{URL}}/admin/add"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"fullName\": \"Isreal Adigun\",\r
+
+          \    \"email\": \"isrealadigun@tobamsgroup.com\",\r
+
+          \    \"telephone\": \"+2347069786222\",\r
+
+          \    \"password\": \"123456\",\r
+
+          \    \"role\": \"Admin\",\r
+
+          \    \"privilege\": [\"USER MANAGEMENT\"],\r
+
+          \    \"type\": \"emailOtp\"  \r
+
+          }"
+    response:
+      statusText: "409"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "54"
+        - name: ETag
+          value: W/"36-PF+5KpnWBkth4S1o0q31m/mcVLQ"
+        - name: Date
+          value: Thu, 25 Jul 2024 17:11:50 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Admin already registered"
+          }
+  - name: auth issue
+    request:
+      url: "{{URL}}/admin/add"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"fullName\": \"Isreal Adigun\",\r
+
+          \    \"email\": \"isrealadigun@tobamsgroup.com\",\r
+
+          \    \"telephone\": \"+2347069786222\",\r
+
+          \    \"password\": \"123456\",\r
+
+          \    \"role\": \"Admin\",\r
+
+          \    \"privilege\": [\"USER MANAGEMENT\"],\r
+
+          \    \"type\": \"emailOtp\"  \r
+
+          }"
+    response:
+      statusText: "403"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: text/plain; charset=utf-8
+        - name: Content-Length
+          value: "9"
+        - name: ETag
+          value: W/"9-PatfYBLj4Um1qTm5zrukoLhNyPU"
+        - name: Date
+          value: Thu, 25 Jul 2024 17:15:27 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: text
+        data: Forbidden

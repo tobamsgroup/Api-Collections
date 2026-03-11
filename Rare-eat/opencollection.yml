@@ -1,0 +1,40 @@
+opencollection: 1.0.0
+
+info:
+  name: Rare-eat
+
+request:
+  auth:
+    type: oauth2
+    flow: client_credentials
+    credentials:
+      clientId: "{{clientId}}"
+      clientSecret: "{{clientSecret}}"
+      placement: basic_auth_header
+    tokenConfig:
+      placement: {}
+  variables:
+    - name: grant_type
+      value: ""
+    - name: accessToken
+      value: ""
+    - name: tokenType
+      value: ""
+    - name: expires_in
+      value: ""
+    - name: tokenName
+      value: ""
+    - name: token_id
+      value: ""
+    - name: timestamp
+      value: ""
+    - name: clientId
+      value: ""
+    - name: clientSecret
+      value: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

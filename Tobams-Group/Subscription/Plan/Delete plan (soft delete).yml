@@ -1,0 +1,18 @@
+info:
+  name: Delete plan (soft delete)
+  type: http
+  seq: 8
+
+http:
+  method: DELETE
+  url: "{{BASE}}/plans/688772e850412d1e84333089"
+  body:
+    type: text
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

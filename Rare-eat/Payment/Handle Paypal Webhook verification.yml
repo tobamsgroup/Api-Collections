@@ -1,0 +1,18 @@
+info:
+  name: Handle Paypal Webhook verification
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{URL}}/webhooks/paypal_webhooks"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

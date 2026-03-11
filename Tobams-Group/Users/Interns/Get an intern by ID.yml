@@ -1,0 +1,15 @@
+info:
+  name: Get an intern by ID
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{BASE}}/interns/67b65c0c2478ee6593c4983a"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

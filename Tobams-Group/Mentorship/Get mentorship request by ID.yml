@@ -1,0 +1,17 @@
+info:
+  name: Get mentorship request by ID
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/mentorship/requests/67cec1bd4e992fe35bd577cd"
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

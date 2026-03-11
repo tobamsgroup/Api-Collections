@@ -1,0 +1,24 @@
+info:
+  name: USER MFA SEND OTP
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{URL}}/auth/user/activate_multifactor_authentication"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"john@gmail.com\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{URL}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

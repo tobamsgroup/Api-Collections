@@ -1,0 +1,44 @@
+info:
+  name: register
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/ambassador/register"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"firstName\": \"Taofeeq\",\r
+
+      \    \"lastName\": \"abdulrasaq\",\r
+
+      \    \"telephone\": \"+2347069786151\",\r
+
+      \    \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\",\r
+
+      \    \"nameOfUniversity\": \"Eksu\",\r
+
+      \    \"courseOfStudy\": \"Chemistry\",\r
+
+      \    \"currentLevel\": \"Graduate\",\r
+
+      \    \"bio\": \"I am a backend Nodejs developer with maximum years permitted of experience\",\r
+
+      \    \"reasonsToBecomeAmbassador\": \"I wanna chop una money run\",\r
+
+      \    \"howDidYouHearAboutUS\": \"Tell a friend to tell a friend\",\r
+
+      \    \"url\": \"https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1720443136723_16033720491.pdf\",\r
+
+      \    \"fileData\": \"my-file-data???\"\r
+
+      \ }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

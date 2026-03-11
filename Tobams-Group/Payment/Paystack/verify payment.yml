@@ -1,0 +1,374 @@
+info:
+  name: verify payment
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/pay/verify?paymentProvider=paystack&ref=ole3tb3fx6"
+  params:
+    - name: paymentProvider
+      value: paystack
+      type: query
+    - name: ref
+      value: ole3tb3fx6
+      type: query
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Veification Payload
+    request:
+      url: "{{BASE}}/pay/paystack/payment?ref=pw8w90kh2d"
+      method: GET
+      params:
+        - name: ref
+          value: pw8w90kh2d
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1590"
+        - name: ETag
+          value: W/"636-WcM68C9I3xFcHwU8pSECj+ykWVo"
+        - name: Date
+          value: Tue, 04 Jun 2024 16:55:12 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "result": {
+                  "status": true,
+                  "message": "Verification successful",
+                  "data": {
+                      "id": 3849171379,
+                      "domain": "test",
+                      "status": "success",
+                      "reference": "pw8w90kh2d",
+                      "receipt_number": null,
+                      "amount": 200000,
+                      "message": null,
+                      "gateway_response": "Successful",
+                      "paid_at": "2024-06-04T16:26:21.000Z",
+                      "created_at": "2024-06-04T16:25:02.000Z",
+                      "channel": "card",
+                      "currency": "NGN",
+                      "ip_address": "105.113.19.21",
+                      "metadata": {
+                          "userId": "qwertyuiopasdfghjkklzxcvbnm",
+                          "purpose": "payment"
+                      },
+                      "log": {
+                          "start_time": 1717518352,
+                          "time_spent": 21,
+                          "attempts": 1,
+                          "errors": 0,
+                          "success": true,
+                          "mobile": false,
+                          "input": [],
+                          "history": [
+                              {
+                                  "type": "action",
+                                  "message": "Attempted to pay with card",
+                                  "time": 20
+                              },
+                              {
+                                  "type": "success",
+                                  "message": "Successfully paid with card",
+                                  "time": 21
+                              }
+                          ]
+                      },
+                      "fees": 3000,
+                      "fees_split": null,
+                      "authorization": {
+                          "authorization_code": "AUTH_3dzqbhy46c",
+                          "bin": "408408",
+                          "last4": "4081",
+                          "exp_month": "12",
+                          "exp_year": "2030",
+                          "channel": "card",
+                          "card_type": "visa ",
+                          "bank": "TEST BANK",
+                          "country_code": "NG",
+                          "brand": "visa",
+                          "reusable": true,
+                          "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+                          "account_name": null,
+                          "receiver_bank_account_number": null,
+                          "receiver_bank": null
+                      },
+                      "customer": {
+                          "id": 170453637,
+                          "first_name": null,
+                          "last_name": null,
+                          "email": "ola@gmail.com",
+                          "customer_code": "CUS_i35tb87668gocyi",
+                          "phone": null,
+                          "metadata": null,
+                          "risk_action": "default",
+                          "international_format_phone": null
+                      },
+                      "plan": null,
+                      "split": {},
+                      "order_id": null,
+                      "paidAt": "2024-06-04T16:26:21.000Z",
+                      "createdAt": "2024-06-04T16:25:02.000Z",
+                      "requested_amount": 200000,
+                      "pos_transaction_data": null,
+                      "source": null,
+                      "fees_breakdown": null,
+                      "connect": null,
+                      "transaction_date": "2024-06-04T16:25:02.000Z",
+                      "plan_object": {},
+                      "subaccount": {}
+                  }
+              }
+          }
+  - name: verify payment
+    request:
+      url: "{{BASE}}/pay/verify?paymentProvider=paystack&ref=ole3tb3fx6"
+      method: GET
+      params:
+        - name: paymentProvider
+          value: paystack
+          type: query
+        - name: ref
+          value: ole3tb3fx6
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 17 Feb 2026 13:10:40 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: CF-RAY
+          value: 9cf586ab2800edf4-LHR
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: Content-Encoding
+          value: br
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"858-OQQ6+cqrVrhcxYLdrNAiPpepCKU"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 84d1f51f-c93d-4c63
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1771333838991-jc9eqt0ne
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "status": true,
+              "message": "Verification successful",
+              "data": {
+                  "id": 3852977703,
+                  "domain": "test",
+                  "status": "success",
+                  "reference": "ole3tb3fx6",
+                  "receipt_number": null,
+                  "amount": 10000000,
+                  "message": "test-3ds",
+                  "gateway_response": "[Test] Approved",
+                  "paid_at": "2024-06-06T03:16:03.000Z",
+                  "created_at": "2024-06-06T03:14:12.000Z",
+                  "channel": "card",
+                  "currency": "NGN",
+                  "ip_address": "105.113.16.80",
+                  "metadata": {
+                      "userId": "qwertyuiopasdfghjkklzxcvbnm",
+                      "purpose": "payment"
+                  },
+                  "log": {
+                      "start_time": 1717643694,
+                      "time_spent": 64,
+                      "attempts": 1,
+                      "authentication": "3DS",
+                      "errors": 0,
+                      "success": true,
+                      "mobile": false,
+                      "input": [],
+                      "history": [
+                          {
+                              "type": "action",
+                              "message": "Set payment method to: bank_transfer",
+                              "time": 7
+                          },
+                          {
+                              "type": "action",
+                              "message": "Set payment method to: bank",
+                              "time": 23
+                          },
+                          {
+                              "type": "action",
+                              "message": "Set payment method to: ussd",
+                              "time": 30
+                          },
+                          {
+                              "type": "action",
+                              "message": "Set payment method to: opay",
+                              "time": 37
+                          },
+                          {
+                              "type": "action",
+                              "message": "Set payment method to: card",
+                              "time": 44
+                          },
+                          {
+                              "type": "action",
+                              "message": "Attempted to pay with card",
+                              "time": 47
+                          },
+                          {
+                              "type": "auth",
+                              "message": "Authentication Required: 3DS",
+                              "time": 48
+                          },
+                          {
+                              "type": "action",
+                              "message": "Third-party authentication window opened",
+                              "time": 50
+                          },
+                          {
+                              "type": "success",
+                              "message": "Successfully paid with card",
+                              "time": 64
+                          }
+                      ]
+                  },
+                  "fees": 160000,
+                  "fees_split": null,
+                  "authorization": {
+                      "authorization_code": "AUTH_817o0yt3gz",
+                      "bin": "408408",
+                      "last4": "0409",
+                      "exp_month": "01",
+                      "exp_year": "2030",
+                      "channel": "card",
+                      "card_type": "visa ",
+                      "bank": "TEST BANK",
+                      "country_code": "NG",
+                      "brand": "visa",
+                      "reusable": true,
+                      "signature": "SIG_oyZKx3b97efusrbCvyHJ",
+                      "account_name": null,
+                      "receiver_bank_account_number": null,
+                      "receiver_bank": null
+                  },
+                  "customer": {
+                      "id": 170543653,
+                      "first_name": null,
+                      "last_name": null,
+                      "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+                      "customer_code": "CUS_wwj2q0t4qtbvule",
+                      "phone": null,
+                      "metadata": null,
+                      "risk_action": "default",
+                      "international_format_phone": null
+                  },
+                  "plan": null,
+                  "split": {},
+                  "order_id": null,
+                  "paidAt": "2024-06-06T03:16:03.000Z",
+                  "createdAt": "2024-06-06T03:14:12.000Z",
+                  "requested_amount": 10000000,
+                  "pos_transaction_data": null,
+                  "source": null,
+                  "fees_breakdown": null,
+                  "connect": null,
+                  "transaction_date": "2024-06-06T03:14:12.000Z",
+                  "plan_object": {},
+                  "subaccount": {}
+              }
+          }

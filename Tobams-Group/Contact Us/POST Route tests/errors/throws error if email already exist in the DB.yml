@@ -1,0 +1,28 @@
+info:
+  name: throws error if email already exist in the DB
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{URL}}/contact-us/"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"fullName\": \"Men them\",\r
+
+      \  \"email\": \"james@ebuthor.com\",\r
+
+      \  \"subject\": \"Issues with my dashboard\",\r
+
+      \  \"message\": \"I cant find the job applications action on my dashboard. Please assist in rectifying as i ned to use this immediately. Thank you\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: UPLOAD PRODUCT IMAGE
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{URL}}/companies/product/image/upload/651d7c51d5306db625709abe"
+  body:
+    type: multipart-form
+    data:
+      - name: image
+        type: file
+        value:
+          - /C:/Users/HP/Desktop/TOBAMSGROUP-COMPANY/rare-eat-project/Server/img/computer-1.jpeg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,197 @@
+info:
+  name: Get a group by its ID
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{BASE}}/mentorship/groups/67ce252955ec18df53a3f510"
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get a group by its ID
+    request:
+      url: "{{BASE}}/mentorship/groups/67ce252955ec18df53a3f510"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "3585"
+        - name: ETag
+          value: W/"e01-Kn7c83DJKzdm7i/nvJbg370eZlo"
+        - name: Date
+          value: Fri, 18 Apr 2025 10:19:05 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Group fetched successfully",
+              "data": {
+                  "mentorshipData": {
+                      "isActive": true,
+                      "duration": "3 Months",
+                      "startDate": "2025-01-01T00:00:00.000Z",
+                      "endDate": "2025-06-30T00:00:00.000Z",
+                      "timeZone": "GMT +1",
+                      "availability": "Weekdays",
+                      "startTime": "9:00 AM",
+                      "endTime": "12:00 PM"
+                  },
+                  "_id": "67ce252955ec18df53a3f510",
+                  "roomName": "Advertisers and Strategists Update",
+                  "participants": [],
+                  "members": [
+                      {
+                          "userId": "67b66148ad4271308086ad89",
+                          "fullName": "Fawaz Agara",
+                          "title": "Software Engineer",
+                          "_id": "67ce252955ec18df53a3f511",
+                          "joinedAt": "2025-03-09T23:32:57.032Z"
+                      },
+                      {
+                          "userId": "67b661d7c84dd7079b9e7d56",
+                          "fullName": "Vincent Rosenbaum",
+                          "title": "Backend Developer",
+                          "_id": "67d1617f413de3e4c0814781",
+                          "joinedAt": "2025-03-12T10:27:11.377Z"
+                      },
+                      {
+                          "userId": "67b65c0c2478ee6593c4983a",
+                          "fullName": "Monserrat Reynolds",
+                          "title": "Fullstack Developer",
+                          "_id": "67dd4ded042ec58336e3f7e3",
+                          "joinedAt": "2025-03-21T11:30:53.831Z"
+                      }
+                  ],
+                  "roomTypes": "group",
+                  "description": "Advertising strategy, campaign management, and creative storytelling.",
+                  "admin": [
+                      "67b66148ad4271308086ad89"
+                  ],
+                  "createdBy": {
+                      "_id": "67b66148ad4271308086ad89",
+                      "title": "Software Engineer",
+                      "occupation": "tests",
+                      "bio": "Experienced technology mentor with 10+ years in software development",
+                      "firstName": "Sasha",
+                      "lastName": "Alex Sloan",
+                      "email": "fawazmentor@gmail.com",
+                      "location": {
+                          "city": "Wilmington",
+                          "country": "Cocos (Keeling) Islands"
+                      },
+                      "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1743623668168_digital-marketer.webp",
+                      "skills": [
+                          "Agile Methodologies",
+                          "Strategic Planning",
+                          "Leadership"
+                      ],
+                      "mentorshipType": "Group, One-to-one",
+                      "averageRating": 3,
+                      "companyName": "Hilpert LLC",
+                      "status": "Pending",
+                      "createdAt": "2025-02-19T22:55:05.805Z",
+                      "updatedAt": "2025-04-02T19:58:04.769Z",
+                      "yearsOfExperience": "6-10 years",
+                      "availability": [
+                          {
+                              "days": [
+                                  "2025-04-30T23:00:00.000Z"
+                              ],
+                              "times": [
+                                  "12:45 PM - 02:15 PM",
+                                  "10:30 AM - 12:00 PM"
+                              ],
+                              "_id": "67ed96cc51931fcd3073235d"
+                          },
+                          {
+                              "days": [
+                                  "Weekdays"
+                              ],
+                              "times": [
+                                  "09:00 AM - 03:45 PM",
+                                  "01:00 PM - 03:45 PM"
+                              ],
+                              "_id": "67ed96cc51931fcd3073235e"
+                          },
+                          {
+                              "days": [
+                                  "Weekends"
+                              ],
+                              "times": [
+                                  "04:00 PM - 07:00 PM"
+                              ],
+                              "_id": "67ed96cc51931fcd3073235f"
+                          }
+                      ]
+                  },
+                  "aboutGroup": "Group Focus\nThis group is dedicated to nurturing aspiring and experienced product designers who are passionate about crafting intuitive, user-friendly digital experiences. Our focus is on building strong foundations in UI/UX design, from understanding the fundamentals of design principles to mastering advanced tools like Figma and Sketch. You'll dive deep into user research, wireframing, prototyping, and usability testing, all while learning how to communicate effectively with stakeholders and developers.\n\nKey Topics Covered\n-User Research & Empathy Mapping\n-Wireframing & Prototyping\n-Visual Design Principles\n-Usability Testing\n-Design Systems\n-Collaboration with Developers\n\nWhy join?\nWhether you’re new to the field or looking to refine your design skills, this group provides hands-on guidance to enhance your portfolio and prepare for real-world challenges. With personalized feedback on your design projects and collaborative group critiques, you’ll gain the confidence and expertise to take on complex design problems.\n\nAvailability\nWe offer weekly mentoring sessions, design sprints, and interactive workshops. Flexible time slots are available to accommodate different schedules.",
+                  "skills": [
+                      "Comunication",
+                      "Computer Science",
+                      "Problem Solving Skills"
+                  ],
+                  "limit": 10,
+                  "permissions": {
+                      "userId": [
+                          "create",
+                          "edit",
+                          "delete",
+                          "remove",
+                          "restrict"
+                      ]
+                  },
+                  "rules": [],
+                  "createdAt": "2025-03-09T23:32:57.037Z",
+                  "updatedAt": "2025-03-21T15:19:45.468Z",
+                  "availability": "Mondays"
+              }
+          }

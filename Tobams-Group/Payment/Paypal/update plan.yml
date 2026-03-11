@@ -1,0 +1,24 @@
+info:
+  name: update plan
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{URL}}/pay/paypal/update-plan/P-2FY64693X5642102NMYZIXMY"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Test Monthly Plan\",\r
+
+      \    \"failure_threshold\": 1\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

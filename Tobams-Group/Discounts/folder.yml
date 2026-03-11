@@ -1,0 +1,7 @@
+info:
+  name: Discounts
+  type: folder
+  seq: 34
+
+request:
+  auth: inherit

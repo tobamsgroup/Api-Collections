@@ -1,0 +1,11 @@
+info:
+  name: Feedback
+  type: folder
+  seq: 26
+
+request:
+  auth: inherit
+
+docs:
+  content: User feedback
+  type: text/markdown

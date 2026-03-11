@@ -1,0 +1,198 @@
+info:
+  name: All Proposals
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/projects/all?page=0&limit=10"
+  params:
+    - name: page
+      value: "0"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Page exceeded
+    request:
+      url: "{{@harek}}/projects/1"
+      method: GET
+    response:
+      statusText: "206"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "53"
+        - name: ETag
+          value: W/"35-UH0SGXHOhIjaD4h4eFOHepoIhY8"
+        - name: Date
+          value: Fri, 08 Mar 2024 15:42:26 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "proposals": "There are no proposals"
+          }
+  - name: Success
+    request:
+      url: "{{BASE}}/projects/all?page=0&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "0"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1229"
+        - name: ETag
+          value: W/"4cd-X+uBiOJND2enHvW4UPsYU9cKud0"
+        - name: Date
+          value: Wed, 27 Mar 2024 14:38:19 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "proposals": {
+                  "list": [
+                      {
+                          "_id": "65ea2cc4d7b1047e11229bd3",
+                          "firstName": "Mic",
+                          "lastName": "Kings",
+                          "company": "Blackberry Inc",
+                          "country": "Wales",
+                          "email": "ander.colin@yahoo.co.uk",
+                          "telephone": "+416749996708",
+                          "projectStack": [
+                              "Mobile App Development",
+                              "Website Design and Development",
+                              "Creative and Digital Media"
+                          ],
+                          "description": "I just wanted a simple website"
+                      },
+                      {
+                          "_id": "65ea39ff8291e5cd4db7b2dd",
+                          "firstName": "Arekhandia",
+                          "lastName": "Harek",
+                          "company": "Blackberry Inc",
+                          "country": "Wales",
+                          "email": "harry.p307068687200@yahoo.com",
+                          "telephone": "+2347068687200",
+                          "projectStack": [
+                              "Mobile App Development"
+                          ],
+                          "description": "I need an app for my hospital"
+                      },
+                      {
+                          "_id": "65ea3b730827fcd65ffff765",
+                          "firstName": "Taofeeq",
+                          "lastName": "Abdulrasaq",
+                          "company": "Blackberry Inc",
+                          "country": "Wales",
+                          "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+                          "telephone": "+2347068687200",
+                          "projectStack": [
+                              "Mobile App Development"
+                          ],
+                          "description": "I need an app for my hospital"
+                      },
+                      {
+                          "_id": "65ea3d3f6ad7c4d2f52f260c",
+                          "firstName": "Inemsit",
+                          "lastName": "Udousoro",
+                          "company": "Blackberry Inc",
+                          "country": "Wales",
+                          "email": "inem.udousoro@tobamsgroup.com",
+                          "telephone": "+2347068687200",
+                          "projectStack": [
+                              "Mobile App Development"
+                          ],
+                          "description": "I need an app for my hospital"
+                      }
+                  ],
+                  "count": 4
+              }
+          }
+
+docs: |-
+  ## View all Proposals
+
+  This is paginated request endpoint. The request limit is limited to 10 documents per page. The `page number` is parsed as a number param starting from page `0`. A `206 Partial Content` status is thrown when a page number that exceeds the limit is parsed as params

@@ -1,0 +1,28 @@
+info:
+  name: UPLOAD COMBOL IMAGE
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{URL}}/subscription/combo_meal/image/upload?combol_Id=65d03243f5b9ac463bb4781f"
+  params:
+    - name: combol_Id
+      value: 65d03243f5b9ac463bb4781f
+      type: query
+  body:
+    type: multipart-form
+    data:
+      - name: image
+        type: file
+        value:
+          - /C:/Users/HP/Desktop/rare-eat-project-backend/rare-eat-project-BE/img/user-avatar.png
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

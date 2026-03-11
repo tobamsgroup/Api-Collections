@@ -1,0 +1,205 @@
+info:
+  name: Child login
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/login/kid"
+  body:
+    type: json
+    data: |-
+      {
+          "username": "AbduBilal-olareign",
+          "password": "Passme",
+          "rememberMe": true
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        bru.setEnvVar("access", res.getBody().data.accessToken);
+        bru.setEnvVar("refresh", res.getBody().data.refreshToken);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Child login
+    request:
+      url: "{{base_url}}/auth/login/kid"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "username": "Solomon",
+              "password": "Passme"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1117"
+        - name: ETag
+          value: W/"45d-RM8Xb+CU3Dp8yr/iML7XirQrBhY"
+        - name: Date
+          value: Fri, 02 May 2025 15:50:46 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Child logged in successfully",
+              "timestamp": "2025-05-02T15:50:46.480Z",
+              "path": "/api/v1/auth/login/kid",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "_id": "6810a83102069c522c9f7081",
+                  "password": "$2b$10$IRfZ0eA/al32rpTzA3PDEu4.G.8fFG0XGTbd2mNlr3qwwzyINVnaO",
+                  "role": "Kid",
+                  "kidIds": [],
+                  "name": "Sulaiman Solomon",
+                  "username": "Solomon",
+                  "age": 10,
+                  "preferredLearningTopics": "Think Entrepreneurship",
+                  "createdAt": "2025-04-29T10:21:37.743Z",
+                  "updatedAt": "2025-04-29T10:21:37.743Z",
+                  "guardianId": "68109c367a8ba93e1d9c6820",
+                  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwYTgzMTAyMDY5YzUyMmM5ZjcwODEiLCJuYW1lIjoiU3VsYWltYW4gU29sb21vbiIsInVzZXJuYW1lIjoiU29sb21vbiIsInJvbGUiOiJLaWQiLCJpYXQiOjE3NDYyMDEwNDYsImV4cCI6MTc0NjI4NzQ0Nn0.FMiWQYHrxKuarVs_4SXl59FT9C3DpDXYiT4S35rSJ3A",
+                  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODEwYTgzMTAyMDY5YzUyMmM5ZjcwODEiLCJuYW1lIjoiU3VsYWltYW4gU29sb21vbiIsInVzZXJuYW1lIjoiU29sb21vbiIsInJvbGUiOiJLaWQiLCJpYXQiOjE3NDYyMDEwNDYsImV4cCI6MTc0NjgwNTg0Nn0.1UYmMbvKHRAL5A6tiIszpZGX-Y0IDSJhdBp4Pu8tR1I",
+                  "expiresIn": "86400000 milliseconds"
+              }
+          }
+
+docs: |-
+  # Child Login Endpoint
+
+  ## Purpose
+
+  This endpoint authenticates a child user on the RL4Kids platform and returns their profile information along with authentication tokens.
+
+  ## Request Details
+
+  **Method:** `POST`  
+  **Endpoint:** `/auth/login/kid`  
+  **URL:** `{{base_url}}/auth/login/kid`
+
+  ## Request Body Parameters
+
+  The request requires a JSON body with the following parameters:
+
+  | Parameter | Type | Required | Description |
+  | --- | --- | --- | --- |
+  | `username` | string | Yes | The child's username |
+  | `password` | string | Yes | The child's password |
+  | `rememberMe` | boolean | Yes | Whether to remember the login session |
+
+  ### Example Request Body
+
+  ``` json
+  {
+    "username": "AbduBilal-olareign",
+    "password": "Passme",
+    "rememberMe": true
+  }
+
+   ```
+
+  ## Response
+
+  **Success Status Code:** `200` or `201`
+
+  ### Response Data Structure
+
+  The successful response includes:
+
+  - **User Profile Information:**
+      
+      - `_id`: User's unique identifier
+          
+      - `username`: Child's username
+          
+      - `name`: Child's full name
+          
+      - `age`: Child's age
+          
+      - `role`: User role (kid)
+          
+      - `preferredLearningTopics`: Array of learning topics
+          
+      - `mood`: Current mood status
+          
+      - `guardianId`: Associated guardian's ID
+          
+      - `picture`: Profile picture URL
+          
+      - `totalXp`: Total experience points earned
+          
+      - `earnedBadges`: Array of badges earned
+          
+      - `createdAt`: Account creation timestamp
+          
+      - `updatedAt`: Last update timestamp
+          
+      - `lastLogin`: Last login timestamp
+          
+  - **Authentication Tokens:**
+      
+      - `accessToken`: JWT access token for API authentication
+          
+      - `refreshToken`: JWT refresh token for obtaining new access tokens
+          
+      - `expiresIn`: Token expiration time in milliseconds (2592000000 ms = 30 days)
+          
+
+  ### Example Response
+
+  ``` json
+  {
+    "statusCode": 200,
+    "message": "Child logged in successfully",
+    "timestamp": "2025-12-09T09:37:42.592Z",
+    "path": "/api/v1/auth/login/kid",
+    "service": "RL4Kids",
+    "version": "1.0.0",
+    "data": {
+      "_id": "68fa61bf5fa8660a37eaa6ee",
+      "username": "abdubilal-olareign",
+      "name": "abdulrasaq bilal",
+      "age": 12,
+      "role": "kid",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+      "expiresIn": "2592000000 milliseconds"
+    }
+  }
+
+   ```
+
+  ## Post-Response Script
+
+  This request includes a post-response script that automatically extracts and saves the authentication tokens to environment variables:
+
+  - `access`: Stores the `accessToken` from the response
+      
+  - `refresh`: Stores the `refreshToken` from the response
+      
+
+  These tokens are then available for use in subsequent API requests that require authentication.

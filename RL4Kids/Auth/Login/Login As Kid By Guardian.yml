@@ -1,0 +1,165 @@
+info:
+  name: Login As Kid By Guardian
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/login-as-kid/68944eca0653a221154e45d2"
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: text
+    data: ""
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Login As Kid
+    request:
+      url: "{{base_url}}/auth/login-as-kid/68944eca0653a221154e45d2"
+      method: POST
+      params:
+        - name: ""
+          value: ""
+          type: query
+          disabled: true
+      body:
+        type: text
+        data: ""
+    response:
+      statusText: "201"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1096"
+        - name: ETag
+          value: W/"448-GfL/db6i9XFTJERj3ROlxx3gwyc"
+        - name: Date
+          value: Thu, 07 Aug 2025 11:51:16 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Guardian Logged In successfully",
+              "timestamp": "2025-08-07T11:51:16.295Z",
+              "path": "/api/v1/auth/login-as-kid/68944eca0653a221154e45d2",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "_id": "68944eca0653a221154e45d2",
+                  "username": "Abdulrasaq",
+                  "name": "abdulrasaq ola",
+                  "age": 12,
+                  "preferredLearningTopics": [
+                      "Think Sustainability"
+                  ],
+                  "role": "kid",
+                  "guardianId": "68944d540653a221154e45bc",
+                  "picture": "",
+                  "earnedBadges": [],
+                  "createdAt": "2025-08-07T06:59:22.622Z",
+                  "updatedAt": "2025-08-07T06:59:22.622Z",
+                  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODk0NGVjYTA2NTNhMjIxMTU0ZTQ1ZDIiLCJuYW1lIjoiYWJkdWxyYXNhcSBvbGEiLCJ1c2VybmFtZSI6IkFiZHVscmFzYXEiLCJyb2xlIjoia2lkIiwiaWF0IjoxNzU0NTY3NDc2LCJleHAiOjE3NTQ2NTM4NzZ9.xs3Rxqwya1n01P_UthEj3n7feuaOD5REgKYxpYtp59k",
+                  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODk0NGVjYTA2NTNhMjIxMTU0ZTQ1ZDIiLCJuYW1lIjoiYWJkdWxyYXNhcSBvbGEiLCJ1c2VybmFtZSI6IkFiZHVscmFzYXEiLCJyb2xlIjoia2lkIiwiaWF0IjoxNzU0NTY3NDc2LCJleHAiOjE3NTUxNzIyNzZ9.yoNN-JZZ4Y8a0Sf9uf77-wf_O9Tosu8xCz2T5sSV-iM",
+                  "expiresIn": "86400000 milliseconds"
+              }
+          }
+
+docs: |-
+  # Login As Kid By Guardian
+
+  ## Purpose
+  This endpoint allows a guardian (parent or teacher) to log in as one of their associated kids to access the kid's account. This enables guardians to monitor progress, manage settings, or assist with activities on behalf of the child.
+
+  ## Endpoint Details
+  - **Method:** `POST`
+  - **URL:** `{{base_url}}/auth/login-as-kid/{kidId}`
+
+  ## Path Parameters
+  | Parameter | Type | Required | Description |
+  |-----------|------|----------|-------------|
+  | `kidId` | string | Yes | The unique identifier of the kid account to log in as. This must be a kid associated with the authenticated guardian. |
+
+  ## Authentication Requirements
+  This endpoint requires guardian authentication. The request must include a valid guardian access token in the authorization header:
+  - **Header:** `Authorization: Bearer {{access}}`
+  - The `{{access}}` variable should contain a valid guardian access token obtained from the guardian login endpoint.
+
+  ## Response Details
+  **Success Response (201 Created):**
+
+  Returns a comprehensive response containing:
+  - **Status Information:** Status code, message, timestamp, path, service name, and version
+  - **Kid Profile Data:**
+    - `_id`: Kid's unique identifier
+    - `username`: Kid's username
+    - `name`: Kid's full name
+    - `age`: Kid's age
+    - `preferredLearningTopics`: Array of learning topics the kid is interested in
+    - `role`: User role (always "kid")
+    - `guardianId`: ID of the associated guardian
+    - `picture`: Profile picture URL
+    - `earnedBadges`: Array of badges earned by the kid
+    - `mood`: Current mood status
+    - `totalXp`: Total experience points earned
+    - `createdAt`: Account creation timestamp
+    - `updatedAt`: Last update timestamp
+  - **Authentication Tokens:**
+    - `accessToken`: New JWT access token for the kid's session
+    - `refreshToken`: New JWT refresh token for session renewal
+    - `expiresIn`: Token expiration time in milliseconds (86400000 ms = 24 hours)
+
+  ## Example Use Case
+  A parent wants to check their child's learning progress and help them with a challenging activity. The parent:
+  1. Logs in with their guardian credentials to obtain an access token
+  2. Calls this endpoint with their child's `kidId` in the URL path
+  3. Receives the child's profile data and new authentication tokens
+  4. Uses the returned access token to interact with the API as the child, viewing their progress, earned badges, and learning activities
+
+  This feature is particularly useful for:
+  - Parents monitoring their child's educational progress
+  - Teachers accessing student accounts to provide assistance
+  - Guardians managing multiple kids' accounts from a single login

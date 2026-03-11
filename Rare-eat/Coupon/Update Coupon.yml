@@ -1,0 +1,24 @@
+info:
+  name: Update Coupon
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{URL}}/coupon/update?coupon_code=RARE179KUJY"
+  params:
+    - name: coupon_code
+      value: RARE179KUJY
+      type: query
+  body:
+    type: json
+    data: "{\r\n    \"status\":\"inactive\"\r\n}"
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

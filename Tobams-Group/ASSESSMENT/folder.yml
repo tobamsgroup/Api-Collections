@@ -1,0 +1,7 @@
+info:
+  name: ASSESSMENT
+  type: folder
+  seq: 16
+
+request:
+  auth: inherit

@@ -1,0 +1,26 @@
+info:
+  name: create contact us with Subject omitted
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{BASE}}/contact-us/"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"fullName\": \"Men14 them14\",\r
+
+      \  \"email\": \"enamesit14@gmail.com\",\r
+
+      \  \"message\": \"I cant find the job applications action on my dashboard. Please assist in rectifying as i ned to use this immediately. Thank you\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: send newsletter to multiple subscribers
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{BASE}}/newsletter/sendToMultiple"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"subject\": \"THIS IS THE subject\",\r
+
+      \    \"comment\": \"This is the admin comment for newsletter\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

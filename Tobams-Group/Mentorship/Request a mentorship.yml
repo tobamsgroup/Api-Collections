@@ -1,0 +1,203 @@
+info:
+  name: Request a mentorship
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BASE}}/mentorship/requests"
+  body:
+    type: json
+    data: |-
+      
+      {
+        "receiverId": "67b66148ad4271308086ad75",
+        "content": {
+          "name": "Sarah Johnson",
+          "message": "My name is Sarah Johnson, and I’m an intern in product design at Creative Minds Studio. \nI’ve been following your work on the UX Redesign Project for BloomTech, and I deeply admire your approach to creating impactful and user-centered designs.\n\nI’m currently working on refining my skills in prototyping and building user flows for a project aimed at improving educational apps. I believe your guidance would be invaluable as I navigate these areas. Your expertise in designing seamless user experiences and leading innovative projects really resonates with the direction I want to grow in, and I would be honored to learn from you.\n\nIf you’re open to it, I’d love to discuss how we could structure a mentorship that aligns with your availability and expertise.\n\nThank you for considering my request. I look forward to hearing from you! 😊"
+        },
+        "mentorshipType": "One-to-One"
+      }
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: One-to-One request
+    request:
+      url: "{{BASE}}/mentorship/requests"
+      method: POST
+      body:
+        type: json
+        data: |-
+          
+          {
+            "receiverId": "67b66148ad4271308086ad75",
+            "content": {
+              "name": "Sarah Johnson",
+              "message": "My name is Sarah Johnson, and I’m an intern in product design at Creative Minds Studio. \nI’ve been following your work on the UX Redesign Project for BloomTech, and I deeply admire your approach to creating impactful and user-centered designs.\n\nI’m currently working on refining my skills in prototyping and building user flows for a project aimed at improving educational apps. I believe your guidance would be invaluable as I navigate these areas. Your expertise in designing seamless user experiences and leading innovative projects really resonates with the direction I want to grow in, and I would be honored to learn from you.\n\nIf you’re open to it, I’d love to discuss how we could structure a mentorship that aligns with your availability and expertise.\n\nThank you for considering my request. I look forward to hearing from you! 😊"
+            },
+            "mentorshipType": "One-to-One"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1221"
+        - name: ETag
+          value: W/"4c5-hzeHvyfJ1v5fT0tiW9/U4fn6/bg"
+        - name: Set-Cookie
+          value: connect.sid=s%3A31NqFkD9o1INLArC05USU3Tf09yH8826.MJfC%2BnjMGDqUU4m1rLP%2Bw3hQ8qgwXiAbyPXpI9pK0bg; Path=/; HttpOnly
+        - name: Date
+          value: Thu, 27 Feb 2025 10:55:57 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Mentorship request created successfully",
+              "data": {
+                  "senderId": "67b661d7c84dd7079b9e7d56",
+                  "receiverId": "67b66148ad4271308086ad75",
+                  "content": {
+                      "name": "Sarah Johnson",
+                      "message": "My name is Sarah Johnson, and I’m an intern in product design at Creative Minds Studio. \nI’ve been following your work on the UX Redesign Project for BloomTech, and I deeply admire your approach to creating impactful and user-centered designs.\n\nI’m currently working on refining my skills in prototyping and building user flows for a project aimed at improving educational apps. I believe your guidance would be invaluable as I navigate these areas. Your expertise in designing seamless user experiences and leading innovative projects really resonates with the direction I want to grow in, and I would be honored to learn from you.\n\nIf you’re open to it, I’d love to discuss how we could structure a mentorship that aligns with your availability and expertise.\n\nThank you for considering my request. I look forward to hearing from you! 😊"
+                  },
+                  "mentorshipType": "One-to-One",
+                  "status": "Pending",
+                  "_id": "67c044bdc6b8e861f595546a",
+                  "createdAt": "2025-02-27T10:55:57.584Z",
+                  "updatedAt": "2025-02-27T10:55:57.584Z"
+              }
+          }
+  - name: Group mentorship request
+    request:
+      url: "{{BASE}}/mentorship/requests"
+      method: POST
+      body:
+        type: json
+        data: |-
+          
+          {
+            "receiverId": "67b65c0c2478ee6593c4983a",
+            "content": {
+              "name": "Sarah Johnson",
+              "message": "My name is Sarah Johnson, and I’m an intern in product design at Creative Minds Studio. \nI’ve been following your work on the UX Redesign Project for BloomTech, and I deeply admire your approach to creating impactful and user-centered designs.\n\nI’m currently working on refining my skills in prototyping and building user flows for a project aimed at improving educational apps. I believe your guidance would be invaluable as I navigate these areas. Your expertise in designing seamless user experiences and leading innovative projects really resonates with the direction I want to grow in, and I would be honored to learn from you.\n\nIf you’re open to it, I’d love to discuss how we could structure a mentorship that aligns with your availability and expertise.\n\nThank you for considering my request. I look forward to hearing from you! 😊"
+            },
+            "mentorshipType": "Group",
+            "groupId": "67cf3d17a9123940aa1cce89"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1253"
+        - name: ETag
+          value: W/"4e5-2QttOG4O8gm/lsN58MRP9aalDys"
+        - name: Set-Cookie
+          value: connect.sid=s%3AqJdDBmLoxUhQHfyUJVpWpg-fNbeIhqdF.di3BbfAVDUTZ%2Fg0jvHTxHPxY9keJFW0zZEQo8uEibxU; Path=/; HttpOnly
+        - name: Date
+          value: Mon, 10 Mar 2025 10:41:01 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Mentorship request created successfully",
+              "data": {
+                  "senderId": "67b66148ad4271308086ad89",
+                  "receiverId": "67b661d7c84dd7079b9e7d56",
+                  "groupId": "67ce252955ec18df53a3f510",
+                  "content": {
+                      "name": "Sarah Johnson",
+                      "message": "My name is Sarah Johnson, and I’m an intern in product design at Creative Minds Studio. \nI’ve been following your work on the UX Redesign Project for BloomTech, and I deeply admire your approach to creating impactful and user-centered designs.\n\nI’m currently working on refining my skills in prototyping and building user flows for a project aimed at improving educational apps. I believe your guidance would be invaluable as I navigate these areas. Your expertise in designing seamless user experiences and leading innovative projects really resonates with the direction I want to grow in, and I would be honored to learn from you.\n\nIf you’re open to it, I’d love to discuss how we could structure a mentorship that aligns with your availability and expertise.\n\nThank you for considering my request. I look forward to hearing from you! 😊"
+                  },
+                  "mentorshipType": "Group",
+                  "status": "Pending",
+                  "_id": "67cec1bd4e992fe35bd577cd",
+                  "createdAt": "2025-03-10T10:41:01.360Z",
+                  "updatedAt": "2025-03-10T10:41:01.360Z"
+              }
+          }

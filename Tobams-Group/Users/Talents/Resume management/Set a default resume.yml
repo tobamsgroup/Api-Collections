@@ -1,0 +1,21 @@
+info:
+  name: Set a default resume
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{BASE}}/talents/resumes/default"
+  body:
+    type: json
+    data: |-
+      {
+          "resumeId": "67c81c0c1e35a7da41fef091"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

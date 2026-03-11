@@ -1,0 +1,8 @@
+info:
+  name: Testimonials
+  type: folder
+  seq: 3
+
+docs:
+  content: This endpoint is for client testimonials. Written documentation on how to `create` new testimonial by providing the required fields and uploading the testifiers profile photo alongside with thier job descriptions and comments. It has the endpoint to `view all` the testimonies and being able to `view one` and `update` a particular testimony. The `deletion` of testimony is was made available as well just in case the necessity comes. Each enpoint comes with example responsed of `success`, `server` and `Not found` responses
+  type: text/markdown

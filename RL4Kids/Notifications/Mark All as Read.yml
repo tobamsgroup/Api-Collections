@@ -1,0 +1,17 @@
+info:
+  name: Mark All as Read
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{base_url}}/notifications/mark-all-read"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,77 @@
+info:
+  name: Upload Book Pages
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/book/:chapterId/pages"
+  params:
+    - name: chapterId
+      value: 688b148a524dba2a76efc477
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "index": 18,
+        "title": "",
+        "paragraphs": [
+          {
+            "index": 1,
+            "header": "The Exciting Challenge",
+            "headerFont": "Big",
+            "content": "One day, the head teacher announces a \"Clean & Green Challenge\" for all student clubs. The winning club will get £500 to use on a school improvement project of their choice. The Green Team meets that afternoon. Everyone is buzzing with ideas.\n\nHere are the top three:",
+            "image": "",
+            "template": "",
+            "subColumnHeader": "",
+            "subContent": "",
+            "listPointStyle": "numeric",
+            "list": [
+              {
+                "title": "Build a Butterfly Garden",
+                "content": "• A peaceful space with flowers and plants to attract butterflies and bees.\n• Great for the environment, science classes, and nature lovers."
+              },
+              {
+                "title": "Create a Recycling Station",
+                "content": "• Color-coded bins all around school to sort waste (plastic, paper, food).\n• Teaches students how to recycle properly and reduce waste."
+              },
+              {
+                "title": "Paint Eco Murals",
+                "content": "• Beautiful wall art showing animals, nature, and climate messages.\n• Inspires students every day to care about the Earth."
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "header": "",
+            "headerFont": "",
+            "content": "But here's the problem: They can only choose ONE project for the challenge. And everyone in the group likes different things!",
+            "image": "",
+            "template": "",
+            "subColumnHeader": "",
+            "subContent": "",
+            "listPointStyle": "",
+            "list": []
+          },
+          {
+            "index": 3,
+            "header": "",
+            "headerFont": "",
+            "content": "",
+            "image": "https://recycled-learning-test.s3.eu-north-1.amazonaws.com/67cc66426ebf092e6728f7d4/image/a52f4466-29e9-498f-91f7-58ca332f5229/TST3CH1_17.png",
+            "template": "",
+            "subColumnHeader": "",
+            "subContent": "",
+            "listPointStyle": "",
+            "list": []
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

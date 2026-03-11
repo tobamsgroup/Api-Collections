@@ -1,0 +1,65 @@
+info:
+  name: (Re)send OTP
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/send-otp"
+  body:
+    type: json
+    data: |-
+      {
+          "email": "rolatzarza@gmail.com",
+          "otpType": "email" // email, forgot-password, mfa 
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Send OTP
+    request:
+      url: "{{base_url}}/auth/send-otp"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "email": "rolatzarza@gmail.com",
+              "otpType": "email" // email, forgot-password, mfa 
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "160"
+        - name: ETag
+          value: W/"a0-eBjXBZ4M09+2Db3GSNJIxjY/U+g"
+        - name: Date
+          value: Fri, 02 May 2025 16:08:33 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "OTP sent successfully",
+              "timestamp": "2025-05-02T16:08:30.593Z",
+              "path": "/api/v1/auth/send-otp",
+              "service": "RL4Kids",
+              "version": "1.0.0"
+          }

@@ -1,0 +1,30 @@
+info:
+  name: Create Activity
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/activities"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"type\": \"Badge\",\r
+
+      \    \"title\": \"New Badge Earned\",\r
+
+      \    \"category\": \"Think Sustainability\",\r
+
+      \    \"activity\": \"Completed the Sustainability Challenge\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

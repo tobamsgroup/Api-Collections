@@ -1,0 +1,40 @@
+info:
+  name: Revote granted permissions
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{BASE}}/auth/google/calendar"
+  body:
+    type: text
+    data: |-
+      {
+          // "password": "MentorExpert2023!",
+          // "email": "mentor.expert@example.com"
+          // "email": "ericsson.raphael@tobamsgroup.com",
+          // "password": "123456"
+          // "email": "theteam@tobamsgroup.com",
+          // "email": "casi04@pirkong.com",
+          // "email": "mailfordevtest404@gmail.com",
+          // "email": "paul.elugbaju@tobamsgroup.com",
+          // "password": "Paul.Elugbaju@tobamsgroup26"
+      //    "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+          // "password": "Admin@1234"
+          // "email": "fawazabdganiyu@gmail.com",
+          // "password": "Passme123!"
+          // "email": "abdulrasaqolarewaju88@gmail.com",
+          // "password": "Admin@1234"
+          // "password": "P@ssW0rd"
+          "email": "harjibbolar26@gmail.com",
+          "password": "Harjibbolar26@"
+      }
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

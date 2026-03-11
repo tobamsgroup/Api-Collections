@@ -1,0 +1,17 @@
+info:
+  name: Get an Intern Feedback
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{BASE}}/internship-feedback/68012cd437294a010d7d2e11"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2FhMDZiMjUzOWQ5ZjAzMmYzMjQxZjciLCJlbWFpbCI6ImlzcmFlbC5hZGlndW5AdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6IkludGVybiIsImlhdCI6MTc0NDkwNzQyOCwiZXhwIjoxNzQ0OTkzODI4fQ.9TQW75TmuKqATb3Du-XcBHskR1cy9AMcfP1MY5KOVDk
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

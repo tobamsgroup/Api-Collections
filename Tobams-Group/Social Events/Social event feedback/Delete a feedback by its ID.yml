@@ -1,0 +1,15 @@
+info:
+  name: Delete a feedback by its ID
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{BASE}}/social_events/feedbacks/delete/67a36e1e79f9a0d10c3ee9eb"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

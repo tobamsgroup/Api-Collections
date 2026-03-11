@@ -1,0 +1,24 @@
+info:
+  name: ACTIVATE & DEACTIVATE MFA
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{URL}}/auth/user/activate_multifactor_authentication/verify"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"kings@gmail.com\",\r
+
+      \    \"otp\": \"781501\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

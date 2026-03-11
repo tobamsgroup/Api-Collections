@@ -1,0 +1,22 @@
+info:
+  name: update subcategories
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{URL}}/companies/product/update/sub-categories/6582c11420766c5370743956"
+  body:
+    type: json
+    data: "{\r
+
+      \   \"name\": \"Catfish Suya\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

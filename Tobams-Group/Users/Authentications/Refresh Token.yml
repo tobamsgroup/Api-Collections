@@ -1,0 +1,116 @@
+info:
+  name: Refresh Token
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/refresh_user"
+  body:
+    type: json
+    data: |-
+      {
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODllZmJiOTI5NWY0MjA5YjcxYmM2ZTAiLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dStvcmdAdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6Ik9yZ2FuaXNhdGlvbiIsImlhdCI6MTc1NTc2MTQyNCwiZXhwIjoxNzU2MzY2MjI0fQ.lzit3SW1HjpHKS_mezf4SzPrK3I4IiCJlbu7PKRiGPw"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        bru.setEnvVar("access", res.getBody().data.accessToken);
+        bru.setEnvVar("refresh", res.getBody().data.refreshToken);
+
+        if (res.getBody().data.role === "Organisation"){
+            bru.setEnvVar("org_access", res.getBody().data.accessToken);
+            bru.setEnvVar("org_refresh", res.getBody().data.refreshToken);
+        }
+
+        if (res.getBody().data.role === "Intern"){
+            bru.setEnvVar("intern_access", res.getBody().data.accessToken);
+            bru.setEnvVar("intern_refresh", res.getBody().data.refreshToken);
+        }
+
+        if (res.getBody().data.role === "Talent"){
+            bru.setEnvVar("talent_access", res.getBody().data.accessToken);
+            bru.setEnvVar("talent_refresh", res.getBody().data.refreshToken);
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/auth/refresh_user"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODllZmJiOTI5NWY0MjA5YjcxYmM2ZTAiLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dStvcmdAdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6Ik9yZ2FuaXNhdGlvbiIsImlhdCI6MTc1NTc2MTQyNCwiZXhwIjoxNzU2MzY2MjI0fQ.lzit3SW1HjpHKS_mezf4SzPrK3I4IiCJlbu7PKRiGPw"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1755761475833-15v545eug
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "671"
+        - name: ETag
+          value: W/"29f-n3av5lcwcwwKJ/GlkPC+RVmng/I"
+        - name: Date
+          value: Thu, 21 Aug 2025 07:31:15 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Token refreshed successfully",
+              "data": {
+                  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODllZmJiOTI5NWY0MjA5YjcxYmM2ZTAiLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dStvcmdAdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6Ik9yZ2FuaXNhdGlvbiIsImlhdCI6MTc1NTc2MTQ3NSwiZXhwIjoxNzU1ODQ3ODc1fQ.hah1ALkY2kyQ5IOan1RjrdpczXcoDkjkibNCcrYWYNU",
+                  "expiresIn": "86400000 milliseconds",
+                  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODllZmJiOTI5NWY0MjA5YjcxYmM2ZTAiLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dStvcmdAdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6Ik9yZ2FuaXNhdGlvbiIsImlhdCI6MTc1NTc2MTQyNCwiZXhwIjoxNzU2MzY2MjI0fQ.lzit3SW1HjpHKS_mezf4SzPrK3I4IiCJlbu7PKRiGPw"
+              }
+          }

@@ -1,0 +1,171 @@
+info:
+  name: Help A Tech Talent
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/help-a-tech-talent/create"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"FirstName\": \"test ola\",\r
+
+      \    \"LastName\": \"test alo\",\r
+
+      \    \"DOB\": \"date\",\r
+
+      \    \"email\": \"johndoe88@gmail.com\",\r
+
+      \    \"telephone\": \"+1237069786151\",\r
+
+      \    \"address\": \"gra flowr garden\",\r
+
+      \    \"state\": \"kwara\",\r
+
+      \    \"city\": \"ilorin\",\r
+
+      \    \"country\": \"nigeria\",\r
+
+      \    \"field\": \"Backend Development\",\r
+
+      \    \"others\": \"null\",\r
+
+      \    \"link\": \"payload.link\",\r
+
+      \    \"postedOnSocials\": true,\r
+
+      \    \"PhysicalAvailability\": true,\r
+
+      \    \"TobamsSocialFollower\": true,\r
+
+      \    \"SubscribeToNewsletter\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Talent onboarding Copy
+    request:
+      url: "{{BASE}}/help-a-tech-talent/create"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"FirstName\": \"test ola\",\r
+
+          \    \"LastName\": \"test alo\",\r
+
+          \    \"DOB\": \"date\",\r
+
+          \    \"email\": \"johndoe88@gmail.com\",\r
+
+          \    \"telephone\": \"+1237069786151\",\r
+
+          \    \"address\": \"gra flowr garden\",\r
+
+          \    \"state\": \"kwara\",\r
+
+          \    \"city\": \"ilorin\",\r
+
+          \    \"country\": \"nigeria\",\r
+
+          \    \"field\": \"backend\",\r
+
+          \    \"others\": \"null\",\r
+
+          \    \"link\": \"payload.link\",\r
+
+          \    \"postedOnSocials\": true,\r
+
+          \    \"PhysicalAvalability\": true,\r
+
+          \    \"TobamsSocialFollower\": true,\r
+
+          \    \"SubscribeToNewsletter\": true\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "564"
+        - name: ETag
+          value: W/"234-L8DBf89KPkzzvnzQ70aQcgMbIEo"
+        - name: Date
+          value: Sat, 03 Aug 2024 14:52:52 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "status": true,
+              "message": {
+                  "Contact": {
+                      "email": "johndoe88@gmail.com",
+                      "telephone": "+1237069786151"
+                  },
+                  "Location": {
+                      "address": "gra flowr garden",
+                      "state": "kwara",
+                      "city": "ilorin",
+                      "country": "nigeria"
+                  },
+                  "FirstName": "test ola",
+                  "LastName": "test alo",
+                  "DOB": "date",
+                  "TechSpecialisation": {
+                      "field": "backend",
+                      "others": "null"
+                  },
+                  "VideoDetails": {
+                      "link": "payload.link",
+                      "postedOnSocials": true
+                  },
+                  "PhysicalAvalability": true,
+                  "TobamsSocialFollower": true,
+                  "SubscribeToNewsletter": true,
+                  "_id": "66ae4444000672331649ae7f",
+                  "createdAt": "2024-08-03T14:52:52.511Z",
+                  "updatedAt": "2024-08-03T14:52:52.511Z"
+              }
+          }

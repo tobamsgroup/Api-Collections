@@ -1,0 +1,238 @@
+info:
+  name: Verify user assess
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{BASE}}/pay/verify-access?uuid=TG-1XIN&purpose=assessment"
+  params:
+    - name: uuid
+      value: TG-1XIN
+      type: query
+    - name: purpose
+      value: assessment
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Granted access
+    request:
+      url: "{{BASE}}/pay/access?uuid=TG-1XIN&purpose=assessment"
+      method: GET
+      params:
+        - name: uuid
+          value: TG-1XIN
+          type: query
+        - name: purpose
+          value: assessment
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1764778375169-m04rxp45u
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "162"
+        - name: ETag
+          value: W/"a2-VTC54BQEMmr2f+0NRIOvLV3Sie4"
+        - name: Date
+          value: Wed, 03 Dec 2025 16:12:58 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Access granted",
+              "data": {
+                  "accessStatus": true,
+                  "uuid": "TG-1XIN",
+                  "purpose": "assessment",
+                  "reason": "free_first_retry"
+              }
+          }
+  - name: Invalid uuid
+    request:
+      url: "{{BASE}}/pay/access?uuid=TG-1XIN1&purpose=assessment"
+      method: GET
+      params:
+        - name: uuid
+          value: TG-1XIN1
+          type: query
+        - name: purpose
+          value: assessment
+          type: query
+    response:
+      statusText: "404"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1764778449622-zx5jcwaxb
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "68"
+        - name: ETag
+          value: W/"44-z5mP/EgkWE6OtI6F+Z3kc443nI8"
+        - name: Date
+          value: Wed, 03 Dec 2025 16:14:09 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "error": "NotFoundError",
+              "message": "User not found"
+          }
+  - name: Denied access
+    request:
+      url: "{{BASE}}/pay/verify-access?uuid=TG-1XIN&purpose=assessment"
+      method: GET
+      params:
+        - name: uuid
+          value: TG-1XIN
+          type: query
+        - name: purpose
+          value: assessment
+          type: query
+    response:
+      statusText: "402"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1764780297169-fmlq3qs65
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "146"
+        - name: ETag
+          value: W/"92-WNKYRloJ+w2DLtYAU0Jo1UNnA5g"
+        - name: Date
+          value: Wed, 03 Dec 2025 16:44:57 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Access denied",
+              "data": {
+                  "accessStatus": false,
+                  "uuid": "TG-1XIN",
+                  "purpose": "assessment",
+                  "reason": "no_payment_or_discount"
+              }
+          }

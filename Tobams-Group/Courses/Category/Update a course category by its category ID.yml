@@ -1,0 +1,19 @@
+info:
+  name: Update a course category by its category ID
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/courses/category/:id"
+  params:
+    - name: id
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,436 @@
+info:
+  name: Get All  My Subscription plan
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{URL}}/subscription/sub-plan/all"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3NjBhOTQ2Zi02OGUwLTQwZmQtYjQzZi1iMjdhYjZlNDE5Y2EiLCJpYXQiOjE3MDkzMzk2NTYsImV4cCI6MTcwOTc3MTY1Nn0.O5PMRI9uS0pGGhYEk-Di-VIAW0VvcWzNMFU3MWhqmgc
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get Users Subscription
+    request:
+      url: "{{URL}}/subscription/user/my_subscription"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Allow-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "8170"
+        - name: ETag
+          value: W/"1fea-A1mOOg0wHukMuzxhYBkgYhWEYYg"
+        - name: Date
+          value: Thu, 16 Nov 2023 20:06:22 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Users subscription has been fetched successfully",
+              "data": {
+                  "number_of_subs": 13,
+                  "subscriptions": [
+                      {
+                          "_id": "6550325303b2c4217d0f773c",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "654e332b707d4be05617e9c7",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-10T13:42:03.464Z",
+                              "updatedAt": "2023-11-10T13:42:03.464Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-11-12T02:02:44.860Z",
+                          "frequency": "WEEKLY",
+                          "status": "CANCELLED",
+                          "subId": "c794be68-9d71-4e0e-86d7-7b3ba1cf85d4",
+                          "nextCycle": "2023-11-19T02:02:44.860Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "6550331803b2c4217d0f7741",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "654e332b707d4be05617e9c7",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-10T13:42:03.464Z",
+                              "updatedAt": "2023-11-10T13:42:03.464Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-11-12T02:02:44.860Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "6cc7b5d5-7fd0-4125-b470-f15b1b6d87ea",
+                          "nextCycle": "2023-11-19T02:02:44.860Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "655033eba4259cdbb61524a1",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "654e332b707d4be05617e9c7",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-10T13:42:03.464Z",
+                              "updatedAt": "2023-11-10T13:42:03.464Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-11-12T02:09:37.076Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "8339111c-8c81-4b97-a469-da0a865300fc",
+                          "nextCycle": "2023-11-19T02:09:37.076Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "6550348ca4259cdbb61524a6",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "654e332b707d4be05617e9c7",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-10T13:42:03.464Z",
+                              "updatedAt": "2023-11-10T13:42:03.464Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-11-12T02:09:37.076Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "2a19e137-937f-498e-9637-da215cc2624c",
+                          "nextCycle": "2023-11-19T02:09:37.076Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "655034aca4259cdbb61524ab",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "654e332b707d4be05617e9c7",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-10T13:42:03.464Z",
+                              "updatedAt": "2023-11-10T13:42:03.464Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-11-12T02:09:37.076Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "5b748888-2f8d-4a7c-90da-5cc3980a97e7",
+                          "nextCycle": "2023-11-19T02:09:37.076Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "655034dba4259cdbb61524b0",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "654e332b707d4be05617e9c7",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-10T13:42:03.464Z",
+                              "updatedAt": "2023-11-10T13:42:03.464Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-11-12T02:09:37.076Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "260d75e8-e478-4acd-b0d2-3a0aa4282dfe",
+                          "nextCycle": "2023-11-19T02:09:37.076Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "65503527b5eb30c967501866",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "654e332b707d4be05617e9c7",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-10T13:42:03.464Z",
+                              "updatedAt": "2023-11-10T13:42:03.464Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-12-01T12:00:00.000Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "6936f3e8-263f-4ced-a94b-2efb8dec218d",
+                          "nextCycle": "2023-12-08T12:00:00.000Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "65508e61b4a0c134adb0353c",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "654e332b707d4be05617e9c7",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-10T13:42:03.464Z",
+                              "updatedAt": "2023-11-10T13:42:03.464Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-12-01T12:00:00.000Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "7642ef60-d041-402c-bb1c-074a29cebd67",
+                          "nextCycle": "2023-12-08T12:00:00.000Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "65509c4bc8ab1b75479bf9b0",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "654e332b707d4be05617e9c7",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-10T13:42:03.464Z",
+                              "updatedAt": "2023-11-10T13:42:03.464Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-12-01T12:00:00.000Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "I-14DKA1W3JCF0",
+                          "nextCycle": "2023-12-08T12:00:00.000Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "6550d944ecdf7c06fa743a88",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "654e332b707d4be05617e9c7",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-10T13:42:03.464Z",
+                              "updatedAt": "2023-11-10T13:42:03.464Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-12-01T12:00:00.000Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "I-A8KUVJC8HSPK",
+                          "nextCycle": "2023-12-08T12:00:00.000Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "655534d919bfb70da8617ec3",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "655534c019bfb70da8617ebe",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-15T21:14:40.376Z",
+                              "updatedAt": "2023-11-15T21:14:40.376Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-12-01T12:00:00.000Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "e2d33e40-d32d-40e8-8225-baafb520d22d",
+                          "nextCycle": "2023-12-08T12:00:00.000Z",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "6555357fcc3814a025adf41a",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": {
+                              "_id": "655534c019bfb70da8617ebe",
+                              "meal": [
+                                  {
+                                      "productId": "654cb2220508eb4f20e1d81a"
+                                  }
+                              ],
+                              "pack": 1,
+                              "price": 1000,
+                              "image": "https://example.com/combo.jpg",
+                              "name": "Elite combo",
+                              "discountValue": 10,
+                              "description": "Jollof rice with a suya package and an organic drink",
+                              "SKU": "SKU-10293",
+                              "createdAt": "2023-11-15T21:14:40.376Z",
+                              "updatedAt": "2023-11-15T21:14:40.376Z",
+                              "__v": 0
+                          },
+                          "price": 1000,
+                          "duration": 4,
+                          "startDate": "2023-12-01T12:00:00.000Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "e7384488-e5a6-4fca-893b-155210506ad4",
+                          "nextCycle": "2023-12-08T12:00:00.000Z",
+                          "subscriptionId": "I-1XRSSBBLRLF6",
+                          "__v": 0
+                      },
+                      {
+                          "_id": "6555c88f259cfeaa250ef0e5",
+                          "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                          "meal": null,
+                          "duration": 4,
+                          "startDate": "2023-11-16T07:43:52.490Z",
+                          "frequency": "WEEKLY",
+                          "status": "PENDING",
+                          "subId": "4b013508-054e-42b4-930b-f9651ab317b7",
+                          "nextCycle": "2023-11-23T07:43:52.490Z",
+                          "__v": 0
+                      }
+                  ]
+              }
+          }

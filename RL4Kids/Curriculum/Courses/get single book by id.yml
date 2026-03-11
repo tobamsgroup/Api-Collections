@@ -1,0 +1,97 @@
+info:
+  name: get single book by id
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{base_url}}/courses/681e73d2c0ffc2b6c4d67e24?populate=false"
+  params:
+    - name: populate
+      value: "false"
+      type: query
+  body:
+    type: json
+    data: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get personalized Listed course
+    request:
+      url: "{{base_url}}/courses/u/681e153fea2666fb3e156329"
+      method: GET
+      body:
+        type: json
+        data: ""
+    response:
+      body:
+        type: text
+        data: ""
+  - name: get Series By ID [optional population]
+    request:
+      url: "{{base_url}}/courses/series/681e73d2c0ffc2b6c4d67e25?populate=true"
+      method: GET
+      params:
+        - name: populate
+          value: "true"
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "826"
+        - name: ETag
+          value: W/"33a-mIVaFseAG3q7Edkf+KwCPw7V7ds"
+        - name: Date
+          value: Fri, 09 May 2025 23:35:36 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Course fetched successfully",
+              "timestamp": "2025-05-09T23:35:35.818Z",
+              "path": "/api/v1/courses/series/681e73d2c0ffc2b6c4d67e25?populate=true",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "_id": "681e73d2c0ffc2b6c4d67e25",
+                  "courseId": {
+                      "_id": "681e73d2c0ffc2b6c4d67e24",
+                      "cover": "https://example.com/course-cover.jpg",
+                      "category": "Sustainability",
+                      "courseTitle": "Eco-Friendly Living"
+                  },
+                  "bookCover": "https://example.com/book1-cover.jpg",
+                  "seriesNo": 1,
+                  "bookTitle": "Eco Heroes: The Beginning",
+                  "overview": {
+                      "title": "Introduction to Eco Heroes",
+                      "description": "Learn the basics of sustainable living with our Eco Heroes.",
+                      "_id": "681e73d2c0ffc2b6c4d67e26"
+                  },
+                  "bookContent": "Chapter 1: The Journey Begins...",
+                  "kidsAssigned": [],
+                  "price": 15.99,
+                  "createdAt": "2025-05-09T21:29:54.941Z",
+                  "updatedAt": "2025-05-09T21:29:54.941Z"
+              }
+          }

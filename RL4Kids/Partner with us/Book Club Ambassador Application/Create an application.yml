@@ -1,0 +1,643 @@
+info:
+  name: Create an application
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/book-club-ambassadors"
+  body:
+    type: multipart-form
+    data:
+      - name: firstName
+        type: text
+        value: Jane
+      - name: lastName
+        type: text
+        value: Doe
+      - name: email
+        type: text
+        value: jane.adoe@example.com
+      - name: phoneNumber
+        type: text
+        value: "+2348012345678"
+      - name: country
+        type: text
+        value: Nigeria
+      - name: state
+        type: text
+        value: Lagos
+      - name: city
+        type: text
+        value: Ikeja
+      - name: educationExperience
+        type: text
+        value: 5 years teaching English in secondary school.
+      - name: ambassadorReason
+        type: text
+        value: I want to inspire a love of reading in my community.
+      - name: file
+        type: file
+        value:
+          - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+      - name: intendedBookClubType
+        type: text
+        value: Local Book Club
+      - name: organisationName
+        type: text
+        value: Green Schools
+      - name: organisationType
+        type: text
+        value: School
+      - name: intendedStartDate
+        type: text
+        value: 2024-09-01
+      - name: requiredBookManual
+        type: text
+        value: Online Digital
+      - name: estimatedChildren
+        type: text
+        value: "20"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Organisation type error
+    request:
+      url: "{{base_url}}/book-club-ambassadors"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: firstName
+            type: text
+            value: Jane
+          - name: lastName
+            type: text
+            value: Doe
+          - name: email
+            type: text
+            value: jane.doe@example.com
+          - name: phoneNumber
+            type: text
+            value: "+2348012345678"
+          - name: country
+            type: text
+            value: Nigeria
+          - name: state
+            type: text
+            value: Lagos
+          - name: city
+            type: text
+            value: Ikeja
+          - name: educationExperience
+            type: text
+            value: 5 years teaching English in secondary school.
+          - name: ambassadorReason
+            type: text
+            value: I want to inspire a love of reading in my community.
+          - name: file
+            type: file
+            value:
+              - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+          - name: intendedBookClubType
+            type: text
+            value: Local Book Club
+          - name: organisationName
+            type: text
+            value: Green Schools
+          - name: organisationType
+            type: text
+            value: NGO
+          - name: intendedStartDate
+            type: text
+            value: 2024-09-01
+          - name: requiredBookManual
+            type: text
+            value: Beginner's Reading Pack
+          - name: estimatedChildren
+            type: text
+            value: "20"
+    response:
+      statusText: "400"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "317"
+        - name: ETag
+          value: W/"13d-uG6kaIE6tzcB3ZddouyEdFAL0lU"
+        - name: Date
+          value: Wed, 18 Jun 2025 11:10:32 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-06-18T11:10:32.921Z",
+              "path": "/api/v1/book-club-ambassador",
+              "message": [
+                  "organisationType must be Individual or School for Local Book Club",
+                  "requiredBookManual must be one of the following values: Online Digital, Textbook Oriented"
+              ],
+              "error": "BadRequestException",
+              "service": "RL4KIDS"
+          }
+  - name: Organisation type error
+    request:
+      url: "{{base_url}}/book-club-ambassadors"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: firstName
+            type: text
+            value: Jane
+          - name: lastName
+            type: text
+            value: Doe
+          - name: email
+            type: text
+            value: jane.doe@example.com
+          - name: phoneNumber
+            type: text
+            value: "+2348012345678"
+          - name: country
+            type: text
+            value: Nigeria
+          - name: state
+            type: text
+            value: Lagos
+          - name: city
+            type: text
+            value: Ikeja
+          - name: educationExperience
+            type: text
+            value: 5 years teaching English in secondary school.
+          - name: ambassadorReason
+            type: text
+            value: I want to inspire a love of reading in my community.
+          - name: file
+            type: file
+            value:
+              - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+          - name: intendedBookClubType
+            type: text
+            value: Online Digital Book Club
+          - name: organisationName
+            type: text
+            value: Green Schools
+          - name: organisationType
+            type: text
+            value: NGO
+          - name: intendedStartDate
+            type: text
+            value: 2024-09-01
+          - name: requiredBookManual
+            type: text
+            value: Beginner's Reading Pack
+          - name: estimatedChildren
+            type: text
+            value: "20"
+    response:
+      statusText: "400"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "238"
+        - name: ETag
+          value: W/"ee-4HnMxTzgz2F4uXxCexz2FncA4tQ"
+        - name: Date
+          value: Wed, 18 Jun 2025 11:11:17 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-06-18T11:11:17.275Z",
+              "path": "/api/v1/book-club-ambassador",
+              "message": [
+                  "organisationType must be Individual, School, or Community for Online Book Club"
+              ],
+              "error": "BadRequestException",
+              "service": "RL4KIDS"
+          }
+  - name: Online club Success
+    request:
+      url: "{{base_url}}/book-club-ambassadors"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: firstName
+            type: text
+            value: Jane
+          - name: lastName
+            type: text
+            value: Doe
+          - name: email
+            type: text
+            value: jane.doe@example.com
+          - name: phoneNumber
+            type: text
+            value: "+2348012345678"
+          - name: country
+            type: text
+            value: Nigeria
+          - name: state
+            type: text
+            value: Lagos
+          - name: city
+            type: text
+            value: Ikeja
+          - name: educationExperience
+            type: text
+            value: 5 years teaching English in secondary school.
+          - name: ambassadorReason
+            type: text
+            value: I want to inspire a love of reading in my community.
+          - name: file
+            type: file
+            value:
+              - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+          - name: intendedBookClubType
+            type: text
+            value: Online Digital Book Club
+          - name: organisationName
+            type: text
+            value: Green Schools
+          - name: organisationType
+            type: text
+            value: School
+          - name: intendedStartDate
+            type: text
+            value: 2024-09-01
+          - name: requiredBookManual
+            type: text
+            value: Online Digital
+            disabled: true
+          - name: estimatedChildren
+            type: text
+            value: "20"
+    response:
+      statusText: "201"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "938"
+        - name: ETag
+          value: W/"3aa-FmzsiJWMwlidnOqJlhUrHkRFzcA"
+        - name: Date
+          value: Wed, 18 Jun 2025 11:13:59 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "message": "Request created successfully",
+              "timestamp": "2025-06-18T11:13:56.022Z",
+              "path": "/api/v1/book-club-ambassador",
+              "service": "RL4KIDS",
+              "version": "1.0.0",
+              "data": {
+                  "basicInfo": {
+                      "firstName": "Jane",
+                      "lastName": "Doe",
+                      "email": "jane.doe@example.com",
+                      "phoneNumber": "+2348012345678",
+                      "country": "Nigeria",
+                      "state": "Lagos"
+                  },
+                  "additionalInfo": {
+                      "educationExperience": "5 years teaching English in secondary school.",
+                      "ambassadorReason": "I want to inspire a love of reading in my community.",
+                      "uploadedIdUrl": "http://res.cloudinary.com/djmta0726/image/upload/v1750245117/rl4kids/book-club-ambassador/iL6RUTL-akatsuki-wallpaper-hd.jpg",
+                      "bookClubType": "Online Digital Book Club"
+                  },
+                  "localClubInfo": {
+                      "organisationName": "Green Schools",
+                      "organisationType": "School",
+                      "intendedStartDate": "2024-09-01T00:00:00.000Z",
+                      "estimatedChildren": 20
+                  },
+                  "_id": "68529f7709e8265a2c3730e0",
+                  "createdAt": "2025-06-18T11:13:59.329Z",
+                  "updatedAt": "2025-06-18T11:13:59.329Z"
+              }
+          }
+  - name: Manual type error for local club
+    request:
+      url: "{{base_url}}/book-club-ambassadors"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: firstName
+            type: text
+            value: Jane
+          - name: lastName
+            type: text
+            value: Doe
+          - name: email
+            type: text
+            value: jane.doe@example.com
+          - name: phoneNumber
+            type: text
+            value: "+2348012345678"
+          - name: country
+            type: text
+            value: Nigeria
+          - name: state
+            type: text
+            value: Lagos
+          - name: city
+            type: text
+            value: Ikeja
+          - name: educationExperience
+            type: text
+            value: 5 years teaching English in secondary school.
+          - name: ambassadorReason
+            type: text
+            value: I want to inspire a love of reading in my community.
+          - name: file
+            type: file
+            value:
+              - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+          - name: intendedBookClubType
+            type: text
+            value: Local Book Club
+          - name: organisationName
+            type: text
+            value: Green Schools
+          - name: organisationType
+            type: text
+            value: School
+          - name: intendedStartDate
+            type: text
+            value: 2024-09-01
+          - name: requiredBookManual
+            type: text
+            value: Online Digital
+            disabled: true
+          - name: estimatedChildren
+            type: text
+            value: "20"
+    response:
+      statusText: "400"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "249"
+        - name: ETag
+          value: W/"f9-T4nZdiOCHu9bjiTMvcsmq8hut2Y"
+        - name: Date
+          value: Wed, 18 Jun 2025 11:14:32 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-06-18T11:14:32.794Z",
+              "path": "/api/v1/book-club-ambassador",
+              "message": [
+                  "requiredBookManual must be one of the following values: Online Digital, Textbook Oriented"
+              ],
+              "error": "BadRequestException",
+              "service": "RL4KIDS"
+          }
+  - name: Duplicate error
+    request:
+      url: "{{base_url}}/book-club-ambassadors"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: firstName
+            type: text
+            value: Jane
+          - name: lastName
+            type: text
+            value: Doe
+          - name: email
+            type: text
+            value: jane.doe@example.com
+          - name: phoneNumber
+            type: text
+            value: "+2348012345678"
+          - name: country
+            type: text
+            value: Nigeria
+          - name: state
+            type: text
+            value: Lagos
+          - name: city
+            type: text
+            value: Ikeja
+          - name: educationExperience
+            type: text
+            value: 5 years teaching English in secondary school.
+          - name: ambassadorReason
+            type: text
+            value: I want to inspire a love of reading in my community.
+          - name: file
+            type: file
+            value:
+              - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+          - name: intendedBookClubType
+            type: text
+            value: Local Book Club
+          - name: organisationName
+            type: text
+            value: Green Schools
+          - name: organisationType
+            type: text
+            value: School
+          - name: intendedStartDate
+            type: text
+            value: 2024-09-01
+          - name: requiredBookManual
+            type: text
+            value: Online Digital
+          - name: estimatedChildren
+            type: text
+            value: "20"
+    response:
+      statusText: "400"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "195"
+        - name: ETag
+          value: W/"c3-qGiwASSlsCYAIA/JHzx/Vat8bNw"
+        - name: Date
+          value: Wed, 18 Jun 2025 11:15:26 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-06-18T11:15:26.564Z",
+              "path": "/api/v1/book-club-ambassador",
+              "message": "Ambassador application already exists",
+              "error": "BadRequestException",
+              "service": "RL4KIDS"
+          }

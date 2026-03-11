@@ -1,0 +1,306 @@
+info:
+  name: Get all plans
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/plans?includeInactive=true"
+  params:
+    - name: includeInactive
+      value: "true"
+      type: query
+      description: Include inactive plans in the response
+  body:
+    type: text
+    data: |-
+      {
+          "name": "Premium", // Free-trial, Basic, Standard, Premium
+          "currency": "NGN", // GBP, NGN
+          "monthlyPrice": 220000,
+          "annualPrice": 2000000,
+          "annualDiscount": "Save ₦640,000 (24%)", // Optional
+          "features": {
+              "jobListingsPerMonth": 1000,
+              "internshipListings": true, // Default true
+              "targetAudience": "Both", // Optional, default Interns, Interns, Talents, or Both
+              "talentPooSearch": true, // Default false
+              "filteringTools": "AI-Powered", // None, Basic, Standard, AI-Powered
+              "featuredJobPromotions": 5,
+              "inAppMessaging": true, // Default false
+              "analyticsLevel": "Full + Export", // None, Standard, Advanced, Full + Export
+              "teamMembersAllowed": 15, // Min 1
+              "priorityListing": true, // Default false
+              "customerSupport": "Dedicated" // Community, Email,  Priority Email, Dedicated
+          }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/plans?includeInactive=false"
+      method: GET
+      params:
+        - name: includeInactive
+          value: "false"
+          type: query
+          description: Include inactive plans in the response
+      body:
+        type: text
+        data: |-
+          {
+              "name": "Premium", // Free-trial, Basic, Standard, Premium
+              "currency": "NGN", // GBP, NGN
+              "monthlyPrice": 220000,
+              "annualPrice": 2000000,
+              "annualDiscount": "Save ₦640,000 (24%)", // Optional
+              "features": {
+                  "jobListingsPerMonth": 1000,
+                  "internshipListings": true, // Default true
+                  "targetAudience": "Both", // Optional, default Interns, Interns, Talents, or Both
+                  "talentPooSearch": true, // Default false
+                  "filteringTools": "AI-Powered", // None, Basic, Standard, AI-Powered
+                  "featuredJobPromotions": 5,
+                  "inAppMessaging": true, // Default false
+                  "analyticsLevel": "Full + Export", // None, Standard, Advanced, Full + Export
+                  "teamMembersAllowed": 15, // Min 1
+                  "priorityListing": true, // Default false
+                  "customerSupport": "Dedicated" // Community, Email,  Priority Email, Dedicated
+              }
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Request-ID
+          value: 1753771651088-531w67iqj
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "3817"
+        - name: ETag
+          value: W/"ee9-ChcF6z7QF05VUlEpaHHtgup7I1M"
+        - name: Date
+          value: Tue, 29 Jul 2025 06:47:31 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Plans fetched successfully",
+              "data": {
+                  "count": 7,
+                  "plans": [
+                      {
+                          "_id": "688772e850412d1e84333088",
+                          "name": "Free-trial",
+                          "currency": "NGN",
+                          "monthlyPrice": 0,
+                          "annualPrice": 0,
+                          "annualDiscount": "NaN%",
+                          "features": {
+                              "jobListingsPerMonth": 2,
+                              "internshipListings": true,
+                              "targetAudience": "Interns",
+                              "talentPoolSearch": false,
+                              "filteringTools": "None",
+                              "featuredJobPromotions": 0,
+                              "inAppMessaging": false,
+                              "analyticsLevel": "None",
+                              "teamMembersAllowed": 1,
+                              "priorityListing": false,
+                              "customerSupport": "Community"
+                          },
+                          "isActive": true,
+                          "createdAt": "2025-07-28T12:54:00.150Z",
+                          "updatedAt": "2025-07-28T12:54:00.150Z"
+                      },
+                      {
+                          "_id": "688861b71e201b5806cc95a9",
+                          "name": "Basic",
+                          "currency": "GBP",
+                          "monthlyPrice": 89,
+                          "annualPrice": 899,
+                          "annualDiscount": "Save $169 (16%)",
+                          "features": {
+                              "jobListingsPerMonth": 10,
+                              "internshipListings": true,
+                              "targetAudience": "Interns",
+                              "talentPoolSearch": false,
+                              "filteringTools": "Basic",
+                              "featuredJobPromotions": 0,
+                              "inAppMessaging": false,
+                              "analyticsLevel": "None",
+                              "teamMembersAllowed": 1,
+                              "priorityListing": false,
+                              "customerSupport": "Email"
+                          },
+                          "isActive": true,
+                          "createdAt": "2025-07-29T05:52:55.980Z",
+                          "updatedAt": "2025-07-29T05:52:55.980Z"
+                      },
+                      {
+                          "_id": "688868c1dfaaaf49b8e6bceb",
+                          "name": "Standard",
+                          "currency": "GBP",
+                          "monthlyPrice": 179,
+                          "annualPrice": 1699,
+                          "annualDiscount": "Save $449 (21%)",
+                          "features": {
+                              "jobListingsPerMonth": 30,
+                              "internshipListings": true,
+                              "targetAudience": "Both",
+                              "talentPoolSearch": false,
+                              "filteringTools": "Standard",
+                              "featuredJobPromotions": 2,
+                              "inAppMessaging": true,
+                              "analyticsLevel": "Advanced",
+                              "teamMembersAllowed": 5,
+                              "priorityListing": true,
+                              "customerSupport": "Priority Email"
+                          },
+                          "isActive": true,
+                          "createdAt": "2025-07-29T06:22:57.330Z",
+                          "updatedAt": "2025-07-29T06:22:57.330Z"
+                      },
+                      {
+                          "_id": "6888692edfaaaf49b8e6bcee",
+                          "name": "Premium",
+                          "currency": "GBP",
+                          "monthlyPrice": 349,
+                          "annualPrice": 3299,
+                          "annualDiscount": "Save $889 (21%)",
+                          "features": {
+                              "jobListingsPerMonth": 1000,
+                              "internshipListings": true,
+                              "targetAudience": "Both",
+                              "talentPoolSearch": false,
+                              "filteringTools": "AI-Powered",
+                              "featuredJobPromotions": 5,
+                              "inAppMessaging": true,
+                              "analyticsLevel": "Full + Export",
+                              "teamMembersAllowed": 15,
+                              "priorityListing": true,
+                              "customerSupport": "Dedicated"
+                          },
+                          "isActive": true,
+                          "createdAt": "2025-07-29T06:24:46.363Z",
+                          "updatedAt": "2025-07-29T06:24:46.363Z"
+                      },
+                      {
+                          "_id": "688783b694a57ed0100af0ea",
+                          "name": "Basic",
+                          "currency": "NGN",
+                          "monthlyPrice": 45000,
+                          "annualPrice": 450000,
+                          "annualDiscount": "Save ₦90,000 (17%)",
+                          "features": {
+                              "jobListingsPerMonth": 10,
+                              "internshipListings": true,
+                              "targetAudience": "Interns",
+                              "talentPoolSearch": false,
+                              "filteringTools": "Basic",
+                              "featuredJobPromotions": 0,
+                              "inAppMessaging": false,
+                              "analyticsLevel": "None",
+                              "teamMembersAllowed": 1,
+                              "priorityListing": false,
+                              "customerSupport": "Email"
+                          },
+                          "isActive": true,
+                          "createdAt": "2025-07-28T14:05:42.925Z",
+                          "updatedAt": "2025-07-28T14:05:42.925Z"
+                      },
+                      {
+                          "_id": "68885ef0fc5e5f12ac1ce94c",
+                          "name": "Standard",
+                          "currency": "NGN",
+                          "monthlyPrice": 110000,
+                          "annualPrice": 1050000,
+                          "annualDiscount": "Save ₦270,000 (21%)",
+                          "features": {
+                              "jobListingsPerMonth": 30,
+                              "internshipListings": true,
+                              "targetAudience": "Both",
+                              "talentPoolSearch": false,
+                              "filteringTools": "Standard",
+                              "featuredJobPromotions": 2,
+                              "inAppMessaging": true,
+                              "analyticsLevel": "Advanced",
+                              "teamMembersAllowed": 5,
+                              "priorityListing": true,
+                              "customerSupport": "Priority Email"
+                          },
+                          "isActive": true,
+                          "createdAt": "2025-07-29T05:41:04.966Z",
+                          "updatedAt": "2025-07-29T05:41:04.966Z"
+                      },
+                      {
+                          "_id": "68886050fc5e5f12ac1ce94f",
+                          "name": "Premium",
+                          "currency": "NGN",
+                          "monthlyPrice": 220000,
+                          "annualPrice": 2000000,
+                          "annualDiscount": "Save ₦640,000 (24%)",
+                          "features": {
+                              "jobListingsPerMonth": 1000,
+                              "internshipListings": true,
+                              "targetAudience": "Both",
+                              "talentPoolSearch": false,
+                              "filteringTools": "AI-Powered",
+                              "featuredJobPromotions": 5,
+                              "inAppMessaging": true,
+                              "analyticsLevel": "Full + Export",
+                              "teamMembersAllowed": 15,
+                              "priorityListing": true,
+                              "customerSupport": "Dedicated"
+                          },
+                          "isActive": true,
+                          "createdAt": "2025-07-29T05:46:56.627Z",
+                          "updatedAt": "2025-07-29T05:46:56.627Z"
+                      }
+                  ]
+              }
+          }

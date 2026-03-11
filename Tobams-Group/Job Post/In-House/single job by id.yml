@@ -1,0 +1,105 @@
+info:
+  name: single job by id
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{BASE}}/job_in_house/id/67532398bec98bc52ebb81d7"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{URL}}/job_in_house/id/66a978598e297eba4ccf9d9a"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Vary
+          value: Origin
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1378"
+        - name: ETag
+          value: W/"562-qa8ptASlsW96pUbE3HcAYChT7kk"
+        - name: Date
+          value: Wed, 31 Jul 2024 00:21:47 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Job found",
+              "data": {
+                  "_id": "66a978598e297eba4ccf9d9a",
+                  "userId": "6690035b5921cf3d45a3d725",
+                  "companyName": "Tobams Group",
+                  "title": "Social Media Manager",
+                  "jobDescription": "As a Social Media Manager at Tobams Group. This position offers an exciting opportunity to work on diverse projects and contribute to the success of our organization.",
+                  "contractType": "FullTime",
+                  "location": "Remote",
+                  "region": [
+                      "Africa"
+                  ],
+                  "responsibilities": [
+                      "Prepare clear and concise documentation of business requirements, process flows, and analysis findings.",
+                      "Create reports and presentations to communicate analysis results and recommendations to stakeholders.",
+                      "Identify opportunities for process optimization and participate in improvement initiatives.",
+                      "Assist in project planning, monitoring, and resolution of project-related issues.",
+                      "Collaborate with quality assurance teams to ensure solutions meet business requirements.",
+                      "Engage with stakeholders to understand their needs and manage expectations."
+                  ],
+                  "skill": [
+                      "Socials Mgt",
+                      "Problem-solving",
+                      "Communication",
+                      "Interpersonal Abilities",
+                      "Advert"
+                  ],
+                  "benefits": [
+                      "Valuable hands-on experience.",
+                      "Opportunity for permanent employment based on performance."
+                  ],
+                  "postStatus": "Open",
+                  "currencySymbol": "N",
+                  "salaryMinRange": 2000000,
+                  "salaryMaxRange": 4500000,
+                  "owner": "In-House",
+                  "createdAt": "2024-07-30T23:33:45.722Z",
+                  "updatedAt": "2024-07-30T23:33:45.722Z"
+              }
+          }

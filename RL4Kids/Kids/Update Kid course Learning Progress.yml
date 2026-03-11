@@ -1,0 +1,27 @@
+info:
+  name: Update Kid course Learning Progress
+  type: http
+  seq: 12
+
+http:
+  method: PATCH
+  url: "{{base_url}}/kid/course/68fb1b3943f9cc9ac721c85f/progress"
+  body:
+    type: json
+    data: |-
+      {
+        "status": "in progress",
+        "progressPercentage": 20,
+      //   "assignmentsCompleted":2,
+        "totalLearningHours":2,
+        "completedAssignments":[]
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,21 @@
+info:
+  name: Remove a course from bookmark (unsave) Copy
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/interns/courses/67acba8445825261ef08846a/bookmark?bookmark=false"
+  params:
+    - name: bookmark
+      value: "false"
+      type: query
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

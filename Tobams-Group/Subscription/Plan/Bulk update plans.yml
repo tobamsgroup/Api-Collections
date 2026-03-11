@@ -1,0 +1,15 @@
+info:
+  name: Bulk update plans
+  type: http
+  seq: 10
+
+http:
+  method: PATCH
+  url: "{{BASE}}/plans/bulk-update"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

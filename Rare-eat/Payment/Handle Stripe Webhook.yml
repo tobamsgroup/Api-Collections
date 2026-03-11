@@ -1,0 +1,38 @@
+info:
+  name: Handle Stripe Webhook
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{URL}}/webhooks/stripe"
+  body:
+    type: json
+    data: |
+      {
+        "id": "evt_1234567890",
+        "object": "event",
+        "api_version": "2020-08-27",
+        "type": "payment_intent.succeeded",
+        "created": 1601077194,
+        "data": {
+          "object": {
+            "id": "pi_1234567890",
+            "object": "payment_intent",
+            "amount": 1766,
+            "currency": "usd",
+            "status": "succeeded",
+            "customer": "cus_1234567890",
+            "metadata": {
+                "orderId": "7c43f16b-8cdd-4543-94ea-29b8a70c3aa9"
+            }
+          }
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

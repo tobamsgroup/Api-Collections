@@ -1,0 +1,11 @@
+info:
+  name: Profile Update
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: Update an intern profile according to "update" query parameter ("add", "update", "remove") where necessary
+  type: text/markdown

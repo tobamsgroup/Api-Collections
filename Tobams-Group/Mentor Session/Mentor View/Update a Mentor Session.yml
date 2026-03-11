@@ -1,0 +1,36 @@
+info:
+  name: Update a Mentor Session
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/mentor_session/session/67dcb34298f81f4f8ce1123f"
+  body:
+    type: json
+    data: "{\r
+
+      \r
+
+      \  \"date\": \"2023-10-15T10:00:00Z\",\r
+
+      \  \"time\": \"9:00 a.m\",\r
+
+      \  \"whyRescheduled\": \"Tired\",\r
+
+      \  \"cancelled\": true,\r
+
+      \  \"whyCancelled\": \"Emergency\"\r
+
+      \r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

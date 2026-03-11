@@ -1,0 +1,84 @@
+info:
+  name: Upload USER Profile picture
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{LIVE}}/user/user/picture/upload"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwY2EzMTBkOS1jMTEyLTRhMWEtODRkNS1iZjU1MmNlODIzOTMiLCJpYXQiOjE3MTUyNTM4NTMsImV4cCI6MTcxNTY4NTg1M30.PTXchQ8aMCq4zVAFnCICIRO0Mjwd7GFDEbQPNsKJb6U
+  body:
+    type: multipart-form
+    data:
+      - name: image
+        type: file
+        value:
+          - gQiGgZBCD/profile.png
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Upload CORPORATE Profile picture
+    request:
+      url: "{{URL}}/user/user/picture/upload"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: image
+            type: file
+            value:
+              - /C:/Users/HP/Desktop/L.jpeg
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Allow-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "562"
+        - name: ETag
+          value: W/"232-/CPYIMjVnvYhOTlVfc7+o7uuxSs"
+        - name: Date
+          value: Thu, 16 Nov 2023 21:32:18 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "user picture uploaded successfully",
+              "data": {
+                  "newsletterInterest": false,
+                  "_id": "654b6801bd26688e2245451a",
+                  "email": "francis@gmail.com",
+                  "phonenumber": 8010045678,
+                  "password": "$2a$10$ighEPS869T.8KIJEBouCLeebwYyb5qSMGC86zInO.ah7SoF9lNXym",
+                  "role": "retailer",
+                  "firstname": "styles",
+                  "lastname": "mike",
+                  "picture": "https://res.cloudinary.com/dddiqpeib/image/upload/v1700170339/Dev-profile-pics/tmp-3-1700170336989_q5dlod.jpg",
+                  "isVerified": true,
+                  "multiFactorAuthentication": false,
+                  "userId": "8fa88bbe-d6bc-4682-a869-7cadf3fc311c",
+                  "__v": 0,
+                  "isVerifiedTime": 1699440792885
+              }
+          }

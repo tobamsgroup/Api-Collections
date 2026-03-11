@@ -1,0 +1,429 @@
+info:
+  name: Get user payments
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/pay/customer-buckets"
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/pay/customer-buckets?userId=68e65ef6014bf70ef70f063b"
+      method: GET
+      params:
+        - name: userId
+          value: 68e65ef6014bf70ef70f063b
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1760547029721-kcdqr1zxq
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "7981"
+        - name: ETag
+          value: W/"1f2d-rwB0J3FhGSfWcuYoUzDKdlhT02o"
+        - name: Date
+          value: Wed, 15 Oct 2025 16:50:29 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Customer payment buckets retrieved successfully",
+              "data": [
+                  {
+                      "_id": "68ef803b7fd3e939cead967c",
+                      "userId": "68e65ef6014bf70ef70f063b",
+                      "uuid": "TG-3XOR",
+                      "purpose": "subscription only",
+                      "customerId": "CUS_lykvx7wemeqk8x1",
+                      "serviceProvider": "paystack",
+                      "paymentMethod": "card",
+                      "transactionId": "5431609472",
+                      "metadata": {
+                          "planId": "68885ef0fc5e5f12ac1ce94c",
+                          "subscriptionId": "68ef78a27fd3e939cead9678",
+                          "planName": "Standard",
+                          "planCode": "PLN_v3k34cjoikx0dc2",
+                          "planPrice": "110000",
+                          "interval": "monthly",
+                          "addOnIds": [],
+                          "addOnNames": ""
+                      },
+                      "referenceId": "kx3jg1uux7",
+                      "paymentStatus": "success",
+                      "cardAuthorizationCode": {
+                          "authorization_code": "AUTH_5m39p787ug",
+                          "bin": "408408",
+                          "last4": "4081",
+                          "exp_month": "12",
+                          "exp_year": "2030",
+                          "channel": "card",
+                          "card_type": "visa ",
+                          "bank": "TEST BANK",
+                          "country_code": "NG",
+                          "brand": "visa",
+                          "reusable": true,
+                          "signature": "SIG_2BTUzgi6UCukrspUGxtu",
+                          "account_name": null,
+                          "receiver_bank_account_number": null,
+                          "receiver_bank": null,
+                          "customerId": "CUS_lykvx7wemeqk8x1"
+                      },
+                      "usedServicePaidFor": false,
+                      "createdAt": "2025-10-15T11:06:35.929Z",
+                      "updatedAt": "2025-10-15T11:06:35.929Z"
+                  },
+                  {
+                      "_id": "68ef80b57fd3e939cead9695",
+                      "userId": "68e65ef6014bf70ef70f063b",
+                      "uuid": "TG-3XOR",
+                      "purpose": "addOns only",
+                      "customerId": "CUS_lykvx7wemeqk8x1",
+                      "serviceProvider": "paystack",
+                      "paymentMethod": "card",
+                      "transactionId": "5431694791",
+                      "metadata": {
+                          "planId": "68885ef0fc5e5f12ac1ce94c",
+                          "subscriptionId": "68ef78a27fd3e939cead9678",
+                          "planName": "Standard",
+                          "planPrice": "10000",
+                          "addOnIds": [
+                              "68e8d43ea646df7988c36bd1"
+                          ],
+                          "addOnNames": "AI Filtering Boost"
+                      },
+                      "referenceId": "1q8vumn0zj",
+                      "paymentStatus": "success",
+                      "cardAuthorizationCode": {
+                          "authorization_code": "AUTH_t60hyfmcl6",
+                          "bin": "408408",
+                          "last4": "4081",
+                          "exp_month": "12",
+                          "exp_year": "2030",
+                          "channel": "card",
+                          "card_type": "visa ",
+                          "bank": "TEST BANK",
+                          "country_code": "NG",
+                          "brand": "visa",
+                          "reusable": true,
+                          "signature": "SIG_2BTUzgi6UCukrspUGxtu",
+                          "account_name": null,
+                          "receiver_bank_account_number": null,
+                          "receiver_bank": null,
+                          "customerId": "CUS_lykvx7wemeqk8x1"
+                      },
+                      "usedServicePaidFor": false,
+                      "createdAt": "2025-10-15T11:08:37.602Z",
+                      "updatedAt": "2025-10-15T11:08:37.602Z"
+                  },
+                  {
+                      "_id": "68ef84394c2c0ae14eb79951",
+                      "userId": "68e65ef6014bf70ef70f063b",
+                      "uuid": "TG-3XOR",
+                      "purpose": "addOns only",
+                      "customerId": "CUS_lykvx7wemeqk8x1",
+                      "serviceProvider": "paystack",
+                      "paymentMethod": "card",
+                      "transactionId": "5431730679",
+                      "metadata": {
+                          "planId": "68885ef0fc5e5f12ac1ce94c",
+                          "subscriptionId": "68ef78a27fd3e939cead9678",
+                          "planName": "Standard",
+                          "planPrice": "10000",
+                          "addOnIds": [
+                              "68e8d43ea646df7988c36bd1"
+                          ],
+                          "addOnNames": "AI Filtering Boost"
+                      },
+                      "referenceId": "9c8trygq8q",
+                      "paymentStatus": "success",
+                      "cardAuthorizationCode": {
+                          "authorization_code": "AUTH_zwymyd46hi",
+                          "bin": "408408",
+                          "last4": "4081",
+                          "exp_month": "12",
+                          "exp_year": "2030",
+                          "channel": "card",
+                          "card_type": "visa ",
+                          "bank": "TEST BANK",
+                          "country_code": "NG",
+                          "brand": "visa",
+                          "reusable": true,
+                          "signature": "SIG_2BTUzgi6UCukrspUGxtu",
+                          "account_name": null,
+                          "receiver_bank_account_number": null,
+                          "receiver_bank": null,
+                          "customerId": "CUS_lykvx7wemeqk8x1"
+                      },
+                      "usedServicePaidFor": false,
+                      "createdAt": "2025-10-15T11:23:37.022Z",
+                      "updatedAt": "2025-10-15T11:23:37.022Z"
+                  },
+                  {
+                      "_id": "68ef85f9eeda92f7188b5aac",
+                      "userId": "68e65ef6014bf70ef70f063b",
+                      "uuid": "TG-3XOR",
+                      "purpose": "addOns only",
+                      "customerId": "CUS_lykvx7wemeqk8x1",
+                      "serviceProvider": "paystack",
+                      "paymentMethod": "card",
+                      "transactionId": "5431748124",
+                      "metadata": {
+                          "planId": "68885ef0fc5e5f12ac1ce94c",
+                          "subscriptionId": "68ef78a27fd3e939cead9678",
+                          "planName": "Standard",
+                          "planPrice": "10000",
+                          "addOnIds": [
+                              "68e8d43ea646df7988c36bd1"
+                          ],
+                          "addOnNames": "AI Filtering Boost"
+                      },
+                      "referenceId": "3brl1k9e0x",
+                      "paymentStatus": "success",
+                      "cardAuthorizationCode": {
+                          "authorization_code": "AUTH_nusr0cuo1b",
+                          "bin": "408408",
+                          "last4": "4081",
+                          "exp_month": "12",
+                          "exp_year": "2030",
+                          "channel": "card",
+                          "card_type": "visa ",
+                          "bank": "TEST BANK",
+                          "country_code": "NG",
+                          "brand": "visa",
+                          "reusable": true,
+                          "signature": "SIG_2BTUzgi6UCukrspUGxtu",
+                          "account_name": null,
+                          "receiver_bank_account_number": null,
+                          "receiver_bank": null,
+                          "customerId": "CUS_lykvx7wemeqk8x1"
+                      },
+                      "usedServicePaidFor": false,
+                      "createdAt": "2025-10-15T11:31:05.186Z",
+                      "updatedAt": "2025-10-15T11:31:05.186Z"
+                  },
+                  {
+                      "_id": "68ef87a786ad95b8f150e3ba",
+                      "userId": "68e65ef6014bf70ef70f063b",
+                      "uuid": "TG-3XOR",
+                      "purpose": "addOns only",
+                      "customerId": "CUS_lykvx7wemeqk8x1",
+                      "serviceProvider": "paystack",
+                      "paymentMethod": "card",
+                      "transactionId": "5431764743",
+                      "metadata": {
+                          "planId": "68885ef0fc5e5f12ac1ce94c",
+                          "subscriptionId": "68ef78a27fd3e939cead9678",
+                          "planName": "Standard",
+                          "planPrice": "10000",
+                          "addOnIds": [
+                              "68e8d43ea646df7988c36bd1"
+                          ],
+                          "addOnNames": "AI Filtering Boost"
+                      },
+                      "referenceId": "xvo2ylnmx1",
+                      "paymentStatus": "success",
+                      "cardAuthorizationCode": {
+                          "authorization_code": "AUTH_oq6o51qxoa",
+                          "bin": "408408",
+                          "last4": "4081",
+                          "exp_month": "12",
+                          "exp_year": "2030",
+                          "channel": "card",
+                          "card_type": "visa ",
+                          "bank": "TEST BANK",
+                          "country_code": "NG",
+                          "brand": "visa",
+                          "reusable": true,
+                          "signature": "SIG_2BTUzgi6UCukrspUGxtu",
+                          "account_name": null,
+                          "receiver_bank_account_number": null,
+                          "receiver_bank": null,
+                          "customerId": "CUS_lykvx7wemeqk8x1"
+                      },
+                      "usedServicePaidFor": false,
+                      "createdAt": "2025-10-15T11:38:15.279Z",
+                      "updatedAt": "2025-10-15T11:38:15.279Z"
+                  },
+                  {
+                      "_id": "68ef88a3017effdc6da028f8",
+                      "userId": "68e65ef6014bf70ef70f063b",
+                      "uuid": "TG-3XOR",
+                      "purpose": "addOns only",
+                      "customerId": "CUS_lykvx7wemeqk8x1",
+                      "serviceProvider": "paystack",
+                      "paymentMethod": "card",
+                      "transactionId": "5431775971",
+                      "metadata": {
+                          "planId": "68885ef0fc5e5f12ac1ce94c",
+                          "subscriptionId": "68ef78a27fd3e939cead9678",
+                          "planName": "Standard",
+                          "planPrice": "10000",
+                          "addOnIds": [
+                              "68e8d43ea646df7988c36bd1"
+                          ],
+                          "addOnNames": "AI Filtering Boost"
+                      },
+                      "referenceId": "a4knlieiey",
+                      "paymentStatus": "success",
+                      "cardAuthorizationCode": {
+                          "authorization_code": "AUTH_p2cg3na765",
+                          "bin": "408408",
+                          "last4": "4081",
+                          "exp_month": "12",
+                          "exp_year": "2030",
+                          "channel": "card",
+                          "card_type": "visa ",
+                          "bank": "TEST BANK",
+                          "country_code": "NG",
+                          "brand": "visa",
+                          "reusable": true,
+                          "signature": "SIG_2BTUzgi6UCukrspUGxtu",
+                          "account_name": null,
+                          "receiver_bank_account_number": null,
+                          "receiver_bank": null,
+                          "customerId": "CUS_lykvx7wemeqk8x1"
+                      },
+                      "usedServicePaidFor": false,
+                      "createdAt": "2025-10-15T11:42:27.371Z",
+                      "updatedAt": "2025-10-15T11:42:27.371Z"
+                  },
+                  {
+                      "_id": "68ef89c2cc5d91f69b4d6da8",
+                      "userId": "68e65ef6014bf70ef70f063b",
+                      "uuid": "TG-3XOR",
+                      "purpose": "addOns only",
+                      "customerId": "CUS_lykvx7wemeqk8x1",
+                      "serviceProvider": "paystack",
+                      "paymentMethod": "card",
+                      "transactionId": "5431791817",
+                      "metadata": {
+                          "planId": "68885ef0fc5e5f12ac1ce94c",
+                          "subscriptionId": "68ef78a27fd3e939cead9678",
+                          "planName": "Standard",
+                          "planPrice": "10000",
+                          "addOnIds": [
+                              "68e8d43ea646df7988c36bd1"
+                          ],
+                          "addOnNames": "AI Filtering Boost"
+                      },
+                      "referenceId": "uesl3jdgsp",
+                      "paymentStatus": "success",
+                      "cardAuthorizationCode": {
+                          "authorization_code": "AUTH_lprzw9a4i9",
+                          "bin": "408408",
+                          "last4": "4081",
+                          "exp_month": "12",
+                          "exp_year": "2030",
+                          "channel": "card",
+                          "card_type": "visa ",
+                          "bank": "TEST BANK",
+                          "country_code": "NG",
+                          "brand": "visa",
+                          "reusable": true,
+                          "signature": "SIG_2BTUzgi6UCukrspUGxtu",
+                          "account_name": null,
+                          "receiver_bank_account_number": "1260812166",
+                          "receiver_bank": "Test Bank",
+                          "customerId": "CUS_lykvx7wemeqk8x1"
+                      },
+                      "usedServicePaidFor": false,
+                      "createdAt": "2025-10-15T11:47:14.997Z",
+                      "updatedAt": "2025-10-15T11:47:14.997Z"
+                  },
+                  {
+                      "_id": "68ef994043741a2f5efce73d",
+                      "userId": "68e65ef6014bf70ef70f063b",
+                      "uuid": "TG-3XOR",
+                      "purpose": "addOns only",
+                      "customerId": "CUS_lykvx7wemeqk8x1",
+                      "serviceProvider": "paystack",
+                      "paymentMethod": "card",
+                      "transactionId": "5432021714",
+                      "metadata": {
+                          "planId": "68885ef0fc5e5f12ac1ce94c",
+                          "subscriptionId": "68ef78a27fd3e939cead9678",
+                          "planName": "Standard",
+                          "planPrice": "10000",
+                          "addOnIds": [
+                              "68e8d43ea646df7988c36bd1"
+                          ],
+                          "addOnNames": "AI Filtering Boost"
+                      },
+                      "referenceId": "usby0z9wt7",
+                      "paymentStatus": "success",
+                      "cardAuthorizationCode": {
+                          "authorization_code": "AUTH_1e6azrqod2",
+                          "bin": "408408",
+                          "last4": "4081",
+                          "exp_month": "12",
+                          "exp_year": "2030",
+                          "channel": "card",
+                          "card_type": "visa ",
+                          "bank": "TEST BANK",
+                          "country_code": "NG",
+                          "brand": "visa",
+                          "reusable": true,
+                          "signature": "SIG_2BTUzgi6UCukrspUGxtu",
+                          "account_name": null,
+                          "receiver_bank_account_number": null,
+                          "receiver_bank": null,
+                          "customerId": "CUS_lykvx7wemeqk8x1"
+                      },
+                      "usedServicePaidFor": false,
+                      "createdAt": "2025-10-15T12:53:20.647Z",
+                      "updatedAt": "2025-10-15T12:53:20.647Z"
+                  }
+              ]
+          }

@@ -1,0 +1,27 @@
+info:
+  name: Delete subscription by id
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{BASE}}/subscriptions/:subId/admin"
+  params:
+    - name: subId
+      value: 68dbc298a2adff62b58fdd84
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          // "status": "active" // Default to pending
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

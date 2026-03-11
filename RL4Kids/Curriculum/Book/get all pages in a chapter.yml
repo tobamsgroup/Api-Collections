@@ -1,0 +1,34 @@
+info:
+  name: get all pages in a chapter
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/book/:chapterId/pages"
+  params:
+    - name: chapterId
+      value: ""
+      type: path
+  body:
+    type: json
+    data: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: get personalized Listed course
+    request:
+      url: "{{base_url}}/courses/u/681e153fea2666fb3e156329"
+      method: GET
+      body:
+        type: json
+        data: ""
+    response:
+      body:
+        type: text
+        data: ""

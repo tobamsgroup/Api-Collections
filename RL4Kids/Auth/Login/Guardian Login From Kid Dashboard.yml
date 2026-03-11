@@ -1,0 +1,194 @@
+info:
+  name: Guardian Login From Kid Dashboard
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/login-guardian/68fa61bf5fa8660a37eaa6ee"
+  body:
+    type: json
+    data: |-
+      {
+          "password": "Passme"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: "{{base_url}}/auth/login-guardian/68fa61bf5fa8660a37eaa6ee"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "password": "Passme"
+          }
+    response:
+      statusText: "201"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1108"
+        - name: ETag
+          value: W/"454-fZRXqbzm5kHxFD4v9DXyABw39Jw"
+        - name: Date
+          value: Thu, 23 Oct 2025 17:13:43 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Guardian authenticated successfully",
+              "timestamp": "2025-10-23T17:13:41.708Z",
+              "path": "/api/v1/auth/login-guardian/68fa61bf5fa8660a37eaa6ee",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "_id": "68fa60b45fa8660a37eaa6e1",
+                  "email": "abdulrasaqolarewaju88@gmail.com",
+                  "password": "$2b$10$gpObBRwloiC0HTM4hgG5HOFlN09DnS0WnVPD4kXkNWwZ7oZRoCE7y",
+                  "isVerified": true,
+                  "kidIds": [
+                      "68fa61bf5fa8660a37eaa6ee"
+                  ],
+                  "role": "teacher",
+                  "picture": "",
+                  "createdAt": "2025-10-23T17:07:00.777Z",
+                  "updatedAt": "2025-10-23T17:11:28.318Z",
+                  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZhNjBiNDVmYTg2NjBhMzdlYWE2ZTEiLCJlbWFpbCI6ImFiZHVscmFzYXFvbGFyZXdhanU4OEBnbWFpbC5jb20iLCJyb2xlIjoidGVhY2hlciIsImlhdCI6MTc2MTIzOTYyMiwiZXhwIjoxNzYxMzI2MDIyfQ.GWfnecUtus_VhHezYiye_1Hl0bL157hVBevxxv9nliQ",
+                  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZhNjBiNDVmYTg2NjBhMzdlYWE2ZTEiLCJlbWFpbCI6ImFiZHVscmFzYXFvbGFyZXdhanU4OEBnbWFpbC5jb20iLCJyb2xlIjoidGVhY2hlciIsImlhdCI6MTc2MTIzOTYyMiwiZXhwIjoxNzYxODQ0NDIyfQ.McbAHPJJeoNlGZ2TM_IQsHHC9LLehTboOPnFR7cNXis",
+                  "expiresIn": "86400000 milliseconds"
+              }
+          }
+
+docs: |-
+  # Guardian Login From Kid Dashboard
+
+  ## Overview
+  This endpoint authenticates a guardian user accessing the system from a kid's dashboard. It validates the guardian's credentials and returns authentication tokens along with guardian profile information.
+
+  ## Authentication Requirements
+  - **Type**: Password-based authentication
+  - **Kid ID**: Required in the URL path (identifies which kid's dashboard the guardian is accessing from)
+
+  ## Endpoint
+  ```
+  POST {{base_url}}/auth/login-guardian/{kidId}
+  ```
+
+  ## Request Body Parameters
+
+  | Parameter | Type | Required | Description |
+  |-----------|------|----------|-------------|
+  | `password` | string | Yes | The guardian's password for authentication |
+
+  ### Example Request Body
+  ```json
+  {
+    "password": "Passme"
+  }
+  ```
+
+  ## Response Format
+
+  ### Success Response (201 Created)
+  Returns guardian authentication data including access and refresh tokens.
+
+  **Response Structure:**
+  ```json
+  {
+    "statusCode": 200,
+    "message": "Guardian authenticated successfully",
+    "timestamp": "2025-12-09T09:46:22.981Z",
+    "path": "/api/v1/auth/login-guardian/{kidId}",
+    "service": "RL4Kids",
+    "version": "1.0.0",
+    "data": {
+      "_id": "string",
+      "email": "string",
+      "isVerified": boolean,
+      "kidIds": ["string"],
+      "role": "string",
+      "picture": "string",
+      "createdAt": "string",
+      "updatedAt": "string",
+      "accessToken": "string",
+      "refreshToken": "string",
+      "expiresIn": "string"
+    }
+  }
+  ```
+
+  ### Response Fields
+
+  | Field | Type | Description |
+  |-------|------|-------------|
+  | `statusCode` | number | HTTP status code (200 for success) |
+  | `message` | string | Success message |
+  | `timestamp` | string | ISO 8601 timestamp of the response |
+  | `path` | string | API endpoint path |
+  | `service` | string | Service name (RL4Kids) |
+  | `version` | string | API version |
+  | `data._id` | string | Guardian's unique identifier |
+  | `data.email` | string | Guardian's email address |
+  | `data.isVerified` | boolean | Email verification status |
+  | `data.kidIds` | array | Array of kid IDs associated with this guardian |
+  | `data.role` | string | Guardian's role (e.g., "teacher") |
+  | `data.picture` | string | URL to guardian's profile picture |
+  | `data.accessToken` | string | JWT access token for API authentication |
+  | `data.refreshToken` | string | JWT refresh token for obtaining new access tokens |
+  | `data.expiresIn` | string | Token expiration time in milliseconds |
+
+  ## Status Codes
+
+  | Code | Description |
+  |------|-------------|
+  | 201 | Guardian authenticated successfully |
+  | 400 | Bad request - Invalid password or missing parameters |
+  | 401 | Unauthorized - Invalid credentials |
+  | 404 | Kid ID not found or not associated with guardian |
+
+  ## Usage Notes
+  - The `kidId` in the URL path must be a valid kid ID associated with the authenticating guardian
+  - The returned `accessToken` should be included in subsequent API requests using the `Authorization: Bearer {accessToken}` header
+  - The `refreshToken` can be used to obtain a new access token when the current one expires
+  - Token expiration is provided in milliseconds (default: 86400000ms = 24 hours)
+  - The guardian must have the kid in their `kidIds` array to successfully authenticate from that kid's dashboard

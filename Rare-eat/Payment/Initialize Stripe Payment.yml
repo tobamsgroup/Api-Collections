@@ -1,0 +1,72 @@
+info:
+  name: Initialize Stripe Payment
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{URL}}/order/initialize_payment?orderId=99f589dd-c5a7-4c68-8710-5be5d3e65f1d"
+  params:
+    - name: orderId
+      value: 99f589dd-c5a7-4c68-8710-5be5d3e65f1d
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"userId\": \"\",//either guest or register user\r
+
+      \    \"email\": \"\",\r
+
+      \    \"firstname\":\"\",\r
+
+      \    \"lastname\":\"\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Initialize Stripe Payment
+    request:
+      url: "{{URL}}/order/initialize_payment?orderId=2e639677-8195-40cb-af46-5e6ac935bd0e"
+      method: PATCH
+      params:
+        - name: orderId
+          value: 2e639677-8195-40cb-af46-5e6ac935bd0e
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "143"
+        - name: ETag
+          value: W/"8f-qULZpbddvHhSHnjxhLYDKFJeHAw"
+        - name: Date
+          value: Thu, 26 Oct 2023 21:44:02 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Payment has been initialized successfully",
+              "data": {
+                  "client_secret": "pi_3O5bLSAO0ZHyQSVi1F80N8MS_secret_cdKHNfycVWlU9qom3tUccEOgG"
+              }
+          }

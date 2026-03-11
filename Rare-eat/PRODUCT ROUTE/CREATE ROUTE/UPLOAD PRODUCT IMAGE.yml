@@ -1,0 +1,24 @@
+info:
+  name: UPLOAD PRODUCT IMAGE
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{URL}}/companies/product/image/upload/652d9c943106f3b571eff507"
+  body:
+    type: multipart-form
+    data:
+      - name: image
+        type: file
+        value:
+          - /C:/Users/HP/Desktop/rare-eat-project-backend/rare-eat-project-BE/img/computer-2.jpeg
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,15 @@
+info:
+  name: Create feedback with event ID
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{BASE}}/social_events/feedbacks/67a36e1e79f9a0d10c3ee9eb/create"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

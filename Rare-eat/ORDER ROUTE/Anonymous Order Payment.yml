@@ -1,0 +1,22 @@
+info:
+  name: Anonymous Order Payment
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{URL}}/order/payment?orderId=0bc95d4c-5d7c-4b3d-85ff-7a7bb2d9c02f&paymentType=Stripe"
+  params:
+    - name: orderId
+      value: 0bc95d4c-5d7c-4b3d-85ff-7a7bb2d9c02f
+      type: query
+    - name: paymentType
+      value: Stripe
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

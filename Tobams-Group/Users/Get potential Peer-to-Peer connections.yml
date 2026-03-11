@@ -1,0 +1,19 @@
+info:
+  name: Get potential Peer-to-Peer connections
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{BASE}}/users/potential-peers/:userId"
+  params:
+    - name: userId
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

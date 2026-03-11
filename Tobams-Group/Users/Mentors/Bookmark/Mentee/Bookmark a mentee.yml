@@ -1,0 +1,27 @@
+info:
+  name: Bookmark a mentee
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{BASE}}/mentors/mentees/67b661d7c84dd7079b9e7d44/bookmark"
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test('"savedMentees" includes the menteeId from request parameters', function () {
+                const menteeId = req.getUrl().path[4]
+                expect(res.getBody().data.savedMentees).to.include(menteeId);
+            }
+        );
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

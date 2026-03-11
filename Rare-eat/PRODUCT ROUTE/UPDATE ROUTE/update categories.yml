@@ -1,0 +1,18 @@
+info:
+  name: update categories
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{URL}}/companies/product/update/categories/"
+  body:
+    type: json
+    data: "{\r\n    \r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

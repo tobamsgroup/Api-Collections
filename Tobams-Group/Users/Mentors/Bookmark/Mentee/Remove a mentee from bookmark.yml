@@ -1,0 +1,32 @@
+info:
+  name: Remove a mentee from bookmark
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/mentors/mentees/67b661d7c84dd7079b9e7d44/bookmark?bookmark=false"
+  params:
+    - name: bookmark
+      value: "false"
+      type: query
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test('"savedMentees" does not include the menteeId from request parameters', function () {
+                const menteeId = req.getUrl().path[4]
+                const jsonData = res.getBody()
+                expect(jsonData.data.savedMentees).to.not.include(menteeId);
+            }
+        );
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

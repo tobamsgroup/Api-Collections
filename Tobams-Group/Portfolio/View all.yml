@@ -1,0 +1,189 @@
+info:
+  name: View all
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/portfolio/all?page=1&limit=10"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Page exceeded
+    request:
+      url: "{{BASE}}/portfolio/all?page=0&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "0"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      statusText: "206"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "61"
+        - name: ETag
+          value: W/"3d-NiHhYdQjDo7IFQY1/qZqdLNnZ/g"
+        - name: Date
+          value: Fri, 08 Mar 2024 17:48:04 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "articles": "There are no portfolio projects"
+          }
+  - name: Success response
+    request:
+      url: "{{BASE}}/portfolio/all?page=0&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "0"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 27 Mar 2024 15:30:42 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: CF-Ray
+          value: 86b06c56dbb406eb-CPT
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: ETag
+          value: W/"30c-s5kp/pXYA7E3bXXXm9BTiLMLIRk"
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: Vary
+          value: Accept-Encoding
+        - name: content-security-policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: d7aa5d15-fd6b-444b
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-xss-protection
+          value: "0"
+        - name: Server
+          value: cloudflare
+        - name: Content-Encoding
+          value: br
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "projects": {
+                  "list": [
+                      {
+                          "_id": "65eb513e96f77a75a371ad22",
+                          "title": "Tobams Logic",
+                          "description": "This is the description",
+                          "challenges": "This was the challenge behind the solution",
+                          "solution": "This is the soluiton",
+                          "coverPhoto": "https://res.cloudinary.com/uploads/image754608757.png",
+                          "category": [
+                              "Website Design and Development"
+                          ],
+                          "icon": "https://res.cloudinary.com/uploads/image7546757.png"
+                      },
+                      {
+                          "_id": "65eb517296f77a75a371ad24",
+                          "title": "Tobams Logic",
+                          "description": "This is the description",
+                          "challenges": "This was the challenge behind the solution",
+                          "solution": "This is the soluiton",
+                          "coverPhoto": "https://res.cloudinary.com/uploads/image754608757.png",
+                          "category": [
+                              "Website Design and Development"
+                          ],
+                          "icon": "https://res.cloudinary.com/uploads/image7546757.png"
+                      }
+                  ],
+                  "count": 2
+              }
+          }
+
+docs: |-
+  ## View all Portfolio
+
+  This is paginated request endpoint. The request limit is limited to 10 documents per page. The `page number` is parsed as a number param

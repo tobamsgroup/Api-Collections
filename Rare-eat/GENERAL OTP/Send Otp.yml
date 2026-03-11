@@ -1,0 +1,21 @@
+info:
+  name: Send Otp
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5050/api/v1/otp/send/general
+  body:
+    type: json
+    data: |-
+      {
+          "email":"oginnimobolaji01@gmail.com"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

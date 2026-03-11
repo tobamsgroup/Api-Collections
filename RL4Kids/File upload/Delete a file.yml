@@ -1,0 +1,60 @@
+info:
+  name: Delete a file
+  type: http
+  seq: 3
+
+http:
+  method: DELETE
+  url: '{{base_url}}/upload?url="http://res.cloudinary.com/djmta0726/image/upload/v1746712370/rl4kids/test/iL6RUTL-akatsuki-wallpaper-hd.jpg"'
+  params:
+    - name: url
+      value: '"http://res.cloudinary.com/djmta0726/image/upload/v1746712370/rl4kids/test/iL6RUTL-akatsuki-wallpaper-hd.jpg"'
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: '{{base_url}}/upload?url="http://res.cloudinary.com/djmta0726/image/upload/v1746712370/rl4kids/test/iL6RUTL-akatsuki-wallpaper-hd.jpg"'
+      method: DELETE
+      params:
+        - name: url
+          value: '"http://res.cloudinary.com/djmta0726/image/upload/v1746712370/rl4kids/test/iL6RUTL-akatsuki-wallpaper-hd.jpg"'
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "210"
+        - name: ETag
+          value: W/"d2-auQbrXbfZKiSvVvvhzwl/rjs6uc"
+        - name: Date
+          value: Thu, 08 May 2025 14:25:50 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "File deleted successfully",
+              "timestamp": "2025-05-08T14:25:50.399Z",
+              "path": "/api/v1/upload?publicId=rl4kids/test/da2vd6pzbnscd4c4ghbk",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {}
+          }

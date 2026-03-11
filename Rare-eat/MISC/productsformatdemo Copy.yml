@@ -1,0 +1,75 @@
+info:
+  name: productsformatdemo Copy
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: updated
+  body:
+    type: json
+    data: |-
+      {
+        "products": [
+          {
+            "name": "Red beans (EWA)",
+            "product_picture": "exampple.jpeg",
+            "categories": "Red beans",
+            "productCategories": {
+                "subcategory": "Red beans (EWA)",
+                "description": "suya paste is a fluid like ingredient used on the product",
+                "nutritionalInfo": "nutritionalInfo details",
+                "howToPrepare": "howToPrepare details",
+                "dietaryInfo": "dietaryInfo detaisl",
+                "storageInfo": "storageInfo details ",
+                "extra": "extra details",
+                "productID": "RESS009",
+                "SKU": "pod192837",
+                "StoreQuantity": 100
+              },
+            "spiceLevel": [
+              "MILD",
+              "HOT"
+            ],
+            "variants": [
+              {
+                "numberOfPacks": "single pack",
+                "weights": [
+                  {
+                    "weight": 1000,
+                    "side_protein": [
+                        {
+                          "type": "Beef",
+                          "consumerPrice": 13.99,
+                          "subscriptionPrice": 12.99
+                          },
+                          {
+                          "type": "Chicken",
+                          "consumerPrice": 10.99,
+                          "subscriptionPrice": 9.99
+                          },
+                          {
+                          "type": "Turkey",
+                          "consumerPrice": 11.99,
+                          "subscriptionPrice": 10.99
+                          }
+                      ],
+                    "prices": {
+                      "consumerPrice": null,
+                      "veganPrice": 9.99,
+                      "subscriptionPrice": null
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

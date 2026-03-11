@@ -1,0 +1,7 @@
+info:
+  name: Demos
+  type: folder
+  seq: 11
+
+request:
+  auth: inherit

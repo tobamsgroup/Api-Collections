@@ -1,0 +1,28 @@
+info:
+  name: Verify OTP
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/otp/verify-otp"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"ericssonraphael@yahoo.com\",\r
+
+      \    \"otp\": \"849025\",\r
+
+      \    \"role\": \"Mentor\",\r
+
+      \    \"type\": \"emailOtp\" //\"forgotPasswordOtp\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

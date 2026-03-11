@@ -1,0 +1,28 @@
+info:
+  name: Update Coupon User
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{URL}}/coupon/update/coupon_user?coupon_code=tDo2FH6bwR"
+  params:
+    - name: coupon_code
+      value: tDo2FH6bwR
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"userId\":\"7bf96d3b-2626-47cc-aea2-1088c9289089\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

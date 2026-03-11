@@ -1,0 +1,40 @@
+info:
+  name: register stage 2
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/selected-ambassador/register"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"codedsinger@gmail.com\",\r
+
+      \    \"telephone\": \"+2349161726678\",\r
+
+      \    \"nameOfUniversity\": \"eksu\",\r
+
+      \    \"incentivesModel\": \"model_1\",\r
+
+      \    \"currentLevel\": \"400 level\",\r
+
+      \    \"courseOfChoice\": \"sustaiinability\",\r
+
+      \    \"BankName\": \"Opay\",\r
+
+      \    \"AccountNumber\": 91617266789,\r
+
+      \    \"AccountHoldersName\": \"Boluwatife Daramola\",\r
+
+      \    \"consentStatus\": true\r
+
+      \ }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

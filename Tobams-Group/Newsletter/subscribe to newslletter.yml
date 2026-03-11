@@ -1,0 +1,22 @@
+info:
+  name: subscribe to newslletter
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/newsletter"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"fawaz.abdganiyu+n@tobamsgroup.com\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

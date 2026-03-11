@@ -1,0 +1,429 @@
+info:
+  name: Fetch a kid badges
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{base_url}}/kid/681de6a22c2b02c83017105c/badges?type=learning progress"
+  params:
+    - name: type
+      value: learning progress
+      type: query
+    - name: subcategory
+      value: sustainability series 1
+      type: query
+      disabled: true
+    - name: category
+      value: generic
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Empty badge
+    request:
+      url: "{{base_url}}/kid/681de6a22c2b02c83017105c/badges"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "204"
+        - name: ETag
+          value: W/"cc-ZmVuXYcspzSNVAsFAXIhHoo7YBY"
+        - name: Date
+          value: Wed, 11 Jun 2025 22:29:46 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Kid's badges fetched successfully",
+              "timestamp": "2025-06-11T22:29:33.795Z",
+              "path": "/api/v1/kid/681de6a22c2b02c83017105c/badges",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": []
+          }
+  - name: Fetch all unlocked badges
+    request:
+      url: "{{base_url}}/kid/681de6a22c2b02c83017105c/badges"
+      method: GET
+      params:
+        - name: category
+          value: generic
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "927"
+        - name: ETag
+          value: W/"39f-SdAWkNLVkBQZTc+IpAFgGEtQfBQ"
+        - name: Date
+          value: Wed, 11 Jun 2025 23:17:35 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Kid's badges fetched successfully",
+              "timestamp": "2025-06-11T23:17:35.233Z",
+              "path": "/api/v1/kid/681de6a22c2b02c83017105c/badges",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": [
+                  {
+                      "badgeId": {
+                          "_id": "6849f9a1d04344ac1fd2469e",
+                          "name": "First Step",
+                          "description": "Completed the first lesson",
+                          "category": "Generic",
+                          "type": "Learning Progress",
+                          "imageUrl": "https://example.com/badges/quick-learner.png",
+                          "createdAt": "2025-06-11T21:48:17.390Z",
+                          "updatedAt": "2025-06-11T21:48:17.390Z"
+                      },
+                      "earnedAt": "2025-06-11T22:53:10.877Z"
+                  },
+                  {
+                      "badgeId": {
+                          "_id": "684a0d6b8a031f939cde7a59",
+                          "name": "Earth’s Protector",
+                          "description": "Kid taps to open the envelope.",
+                          "category": "Sustainability",
+                          "subcategory": "Sustainability Series 1",
+                          "type": "Mission/Mini-game",
+                          "imageUrl": "https://example.com/badges/quick-learner.png",
+                          "createdAt": "2025-06-11T23:12:43.221Z",
+                          "updatedAt": "2025-06-11T23:12:43.221Z"
+                      },
+                      "earnedAt": "2025-06-11T23:15:03.011Z"
+                  }
+              ]
+          }
+  - name: Fetch by badge category
+    request:
+      url: "{{base_url}}/kid/681de6a22c2b02c83017105c/badges?category=generic"
+      method: GET
+      params:
+        - name: category
+          value: generic
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "552"
+        - name: ETag
+          value: W/"228-HSMUmVrGK2wXIm7Lx6CAHf6HMAA"
+        - name: Date
+          value: Wed, 11 Jun 2025 23:18:35 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Kid's badges fetched successfully",
+              "timestamp": "2025-06-11T23:18:35.639Z",
+              "path": "/api/v1/kid/681de6a22c2b02c83017105c/badges?category=generic",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": [
+                  {
+                      "badgeId": {
+                          "_id": "6849f9a1d04344ac1fd2469e",
+                          "name": "First Step",
+                          "description": "Completed the first lesson",
+                          "category": "Generic",
+                          "type": "Learning Progress",
+                          "imageUrl": "https://example.com/badges/quick-learner.png",
+                          "createdAt": "2025-06-11T21:48:17.390Z",
+                          "updatedAt": "2025-06-11T21:48:17.390Z"
+                      },
+                      "earnedAt": "2025-06-11T22:53:10.877Z"
+                  }
+              ]
+          }
+  - name: Fetch by badge subcategory
+    request:
+      url: "{{base_url}}/kid/681de6a22c2b02c83017105c/badges?subcategory=sustainability series 1"
+      method: GET
+      params:
+        - name: type
+          value: ""
+          type: query
+          disabled: true
+        - name: subcategory
+          value: sustainability series 1
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "635"
+        - name: ETag
+          value: W/"27b-1iSUQMdJ0eX12OvRFb3RE3e3RoE"
+        - name: Date
+          value: Wed, 11 Jun 2025 23:27:38 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Kid's badges fetched successfully",
+              "timestamp": "2025-06-11T23:27:38.656Z",
+              "path": "/api/v1/kid/681de6a22c2b02c83017105c/badges?subcategory=sustainability%20series%201",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": [
+                  {
+                      "badgeId": {
+                          "_id": "684a0d6b8a031f939cde7a59",
+                          "name": "Earth’s Protector",
+                          "description": "Kid taps to open the envelope.",
+                          "category": "Sustainability",
+                          "subcategory": "Sustainability Series 1",
+                          "type": "Mission/Mini-game",
+                          "imageUrl": "https://example.com/badges/quick-learner.png",
+                          "createdAt": "2025-06-11T23:12:43.221Z",
+                          "updatedAt": "2025-06-11T23:12:43.221Z"
+                      },
+                      "earnedAt": "2025-06-11T23:15:03.011Z"
+                  }
+              ]
+          }
+  - name: Fetch by badge type
+    request:
+      url: "{{base_url}}/kid/681de6a22c2b02c83017105c/badges?type=learning progress"
+      method: GET
+      params:
+        - name: type
+          value: learning progress
+          type: query
+        - name: subcategory
+          value: sustainability series 1
+          type: query
+          disabled: true
+        - name: category
+          value: generic
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "904"
+        - name: ETag
+          value: W/"388-DoEm1XXC9csmc1I0CQoAmeFaNIE"
+        - name: Date
+          value: Wed, 11 Jun 2025 23:30:35 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Kid's badges fetched successfully",
+              "timestamp": "2025-06-11T23:30:35.908Z",
+              "path": "/api/v1/kid/681de6a22c2b02c83017105c/badges?type=learning%20progress",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": [
+                  {
+                      "badgeId": {
+                          "_id": "6849f9a1d04344ac1fd2469e",
+                          "name": "First Step",
+                          "description": "Completed the first lesson",
+                          "category": "Generic",
+                          "type": "Learning Progress",
+                          "imageUrl": "https://example.com/badges/quick-learner.png",
+                          "createdAt": "2025-06-11T21:48:17.390Z",
+                          "updatedAt": "2025-06-11T21:48:17.390Z"
+                      },
+                      "earnedAt": "2025-06-11T22:53:10.877Z"
+                  },
+                  {
+                      "badgeId": {
+                          "_id": "6849f970d04344ac1fd2469c",
+                          "name": "Quick Learner",
+                          "description": "Completed a lesson under 10 minutes",
+                          "category": "Generic",
+                          "type": "Learning Progress",
+                          "imageUrl": "https://example.com/badges/quick-learner.png",
+                          "createdAt": "2025-06-11T21:47:29.048Z",
+                          "updatedAt": "2025-06-11T21:47:29.048Z"
+                      },
+                      "earnedAt": "2025-06-11T23:30:06.871Z"
+                  }
+              ]
+          }

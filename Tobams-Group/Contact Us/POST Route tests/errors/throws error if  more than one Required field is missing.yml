@@ -1,0 +1,24 @@
+info:
+  name: throws error if  more than one Required field is missing
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/contact-us/"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"subject\": \"Issues with my dashboard\",\r
+
+      \  \"message\": \"I cant find the job applications action on my dashboard. Please assist in rectifying as i ned to use this immediately. Thank you\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

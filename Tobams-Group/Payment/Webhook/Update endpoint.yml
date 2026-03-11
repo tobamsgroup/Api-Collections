@@ -1,0 +1,24 @@
+info:
+  name: Update endpoint
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{BASE}}/webhooks"
+  body:
+    type: json
+    data: |-
+      {
+          "id": "we_1S2aWo9S64U9FZamTDDgT2vi",
+          "url": "https://tobams-group-be-development.onrender.com/api/v1/webhooks/payments"
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

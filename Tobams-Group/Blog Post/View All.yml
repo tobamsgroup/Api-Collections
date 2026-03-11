@@ -1,0 +1,187 @@
+info:
+  name: View All
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/blog/all?page=0&limit=10"
+  params:
+    - name: page
+      value: "0"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Page exceeded
+    request:
+      url: "{{@harek}}/blog/all?page=10&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "10"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      statusText: "206"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "51"
+        - name: ETag
+          value: W/"33-6g8roLilYoytN6RrB/Tb7sUSiZA"
+        - name: Date
+          value: Fri, 01 Mar 2024 11:04:55 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "articles": "There are no articles"
+          }
+  - name: Success
+    request:
+      url: "{{BASE}}/blog/all?page=0&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "0"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1255"
+        - name: ETag
+          value: W/"4e7-G92ngSwTShb5NZN6pNaCPm+nYGU"
+        - name: Date
+          value: Wed, 27 Mar 2024 14:17:34 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "testimonies": {
+                  "list": [
+                      {
+                          "_id": "65e1c3e516eb8cb137e87743",
+                          "title": "Resentful Mind",
+                          "category": "Mindfullness",
+                          "content": "<h1>Resilient mind</h1><br><p>This is the content of Resilient Mind</p>",
+                          "duration": "5 minutes read",
+                          "photo": "https://res.cloudinary.com/upload/Blog/5645454k54.png",
+                          "createdAt": "2024-03-01T12:02:45.029Z"
+                      },
+                      {
+                          "_id": "65ed7f4fd2c7f6d680d5ce3e",
+                          "title": "Resentful Mind",
+                          "category": "Mindfullness",
+                          "content": "<h1>Resilient mind</h1><br><p>This is the content of Resilient Mind</p>",
+                          "duration": "5 minutes read",
+                          "photo": "https://res.cloudinary.com/upload/Blog/5645454k54.png",
+                          "createdAt": "2024-03-10T09:37:19.112Z"
+                      },
+                      {
+                          "_id": "65ed8dab4327c4bf147684ba",
+                          "title": "Resentful Mind",
+                          "category": "Mindfullness",
+                          "content": "<h1>Resilient mind</h1><br><p>This is the content of Resilient Mind</p>",
+                          "duration": "5 minutes read",
+                          "photo": "https://res.cloudinary.com/upload/Blog/5645454k54.png",
+                          "createdAt": "2024-03-10T10:38:35.887Z"
+                      },
+                      {
+                          "_id": "65eedd84c565967602372281",
+                          "title": "Resentful Mind",
+                          "category": "Mindfullness",
+                          "content": "<h1>Resilient mind</h1><br><p>This is the content of Resilient Mind</p>",
+                          "duration": "5 minutes read",
+                          "photo": "https://res.cloudinary.com/upload/Blog/5645454k54.png",
+                          "createdAt": "2024-03-11T10:31:32.167Z"
+                      }
+                  ],
+                  "count": 4
+              }
+          }
+
+docs: |-
+  ## View all Testimonials
+
+  This is paginated request endpoint. The request limit is limited to 10 documents per page. The `page number` is parsed as a number param

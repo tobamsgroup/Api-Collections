@@ -1,0 +1,23 @@
+info:
+  name: Remove uploaded profile picture
+  type: http
+  seq: 37
+
+http:
+  method: PATCH
+  url: "{{BASE}}/users/profile-picture"
+  body:
+    type: json
+    data: |-
+      {
+          "currentPhoto": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1743514652550_iL6RUTL-akatsuki-wallpaper-hd.jpg"
+      }
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

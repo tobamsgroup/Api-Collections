@@ -1,0 +1,24 @@
+info:
+  name: CREATE PRODUCT SUBCATEGORY
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{LIVE}}/companies/product/create/subcategories/6582bc421089abe989701955/category"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Beef Skewers\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

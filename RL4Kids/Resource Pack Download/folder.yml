@@ -1,0 +1,7 @@
+info:
+  name: Resource Pack Download
+  type: folder
+  seq: 14
+
+request:
+  auth: inherit

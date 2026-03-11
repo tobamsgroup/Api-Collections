@@ -1,0 +1,89 @@
+info:
+  name: Get all Admin list
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{URL}}/admin/admin/all_admin"
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get all Admin list
+    request:
+      url: "{{URL}}/admin/admin/all_admin"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: RateLimit-Policy
+          value: 20;w=60
+        - name: RateLimit
+          value: limit=20, remaining=18, reset=53
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "656"
+        - name: ETag
+          value: W/"290-W7JwUdgzQWV1eRBCA1UWl2kh/N4"
+        - name: Date
+          value: Tue, 12 Dec 2023 17:35:58 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Admin list fetched successfully",
+              "data": {
+                  "admins": {
+                      "admins": [
+                          {
+                              "_id": "6570b36b045027fc542870c5",
+                              "firstname": "Rare",
+                              "lastname": "Eat",
+                              "username": "Rareeat",
+                              "role": "Super Admin",
+                              "status": "Active",
+                              "email": "rareeat@gmail.com",
+                              "password": "$2a$10$Y8wsUcWkxhbXbFB7VBNIGO0jhK2TYo9h/Bi.bSwTDYjm0qHiWLzx2",
+                              "adminId": "837b9778-d328-4c1d-b40d-55544b60d52c",
+                              "__v": 0
+                          },
+                          {
+                              "_id": "6570cd9c266cf582ead41859",
+                              "firstname": "Francis",
+                              "lastname": "Olatinwo",
+                              "middlename": "Olamide",
+                              "role": "Product Manager",
+                              "status": "Active",
+                              "email": "francisolatinwo@gmail.com",
+                              "password": "Admin1234",
+                              "adminId": "f4eb0834-2cb4-4c6d-8104-8e7168f50740",
+                              "username": "francisolatinwo",
+                              "__v": 0
+                          }
+                      ]
+                  }
+              }
+          }

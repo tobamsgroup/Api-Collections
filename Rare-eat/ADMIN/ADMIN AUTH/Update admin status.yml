@@ -1,0 +1,24 @@
+info:
+  name: Update admin status
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{URL}}/admin/auth/update_status"
+  body:
+    type: json
+    data: |-
+      {
+          "oldPassword": "f72a39d055ac9e1e3c984691f01e1b0f84962199832d304f87b4e7fa2e62d078",
+          "password": "Admin1234"
+      }
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

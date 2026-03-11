@@ -1,0 +1,482 @@
+info:
+  name: Create a chapter
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/chapters"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"title\": \"Chapter 4: Eco Friendly\",\r
+
+      \    \"index\": 4,\r
+
+      \    \"seriesId\": \"68349fed7d1701603e0ee88c\",\r
+
+      \    \"description\": \"\" // Optional\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Create a chapter
+    request:
+      url: "{{base_url}}/chapters"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"title\": \"Chapter 1: Eco Friendly\",\r
+
+          \    \"index\": 1,\r
+
+          \    \"seriesId\": \"68349fed7d1701603e0ee88c\",\r
+
+          \    \"description\": \"\" // Optional\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "394"
+        - name: ETag
+          value: W/"18a-IvORymrtL0HqvsGjgrBw3iCu/A8"
+        - name: Date
+          value: Mon, 26 May 2025 17:09:50 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 201,
+              "message": "Chapter created successfully",
+              "timestamp": "2025-05-26T17:09:49.808Z",
+              "path": "/api/v1/chapters",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "title": "Chapter 1: Eco Friendly",
+                  "description": "",
+                  "index": 1,
+                  "seriesId": "68349fed7d1701603e0ee88c",
+                  "lessons": [],
+                  "_id": "6834a05d7d1701603e0ee894",
+                  "createdAt": "2025-05-26T17:09:49.837Z",
+                  "updatedAt": "2025-05-26T17:09:49.837Z"
+              }
+          }
+  - name: Create a chapter
+    request:
+      url: "{{base_url}}/book/688b024d524dba2a76efc2ae/pages"
+      method: GET
+      body:
+        type: json
+        data: "{\r
+
+          \    \"title\": \"Chapter 4: Eco Friendly\",\r
+
+          \    \"index\": 4,\r
+
+          \    \"seriesId\": \"68349fed7d1701603e0ee88c\",\r
+
+          \    \"description\": \"\" // Optional\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 06 Aug 2025 07:27:03 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "3091"
+        - name: Connection
+          value: keep-alive
+        - name: access-control-allow-origin
+          value: "*"
+        - name: Content-Encoding
+          value: br
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"2b3d-lrAO89I+hUPQx0JQhf7fce8yQDw"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: bed8e215-5c4f-4fa8
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 96accf3c3d9971c0-LHR
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Success",
+              "timestamp": "2025-08-06T07:27:03.494Z",
+              "path": "/api/v1/book/688b024d524dba2a76efc2ae/pages",
+              "service": "RL4Kids",
+              "version": "1.0.0",
+              "data": {
+                  "_id": "688b024d524dba2a76efc2ae",
+                  "pages": [
+                      {
+                          "index": 1,
+                          "title": "",
+                          "paragraphs": [
+                              {
+                                  "index": 1,
+                                  "header": "Get Ready for an Epic Adventure!",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Welcome back, Eco Explorers! Are you ready to journey to some of the most incredible places on our planet without even leaving your seat? In this chapter, we’re going to explore four very special environments: forests, deserts, oceans, and grasslands. Each of these places is unique, filled with fascinating plants, amazing animals, and hidden secrets just waiting to be discovered. We’ll learn what makes each one so special, how they work, and why they need our help to stay healthy and vibrant. So, grab your explorer hat, and let’s embark on this exciting adventure!",
+                                  "image": "https://recycled-learning-test.s3.eu-north-1.amazonaws.com/67cc66426ebf092e6728f7d4/image/53a335bd-bf9c-408e-9699-ecf1af00b044/TS1CH2_1.png",
+                                  "template": "column",
+                                  "headerFont": "Big"
+                              }
+                          ]
+                      },
+                      {
+                          "index": 2,
+                          "title": "",
+                          "paragraphs": [
+                              {
+                                  "index": 1,
+                                  "header": "Discovering Forests: The Green Lungs of the Earth",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Forests are often called the “lungs of the Earth” because they produce much of the oxygen we breathe. These green, leafy places are teeming with life—tall trees reaching for the sky, birds singing high in the branches, and animals of all sizes making their homes among the trees. Forests provide food, shelter, and clean air for countless species, including us!",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Big"
+                              },
+                              {
+                                  "index": 2,
+                                  "header": "IMAGINE",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Imagine walking through a thick forest where the trees are so tall they seem to touch the sky. You can hear the rustling of leaves under foot, the chirping of birds above, and maybe even spot a deer or squirrel darting through the trees. The air smells fresh and earthy because the trees are hard at work, cleaning the air and providing oxygen for all living things.",
+                                  "image": "https://recycled-learning-test.s3.eu-north-1.amazonaws.com/67cc66426ebf092e6728f7d4/image/a6ef3cfe-ba04-4ec6-bbcd-8d32fc899cbc/TS1CH2_2.png",
+                                  "template": "image-left",
+                                  "headerFont": "Big"
+                              },
+                              {
+                                  "index": 3,
+                                  "header": "Activity 2.1: Forest Adventure",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "What to Do: In your Eco Explorer Journal, draw a picture or write about a vibrant forest. Include some of the animals that might live there, such as birds, deer, and squirrels. Don’t forget to add the tall trees and maybe even a river or stream running through it.",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Small"
+                              },
+                              {
+                                  "index": 4,
+                                  "header": "Discovering Deserts: The Survival Experts",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Deserts might look like empty, barren places, but they are actually full of life! These dry, sandy regions have very little water, but the plants and animals that live there are true survival experts. From cacti that store water in their thick stems to lizards that bask in the sun, deserts are home to some of the toughest creatures on Earth.",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Big"
+                              }
+                          ]
+                      },
+                      {
+                          "index": 3,
+                          "title": "",
+                          "paragraphs": [
+                              {
+                                  "index": 1,
+                                  "header": "THINK",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Think about how hot and dry the desert is. Despite these harsh conditions, plants like cacti manage to store precious water, and animals like camels and lizards can survive with very little. These adaptations help them live in a place where most other plants and animals would struggle.",
+                                  "image": "https://recycled-learning-test.s3.eu-north-1.amazonaws.com/67cc66426ebf092e6728f7d4/image/fbe99fdc-3adc-4504-a908-197003f8900b/TS1CH2_3.png",
+                                  "template": "image-left",
+                                  "headerFont": "Big"
+                              },
+                              {
+                                  "index": 2,
+                                  "header": "Activity 2.2: Desert Survivor",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "What to Do: Draw a picture of a desert in your journal. Include some of the unique plants and animals that can survive there, like cacti, lizards, and camels. Think about what makes these plants and animals so special and how they are able to live in such a hot, dry place.",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Small"
+                              },
+                              {
+                                  "index": 3,
+                                  "header": "Discovering Oceans: The Blue Heart of Our Planet",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Oceans cover more than 70% of our planet and are like giant, blue worlds full of life beneath the waves. From colourful coral reefs to the deep, mysterious waters, the ocean is home to an incredible variety of creatures, from tiny plankton to the mighty blue whale. Oceans play a vital role in regulating the Earth’s climate and provide food and livelihoods for millions of people around the world.",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Big"
+                              },
+                              {
+                                  "index": 4,
+                                  "header": "DIVE IN",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Imagine diving into the ocean where you are surrounded by schools of brightly coloured fish, and you spot a sea turtle gliding gracefully by. The water is alive with movement, full of creatures big and small, each playing apart in the ocean’s complex and beautiful ecosystem.",
+                                  "image": "",
+                                  "template": "image-left",
+                                  "headerFont": "Big"
+                              }
+                          ]
+                      },
+                      {
+                          "index": 3,
+                          "title": "",
+                          "paragraphs": [
+                              {
+                                  "index": 1,
+                                  "header": "THINK",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Think about how hot and dry the desert is. Despite these harsh conditions, plants like cacti manage to store precious water, and animals like camels and lizards can survive with very little. These adaptations help them live in a place where most other plants and animals would struggle.",
+                                  "image": "https://recycled-learning-test.s3.eu-north-1.amazonaws.com/67cc66426ebf092e6728f7d4/image/fbe99fdc-3adc-4504-a908-197003f8900b/TS1CH2_3.png",
+                                  "template": "image-left",
+                                  "headerFont": "Big"
+                              },
+                              {
+                                  "index": 2,
+                                  "header": "Activity 2.2: Desert Survivor",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "What to Do: Draw a picture of a desert in your journal. Include some of the unique plants and animals that can survive there, like cacti, lizards, and camels. Think about what makes these plants and animals so special and how they are able to live in such a hot, dry place.",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Small"
+                              },
+                              {
+                                  "index": 3,
+                                  "header": "Discovering Oceans: The Blue Heart of Our Planet",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Oceans cover more than 70% of our planet and are like giant, blue worlds full of life beneath the waves. From colourful coral reefs to the deep, mysterious waters, the ocean is home to an incredible variety of creatures, from tiny plankton to the mighty blue whale. Oceans play a vital role in regulating the Earth’s climate and provide food and livelihoods for millions of people around the world.",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Big"
+                              },
+                              {
+                                  "index": 4,
+                                  "header": "DIVE IN",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Imagine diving into the ocean where you are surrounded by schools of brightly coloured fish, and you spot a sea turtle gliding gracefully by. The water is alive with movement, full of creatures big and small, each playing apart in the ocean’s complex and beautiful ecosystem.",
+                                  "image": "https://recycled-learning-test.s3.eu-north-1.amazonaws.com/67cc66426ebf092e6728f7d4/image/858d07ee-e25d-4710-ba6c-a28efd88ffd1/TS1CH2_4.png",
+                                  "template": "image-left",
+                                  "headerFont": "Big"
+                              }
+                          ]
+                      },
+                      {
+                          "index": 5,
+                          "title": "",
+                          "paragraphs": [
+                              {
+                                  "index": 1,
+                                  "header": "Activity 2.3: Ocean Explorer",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "What to Do: Draw an ocean scene in your journal. Include different kinds of sea creatures, like fish, dolphins, sea turtles, and maybe even a whale. Think about how all these animals depend on the ocean to live and how they interact with each other in this underwater world.",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Small"
+                              },
+                              {
+                                  "index": 2,
+                                  "header": "Discovering Grasslands: The Wide-Open Plains",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Grasslands are vast, open spaces covered with grasses and wildflowers. These areas might not have many trees, but they are home to some of the most iconic animals on the planet. In Africa, grasslands are where you’ll find herds of zebras, gazelles, and the majestic lion. In North America, grasslands are home to bison, prairie dogs, and a variety of birds. The grasses provide food for these animals and play a crucial role in maintaining healthy soil.",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Big"
+                              },
+                              {
+                                  "index": 3,
+                                  "header": "WONDER",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "Picture a grassland stretching as far as the eye can see, with herds of zebras grazing and lions resting in the shade. The grasses sway gently in the breeze, and the sky is wide and blue. This open, sun-filled space is a perfect home for many animals that have adapted to life in the grasslands.",
+                                  "image": "https://recycled-learning-test.s3.eu-north-1.amazonaws.com/67cc66426ebf092e6728f7d4/image/8a870433-7ca8-4521-9d30-e58d972721c4/TS1CH2_5.png",
+                                  "template": "image-left",
+                                  "headerFont": "Big"
+                              },
+                              {
+                                  "index": 4,
+                                  "header": "Activity 2.4: Grassland Safari",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "What to Do: In your journal, draw a picture of a grassland. Which animals would you find there? Include tall grasses, wildflowers, and the animals that call this place home, such as zebras, lions, bison, or prairie dogs.",
+                                  "image": "",
+                                  "template": "image-left",
+                                  "headerFont": "Small"
+                              }
+                          ]
+                      },
+                      {
+                          "index": 6,
+                          "title": "Eco Explorers Learning Corner",
+                          "paragraphs": [
+                              {
+                                  "index": 1,
+                                  "header": "1. Forest",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Small",
+                                  "list": [
+                                      {
+                                          "title": "",
+                                          "content": "A large area covered with trees, plants, and lots of different animals."
+                                      },
+                                      {
+                                          "title": "",
+                                          "content": "Forests are full of life and help clean the air we breathe. Think about how all the plants and animals work together to create a thriving ecosystem."
+                                      }
+                                  ]
+                              },
+                              {
+                                  "index": 2,
+                                  "header": "2. Desert",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Small",
+                                  "list": [
+                                      {
+                                          "title": "",
+                                          "content": "A dry, sandy place with very little water, but still home to many plants and animals that have special adaptations to survive."
+                                      },
+                                      {
+                                          "title": "",
+                                          "content": "Even in the harsh desert, life finds a way to survive. Consider how these plants and animals are specially adapted to their environment."
+                                      }
+                                  ]
+                              },
+                              {
+                                  "index": 3,
+                                  "header": "3. Ocean",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Small",
+                                  "list": [
+                                      {
+                                          "title": "",
+                                          "content": "A huge body of saltwater that covers most of our planet and is home to countless sea creatures."
+                                      },
+                                      {
+                                          "title": "",
+                                          "content": "Oceans are teeming with life and play a vital role in keeping our planet healthy by regulating climate and providing food."
+                                      }
+                                  ]
+                              },
+                              {
+                                  "index": 2,
+                                  "header": "4. Grassland",
+                                  "subHeader": "",
+                                  "subContent": "",
+                                  "content": "",
+                                  "image": "",
+                                  "template": "column",
+                                  "headerFont": "Small",
+                                  "list": [
+                                      {
+                                          "title": "",
+                                          "content": "A wide, open area covered with grasses and wildflowers, home to many large animals."
+                                      },
+                                      {
+                                          "title": "",
+                                          "content": "Grasslands are essential for supporting a variety of animals and help maintain healthy soil."
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
+          }

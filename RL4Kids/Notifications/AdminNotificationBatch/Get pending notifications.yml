@@ -1,0 +1,221 @@
+info:
+  name: Get pending notifications
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/admin-notification-batches/pending"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get pending notifications
+    request:
+      url: "{{base_url}}/admin-notification-batches/pending"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "4477"
+        - name: ETag
+          value: W/"117d-V2/7XeQcQSv9+EMHFmoHMv8NTMk"
+        - name: Date
+          value: Tue, 01 Jul 2025 04:32:53 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Pending notifications fetched successfully",
+              "timestamp": "2025-07-01T04:32:53.310Z",
+              "path": "/api/v1/admin-notification-batches/pending",
+              "service": "RL4KIDS",
+              "version": "1.0.0",
+              "data": [
+                  {
+                      "applicationPurpose": "Demo Booking",
+                      "count": 2,
+                      "notifications": [
+                          {
+                              "_id": "686361510734cb1516e4b4e3",
+                              "applicantName": "Jane Doe",
+                              "applicantEmail": "jane.doe@example.com",
+                              "applicationPurpose": "Demo Booking",
+                              "submissionLink": "http://localhost:5500/api/v1/demo/686361510734cb1516e4b4e1",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:17:21.833Z",
+                              "updatedAt": "2025-07-01T04:17:21.833Z"
+                          },
+                          {
+                              "_id": "6863616b0734cb1516e4b4e7",
+                              "applicantName": "Jane Doe",
+                              "applicantEmail": "jane.doe@example.com",
+                              "applicationPurpose": "Demo Booking",
+                              "submissionLink": "http://localhost:5500/api/v1/demo/6863616a0734cb1516e4b4e5",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:17:47.107Z",
+                              "updatedAt": "2025-07-01T04:17:47.107Z"
+                          }
+                      ]
+                  },
+                  {
+                      "applicationPurpose": "Teach with Us Application",
+                      "count": 2,
+                      "notifications": [
+                          {
+                              "_id": "6863617a0734cb1516e4b4eb",
+                              "applicantName": "John Doe",
+                              "applicantEmail": "john.doe@example.com",
+                              "applicationPurpose": "Teach with Us Application",
+                              "submissionLink": "http://localhost:5500/api/v1/teach/6863617a0734cb1516e4b4e9",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:18:02.400Z",
+                              "updatedAt": "2025-07-01T04:18:02.400Z"
+                          },
+                          {
+                              "_id": "6863618c0734cb1516e4b4ef",
+                              "applicantName": "John Doe",
+                              "applicantEmail": "john.doe@example.com",
+                              "applicationPurpose": "Teach with Us Application",
+                              "submissionLink": "http://localhost:5500/api/v1/teach/6863618c0734cb1516e4b4ed",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:18:20.682Z",
+                              "updatedAt": "2025-07-01T04:18:20.682Z"
+                          }
+                      ]
+                  },
+                  {
+                      "applicationPurpose": "Partner Application",
+                      "count": 2,
+                      "notifications": [
+                          {
+                              "_id": "686361980734cb1516e4b4f4",
+                              "applicantName": "Future Leaders Foundation",
+                              "applicantEmail": "sulaiman@futureleaderss.org",
+                              "applicationPurpose": "Partner Application",
+                              "submissionLink": "http://localhost:5500/api/v1/partner-applications/686361980734cb1516e4b4f2",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:18:32.791Z",
+                              "updatedAt": "2025-07-01T04:18:32.791Z"
+                          },
+                          {
+                              "_id": "686361c30734cb1516e4b505",
+                              "applicantName": "Future Leaders Foundation",
+                              "applicantEmail": "sulaiman@futureleader.org",
+                              "applicationPurpose": "Partner Application",
+                              "submissionLink": "http://localhost:5500/api/v1/partner-applications/686361c30734cb1516e4b503",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:19:15.669Z",
+                              "updatedAt": "2025-07-01T04:19:15.669Z"
+                          }
+                      ]
+                  },
+                  {
+                      "applicationPurpose": "Digital Book Club Registration",
+                      "count": 2,
+                      "notifications": [
+                          {
+                              "_id": "686361a50734cb1516e4b4fa",
+                              "applicantName": "Aisha Mohammed Fatima Mohammed",
+                              "applicantEmail": "aisha.m@example.com",
+                              "applicationPurpose": "Digital Book Club Registration",
+                              "submissionLink": "http://localhost:5500/api/v1/digital-book-clubs/686361a50734cb1516e4b4f8",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:18:45.680Z",
+                              "updatedAt": "2025-07-01T04:18:45.680Z"
+                          },
+                          {
+                              "_id": "686361b40734cb1516e4b500",
+                              "applicantName": "Aisha Mohammed Fatima Mohammed",
+                              "applicantEmail": "aisha.m@examplem.com",
+                              "applicationPurpose": "Digital Book Club Registration",
+                              "submissionLink": "http://localhost:5500/api/v1/digital-book-clubs/686361b40734cb1516e4b4fe",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:19:00.355Z",
+                              "updatedAt": "2025-07-01T04:19:00.355Z"
+                          }
+                      ]
+                  },
+                  {
+                      "applicationPurpose": "Book Club Starter Pack Request",
+                      "count": 2,
+                      "notifications": [
+                          {
+                              "_id": "686361cd0734cb1516e4b50a",
+                              "applicantName": "Jane Doe",
+                              "applicantEmail": "jane.doee@example.com",
+                              "applicationPurpose": "Book Club Starter Pack Request",
+                              "submissionLink": "http://localhost:5500/api/v1/book-club-starter-packs/686361cd0734cb1516e4b508",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:19:25.761Z",
+                              "updatedAt": "2025-07-01T04:19:25.761Z"
+                          },
+                          {
+                              "_id": "686361d30734cb1516e4b50f",
+                              "applicantName": "Jane Doe",
+                              "applicantEmail": "jane.doe@example.com",
+                              "applicationPurpose": "Book Club Starter Pack Request",
+                              "submissionLink": "http://localhost:5500/api/v1/book-club-starter-packs/686361d30734cb1516e4b50d",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:19:31.978Z",
+                              "updatedAt": "2025-07-01T04:19:31.978Z"
+                          }
+                      ]
+                  },
+                  {
+                      "applicationPurpose": "Book Club Ambassador Application",
+                      "count": 1,
+                      "notifications": [
+                          {
+                              "_id": "686361f10734cb1516e4b514",
+                              "applicantName": "Jane Doe",
+                              "applicantEmail": "jane.adoe@example.com",
+                              "applicationPurpose": "Book Club Ambassador Application",
+                              "submissionLink": "http://localhost:5500/api/v1/book-club-ambassadors/686361f00734cb1516e4b512",
+                              "isProcessed": false,
+                              "createdAt": "2025-07-01T04:20:01.020Z",
+                              "updatedAt": "2025-07-01T04:20:01.020Z"
+                          }
+                      ]
+                  }
+              ]
+          }

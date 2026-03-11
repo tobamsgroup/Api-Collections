@@ -1,0 +1,18 @@
+info:
+  name: DELETE PRODUCT IMAGE
+  type: http
+  seq: 2
+
+http:
+  method: DELETE
+  url: "{{URL}}/companies/product/delete/productImage/657857ab1d22579b1a5148da"
+  body:
+    type: json
+    data: "{\r\n    \"ArrayNumber\": 4\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

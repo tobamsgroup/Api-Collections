@@ -1,0 +1,23 @@
+info:
+  name: Add a new endpoint
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{BASE}}/webhooks"
+  body:
+    type: json
+    data: |-
+      {
+          "url": "https://1aafc2b958f5.ngrok-free.app/api/v1/webhooks/payments"
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

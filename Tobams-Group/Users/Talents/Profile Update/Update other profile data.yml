@@ -1,0 +1,113 @@
+info:
+  name: Update other profile data
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{BASE}}/talents"
+  body:
+    type: json
+    data: |-
+      {
+          "briefBio": "A passionate software developer with experience in building web applications.",
+          "occupation": "Software Developer",
+          "portfolioLink": "https://example.com/portfolio",
+          "linkText": "View my portfolio",
+          "jobPreferences": {
+              "role": ["Software Developer", "Data Analyst"],
+              "industryOfInterest": ["Technology", "Finance"],
+              "preferredLocation": ["New York", "San Francisco"],
+              "workMode": ["Remote"],
+              "duration": ["6 months"],
+              "workType": ["Full-time"]
+          },
+          "mentorPreferences": {
+              "role": ["Senior Developer", "Project Manager"],
+              "industryOfInterest": ["Technology", "Healthcare"],
+              "experienceLevel": ["Mid-Level"],
+              "mentorshipType": ["Group"]
+          },
+          "yearsOfExperience": "5 years"
+      }
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update other profile data
+    request:
+      url: "{{BASE}}/talents"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "skills": ["TS", "JavaScript", "AWS"],
+              "briefBio": "A passionate software developer with experience in building web applications.",
+              "occupation": "Software Developer",
+              "portfolioLink": "https://example.com/portfolio",
+              "linkText": "View my portfolio",
+              "jobPreferences": {
+                  "role": ["Software Developer", "Data Analyst"],
+                  "industryOfInterest": ["Technology", "Finance"],
+                  "preferredLocation": ["New York", "San Francisco"],
+                  "workMode": ["Remote"],
+                  "duration": ["6 months"],
+                  "workType": ["Full-time"]
+              },
+              "mentorPreferences": {
+                  "role": ["Senior Developer", "Project Manager"],
+                  "industryOfInterest": ["Technology", "Healthcare"],
+                  "experienceLevel": ["Mid-Level"],
+                  "mentorshipType": ["Group"]
+              },
+              "yearsOfExperience": "2 years"
+          }
+    response:
+      body:
+        type: text
+        data: ""
+  - name: Update other profile data (for admin)
+    request:
+      url: "{{BASE}}/talents?userId=0"
+      method: PATCH
+      params:
+        - name: userId
+          value: "0"
+          type: query
+      body:
+        type: json
+        data: |-
+          {
+              "skills": ["TS", "JavaScript", "AWS"],
+              "briefBio": "A passionate software developer with experience in building web applications.",
+              "occupation": "Software Developer",
+              "portfolioLink": "https://example.com/portfolio",
+              "linkText": "View my portfolio",
+              "jobPreferences": {
+                  "role": ["Software Developer", "Data Analyst"],
+                  "industryOfInterest": ["Technology", "Finance"],
+                  "preferredLocation": ["New York", "San Francisco"],
+                  "workMode": ["Remote"],
+                  "duration": ["6 months"],
+                  "workType": ["Full-time"]
+              },
+              "mentorPreferences": {
+                  "role": ["Senior Developer", "Project Manager"],
+                  "industryOfInterest": ["Technology", "Healthcare"],
+                  "experienceLevel": ["Mid-Level"],
+                  "mentorshipType": ["Group"]
+              },
+              "yearsOfExperience": "2 years"
+          }
+    response:
+      body:
+        type: text
+        data: ""

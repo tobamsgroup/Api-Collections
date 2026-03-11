@@ -1,0 +1,38 @@
+info:
+  name: Guest Review for a Product
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/review-rating/guest-review"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"fullName\": \"Jane Doe\",\r
+
+      \  \"phoneNumber\": \"07064591358\",\r
+
+      \  \"role\": \"guest\",\r
+
+      \  \"email\": \"enamesit@gmail.com\",\r
+
+      \   \"productId\": \"65cf8a63bef40ff3f023e6ce\",\r
+
+      \  \"location\": \"Lagos\",\r
+
+      \  \"comment\": \"This product is great\",\r
+
+      \  \"rating\": 1,\r
+
+      \  \"isGuest\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,30 @@
+info:
+  name: Create a community
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{BASE}}/communities"
+  body:
+    type: json
+    data: |-
+      {
+          "communityName": "Backend developers",
+          "industry": "Information Technology",
+          "description": "Very beneficial community of developers",
+          "rules": [
+              "No discussion of religion or politics",
+              "No disrespects or insults, you will be removed from the group if found guilty",
+              "Posts from companies or promoting paid services (books, courses, tools, events)"
+              ]
+      }
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

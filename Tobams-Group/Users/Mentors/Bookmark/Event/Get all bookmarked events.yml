@@ -1,0 +1,107 @@
+info:
+  name: Get all bookmarked events
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{BASE}}/mentors/events/bookmarks"
+  auth:
+    type: bearer
+    token: "{{mentor_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get all bookmarked events
+    request:
+      url: "{{BASE}}/interns/events/bookmarks"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1710"
+        - name: ETag
+          value: W/"6ae-4DOXuh22m9b3YRYM5VBmn7HgZoQ"
+        - name: Date
+          value: Wed, 09 Apr 2025 10:20:45 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Events retrieved successfully",
+              "data": {
+                  "count": 1,
+                  "savedEvents": [
+                      {
+                          "_id": "67a5f37acb6a7438aeaa767d",
+                          "title": "Elevate Your Soul",
+                          "location": "Tech Convention Center, San Francisco, CA",
+                          "description": "Join us for an exciting health conference where industry leaders will discuss the latest trends and innovations in technology.",
+                          "eventsDetails": {
+                              "About the Event: Sustainable Development Goals (SDGs)": "Welcome to the Sustainable Development Goals (SDGs) event—an inspiring gathering dedicated to advancing global progress and fostering a shared commitment to sustainability. This event serves as a platform for collaboration, innovation, and dialogue, bringing together diverse stakeholders, thought leaders, and change-makers.",
+                              "key highlight": [
+                                  "Insightful Discussions: Engage in thought-provoking conversations led by experts in sustainable development addressing current challenges and opportunities.",
+                                  "Innovative Solutions: Discover groundbreaking projects and solutions that align with the SDGs, driving positive change across various sectors.",
+                                  "Networking Opportunities: Connect with like-minded individuals, organizations, and influencers passionate about creating a sustainable future."
+                              ]
+                          },
+                          "about": "A conference to discuss the latest trends in health.",
+                          "host": "'Soul Community",
+                          "extra": "Join us on this journey toward a more sustainable, inclusive, and resilient future. Together, let's transform goals into action and make a lasting difference for generations to come.",
+                          "isPaid": {
+                              "currency": "NGN",
+                              "status": true,
+                              "price": 150
+                          },
+                          "interval": "2 hours",
+                          "image": "https://sayedrapsikoloji.com/uploads/images/202404/image_870x_6626ba3e3a304.jpg",
+                          "createdAt": "2025-02-07T11:50:18.879Z"
+                      }
+                  ]
+              }
+          }

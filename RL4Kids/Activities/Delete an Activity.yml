@@ -1,0 +1,17 @@
+info:
+  name: Delete an Activity
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{base_url}}/activities/646e1234f12345678901234"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

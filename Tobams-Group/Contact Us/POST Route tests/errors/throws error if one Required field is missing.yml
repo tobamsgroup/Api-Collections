@@ -1,0 +1,26 @@
+info:
+  name: throws error if one Required field is missing
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{URL}}/contact-us/"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"email\": \"marty@ebuthor.com\",\r
+
+      \  \"subject\": \"Issues with my dashboard\",\r
+
+      \  \"message\": \"I cant find the job applications action on my dashboard. Please assist in rectifying as i ned to use this immediately. Thank you\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

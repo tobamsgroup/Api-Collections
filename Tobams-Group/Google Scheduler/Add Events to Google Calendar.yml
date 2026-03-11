@@ -1,0 +1,74 @@
+info:
+  name: Add Events to Google Calendar
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/api/calendar/create"
+  body:
+    type: json
+    data: "{ // For the tokens object, just parse all that is returned upon google authentication\r
+
+      \    \"tokens\":{\r
+
+      \  \"access_token\": \"ya29.a0AfH6SM...\",\r
+
+      \  \"refresh_token\": \"1//0gGqv...\",\r
+
+      \  \"id_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjU...\"\r
+
+      },\r
+
+      \  \"summary\": \"Team Meeting\",\r
+
+      \  \"description\": \"Discuss project milestones and deadlines.\",\r
+
+      \  \"location\": \"123 Main St, San Francisco, CA 94105\",\r
+
+      \  \"start\": {\r
+
+      \    \"dateTime\": \"2024-12-01T10:00:00-08:00\",\r
+
+      \    \"timeZone\": \"America/Los_Angeles\"\r
+
+      \  },\r
+
+      \  \"end\": {\r
+
+      \    \"dateTime\": \"2024-12-01T11:00:00-08:00\",\r
+
+      \    \"timeZone\": \"America/Los_Angeles\"\r
+
+      \  },\r
+
+      \  \"attendees\": [\r
+
+      \    { \"email\": \"attendee1@example.com\" },\r
+
+      \    { \"email\": \"attendee2@example.com\" }\r
+
+      \  ],\r
+
+      \  \"reminders\": {\r
+
+      \    \"useDefault\": false,\r
+
+      \    \"overrides\": [\r
+
+      \      { \"method\": \"email\", \"minutes\": 1440 },\r
+
+      \      { \"method\": \"popup\", \"minutes\": 10 }\r
+
+      \    ]\r
+
+      \  }\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

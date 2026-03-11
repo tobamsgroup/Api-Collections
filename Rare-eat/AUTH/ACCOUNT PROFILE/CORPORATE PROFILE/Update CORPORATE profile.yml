@@ -1,0 +1,129 @@
+info:
+  name: Update CORPORATE profile
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{URL}}/user/corporate/profile/update"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmYTg4YmJlLWQ2YmMtNDY4Mi1hODY5LTdjYWRmM2ZjMzExYyIsImlhdCI6MTcwMDkxNTkxNSwiZXhwIjoxNzAxMzQ3OTE1fQ.wZa0f__JO5XCDr6z6JlLh_o1eu0zraMbsCwzsh67NGY
+  body:
+    type: json
+    data: "{\r
+
+      \    \"businessName\": \"Dangote\",\r
+
+      \    \"location\" : \"Benin State\",\r
+
+      \    \"address\": \"No1, elite road, warri\",\r
+
+      \    \"postalCode\": \"73849\",\r
+
+      \    \"phonenumber\" : 8032485930 , \r
+
+      \    \"website\": \"www.itemseven.com\",\r
+
+      \    \"linkedInAccount\": \"www.itemseven.com/in/dangote\",\r
+
+      \    \"instagramAccount\": \"www.itemseven.com\",\r
+
+      \    \"newsletterInterest\": false\r
+
+      \r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update CORPORATE profile
+    request:
+      url: "{{URL}}/user/corporate/profile/update"
+      method: PATCH
+      headers:
+        - name: Authorization
+          value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmYTg4YmJlLWQ2YmMtNDY4Mi1hODY5LTdjYWRmM2ZjMzExYyIsImlhdCI6MTcwMDkxNTkxNSwiZXhwIjoxNzAxMzQ3OTE1fQ.wZa0f__JO5XCDr6z6JlLh_o1eu0zraMbsCwzsh67NGY
+      body:
+        type: json
+        data: "{\r
+
+          \    \"businessName\": \"Dangote\",\r
+
+          \    \"location\" : \"Benin State\",\r
+
+          \    \"address\": \"No1, elite road, warri\",\r
+
+          \    \"postalCode\": \"73849\",\r
+
+          \    \"phonenumber\" : 8032485930 , \r
+
+          \    \"website\": \"https://www.itemseven.com\",\r
+
+          \    \"linkedInAccount\": \"https://www.itemseven.com/in/dangote\",\r
+
+          \    \"instagramAccount\": \"https://www.itemseven.com\",\r
+
+          \    \"newsletterInterest\": false\r
+
+          \r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "661"
+        - name: ETag
+          value: W/"295-pb8jjMluCRjWnLg/tiKst73sZkw"
+        - name: Date
+          value: Mon, 27 Nov 2023 15:12:25 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "msg": "profile created successfully",
+              "userProfile": {
+                  "_id": "656494f8b087ce6be47cab5b",
+                  "email": "olacorporate@gmail.com",
+                  "phoneNumber": 7012312415,
+                  "businessName": "Dangote",
+                  "address": "No1, elite road, warri",
+                  "location": "Benin State",
+                  "postalCode": "73849",
+                  "bussinessRegisterationNumber": "7823834933293",
+                  "taxIdentificationNumber": "7823834933293",
+                  "website": "https://www.itemseven.com",
+                  "newsletterInterest": false,
+                  "termsAndConditions": true,
+                  "userId": "f54846dc-bbf7-4897-bbe5-cb99fad55ee3",
+                  "createdAt": "2023-11-27T13:09:12.615Z",
+                  "updatedAt": "2023-11-27T15:12:25.514Z",
+                  "instagramAccount": "https://www.itemseven.com",
+                  "linkedInAccount": "https://www.itemseven.com/in/dangote"
+              }
+          }

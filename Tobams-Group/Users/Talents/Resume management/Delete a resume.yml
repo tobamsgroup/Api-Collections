@@ -1,0 +1,23 @@
+info:
+  name: Delete a resume
+  type: http
+  seq: 2
+
+http:
+  method: DELETE
+  url: "{{BASE}}/talents/resumes/67c81c0c1e35a7da41fef091"
+  body:
+    type: json
+    data: |-
+      {
+          "fileKey": "uploads/1741164689201_iL6RUTL-akatsuki-wallpaper-hd.jpg"
+      }
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

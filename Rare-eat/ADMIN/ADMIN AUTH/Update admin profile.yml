@@ -1,0 +1,27 @@
+info:
+  name: Update admin profile
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{URL}}/admin/auth/update_profile"
+  body:
+    type: json
+    data: |-
+      {
+          "firstname": "Prince",
+          "lastname": "Brick",
+          "middlename": "Stoner",
+          "username": "stonecold",
+          "email": "stonecold@gmail.com"
+      }
+  auth:
+    type: bearer
+    token: "{{ajwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

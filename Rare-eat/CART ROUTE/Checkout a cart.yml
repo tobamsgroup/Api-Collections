@@ -1,0 +1,110 @@
+info:
+  name: Checkout a cart
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{URL}}/cart/submit_cart"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"isGuest\": true, //|| false //if its a guest, it will be passed in true and if its not its will be false\r
+
+      \    //...along with the order required cart details not the guest user info though *GUEST-uuid*\r
+
+      \    \"userId\": \"0b65eb86-b1d4-4337-9e96-dbe365570434\",\r
+
+      \    \"date\": \"2023-10-24T23:09:32.472Z\",\r
+
+      \    \"_id\": \"65385155f911a4034b5a92e0\",\r
+
+      \    \"orderId\": \"46be1d0b-009c-4513-ba91-0b612754f8bd\",\r
+
+      \    \"productDetails\": [\r
+
+      \        {\r
+
+      \            \"productId\": \"65cf8a63bef40ff3f023e6ce\",\r
+
+      \            \"name\": \"Jollof Rice MIlk\",\r
+
+      \            \"quantity\": 3,\r
+
+      \            \"spiceLevel\": \"Mild\",\r
+
+      \            \"weight\": \"200g\",\r
+
+      \            \"image\": \"https://res.cloudinary.com/dddiqpeib/image/upload/v1697552541/Dev-product-images/tmp-3-1697552527402_vpfhyp.jpg\",\r
+
+      \            \"_id\": \"65385156f911a4034b5a92e6\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }\r
+
+      \    "
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Checkout a cart
+    request:
+      url: "{{URL}}/cart/submit_cart"
+      method: PATCH
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "564"
+        - name: ETag
+          value: W/"234-M+9vQtgVHrld6HsSe8hVxQwz72U"
+        - name: Date
+          value: Tue, 24 Oct 2023 23:20:55 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "An order has been created, please proceed to payment",
+              "data": {
+                  "order": {
+                      "userId": "0b65eb86-b1d4-4337-9e96-dbe365570434",
+                      "status": "PENDING",
+                      "date": "2023-10-24T23:09:32.472Z",
+                      "_id": "65385155f911a4034b5a92e0",
+                      "orderId": "46be1d0b-009c-4513-ba91-0b612754f8bd",
+                      "productDetails": [
+                          {
+                              "productId": "652d9c943106f3b571eff507",
+                              "name": "chicken skewer",
+                              "quantity": 3,
+                              "spiceLevel": "Mild",
+                              "weight": "200g",
+                              "image": "https://res.cloudinary.com/dddiqpeib/image/upload/v1697552541/Dev-product-images/tmp-3-1697552527402_vpfhyp.jpg",
+                              "_id": "65385156f911a4034b5a92e6"
+                          }
+                      ],
+                      "__v": 1
+                  }
+              }
+          }

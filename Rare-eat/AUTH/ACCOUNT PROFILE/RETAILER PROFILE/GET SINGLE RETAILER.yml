@@ -1,0 +1,17 @@
+info:
+  name: GET SINGLE RETAILER
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{URL}}/user/retailer/profile/8fa88bbe-d6bc-4682-a869-7cadf3fc311c"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

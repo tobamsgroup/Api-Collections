@@ -1,0 +1,26 @@
+info:
+  name: Update Activity
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{base_url}}/activities/646e1234f12345678901234"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"title\": \"Updated Activity Title\",\r
+
+      \    \"activity\": \"Updated activity description\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

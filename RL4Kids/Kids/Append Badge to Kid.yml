@@ -1,0 +1,24 @@
+info:
+  name: Append Badge to Kid
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{base_url}}/kid/badges/append/68fa61bf5fa8660a37eaa6ee"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"badgeId\": \"698a59ddad8bfe6740fdd9aa\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

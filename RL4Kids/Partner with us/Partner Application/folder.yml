@@ -1,0 +1,7 @@
+info:
+  name: Partner Application
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

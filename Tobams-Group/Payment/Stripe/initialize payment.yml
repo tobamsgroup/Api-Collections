@@ -1,0 +1,210 @@
+info:
+  name: initialize payment
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/pay/initialize?purpose=subscription&paymentProvider=stripe"
+  params:
+    - name: purpose
+      value: subscription
+      type: query
+    - name: paymentProvider
+      value: stripe
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"fawaz.abdganiyu+o2@tobamsgroup.com\",\r
+
+      \    \"planId\": \"688861b71e201b5806cc95a9\",\r
+
+      \    \"billingCycle\": \"monthly\", // monthly or annually\r
+
+      \    \"autoRenew\": true // default true\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Initialize payment Result
+    request:
+      url: "{{BASE}}/pay/initialize?purpose=subscription&paymentProvider=stripe"
+      method: POST
+      params:
+        - name: purpose
+          value: subscription
+          type: query
+        - name: paymentProvider
+          value: stripe
+          type: query
+      body:
+        type: json
+        data: "{\r
+
+          \    \"planId\": \"688861b71e201b5806cc95a9\",\r
+
+          \    \"billingCycle\": \"monthly\", // monthly or annually\r
+
+          \    \"autoRenew\": true // default true\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1756807862695-ws3drn3j1
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "287"
+        - name: ETag
+          value: W/"11f-q/SC3FU35+sr/3nXLkLOrRxm/nA"
+        - name: Date
+          value: Tue, 02 Sep 2025 10:11:11 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Payment Initiated Successfully",
+              "data": {
+                  "status": true,
+                  "message": "Payment initialized successfully",
+                  "data": {
+                      "reference": "pi_3S2rBB9S64U9FZam1ikJju4i",
+                      "clientSecret": "pi_3S2rBB9S64U9FZam1ikJju4i_secret_G6NUEaybSX2Bs83wG4P79bSY8",
+                      "amount": 8900,
+                      "currency": "gbp"
+                  }
+              }
+          }
+  - name: initialize payment
+    request:
+      url: "{{BASE}}/pay/initialize?purpose=subscription&paymentProvider=stripe"
+      method: POST
+      params:
+        - name: purpose
+          value: subscription
+          type: query
+        - name: paymentProvider
+          value: stripe
+          type: query
+      body:
+        type: json
+        data: "{\r
+
+          \    \"planId\": \"688861b71e201b5806cc95a9\",\r
+
+          \    \"billingCycle\": \"monthly\", // monthly or annually\r
+
+          \    \"autoRenew\": true // default true\r
+
+          }"
+    response:
+      statusText: "201"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1756949997022-z2tebsr3s
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "696"
+        - name: ETag
+          value: W/"2b8-2TFYJdQdfYvWox65vvmIz4hbIvo"
+        - name: Date
+          value: Thu, 04 Sep 2025 01:40:02 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Payment Initiated Successfully",
+              "data": {
+                  "status": true,
+                  "message": "Checkout session initialized successfully",
+                  "data": {
+                      "reference": "cs_test_a1nWwZfM6ebwZKHg59vFGCfbTWJGrhX6rhjcFgIjVWAzCzBIuVIg2WWnQy",
+                      "checkoutUrl": "https://checkout.stripe.com/c/pay/cs_test_a1nWwZfM6ebwZKHg59vFGCfbTWJGrhX6rhjcFgIjVWAzCzBIuVIg2WWnQy#fid2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRWNWldUjxWMzFQPENfZGhwd0pOYGJLTjBrfWh1bmJfMENzSTJGcHBnSHx2NUxzUF9DRF1DYVRnQl9DYURvT2J3NGdAdjZ2UGl2YWRtan1MazxSYm5iPEQ1NUxpdD0xXEExJyknY3dqaFZgd3Ngdyc%2FcXdwYCknZ2RmbmJ3anBrYUZqaWp3Jz8nJjAyNDcxMScpJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"
+                  }
+              }
+          }

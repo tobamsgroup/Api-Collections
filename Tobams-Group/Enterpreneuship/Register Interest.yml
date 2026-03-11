@@ -1,0 +1,46 @@
+info:
+  name: Register Interest
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/interest-entrepreneurship/"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"firstName\": \"Jane\",\r
+
+      \  \"lastName\": \"Doe\",\r
+
+      \  \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\",\r
+
+      \  \"phoneNumber\": \"+2348012345678\",\r
+
+      \  \"ageRange\": \"18-25\",\r
+
+      \  \"country\": \"Nigeria\",\r
+
+      \  \"state\": \"Lagos\",\r
+
+      \  \"city\": \"Ikeja\",\r
+
+      \  \"entrepreneurshipStage\": \"Idea Stage\",\r
+
+      \  \"entrepreneurshipInterests\": \"Tech Startups\",\r
+
+      \  \"programInterest\": \"6-Week Entrepreneurship Masterclass\",\r
+
+      \  \"howDidYouHearAboutUs\": \"Social Media\",\r
+
+      \  \"expectationsOrQuestions\": \"I want to learn how to scale my business idea.\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

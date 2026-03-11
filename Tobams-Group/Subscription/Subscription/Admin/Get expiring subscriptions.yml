@@ -1,0 +1,23 @@
+info:
+  name: Get expiring subscriptions
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/subscriptions/admin/expiring"
+  body:
+    type: text
+    data: |-
+      {
+          "period": "weekly" // 'daily' | 'weekly' | 'monthly'
+      }
+  auth:
+    type: bearer
+    token: "{{org_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

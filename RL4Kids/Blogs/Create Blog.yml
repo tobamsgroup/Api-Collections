@@ -1,0 +1,28 @@
+info:
+  name: Create Blog
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/blog"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"title\": \"How AI is revolutionizing personal learning\",\r
+
+      \  \"content\": \"AI-powered tools create personalized learning paths for kids...\",\r
+
+      \  \"category\": \"AI_IN_EDUCATION\", // \"AI_IN_EDUCATION\", \"KIDS_AND_LEADERSHIP\", \"SUSTAINABILITY_AT_SCHOOL\"\r
+
+      \  \"image\": \"https://example.com/ai-learning.jpg\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

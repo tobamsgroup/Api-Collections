@@ -1,0 +1,111 @@
+info:
+  name: Update an existing intern data
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/interns/?update=add"
+  headers:
+    - name: Authorization
+      value: Bearer {{intern_access}}
+  params:
+    - name: update
+      value: add
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+          "personalInfo": {
+              // "location": {
+              //     "city": "Saki",
+              //     "country": "Nigeria"
+              // },
+              // "fullName": "Fawaz Devs",
+              "title": "Software Engineer"
+          },
+        "bio": "Passionate about software development and eager to learn.",
+        "education":
+          {
+            "school": "University of Lagos, Lagos",
+            "degree": "Bachelor's Degree",
+            "fieldOfStudy": "Computer Science and IT",
+            "grade": "First Class",
+            "startDate": "2018-09-01T00:00:00.000Z",
+            "endDate": "2022-06-01T00:00:00.000Z",
+            "isStudyingHere": false,
+            "description": "Studied various aspects of computer science including algorithms, data structures, and software engineering.",
+            "skills": ["C++", "Python"]
+          },
+        "workExperience":
+          {
+              "_id": "67a0f30ac8ab05ad8d1ea2a9",
+            "jobTitle": "Software Developer Intern",
+            "employmentType": "Internship",
+            "companyName": "Tech Company",
+            "location": "Lagos, Nigeria",
+            "locationType": "On-site",
+            "isWorkingHere": false,
+            "startDate": "2021-06-01T00:00:00.000Z",
+            "endDate": "2021-12-01T00:00:00.000Z",
+            "description": "Worked on developing web applications using JavaScript and Node.js.",
+            "skills": ["JavaScript", "Node.js"]
+          }
+          // {
+          //   "jobTitle": "Junior Software Developer",
+          //   "employmentType": "Full-time",
+          //   "companyName": "Another Tech Company",
+          //   "location": "Abuja, Nigeria",
+          //   "locationType": "Remote",
+          //   "isWorkingHere": true,
+          //   "startDate": "2022-01-01T00:00:00.000Z",
+          //   "endDate": "2022-06-01T00:00:00.000Z",
+          //   "description": "Developing and maintaining web applications using React and Node.js.",
+          //   "skills": ["React", "Node.js"]
+          // },
+          // {
+          //   "jobTitle": "Freelance Developer",
+          //   "employmentType": "Freelance",
+          //   "companyName": "Freelance",
+          //   "location": "Remote",
+          //   "locationType": "Remote",
+          //   "isWorkingHere": false,
+          //   "startDate": "2020-01-01T00:00:00.000Z",
+          //   "endDate": "2021-05-31T00:00:00.000Z",
+          //   "description": "Worked on various freelance projects involving web development and mobile app development.",
+          //   "skills": ["JavaScript", "React Native"]
+          // }
+          ,
+        "certification":
+          {
+              "_id": "67a0f30ac8ab05ad8d1ea2a8",
+            "certificateTitle": "Certified JavaScript Developer",
+            "institution": "Certification Authority",
+            "dateObtained": "2021-01-01",
+            "expiryDate": "2023-01-01"
+          },
+        "internshipPreferences": {
+          "role": ["Software Developer"],
+          "industryOfInterest": ["Technology"],
+          "preferredLocation": ["Remote"],
+          "workMode": "Remote",
+          "duration": "6 Months",
+          "internshipType": "Paid"
+        },
+        "mentorPreferences": {
+          "role": ["Software Engineer"],
+          "industryOfInterest": ["Technology"],
+          "experienceLevel": "Senior",
+          "mentorshipType": "Group"
+        }
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2FhMGVmZTJmOGEzNWUxN2UzOGU2MWUiLCJlbWFpbCI6ImVyaWNzc29ucmFwaGFlbEBnbWFpbC5jb20iLCJyb2xlIjoiSW50ZXJuIiwiaWF0IjoxNzM5NDM5MjM4LCJleHAiOjE3Mzk1MjU2Mzh9.WRg4w_DUtHDSkOcx5U4y6uVbh-Yk1DMqBoLDt2eFWDo
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

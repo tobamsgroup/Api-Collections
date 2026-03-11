@@ -1,0 +1,413 @@
+info:
+  name: HANDLE PAYPAL ORDER PAYMENT
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{URL}}/order/handle_paypal_payment"
+  body:
+    type: json
+    data: "{\r
+
+      \     \"payload\": {\r
+
+      \            \"id\": \"5DT39810M7191180E\",\r
+
+      \            \"status\": \"COMPLETED\",\r
+
+      \            \"payment_source\": {\r
+
+      \                \"paypal\": {\r
+
+      \                    \"email_address\": \"sb-flzwa28021680@personal.example.com\",\r
+
+      \                    \"account_id\": \"66SBDSBG6RJD2\",\r
+
+      \                    \"account_status\": \"VERIFIED\",\r
+
+      \                    \"name\": {\r
+
+      \                        \"given_name\": \"John\",\r
+
+      \                        \"surname\": \"Doe\"\r
+
+      \                    },\r
+
+      \                    \"address\": {\r
+
+      \                        \"country_code\": \"US\"\r
+
+      \                    }\r
+
+      \                }\r
+
+      \            },\r
+
+      \            \"purchase_units\": [\r
+
+      \                {\r
+
+      \                    \"reference_id\": \"027ed3bb-9164-40be-a34d-c7c10747ed24\",\r
+
+      \                    \"shipping\": {\r
+
+      \                        \"name\": {\r
+
+      \                            \"full_name\": \"John Doe\"\r
+
+      \                        },\r
+
+      \                        \"address\": {\r
+
+      \                            \"address_line_1\": \"1 Main St\",\r
+
+      \                            \"admin_area_2\": \"San Jose\",\r
+
+      \                            \"admin_area_1\": \"CA\",\r
+
+      \                            \"postal_code\": \"95131\",\r
+
+      \                            \"country_code\": \"US\"\r
+
+      \                        }\r
+
+      \                    },\r
+
+      \                    \"payments\": {\r
+
+      \                        \"captures\": [\r
+
+      \                            {\r
+
+      \                                \"id\": \"73A71976526460417\",\r
+
+      \                                \"status\": \"COMPLETED\",\r
+
+      \                                \"amount\": {\r
+
+      \                                    \"currency_code\": \"GBP\",\r
+
+      \                                    \"value\": \"231.26\"\r
+
+      \                                },\r
+
+      \                                \"final_capture\": true,\r
+
+      \                                \"seller_protection\": {\r
+
+      \                                    \"status\": \"ELIGIBLE\",\r
+
+      \                                    \"dispute_categories\": [\r
+
+      \                                        \"ITEM_NOT_RECEIVED\",\r
+
+      \                                        \"UNAUTHORIZED_TRANSACTION\"\r
+
+      \                                    ]\r
+
+      \                                },\r
+
+      \                                \"seller_receivable_breakdown\": {\r
+
+      \                                    \"gross_amount\": {\r
+
+      \                                        \"currency_code\": \"GBP\",\r
+
+      \                                        \"value\": \"231.26\"\r
+
+      \                                    },\r
+
+      \                                    \"paypal_fee\": {\r
+
+      \                                        \"currency_code\": \"GBP\",\r
+
+      \                                        \"value\": \"8.46\"\r
+
+      \                                    },\r
+
+      \                                    \"net_amount\": {\r
+
+      \                                        \"currency_code\": \"GBP\",\r
+
+      \                                        \"value\": \"222.80\"\r
+
+      \                                    },\r
+
+      \                                    \"receivable_amount\": {\r
+
+      \                                        \"currency_code\": \"USD\",\r
+
+      \                                        \"value\": \"279.06\"\r
+
+      \                                    },\r
+
+      \                                    \"exchange_rate\": {\r
+
+      \                                        \"source_currency\": \"GBP\",\r
+
+      \                                        \"target_currency\": \"USD\",\r
+
+      \                                        \"value\": \"1.252526175080041\"\r
+
+      \                                    }\r
+
+      \                                },\r
+
+      \                                \"links\": [\r
+
+      \                                    {\r
+
+      \                                        \"href\": \"https://api.sandbox.paypal.com/v2/payments/captures/73A71976526460417\",\r
+
+      \                                        \"rel\": \"self\",\r
+
+      \                                        \"method\": \"GET\"\r
+
+      \                                    },\r
+
+      \                                    {\r
+
+      \                                        \"href\": \"https://api.sandbox.paypal.com/v2/payments/captures/73A71976526460417/refund\",\r
+
+      \                                        \"rel\": \"refund\",\r
+
+      \                                        \"method\": \"POST\"\r
+
+      \                                    },\r
+
+      \                                    {\r
+
+      \                                        \"href\": \"https://api.sandbox.paypal.com/v2/checkout/orders/5DT39810M7191180E\",\r
+
+      \                                        \"rel\": \"up\",\r
+
+      \                                        \"method\": \"GET\"\r
+
+      \                                    }\r
+
+      \                                ],\r
+
+      \                                \"create_time\": \"2023-11-19T07:36:26Z\",\r
+
+      \                                \"update_time\": \"2023-11-19T07:36:26Z\"\r
+
+      \                            }\r
+
+      \                        ]\r
+
+      \                    }\r
+
+      \                }\r
+
+      \            ],\r
+
+      \            \"payer\": {\r
+
+      \                \"name\": {\r
+
+      \                    \"given_name\": \"John\",\r
+
+      \                    \"surname\": \"Doe\"\r
+
+      \                },\r
+
+      \                \"email_address\": \"sb-flzwa28021680@personal.example.com\",\r
+
+      \                \"payer_id\": \"66SBDSBG6RJD2\",\r
+
+      \                \"address\": {\r
+
+      \                    \"country_code\": \"US\"\r
+
+      \                }\r
+
+      \            },\r
+
+      \            \"links\": [\r
+
+      \                {\r
+
+      \                    \"href\": \"https://api.sandbox.paypal.com/v2/checkout/orders/5DT39810M7191180E\",\r
+
+      \                    \"rel\": \"self\",\r
+
+      \                    \"method\": \"GET\"\r
+
+      \                }\r
+
+      \            ]\r
+
+      \        }\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{jwt}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: CAPTURE PAYPAL ORDER PAYMENT
+    request:
+      url: "{{URL}}/order/capture_paypal_payment?order_id=5DT39810M7191180E"
+      method: POST
+      params:
+        - name: order_id
+          value: 5DT39810M7191180E
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Allow-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "1900"
+        - name: ETag
+          value: W/"76c-WDh4XKOGJT99/ViF6Q43twuN9W4"
+        - name: Date
+          value: Sun, 19 Nov 2023 07:36:24 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Payment has been initialized successfully",
+              "data": {
+                  "result": {
+                      "id": "5DT39810M7191180E",
+                      "status": "COMPLETED",
+                      "payment_source": {
+                          "paypal": {
+                              "email_address": "sb-flzwa28021680@personal.example.com",
+                              "account_id": "66SBDSBG6RJD2",
+                              "account_status": "VERIFIED",
+                              "name": {
+                                  "given_name": "John",
+                                  "surname": "Doe"
+                              },
+                              "address": {
+                                  "country_code": "US"
+                              }
+                          }
+                      },
+                      "purchase_units": [
+                          {
+                              "reference_id": "027ed3bb-9164-40be-a34d-c7c10747ed24",
+                              "shipping": {
+                                  "name": {
+                                      "full_name": "John Doe"
+                                  },
+                                  "address": {
+                                      "address_line_1": "1 Main St",
+                                      "admin_area_2": "San Jose",
+                                      "admin_area_1": "CA",
+                                      "postal_code": "95131",
+                                      "country_code": "US"
+                                  }
+                              },
+                              "payments": {
+                                  "captures": [
+                                      {
+                                          "id": "73A71976526460417",
+                                          "status": "COMPLETED",
+                                          "amount": {
+                                              "currency_code": "GBP",
+                                              "value": "231.26"
+                                          },
+                                          "final_capture": true,
+                                          "seller_protection": {
+                                              "status": "ELIGIBLE",
+                                              "dispute_categories": [
+                                                  "ITEM_NOT_RECEIVED",
+                                                  "UNAUTHORIZED_TRANSACTION"
+                                              ]
+                                          },
+                                          "seller_receivable_breakdown": {
+                                              "gross_amount": {
+                                                  "currency_code": "GBP",
+                                                  "value": "231.26"
+                                              },
+                                              "paypal_fee": {
+                                                  "currency_code": "GBP",
+                                                  "value": "8.46"
+                                              },
+                                              "net_amount": {
+                                                  "currency_code": "GBP",
+                                                  "value": "222.80"
+                                              },
+                                              "receivable_amount": {
+                                                  "currency_code": "USD",
+                                                  "value": "279.06"
+                                              },
+                                              "exchange_rate": {
+                                                  "source_currency": "GBP",
+                                                  "target_currency": "USD",
+                                                  "value": "1.252526175080041"
+                                              }
+                                          },
+                                          "links": [
+                                              {
+                                                  "href": "https://api.sandbox.paypal.com/v2/payments/captures/73A71976526460417",
+                                                  "rel": "self",
+                                                  "method": "GET"
+                                              },
+                                              {
+                                                  "href": "https://api.sandbox.paypal.com/v2/payments/captures/73A71976526460417/refund",
+                                                  "rel": "refund",
+                                                  "method": "POST"
+                                              },
+                                              {
+                                                  "href": "https://api.sandbox.paypal.com/v2/checkout/orders/5DT39810M7191180E",
+                                                  "rel": "up",
+                                                  "method": "GET"
+                                              }
+                                          ],
+                                          "create_time": "2023-11-19T07:36:26Z",
+                                          "update_time": "2023-11-19T07:36:26Z"
+                                      }
+                                  ]
+                              }
+                          }
+                      ],
+                      "payer": {
+                          "name": {
+                              "given_name": "John",
+                              "surname": "Doe"
+                          },
+                          "email_address": "sb-flzwa28021680@personal.example.com",
+                          "payer_id": "66SBDSBG6RJD2",
+                          "address": {
+                              "country_code": "US"
+                          }
+                      },
+                      "links": [
+                          {
+                              "href": "https://api.sandbox.paypal.com/v2/checkout/orders/5DT39810M7191180E",
+                              "rel": "self",
+                              "method": "GET"
+                          }
+                      ]
+                  }
+              }
+          }

@@ -1,0 +1,17 @@
+info:
+  name: Get kid overall chapter completion rate
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/guardian/analytics/68fa14279a2e01c2808ed511/chapter-completion"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

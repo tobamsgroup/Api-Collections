@@ -1,0 +1,86 @@
+info:
+  name: Admin Login
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{URL}}/admin/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+          "email": "rareeat@gmail.com",
+          "password":"Admin1234"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: bru.setEnvVar("ajwt", res.getBody().token);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Admin Login
+    request:
+      url: "{{URL}}/admin/auth/login"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "email": "rareeat@gmail.com",
+              "password":"Admin1234"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "562"
+        - name: ETag
+          value: W/"232-cJV70/WlBBijGc1PeBtY4dfMOBs"
+        - name: Date
+          value: Wed, 06 Dec 2023 19:25:26 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Admin has been logged in successfully",
+              "data": {
+                  "admin": {
+                      "_id": "6570b36b045027fc542870c5",
+                      "firstname": "Rare",
+                      "lastname": "Eat",
+                      "username": "Rareeat",
+                      "role": "Super Admin",
+                      "status": "Active",
+                      "email": "rareeat@gmail.com",
+                      "password": "$2a$10$Y8wsUcWkxhbXbFB7VBNIGO0jhK2TYo9h/Bi.bSwTDYjm0qHiWLzx2",
+                      "adminId": "837b9778-d328-4c1d-b40d-55544b60d52c",
+                      "__v": 0
+                  },
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiODM3Yjk3NzgtZDMyOC00YzFkLWI0MGQtNTU1NDRiNjBkNTJjIiwiaWF0IjoxNzAxODkwNzI2LCJleHAiOjE3MDIzMjI3MjZ9.4sVeasj0HWZL3brZCPcorAgL9xLNrcBdf3QZkAJZ1BY"
+              }
+          }

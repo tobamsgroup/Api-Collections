@@ -1,0 +1,28 @@
+info:
+  name: create contact us with complete details
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/contact-us/"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"fullName\": \"Inem16 Udo16\",\r
+
+      \  \"email\": \"enamesit15@gmail.com\",\r
+
+      \  \"subject\": \"Issues with my name on dashboard\",\r
+
+      \  \"message\": \"error in name\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
