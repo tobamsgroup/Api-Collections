@@ -2,11 +2,22 @@ opencollection: 1.0.0
 
 info:
   name: Tobams-Group
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
 
 request:
   variables:
     - name: BASE
-      value: ""
+      value: https://tobams-group-be.onrender.com/api/v1
 
 docs:
   content: The Tobams Group Web App project encompasses the development and implementation of a comprehensive online platform to facilitate various aspects of the organisation's operations, primarily focusing on talent recruitment, client engagement, knowledge sharing, and sustainability promotion. It aims to provide a secure, functional, dynamic, scalable, and user-friendly interface.

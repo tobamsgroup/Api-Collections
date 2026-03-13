@@ -5,116 +5,102 @@ info:
 
 http:
   method: POST
-  url: "{{BASE}}/webhooks/payments"
+  url: "{{base}}/webhooks/payments"
   headers:
     - name: x-paystack-signature
-      value: ""
+      value: x-paystack-signature
   body:
     type: json
-    data: "{\r
-
-      \  \"event\": \"charge.success\",\r
-
-      \  \"data\": {\r
-
-      \    \"id\": 302021839,\r
-
-      \    \"domain\": \"test\",\r
-
-      \    \"status\": \"success\",\r
-
-      \    \"reference\": \"TBG_1728906000_000001\",\r
-
-      \    \"amount\": 500000,\r
-
-      \    \"message\": null,\r
-
-      \    \"gateway_response\": \"Successful\",\r
-
-      \    \"paid_at\": \"2025-10-14T07:35:00.000Z\",\r
-
-      \    \"created_at\": \"2025-10-14T07:34:50.000Z\",\r
-
-      \    \"channel\": \"card\",\r
-
-      \    \"currency\": \"NGN\",\r
-
-      \    \"ip_address\": \"102.89.45.21\",\r
-
-      \    \"metadata\": {\r
-
-      \      \"custom_fields\": [\r
-
-      \        {\r
-
-      \          \"display_name\": \"Customer Email\",\r
-
-      \          \"variable_name\": \"customer_email\",\r
-
-      \          \"value\": \"test@example.com\"\r
-
-      \        }\r
-
-      \      ]\r
-
-      \    },\r
-
-      \    \"customer\": {\r
-
-      \      \"id\": 93847291,\r
-
-      \      \"first_name\": \"John\",\r
-
-      \      \"last_name\": \"Doe\",\r
-
-      \      \"email\": \"test@example.com\",\r
-
-      \      \"phone\": \"+2348012345678\"\r
-
-      \    },\r
-
-      \    \"authorization\": {\r
-
-      \      \"authorization_code\": \"AUTH_test123\",\r
-
-      \      \"bin\": \"408408\",\r
-
-      \      \"last4\": \"4081\",\r
-
-      \      \"exp_month\": \"12\",\r
-
-      \      \"exp_year\": \"2026\",\r
-
-      \      \"channel\": \"card\",\r
-
-      \      \"card_type\": \"visa\",\r
-
-      \      \"bank\": \"Test Bank\",\r
-
-      \      \"country_code\": \"NG\",\r
-
-      \      \"brand\": \"visa\"\r
-
-      \    },\r
-
-      \    \"log\": {\r
-
-      \      \"attempts\": 1,\r
-
-      \      \"time_spent\": 3,\r
-
-      \      \"success\": true\r
-
-      \    },\r
-
-      \    \"fees\": 7500,\r
-
-      \    \"plan\": null\r
-
-      \  }\r
-
-      }\r\n"
+    data: |
+      {
+        "event": "charge.success",
+        "data": {
+          "id": 5928043318,
+          "domain": "live",
+          "status": "success",
+          "reference": "p8tvlfmfih",
+          "amount": 10500,
+          "message": "",
+          "gateway_response": "Approved",
+          "paid_at": "2026-03-12T16:32:55.000Z",
+          "created_at": "2026-03-12T16:29:55.000Z",
+          "channel": "card",
+          "currency": "NGN",
+          "ip_address": "102.216.181.53",
+          "metadata": {
+            "userId": "69b28b8a700560090278dffa",
+            "companyName": "Bliss Tech",
+            "uuid": "TG-19XOR",
+            "purpose": "subscription only",
+            "serviceProvider": "paystack",
+            "orderData": {
+              "subscriptionId": "69b2ea029276d25980a818c0",
+              "planId": "68885ef0fc5e5f12ac1ce94c",
+              "planName": "Standard",
+              "autoRenew": "true",
+              "billingCycle": "monthly",
+              "isUpgrade": "true",
+              "paystackPlanCode": "PLN_ljzxd54qcrzk707"
+            },
+            "referrer": "http://localhost:3000/"
+          },
+          "fees_breakdown": {
+            "amount": 158,
+            "formula": null,
+            "type": "paystack"
+          },
+          "log": null,
+          "fees": 158,
+          "fees_split": null,
+          "authorization": {
+            "authorization_code": "AUTH_gp9lva1rh7",
+            "bin": "418745",
+            "last4": "6938",
+            "exp_month": "03",
+            "exp_year": "2026",
+            "channel": "card",
+            "card_type": "visa debit",
+            "bank": "Access Bank",
+            "country_code": "NG",
+            "brand": "visa",
+            "reusable": true,
+            "signature": "SIG_k9BukLMvNLcYEaWwUTNE",
+            "account_name": "PAUL AJIBOLA ELUGBAJU",
+            "receiver_bank_account_number": null,
+            "receiver_bank": null
+          },
+          "customer": {
+            "id": 346533839,
+            "first_name": null,
+            "last_name": null,
+            "email": "harjibbolar26+1@gmail.com",
+            "customer_code": "CUS_to815w0ijpgogis",
+            "phone": null,
+            "metadata": null,
+            "risk_action": "default",
+            "international_format_phone": null
+          },
+          "plan": {},
+          "subaccount": {},
+          "split": {},
+          "order_id": null,
+          "paidAt": "2026-03-12T16:32:55.000Z",
+          "requested_amount": 10500,
+          "pos_transaction_data": null,
+          "source": {
+            "type": "api",
+            "source": "merchant_api",
+            "entry_point": "transaction_initialize",
+            "identifier": null
+          }
+        }
+      }
   auth: inherit
+
+runtime:
+  variables:
+    - name: base
+      value: https://tobams-group-be.onrender.com/api/v1
 
 settings:
   encodeUrl: true

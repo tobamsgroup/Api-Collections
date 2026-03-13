@@ -1,0 +1,21 @@
+info:
+  name: Manually reprocess failed post-payment logic for a successful payment
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base}}/customer-buckets/reference/:refId/reprocess"
+  params:
+    - name: refId
+      value: p8tvlfmfih
+      type: path
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
