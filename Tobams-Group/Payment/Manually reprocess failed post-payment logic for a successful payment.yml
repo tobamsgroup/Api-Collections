@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{base}}/customer-buckets/reference/:refId/reprocess"
+  url: "{{base}}/pay/customer-buckets/reference/:refId/reprocess"
   params:
     - name: refId
       value: p8tvlfmfih
