@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{BASE}}/users/potential-peers/:userId/:targetId"
+  url: "{{BASE}}/users/peer-request/:userId/:targetId"
   params:
     - name: userId
       value: ""
