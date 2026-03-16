@@ -1,4 +1,12 @@
 name: TG-Local
 variables:
-  - name: base
+  - name: BASE
     value: http://localhost:5200/api/v1
+  - secret: true
+    name: access
+  - secret: true
+    name: refresh
+  - secret: true
+    name: org_access
+  - secret: true
+    name: org_refresh

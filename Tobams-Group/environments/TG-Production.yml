@@ -1,4 +1,4 @@
 name: TG-Production
 variables:
-  - name: base
+  - name: BASE
     value: https://tobams-group-be.onrender.com/api/v1
