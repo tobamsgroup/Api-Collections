@@ -1,0 +1,465 @@
+info:
+  name: Login
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+          // "password": "MentorExpert2023!",
+          // "email": "mentor.expert@example.com"
+          // "email": "ericsson.raphael@tobamsgroup.com",
+          // "password": "123456"
+      //     "email": "theteam@tobamsgroup.com",
+          // "email": "casi04@pirkong.com",
+          // "email": "mailfordevtest404@gmail.com",
+          // "email": "paul.elugbaju@tobamsgroup.com",
+          // "password": "Paul.Elugbaju@tobamsgroup26"
+      //    "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+          // "password": "Admin@1234"
+          "email": "fawaz.abdganiyu@tobamsgroup.com",
+          "password": "Password123!!"
+          // "email": "abdulrasaqolarewaju88@gmail.com",
+      //     "password": "Admin@1234"
+          // "password": "P@ssW0rd"
+          // "email": "harjibbolar26@gmail.com",
+          // "password": "Harjibbolar26@"
+      }
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        bru.setEnvVar("access", res.getBody().data.accessToken);
+        bru.setEnvVar("refresh", res.getBody().data.refreshToken);
+
+        if (res.getBody().data.role === "Organisation"){
+            bru.setEnvVar("org_access", res.getBody().data.accessToken);
+            bru.setEnvVar("org_refresh", res.getBody().data.refreshToken);
+        }
+
+        if (res.getBody().data.role === "Intern"){
+            bru.setEnvVar("intern_access", res.getBody().data.accessToken);
+            bru.setEnvVar("intern_refresh", res.getBody().data.refreshToken);
+        }
+
+        if (res.getBody().data.role === "Talent"){
+            bru.setEnvVar("talent_access", res.getBody().data.accessToken);
+            bru.setEnvVar("talent_refresh", res.getBody().data.refreshToken);
+        }
+
+        if (res.getBody().data.role === "Super_Admin" || res.getBody().data.role === "Admin"){
+            bru.setEnvVar("admin_access", res.getBody().data.accessToken);
+            bru.setEnvVar("admin_refresh", res.getBody().data.refreshToken);
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Wrong password
+    request:
+      url: "{{@harek}}/login"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "password": "4iui5ekwjwqkr34ue5",
+              "email": "js@gmail.com"
+          }
+    response:
+      statusText: "401"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "49"
+        - name: ETag
+          value: W/"31-moIMMnutC+aouivRr0cP9Af9Ty0"
+        - name: Date
+          value: Mon, 18 Mar 2024 13:41:59 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Incorrect Password!"
+          }
+  - name: Not found
+    request:
+      url: "{{@harek}}/login"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "password": "4iui5ekwjwqkr34ue5",
+              "email": "js@gmail.cm"
+          }
+    response:
+      statusText: "404"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "44"
+        - name: ETag
+          value: W/"2c-EAnCIFy1uGovyo/FU6KYwnjLgrc"
+        - name: Date
+          value: Mon, 18 Mar 2024 13:43:07 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "User not found"
+          }
+  - name: Validation Error
+    request:
+      url: "{{@harek}}/login"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "password": "4iui5ekwjwqkr34ue5"
+          }
+    response:
+      statusText: "400"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: default-src 'none'; font-src 'self' http://localhost:8000/docs/; style-src 'self' 'unsafe-inline' http://localhost:8000/docs/; script-src 'self' 'unsafe-inline' http://localhost:8000/docs/; connect-src 'self' http://localhost:8000; img-src 'self' http://localhost:8000/docs/ data:;
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "54"
+        - name: ETag
+          value: W/"36-wgvVmnImMavTLiNTbg7hYh9WVBw"
+        - name: Date
+          value: Mon, 18 Mar 2024 13:44:24 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Error: Email is required"
+          }
+  - name: Server error
+    request:
+      url: "{{@harek}}/login"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "password": "4iui5ekwjwqkr34ue5",
+              "email": "js@gmail.com".
+          }
+    response:
+      statusText: "500"
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "90"
+        - name: ETag
+          value: W/"5a-UUnsu+zngHcTam0SmcneeY2x8Rg"
+        - name: Date
+          value: Mon, 18 Mar 2024 13:45:32 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "status": false,
+              "error": "Expected ',' or '}' after property value in JSON at position 67"
+          }
+  - name: Login
+    request:
+      url: "{{BASE}}/auth/login"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              // "password": "MentorExpert2023!",
+              // "email": "mentor.expert@example.com"
+              // "email": "ericsson.raphael@tobamsgroup.com"
+              // "password": "123456"
+              "email": "fawaz.abdganiyu+org@tobamsgroup.com",
+              // "email": "fawazorg@gmail.com",
+              // "email": "mailfordevtest404@gmail.com",
+              // "email": "fawaz.abdganiyu@tobamsgroup.com",
+              // "password": "Password123!"
+          //    "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+              // "password": "Admin1234"
+              // "email": "israel.adigun@tobamsgroup.com",
+              "password": "Password123!"
+              // "email": "adigunisraela@gmail.com",
+              // "password": "Password123@"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1757066464544-ishqu18yi
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "914"
+        - name: ETag
+          value: W/"392-RHfvJs/rDCtgu9/56fJO/Al52sg"
+        - name: Date
+          value: Fri, 05 Sep 2025 10:01:56 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Login successful",
+              "data": {
+                  "userId": "689efbb9295f4209b71bc6e0",
+                  "email": "fawaz.abdganiyu+org@tobamsgroup.com",
+                  "role": "Organisation",
+                  "MFA": false,
+                  "isVerified": true,
+                  "isOnboarded": false,
+                  "companyName": "Tobams Affliates2",
+                  "accountStatus": "Active",
+                  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODllZmJiOTI5NWY0MjA5YjcxYmM2ZTAiLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dStvcmdAdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6Ik9yZ2FuaXNhdGlvbiIsImlhdCI6MTc1NzA2NjUxNiwiZXhwIjoxNzU3MTUyOTE2fQ.Gnz-rX0K2cdlTrkMdKNSns_HMX85mV8w9YlNKZSBBLg",
+                  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODllZmJiOTI5NWY0MjA5YjcxYmM2ZTAiLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dStvcmdAdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6Ik9yZ2FuaXNhdGlvbiIsImlhdCI6MTc1NzA2NjUxNiwiZXhwIjoxNzU3NjcxMzE2fQ.U4Bam6YVoh88akOpUKy261Lw3wExJxSmA39W1DTQmyA",
+                  "expiresIn": "86400000 milliseconds"
+              }
+          }
+  - name: Success for verified user
+    request:
+      url: "{{BASE}}/auth/login"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              // "password": "MentorExpert2023!",
+              // "email": "mentor.expert@example.com"
+              // "email": "ericsson.raphael@tobamsgroup.com"
+              // "password": "123456"
+              "email": "fawaz.abdganiyu+o2@tobamsgroup.com",
+              // "email": "fawazorg@gmail.com",
+              // "email": "mailfordevtest404@gmail.com",
+              // "email": "fawaz.abdganiyu@tobamsgroup.com",
+              // "password": "Password123!"
+          //    "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+              // "password": "Admin1234"
+              // "email": "israel.adigun@tobamsgroup.com",
+              "password": "Password123!"
+              // "email": "adigunisraela@gmail.com",
+              // "password": "Password123@"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Credentials
+          value: "true"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: Access-Control-Allow-Headers
+          value: "*"
+        - name: X-Request-ID
+          value: 1757783005777-8hke8mwdt
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "914"
+        - name: ETag
+          value: W/"392-4ajFBVM/XUFT2mUwV5Fpr1SjLG8"
+        - name: Date
+          value: Sat, 13 Sep 2025 17:03:26 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Login successful",
+              "data": {
+                  "userId": "68c2d860ab8c2c934dc81037",
+                  "uuid": "TG-4XOR",
+                  "email": "fawaz.abdganiyu+o2@tobamsgroup.com",
+                  "role": "Organisation",
+                  "MFA": false,
+                  "isVerified": true,
+                  "hasTakenAssessment": false,
+                  "hasPassedAssessment": false,
+                  "companyName": "Progress Hub",
+                  "accountStatus": "Active",
+                  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGMyZDg2MGFiOGMyYzkzNGRjODEwMzciLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dStvMkB0b2JhbXNncm91cC5jb20iLCJyb2xlIjoiT3JnYW5pc2F0aW9uIiwiaWF0IjoxNzU3NzgzMDA2LCJleHAiOjE3NTc4Njk0MDZ9.cuBxEtVfwiYPstlc0FfzYFTfMJeuFVi_Ux5g-zha1p8",
+                  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGMyZDg2MGFiOGMyYzkzNGRjODEwMzciLCJlbWFpbCI6ImZhd2F6LmFiZGdhbml5dStvMkB0b2JhbXNncm91cC5jb20iLCJyb2xlIjoiT3JnYW5pc2F0aW9uIiwiaWF0IjoxNzU3NzgzMDA2LCJleHAiOjE3NTgzODc4MDZ9.9h_7B9dhQPPwi6cbJS8gZ_ghqOtDhMY3QfrhM0xTac4",
+                  "expiresIn": "86400000 milliseconds"
+              }
+          }
