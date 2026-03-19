@@ -1,21 +1,21 @@
 info:
-  name: Update Peer-to-Peer connection status
+  name: Remove Peer-to-Peer connection
   type: http
-  seq: 7
+  seq: 6
 
 http:
-  method: PATCH
+  method: DELETE
   url: "{{BASE}}/users/peer-request/:userId/:targetId"
   params:
     - name: userId
-      value: ""
+      value: 690b9906ea45abf381cde4ab
       type: path
     - name: targetId
-      value: ""
+      value: 690b9906ea45abf381cde4ab
       type: path
   auth:
     type: bearer
-    token: "{{talent_access}}"
+    token: "{{intern_access}}"
 
 settings:
   encodeUrl: true

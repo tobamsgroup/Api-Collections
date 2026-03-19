@@ -28,7 +28,7 @@ http:
               "role": ["Senior Developer", "Project Manager"],
               "industryOfInterest": ["Technology", "Healthcare"],
               "experienceLevel": ["Mid-Level"],
-              "mentorshipType": ["Group"]
+              "mentorshipType": ["Group", "Peer-to-Peer"]
           },
           "yearsOfExperience": "2 years"
       }
