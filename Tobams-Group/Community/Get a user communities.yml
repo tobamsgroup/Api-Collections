@@ -5,7 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/communities/user-communities"
+  url: "{{BASE}}/communities/user-communities?page&limit"
+  params:
+    - name: page
+      value: ""
+      type: query
+    - name: limit
+      value: ""
+      type: query
   auth: inherit
 
 settings:
