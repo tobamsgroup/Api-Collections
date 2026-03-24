@@ -15,7 +15,7 @@ http:
       type: query
   auth:
     type: bearer
-    token: "{{talent_access}}"
+    token: "{{intern_access}}"
 
 settings:
   encodeUrl: true
@@ -24,7 +24,7 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Get all communities
+  - name: Success
     request:
       url: "{{BASE}}/communities?page=1&limit=11"
       method: GET
@@ -36,46 +36,25 @@ examples:
           value: "11"
           type: query
     response:
-      statusText: "200"
+      status: 200
+      statusText: OK
       headers:
-        - name: Date
-          value: Fri, 16 Jan 2026 14:10:04 GMT
-        - name: Content-Type
-          value: application/json
-        - name: Transfer-Encoding
-          value: chunked
-        - name: Connection
-          value: keep-alive
-        - name: CF-RAY
-          value: 9bee31ab1a80ccb5-LHR
-        - name: access-control-allow-credentials
-          value: "true"
-        - name: access-control-allow-headers
-          value: "*"
-        - name: access-control-allow-methods
-          value: GET, POST, PATCH, DELETE, PUT
         - name: access-control-allow-origin
           value: "*"
-        - name: Content-Encoding
-          value: br
+        - name: access-control-allow-credentials
+          value: "true"
         - name: content-security-policy
           value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
         - name: cross-origin-opener-policy
           value: same-origin
         - name: cross-origin-resource-policy
           value: same-origin
-        - name: etag
-          value: W/"165c-FYYbzgf8vnK07w1tj9wwQL8ih+4"
         - name: origin-agent-cluster
           value: ?1
         - name: referrer-policy
           value: no-referrer
-        - name: rndr-id
-          value: 8788b32b-55c2-4952
         - name: strict-transport-security
           value: max-age=31536000; includeSubDomains
-        - name: vary
-          value: Accept-Encoding
         - name: x-content-type-options
           value: nosniff
         - name: x-dns-prefetch-control
@@ -86,208 +65,329 @@ examples:
           value: SAMEORIGIN
         - name: x-permitted-cross-domain-policies
           value: none
-        - name: x-render-origin-server
-          value: Render
-        - name: x-request-id
-          value: 1768572602508-06z88ndgo
         - name: x-xss-protection
           value: "0"
-        - name: cf-cache-status
-          value: DYNAMIC
-        - name: Server
-          value: cloudflare
-        - name: alt-svc
-          value: h3=":443"; ma=86400
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1774345579352-tf8izn15k
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "8019"
+        - name: etag
+          value: W/"1f53-RTdiP+daiSUtsSaJyL2WcBVR8z8"
+        - name: date
+          value: Tue, 24 Mar 2026 09:46:23 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
       body:
         type: json
         data: |-
           {
-              "success": true,
-              "message": "Communities retrieved successfully",
-              "data": {
-                  "currentCount": 3,
-                  "totalCount": 3,
-                  "communities": [
-                      {
-                          "community": {
-                              "_id": "696751b1c6a42bcbfbbb937d",
-                              "roomName": "Backend developers",
-                              "participants": [],
-                              "members": [
-                                  {
-                                      "userId": "692036dc786d845942868f78",
-                                      "fullName": "Fawaz Abdganiyu",
-                                      "_id": "69677dc317120a8846fbe988",
-                                      "joinedAt": "2026-01-14T11:28:03.628Z"
-                                  },
-                                  {
-                                      "userId": "6929a35296b1c0a6612823bf",
-                                      "fullName": "Paul Jibola",
-                                      "_id": "69678ce69465cf43d45a1853",
-                                      "joinedAt": "2026-01-14T12:32:38.570Z"
-                                  }
-                              ],
-                              "roomTypes": "community",
-                              "description": "Very beneficial community of developers",
-                              "admin": [
-                                  "6929a35296b1c0a6612823bf"
-                              ],
-                              "createdBy": "Fawaz Abdganiyu",
-                              "skills": [],
-                              "limit": 100,
-                              "mentorshipData": {
-                                  "isActive": true
-                              },
-                              "rules": [
-                                  "No discussion of religion or politics",
-                                  "No disrespects or insults, you will be removed from the group if found guilty",
-                                  "Posts from companies or promoting paid services (books, courses, tools, events)"
-                              ],
-                              "industry": "Information Technology",
-                              "createdAt": "2026-01-14T08:20:01.328Z",
-                              "updatedAt": "2026-01-14T12:32:38.579Z",
-                              "photo": ""
-                          },
-                          "lastMessage": {
-                              "_id": "6968e1479f11096d7548444c",
-                              "roomId": "696751b1c6a42bcbfbbb937d",
-                              "senderId": "692036dc786d845942868f78",
-                              "username": "Fawaz Abdganiyu",
-                              "replyTo": "6968e1349f11096d7548443a",
-                              "isThreaded": true,
-                              "threadId": "6968e1349f11096d7548443a",
-                              "content": "Great, welldone! ",
-                              "status": "sent",
-                              "timestamp": "2026-01-15T12:44:55.182Z",
-                              "createdAt": "2026-01-15T12:44:55.182Z",
-                              "updatedAt": "2026-01-15T12:44:55.182Z"
-                          },
-                          "unreadMessageCount": 0
-                      },
-                      {
-                          "community": {
-                              "_id": "6967533ac6a42bcbfbbb9397",
-                              "roomName": "Frontend developers",
-                              "participants": [],
-                              "members": [
-                                  {
-                                      "userId": "6929a35296b1c0a6612823bf",
-                                      "fullName": "Paul Jibola",
-                                      "_id": "6967aa6c41c1974a7a003ff5",
-                                      "joinedAt": "2026-01-14T14:38:36.476Z"
-                                  },
-                                  {
-                                      "userId": "6929a35296b1c0a6612823bf",
-                                      "fullName": "Paul Jibola",
-                                      "_id": "6967aa6d41c1974a7a003ffb",
-                                      "joinedAt": "2026-01-14T14:38:37.318Z"
-                                  },
-                                  {
-                                      "userId": "692036dc786d845942868f78",
-                                      "fullName": "Fawaz Abdganiyu",
-                                      "_id": "6967aa8941c1974a7a00401d",
-                                      "joinedAt": "2026-01-14T14:39:05.629Z"
-                                  },
-                                  {
-                                      "userId": "692036dc786d845942868f78",
-                                      "fullName": "Fawaz Abdganiyu",
-                                      "_id": "6967aa8a41c1974a7a004021",
-                                      "joinedAt": "2026-01-14T14:39:06.132Z"
-                                  },
-                                  {
-                                      "userId": "690b9906ea45abf381cde4ab",
-                                      "fullName": "Fawaz Abdganiyu",
-                                      "_id": "6968f3219f11096d75484dd6",
-                                      "joinedAt": "2026-01-15T14:01:05.037Z"
-                                  },
-                                  {
-                                      "userId": "690b9906ea45abf381cde4ab",
-                                      "fullName": "Fawaz Abdganiyu",
-                                      "_id": "6968f3219f11096d75484ddc",
-                                      "joinedAt": "2026-01-15T14:01:05.052Z"
-                                  },
-                                  {
-                                      "userId": "6968d3f49f11096d75483a4a",
-                                      "fullName": "Adeyeye Omokorede",
-                                      "_id": "6969061d9f11096d7548610a",
-                                      "joinedAt": "2026-01-15T15:22:05.375Z"
-                                  }
-                              ],
-                              "roomTypes": "community",
-                              "description": "Very beneficial community of Frontend developers",
-                              "admin": [
-                                  "6929a35296b1c0a6612823bf"
-                              ],
-                              "createdBy": "Paul Jibola",
-                              "skills": [],
-                              "limit": 100,
-                              "mentorshipData": {
-                                  "isActive": true
-                              },
-                              "rules": [
-                                  "No bias discussion of best developers",
-                                  "No disrespects or insults to other developers",
-                                  "Only tech related events should be posted here, if at all."
-                              ],
-                              "industry": "Information Technology",
-                              "createdAt": "2026-01-14T08:26:34.239Z",
-                              "updatedAt": "2026-01-15T15:22:05.377Z",
-                              "photo": ""
-                          },
-                          "lastMessage": {
-                              "_id": "696a2a42d8ebfb5489f4a00a",
-                              "roomId": "6967533ac6a42bcbfbbb9397",
-                              "senderId": "6929a35296b1c0a6612823bf",
-                              "username": "Paul Jibola",
-                              "isThreaded": false,
-                              "content": "Hi",
-                              "status": "sent",
-                              "deliveredCount": 0,
-                              "readCount": 0,
-                              "timestamp": "2026-01-16T12:08:34.148Z",
-                              "createdAt": "2026-01-16T12:08:34.149Z",
-                              "updatedAt": "2026-01-16T12:08:34.149Z"
-                          },
-                          "unreadMessageCount": 0
-                      },
-                      {
-                          "community": {
-                              "_id": "696a3692d8ebfb5489f4a6b1",
-                              "roomName": "Tobams Group",
-                              "photo": "",
-                              "members": [
-                                  {
-                                      "userId": "6929a35296b1c0a6612823bf",
-                                      "fullName": "Paul Jibola",
-                                      "occupation": "Developer",
-                                      "role": "Intern",
-                                      "joinedAt": "2026-01-16T13:01:06.187Z"
-                                  }
-                              ],
-                              "roomTypes": "community",
-                              "description": "Tobams Group is a forward-thinking, multi-sector organization built on the vision of creating sustainable value, driving innovation, and delivering excellence across every industry it touches. Established with a strong commitment to integrity, growth, and impact, Tobams Group operates as a dynamic ecosystem of businesses designed to meet modern needs while anticipating the demands of the future. At the core of Tobams Group is a people-first philosophy. The organization believes that meaningful progress is achieved when talent, technology, and purpose align. By fostering a culture of collaboration, accountability, and continuous improvement, Tobams Group empowers its teams to think boldly, act responsibly, and consistently exceed expectations. This culture is reflected not only in internal operations but also in the long-term relationships the Group builds with clients, partners, and communities. Guided by a clear vision and a strong set of values, Tobams Group continues to build a legacy of trust, excellence, and innovation. As it expands its reach and deepens its impact, the Group remains focused on one central goal: creating enduring solutions that empower businesses, transform industries, and improve lives.",
-                              "admin": [
-                                  "6929a35296b1c0a6612823bf"
-                              ],
-                              "createdBy": "Paul Jibola",
-                              "skills": [],
-                              "limit": 100,
-                              "mentorshipData": {
-                                  "isActive": true
-                              },
-                              "rules": [
-                                  "Every decision, partnership, and operation must be rooted in honesty, transparency, and ethical conduct—no exceptions.",
-                                  "Innovation is only meaningful when it solves real problems and creates measurable value for clients, partners, and society.",
-                                  "The growth of the organization must never come at the expense of its people. Empower teams, respect stakeholders, and build lasting relationships.",
-                                  "Quality, professionalism, and accountability are non-negotiable standards in everything Tobams Group delivers."
-                              ],
-                              "industry": "Information Technology",
-                              "createdAt": "2026-01-16T13:01:06.189Z",
-                              "updatedAt": "2026-01-16T13:01:06.189Z"
-                          },
-                          "lastMessage": null,
-                          "unreadMessageCount": 0
-                      }
-                  ]
-              }
+            "success": true,
+            "message": "Communities retrieved successfully",
+            "data": {
+              "currentCount": 3,
+              "totalCount": 3,
+              "communities": [
+                {
+                  "_id": "696751b1c6a42bcbfbbb937d",
+                  "roomName": "Backend developers",
+                  "participants": [],
+                  "members": [
+                    {
+                      "userId": "692036dc786d845942868f78",
+                      "fullName": "Fawaz Abdganiyu",
+                      "_id": "69677dc317120a8846fbe988",
+                      "joinedAt": "2026-01-14T11:28:03.628Z"
+                    },
+                    {
+                      "userId": "6929a35296b1c0a6612823bf",
+                      "fullName": "Paul Jibola",
+                      "_id": "69678ce69465cf43d45a1853",
+                      "joinedAt": "2026-01-14T12:32:38.570Z"
+                    }
+                  ],
+                  "roomTypes": "community",
+                  "description": "Very beneficial community of developers",
+                  "admin": [
+                    "6929a35296b1c0a6612823bf"
+                  ],
+                  "createdBy": {
+                    "_id": "6929a35296b1c0a6612823bf",
+                    "occupation": "Developer",
+                    "bio": "Software developer with 3 years of experience",
+                    "firstName": "Paul",
+                    "lastName": "Jibola",
+                    "email": "paul.elugbaju@tobamsgroup.com",
+                    "location": {
+                      "country": "Nigeria",
+                      "state": "Nigeria",
+                      "city": "Lagos"
+                    },
+                    "photo": "",
+                    "profile": "Intern",
+                    "skills": [
+                      "Team work"
+                    ],
+                    "mentorshipType": [
+                      "Peer to Peer",
+                      "Group",
+                      "One to One",
+                      "Peer-to-Peer",
+                      "One-to-One"
+                    ],
+                    "averageRating": 0,
+                    "createdAt": "2025-11-28T13:27:46.791Z",
+                    "updatedAt": "2026-01-28T14:06:29.241Z"
+                  },
+                  "skills": [],
+                  "limit": 100,
+                  "mentorshipData": {
+                    "isActive": true
+                  },
+                  "rules": [
+                    "No discussion of religion or politics",
+                    "No disrespects or insults, you will be removed from the group if found guilty",
+                    "Posts from companies or promoting paid services (books, courses, tools, events)"
+                  ],
+                  "industry": "Information Technology",
+                  "createdAt": "2026-01-14T08:20:01.328Z",
+                  "updatedAt": "2026-01-14T12:32:38.579Z",
+                  "photo": "",
+                  "isMember": false,
+                  "lastMessage": {
+                    "_id": "6968e1479f11096d7548444c",
+                    "roomId": "696751b1c6a42bcbfbbb937d",
+                    "senderId": "692036dc786d845942868f78",
+                    "username": "Fawaz Abdganiyu",
+                    "replyTo": "6968e1349f11096d7548443a",
+                    "isThreaded": true,
+                    "threadId": "6968e1349f11096d7548443a",
+                    "content": "Great, welldone! ",
+                    "status": "sent",
+                    "timestamp": "2026-01-15T12:44:55.182Z",
+                    "createdAt": "2026-01-15T12:44:55.182Z",
+                    "updatedAt": "2026-01-15T12:44:55.182Z"
+                  }
+                },
+                {
+                  "_id": "6967533ac6a42bcbfbbb9397",
+                  "roomName": "Frontend developers",
+                  "participants": [],
+                  "members": [
+                    {
+                      "userId": "6929a35296b1c0a6612823bf",
+                      "fullName": "Paul Jibola",
+                      "_id": "6967aa6c41c1974a7a003ff5",
+                      "joinedAt": "2026-01-14T14:38:36.476Z"
+                    },
+                    {
+                      "userId": "6929a35296b1c0a6612823bf",
+                      "fullName": "Paul Jibola",
+                      "_id": "6967aa6d41c1974a7a003ffb",
+                      "joinedAt": "2026-01-14T14:38:37.318Z"
+                    },
+                    {
+                      "userId": "692036dc786d845942868f78",
+                      "fullName": "Fawaz Abdganiyu",
+                      "_id": "6967aa8941c1974a7a00401d",
+                      "joinedAt": "2026-01-14T14:39:05.629Z"
+                    },
+                    {
+                      "userId": "692036dc786d845942868f78",
+                      "fullName": "Fawaz Abdganiyu",
+                      "_id": "6967aa8a41c1974a7a004021",
+                      "joinedAt": "2026-01-14T14:39:06.132Z"
+                    },
+                    {
+                      "userId": "690b9906ea45abf381cde4ab",
+                      "fullName": "Fawaz Abdganiyu",
+                      "_id": "6968f3219f11096d75484dd6",
+                      "joinedAt": "2026-01-15T14:01:05.037Z"
+                    },
+                    {
+                      "userId": "690b9906ea45abf381cde4ab",
+                      "fullName": "Fawaz Abdganiyu",
+                      "_id": "6968f3219f11096d75484ddc",
+                      "joinedAt": "2026-01-15T14:01:05.052Z"
+                    },
+                    {
+                      "userId": "6968d3f49f11096d75483a4a",
+                      "fullName": "Adeyeye Omokorede",
+                      "_id": "6969061d9f11096d7548610a",
+                      "joinedAt": "2026-01-15T15:22:05.375Z"
+                    },
+                    {
+                      "userId": "690c58c445047c4e4030fe01",
+                      "fullName": "Ericsson Raphael",
+                      "occupation": "Dev",
+                      "role": "Talent",
+                      "joinedAt": "2026-01-16T15:46:03.025Z"
+                    }
+                  ],
+                  "roomTypes": "community",
+                  "description": "Very beneficial community of Frontend developers",
+                  "admin": [
+                    "6929a35296b1c0a6612823bf"
+                  ],
+                  "createdBy": {
+                    "_id": "6929a35296b1c0a6612823bf",
+                    "occupation": "Developer",
+                    "bio": "Software developer with 3 years of experience",
+                    "firstName": "Paul",
+                    "lastName": "Jibola",
+                    "email": "paul.elugbaju@tobamsgroup.com",
+                    "location": {
+                      "country": "Nigeria",
+                      "state": "Nigeria",
+                      "city": "Lagos"
+                    },
+                    "photo": "",
+                    "profile": "Intern",
+                    "skills": [
+                      "Team work"
+                    ],
+                    "mentorshipType": [
+                      "Peer to Peer",
+                      "Group",
+                      "One to One",
+                      "Peer-to-Peer",
+                      "One-to-One"
+                    ],
+                    "averageRating": 0,
+                    "createdAt": "2025-11-28T13:27:46.791Z",
+                    "updatedAt": "2026-01-28T14:06:29.241Z"
+                  },
+                  "skills": [],
+                  "limit": 100,
+                  "mentorshipData": {
+                    "isActive": true
+                  },
+                  "rules": [
+                    "No bias discussion of best developers",
+                    "No disrespects or insults to other developers",
+                    "Only tech related events should be posted here, if at all."
+                  ],
+                  "industry": "Information Technology",
+                  "createdAt": "2026-01-14T08:26:34.239Z",
+                  "updatedAt": "2026-01-16T15:46:03.026Z",
+                  "photo": "",
+                  "isMember": true,
+                  "lastMessage": {
+                    "_id": "696a5d496b4632601d56e673",
+                    "roomId": "6967533ac6a42bcbfbbb9397",
+                    "senderId": "690c58c445047c4e4030fe01",
+                    "username": "Ericsson Raphael",
+                    "replyTo": "696a2a42d8ebfb5489f4a00a",
+                    "isThreaded": true,
+                    "threadId": "696a2a42d8ebfb5489f4a00a",
+                    "content": "Hi",
+                    "status": "sent",
+                    "deliveredCount": 0,
+                    "readCount": 0,
+                    "timestamp": "2026-01-16T15:46:17.974Z",
+                    "createdAt": "2026-01-16T15:46:17.974Z",
+                    "updatedAt": "2026-01-16T15:46:17.974Z"
+                  }
+                },
+                {
+                  "_id": "696a3692d8ebfb5489f4a6b1",
+                  "roomName": "Tobams Group",
+                  "photo": "",
+                  "members": [
+                    {
+                      "userId": "6929a35296b1c0a6612823bf",
+                      "fullName": "Paul Jibola",
+                      "occupation": "Developer",
+                      "role": "Intern",
+                      "joinedAt": "2026-01-16T13:01:06.187Z"
+                    },
+                    {
+                      "userId": "690c58c445047c4e4030fe01",
+                      "fullName": "Ericsson Raphael",
+                      "occupation": "Dev",
+                      "role": "Talent",
+                      "joinedAt": "2026-01-16T14:44:53.686Z"
+                    },
+                    {
+                      "userId": "6968d3f49f11096d75483a4a",
+                      "fullName": "Adeyeye Omokorede",
+                      "occupation": "Backend Developer",
+                      "role": "Intern",
+                      "joinedAt": "2026-01-16T14:55:04.250Z"
+                    }
+                  ],
+                  "roomTypes": "community",
+                  "description": "Tobams Group is a forward-thinking, multi-sector organization built on the vision of creating sustainable value, driving innovation, and delivering excellence across every industry it touches. Established with a strong commitment to integrity, growth, and impact, Tobams Group operates as a dynamic ecosystem of businesses designed to meet modern needs while anticipating the demands of the future. At the core of Tobams Group is a people-first philosophy. The organization believes that meaningful progress is achieved when talent, technology, and purpose align. By fostering a culture of collaboration, accountability, and continuous improvement, Tobams Group empowers its teams to think boldly, act responsibly, and consistently exceed expectations. This culture is reflected not only in internal operations but also in the long-term relationships the Group builds with clients, partners, and communities. Guided by a clear vision and a strong set of values, Tobams Group continues to build a legacy of trust, excellence, and innovation. As it expands its reach and deepens its impact, the Group remains focused on one central goal: creating enduring solutions that empower businesses, transform industries, and improve lives.",
+                  "admin": [
+                    "6929a35296b1c0a6612823bf"
+                  ],
+                  "createdBy": {
+                    "_id": "6929a35296b1c0a6612823bf",
+                    "occupation": "Developer",
+                    "bio": "Software developer with 3 years of experience",
+                    "firstName": "Paul",
+                    "lastName": "Jibola",
+                    "email": "paul.elugbaju@tobamsgroup.com",
+                    "location": {
+                      "country": "Nigeria",
+                      "state": "Nigeria",
+                      "city": "Lagos"
+                    },
+                    "photo": "",
+                    "profile": "Intern",
+                    "skills": [
+                      "Team work"
+                    ],
+                    "mentorshipType": [
+                      "Peer to Peer",
+                      "Group",
+                      "One to One",
+                      "Peer-to-Peer",
+                      "One-to-One"
+                    ],
+                    "averageRating": 0,
+                    "createdAt": "2025-11-28T13:27:46.791Z",
+                    "updatedAt": "2026-01-28T14:06:29.241Z"
+                  },
+                  "skills": [],
+                  "limit": 100,
+                  "mentorshipData": {
+                    "isActive": true
+                  },
+                  "rules": [
+                    "Every decision, partnership, and operation must be rooted in honesty, transparency, and ethical conduct—no exceptions.",
+                    "Innovation is only meaningful when it solves real problems and creates measurable value for clients, partners, and society.",
+                    "The growth of the organization must never come at the expense of its people. Empower teams, respect stakeholders, and build lasting relationships.",
+                    "Quality, professionalism, and accountability are non-negotiable standards in everything Tobams Group delivers."
+                  ],
+                  "industry": "Information Technology",
+                  "createdAt": "2026-01-16T13:01:06.189Z",
+                  "updatedAt": "2026-01-16T14:55:04.251Z",
+                  "isMember": false,
+                  "lastMessage": {
+                    "_id": "696a54f26b4632601d56e5de",
+                    "roomId": "696a3692d8ebfb5489f4a6b1",
+                    "senderId": "690c58c445047c4e4030fe01",
+                    "username": "Ericsson Raphael",
+                    "replyTo": "696a51616b4632601d56e500",
+                    "isThreaded": true,
+                    "threadId": "696a51616b4632601d56e500",
+                    "content": "Cool. ",
+                    "status": "sent",
+                    "deliveredCount": 0,
+                    "readCount": 0,
+                    "timestamp": "2026-01-16T15:10:42.050Z",
+                    "createdAt": "2026-01-16T15:10:42.051Z",
+                    "updatedAt": "2026-01-16T15:10:42.051Z"
+                  }
+                }
+              ]
+            }
           }

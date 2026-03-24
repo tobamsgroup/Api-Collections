@@ -12,16 +12,16 @@ http:
       {
           "fullName": "Fawaz Agara",
           "phoneNumber": "+2340970087834",
-          "email": "paul.elugbaju@tobamsgroup.com",
+          "email": "fawazabdganiyu@gmail.com",
           "location": "Lokoja, Kogi State",
           "country": "Nigeria",
           "bio": "Here is my brief bio",
           "portfolioLink": "portfolio Link",
           "resume": "image url in cloudinary",
           "coverLetter": "cover letter url",
-          "postId": "686519c9d83df753df842146",
-          "jobTitle": "Senior Product Designer",
-          "organisationId" : "6865179998f0bca3fcb312ec"
+          "postId": "69456564af239e8238541b15",
+          "jobTitle": "Fullstack Developer",
+          "organisationId" : "690c63fc45047c4e4030fee3"
           // "owner": "In-House" // For in house job application only
       }
   auth:
