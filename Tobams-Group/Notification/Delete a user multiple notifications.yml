@@ -1,7 +1,7 @@
 info:
   name: Delete a user multiple notifications
   type: http
-  seq: 6
+  seq: 8
 
 http:
   method: DELETE
