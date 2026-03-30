@@ -1,0 +1,86 @@
+info:
+  name: "Get current user's message settings "
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/users/message-settings"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success with default response on no initial settings
+    request:
+      url: "{{BASE}}/users/message-settings"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1774872427449-2xkbq9vir
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "173"
+        - name: etag
+          value: W/"ad-9LaBcbDdZDqt6zDoHdHxoHTZqRw"
+        - name: date
+          value: Mon, 30 Mar 2026 12:07:08 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Message settings fetched successfully",
+            "data": {
+              "lastSeenVisibility": [
+                "Everyone"
+              ],
+              "language": "en",
+              "fontSize": "Medium",
+              "screenReaderSupport": false
+            }
+          }
