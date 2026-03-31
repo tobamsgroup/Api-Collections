@@ -1,0 +1,22 @@
+info:
+  name: Remove a course from a recommendation
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{BASE}}/mentorship/courses/recommendation/:id/remove-course/:courseId"
+  params:
+    - name: id
+      value: ""
+      type: path
+    - name: courseId
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
