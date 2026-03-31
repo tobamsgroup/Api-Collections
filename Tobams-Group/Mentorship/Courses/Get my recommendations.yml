@@ -1,31 +1,14 @@
 info:
-  name: Get all recommendations with filters
+  name: Get my recommendations
   type: http
-  seq: 2
+  seq: 7
 
 http:
   method: GET
-  url: "{{BASE}}/mentorship/courses/recommendation?page=&limit=&email=fawazabdganiyu@gmail.com&category=&minScore=&maxScore="
-  params:
-    - name: page
-      value: ""
-      type: query
-    - name: limit
-      value: ""
-      type: query
-    - name: email
-      value: fawazabdganiyu@gmail.com
-      type: query
-    - name: category
-      value: ""
-      type: query
-    - name: minScore
-      value: ""
-      type: query
-    - name: maxScore
-      value: ""
-      type: query
-  auth: inherit
+  url: "{{BASE}}/mentorship/courses/recommendation/my-recommendations"
+  auth:
+    type: bearer
+    token: "{{intern_access}}"
 
 settings:
   encodeUrl: true
@@ -36,27 +19,8 @@ settings:
 examples:
   - name: Success
     request:
-      url: "{{BASE}}/mentorship/courses/recommendation?page=&limit=&email=fawazabdganiyu@gmail.com&category=&minScore=&maxScore="
+      url: "{{BASE}}/mentorship/courses/recommendation/my-recommendations"
       method: GET
-      params:
-        - name: page
-          value: ""
-          type: query
-        - name: limit
-          value: ""
-          type: query
-        - name: email
-          value: fawazabdganiyu@gmail.com
-          type: query
-        - name: category
-          value: ""
-          type: query
-        - name: minScore
-          value: ""
-          type: query
-        - name: maxScore
-          value: ""
-          type: query
     response:
       status: 200
       statusText: OK
@@ -94,15 +58,15 @@ examples:
         - name: access-control-allow-headers
           value: "*"
         - name: x-request-id
-          value: 1774996019510-w66glvgw3
+          value: 1774996323586-bts3o5i76
         - name: content-type
           value: application/json; charset=utf-8
         - name: content-length
-          value: "899"
+          value: "2050"
         - name: etag
-          value: W/"383-6xIQRMOa1Wfxj2O3+qCqVl8ZJY0"
+          value: W/"802-bKxUPEJUEeVS9d+Ca1/xyr8g/w0"
         - name: date
-          value: Tue, 31 Mar 2026 22:27:00 GMT
+          value: Tue, 31 Mar 2026 22:32:06 GMT
         - name: connection
           value: keep-alive
         - name: keep-alive
@@ -142,10 +106,39 @@ examples:
                   ],
                   "createdAt": "2026-03-31T12:11:30.279Z",
                   "updatedAt": "2026-03-31T12:11:30.279Z"
+                },
+                {
+                  "_id": "693b00bea15253f517fcf327",
+                  "userName": "Fawaz",
+                  "email": "fawazabdganiyu@gmail.com",
+                  "category": "Career Development",
+                  "assessmentScore": 100,
+                  "recommendedCourses": [
+                    {
+                      "courseId": {
+                        "_id": "67acba8445825261ef08846a",
+                        "name": "Computer Software Development",
+                        "description": "Important development course",
+                        "category": "Career Development",
+                        "price": "100",
+                        "status": "status",
+                        "imageUrl": "https://www.gavi.org/sites/default/files/about/global-health/sdgs-rec.png",
+                        "courseUrl": "string",
+                        "createdAt": "2025-02-12T15:13:08.557Z",
+                        "updatedAt": "2025-02-17T14:11:50.558Z"
+                      },
+                      "courseName": "Computer Software Development",
+                      "category": "Career Development",
+                      "relevanceScore": 8,
+                      "reason": "Given the user's perfect score in Backend Development, they have demonstrated strong foundational skills. The 'Computer Software Development' course will allow them to expand their expertise into broader software development areas, which is a logical progression for career development. This course will help them gain a comprehensive understanding of software development processes, enhancing their career prospects."
+                    }
+                  ],
+                  "createdAt": "2025-12-11T17:34:54.840Z",
+                  "updatedAt": "2025-12-11T17:34:54.840Z"
                 }
               ],
-              "totalCount": 1,
-              "currentCount": 1,
+              "totalCount": 2,
+              "currentCount": 2,
               "totalPages": 1,
               "currentPage": 1
             }
