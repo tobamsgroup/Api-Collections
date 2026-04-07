@@ -1,0 +1,40 @@
+info:
+  name: Talent sourcing
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5200/api/v1/talent/sourcing/create
+  body:
+    type: json
+    data: |-
+      {
+        "company_name": "Tech Innovations Ltd",
+        "country": "United States",
+        "industry": "Information Technology",
+        "contact_fullname": "John Anderson",
+        "contact_role": "HR Manager",
+        "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+        "phonenumber": "+1-555-0123-4567",
+        "role_required": [
+          "Senior Software Engineer",
+          "DevOps Engineer",
+          "Product Manager"
+        ],
+        "recruitmentType": "Talent Acquisition",
+        "numberOfTalent": 3,
+        "levelOfUrgency": "Priority (5 Days)",
+        "skillsLevel": "Senior - level",
+        "required_skills": "JavaScript, React, Node.js, AWS, Docker, Kubernetes, Agile methodologies",
+        "proposedSalary": "$120,000 - $150,000 annually",
+        "lengthOfContract": "12 months",
+        "currency": "USD"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

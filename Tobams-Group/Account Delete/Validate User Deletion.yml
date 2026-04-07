@@ -8,11 +8,10 @@ http:
   url: "{{BASE}}/auth/validate-deletion"
   body:
     type: json
-    data: "{\r
-
-      \  \"email\": \"ericssonraphael@outlook.com\"\r
-
-      }"
+    data: |-
+      {
+        "email": "ona.newton@tobamsgroup.com"
+      }
   auth: inherit
 
 settings:
