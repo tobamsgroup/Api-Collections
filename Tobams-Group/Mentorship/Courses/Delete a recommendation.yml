@@ -1,14 +1,16 @@
 info:
-  name: Get ongoing one-to-one mentorship
+  name: Delete a recommendation
   type: http
-  seq: 8
+  seq: 3
 
 http:
-  method: GET
-  url: "{{BASE}}/mentorship/requests/ongoing_one-to-one"
-  auth:
-    type: bearer
-    token: "{{mentor_access}}"
+  method: DELETE
+  url: "{{BASE}}/mentorship/courses/recommendation/:id"
+  params:
+    - name: id
+      value: 69cbb705fa5b4077b012062a
+      type: path
+  auth: inherit
 
 settings:
   encodeUrl: true
@@ -19,8 +21,12 @@ settings:
 examples:
   - name: Success
     request:
-      url: "{{BASE}}/mentorship/requests/ongoing_one-to-one"
-      method: GET
+      url: "{{BASE}}/mentorship/courses/recommendation/:id"
+      method: DELETE
+      params:
+        - name: id
+          value: 69cbb705fa5b4077b012062a
+          type: path
     response:
       status: 200
       statusText: OK
@@ -58,15 +64,15 @@ examples:
         - name: access-control-allow-headers
           value: "*"
         - name: x-request-id
-          value: 1774975012198-qymg4j8xm
+          value: 1774959051940-znwr5rh42
         - name: content-type
           value: application/json; charset=utf-8
         - name: content-length
-          value: "632"
+          value: "64"
         - name: etag
-          value: W/"278-45cKWopruchJ31Eonz4ypGxxhlo"
+          value: W/"40-dV86zXgtIvyJ8mImQivs0toHd90"
         - name: date
-          value: Tue, 31 Mar 2026 16:36:55 GMT
+          value: Tue, 31 Mar 2026 12:10:53 GMT
         - name: connection
           value: keep-alive
         - name: keep-alive
@@ -76,26 +82,5 @@ examples:
         data: |-
           {
             "success": true,
-            "message": "Ongoing one-to-one mentorship fetched successfully",
-            "data": [
-              {
-                "_id": "694a8adeaf239e8238542089",
-                "mentorshipType": "One-to-One",
-                "status": "Accepted",
-                "createdAt": "2025-12-23T12:28:14.387Z",
-                "updatedAt": "2025-12-29T12:00:03.317Z",
-                "mentee": {
-                  "userId": "692036dc786d845942868f78",
-                  "firstName": "Fawaz",
-                  "lastName": "Abdganiyu",
-                  "email": "fawaz.abdganiyu+t@tobamsgroup.com",
-                  "currentCompany": "Meta",
-                  "currentRole": "Software Engineer",
-                  "occupation": "Backend Developer",
-                  "title": "Backend Developer",
-                  "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1767173233469_TSTS1CH5_7.png",
-                  "lastSeen": "Active now"
-                }
-              }
-            ]
+            "message": "Recommendation deleted successfully"
           }

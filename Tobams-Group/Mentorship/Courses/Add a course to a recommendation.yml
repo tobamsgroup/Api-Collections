@@ -1,0 +1,31 @@
+info:
+  name: Add a course to a recommendation
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BASE}}/mentorship/courses/recommendation/:id/add-course"
+  params:
+    - name: id
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "course": {
+            "courseId": "67acba8445825261ef08846a",
+            "courseName": "Computer Software Development",
+            "category": "Career Development"
+      //       "relevanceScore"?: number,
+      //       "reason"?: string
+          }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

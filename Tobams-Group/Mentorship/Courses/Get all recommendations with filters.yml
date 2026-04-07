@@ -1,0 +1,152 @@
+info:
+  name: Get all recommendations with filters
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/mentorship/courses/recommendation?page=&limit=&email=fawazabdganiyu@gmail.com&category=&minScore=&maxScore="
+  params:
+    - name: page
+      value: ""
+      type: query
+    - name: limit
+      value: ""
+      type: query
+    - name: email
+      value: fawazabdganiyu@gmail.com
+      type: query
+    - name: category
+      value: ""
+      type: query
+    - name: minScore
+      value: ""
+      type: query
+    - name: maxScore
+      value: ""
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/mentorship/courses/recommendation?page=&limit=&email=fawazabdganiyu@gmail.com&category=&minScore=&maxScore="
+      method: GET
+      params:
+        - name: page
+          value: ""
+          type: query
+        - name: limit
+          value: ""
+          type: query
+        - name: email
+          value: fawazabdganiyu@gmail.com
+          type: query
+        - name: category
+          value: ""
+          type: query
+        - name: minScore
+          value: ""
+          type: query
+        - name: maxScore
+          value: ""
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1774996019510-w66glvgw3
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "899"
+        - name: etag
+          value: W/"383-6xIQRMOa1Wfxj2O3+qCqVl8ZJY0"
+        - name: date
+          value: Tue, 31 Mar 2026 22:27:00 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Course recommendations retrieved successfully",
+            "data": {
+              "recommendations": [
+                {
+                  "_id": "69cbb9f2a4fc975ceb7b1993",
+                  "userName": "Fawaz Abdganiyu",
+                  "email": "fawazabdganiyu@gmail.com",
+                  "recommendedBy": "694a7af3af239e8238541f84",
+                  "recommendedCourses": [
+                    {
+                      "courseId": {
+                        "_id": "67acba8445825261ef08846a",
+                        "name": "Computer Software Development",
+                        "description": "Important development course",
+                        "category": "Career Development",
+                        "price": "100",
+                        "status": "status",
+                        "imageUrl": "https://www.gavi.org/sites/default/files/about/global-health/sdgs-rec.png",
+                        "courseUrl": "string",
+                        "createdAt": "2025-02-12T15:13:08.557Z",
+                        "updatedAt": "2025-02-17T14:11:50.558Z"
+                      },
+                      "courseName": "Computer Software Development",
+                      "category": "Career Development",
+                      "relevanceScore": 0,
+                      "reason": ""
+                    }
+                  ],
+                  "createdAt": "2026-03-31T12:11:30.279Z",
+                  "updatedAt": "2026-03-31T12:11:30.279Z"
+                }
+              ],
+              "totalCount": 1,
+              "currentCount": 1,
+              "totalPages": 1,
+              "currentPage": 1
+            }
+          }

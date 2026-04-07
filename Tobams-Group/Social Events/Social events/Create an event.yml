@@ -47,3 +47,99 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Validation error
+    request:
+      url: "{{BASE}}/social_events"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "image": "https://example.com/event-image.jpg"
+          //   "title": "Patience and Gratitude",
+          //   "eventType": "Online",
+          //   "externalLink": "https://example.com/event-image.jpg",
+          //   "host": "Tobams Group",
+          //   "interval": {
+          //     "start": {"date": "2025-04-29", "time": "09:00 AM"},
+          //     "end": {"date": "2025-04-30", "time": "12:00 PM"}
+          //   },
+          //   "timezone": "GMT + 3",
+          //   "about": "A conference to discuss the latest trends in technology.",
+          //   "description": "Join us for an exciting tech conference where industry leaders will discuss the latest trends and innovations in technology.",
+          //   "eventsDetails": {
+          //     "About the Event: Patience and Gratitude": "Welcome to the Sustainable Development Goals (SDGs) event—an inspiring gathering dedicated to advancing global progress and fostering a shared commitment to sustainability. This event serves as a platform for collaboration, innovation, and dialogue, bringing together diverse stakeholders, thought leaders, and change-makers.",
+          //     "Key Highlights": [
+          //         "Insightful Discussions: Engage in thought-provoking conversations led by experts in sustainable development addressing current challenges and opportunities.",
+          //         "Innovative Solutions: Discover groundbreaking projects and solutions that align with the SDGs, driving positive change across various sectors.",
+          //         "Networking Opportunities: Connect with like-minded individuals, organizations, and influencers passionate about creating a sustainable future."
+          //     ]
+          //     },
+          //   "extra": "Join us on this journey toward a more sustainable, inclusive, and resilient future. Together, let's transform goals into action and make a lasting difference for generations to come.",
+          //   "location": "Tech Convention Center, San Francisco, CA",
+          //   "isPaid": {
+          //     "status": true,
+          //     "price": 200.00,
+          //     "currency": "$"
+          //   }
+            }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1774980615143-wri8eyuee
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "782"
+        - name: etag
+          value: W/"30e-LNdp9TnHD/IsuyANjonw+8793ik"
+        - name: date
+          value: Tue, 31 Mar 2026 18:10:15 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "title: Invalid input: expected string, received undefined; eventType: Invalid input: expected string, received undefined; externalLink: Invalid URL format for external link; host: Invalid input: expected string, received undefined; isPaid: Invalid input: expected object, received undefined; timezone: Invalid input: expected string, received undefined; location: Invalid input: expected string, received undefined; interval: Invalid input: expected object, received undefined; about: Invalid input: expected string, received undefined; eventsDetails: Invalid input: expected record, received undefined; description: Invalid input: expected string, received undefined; extra: Invalid input: expected string, received undefined"
+          }

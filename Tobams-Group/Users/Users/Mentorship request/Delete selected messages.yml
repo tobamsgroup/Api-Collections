@@ -1,0 +1,21 @@
+info:
+  name: "Delete selected messages "
+  type: http
+  seq: 11
+
+http:
+  method: DELETE
+  url: "{{BASE}}/users/messages/bulk"
+  body:
+    type: json
+    data: |-
+      {
+        "messageIds":[]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
