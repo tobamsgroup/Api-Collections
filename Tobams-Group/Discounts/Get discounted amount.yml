@@ -5,19 +5,28 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/discounts/amount?amount=45000&code=SAVE20TG&organization=Tobams Group&purpose=assessment"
+  url: "{{BASE}}/discounts/amount?amount=45000&code=SAVE01TG&organization=Tobams Group&purpose=assessment&uuid=TG-60XTA&category=Career%20Development&skills=Backend%20Development"
   params:
     - name: amount
       value: "45000"
       type: query
     - name: code
-      value: SAVE20TG
+      value: SAVE01TG
       type: query
     - name: organization
       value: Tobams Group
       type: query
     - name: purpose
       value: assessment
+      type: query
+    - name: uuid
+      value: TG-60XTA
+      type: query
+    - name: category
+      value: Career%20Development
+      type: query
+    - name: skills
+      value: Backend%20Development
       type: query
   body:
     type: json

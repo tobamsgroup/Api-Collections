@@ -5,17 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/assessment/generate?email=ericsson.raphael@tobamsgroup.com&uuid=TG-23XIN&category=Career%20Development&skills=Backend%20Development"
+  url: "{{BASE}}/assessment/generate?email=fawaz.abdganiyu+ta@tobamsgroup.com&uuid=TG-60XTA&category=Career%20Development&skills=Backend%20Development"
   params:
-    - name: uuid
-      value: TG-1XTA
-      type: query
-      disabled: true
     - name: email
-      value: ericsson.raphael@tobamsgroup.com
+      value: fawaz.abdganiyu+ta@tobamsgroup.com
       type: query
     - name: uuid
-      value: TG-23XIN
+      value: TG-60XTA
       type: query
     - name: category
       value: Career%20Development
@@ -532,4 +528,505 @@ examples:
                   "timeLimit": 7200,
                   "totalQuestions": 30
               }
+          }
+  - name: Success
+    request:
+      url: "{{BASE}}/assessment/generate?email=fawaz.abdganiyu+ta@tobamsgroup.com&uuid=TG-60XTA&category=Career%20Development&skills=Backend%20Development"
+      method: GET
+      params:
+        - name: email
+          value: fawaz.abdganiyu+ta@tobamsgroup.com
+          type: query
+        - name: uuid
+          value: TG-60XTA
+          type: query
+        - name: category
+          value: Career%20Development
+          type: query
+        - name: skills
+          value: Backend%20Development
+          type: query
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1776189105955-o8g59vhwa
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "10928"
+        - name: etag
+          value: W/"2ab0-5Pt/O7Y9e7Vt4MOOBr6G4Opnj8Y"
+        - name: date
+          value: Tue, 14 Apr 2026 17:52:09 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Assessment questions generated successfully.",
+            "data": {
+              "sessionId": "fawaz.abdganiyu+ta_1776189099374_8682c744",
+              "questions": [
+                {
+                  "questionId": "q_01",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "What does the acronym REST stand for in web development?",
+                  "options": {
+                    "a": "Rapid Execution and Synchronization Technique",
+                    "b": "Resource Exchange and Synchronization Tool",
+                    "c": "Remote Execution Service Technology",
+                    "d": "Representational State Transfer"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_02",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "Which HTTP method is used to update a resource on a server?",
+                  "options": {
+                    "a": "DELETE",
+                    "b": "POST",
+                    "c": "GET",
+                    "d": "PUT"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_03",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "According to the Model-View-Controller (MVC) architecture, where should business logic primarily reside?",
+                  "options": {
+                    "a": "Controller",
+                    "b": "Model",
+                    "c": "View",
+                    "d": "Database"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_04",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "In SQL, which command is used to remove a table from a database?",
+                  "options": {
+                    "a": "DROP TABLE",
+                    "b": "DELETE TABLE",
+                    "c": "REMOVE TABLE",
+                    "d": "ERASE TABLE"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_05",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "Which of the following is a NoSQL database?",
+                  "options": {
+                    "a": "SQLite",
+                    "b": "MongoDB",
+                    "c": "PostgreSQL",
+                    "d": "MySQL"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_06",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "What is the primary purpose of a load balancer in backend development?",
+                  "options": {
+                    "a": "To distribute network traffic",
+                    "b": "To compress files",
+                    "c": "To encrypt data",
+                    "d": "To store data"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_07",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "Which of the following is a common backend programming language?",
+                  "options": {
+                    "a": "XML",
+                    "b": "CSS",
+                    "c": "Java",
+                    "d": "HTML"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_08",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "In the context of RESTful APIs, what does 'stateless' mean?",
+                  "options": {
+                    "a": "The client and server share session data",
+                    "b": "The server stores all client session data",
+                    "c": "The client must store all session data",
+                    "d": "The server does not store any state about the client session"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_09",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "According to the CAP theorem, which three properties cannot be achieved simultaneously in a distributed data store?",
+                  "options": {
+                    "a": "Consistency, Availability, Partition Tolerance",
+                    "b": "Concurrency, Accessibility, Performance",
+                    "c": "Capacity, Accuracy, Persistence",
+                    "d": "Connectivity, Adaptability, Precision"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_10",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "Which protocol is primarily used for secure communication over a computer network?",
+                  "options": {
+                    "a": "FTP",
+                    "b": "SMTP",
+                    "c": "HTTP",
+                    "d": "HTTPS"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_11",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "What is the main advantage of using microservices architecture over monolithic architecture?",
+                  "options": {
+                    "a": "Lower cost",
+                    "b": "Easier to scale and maintain",
+                    "c": "Simplified deployment",
+                    "d": "Reduced development time"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_12",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "Which of the following is a key feature of the GraphQL query language?",
+                  "options": {
+                    "a": "It requires a fixed schema",
+                    "b": "Data is always returned in XML format",
+                    "c": "Clients can request exactly the data they need",
+                    "d": "It only supports GET requests"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_13",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "In backend development, what is the purpose of using a caching mechanism?",
+                  "options": {
+                    "a": "To enhance data accuracy",
+                    "b": "To increase data redundancy",
+                    "c": "To improve data security",
+                    "d": "To reduce data retrieval time"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_14",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "Which of the following is a common tool for version control in software development?",
+                  "options": {
+                    "a": "Git",
+                    "b": "Jenkins",
+                    "c": "Docker",
+                    "d": "Kubernetes"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_15",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "According to the Twelve-Factor App methodology, what should be done with configuration?",
+                  "options": {
+                    "a": "Hard-code it in the application",
+                    "b": "Store it in environment variables",
+                    "c": "Store it in the database",
+                    "d": "Embed it in the code"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_16",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "Which database normalization form eliminates duplicate columns from the same table?",
+                  "options": {
+                    "a": "First Normal Form (1NF)",
+                    "b": "Boyce-Codd Normal Form (BCNF)",
+                    "c": "Third Normal Form (3NF)",
+                    "d": "Second Normal Form (2NF)"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_17",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "What is the primary function of an API gateway in microservices architecture?",
+                  "options": {
+                    "a": "To handle requests and route them to the appropriate microservice",
+                    "b": "To store microservices data",
+                    "c": "To manage microservices deployment",
+                    "d": "To compile microservices code"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_18",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "In backend development, what is the purpose of using middleware?",
+                  "options": {
+                    "a": "To facilitate communication between different software components",
+                    "b": "To manage user authentication only",
+                    "c": "To directly interact with the database",
+                    "d": "To handle client-side rendering"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_19",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "Which of the following is a characteristic of a strongly typed programming language?",
+                  "options": {
+                    "a": "Type checking is done at compile time",
+                    "b": "Type errors are ignored",
+                    "c": "Variables do not require explicit type declaration",
+                    "d": "Variables can change type at runtime"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_20",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "According to the SOLID principles, what does the 'S' stand for?",
+                  "options": {
+                    "a": "Scalable Architecture Principle",
+                    "b": "Single Responsibility Principle",
+                    "c": "Simple Design Principle",
+                    "d": "Secure Code Principle"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_21",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "What is the main purpose of using Docker in backend development?",
+                  "options": {
+                    "a": "To automate code compilation",
+                    "b": "To containerize applications for consistent deployment",
+                    "c": "To create virtual machines",
+                    "d": "To manage network traffic"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_22",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "In backend development, what is a common use of WebSockets?",
+                  "options": {
+                    "a": "To establish real-time communication between client and server",
+                    "b": "To send emails",
+                    "c": "To encrypt data",
+                    "d": "To store session data"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_23",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "Which of the following is a benefit of using serverless architecture?",
+                  "options": {
+                    "a": "Automatic scaling and reduced operational costs",
+                    "b": "Unlimited storage capacity",
+                    "c": "Guaranteed zero latency",
+                    "d": "Complete control over server hardware"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_24",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "What is the main advantage of using an ORM (Object-Relational Mapping) tool in backend development?",
+                  "options": {
+                    "a": "Enhanced graphical user interface",
+                    "b": "Simplified database interaction through object-oriented programming",
+                    "c": "Direct access to hardware resources",
+                    "d": "Increased network speed"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_25",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "According to the Agile methodology, what is the primary purpose of a sprint retrospective?",
+                  "options": {
+                    "a": "To review the product backlog",
+                    "b": "To finalize the project documentation",
+                    "c": "To reflect on the past sprint and improve future processes",
+                    "d": "To plan the next sprint"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_26",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "In backend development, what is the purpose of using a reverse proxy?",
+                  "options": {
+                    "a": "To encrypt data",
+                    "b": "To store user sessions",
+                    "c": "To serve static content",
+                    "d": "To route client requests to the appropriate backend server"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_27",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "Which of the following is a feature of the OAuth 2.0 protocol?",
+                  "options": {
+                    "a": "It allows third-party applications to access user data without exposing credentials",
+                    "b": "It is a file transfer protocol",
+                    "c": "It provides encryption for data in transit",
+                    "d": "It is used for data compression"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_28",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "What is the primary role of a database index?",
+                  "options": {
+                    "a": "To increase storage capacity",
+                    "b": "To manage user permissions",
+                    "c": "To encrypt database records",
+                    "d": "To improve query performance"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_29",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "In backend development, what is the purpose of using a message queue?",
+                  "options": {
+                    "a": "To perform data validation",
+                    "b": "To enable asynchronous communication between services",
+                    "c": "To store large files",
+                    "d": "To manage database transactions"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_30",
+                  "category": "Career Development",
+                  "section": "Backend Development",
+                  "question": "According to the DevOps model, what is the main goal of continuous integration?",
+                  "options": {
+                    "a": "To ensure code changes are automatically tested and integrated into the main branch",
+                    "b": "To monitor application performance",
+                    "c": "To deploy applications to production environments",
+                    "d": "To automate server provisioning"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                }
+              ],
+              "timeLimit": 7200,
+              "totalQuestions": 30
+            }
           }
