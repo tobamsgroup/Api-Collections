@@ -1,0 +1,7 @@
+info:
+  name: High Volume (Custom)
+  type: folder
+  seq: 6
+
+request:
+  auth: inherit

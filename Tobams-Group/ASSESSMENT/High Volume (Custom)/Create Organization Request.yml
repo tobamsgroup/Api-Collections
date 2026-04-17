@@ -1,0 +1,30 @@
+info:
+  name: Create Organization Request
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{BASE}}/assessment/organization-request"
+  body:
+    type: json
+    data: |-
+      {
+        "organisationName": "Tech Innovations Ltd",
+        "contactPersonName": "John Smith",
+        "contactPersonEmail": "john.smith@techinnovations.com",
+        "assessmentPurpose": "Pre-Hiring Screening", // Pre-Hiring Screening, Post-Training Evaluation, Performance Review, Other
+        "audienceType": "New Employees", // New Employees, Students/ Trainees, Mangers & Team Leads, Mixed Group, Existing Staff
+        "participantNumber": 25,
+        "assessmentType": "Technical Skills",
+        "reasonForAssessment": "Team Expansion", // Leadership Request, Team Expansion, Recent Performance Issues, Other
+        "assessmentReadinessTimeline": "Within 2 Weeks", // Immediately, Within 1 Month, Within 2 Weeks, Within a Month
+        "specialInstructions": "Please focus on Python and JavaScript skills"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

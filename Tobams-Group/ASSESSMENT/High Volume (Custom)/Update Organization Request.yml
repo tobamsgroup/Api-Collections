@@ -1,0 +1,19 @@
+info:
+  name: Update Organization Request
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/assessment/organization-request/:id"
+  params:
+    - name: id
+      value: 507f1f77bcf86cd799439011
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
