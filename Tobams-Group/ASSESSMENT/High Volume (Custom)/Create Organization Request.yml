@@ -14,11 +14,11 @@ http:
         "contactPersonName": "John Smith",
         "contactPersonEmail": "john.smith@techinnovations.com",
         "assessmentPurpose": "Pre-Hiring Screening", // Pre-Hiring Screening, Post-Training Evaluation, Performance Review, Other
-        "audienceType": "New Employees", // New Employees, Students/ Trainees, Mangers & Team Leads, Mixed Group, Existing Staff
+        "audienceType": "New Employees", // New Employees, Students/ Trainees, Managers & Team Leads, Mixed Group, Existing Staff
         "participantNumber": 25,
         "assessmentType": "Technical Skills",
         "reasonForAssessment": "Team Expansion", // Leadership Request, Team Expansion, Recent Performance Issues, Other
-        "assessmentReadinessTimeline": "Within 2 Weeks", // Immediately, Within 1 Month, Within 2 Weeks, Within a Month
+        "assessmentReadinessTimeline": "Within 2 Weeks", // Immediately, Within 1 Week, Within 2 Weeks, Within a Month
         "specialInstructions": "Please focus on Python and JavaScript skills"
       }
   auth: inherit

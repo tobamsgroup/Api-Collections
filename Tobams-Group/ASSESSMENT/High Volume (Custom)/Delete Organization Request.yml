@@ -10,7 +10,9 @@ http:
     - name: id
       value: 507f1f77bcf86cd799439011
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{org_access}}"
 
 settings:
   encodeUrl: true
