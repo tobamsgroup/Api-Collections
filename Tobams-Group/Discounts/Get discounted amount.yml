@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/discounts/amount?amount=45000&code=SAVE01TG&organization=Tobams Group&purpose=assessment&uuid=TG-60XTA&category=Career%20Development&skills=Backend%20Development"
+  url: "{{BASE}}/discounts/amount?amount=45000&code=SAVE01TG&organization=Tobams Group&purpose=assessment&uuid=TG-60XTA&category=Career (Backend and soft skills)&area=Backend%20Development"
   params:
     - name: amount
       value: "45000"
@@ -23,9 +23,9 @@ http:
       value: TG-60XTA
       type: query
     - name: category
-      value: Career%20Development
+      value: Career (Backend and soft skills)
       type: query
-    - name: skills
+    - name: area
       value: Backend%20Development
       type: query
   body:

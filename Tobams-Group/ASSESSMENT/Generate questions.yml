@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/assessment/generate?email=fawaz.abdganiyu+ta@tobamsgroup.com&uuid=TG-60XTA&category=Career%20Development&skills=Backend%20Development"
+  url: "{{BASE}}/assessment/generate?email=fawaz.abdganiyu+ta@tobamsgroup.com&uuid=TG-60XTA&category=Career&area=Backend%20Development"
   params:
     - name: email
       value: fawaz.abdganiyu+ta@tobamsgroup.com
@@ -14,9 +14,9 @@ http:
       value: TG-60XTA
       type: query
     - name: category
-      value: Career%20Development
+      value: Career
       type: query
-    - name: skills
+    - name: area
       value: Backend%20Development
       type: query
   auth: inherit
@@ -1029,4 +1029,832 @@ examples:
               "timeLimit": 7200,
               "totalQuestions": 30
             }
+          }
+  - name: Success (Career (Backend and soft skills))
+    request:
+      url: "{{BASE}}/assessment/generate?email=fawaz.abdganiyu+ta@tobamsgroup.com&uuid=TG-60XTA&category=Career (Backend and soft skills)&area=Backend%20Development"
+      method: GET
+      params:
+        - name: email
+          value: fawaz.abdganiyu+ta@tobamsgroup.com
+          type: query
+        - name: uuid
+          value: TG-60XTA
+          type: query
+        - name: category
+          value: Career (Backend and soft skills)
+          type: query
+        - name: area
+          value: Backend%20Development
+          type: query
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1776775882928-ocfjlnhdw
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "18237"
+        - name: etag
+          value: W/"473d-/2Gn1QQdXyOLJanRf57a3qn+bTM"
+        - name: date
+          value: Tue, 21 Apr 2026 12:51:24 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Assessment questions generated successfully.",
+            "data": {
+              "sessionId": "fawaz.abdganiyu+ta_1776775811755_1471281f",
+              "category": "Career (Backend and soft skills)",
+              "area": "Backend%20Development",
+              "questions": [
+                {
+                  "questionId": "q_backend_29",
+                  "area": "Backend Development",
+                  "question": "Which of the following best describes the concept of 'sharding' in databases?",
+                  "options": {
+                    "a": "Storing data in a single location",
+                    "b": "Partitioning data across multiple databases to improve performance",
+                    "c": "Encrypting data at rest",
+                    "d": "Caching data for faster access"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_backend_06",
+                  "area": "Backend Development",
+                  "question": "Which of the following is a common use case for a message queue?",
+                  "options": {
+                    "a": "Decoupling components in a distributed system",
+                    "b": "Real-time data processing",
+                    "c": "Direct database access",
+                    "d": "Batch processing of data"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_career_11",
+                  "area": "Backend%20Development",
+                  "subArea": "Time Management & Productivity",
+                  "question": "Which technique is used to prioritize tasks effectively?",
+                  "options": {
+                    "a": "Fishbone diagram",
+                    "b": "SWOT analysis",
+                    "c": "Mind mapping",
+                    "d": "Eisenhower Box"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_career_02",
+                  "area": "Backend%20Development",
+                  "subArea": "Self-Awareness & Personal Branding",
+                  "question": "Which tool is commonly used to assess personal strengths and weaknesses?",
+                  "options": {
+                    "a": "SWOT analysis",
+                    "b": "PERT diagram",
+                    "c": "Gantt chart",
+                    "d": "Pareto chart"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_backend_25",
+                  "area": "Backend Development",
+                  "question": "In the context of backend security, what is SQL injection?",
+                  "options": {
+                    "a": "A technique to bypass authentication",
+                    "b": "An attack that allows execution of arbitrary SQL code",
+                    "c": "A method to encrypt SQL queries",
+                    "d": "A way to optimize SQL performance"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_backend_05",
+                  "area": "Backend Development",
+                  "question": "What is the purpose of middleware in a web application?",
+                  "options": {
+                    "a": "To compile code into machine language",
+                    "b": "To process requests and responses",
+                    "c": "To handle client-side rendering",
+                    "d": "To manage database connections"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_backend_28",
+                  "area": "Backend Development",
+                  "question": "What is the primary function of a database transaction?",
+                  "options": {
+                    "a": "To ensure a sequence of operations is completed successfully or not at all",
+                    "b": "To store data in a temporary table",
+                    "c": "To manage user authentication",
+                    "d": "To execute multiple queries simultaneously"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_backend_15",
+                  "area": "Backend Development",
+                  "question": "What is the main purpose of using a Content Delivery Network (CDN)?",
+                  "options": {
+                    "a": "To manage user authentication",
+                    "b": "To cache content closer to users for faster access",
+                    "c": "To increase server processing power",
+                    "d": "To provide secure data encryption"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_career_16",
+                  "area": "Backend%20Development",
+                  "subArea": "Continuous Learning & Skill Development",
+                  "question": "What is a recommended method for identifying skill gaps?",
+                  "options": {
+                    "a": "Ignoring feedback",
+                    "b": "Relying solely on past experiences",
+                    "c": "Avoiding new challenges",
+                    "d": "Conducting a self-assessment and seeking feedback"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_backend_08",
+                  "area": "Backend Development",
+                  "question": "Which of the following is a benefit of using GraphQL over REST?",
+                  "options": {
+                    "a": "Stateless architecture",
+                    "b": "Fixed data structure",
+                    "c": "Built-in caching mechanism",
+                    "d": "Single endpoint for all queries"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_backend_20",
+                  "area": "Backend Development",
+                  "question": "What is the primary function of an API gateway in a microservices architecture?",
+                  "options": {
+                    "a": "To store microservices' data",
+                    "b": "To manage server hardware",
+                    "c": "To compile microservices into a monolith",
+                    "d": "To provide a single entry point for client requests"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_backend_27",
+                  "area": "Backend Development",
+                  "question": "Which of the following is a common characteristic of a RESTful API?",
+                  "options": {
+                    "a": "Multiple endpoints for the same resource",
+                    "b": "Stateful operations",
+                    "c": "Tightly coupled client-server interactions",
+                    "d": "Stateless communication"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_backend_21",
+                  "area": "Backend Development",
+                  "question": "Which of the following is a benefit of using serverless architecture?",
+                  "options": {
+                    "a": "Increased hardware costs",
+                    "b": "Permanent server allocation",
+                    "c": "Unlimited server resources",
+                    "d": "Automatic scaling and reduced operational overhead"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_backend_26",
+                  "area": "Backend Development",
+                  "question": "What is the main purpose of using a database index?",
+                  "options": {
+                    "a": "To improve the speed of data retrieval operations",
+                    "b": "To ensure data consistency",
+                    "c": "To store large binary objects",
+                    "d": "To manage user permissions"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_backend_02",
+                  "area": "Backend Development",
+                  "question": "Which HTTP method is used to update a resource on a server?",
+                  "options": {
+                    "a": "PUT",
+                    "b": "POST",
+                    "c": "DELETE",
+                    "d": "GET"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_backend_23",
+                  "area": "Backend Development",
+                  "question": "According to the Twelve-Factor App methodology, what is the recommended way to handle configuration?",
+                  "options": {
+                    "a": "Embed configuration in the database",
+                    "b": "Store configuration in environment variables",
+                    "c": "Use a configuration file within the codebase",
+                    "d": "Hard-code configuration into the source code"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_career_19",
+                  "area": "Backend%20Development",
+                  "subArea": "Confidence & Professional Presence",
+                  "question": "What is a key factor in projecting confidence in professional settings?",
+                  "options": {
+                    "a": "Speaking softly",
+                    "b": "Using filler words frequently",
+                    "c": "Avoiding eye contact",
+                    "d": "Maintaining good posture and eye contact"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_career_10",
+                  "area": "Backend%20Development",
+                  "subArea": "Workplace Professionalism & Etiquette",
+                  "question": "What is considered a key aspect of workplace professionalism?",
+                  "options": {
+                    "a": "Ignoring feedback",
+                    "b": "Casual dress code",
+                    "c": "Punctuality and reliability",
+                    "d": "Frequent personal calls"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_backend_24",
+                  "area": "Backend Development",
+                  "question": "What is the primary purpose of using a circuit breaker pattern in microservices?",
+                  "options": {
+                    "a": "To prevent cascading failures by stopping calls to a failing service",
+                    "b": "To enhance data encryption",
+                    "c": "To manage user sessions",
+                    "d": "To optimize database queries"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_backend_17",
+                  "area": "Backend Development",
+                  "question": "What is the function of a load balancer in a server environment?",
+                  "options": {
+                    "a": "To store backup data",
+                    "b": "To encrypt server communications",
+                    "c": "To increase the speed of a single server",
+                    "d": "To distribute incoming network traffic across multiple servers"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_career_12",
+                  "area": "Backend%20Development",
+                  "subArea": "Adaptability & Growth Mindset",
+                  "question": "According to Carol Dweck's research, what characterizes a growth mindset?",
+                  "options": {
+                    "a": "Focusing only on strengths",
+                    "b": "Avoidance of challenges",
+                    "c": "Embracing challenges and learning from feedback",
+                    "d": "Belief that abilities are fixed"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_career_03",
+                  "area": "Backend%20Development",
+                  "subArea": "CV / Resume Development",
+                  "question": "According to industry standards, what is the recommended maximum length for a CV for a mid-level professional?",
+                  "options": {
+                    "a": "Three pages",
+                    "b": "Two pages",
+                    "c": "Four pages",
+                    "d": "One page"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_career_08",
+                  "area": "Backend%20Development",
+                  "subArea": "LinkedIn & Digital Presence",
+                  "question": "What is a key benefit of having a complete LinkedIn profile?",
+                  "options": {
+                    "a": "It guarantees job offers",
+                    "b": "It replaces the need for a CV",
+                    "c": "It increases visibility to recruiters",
+                    "d": "It automatically applies to jobs"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_backend_11",
+                  "area": "Backend Development",
+                  "question": "What is the primary purpose of using OAuth in web applications?",
+                  "options": {
+                    "a": "To encrypt data at rest",
+                    "b": "To authenticate users without sharing password credentials",
+                    "c": "To optimize database queries",
+                    "d": "To manage server load balancing"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_career_17",
+                  "area": "Backend%20Development",
+                  "subArea": "AI & Digital Career Readiness",
+                  "question": "How can AI tools enhance CV optimization for ATS systems?",
+                  "options": {
+                    "a": "By focusing on aesthetics over content",
+                    "b": "By adding irrelevant keywords",
+                    "c": "By tailoring content to match job descriptions",
+                    "d": "By using complex jargon"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_career_14",
+                  "area": "Backend%20Development",
+                  "subArea": "Career Advancement Strategy",
+                  "question": "What is a strategic approach to career advancement within an organization?",
+                  "options": {
+                    "a": "Focusing solely on current tasks",
+                    "b": "Waiting for opportunities to arise",
+                    "c": "Proactively seeking mentorship and skill development",
+                    "d": "Avoiding additional responsibilities"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_backend_22",
+                  "area": "Backend Development",
+                  "question": "What is the main advantage of using a NoSQL database over a traditional SQL database?",
+                  "options": {
+                    "a": "Horizontal scalability",
+                    "b": "Fixed schema",
+                    "c": "Better support for complex queries",
+                    "d": "Guaranteed ACID transactions"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_backend_16",
+                  "area": "Backend Development",
+                  "question": "Which protocol is primarily used for secure communication over a computer network?",
+                  "options": {
+                    "a": "HTTPS",
+                    "b": "SMTP",
+                    "c": "FTP",
+                    "d": "HTTP"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_career_07",
+                  "area": "Backend%20Development",
+                  "subArea": "Networking & Relationship Building",
+                  "question": "According to networking best practices, what is the most effective way to maintain professional relationships?",
+                  "options": {
+                    "a": "Contact only when in need",
+                    "b": "Send mass emails to all contacts",
+                    "c": "Regularly engage and offer value",
+                    "d": "Avoid communication to maintain mystery"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_backend_14",
+                  "area": "Backend Development",
+                  "question": "Which of the following best describes the concept of 'eventual consistency' in distributed systems?",
+                  "options": {
+                    "a": "Data is consistent across all nodes immediately after a transaction",
+                    "b": "Data is never consistent across nodes",
+                    "c": "Data will become consistent across all nodes over time",
+                    "d": "All nodes see the same data at the same time"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_backend_07",
+                  "area": "Backend Development",
+                  "question": "In the context of RESTful services, what is idempotency?",
+                  "options": {
+                    "a": "The ability to handle multiple requests simultaneously",
+                    "b": "The ability to cache responses for efficiency",
+                    "c": "The ability to perform the same operation multiple times without changing the result",
+                    "d": "The ability to encrypt data in transit"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_career_15",
+                  "area": "Backend%20Development",
+                  "subArea": "Leadership Potential",
+                  "question": "Which behavior is indicative of early-stage leadership potential?",
+                  "options": {
+                    "a": "Taking initiative and influencing others",
+                    "b": "Avoiding team collaboration",
+                    "c": "Delegating all tasks",
+                    "d": "Focusing only on individual success"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_backend_30",
+                  "area": "Backend Development",
+                  "question": "What is the role of a data warehouse in backend systems?",
+                  "options": {
+                    "a": "To compile code into machine language",
+                    "b": "To manage user authentication",
+                    "c": "To store real-time transactional data",
+                    "d": "To provide a centralized repository for analytical data"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_backend_19",
+                  "area": "Backend Development",
+                  "question": "In backend development, what is a common use of Redis?",
+                  "options": {
+                    "a": "For in-memory data storage and caching",
+                    "b": "As a relational database",
+                    "c": "To compile code",
+                    "d": "To manage user interfaces"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_career_13",
+                  "area": "Backend%20Development",
+                  "subArea": "Public Speaking & Presentation Skills",
+                  "question": "What is a key strategy for reducing anxiety before a presentation?",
+                  "options": {
+                    "a": "Avoiding practice",
+                    "b": "Ignoring the audience",
+                    "c": "Visualizing success and practicing",
+                    "d": "Reading directly from slides"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_backend_01",
+                  "area": "Backend Development",
+                  "question": "What does the acronym REST stand for in web services?",
+                  "options": {
+                    "a": "Representational State Transfer",
+                    "b": "Remote Execution Service Technology",
+                    "c": "Rapid Execution and Service Transfer",
+                    "d": "Resource Exchange Service Transfer"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_career_06",
+                  "area": "Backend%20Development",
+                  "subArea": "Professional Communication",
+                  "question": "What is the primary purpose of using the 'CC' field in professional emails?",
+                  "options": {
+                    "a": "To send a confidential message",
+                    "b": "To include additional recipients for informational purposes",
+                    "c": "To encrypt the email content",
+                    "d": "To prioritize the email"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_backend_18",
+                  "area": "Backend Development",
+                  "question": "Which of the following is a characteristic of a microservices architecture?",
+                  "options": {
+                    "a": "Single point of failure",
+                    "b": "Tightly coupled components",
+                    "c": "Monolithic codebase",
+                    "d": "Independent deployability of services"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_backend_12",
+                  "area": "Backend Development",
+                  "question": "In microservices architecture, what is a service mesh used for?",
+                  "options": {
+                    "a": "To compile microservices into a single application",
+                    "b": "To store microservices' logs",
+                    "c": "To manage user authentication across services",
+                    "d": "To provide a dedicated infrastructure layer for service-to-service communication"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_backend_03",
+                  "area": "Backend Development",
+                  "question": "In a relational database, what is a primary key?",
+                  "options": {
+                    "a": "A field that is always indexed",
+                    "b": "A field that can have duplicate values",
+                    "c": "A field that stores large binary objects",
+                    "d": "A field that uniquely identifies each record"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_backend_04",
+                  "area": "Backend Development",
+                  "question": "Which of the following is a NoSQL database?",
+                  "options": {
+                    "a": "PostgreSQL",
+                    "b": "MySQL",
+                    "c": "SQLite",
+                    "d": "MongoDB"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_backend_13",
+                  "area": "Backend Development",
+                  "question": "What is the role of a reverse proxy in a web server architecture?",
+                  "options": {
+                    "a": "To manage database transactions",
+                    "b": "To encrypt data between client and server",
+                    "c": "To forward requests to backend servers and handle load balancing",
+                    "d": "To serve static files directly to clients"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_backend_09",
+                  "area": "Backend Development",
+                  "question": "What is the main advantage of using Docker containers in backend development?",
+                  "options": {
+                    "a": "Enhanced graphical user interface",
+                    "b": "Reduced need for version control",
+                    "c": "Increased memory usage",
+                    "d": "Simplified deployment and scalability"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_career_09",
+                  "area": "Backend%20Development",
+                  "subArea": "Job Search Strategy",
+                  "question": "Which method is recommended for tracking job applications effectively?",
+                  "options": {
+                    "a": "Relying on memory",
+                    "b": "Using social media posts",
+                    "c": "Applying randomly without tracking",
+                    "d": "Using a spreadsheet or job tracking tool"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_career_04",
+                  "area": "Backend%20Development",
+                  "subArea": "Cover Letter & Application Writing",
+                  "question": "What is the primary function of a cover letter in a job application?",
+                  "options": {
+                    "a": "To list all previous job titles",
+                    "b": "To repeat the information in the CV",
+                    "c": "To provide a detailed personal biography",
+                    "d": "To introduce the applicant and highlight key qualifications"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_career_01",
+                  "area": "Backend%20Development",
+                  "subArea": "Career Clarity & Direction",
+                  "question": "What is the primary purpose of setting SMART goals in career planning?",
+                  "options": {
+                    "a": "To ensure goals are vague and flexible",
+                    "b": "To focus solely on long-term aspirations",
+                    "c": "To prioritize goals based on immediate needs",
+                    "d": "To create goals that are specific, measurable, achievable, relevant, and time-bound"
+                  },
+                  "point": 1,
+                  "difficultyLevel": "easy"
+                },
+                {
+                  "questionId": "q_career_05",
+                  "area": "Backend%20Development",
+                  "subArea": "Interview Readiness",
+                  "question": "Which technique is recommended for answering behavioral interview questions?",
+                  "options": {
+                    "a": "Gantt chart",
+                    "b": "STAR method",
+                    "c": "PESTLE analysis",
+                    "d": "SWOT analysis"
+                  },
+                  "point": 2,
+                  "difficultyLevel": "medium"
+                },
+                {
+                  "questionId": "q_career_18",
+                  "area": "Backend%20Development",
+                  "subArea": "Problem Solving & Critical Thinking",
+                  "question": "What is the first step in the problem-solving process according to the IDEAL model?",
+                  "options": {
+                    "a": "List possible solutions",
+                    "b": "Identify the problem",
+                    "c": "Act on the solution",
+                    "d": "Evaluate solutions"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_career_20",
+                  "area": "Backend%20Development",
+                  "subArea": "Work-Life Balance & Personal Effectiveness",
+                  "question": "Which strategy is effective for maintaining work-life balance?",
+                  "options": {
+                    "a": "Working overtime regularly",
+                    "b": "Ignoring personal time",
+                    "c": "Setting clear boundaries and prioritizing tasks",
+                    "d": "Focusing solely on work tasks"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                },
+                {
+                  "questionId": "q_backend_10",
+                  "area": "Backend Development",
+                  "question": "According to the CAP theorem, which two properties can a distributed system guarantee simultaneously?",
+                  "options": {
+                    "a": "Consistency and Partition Tolerance",
+                    "b": "Availability and Partition Tolerance",
+                    "c": "Scalability and Security",
+                    "d": "Consistency and Availability"
+                  },
+                  "point": 3,
+                  "difficultyLevel": "hard"
+                }
+              ],
+              "timeLimit": 7200,
+              "totalQuestions": 50
+            }
+          }
+  - name: Validation Error
+    request:
+      url: "{{BASE}}/assessment/generate?email=fawaz.abdganiyu+ta@tobamsgroup.com&uuid=TG-60XTA&category=Leadership&area=Backend%20Development"
+      method: GET
+      params:
+        - name: email
+          value: fawaz.abdganiyu+ta@tobamsgroup.com
+          type: query
+        - name: uuid
+          value: TG-60XTA
+          type: query
+        - name: category
+          value: Leadership
+          type: query
+        - name: area
+          value: Backend%20Development
+          type: query
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1776797373063-32bdkk3h2
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "687"
+        - name: etag
+          value: W/"2af-kp+MSViX8hI5uP7ZLAQthr6Xmbc"
+        - name: date
+          value: Tue, 21 Apr 2026 18:49:33 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "area: Area must be one of: Self-Awareness, Emotional Intelligence (EQ), Vision and Strategic Thinking, Decision-Making Ability, Communication Skills, Influence and Persuasion, Accountability and Ownership, Adaptability and Change Leadership, Problem-Solving and Critical Thinking, Team Leadership and Collaboration, Conflict Management, Time Management and Personal Effectiveness, Resilience and Mental Toughness, Integrity and Ethical Leadership, Initiative and Proactiveness, Coaching and Mentoring Ability, Cultural Awareness and Inclusion, Execution and Results Orientation, Learning Agility, Leadership Presence and Confidence"
           }
