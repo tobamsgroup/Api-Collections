@@ -22,7 +22,7 @@ http:
           "amount": 100,
           // "discountCode": "req.body.discountCode",
           // "programInterest": "req.body.programInterest,"
-          "assessmentRetry":  false, // default to false
+          "area":  "Backend Development",
           "userId": "68dece0eaf800636dbe2e5bd"
       }
   auth: inherit
