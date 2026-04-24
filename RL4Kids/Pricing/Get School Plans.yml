@@ -1,0 +1,149 @@
+info:
+  name: Get School Plans
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/pricing/school-plans"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/pricing/school-plans"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "1842"
+        - name: etag
+          value: W/"732-0W4cXh9izXsS1vI5lGG2pjpOrJ0"
+        - name: date
+          value: Fri, 24 Apr 2026 17:11:26 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "School plans fetched successfully",
+            "timestamp": "2026-04-24T17:11:26.965Z",
+            "path": "/api/v1/pricing/school-plans",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "id": "foundation_pilot",
+                "name": "Foundation Pilot School",
+                "description": "Best for Schools starting with RLK",
+                "features": [
+                  "9 RLK Books",
+                  "30 Workbooks",
+                  "3 Teacher Manuals",
+                  "Pilot Programme (4-6 weeks)",
+                  "1 Teacher Training Session",
+                  "RLK Participation Certificate"
+                ]
+              },
+              {
+                "id": "expansion_programme",
+                "name": "Expansion Programme School",
+                "description": "Best for Growing RLK adoption",
+                "features": [
+                  "18 RLK Books",
+                  "80 Workbooks",
+                  "6 Teacher Manuals",
+                  "Structured 8-10 week programme",
+                  "2 Teacher Training Sessions",
+                  "Book Club Launch",
+                  "Basic School Dashboard",
+                  "Pre-Certification Status"
+                ]
+              },
+              {
+                "id": "certified_school",
+                "name": "Certified School (Full Integration)",
+                "description": "Best for Full curriculum integration",
+                "features": [
+                  "Full 54 RLK Books",
+                  "150 Workbooks",
+                  "10 Teacher Manuals",
+                  "Advanced Teacher Training (3 Sessions)",
+                  "Full Curriculum Framework",
+                  "School Dashboard Access",
+                  "2-3 School Book Clubs",
+                  "Official RLK Certified School Status"
+                ],
+                "mostPopular": true
+              },
+              {
+                "id": "flagship_innovation",
+                "name": "Flagship Innovation School",
+                "description": "Best for Innovation-driven schools",
+                "features": [
+                  "Full RLK Library + Extra Classroom Sets",
+                  "300 Workbooks",
+                  "15 Teacher Manuals",
+                  "Advanced Teacher Certification Programme",
+                  "Innovation Programmes",
+                  "Full Dashboard",
+                  "Multi Book Clubs",
+                  "RLK Flagship School Recognition"
+                ]
+              },
+              {
+                "id": "centre_of_excellence",
+                "name": "Center of Excellence School",
+                "description": "Best for Leading institutions",
+                "features": [
+                  "Full RLK Curriculum Ecosystem",
+                  "500 Workbooks",
+                  "Multiple Classroom Sets of RLK Books",
+                  "RLK Educator Academy Training (5 Workshops)",
+                  "Innovation & Leadership Programmes",
+                  "Regional Book Club Hub Status",
+                  "RLK Centre of Excellence Recognition"
+                ]
+              }
+            ]
+          }
