@@ -36,8 +36,10 @@ http:
               "experienceLevel" : "Intermediate",
               "experienceYear" : "2-3 years"
           },
+          "howDidYouHearAboutUs": "",
           "newsletterStatus": false,
-          "referralCode": "AMB-0043"
+          "referralCode": "AMB-0043",
+        
       }
   auth: inherit
 
