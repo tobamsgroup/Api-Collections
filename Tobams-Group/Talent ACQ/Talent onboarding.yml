@@ -8,63 +8,37 @@ http:
   url: "{{BASE}}/onboard/talent"
   body:
     type: json
-    data: "{\r
-
-      \    \"fullName\" : \"Abdulrasaq Taofeeq\",\r
-
-      \    \"Contact\":{\r
-
-      \        \"telephone\" : \"+2347069786151\",\r
-
-      \        \"email\" : \"abdwe1782@gmail.com\"\r
-
-      \    },\r
-
-      \    \"location\" : {\r
-
-      \        \"country\" : \"Nigeria\",\r
-
-      \        \"state\" : \"Kwara\",\r
-
-      \        \"city\" : \"Ilorin\"\r
-
-      \    },  \r
-
-      \    \"institutionOfStudy\" : \"EKSU\",\r
-
-      \    \"degree\" : {\r
-
-      \        \"degreeType\" : \"Bachelor's Degree\",\r
-
-      \        \"areaOfStudy\" : \"Natural Sciences\",\r
-
-      \        \"discipline\" : \"chemistry\",\r
-
-      \        \"startDate\" : \"2016-09-11T14:21:30.000Z\",\r
-
-      \        \"endDate\" : \"2022-02-22T14:21:30.000Z\"\r
-
-      \    },\r
-
-      \    \"experience\" : {\r
-
-      \        \"employmentStatus\" : \"Employed\",\r
-
-      \        \"areaOfExpertise\" : \"Backend Development\",\r
-
-      \        \"otherAreaOfExpertise\":\"\",//if user expertise does not appear in the above, he should type it in\r
-
-      \        \"workExperience\" : \"Organization\",\r
-
-      \        \"experienceLevel\" : \"Intermediate\",\r
-
-      \        \"experienceYear\" : \"2-3 years\"\r
-
-      \    },\r
-
-      \    \"newsletterStatus\": false\r
-
-      }"
+    data: |-
+      {
+          "fullName" : "Fawaz Abdganiyu",
+          "Contact":{
+              "telephone" : "+2347069786151",
+              "email" : "abdwe1782@gmail.com"
+          },
+          "location" : {
+              "country" : "Nigeria",
+              "state" : "Kwara",
+              "city" : "Ilorin"
+          },  
+          "institutionOfStudy" : "EKSU",
+          "degree" : {
+              "degreeType" : "Bachelor's Degree",
+              "areaOfStudy" : "Natural Sciences",
+              "discipline" : "chemistry",
+              "startDate" : "2016-09-11T14:21:30.000Z",
+              "endDate" : "2022-02-22T14:21:30.000Z"
+          },
+          "experience" : {
+              "employmentStatus" : "Employed",
+              "areaOfExpertise" : "Backend Development",
+              "otherAreaOfExpertise":"",//if user expertise does not appear in the above, he should type it in
+              "workExperience" : "Organization",
+              "experienceLevel" : "Intermediate",
+              "experienceYear" : "2-3 years"
+          },
+          "newsletterStatus": false,
+          "referralCode": "AMB-0043"
+      }
   auth: inherit
 
 settings:
