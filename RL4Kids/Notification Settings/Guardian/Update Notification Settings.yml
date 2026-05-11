@@ -1,0 +1,77 @@
+info:
+  name: Update Notification Settings
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{base_url}}/notification-settings"
+  body:
+    type: json
+    data: |-
+      {
+          "accountVerified": { "inApp": false, "email": true },
+          "childProfileCreated": { "inApp": true, "email": false },
+          "newLearnerProfile": { "inApp": true, "email": false },
+          "preferencesSaved": { "inApp": false, "email": false },
+          "passwordChange": { "inApp": false, "email": false },
+          "childPinUpdate": { "inApp": false, "email": false },
+          "newDeviceLogin": { "inApp": false, "email": false },
+          "suspiciousLoginActivity": { "inApp": false, "email": false },
+          "weeklyLearningReport": { "inApp": false, "email": true },
+          "ideaWall": { "inApp": true, "email": false },
+          "submissionApproved": { "inApp": false, "email": false },
+          "policyTermsUpdate": { "inApp": false, "email": false }
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/notification-settings"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "accountVerified": { "inApp": false, "email": true },
+              "weeklyLearningReport": { "inApp": false, "email": true }
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Notification settings updated",
+              "data": {
+                  "_id": "6820a1b3c4d5e6f7a8b9c0d1",
+                  "guardianId": "681ddd3d0fafb09649480024",
+                  "accountVerified": { "inApp": false, "email": true },
+                  "childProfileCreated": { "inApp": true, "email": false },
+                  "newLearnerProfile": { "inApp": true, "email": false },
+                  "preferencesSaved": { "inApp": false, "email": false },
+                  "passwordChange": { "inApp": false, "email": false },
+                  "childPinUpdate": { "inApp": false, "email": false },
+                  "newDeviceLogin": { "inApp": false, "email": false },
+                  "suspiciousLoginActivity": { "inApp": false, "email": false },
+                  "weeklyLearningReport": { "inApp": false, "email": true },
+                  "ideaWall": { "inApp": true, "email": false },
+                  "submissionApproved": { "inApp": false, "email": false },
+                  "policyTermsUpdate": { "inApp": false, "email": false },
+                  "createdAt": "2025-05-11T10:00:00.000Z",
+                  "updatedAt": "2025-05-11T10:30:00.000Z"
+              }
+          }
