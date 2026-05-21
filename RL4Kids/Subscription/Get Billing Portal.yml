@@ -1,0 +1,74 @@
+info:
+  name: Get Billing Portal
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{base_url}}/subscription/portal"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/subscription/portal"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+        - name: date
+          value: Tue, 29 Apr 2026 10:00:00 GMT
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Portal session created",
+            "timestamp": "2026-04-29T10:00:00.000Z",
+            "path": "/api/v1/subscription/portal",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "url": "https://billing.stripe.com/session/bps_test_abc123"
+            }
+          }
+  - name: No Stripe customer (free plan)
+    request:
+      url: "{{base_url}}/subscription/portal"
+      method: GET
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+        - name: date
+          value: Tue, 29 Apr 2026 10:00:00 GMT
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-04-29T10:00:00.000Z",
+            "path": "/api/v1/subscription/portal",
+            "message": "No Stripe customer found for this user",
+            "error": "Bad Request",
+            "service": "RL4KIDS"
+          }

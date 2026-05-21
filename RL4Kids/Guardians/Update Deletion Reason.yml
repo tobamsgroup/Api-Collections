@@ -1,0 +1,89 @@
+info:
+  name: Update Deletion Reason
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{base_url}}/guardian/me/deletion-reason"
+  body:
+    type: json
+    data: |-
+      {
+        "reason": "The subscription is too expensive"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/guardian/me/deletion-reason"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "reason": "The subscription is too expensive"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+        - name: date
+          value: Tue, 29 Apr 2026 10:00:00 GMT
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Deletion reason saved.",
+            "timestamp": "2026-04-29T10:00:00.000Z",
+            "path": "/api/v1/guardian/me/deletion-reason",
+            "service": "RL4Kids",
+            "version": "1.0.0"
+          }
+  - name: Success (custom reason)
+    request:
+      url: "{{base_url}}/guardian/me/deletion-reason"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "reason": "My child doesn't use it enough"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+        - name: date
+          value: Tue, 29 Apr 2026 10:00:00 GMT
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Deletion reason saved.",
+            "timestamp": "2026-04-29T10:00:00.000Z",
+            "path": "/api/v1/guardian/me/deletion-reason",
+            "service": "RL4Kids",
+            "version": "1.0.0"
+          }

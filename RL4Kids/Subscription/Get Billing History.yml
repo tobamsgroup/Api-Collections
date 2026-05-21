@@ -1,0 +1,94 @@
+info:
+  name: Get Billing History
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/subscription/billing-history"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/subscription/billing-history"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+        - name: date
+          value: Tue, 29 Apr 2026 10:00:00 GMT
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Billing history fetched",
+            "timestamp": "2026-04-29T10:00:00.000Z",
+            "path": "/api/v1/subscription/billing-history",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "id": "in_abc123",
+                "planName": "Explorer",
+                "amount": 1399,
+                "currency": "gbp",
+                "status": "Paid",
+                "date": "2026-04-01T00:00:00.000Z",
+                "receiptUrl": "https://pay.stripe.com/receipts/abc123",
+                "pdfUrl": "https://pay.stripe.com/invoice/abc123/pdf"
+              },
+              {
+                "id": "in_def456",
+                "planName": "Explorer",
+                "amount": 1399,
+                "currency": "gbp",
+                "status": "Paid",
+                "date": "2026-03-01T00:00:00.000Z",
+                "receiptUrl": "https://pay.stripe.com/receipts/def456",
+                "pdfUrl": "https://pay.stripe.com/invoice/def456/pdf"
+              }
+            ]
+          }
+  - name: No billing history (free plan)
+    request:
+      url: "{{base_url}}/subscription/billing-history"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+        - name: date
+          value: Tue, 29 Apr 2026 10:00:00 GMT
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Billing history fetched",
+            "timestamp": "2026-04-29T10:00:00.000Z",
+            "path": "/api/v1/subscription/billing-history",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": []
+          }

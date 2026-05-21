@@ -1,0 +1,71 @@
+info:
+  name: Restore Account
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/guardian/restore-account"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/guardian/restore-account"
+      method: POST
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+        - name: date
+          value: Tue, 29 Apr 2026 10:00:00 GMT
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Account deletion cancelled. Your account has been restored.",
+            "timestamp": "2026-04-29T10:00:00.000Z",
+            "path": "/api/v1/guardian/restore-account",
+            "service": "RL4Kids",
+            "version": "1.0.0"
+          }
+  - name: Account not scheduled for deletion
+    request:
+      url: "{{base_url}}/guardian/restore-account"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+        - name: date
+          value: Tue, 29 Apr 2026 10:00:00 GMT
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-04-29T10:00:00.000Z",
+            "path": "/api/v1/guardian/restore-account",
+            "message": "Account is not scheduled for deletion",
+            "error": "Bad Request",
+            "service": "RL4Kids"
+          }

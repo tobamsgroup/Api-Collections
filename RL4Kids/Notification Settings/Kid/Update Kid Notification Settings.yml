@@ -1,0 +1,65 @@
+info:
+  name: Update Kid Notification Settings
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{base_url}}/kid-notification-settings"
+  body:
+    type: json
+    data: |-
+      {
+          "xpMilestoneReached": true,
+          "badgeUnlocked": true,
+          "levelUp": true,
+          "activityCompleted": false,
+          "streakReminder": true,
+          "newContentAvailable": false
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/kid-notification-settings"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "streakReminder": true,
+              "newContentAvailable": true
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "Notification settings updated",
+              "data": {
+                  "_id": "6820b2c4d5e6f7a8b9c0d2e3",
+                  "kidId": "681de6a22c2b02c83017105c",
+                  "xpMilestoneReached": true,
+                  "badgeUnlocked": true,
+                  "levelUp": true,
+                  "activityCompleted": false,
+                  "streakReminder": true,
+                  "newContentAvailable": true,
+                  "createdAt": "2025-05-11T10:00:00.000Z",
+                  "updatedAt": "2025-05-11T10:30:00.000Z"
+              }
+          }
