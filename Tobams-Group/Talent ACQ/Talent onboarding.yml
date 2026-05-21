@@ -13,7 +13,7 @@ http:
           "fullName" : "Fawaz Abdganiyu",
           "Contact":{
               "telephone" : "+2347069786151",
-              "email" : "abdwe1782@gmail.com"
+              "email" : "fawaz.abdganiyu@tobamsgroup.com"
           },
           "location" : {
               "country" : "Nigeria",
@@ -36,9 +36,9 @@ http:
               "experienceLevel" : "Intermediate",
               "experienceYear" : "2-3 years"
           },
-          "howDidYouHearAboutUs": "",
+          "howDidYouHearAboutUs": "Ambassador Referral",
           "newsletterStatus": false,
-          "referralCode": "AMB-0043",
+          "referralCode": "AMB-0001"
         
       }
   auth: inherit
