@@ -1,0 +1,21 @@
+info:
+  name: Configure Help a tech talent registration form activeness
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{BASE}}/config/help-a-tech-talent/registration"
+  body:
+    type: json
+    data: |-
+      {
+        "open": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
