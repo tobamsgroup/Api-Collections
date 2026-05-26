@@ -8,17 +8,17 @@ http:
   url: "{{base_url}}/waitlist"
   body:
     type: json
-    data: |
+    data: |-
       {
-        "firstName": "Amina",
-        "lastName": "Bello",
-        "email": "amina.bello@example.com",
-        "phoneNumber": "+2348012345678",
-        "country": "Nigeria",
-        "interestedIn": ["Play & Learn", "Teacher Dashboard"],
-        "bestOptionToDescribeWith": "Parent / Guardian",
-        "howDidYouHear": "Social Media",
-        "suggestions": "I'd love offline mode for kids with limited internet access.",
+        "firstName": "David",
+        "lastName": "Mensah",
+        "email": "david.mensah@example.com",
+        "country": "Kenya",
+        "interestedIn": ["Partnerships"],
+        "bestOptionToDescribeWith": "Organisation / Partner",
+        "organisationName": "EduReach Africa",
+        "partnershipInterest": "Content Partnership",
+        "howDidYouHear": "Search Engine",
         "agreeToReceiveUpdates": true
       }
   auth: inherit
@@ -30,7 +30,7 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Success
+  - name: Success (Other)
     request:
       url: "{{base_url}}/waitlist"
       method: POST
@@ -44,7 +44,7 @@ examples:
             "phoneNumber": "+2348012345678",
             "country": "Nigeria",
             "interestedIn": ["Play & Learn", "Teacher Dashboard"],
-            "bestOptionToDescribeWith": "Parent / Guardian",
+            "bestOptionToDescribeWith": "Other",
             "howDidYouHear": "Social Media",
             "suggestions": "I'd love offline mode for kids with limited internet access.",
             "agreeToReceiveUpdates": true
@@ -111,7 +111,7 @@ examples:
                 "Play & Learn",
                 "Teacher Dashboard"
               ],
-              "bestOptionToDescribeWith": "Parent / Guardian",
+              "bestOptionToDescribeWith": "Other",
               "howDidYouHear": "Social Media",
               "suggestions": "I'd love offline mode for kids with limited internet access.",
               "agreeToReceiveUpdates": true,
@@ -119,5 +119,378 @@ examples:
               "_id": "6a0eaf5ab16f990340f73055",
               "createdAt": "2026-05-21T07:08:10.838Z",
               "updatedAt": "2026-05-21T07:08:10.838Z"
+            }
+          }
+  - name: Success (Parent / Guardian)
+    request:
+      url: "{{base_url}}/waitlist"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "firstName": "Amina",
+            "lastName": "Bello",
+            "email": "amina.bello@example.com",
+            "phoneNumber": "+2348012345678",
+            "country": "Nigeria",
+            "interestedIn": ["Play & Learn"],
+            "bestOptionToDescribeWith": "Parent / Guardian",
+            "numberOfChildren": "3",
+            "childAgeRange": ["4 - 6", "7 - 10"],
+            "howDidYouHear": "Social Media",
+            "agreeToReceiveUpdates": true
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "703"
+        - name: etag
+          value: W/"2bf-vw1kYyvPVLxv4kjTeX7T9RqXuMM"
+        - name: date
+          value: Tue, 26 May 2026 04:28:32 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 201,
+            "message": "Successfully joined the waitlist",
+            "timestamp": "2026-05-26T04:28:31.855Z",
+            "path": "/api/v1/waitlist",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "_id": "6a0eaf5ab16f990340f73055",
+              "firstName": "Amina",
+              "lastName": "Bello",
+              "email": "amina.bello@example.com",
+              "phoneNumber": "+2348012345678",
+              "country": "Nigeria",
+              "interestedIn": [
+                "Play & Learn"
+              ],
+              "bestOptionToDescribeWith": "Parent / Guardian",
+              "howDidYouHear": "Social Media",
+              "suggestions": "I'd love offline mode for kids with limited internet access.",
+              "agreeToReceiveUpdates": true,
+              "status": "pending",
+              "createdAt": "2026-05-21T07:08:10.838Z",
+              "updatedAt": "2026-05-26T04:28:32.865Z",
+              "childAgeRange": [
+                "4 - 6",
+                "7 - 10"
+              ],
+              "numberOfChildren": "3"
+            }
+          }
+  - name: Success (Teacher)
+    request:
+      url: "{{base_url}}/waitlist"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "firstName": "James",
+            "lastName": "Okafor",
+            "email": "james.okafor@example.com",
+            "country": "Ghana",
+            "interestedIn": ["Teacher Dashboard"],
+            "bestOptionToDescribeWith": "Teacher",
+            "schoolOrganisationName": "Accra International School",
+            "countryOfOrganisation": "Ghana",
+            "numberOfStudents": "50 - 200",
+            "howDidYouHear": "School / Teacher Referral",
+            "agreeToReceiveUpdates": false
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "681"
+        - name: etag
+          value: W/"2a9-TgOutm3NQd4tjFLhe4tHXiIFyVk"
+        - name: date
+          value: Tue, 26 May 2026 04:29:36 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 201,
+            "message": "Successfully joined the waitlist",
+            "timestamp": "2026-05-26T04:29:35.795Z",
+            "path": "/api/v1/waitlist",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "firstName": "James",
+              "lastName": "Okafor",
+              "email": "james.okafor@example.com",
+              "country": "Ghana",
+              "interestedIn": [
+                "Teacher Dashboard"
+              ],
+              "bestOptionToDescribeWith": "Teacher",
+              "childAgeRange": [],
+              "schoolOrganisationName": "Accra International School",
+              "countryOfOrganisation": "Ghana",
+              "numberOfStudents": "50 - 200",
+              "howDidYouHear": "School / Teacher Referral",
+              "agreeToReceiveUpdates": false,
+              "status": "pending",
+              "_id": "6a1521b074afe38f4901b7d4",
+              "createdAt": "2026-05-26T04:29:36.325Z",
+              "updatedAt": "2026-05-26T04:29:36.325Z"
+            }
+          }
+  - name: Success (School Administrator)
+    request:
+      url: "{{base_url}}/waitlist"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "firstName": "Ngozi",
+            "lastName": "Eze",
+            "email": "ngozi.eze@example.com",
+            "country": "Nigeria",
+            "interestedIn": ["School Dashboard"],
+            "bestOptionToDescribeWith": "School Administrator",
+            "schoolOrganisationName": "Sunrise Academy",
+            "countryOfOrganisation": "Nigeria",
+            "approximateStudentPopulation": "500 - 1000",
+            "howDidYouHear": "Event / Webinar",
+            "agreeToReceiveUpdates": true
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "683"
+        - name: etag
+          value: W/"2ab-AOon3kiH3H6V189n9hAfyxvkF6o"
+        - name: date
+          value: Tue, 26 May 2026 04:30:30 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 201,
+            "message": "Successfully joined the waitlist",
+            "timestamp": "2026-05-26T04:30:28.873Z",
+            "path": "/api/v1/waitlist",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "firstName": "Ngozi",
+              "lastName": "Eze",
+              "email": "ngozi.eze@example.com",
+              "country": "Nigeria",
+              "interestedIn": [
+                "School Dashboard"
+              ],
+              "bestOptionToDescribeWith": "School Administrator",
+              "childAgeRange": [],
+              "schoolOrganisationName": "Sunrise Academy",
+              "countryOfOrganisation": "Nigeria",
+              "approximateStudentPopulation": "500 - 1000",
+              "howDidYouHear": "Event / Webinar",
+              "agreeToReceiveUpdates": true,
+              "status": "pending",
+              "_id": "6a1521e574afe38f4901b7d9",
+              "createdAt": "2026-05-26T04:30:29.896Z",
+              "updatedAt": "2026-05-26T04:30:29.896Z"
+            }
+          }
+  - name: Success (Organisation / Partner)
+    request:
+      url: "{{base_url}}/waitlist"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "firstName": "David",
+            "lastName": "Mensah",
+            "email": "david.mensah@example.com",
+            "country": "Kenya",
+            "interestedIn": ["Partnerships"],
+            "bestOptionToDescribeWith": "Organisation / Partner",
+            "organisationName": "EduReach Africa",
+            "partnershipInterest": "Content Partnership",
+            "howDidYouHear": "Search Engine",
+            "agreeToReceiveUpdates": true
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "643"
+        - name: etag
+          value: W/"283-CmSnU51uyI4DKV2Arv/hOABLYE4"
+        - name: date
+          value: Tue, 26 May 2026 04:31:49 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 201,
+            "message": "Successfully joined the waitlist",
+            "timestamp": "2026-05-26T04:31:49.763Z",
+            "path": "/api/v1/waitlist",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "firstName": "David",
+              "lastName": "Mensah",
+              "email": "david.mensah@example.com",
+              "country": "Kenya",
+              "interestedIn": [
+                "Partnerships"
+              ],
+              "bestOptionToDescribeWith": "Organisation / Partner",
+              "childAgeRange": [],
+              "organisationName": "EduReach Africa",
+              "partnershipInterest": "Content Partnership",
+              "howDidYouHear": "Search Engine",
+              "agreeToReceiveUpdates": true,
+              "status": "pending",
+              "_id": "6a15223574afe38f4901b7de",
+              "createdAt": "2026-05-26T04:31:49.834Z",
+              "updatedAt": "2026-05-26T04:31:49.834Z"
             }
           }
