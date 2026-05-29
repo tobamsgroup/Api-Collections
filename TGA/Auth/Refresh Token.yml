@@ -1,0 +1,41 @@
+info:
+  name: Refresh Token
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/refresh"
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{refresh_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Issues a new access token and refresh token using a valid refresh token.
+
+    **Auth:** Pass the refresh token as `Authorization: Bearer <refresh_token>`.
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "message": "Tokens refreshed",
+      "data": {
+        "accessToken": "<new_jwt>",
+        "refreshToken": "<new_jwt>"
+      }
+    }
+    ```
+
+    **Errors:**
+    - `401` — Refresh token missing, invalid, or expired.
+  type: text/markdown

@@ -1,0 +1,50 @@
+info:
+  name: Delete Notifications
+  type: http
+  seq: 2
+
+http:
+  method: DELETE
+  url: "{{BASE}}/notifications"
+  body:
+    type: json
+    data: |-
+      {
+        "ids": ["uuid-1", "uuid-2"]
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Deletes one or more notifications belonging to the authenticated user.
+
+    **Auth:** Bearer token required.
+
+    **Body fields:**
+    | Field | Type | Required | Notes |
+    |-------|------|----------|-------|
+    | ids | string[] | Yes | Non-empty array of notification UUIDs |
+
+    Notifications that don't belong to the authenticated user are silently ignored.
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "message": "2 notifications deleted",
+      "data": { "deleted": 2 }
+    }
+    ```
+
+    **Errors:**
+    - `400` — `ids` missing, empty, or contains non-string values.
+    - `401` — Unauthorized.
+  type: text/markdown

@@ -1,0 +1,45 @@
+info:
+  name: Update Profile
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/users/me"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "John Updated",
+        "phone": "+2348012345678",
+        "bio": "Software developer and lifelong learner.",
+        "avatarUrl": "https://example.com/avatar.jpg"
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Updates the authenticated user's profile. Only include fields you want to change. Sending `null` for `phone`, `bio`, or `avatarUrl` clears that field.
+
+    **Auth:** Bearer token required.
+
+    **Body fields (all optional):**
+    | Field | Type | Notes |
+    |-------|------|-------|
+    | name | string | Must be non-empty if provided |
+    | phone | string \| null | Pass null to clear |
+    | bio | string \| null | Pass null to clear |
+    | avatarUrl | string \| null | Pass null to clear |
+
+    **Errors:**
+    - `400` — Invalid field value or no fields provided.
+    - `401` — Unauthorized.
+  type: text/markdown

@@ -1,0 +1,42 @@
+info:
+  name: Mark All Read
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{BASE}}/notifications/mark-all-read"
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Marks all unread notifications as read for the authenticated user.
+
+    **Auth:** Bearer token required.
+
+    **No body required.**
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "message": "5 notifications marked as read",
+      "data": { "updated": 5 }
+    }
+    ```
+
+    If there are no unread notifications, `updated` will be `0`.
+
+    **Errors:**
+    - `401` — Unauthorized.
+  type: text/markdown

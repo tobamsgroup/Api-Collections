@@ -1,0 +1,48 @@
+info:
+  name: Get Featured Courses
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/courses/featured"
+  body:
+    type: none
+  auth:
+    type: none
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Returns up to 6 featured published courses, ordered by most recently created.
+
+    **No parameters required.**
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "data": [
+        {
+          "id": "uuid",
+          "title": "Course Title",
+          "slug": "course-title",
+          "description": "...",
+          "thumbnail": "https://...",
+          "level": "BEGINNER",
+          "price": "49.99",
+          "isFeatured": true,
+          "createdAt": "2024-01-01T00:00:00.000Z",
+          "category": { "id": "uuid", "name": "Web Dev", "slug": "web-dev" },
+          "instructor": { "id": "uuid", "name": "Jane Smith" },
+          "_count": { "modules": 5 }
+        }
+      ]
+    }
+    ```
+  type: text/markdown
