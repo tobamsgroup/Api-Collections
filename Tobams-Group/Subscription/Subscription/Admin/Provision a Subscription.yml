@@ -1,0 +1,23 @@
+info:
+  name: Provision a Subscription
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{BASE}}/subscriptions/admin/provision"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "awwalmuhammedbello@gmail.com",
+        "planName": "Premium",
+        "duration": "3mo"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

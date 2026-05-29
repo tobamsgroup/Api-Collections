@@ -8,29 +8,19 @@ http:
   url: "{{BASE}}/selected-ambassador/register"
   body:
     type: json
-    data: "{\r
-
-      \    \"email\": \"codedsinger@gmail.com\",\r
-
-      \    \"telephone\": \"+2349161726678\",\r
-
-      \    \"nameOfUniversity\": \"eksu\",\r
-
-      \    \"incentivesModel\": \"model_1\",\r
-
-      \    \"currentLevel\": \"400 level\",\r
-
-      \    \"courseOfChoice\": \"sustaiinability\",\r
-
-      \    \"BankName\": \"Opay\",\r
-
-      \    \"AccountNumber\": 91617266789,\r
-
-      \    \"AccountHoldersName\": \"Boluwatife Daramola\",\r
-
-      \    \"consentStatus\": true\r
-
-      \ }\r\n"
+    data: |
+      {
+          "email": "fawazabdganiyu@gmail.com",
+          "telephone": "+2349161726678",
+          "nameOfUniversity": "eksu",
+          "incentivesModel": "model_1",
+          "currentLevel": "400 level",
+          "courseOfChoice": "sustaiinability",
+          "BankName": "Opay",
+          "AccountNumber": 91617266789,
+          "AccountHoldersName": "Boluwatife Daramola",
+          "consentStatus": true
+       }
   auth: inherit
 
 settings:

@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/ambassador/view/all"
+  url: "{{BASE}}/ambassador/view/all?key={{DIGEST_KEY}}"
+  params:
+    - name: key
+      value: "{{DIGEST_KEY}}"
+      type: query
   body:
     type: json
     data: "{\r

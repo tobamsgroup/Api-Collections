@@ -1,0 +1,4 @@
+name: TG-Staging
+variables:
+  - name: BASE
+    value: https://tobams-group-be-development.onrender.com/api/v1
