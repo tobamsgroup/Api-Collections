@@ -1,0 +1,58 @@
+info:
+  name: Get Notifications
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/notifications"
+  params:
+    - name: filter
+      value: "all"
+      enabled: true
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Returns the authenticated user's notifications, ordered newest first.
+
+    **Auth:** Bearer token required.
+
+    **Query parameters:**
+    | Param | Type | Default | Values |
+    |-------|------|---------|--------|
+    | filter | string | `all` | `all`, `read`, `unread` |
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "data": [
+        {
+          "id": "uuid",
+          "title": "Course enrolled",
+          "message": "You have been enrolled in Introduction to TypeScript.",
+          "type": "ENROLLMENT",
+          "isRead": false,
+          "createdAt": "2024-01-01T00:00:00.000Z"
+        }
+      ]
+    }
+    ```
+
+    **Notification types:** `COURSE_UPDATE`, `ENROLLMENT`, `PAYMENT`, `SYSTEM`, `ANNOUNCEMENT`
+
+    **Errors:**
+    - `400` — Invalid filter value.
+    - `401` — Unauthorized.
+  type: text/markdown

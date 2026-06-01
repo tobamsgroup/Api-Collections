@@ -1,0 +1,61 @@
+info:
+  name: Get Courses
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/courses"
+  params:
+    - name: page
+      value: "1"
+      enabled: true
+    - name: limit
+      value: "12"
+      enabled: true
+    - name: search
+      value: ""
+      enabled: false
+    - name: categoryId
+      value: ""
+      enabled: false
+  body:
+    type: none
+  auth:
+    type: none
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Returns a paginated list of published courses. Supports search and category filtering.
+
+    **Query parameters:**
+    | Param | Type | Default | Notes |
+    |-------|------|---------|-------|
+    | page | number | 1 | Page number |
+    | limit | number | 12 | Items per page (max 50) |
+    | search | string | — | Full-text search on title and description |
+    | categoryId | string | — | Filter by category UUID |
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "message": "Success",
+      "data": [...],
+      "meta": {
+        "total": 100,
+        "page": 1,
+        "limit": 12,
+        "totalPages": 9
+      }
+    }
+    ```
+
+    Each course object includes: `id`, `title`, `slug`, `description`, `thumbnail`, `level`, `price`, `isFeatured`, `createdAt`, `category`, `instructor`, `_count.modules`.
+  type: text/markdown

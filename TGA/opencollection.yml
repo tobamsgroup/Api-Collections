@@ -1,0 +1,44 @@
+opencollection: 1.0.0
+
+info:
+  name: TGA
+
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: BASE
+      value: http://localhost:3000/api/v1
+    - name: access_token
+      value: ""
+    - name: refresh_token
+      value: ""
+
+docs:
+  content: |
+    # Tobams Academy API
+
+    REST API for the Tobams Academy (TGA) platform — a learning management system supporting learner registration, authentication, course browsing, and notifications.
+
+    **Base URL:** `{{BASE}}`
+
+    **Auth:** Bearer token. Include `Authorization: Bearer {{access_token}}` on protected routes.
+  type: text/markdown
+
+bundled: false
+
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

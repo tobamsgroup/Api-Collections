@@ -1,0 +1,59 @@
+info:
+  name: Update Social Links
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{BASE}}/users/me/social-links"
+  body:
+    type: json
+    data: |-
+      {
+        "linkedinUrl": "https://linkedin.com/in/johndoe",
+        "facebookUrl": "https://facebook.com/johndoe",
+        "instagramUrl": "https://instagram.com/johndoe",
+        "xUrl": "https://x.com/johndoe"
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Updates the authenticated user's social media links. Include only the fields you want to change. Pass `null` to clear a specific link.
+
+    **Auth:** Bearer token required.
+
+    **Body fields (all optional):**
+    | Field | Type | Notes |
+    |-------|------|-------|
+    | linkedinUrl | string \| null | LinkedIn profile URL |
+    | facebookUrl | string \| null | Facebook profile URL |
+    | instagramUrl | string \| null | Instagram profile URL |
+    | xUrl | string \| null | X (Twitter) profile URL |
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "message": "Social links updated",
+      "data": {
+        "linkedinUrl": "https://linkedin.com/in/johndoe",
+        "facebookUrl": "https://facebook.com/johndoe",
+        "instagramUrl": "https://instagram.com/johndoe",
+        "xUrl": "https://x.com/johndoe"
+      }
+    }
+    ```
+
+    **Errors:**
+    - `400` — Invalid field type or no social link fields provided.
+    - `401` — Unauthorized.
+  type: text/markdown
