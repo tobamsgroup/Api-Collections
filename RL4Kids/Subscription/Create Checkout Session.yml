@@ -1,3 +1,5 @@
+request:
+  auth: inherit
 info:
   name: Create Checkout Session
   type: http
@@ -10,7 +12,8 @@ http:
     type: json
     data: |-
       {
-        "planId": "explorer"
+        "kidId": "{{kid_id}}",
+        "planId": "starter"
       }
   auth: inherit
 
@@ -21,7 +24,7 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Success
+  - name: New subscription (returns checkout URL)
     request:
       url: "{{base_url}}/subscription/checkout"
       method: POST
@@ -29,6 +32,40 @@ examples:
         type: json
         data: |-
           {
+            "kidId": "6a1dfcea1f9dff5f43f873c6",
+            "planId": "starter"
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 201,
+            "message": "Checkout session created",
+            "timestamp": "2026-06-03T10:00:00.000Z",
+            "path": "/api/v1/subscription/checkout",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "url": "https://checkout.stripe.com/pay/cs_test_abc123"
+            }
+          }
+  - name: Existing subscription (plan changed directly, no checkout needed)
+    request:
+      url: "{{base_url}}/subscription/checkout"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "kidId": "6a1dfcea1f9dff5f43f873c6",
             "planId": "explorer"
           }
     response:
@@ -39,23 +76,49 @@ examples:
           value: application/json; charset=utf-8
         - name: access-control-allow-origin
           value: "*"
-        - name: date
-          value: Tue, 29 Apr 2026 10:00:00 GMT
-        - name: connection
-          value: keep-alive
       body:
         type: json
         data: |-
           {
             "statusCode": 201,
             "message": "Checkout session created",
-            "timestamp": "2026-04-29T10:00:00.000Z",
+            "timestamp": "2026-06-03T10:00:00.000Z",
             "path": "/api/v1/subscription/checkout",
             "service": "RL4KIDS",
             "version": "1.0.0",
             "data": {
-              "url": "https://checkout.stripe.com/pay/cs_test_abc123"
+              "upgraded": true
             }
+          }
+  - name: Kid not found or does not belong to guardian
+    request:
+      url: "{{base_url}}/subscription/checkout"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "kidId": "000000000000000000000000",
+            "planId": "starter"
+          }
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 404,
+            "timestamp": "2026-06-03T10:00:00.000Z",
+            "path": "/api/v1/subscription/checkout",
+            "message": "Child profile not found or does not belong to this account.",
+            "error": "Not Found",
+            "service": "RL4KIDS"
           }
   - name: Invalid plan ID
     request:
@@ -65,6 +128,7 @@ examples:
         type: json
         data: |-
           {
+            "kidId": "6a1dfcea1f9dff5f43f873c6",
             "planId": "invalid_plan"
           }
     response:
@@ -75,16 +139,12 @@ examples:
           value: application/json; charset=utf-8
         - name: access-control-allow-origin
           value: "*"
-        - name: date
-          value: Tue, 29 Apr 2026 10:00:00 GMT
-        - name: connection
-          value: keep-alive
       body:
         type: json
         data: |-
           {
             "statusCode": 400,
-            "timestamp": "2026-04-29T10:00:00.000Z",
+            "timestamp": "2026-06-03T10:00:00.000Z",
             "path": "/api/v1/subscription/checkout",
             "message": ["planId must be a valid enum value"],
             "error": "Bad Request",
