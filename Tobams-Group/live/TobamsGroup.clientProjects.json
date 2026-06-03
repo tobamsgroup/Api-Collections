@@ -1,0 +1,263 @@
+[{
+  "_id": {
+    "$oid": "66b9b24aae52ce617b076ba1"
+  },
+  "firstName": "Reuben",
+  "lastName": "Simeon",
+  "company": "Reuben Simeon",
+  "country": "Nigeria",
+  "email": "simeonreuben6@gmail.com",
+  "telephone": "09047274304",
+  "projectStack": [
+    "Tech Talent Solutions",
+    "Training and Development",
+    "Strategy Planning and Implementation",
+    "Social Impact"
+  ],
+  "description": "Needs:*\n- Information: seeking knowledge or data on a specific topic\n- Guidance: requiring advice or direction on a particular issue\n- Support: needing help or assistance with a challenge or problem\n- Clarification: seeking clear understanding or explanation of a concept\n- Solution: looking for a answer or resolution to a specific question or issue\n\n*Questions:*\n- Open-ended: seeking detailed information or explanation (e.g., \"What are the benefits of...?\")\n- Closed-ended: seeking a specific, concise answer (e.g., \"Is... true or false?\")\n- Procedural: asking for steps or processes to achieve a goal (e.g., \"How do I...?\")\n- Comparative: seeking comparisons or contrasts between options (e.g., \"What's the difference between...?\")\n- Analytical: seeking deeper understanding or analysis of a topic (e.g., \"Why does... happen?\")",
+  "createdAt": {
+    "$date": "2024-08-12T06:57:14.677Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-12T06:57:14.677Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66fd31f9b870f7844d260a09"
+  },
+  "firstName": "Rodiyyah",
+  "lastName": "Abudu",
+  "company": "Adeleke university ",
+  "country": "Nigeria",
+  "email": "Rodiyahabudu@gmail.com",
+  "telephone": "09058241265",
+  "projectStack": [
+    "Social Impact"
+  ],
+  "description": "I’m abudu Rodiyyah , a student in Adeleke university, ede, osun state.\nI attended an interview and it was stated that the organization went to a university in osun state for a social impact.\nI am requesting for tobams group organization to come to Adeleke university",
+  "createdAt": {
+    "$date": "2024-10-02T11:43:53.140Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-02T11:43:53.140Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "674ecb93d5147b7175b860e0"
+  },
+  "firstName": "Andy",
+  "lastName": "Nkeki",
+  "company": "pre.dev",
+  "country": "United States of America",
+  "email": "andy@pre.dev",
+  "telephone": "5513132021",
+  "projectStack": [
+    "Tech Talent Solutions"
+  ],
+  "description": "We at  http://pre.dev  would like to refer clients to your agency.\nClients come to our site and chat with our AI that instantly generates a project plan that details how the project will be built.\nThis has significantly decreased the time it takes to onboard these clients. Given this load, we are now referring clients to agencies like yours.\nTo learn more check out - https://pre.dev/dev-agency.\nIf you’d like to be referred clients and/or use our onboarding interface, we’d love to chat.\n",
+  "createdAt": {
+    "$date": "2024-12-03T09:12:51.396Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-03T09:12:51.396Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67723e82fcb7634fce7f4881"
+  },
+  "firstName": "Favour",
+  "lastName": "Urewuchi",
+  "company": "Nil",
+  "country": "Nigeria",
+  "email": "Urewuchif@gmail.com",
+  "telephone": "+2347037694316",
+  "projectStack": [
+    "Tech Talent Solutions",
+    "Strategy Planning and Implementation",
+    "Training and Development"
+  ],
+  "description": "How may I proceee?\nWill the procedure cost me money ?",
+  "createdAt": {
+    "$date": "2024-12-30T06:32:34.016Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-30T06:32:34.016Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f0cadbc2324c0dfcf55654"
+  },
+  "firstName": "Oluwatobi",
+  "lastName": "Ilawole",
+  "company": "Toscarry",
+  "country": "Nigeria",
+  "email": "ilawoletobos@gmail.com",
+  "telephone": "2348116769670",
+  "projectStack": [
+    "Tech Talent Solutions",
+    "Training and Development"
+  ],
+  "description": "My name is Oluwatobi Ilawole; I am a dedicated product designer and a proficient framer expert with a BSc background in microbiology. My journey as a product designer started with a deep, profound interest in problem-solving and curiosity concerning how technology influences human interaction. Throughout my career, I have collaborated with various clients and teams, refining my ability to understand user needs and transform them into exceptional designs. I have dedicated numerous years to creating digital experiences that are not only aesthetically pleasing but also functional and intuitive. My design approach emphasizes understanding user needs and addressing complex challenges with creative, user-centric solutions.\n\nWhat excites me most about product design is the opportunity to create meaningful interactions that enhance the way people engage with technology. \n\nWhat distinguishes me as a designer is my ability to seamlessly integrate creativity, analytical thinking, technical proficiency, and leadership experience. As a designer, I don't just design beautiful interfaces; I develop solutions that address real-world challenges while providing outstanding user experiences. My experience with no-code tools like Framer allows me to bring concepts to life faster, making the development process efficient and collaborative. My ability to collaborate effectively and my commitment to continuous learning make me a valuable asset to any team.\n",
+  "createdAt": {
+    "$date": "2025-04-05T06:16:59.174Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-05T06:16:59.174Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6878026496f7feb4a66cbf79"
+  },
+  "firstName": "Johnson ",
+  "lastName": "Adediji ",
+  "company": "Bisedge Limited ",
+  "country": "Nigeria",
+  "email": "johnson.adediji@bisedge.net",
+  "telephone": "08068716183",
+  "projectStack": [
+    "Tech Talent Solutions"
+  ],
+  "description": "Project management apprenticeship ",
+  "createdAt": {
+    "$date": "2025-07-16T19:49:56.491Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-16T19:49:56.491Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69206427786d845942869072"
+  },
+  "firstName": "Omotolani",
+  "lastName": "Adeboye",
+  "company": "Student/Employed",
+  "country": "Nigeria",
+  "email": "adeboyeomotolanii4@gmail.com",
+  "telephone": "09068038466",
+  "projectStack": [
+    "Training and Development"
+  ],
+  "description": "My name is Omotolani Adeboye , a 200-level Software Engineering student at MIVA Open University, Nigeria. I am writing to express my interest in undertaking my SIWES program at Tobams Group. I am eager to gain practical experience, develop industry-relevant skills, and contribute meaningfully to your organization’s ongoing projects.\n\nI would be grateful for the opportunity to learn under your team and further strengthen my technical and professional capabilities.\n\nThank you for considering my request. I look forward to your positive response.",
+  "createdAt": {
+    "$date": "2025-11-21T13:07:51.263Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-21T13:07:51.263Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "699d93c64664ea526d618b26"
+  },
+  "firstName": "Ikechukwu",
+  "lastName": "Nnadi",
+  "company": "FICO",
+  "country": "Nigeria",
+  "email": "ikechukwunnadi197@gmail.com",
+  "telephone": "09167738554",
+  "projectStack": [
+    "Training and Development"
+  ],
+  "description": "MY NAME IS NNADI IKECHUKWU MIRACLE AND AM A STUDENT OF YABA COLLEGE OF TECHNOLOGY\nI REALLY WISH TO STUDY PRODUCT DESIGN FROM UR ESTABLISHMENT\nAND I BELIEVE THAT BEING ACCEPTED TO UR ESTABLISHMENT WILL ENABLE ME TO STUDY MY DREAMS AND ASPIRATIONS \nTHANK YOU.",
+  "createdAt": {
+    "$date": "2026-02-24T12:04:22.408Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-24T12:04:22.408Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a3340da223fc68955af667"
+  },
+  "firstName": "Aishat",
+  "lastName": "Olatunji ",
+  "company": "Zuri&Co.",
+  "country": "Nigeria",
+  "email": "Haryoola111@gmail.com",
+  "telephone": "08150766042",
+  "projectStack": [
+    "Training and Development"
+  ],
+  "description": "Enquiry about open internship position for a product designer ",
+  "createdAt": {
+    "$date": "2026-02-28T18:29:33.447Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-28T18:29:33.447Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b7e0480bfe312f08dfda87"
+  },
+  "firstName": "Awwal",
+  "lastName": "Bello",
+  "company": "Tobams Group",
+  "country": "Nigeria",
+  "email": "awwal.bello@tobamsgroup.com",
+  "telephone": "08065262763",
+  "projectStack": [
+    "IT Consulting Services",
+    "Sustainability Services"
+  ],
+  "description": "GGG",
+  "createdAt": {
+    "$date": "2026-03-16T10:49:44.151Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T10:49:44.151Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d35727dba4f810e6375cd3"
+  },
+  "firstName": "Awwal",
+  "lastName": "Bello",
+  "company": "Awwal PLC",
+  "country": "Nigeria",
+  "email": "awwal.bello@tobamsgroup.com",
+  "telephone": "08065262763",
+  "projectStack": [
+    "IT Consulting Services",
+    "Sustainability Services"
+  ],
+  "description": "I need support",
+  "createdAt": {
+    "$date": "2026-04-06T06:48:07.029Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T06:48:07.029Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69f718a6b240ec4c89b9789e"
+  },
+  "firstName": "PRINCE",
+  "lastName": "MLENJYA",
+  "company": "PRINCE",
+  "country": "Kenya",
+  "email": "princemlenja199@gmail.com",
+  "telephone": "0717349910",
+  "projectStack": [
+    "Social Impact",
+    "Training and Development",
+    "Tech Talent Solutions",
+    "Sustainability Services"
+  ],
+  "description": "I am from kenya kakuma refugee camp and I would like to have more information",
+  "createdAt": {
+    "$date": "2026-05-03T09:43:02.276Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-03T09:43:02.276Z"
+  }
+}]

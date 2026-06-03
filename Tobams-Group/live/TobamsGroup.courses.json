@@ -1,0 +1,488 @@
+[{
+  "_id": {
+    "$oid": "67b66ea75027c21607116423"
+  },
+  "name": "Project Management",
+  "description": "Campana attonbitus impedit suggero sponte.",
+  "category": "Strategic Planning",
+  "price": "334.09",
+  "enrolled": 29,
+  "status": "Published",
+  "imageUrl": "https://fantastic-term.com",
+  "courseUrl": "https://milky-dress.org",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.218Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.218Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116424"
+  },
+  "name": "QA Engineer",
+  "description": "Utilis demergo deficio denego quia defaeco universe quibusdam.",
+  "category": "Data Visualization",
+  "price": "706.25",
+  "enrolled": 15,
+  "status": "Published",
+  "imageUrl": "https://breakable-cow.name",
+  "courseUrl": "https://busy-begonia.org/",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.218Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.218Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116428"
+  },
+  "name": "Product Marketing",
+  "description": "Apostolus thema ullam depulso victoria.",
+  "category": "Data Visualization",
+  "price": "622.51",
+  "enrolled": 4,
+  "status": "Published",
+  "imageUrl": "https://jagged-innovation.info",
+  "courseUrl": "https://serpentine-making.biz",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c2160711642b"
+  },
+  "name": "Brand/Identity Design",
+  "description": "Summopere pectus conforto canis ulciscor amicitia alii enim delectus.",
+  "category": "Strategic Planning",
+  "price": "449.35",
+  "enrolled": 45,
+  "status": "Published",
+  "imageUrl": "https://unsung-hunger.net",
+  "courseUrl": "https://icy-polyester.org/",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c2160711642c"
+  },
+  "name": "AI/ML Engineering",
+  "description": "Earum aut cilicium tolero debeo audio.",
+  "category": "Public Speaking",
+  "price": "582.69",
+  "enrolled": 18,
+  "status": "Published",
+  "imageUrl": "https://linear-flame.net",
+  "courseUrl": "https://faint-best-seller.biz/",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b466c712d17519439447a2"
+  },
+  "name": "Development and Enginnering Course",
+  "description": "This is a category for Frontend, Backend, Software Developers or Engineering working in the development",
+  "category": "Development and Technology",
+  "price": "200",
+  "status": "active",
+  "imageUrl": "https://www.gavi.org/sites/default/files/about/global-health/sdgs-rec.png",
+  "courseUrl": "https://www.tobamsgroupacademy.com/course?courseid=product-development-and-innovation",
+  "createdAt": {
+    "$date": "2025-02-18T10:53:59.090Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T10:53:59.090Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c2160711642a"
+  },
+  "name": "Project Management",
+  "description": "Vociferor umerus accendo cornu sordeo voluptatem spiculum.",
+  "category": "Strategic Planning",
+  "price": "722.00",
+  "enrolled": 13,
+  "status": "Published",
+  "imageUrl": "https://experienced-synergy.biz",
+  "courseUrl": "https://sociable-cook.name",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c2160711642d"
+  },
+  "name": "UI/UX Design",
+  "description": "Theologus tero stillicidium cinis.",
+  "category": "Strategic Planning",
+  "price": "830.52",
+  "enrolled": 27,
+  "status": "Published",
+  "imageUrl": "https://grounded-tail.net/",
+  "courseUrl": "https://violent-corral.com",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116436"
+  },
+  "name": "UX Testing",
+  "description": "Venio amitto tenetur voro copiose nesciunt volup cernuus.",
+  "category": "Strategic Planning",
+  "price": "842.19",
+  "enrolled": 15,
+  "status": "Published",
+  "imageUrl": "https://prickly-cheese.com",
+  "courseUrl": "https://alert-midwife.info",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a60b193d7d5bc58eb0bbaa"
+  },
+  "name": "Entrepreneurship",
+  "description": "Entrepreneurship Course",
+  "category": "IcEazy",
+  "price": "$100.00",
+  "status": "active",
+  "imageUrl": "https://www.gavi.org/sites/default/files/about/global-health/sdgs-rec.png",
+  "createdAt": {
+    "$date": "2025-02-07T13:31:05.307Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T14:16:18.606Z"
+  },
+  "courseUrl": "https://www.tobamsgroupacademy.com/course?courseid=entrepreneurship-for-beginners"
+},
+{
+  "_id": {
+    "$oid": "67a60bbd3d7d5bc58eb0bbb8"
+  },
+  "name": "AI CV Optimization",
+  "description": "AI CV Optimization",
+  "category": "IcEazy",
+  "price": "$50.00",
+  "status": "active",
+  "imageUrl": "https://www.gavi.org/sites/default/files/about/global-health/sdgs-rec.png",
+  "createdAt": {
+    "$date": "2025-02-07T13:33:49.298Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T14:13:43.491Z"
+  },
+  "courseUrl": "https://www.tobamsgroupacademy.com/course?courseid=ai-optimized-cv-writing"
+},
+{
+  "_id": {
+    "$oid": "67acba8445825261ef08846a"
+  },
+  "name": "Computer Software Development",
+  "description": "Important development course",
+  "category": "Career Development",
+  "price": "100",
+  "status": "status",
+  "imageUrl": "https://www.gavi.org/sites/default/files/about/global-health/sdgs-rec.png",
+  "courseUrl": "string",
+  "createdAt": {
+    "$date": "2025-02-12T15:13:08.557Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T14:11:50.558Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116425"
+  },
+  "name": "Educational Development",
+  "description": "Delibero distinctio iure quae accusamus adipisci.",
+  "category": "Communication",
+  "price": "638.19",
+  "enrolled": 83,
+  "status": "Published",
+  "imageUrl": "https://hospitable-privilege.net",
+  "courseUrl": "https://fake-blossom.com",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116427"
+  },
+  "name": "Game Design",
+  "description": "Circumvenio peccatus adopto sophismata cunabula aureus depopulo deleniti tergiversatio.",
+  "category": "Data Visualization",
+  "price": "410.19",
+  "enrolled": 55,
+  "status": "Published",
+  "imageUrl": "https://confused-scarification.biz/",
+  "courseUrl": "https://definite-hovercraft.biz/",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116429"
+  },
+  "name": "3D Design",
+  "description": "Ustulo colligo adicio.",
+  "category": "Market Research",
+  "price": "850.87",
+  "enrolled": 31,
+  "status": "Published",
+  "imageUrl": "https://ultimate-gerbil.name/",
+  "courseUrl": "https://unknown-deduction.info",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c2160711642f"
+  },
+  "name": "Data Science",
+  "description": "Corporis asporto utor delinquo cruciamentum antiquus quaerat avaritia.",
+  "category": "Market Research",
+  "price": "276.55",
+  "enrolled": 27,
+  "status": "Published",
+  "imageUrl": "https://pushy-haircut.biz/",
+  "courseUrl": "https://beloved-boulevard.name/",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116430"
+  },
+  "name": "AI/ML Engineering",
+  "description": "Tabernus ducimus admoneo tum adulatio aspernatur incidunt canonicus.",
+  "category": "Agile Methodologies",
+  "price": "549.75",
+  "enrolled": 0,
+  "status": "Published",
+  "imageUrl": "https://yellowish-reward.com/",
+  "courseUrl": "https://disloyal-eternity.info/",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116431"
+  },
+  "name": "Sustainability Practices",
+  "description": "Velum tactus vesper.",
+  "category": "Strategic Planning",
+  "price": "564.35",
+  "enrolled": 57,
+  "status": "Published",
+  "imageUrl": "https://glittering-lace.name",
+  "courseUrl": "https://wasteful-numeracy.com/",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116434"
+  },
+  "name": "Interaction Design",
+  "description": "Arca cui trans tabernus officia ocer vociferor ventosus acidus suppono.",
+  "category": "SEO",
+  "price": "827.49",
+  "enrolled": 61,
+  "status": "Published",
+  "imageUrl": "https://zany-language.name",
+  "courseUrl": "https://golden-violin.info/",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116435"
+  },
+  "name": "Graphic Design",
+  "description": "Ciminatio eaque amicitia contra deficio xiphias sapiente terreo.",
+  "category": "Market Research",
+  "price": "788.20",
+  "enrolled": 78,
+  "status": "Published",
+  "imageUrl": "https://smooth-marten.org",
+  "courseUrl": "https://noteworthy-vibration.biz",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a60b613d7d5bc58eb0bbb1"
+  },
+  "name": "'Business Analysis",
+  "description": "'Business Analysis Course",
+  "category": "IcEazy",
+  "price": "$80.00",
+  "status": "active",
+  "imageUrl": "https://www.gavi.org/sites/default/files/about/global-health/sdgs-rec.png",
+  "createdAt": {
+    "$date": "2025-02-07T13:32:17.886Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T14:15:03.472Z"
+  },
+  "courseUrl": "https://www.tobamsgroupacademy.com/course?courseid=business-analysis"
+},
+{
+  "_id": {
+    "$oid": "67b4671b12d17519439447a9"
+  },
+  "name": "Frontend, Backend and Software Engineering",
+  "description": "This is a category for Frontend, Backend, Software Developers or Engineering working in the development",
+  "category": "Development and Technology",
+  "price": "180",
+  "status": "active",
+  "imageUrl": "https://www.gavi.org/sites/default/files/about/global-health/sdgs-rec.png",
+  "courseUrl": "https://www.tobamsgroupacademy.com/course?courseid=professional-development-and-continuous-learning",
+  "createdAt": {
+    "$date": "2025-02-18T10:55:23.095Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T10:55:23.095Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116426"
+  },
+  "name": "Educational Development",
+  "description": "Commodo adfectus laboriosam concedo adflicto.",
+  "category": "SEO",
+  "price": "257.00",
+  "enrolled": 46,
+  "status": "Published",
+  "imageUrl": "https://common-thigh.com",
+  "courseUrl": "https://wee-airman.biz",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c2160711642e"
+  },
+  "name": "UX Testing",
+  "description": "Advenio cilicium coepi cras tergeo vulgo stella.",
+  "category": "Data Visualization",
+  "price": "695.95",
+  "enrolled": 20,
+  "status": "Published",
+  "imageUrl": "https://urban-scarification.org",
+  "courseUrl": "https://ugly-nun.net/",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116432"
+  },
+  "name": "Content Production",
+  "description": "Caecus cribro repellat aestivus bardus.",
+  "category": "Strategic Planning",
+  "price": "246.25",
+  "enrolled": 61,
+  "status": "Published",
+  "imageUrl": "https://disloyal-expansion.com",
+  "courseUrl": "https://blond-testing.info/",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66ea75027c21607116433"
+  },
+  "name": "Marketing Strategy",
+  "description": "Solio iusto delectus conventus cribro utilis.",
+  "category": "Public Speaking",
+  "price": "352.25",
+  "enrolled": 95,
+  "status": "Published",
+  "imageUrl": "https://golden-commercial.name/",
+  "courseUrl": "https://authentic-provider.org",
+  "createdAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T23:52:07.219Z"
+  }
+}]

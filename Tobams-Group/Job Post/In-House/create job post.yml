@@ -8,125 +8,67 @@ http:
   url: "{{BASE}}/job_in_house/job-post"
   body:
     type: json
-    data: "{\r
-
-      \    \"companyName\": \"Tobams Group\",\r
-
-      \    \"title\": \"Associate Social Media Manager\",\r
-
-      \    \"jobDescription\": \"We are seeking a creative, strategic, and proactive Associate Social Media Manager to join our dynamic team. In this role, you will manage our digital presence across multiple platforms, craft engaging multimedia content, and help shape the brand's storytelling voice. You will collaborate closely with internal teams to execute impactful campaigns that drive engagement, strengthen brand identity, and expand our global audience. This is a fully remote role suited for a self-motivated professional who thrives in a fast-paced, creative, and collaborative environment.\",\r
-
-      \    \"contractType\": \"Full-time\",\r
-
-      \    \"location\": \"Remote\",\r
-
-      \    \"region\": [\r
-
-      \        \"Africa\"\r
-
-      \    ],\r
-
-      \    \"jobData\": [\r
-
-      \      {\r
-
-      \        \"Key Responsibilities\": [\r
-
-      \            \"Develop, plan, and manage compelling content across all social platforms — including Instagram, LinkedIn, TikTok, YouTube, and X (Twitter).\",\r
-
-      \            \"Create, edit, and produce high-quality multimedia content (short-form videos, graphics, and reels).\",\r
-
-      \            \"Use tools such as Adobe Premiere Pro, CapCut, Canva, and AI-powered editing tools.\",\r
-
-      \            \"Foster authentic online relationships and respond to comments, messages, and conversations that align with the brand's tone and values.\",\r
-
-      \            \"Identify emerging social media trends and monitor competitors.\",\r
-
-      \            \"Translate insights into actionable growth strategies.\",\r
-
-      \            \"Track, analyze, and report on key performance metrics to evaluate content effectiveness and engagement.\",\r
-
-      \            \"Work closely with the Marketing, Design, and Product teams to ensure social content aligns with broader campaign goals and organizational strategy.\",\r
-
-      \            \"Bring the brand's vision to life through thoughtful storytelling and apply visual creativity while maintaining a consistent voice across all digital touchpoints.\"\r
-
-      \        ]\r
-
-      \      }, \r
-
-      \      {\r
-
-      \        \"Required Qualifications\": [\r
-
-      \          \"1–3 years of hands-on experience in social media management, content creation, or digital marketing.\",\r
-
-      \          \"Proficiency in video editing (Premiere Pro, CapCut).\",\r
-
-      \          \"Proficiency in graphic design (Canva, Adobe Creative Suite).\",\r
-
-      \          \"Familiarity with AI-based tools for content optimization.\",\r
-
-      \          \"A strong eye for aesthetics, storytelling, and audience engagement.\",\r
-
-      \          \"Exceptional written and verbal communication skills.\",\r
-
-      \          \"Ability to manage multiple projects simultaneously and meet deadlines in a remote work environment.\",\r
-
-      \          \"Independent, innovative, and results-driven mindset.\",\r
-
-      \          \"Passion for staying ahead of digital and creative trends.\"\r
-
-      \        ]\r
-
-      \      },\r
-
-      \    //   {\r
-
-      \    //     \"Nice-to-Have Skills\": [\r
-
-      \    //         \"Experience with social media analytics tools and platforms.\",\r
-
-      \    //         \"Knowledge of paid social media advertising campaigns.\",\r
-
-      \    //         \"Understanding of SEO and content marketing principles.\",\r
-
-      \    //         \"Experience working with cross-functional teams in a remote environment.\",\r
-
-      \    //         \"Portfolio showcasing previous social media campaigns and content creation work.\"\r
-
-      \    //     ]\r
-
-      \    //   },\r
-
-      \      {\r
-
-      \        \"What We Offer\": [\r
-
-      \          \"A collaborative, global, and innovation-driven team environment.\",\r
-
-      \          \"Opportunities for growth, learning, and creative experimentation.\",\r
-
-      \          \"Flexible remote working arrangements.\",\r
-
-      \          \"The chance to shape and elevate a fast-growing digital brand.\",\r
-
-      \          \"Professional development opportunities in digital marketing and content strategy.\"\r
-
-      \        ]\r
-
-      \      }\r
-
-      \    ],\r
-
-      \    \"extraText\": \"Reports To: Lead Social Media Manager\",\r
-
-      \    \"currencySymbol\": \"N\",\r
-
-      \    \"salaryMinRange\": null,\r
-
-      \    \"salaryMaxRange\": null\r
-
-      }"
+    data: |-
+      {
+          "companyName": "Tobams Group",
+          "title": "Social Media Intern",
+          "jobDescription": "We is seeking a dynamic and highly skilled Social Media Intern to join our innovative team. This role is essential in strengthening our brand's social media presence, enhancing engagement, and driving measurable growth in followers, audience interaction, and sales. The ideal candidate should have a strong understanding of social media platforms and demonstrate creativity, initiative, and the ability to contribute to business growth through effective digital strategies.",
+          "contractType": "Full-time",
+          "location": "Remote",
+          "region": [
+              "Africa"
+          ],
+          "jobData": [
+            {
+              "Key Responsibilities": [
+                "Develop engaging and creative content across all major social media platforms, including YouTube, Instagram, Facebook, Twitter/X, LinkedIn, and TikTok.",
+              "Produce and edit high-quality video content using CapCut, Canva, and other digital editing software.",
+              "Leverage AI-driven video creation and production tools such as ChatGPT, Veo, Higgsfield, Midjourney, and other emerging AI technologies to build innovative visual assets.",
+              "Support the planning, structured setup, and execution of comprehensive social media campaigns.",
+              "Assist in engineering digital marketing strategies aimed at improving online visibility, audience engagement, and conversion rates.",
+              "Implement metrics-driven social media strategies that contribute directly to product awareness and overall sales pipeline growth.",
+              "Track, evaluate, and support tailored digital marketing campaigns aimed at increasing revenue through modern digital channels.",
+              "Actively interact with followers, brand advocates, and broader online communities to nurture engagement.",
+              "Respond to public comments, direct messages, and general audience inquiries promptly, professionally, and in alignment with corporate voice.",
+              "Consistently monitor critical social media performance metrics, key performance indicators (KPIs), and multi-channel campaign results.",
+              "Prepare data-backed performance reports and identify strategic opportunities for brand optimization using insights and native platform analytics tools.",
+              "Stay highly updated on shifting social media trends, algorithm changes, digital tools, and industry best practices.",
+              "Suggest innovative and creative concepts to continually improve overall brand presence and audience engagement metrics.",
+              "Work closely with the core marketing team to ensure day-to-day social operations align precisely with overall corporate business and sales objectives."
+              ]
+            }, 
+            {
+              "Required Qualifications": [
+                "Good foundational understanding of major social media platforms and their unique optimization features.",
+              "Prior hands-on experience in multimedia content creation is highly considered an added advantage.",
+              "Familiarity with digital web analytics and scheduling automation tools such as Google Analytics, Hootsuite, etc.",
+              "Previous professional experience in social media management or digital content production is preferred.",
+              "Demonstrated ability to convert social media strategies into scalable sales growth support."
+              ]
+            },
+          //   {
+          //     "Nice-to-Have Skills": [
+          //         "Experience with social media analytics tools and platforms.",
+          //         "Knowledge of paid social media advertising campaigns.",
+          //         "Understanding of SEO and content marketing principles.",
+          //         "Experience working with cross-functional teams in a remote environment.",
+          //         "Portfolio showcasing previous social media campaigns and content creation work."
+          //     ]
+          //   },
+            {
+              "What We Offer": [
+                "Hands-on Experience: Gain practical, high-impact experience managing social media ecosystems for a growing and innovative enterprise.",
+              "Mentorship: Receive professional guidance, performance reviews, and career support from seasoned marketing specialists.",
+              "Career Growth: Outstanding interns who consistently achieve performance targets will receive a direct opportunity for full-time corporate employment.",
+              "Collaborative Environment: Work inside a highly creative, supportive, and team-oriented atmosphere."
+              ]
+            }
+          ],
+          "extraText": "If you are passionate about social media, digital growth, and content creation, and you are eager to build your career in a fast-paced environment, Tobams Group would love to hear from you.",
+          "currencySymbol": "N",
+          "salaryMinRange": null,
+          "salaryMaxRange": null
+      }
   auth:
     type: bearer
     token: "{{admin_access}}"

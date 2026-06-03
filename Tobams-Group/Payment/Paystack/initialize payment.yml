@@ -5,10 +5,10 @@ info:
 
 http:
   method: POST
-  url: "{{BASE}}/pay/paystack/init?purpose=assessment"
+  url: "{{BASE}}/pay/paystack/init?purpose=subscription"
   params:
     - name: purpose
-      value: assessment
+      value: subscription
       type: query
   body:
     type: json

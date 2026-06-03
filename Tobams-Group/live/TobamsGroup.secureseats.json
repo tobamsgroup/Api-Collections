@@ -1,0 +1,3591 @@
+[{
+  "_id": {
+    "$oid": "69a873995c15203126248eeb"
+  },
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "role": "Career Professional",
+  "companyName": "Tech Corp",
+  "country": "Nigeria",
+  "concerns": "N/A",
+  "createdAt": {
+    "$date": "2026-03-04T18:02:01.477Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-04T18:02:01.477Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69a8898e5c15203126248f27"
+  },
+  "firstName": "Paul",
+  "lastName": "Jibola",
+  "email": "jibolapaul11@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "New Things",
+  "country": "Algeria",
+  "concerns": "New concerns",
+  "createdAt": {
+    "$date": "2026-03-04T19:35:42.434Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-04T19:35:42.434Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69a89111e5676a11c67b0f0c"
+  },
+  "firstName": "Ericsson",
+  "lastName": "Raphael",
+  "email": "ericssonraphael@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Tech Corp",
+  "country": "Nigeria",
+  "concerns": "N/A",
+  "createdAt": {
+    "$date": "2026-03-04T20:07:45.885Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-04T20:07:45.885Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69aa97d6dc85ac73cb3e8b2b"
+  },
+  "firstName": "Paul",
+  "lastName": "Jibola",
+  "email": "jibolapaul111@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Pau;",
+  "country": "Nigeria",
+  "concerns": "hh",
+  "createdAt": {
+    "$date": "2026-03-06T09:01:10.346Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-06T09:01:10.346Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69aafee6dc85ac73cb3e9040"
+  },
+  "firstName": "Favour",
+  "lastName": "Peter",
+  "email": "favour.peter99@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "How it can improve my productivity and efficiency at work",
+  "createdAt": {
+    "$date": "2026-03-06T16:20:54.814Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-06T16:20:54.814Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ac4a9bc4150aec38da6630"
+  },
+  "firstName": "Shola",
+  "lastName": "A",
+  "email": "ladyshola@gmail.com",
+  "role": "Career Professional",
+  "companyName": "TWL",
+  "country": "United Kingdom",
+  "concerns": "-",
+  "createdAt": {
+    "$date": "2026-03-07T15:56:11.145Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-07T15:56:11.145Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69c58be8c0c69d505a1202b8"
+  },
+  "firstName": "Fidelis ",
+  "lastName": "Iniayemana ",
+  "email": "phidell007@gmail.com",
+  "role": "HR Leader",
+  "companyName": "Boyefi ",
+  "country": "Nigeria",
+  "concerns": "I have no concerns at this moment.\nI just want the prompts to keep getting better and better.",
+  "createdAt": {
+    "$date": "2026-03-26T19:41:28.554Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-26T19:41:28.554Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69c7662be48cb3c0f610232d"
+  },
+  "firstName": "Adeniyi",
+  "lastName": "Ojedele",
+  "email": "ojedeleadeniyi1@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Neotherion",
+  "country": "Nigeria",
+  "concerns": "Can AI really take over everything?",
+  "createdAt": {
+    "$date": "2026-03-28T05:24:59.481Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-28T05:24:59.481Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ca8060fa62f4779904c7c9"
+  },
+  "firstName": "Ayodeji",
+  "lastName": "Oyewopo",
+  "email": "magnichoe@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "N/A",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is the possibility of it being misused or relied on too heavily without proper human oversight. While AI is a powerful tool that can improve efficiency and creativity, I believe there’s a risk of losing originality, critical thinking, and the human touch if it’s not used responsibly.\n\nI’m also mindful of how quickly it’s evolving, especially in areas like job roles and content creation. It’s important that people continue to develop their skills and adapt, rather than depend entirely on automation. Overall, I see AI as something to work with—not replace human input—and I think maintaining that balance is key.",
+  "createdAt": {
+    "$date": "2026-03-30T13:53:36.719Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T13:53:36.719Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ca8169fa62f4779904c800"
+  },
+  "firstName": "Eugene",
+  "lastName": "Iroegbu",
+  "email": "eugeneebuks@gmail.com",
+  "role": "University Student",
+  "companyName": "Hitlab Studio",
+  "country": "Nigeria",
+  "concerns": "The act of doing things ahead of time ",
+  "createdAt": {
+    "$date": "2026-03-30T13:58:01.929Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T13:58:01.929Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ca825efa62f4779904c82e"
+  },
+  "firstName": "Biola",
+  "lastName": "Bello",
+  "email": "beebello95@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Mindrift ",
+  "country": "Nigeria",
+  "concerns": "Using Ai as a supporting tool to design.",
+  "createdAt": {
+    "$date": "2026-03-30T14:02:06.634Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T14:02:06.634Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ca96d6fa62f4779904ce0c"
+  },
+  "firstName": "Oyelowo",
+  "lastName": "Semiat",
+  "email": "semiatoyelowo0@gmail.com",
+  "role": "Other",
+  "companyName": "Federal university of technology minna",
+  "country": "Nigeria",
+  "concerns": "One of my main concerns about AI is how it can impact trust and decision-making if it’s not designed responsibly. For example, AI systems can sometimes reflect bias from the data they’re trained on, which can lead to unfair or misleading outcomes for users.\n\nI’m also concerned about how easily users can rely on AI without fully understanding how it works. That’s why I think transparency and clear user experience design are really important users should feel informed and in control, not confused or misled.\n\nAt the same time, I see AI as a powerful tool when used thoughtfully. As a product designer, I’m interested in how we can design AI-driven products that are ethical, inclusive, and genuinely helpful to people",
+  "createdAt": {
+    "$date": "2026-03-30T15:29:26.126Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T15:29:26.126Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69caaac4fa62f4779904d0a2"
+  },
+  "firstName": "Chimuanya",
+  "lastName": "Francis",
+  "email": "chimmuanyantoo@gmail.com",
+  "role": "University Student",
+  "companyName": "University of the People ",
+  "country": "United States",
+  "concerns": "What concerns me most about AI is how it can be used in the wrong way. AI is powerful and helpful, but if people use it without responsibility, it can spread false information, invade privacy, or even replace human jobs too quickly.\n\nI am also concerned about fairness. Sometimes AI systems can be biased, meaning they may treat some people unfairly because of how they were trained. This can affect important areas like education, hiring, and security.\n\nAnother concern is that people may depend too much on AI and stop thinking for themselves. If we rely on AI for everything, it could reduce creativity and critical thinking.\n\nOverall, I believe AI is a good tool, but it needs to be used carefully, with proper rules and human control to make sure it benefits everyone.",
+  "createdAt": {
+    "$date": "2026-03-30T16:54:28.554Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T16:54:28.554Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cb0871f66be2255e938e8f"
+  },
+  "firstName": "Theodorine ",
+  "lastName": "Tete",
+  "email": "talentedroc@gmail.com",
+  "role": "Other",
+  "companyName": "Rocs Nation ",
+  "country": "Nigeria",
+  "concerns": "How to apply it on any projects ",
+  "createdAt": {
+    "$date": "2026-03-30T23:34:09.306Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T23:34:09.306Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cb701068daf3a47c0d8161"
+  },
+  "firstName": "Taofeeq",
+  "lastName": "abdulrasaq",
+  "email": "rolatzarza@gmail.com",
+  "role": "Other",
+  "companyName": "Tobamsgroup",
+  "country": "Nigeria",
+  "concerns": "To build and develop a life changing solution",
+  "createdAt": {
+    "$date": "2026-03-31T06:56:16.005Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T06:56:16.005Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cb771e7826ce84e225013f"
+  },
+  "firstName": "Happiness",
+  "lastName": "Akolapo",
+  "email": "happinessakolapo@gmail.com",
+  "role": "Other",
+  "companyName": "Ultra_Designs",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is how it can be misused, especially in spreading misinformation and replacing human creativity without proper ethical guidelines. I believe AI should be used as a tool to enhance human work, not replace originality and critical thinking.",
+  "createdAt": {
+    "$date": "2026-03-31T07:26:22.327Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T07:26:22.327Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cb82f27826ce84e2250160"
+  },
+  "firstName": "Isaac",
+  "lastName": "Udoetor",
+  "email": "udoetori@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Solace Creatives Hub",
+  "country": "Nigeria",
+  "concerns": "Agentic AI",
+  "createdAt": {
+    "$date": "2026-03-31T08:16:50.776Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T08:16:50.776Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbb9067d893988689ff04b"
+  },
+  "firstName": "Verlumun ",
+  "lastName": "Ingbian",
+  "email": "ingbianemmanuel@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Elif",
+  "country": "Nigeria",
+  "concerns": "Use of Ai to enhance day to day activities ",
+  "createdAt": {
+    "$date": "2026-03-31T12:07:34.120Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T12:07:34.120Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbe8ca49efb29554af6265"
+  },
+  "firstName": "Abdulazeez",
+  "lastName": "Adebayo",
+  "email": "adebayoabdulazeez195@gmail.com",
+  "role": "Other",
+  "companyName": "Aarif",
+  "country": "Nigeria",
+  "concerns": "How it is being most use in the world ",
+  "createdAt": {
+    "$date": "2026-03-31T15:31:22.451Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T15:31:22.451Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbe8de49efb29554af62a5"
+  },
+  "firstName": "Benedict",
+  "lastName": "Rotimi-Dairo",
+  "email": "Bennyplus23@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Saint Jones ",
+  "country": "Nigeria",
+  "concerns": "How I can utilize it to upskill in my career ",
+  "createdAt": {
+    "$date": "2026-03-31T15:31:42.716Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T15:31:42.716Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbe8e349efb29554af62a8"
+  },
+  "firstName": "Lyon",
+  "lastName": "Ephraim",
+  "email": "Lyonephraim9@gmail.com",
+  "role": "University Student",
+  "companyName": "Lyeph Enterprise",
+  "country": "Nigeria",
+  "concerns": "Leveraging AI and understanding AI",
+  "createdAt": {
+    "$date": "2026-03-31T15:31:47.277Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T15:31:47.277Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbe94849efb29554af6300"
+  },
+  "firstName": "Nafisat ",
+  "lastName": "Mohammed",
+  "email": "nafisat.mohammed0097@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Trueminds Innovations Ltd",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI isn’t a single thing—it’s really a combination of challenges that could have big consequences if we don’t handle them carefully:\n1 Misuse and harmful intent (e.g., misinformation, cyberattacks, autonomous weapons)\n2 Unintended consequences from deployment errors\n3 Bias and fairness issues\n4 Concentration of power in a few entities\n5 Loss of human agency and over-reliance\n6 Long-term existential risks from superintelligent AI",
+  "createdAt": {
+    "$date": "2026-03-31T15:33:28.755Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T15:33:28.755Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbe96649efb29554af631f"
+  },
+  "firstName": "Abosede",
+  "lastName": "Oke",
+  "email": "perfectnyke@outlook.com",
+  "role": "University Student",
+  "companyName": "The Effectual Life Church",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is how easily it can be misused if not properly controlled. It can generate very convincing misinformation, which makes it harder for people to tell what is true or false. This could affect education, public opinion, and even important decisions. There’s also the risk of overreliance, where people trust AI too much without questioning it. Additionally, AI can reflect biases in the data it learns from, leading to unfair outcomes. Overall, the biggest issue isn’t AI itself, but ensuring it is used responsibly, ethically, and with proper regulation to protect people and society.",
+  "createdAt": {
+    "$date": "2026-03-31T15:33:58.807Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T15:33:58.807Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbe9bc49efb29554af6354"
+  },
+  "firstName": "Tunde femi ",
+  "lastName": "Johnson ",
+  "email": "johsontundefemi@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "I will be good for me.",
+  "createdAt": {
+    "$date": "2026-03-31T15:35:24.089Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T15:35:24.089Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbeab449efb29554af63e0"
+  },
+  "firstName": "Praise",
+  "lastName": "Oshin",
+  "email": "oshinpraiseoluwapelumi@gmail.com",
+  "role": "University Student",
+  "companyName": "oduduwa university",
+  "country": "Nigeria",
+  "concerns": "How to improve myself using AI",
+  "createdAt": {
+    "$date": "2026-03-31T15:39:32.371Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T15:39:32.371Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbec1f49efb29554af6483"
+  },
+  "firstName": "Edidiong",
+  "lastName": "Etuk",
+  "email": "edidiong.u.etuk@gmail.com",
+  "role": "HR Leader",
+  "companyName": "Redikla Resources Company ",
+  "country": "Nigeria",
+  "concerns": "How to understand AI and use it to streamline my job, in order not to be left out.",
+  "createdAt": {
+    "$date": "2026-03-31T15:45:35.503Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T15:45:35.503Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbf0c149efb29554af67a0"
+  },
+  "firstName": "Damilare ",
+  "lastName": "Olatunbosun ",
+  "email": "damilareolatunbosun@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Novus Consulting Limited ",
+  "country": "Nigeria",
+  "concerns": "Technology ",
+  "createdAt": {
+    "$date": "2026-03-31T16:05:21.134Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T16:05:21.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbf41f49efb29554af6915"
+  },
+  "firstName": "Victor ",
+  "lastName": "Atilola ",
+  "email": "atilolavictor80@gmail.com",
+  "role": "Other",
+  "companyName": "Freelance Developer ",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is how it might be misused or relied on too heavily without proper understanding. \n\nFor example, people may depend on AI-generated solutions without fully verifying or understanding them, which can lead to errors or poor decision-making.\n\nHowever, I also see AI as a powerful tool that can improve productivity when used responsibly, especially in development. \n\nSo I believe the key is learning how to use it effectively rather than depending on it blindly",
+  "createdAt": {
+    "$date": "2026-03-31T16:19:43.475Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T16:19:43.475Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cbf42449efb29554af6925"
+  },
+  "firstName": "chibueze",
+  "lastName": "chukwuka",
+  "email": "kendrickchuks@gmail.com",
+  "role": "Career Professional",
+  "companyName": "MaxFront Technologies LTD",
+  "country": "Nigeria",
+  "concerns": "I am attending to gain insights into current AI trends and learn from industry experts on building responsible and scalable solutions with AI.",
+  "createdAt": {
+    "$date": "2026-03-31T16:19:48.385Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T16:19:48.385Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ccd086eb64f5ad0aad10c0"
+  },
+  "firstName": "Oseremen",
+  "lastName": "Imafidon",
+  "email": "imafidontabitha@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "The ease at which it makes work easy and fasten production output ",
+  "createdAt": {
+    "$date": "2026-04-01T08:00:06.384Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-01T08:00:06.384Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ccd880eb64f5ad0aad1145"
+  },
+  "firstName": "Bukunmi ",
+  "lastName": "Madojutimi ",
+  "email": "bukunmitolu808@gmail.com",
+  "role": "University Student",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is the possibility of it replacing some jobs, especially roles that involve repetitive tasks. It can make people feel uncertain about their future.\n\nHowever, I also believe AI can create new opportunities if people are willing to learn and adapt. For me, it is more about staying relevant, building new skills, and learning how to work alongside AI rather than being replaced by it.",
+  "createdAt": {
+    "$date": "2026-04-01T08:34:08.735Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-01T08:34:08.735Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cd130beb64f5ad0aad16a8"
+  },
+  "firstName": "Tim Daniels",
+  "lastName": "Jidechukwu",
+  "email": "timhitek@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Olympic Group",
+  "country": "Nigeria",
+  "concerns": "Replacing human roles in the workplace including IT-related roles.",
+  "createdAt": {
+    "$date": "2026-04-01T12:43:56.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-01T12:43:56.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cd157eeb64f5ad0aad16ba"
+  },
+  "firstName": "Favour ",
+  "lastName": "Akinwande ",
+  "email": "favourdcounselor@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Tobams Group",
+  "country": "Nigeria",
+  "concerns": "How to leverage AI the more for my day to day activities ",
+  "createdAt": {
+    "$date": "2026-04-01T12:54:22.028Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-01T12:54:22.028Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cd1c1deb64f5ad0aad16c7"
+  },
+  "firstName": "Mustapha",
+  "lastName": "Mohammed",
+  "email": "mustaphamohammed9321@gmail.com",
+  "role": "Career Professional",
+  "companyName": "PwC Nigeria",
+  "country": "Nigeria",
+  "concerns": "What concerns me most is the increasing risk of over-reliance on AI-generated code and the potential loss of deep technical understanding among developers.\nAI tools like GitHub Copilot, Claude, or ChatGPT can generate code extremely fast, which is great for productivity. However, I’ve seen situations where developers accept AI suggestions without fully understanding the underlying logic, security implications, or performance trade-offs. This can introduce subtle bugs, security vulnerabilities, or non-performant code — especially dangerous in sensitive domains like banking and card payment systems where I currently work.",
+  "createdAt": {
+    "$date": "2026-04-01T13:22:37.498Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-01T13:22:37.498Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cd7cfeeb64f5ad0aad1ad5"
+  },
+  "firstName": "Manasseh",
+  "lastName": "Anche",
+  "email": "anchemanasseh@gmail.com",
+  "role": "University Student",
+  "companyName": "SohClick Technology Ltd ",
+  "country": "Nigeria",
+  "concerns": "How it works across various platforms and how to integrate it into my codes ",
+  "createdAt": {
+    "$date": "2026-04-01T20:15:58.759Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-01T20:15:58.759Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cda0d7eb64f5ad0aad1b9f"
+  },
+  "firstName": "Lucy",
+  "lastName": "Thompson",
+  "email": "lucyluu@gmail.com",
+  "role": "Other",
+  "companyName": "N/a",
+  "country": "Australia",
+  "concerns": "The speed it’s taking and being ‘embraced’ I feel far too quickly without much consideration of consequences.",
+  "createdAt": {
+    "$date": "2026-04-01T22:48:55.856Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-01T22:48:55.856Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cdc6c6eb64f5ad0aad1be3"
+  },
+  "firstName": "Nnamdi",
+  "lastName": "Raymond Nnadi",
+  "email": "nnamdi.raymondoct@gmail.com",
+  "role": "University Student",
+  "companyName": "Seamfix Nigeria Hub ",
+  "country": "Nigeria",
+  "concerns": "I’m also concerned about bias in AI systems, since they learn from human data and can unintentionally reinforce unfair decisions. Overall, I believe AI is powerful, but it needs to be developed and used ethically, with proper oversight to ensure it benefits everyone.",
+  "createdAt": {
+    "$date": "2026-04-02T01:30:46.354Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T01:30:46.354Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cdddffeb64f5ad0aad1c09"
+  },
+  "firstName": "Chukwufumnanya ",
+  "lastName": "Okafor",
+  "email": "okaforfumnaya@gmail.com",
+  "role": "University Student",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "My major concern is that it might take my job is I don’t properly understand and learn how to implement it properly.",
+  "createdAt": {
+    "$date": "2026-04-02T03:09:51.947Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T03:09:51.947Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cdf68ceb64f5ad0aad1c21"
+  },
+  "firstName": "Shubham",
+  "lastName": "Deshmukh",
+  "email": "shubhamdeshmukhs741@gmail.com",
+  "role": "University Student",
+  "companyName": "COEP TECHNOLOGICAL UNIVERSITY ",
+  "country": "India",
+  "concerns": "How to use it\nWhen to use it\nWhat tasks should by done with ai",
+  "createdAt": {
+    "$date": "2026-04-02T04:54:36.827Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T04:54:36.827Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cdf692eb64f5ad0aad1c24"
+  },
+  "firstName": "Varsha",
+  "lastName": "Lakshmanan ",
+  "email": "varshalakshmanan07@gmail.com",
+  "role": "Other",
+  "companyName": "Nil",
+  "country": "India",
+  "concerns": "AI is the most important and peak level growing in the corporate world. To learn about the AI",
+  "createdAt": {
+    "$date": "2026-04-02T04:54:42.537Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T04:54:42.537Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cdf702eb64f5ad0aad1c27"
+  },
+  "firstName": "Priyanka ",
+  "lastName": "Arora",
+  "email": "arorapriyanka1801@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Vt netzwelt ",
+  "country": "India",
+  "concerns": "The changing trends and emerging yourself according to be the best resource or asset at the time when ai can do almost everything ",
+  "createdAt": {
+    "$date": "2026-04-02T04:56:34.444Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T04:56:34.444Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8af7dba4f810e6374d48"
+  },
+  "firstName": "Mmesoma",
+  "lastName": "Nzeribe",
+  "email": "mmesomanzeribe@gmail.com",
+  "role": "University Student",
+  "companyName": "University of Nigeria ",
+  "country": "Nigeria",
+  "concerns": "Nil",
+  "createdAt": {
+    "$date": "2026-04-02T15:27:51.579Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:27:51.579Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8afbdba4f810e6374d4b"
+  },
+  "firstName": "Obinna",
+  "lastName": "Ogbu ",
+  "email": "frednardo@gmail.com",
+  "role": "University Student",
+  "companyName": "Tobems ",
+  "country": "Nigeria",
+  "concerns": "Automation and workflow ",
+  "createdAt": {
+    "$date": "2026-04-02T15:27:55.393Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:27:55.393Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8b1ddba4f810e6374d52"
+  },
+  "firstName": "Lilian ",
+  "lastName": "Nwachukwu ",
+  "email": "lilian23031999@gmail.com",
+  "role": "Other",
+  "companyName": "NA",
+  "country": "Nigeria",
+  "concerns": "leveraging the tools",
+  "createdAt": {
+    "$date": "2026-04-02T15:28:29.260Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:28:29.260Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8b2ddba4f810e6374d55"
+  },
+  "firstName": "Afolabi",
+  "lastName": "Shyllon",
+  "email": "shyllonafolabi@yahoo.com",
+  "role": "Career Professional",
+  "companyName": "Wrix-way",
+  "country": "Nigeria",
+  "concerns": "The rate of its rapid development",
+  "createdAt": {
+    "$date": "2026-04-02T15:28:45.695Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:28:45.695Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8b38dba4f810e6374d58"
+  },
+  "firstName": "Chinedu",
+  "lastName": "Okeke",
+  "email": "chiscookeke11@gmail.com",
+  "role": "Career Professional",
+  "companyName": "TheGreyIT",
+  "country": "Nigeria",
+  "concerns": "How can I stay updated on the latest AI updates",
+  "createdAt": {
+    "$date": "2026-04-02T15:28:56.143Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:28:56.143Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8b4ddba4f810e6374d5b"
+  },
+  "firstName": "Fasayo ",
+  "lastName": "Zainab ",
+  "email": "fasayozainab@gmail.com",
+  "role": "University Student",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "How to navigate and get the best out of it.",
+  "createdAt": {
+    "$date": "2026-04-02T15:29:17.422Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:29:17.422Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8b67dba4f810e6374d5e"
+  },
+  "firstName": "Paul",
+  "lastName": "Akinbusoye",
+  "email": "akinbusoyepaul9@gmail.com",
+  "role": "Other",
+  "companyName": "First Bank of Nigeria Ltd ",
+  "country": "Nigeria",
+  "concerns": "Resolving tangible issues at a fast and acute rate with maximal results.",
+  "createdAt": {
+    "$date": "2026-04-02T15:29:43.913Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:29:43.913Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8b86dba4f810e6374d61"
+  },
+  "firstName": "Deborah",
+  "lastName": "Moore",
+  "email": "mooredebbiefaith114@gmail.com",
+  "role": "University Student",
+  "companyName": "University Of Lagos",
+  "country": "Nigeria",
+  "concerns": "AI has really helped me as a student, but I have concerns, especially where it looks like AI is taking over Critical Thinking and creativity? Is it?",
+  "createdAt": {
+    "$date": "2026-04-02T15:30:14.902Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:30:14.902Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8b96dba4f810e6374d68"
+  },
+  "firstName": "Babajide",
+  "lastName": "Arowolo",
+  "email": "babajidearowolo5@gmail.com",
+  "role": "University Student",
+  "companyName": "Tobams group ",
+  "country": "Nigeria",
+  "concerns": "How it can be used in the most powerful ways to solve real world problems which is the core of my discipline as a computer scientist ",
+  "createdAt": {
+    "$date": "2026-04-02T15:30:30.434Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:30:30.434Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8ba0dba4f810e6374d77"
+  },
+  "firstName": "Emmanuel ",
+  "lastName": "Falodun",
+  "email": "falodunemmanuel1@gmail.com",
+  "role": "Career Professional",
+  "companyName": "I am currently unemployed ",
+  "country": "Nigeria",
+  "concerns": "I am interested in how AI use is advancing in tech. ",
+  "createdAt": {
+    "$date": "2026-04-02T15:30:40.786Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:30:40.786Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8c28dba4f810e6374e19"
+  },
+  "firstName": "Sakirat",
+  "lastName": "Fatunwase",
+  "email": "fhatshakirat@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Fatunwase Sakirat ",
+  "country": "Nigeria",
+  "concerns": "I am most concerned about data privacy, security, and bias in AI systems. From a backend development perspective, AI relies heavily on large volumes of data, so ensuring secure data handling, proper access control, and preventing misuse is very important. I also think about how AI can impact job opportunities, and I believe it should be built to support and enhance human work rather than replace it.",
+  "createdAt": {
+    "$date": "2026-04-02T15:32:56.906Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:32:56.906Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8c2fdba4f810e6374e20"
+  },
+  "firstName": "Abdul-Matin",
+  "lastName": "Bayor-Black",
+  "email": "mateen24434@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Freelance",
+  "country": "Nigeria",
+  "concerns": "How i can utilize ai to enhance my productivity and to explore new ai career opportunities",
+  "createdAt": {
+    "$date": "2026-04-02T15:33:03.127Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:33:03.127Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8d53dba4f810e6374e8c"
+  },
+  "firstName": "Abosede",
+  "lastName": "Soyinka",
+  "email": "soyabojully@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Newness TechStars",
+  "country": "Nigeria",
+  "concerns": "Using AI to improve my skills",
+  "createdAt": {
+    "$date": "2026-04-02T15:37:55.411Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:37:55.411Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce8e0ddba4f810e6374ecb"
+  },
+  "firstName": "Francis ",
+  "lastName": "Williams ",
+  "email": "franciswuta@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Baba4Tees",
+  "country": "Nigeria",
+  "concerns": "What concerns me most is the risk of algorithmic bias and the loss of the human touch. While I use data to drive growth—like reducing costs by 20% in my own business I know that AI is only as good as its data. If that data is biased, it can lead to unfair decisions. Furthermore, in artist management, I've seen that technology should enhance human talent and relationships, not replace the empathy and critical thinking that truly drive success.",
+  "createdAt": {
+    "$date": "2026-04-02T15:41:01.613Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:41:01.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce911bdba4f810e6374fab"
+  },
+  "firstName": "Wisdom",
+  "lastName": "Inah",
+  "email": "ikesebrinho@gmail.com",
+  "role": "University Student",
+  "companyName": "Reg machines venture",
+  "country": "Nigeria",
+  "concerns": "I believe great software isn’t just about code — it’s about experience, performance, and purpose.Building. Learning. Evolving.\nLet’s create something meaning",
+  "createdAt": {
+    "$date": "2026-04-02T15:54:03.449Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:54:03.449Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce9165dba4f810e6374fc0"
+  },
+  "firstName": "HASSAN",
+  "lastName": "SAID",
+  "email": "saidhassano658@gmail.com",
+  "role": "Career Professional",
+  "companyName": "mombasa water supply and sanitation co.ltd",
+  "country": "Kenya",
+  "concerns": "Misinformation: Deepfakes and fake news spreading fast.\n\nBias: Algorithms reinforcing discrimination.\n\nPower concentration: Few companies controlling advanced AI.\n\nJob loss: Automation displacing workers.\n\nOverreliance: People deferring too much to machines.",
+  "createdAt": {
+    "$date": "2026-04-02T15:55:17.986Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T15:55:17.986Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce941edba4f810e6375037"
+  },
+  "firstName": "Abdulmu'meen ",
+  "lastName": "Adeyeri",
+  "email": "hafidhdark@gmail.com",
+  "role": "Career Professional",
+  "companyName": "TrueMinds Innovations Ltd",
+  "country": "Nigeria",
+  "concerns": "It's revolution, and I have to be involved\n",
+  "createdAt": {
+    "$date": "2026-04-02T16:06:54.805Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T16:06:54.805Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ce9bb8dba4f810e637514e"
+  },
+  "firstName": "Kolade",
+  "lastName": "Duromola",
+  "email": "koladeduromola@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Koladesigns",
+  "country": "Nigeria",
+  "concerns": "Nothing really, as I believe AI would always be a tool for leveraging productivity to the users that aren't fazed by it. ",
+  "createdAt": {
+    "$date": "2026-04-02T16:39:20.477Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T16:39:20.477Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cea7c4dba4f810e63751cd"
+  },
+  "firstName": "Chongwomdah",
+  "lastName": "Peter",
+  "email": "chongwomdahpeter01@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Forex",
+  "country": "Nigeria",
+  "concerns": "It's rapid evolution",
+  "createdAt": {
+    "$date": "2026-04-02T17:30:44.307Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T17:30:44.307Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cedf36dba4f810e63752e5"
+  },
+  "firstName": "Onyebuchi",
+  "lastName": "Promise",
+  "email": "onyebuchipromise44@gmail.com",
+  "role": "University Student",
+  "companyName": "None ",
+  "country": "Nigeria",
+  "concerns": "How to use ai has a tool in this fast growing tech age ",
+  "createdAt": {
+    "$date": "2026-04-02T21:27:18.952Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T21:27:18.952Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69cfe7e4dba4f810e63755c7"
+  },
+  "firstName": "Chioma",
+  "lastName": "Ohazulike",
+  "email": "ohazulikechiomajoy@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Tombas",
+  "country": "Nigeria",
+  "concerns": "Companies are hiring fewer people and doing more efficient work. In this situation, what can we do?",
+  "createdAt": {
+    "$date": "2026-04-03T16:16:36.109Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-03T16:16:36.109Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d3682edba4f810e6375d22"
+  },
+  "firstName": "Ezechiyere",
+  "lastName": "Bernice",
+  "email": "berniceezechiyere88@gmail.com",
+  "role": "Career Professional",
+  "companyName": "No please",
+  "country": "Nigeria",
+  "concerns": "Advancement ",
+  "createdAt": {
+    "$date": "2026-04-06T08:00:46.950Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T08:00:46.950Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d3689ddba4f810e6375d35"
+  },
+  "firstName": "Christana ",
+  "lastName": "Aina",
+  "email": "olajumokechristiana39@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Cloudflow technology ",
+  "country": "Nigeria",
+  "concerns": "Misinformation ",
+  "createdAt": {
+    "$date": "2026-04-06T08:02:37.096Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T08:02:37.096Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d3a69cdba4f810e6375fb2"
+  },
+  "firstName": "Jideofor",
+  "lastName": "Umeh",
+  "email": "engrumehjideofor@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Engrjidex Construction",
+  "country": "Nigeria",
+  "concerns": "AI is making human work looks efficient and more reliable in assisting work ",
+  "createdAt": {
+    "$date": "2026-04-06T12:27:08.722Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T12:27:08.722Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d3e0a7dba4f810e637644f"
+  },
+  "firstName": "Dorothy ",
+  "lastName": "Omotosho ",
+  "email": "omomeghedorothy@gmail.com",
+  "role": "University Student",
+  "companyName": "Student ",
+  "country": "Nigeria",
+  "concerns": "To learn how AI can boost productivity ",
+  "createdAt": {
+    "$date": "2026-04-06T16:34:47.677Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T16:34:47.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d3e0abdba4f810e6376452"
+  },
+  "firstName": "Akinniyi ",
+  "lastName": "Osoro ",
+  "email": "akinniyiosoroo@gmail.com",
+  "role": "Career Professional",
+  "companyName": "NewGlobe Education Service ",
+  "country": "Nigeria",
+  "concerns": "The possibility of it transforming or world.",
+  "createdAt": {
+    "$date": "2026-04-06T16:34:51.550Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T16:34:51.550Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d3e494dba4f810e63764d2"
+  },
+  "firstName": "Abdulazeez",
+  "lastName": "Otu",
+  "email": "abdulazeez.oe@gmail.com",
+  "role": "Other",
+  "companyName": "NA",
+  "country": "Nigeria",
+  "concerns": "I want to learn",
+  "createdAt": {
+    "$date": "2026-04-06T16:51:32.727Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T16:51:32.727Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d3e4b9dba4f810e63764e9"
+  },
+  "firstName": "Triumph",
+  "lastName": "Odili",
+  "email": "odilitriumph9@gmail.com",
+  "role": "University Student",
+  "companyName": "Null",
+  "country": "Nigeria",
+  "concerns": "How is it going to help us as students learn faster? And also how it would make students think rather than thinking for the student ",
+  "createdAt": {
+    "$date": "2026-04-06T16:52:09.643Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T16:52:09.643Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d3e4e5dba4f810e63764ed"
+  },
+  "firstName": "Precious",
+  "lastName": "Isaac",
+  "email": "isaacprecious2017@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Tobam",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is the potential for misuse and lack of proper regulation. While AI has the ability to improve productivity and solve complex problems, it can also be used to spread misinformation, invade privacy, or make biased decisions if not properly monitored.\n\nAnother major concern is overdependence. As people rely more on AI systems, there is a risk of reduced critical thinking and human creativity over time. In addition, job displacement is a real issue, especially for roles that can be easily automated, which could widen economic inequality if not properly managed.\n\nOverall, my concern is not AI itself, but how it is controlled and applied. With the right ethical standards, transparency, and human oversight, these risks can be minimized while still benefiting from its advantages.\n",
+  "createdAt": {
+    "$date": "2026-04-06T16:52:53.242Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T16:52:53.242Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d3ef0ddba4f810e6376620"
+  },
+  "firstName": "Tito",
+  "lastName": "Akinyemi",
+  "email": "ti.to.aj.bi@gmail.com",
+  "role": "Other",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "the usefulness in the most mundane tasks.",
+  "createdAt": {
+    "$date": "2026-04-06T17:36:13.079Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T17:36:13.079Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d3f001dba4f810e6376626"
+  },
+  "firstName": "Uchenna",
+  "lastName": "Nduka",
+  "email": "uchenna8800@gmail.com",
+  "role": "Other",
+  "companyName": "None",
+  "country": "Nigeria",
+  "concerns": "I see AI as a powerful tool that can enhance productivity, support better insights, and create new opportunities for growth. However, What concerns me most about AI is ensuring it is used responsibly and ethically, especially in decision-making that affects people.  My focus is on learning how to use AI effectively so I can stay adaptable and contribute value in a rapidly evolving world.",
+  "createdAt": {
+    "$date": "2026-04-06T17:40:17.542Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T17:40:17.542Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d4ad5dd50204c995403d0d"
+  },
+  "firstName": "Adesewa ",
+  "lastName": "Akinwale ",
+  "email": "oyindamolaakinwale49@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Virtual assistant ",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is the potential misuse, especially in spreading misinformation and reducing critical thinking if people rely on it without verification. I am also concerned about how it may affect job opportunities if individuals do not continuously upskill.\n\nHowever, I believe AI is a powerful tool when used responsibly, and it creates more opportunities for those willing to learn and adapt.",
+  "createdAt": {
+    "$date": "2026-04-07T07:08:13.841Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T07:08:13.841Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d50c71081e2389a92dd889"
+  },
+  "firstName": "Ifeoma",
+  "lastName": "Ulagwu",
+  "email": "ifeomaulagwu@gmail.com",
+  "role": "Career Professional",
+  "companyName": "MOCHTAR ",
+  "country": "Nigeria",
+  "concerns": "I really need to master the art of AI automation to effectively streamline workflows ",
+  "createdAt": {
+    "$date": "2026-04-07T13:53:53.660Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T13:53:53.660Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d53194d0f5fb6b3c4ecd60"
+  },
+  "firstName": "Isaac ",
+  "lastName": "Hayab",
+  "email": "isaachayab0@gmail.com",
+  "role": "University Student",
+  "companyName": "Federal University of Minna",
+  "country": "Nigeria",
+  "concerns": "Where can it be applied in real world cases",
+  "createdAt": {
+    "$date": "2026-04-07T16:32:20.689Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T16:32:20.689Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d53196d0f5fb6b3c4ecd63"
+  },
+  "firstName": "Ibrahim",
+  "lastName": "Aminu",
+  "email": "princeij56@gmail.com",
+  "role": "University Student",
+  "companyName": "ABU Zaria",
+  "country": "Nigeria",
+  "concerns": "The Opportunities that may come from it",
+  "createdAt": {
+    "$date": "2026-04-07T16:32:22.232Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T16:32:22.232Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d531b7d0f5fb6b3c4ecd66"
+  },
+  "firstName": "Theophilus",
+  "lastName": "Oyelaja",
+  "email": "oyelajatheophilus@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Transplify",
+  "country": "Nigeria",
+  "concerns": "Real life and introspective thinking. Honesty, transparency and truth.",
+  "createdAt": {
+    "$date": "2026-04-07T16:32:55.223Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T16:32:55.223Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d531c2d0f5fb6b3c4ecd69"
+  },
+  "firstName": "Oluwatobiloba",
+  "lastName": "Gboyega",
+  "email": "olutobiseun18@gmail.com",
+  "role": "Other",
+  "companyName": "none",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is the risk of over-dependence.\nAI can dramatically improve productivity, but if people stop thinking critically or stop building core skills because they rely on AI for everything, it can reduce creativity, problem-solving ability, and technical depth.",
+  "createdAt": {
+    "$date": "2026-04-07T16:33:06.292Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T16:33:06.292Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d5322fd0f5fb6b3c4ecd7c"
+  },
+  "firstName": "Anjolajesu",
+  "lastName": "Oyeniran",
+  "email": "anjolajesuoyeniran@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Tobams Group ",
+  "country": "Nigeria",
+  "concerns": "One of my main concerns about AI is bias, as systems can unintentionally reflect and amplify unfair patterns in data. I’m also concerned about misuse, such as spreading misinformation. However, these challenges motivate me to contribute to building ethical, transparent, and responsible AI systems.",
+  "createdAt": {
+    "$date": "2026-04-07T16:34:55.087Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T16:34:55.087Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d53256d0f5fb6b3c4ecd86"
+  },
+  "firstName": "Hannah ",
+  "lastName": "Akanni",
+  "email": "hannahakanni7@gmail.com",
+  "role": "Other",
+  "companyName": "patherfinder",
+  "country": "Nigeria",
+  "concerns": "AI like makes it incredibly easy to generate stuff and learn  thing ",
+  "createdAt": {
+    "$date": "2026-04-07T16:35:34.537Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T16:35:34.537Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d5332bd0f5fb6b3c4ecd90"
+  },
+  "firstName": "Adebimpe",
+  "lastName": "Adeyemi",
+  "email": "adeyemiaishaadebimpe@gmail.com",
+  "role": "Other",
+  "companyName": "Energy sector ",
+  "country": "Nigeria",
+  "concerns": "How it's prompting works ",
+  "createdAt": {
+    "$date": "2026-04-07T16:39:07.226Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T16:39:07.226Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d53828d0f5fb6b3c4ecee2"
+  },
+  "firstName": "Channel",
+  "lastName": "Kenfack",
+  "email": "channelkenfack1@gmail.com",
+  "role": "University Student",
+  "companyName": "Catholic University of Central Africa",
+  "country": "Cameroon",
+  "concerns": "What concerns me most about AI is bias in decision‑making, lack of transparency, and the risk of misuse. I worry about how data can reinforce unfairness, how “black box” systems limit accountability, and how over‑reliance or unethical applications could harm privacy, jobs, and trust.",
+  "createdAt": {
+    "$date": "2026-04-07T17:00:24.037Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T17:00:24.037Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d53840d0f5fb6b3c4ecee8"
+  },
+  "firstName": "Martin",
+  "lastName": "Oluka",
+  "email": "olukamartin24@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Logic Designs",
+  "country": "Nigeria",
+  "concerns": "Taking my role",
+  "createdAt": {
+    "$date": "2026-04-07T17:00:48.793Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T17:00:48.793Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d53867d0f5fb6b3c4eceec"
+  },
+  "firstName": "Roland",
+  "lastName": "Oodo",
+  "email": "rolandoodo147@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Servyst",
+  "country": "Nigeria",
+  "concerns": "automating day to day workflows with ai",
+  "createdAt": {
+    "$date": "2026-04-07T17:01:27.695Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T17:01:27.695Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d53872d0f5fb6b3c4eceef"
+  },
+  "firstName": "Shedrack",
+  "lastName": "Alita",
+  "email": "shedrackalita@gmail.com",
+  "role": "University Student",
+  "companyName": "University of Ibadan",
+  "country": "Nigeria",
+  "concerns": "Its growing negative impact on students and job seekers ",
+  "createdAt": {
+    "$date": "2026-04-07T17:01:38.275Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T17:01:38.275Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d5387cd0f5fb6b3c4ecefa"
+  },
+  "firstName": "Opeyemi",
+  "lastName": "Ogundele",
+  "email": "ogundeleopeyemioluwa@gmail.com",
+  "role": "Other",
+  "companyName": "UI/UX Designer",
+  "country": "Nigeria",
+  "concerns": "How AI cut across all industry and leveraging on it makes you work smarter",
+  "createdAt": {
+    "$date": "2026-04-07T17:01:48.949Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-07T17:01:48.949Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d604bde3a4c67cb9d4e26a"
+  },
+  "firstName": "Adewunmi",
+  "lastName": "Oladokun",
+  "email": "adewunmiabdulhameed7@gmail.com",
+  "role": "University Student",
+  "companyName": "None yet",
+  "country": "Nigeria",
+  "concerns": "Utilizing AI properties and features for fast delivery",
+  "createdAt": {
+    "$date": "2026-04-08T07:33:17.952Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T07:33:17.952Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d60a24e3a4c67cb9d4e2d3"
+  },
+  "firstName": "ahmed",
+  "lastName": "olaneye",
+  "email": "boboahmedino@gmail.com",
+  "role": "Other",
+  "companyName": "N/A",
+  "country": "Nigeria",
+  "concerns": "Building strong systems that are not completely understood, particularly with regard to bias, data privacy, and transparency, is what worries me the most about AI.\n\nCybersecurity threats in the collection, processing, and protection of sensitive data are increasing as AI is incorporated more deeply into systems for remote work, healthcare, and banking. These systems may be susceptible to breaches, manipulation, or illegal access in the absence of appropriate precautions.\n\nI'm also worried about relying too much on AI without adequate validation from a full-stack standpoint. If AI outputs are trusted without comprehension, security holes and backend vulnerabilities may be introduced.\n\nEven while AI has a lot of potential to increase productivity and facilitate distant collaboration, it's crucial that we give human oversight, data security, and secure system design first priority when implementing it.",
+  "createdAt": {
+    "$date": "2026-04-08T07:56:20.788Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T07:56:20.788Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d60e81e3a4c67cb9d4e33b"
+  },
+  "firstName": "JOSHUA",
+  "lastName": "AIGBIREMHON",
+  "email": "joshuaosaro20@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Impactlight World",
+  "country": "Nigeria",
+  "concerns": "I am most concerned about the speed of change versus the pace of workforce adaptation. AI isn't necessarily going to replace jobs, but it will fundamentally change them. My worry is that without accessible, rapid upskilling initiatives, we may see a widening digital divide between those who can leverage these tools and those who are left behind by the transition.",
+  "createdAt": {
+    "$date": "2026-04-08T08:14:57.149Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T08:14:57.149Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d61ab9e3a4c67cb9d4e3e9"
+  },
+  "firstName": "Dubem",
+  "lastName": "Osakwe",
+  "email": "osakwedubem@gmail.com",
+  "role": "Other",
+  "companyName": "S Blaze Concept ",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is the risk of over-reliance without critical thinking. As AI tools become more powerful, there’s a tendency for individuals and businesses to accept outputs without proper validation, which can lead to poor decisions, misinformation, or loss of originality.\nI’m also concerned about ethical use, particularly data privacy and bias, because AI systems are only as good as the data they’re trained on. If not managed properly, they can reinforce existing inequalities or expose sensitive information.\nHowever, I see these concerns as a responsibility rather than a limitation. As a Computer Science graduate, I believe AI should be used as a support tool combined with human judgment, creativity, and ethical awareness to drive smarter and more responsible business solutions.",
+  "createdAt": {
+    "$date": "2026-04-08T09:07:05.218Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T09:07:05.218Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d6823dd9126eb277a78821"
+  },
+  "firstName": "Regina Ebowo ",
+  "lastName": "Ekere",
+  "email": "ekereregina00@gmail.com",
+  "role": "Career Professional",
+  "companyName": "None",
+  "country": "Nigeria",
+  "concerns": "The evolving world with AI",
+  "createdAt": {
+    "$date": "2026-04-08T16:28:45.506Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T16:28:45.506Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d6825ed9126eb277a7882e"
+  },
+  "firstName": "Joshua",
+  "lastName": "Adegbesan",
+  "email": "joshuaadegbesan00@gmail.com",
+  "role": "Other",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "Using AI as a tool to solve real-world problems, optimize systems, and create value in diverse sectors.",
+  "createdAt": {
+    "$date": "2026-04-08T16:29:18.481Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T16:29:18.481Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d68286d9126eb277a78832"
+  },
+  "firstName": "Chioma",
+  "lastName": "Nnametu ",
+  "email": "nnametumichelle@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Chioelle Empire ",
+  "country": "Nigeria",
+  "concerns": "The future ",
+  "createdAt": {
+    "$date": "2026-04-08T16:29:58.201Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T16:29:58.201Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d683a9d9126eb277a7884f"
+  },
+  "firstName": "Miracle",
+  "lastName": "Iseghohimen",
+  "email": "iseghohimenmiracle@gmail.com",
+  "role": "Career Professional",
+  "companyName": "MOMCL",
+  "country": "Nigeria",
+  "concerns": "Data privacy",
+  "createdAt": {
+    "$date": "2026-04-08T16:34:49.535Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T16:34:49.535Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d683d2d9126eb277a78854"
+  },
+  "firstName": "Vera",
+  "lastName": "Nwigwe",
+  "email": "nwigwevera98@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Atti Tech",
+  "country": "Nigeria",
+  "concerns": "How fascinating AI is and how it help work move better.\n",
+  "createdAt": {
+    "$date": "2026-04-08T16:35:30.636Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T16:35:30.636Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d68ecdd9126eb277a78a4e"
+  },
+  "firstName": "Lovina Ifebuche ",
+  "lastName": "Omeke ",
+  "email": "lovinaifebuche9@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Karu Diagnostic Center ",
+  "country": "Nigeria",
+  "concerns": "How it solve problem fast",
+  "createdAt": {
+    "$date": "2026-04-08T17:22:21.909Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T17:22:21.909Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d69309d9126eb277a78aa2"
+  },
+  "firstName": "Benjamin",
+  "lastName": "Igbavboa",
+  "email": "fortunebenzco2369@gmail.com",
+  "role": "University Student",
+  "companyName": "Babcock University",
+  "country": "Nigeria",
+  "concerns": "Misinformation and manipulation of information\nPeople trusting it too much\nCurrent Jobs unemployment",
+  "createdAt": {
+    "$date": "2026-04-08T17:40:25.936Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T17:40:25.936Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d746fdd9126eb277a78d20"
+  },
+  "firstName": "ADAM",
+  "lastName": "ABDULRASAQ",
+  "email": "abdulrasaq.adam.abdillah@gmail.com",
+  "role": "Other",
+  "companyName": "Adam ",
+  "country": "Nigeria",
+  "concerns": "How it can be levergaed for financial and data analytics",
+  "createdAt": {
+    "$date": "2026-04-09T06:28:13.931Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T06:28:13.931Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d74f4fd9126eb277a78d43"
+  },
+  "firstName": "Martins",
+  "lastName": "Otuya",
+  "email": "Martinsotuya1997@gmail.com",
+  "role": "University Student",
+  "companyName": "None",
+  "country": "Nigeria",
+  "concerns": "The advancement and how much we rely on AI",
+  "createdAt": {
+    "$date": "2026-04-09T07:03:43.680Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T07:03:43.680Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7502fd9126eb277a78d58"
+  },
+  "firstName": "Miracle ",
+  "lastName": "Elijah ",
+  "email": "ariyoaduragbemi94@gmail.com",
+  "role": "University Student",
+  "companyName": "GalahadArts",
+  "country": "Nigeria",
+  "concerns": "The use of ai to improve ones ability to understand and perform efficiently.",
+  "createdAt": {
+    "$date": "2026-04-09T07:07:27.351Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T07:07:27.351Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d75031d9126eb277a78d5b"
+  },
+  "firstName": "Sarah",
+  "lastName": "Umoru",
+  "email": "sarahumoru123@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Ziedet Digitals ",
+  "country": "Nigeria",
+  "concerns": "That it's going to completely remove frontend engineers",
+  "createdAt": {
+    "$date": "2026-04-09T07:07:29.519Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T07:07:29.519Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7615e9ca7cd6259989256"
+  },
+  "firstName": "ALI ",
+  "lastName": "MUSLIMAH OPEYEMI ",
+  "email": "alimuslimahopeyemi@gmail.com",
+  "role": "University Student",
+  "companyName": "Smalleemah tech ",
+  "country": "Nigeria",
+  "concerns": "What concern me most is the fact that AI is almost everything in the world now and want to be part of it .",
+  "createdAt": {
+    "$date": "2026-04-09T08:20:46.179Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T08:20:46.179Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d765849ca7cd62599892b7"
+  },
+  "firstName": "Oluwatobi",
+  "lastName": "Ibikunle",
+  "email": "ibikunleoluwatobi99@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Tobams Group",
+  "country": "Nigeria",
+  "concerns": "The evolving nature of AI",
+  "createdAt": {
+    "$date": "2026-04-09T08:38:28.766Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T08:38:28.766Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d787779ca7cd6259989450"
+  },
+  "firstName": "Timnan ",
+  "lastName": "Elijah Bongdap ",
+  "email": "timnanelijah31@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Churchgate",
+  "country": "Nigeria",
+  "concerns": "Just really want to know how to use Ai to navigate ",
+  "createdAt": {
+    "$date": "2026-04-09T11:03:19.009Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T11:03:19.009Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7c06b6469458c6f91f8f8"
+  },
+  "firstName": "Victor",
+  "lastName": "Adebiyi",
+  "email": "adebiyivic26@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Dr python ",
+  "country": "Nigeria",
+  "concerns": "I'm passionate about Ai automation for building real world project ",
+  "createdAt": {
+    "$date": "2026-04-09T15:06:19.360Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T15:06:19.360Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d44e6469458c6f91fddc"
+  },
+  "firstName": "Olufikayo",
+  "lastName": "Osinaike",
+  "email": "osinaikeolufikayo@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Koolboks Limited",
+  "country": "Nigeria",
+  "concerns": "How to create it",
+  "createdAt": {
+    "$date": "2026-04-09T16:31:10.780Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:31:10.780Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d4656469458c6f91fddf"
+  },
+  "firstName": "Oladipupo ",
+  "lastName": "Ajileye ",
+  "email": "dipoajileye05@gmail.com",
+  "role": "University Student",
+  "companyName": "Student",
+  "country": "Nigeria",
+  "concerns": "The growing influence of AI taking over jobs",
+  "createdAt": {
+    "$date": "2026-04-09T16:31:33.763Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:31:33.763Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d46a6469458c6f91fde2"
+  },
+  "firstName": "Glory",
+  "lastName": "Abohi",
+  "email": "isimenmen21@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Free lance",
+  "country": "Nigeria",
+  "concerns": "How they are created and trained to suit all work of life. ",
+  "createdAt": {
+    "$date": "2026-04-09T16:31:38.880Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:31:38.880Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d4736469458c6f91fde5"
+  },
+  "firstName": "Victoria",
+  "lastName": "Okonkwo",
+  "email": "vickyiru09@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "None",
+  "country": "Nigeria",
+  "concerns": "AI Automation",
+  "createdAt": {
+    "$date": "2026-04-09T16:31:47.659Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:31:47.659Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d4756469458c6f91fde8"
+  },
+  "firstName": "Olajide ",
+  "lastName": "Rejoice ",
+  "email": "olajiderejoice326@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Tobams Group",
+  "country": "Nigeria",
+  "concerns": "It’s evolution and creativity ",
+  "createdAt": {
+    "$date": "2026-04-09T16:31:49.857Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:31:49.857Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d4896469458c6f91fdf2"
+  },
+  "firstName": "Michael",
+  "lastName": "Ishioku",
+  "email": "michaelishioku25@gmail.com",
+  "role": "Career Professional",
+  "companyName": "N/A",
+  "country": "Nigeria",
+  "concerns": "The machine learning behind it",
+  "createdAt": {
+    "$date": "2026-04-09T16:32:09.191Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:32:09.191Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d4c26469458c6f91fdf8"
+  },
+  "firstName": "Precious ",
+  "lastName": "Ekakati ",
+  "email": "preciousekakati@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Trustlub Fluid Resources Limited ",
+  "country": "Nigeria",
+  "concerns": "I am interested in AI Automation and AI Agents",
+  "createdAt": {
+    "$date": "2026-04-09T16:33:06.016Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:33:06.016Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d4ca6469458c6f91fe03"
+  },
+  "firstName": "Oluwatooni",
+  "lastName": "Mapayi",
+  "email": "oluwatoonimapayi@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Refem Millers Limited",
+  "country": "Nigeria",
+  "concerns": "I use it in my daily job",
+  "createdAt": {
+    "$date": "2026-04-09T16:33:14.763Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:33:14.763Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d4cf6469458c6f91fe0a"
+  },
+  "firstName": "Favour",
+  "lastName": "Nsan",
+  "email": "favournsan891@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Nigeria Revenue Service",
+  "country": "Nigeria",
+  "concerns": "How everything works.",
+  "createdAt": {
+    "$date": "2026-04-09T16:33:19.170Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:33:19.170Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d4eb6469458c6f91fe2f"
+  },
+  "firstName": "Abdulsomad",
+  "lastName": "Yusuf",
+  "email": "yusufabdulsomad1@gmail.com",
+  "role": "University Student",
+  "companyName": "Self employed ",
+  "country": "Nigeria",
+  "concerns": "AI can generate designs quickly, but many outputs start to look similar. As a UI/UX designer, your unique thinking and creativity risk getting diluted if everyone relies on the same tools.",
+  "createdAt": {
+    "$date": "2026-04-09T16:33:47.314Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:33:47.314Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d5016469458c6f91fe3f"
+  },
+  "firstName": "Rita ",
+  "lastName": "Odilo ",
+  "email": "faustinaodilo24@gmail.com",
+  "role": "Other",
+  "companyName": "Freelancer ",
+  "country": "Nigeria",
+  "concerns": "Learning more about how it works and use it for real development",
+  "createdAt": {
+    "$date": "2026-04-09T16:34:09.071Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:34:09.071Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d5446469458c6f91fe56"
+  },
+  "firstName": "Saviour",
+  "lastName": "Duru-Ozurumba",
+  "email": "sduruozurumba@gmail.com",
+  "role": "University Student",
+  "companyName": "University of Lagos",
+  "country": "Nigeria",
+  "concerns": "AI has been really helpful in every aspect of my day to day activity. But there's a lingering fear that it might take our jobs in the nearest future. ",
+  "createdAt": {
+    "$date": "2026-04-09T16:35:16.046Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:35:16.046Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d68c6469458c6f91fecf"
+  },
+  "firstName": "Onyebuchi",
+  "lastName": "OKONKWO",
+  "email": "okonkwoonyebu@gmail.com",
+  "role": "Career Professional",
+  "companyName": "National health fellow under the federal ministry of health ",
+  "country": "Nigeria",
+  "concerns": "My primary concern is the Digital Health Divide. While AI offers scalable solutions for diagnostics and health system strengthening, there is a significant risk that underserved rural communities—like those I serve in Nkanu West—will be further marginalized if AI development ignores the constraints of low-resource environments, such as limited connectivity and data fragmentation.",
+  "createdAt": {
+    "$date": "2026-04-09T16:40:44.807Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:40:44.807Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7d9296469458c6f91ffcb"
+  },
+  "firstName": "Umar ",
+  "lastName": "Nuhu Ahmad ",
+  "email": "unuhuahmad@gmail.com",
+  "role": "Career Professional",
+  "companyName": "UNAD ENVIRONMENTAL CONSULTANT SERVICES.",
+  "country": "Nigeria",
+  "concerns": "Interested in ",
+  "createdAt": {
+    "$date": "2026-04-09T16:51:53.603Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:51:53.603Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7e0b76469458c6f9201b7"
+  },
+  "firstName": "Ezejiofor",
+  "lastName": "Chibuike",
+  "email": "ezejioforchibuike635@gmail.com",
+  "role": "University Student",
+  "companyName": "Nnamdi Azikiwe University ",
+  "country": "Nigeria",
+  "concerns": "A concern I have about tech is how people and organizations can become too dependent on it. While technology makes things easier, over-reliance can reduce critical thinking and problem-solving if not balanced properly. I believe it’s important to use tech as a tool to support decisions, not completely replace human thinking.",
+  "createdAt": {
+    "$date": "2026-04-09T17:24:07.771Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T17:24:07.771Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d7e7b76469458c6f920223"
+  },
+  "firstName": "Oluwaseyi",
+  "lastName": "Likinyo",
+  "email": "oluwaseyilikinyo0@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Lolly essentials ",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is its potential for misuse  especially the spread of misinformation, bias in decision-making and job displacement without adequate reskilling support. I believe responsible development, ethical governance, and inclusive access are essential to ensure AI benefits society rather than deepening existing inequalities.",
+  "createdAt": {
+    "$date": "2026-04-09T17:53:59.927Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T17:53:59.927Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d807f86469458c6f920391"
+  },
+  "firstName": "Uduak",
+  "lastName": "Peter",
+  "email": "uduakpeternelson@gmail.com",
+  "role": "Other",
+  "companyName": "Independent",
+  "country": "Nigeria",
+  "concerns": "My main concern is how rapidly AI is changing the skills needed to stay relevant. I want to understand how to adapt effectively by combining AI tools with strong problem-solving and design thinking skills.",
+  "createdAt": {
+    "$date": "2026-04-09T20:11:36.006Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T20:11:36.006Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8086f6469458c6f920394"
+  },
+  "firstName": "Ebenezer",
+  "lastName": "Oluyemi",
+  "email": "updateyommy@gmail.com",
+  "role": "University Student",
+  "companyName": "No company ",
+  "country": "Nigeria",
+  "concerns": "Developing robust safety protocols, ensuring human in the loop oversight, and prioritizing transparency in how models are trained and deployed.",
+  "createdAt": {
+    "$date": "2026-04-09T20:13:35.660Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T20:13:35.660Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8ad00f625e5d1a911777a"
+  },
+  "firstName": "Damilola ",
+  "lastName": "Daniyan",
+  "email": "damilolafunbi99@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Not applicable ",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is the risk of over reliance and inaccurate information. If not used carefully, it can produce misleading results, and people may trust it without proper verification. I’m also concerned about how it can reduce critical thinking if people depend on it too much instead of doing their own research and analysis.\n\nThat’s why I believe it’s important to use AI responsibly and always verify information before relying on it.\n",
+  "createdAt": {
+    "$date": "2026-04-10T07:55:44.285Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T07:55:44.285Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8b797f625e5d1a9117860"
+  },
+  "firstName": "AbdulGafar",
+  "lastName": "Abiose",
+  "email": "habdulgaphar@gmail.com",
+  "role": "Other",
+  "companyName": "Imaansoft Solutions",
+  "country": "Nigeria",
+  "concerns": "I want to learn how to direct and use AI on my job and not it sending me off my job",
+  "createdAt": {
+    "$date": "2026-04-10T08:40:55.465Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T08:40:55.465Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8c251f625e5d1a91179ba"
+  },
+  "firstName": "Egede ",
+  "lastName": "Precious ",
+  "email": "egedep9@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Revelation Medicals ",
+  "country": "Nigeria",
+  "concerns": "Ai has become the leading technology. \n\nI'm interested in AI because of the opportunities it offers me in my career journey as a health analyst ",
+  "createdAt": {
+    "$date": "2026-04-10T09:26:41.284Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T09:26:41.284Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8cd15f625e5d1a9117a6a"
+  },
+  "firstName": "Shekinah",
+  "lastName": "Sadiq",
+  "email": "tollysadiq@gmail.com",
+  "role": "Other",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "How to control and use AI effectively",
+  "createdAt": {
+    "$date": "2026-04-10T10:12:37.365Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T10:12:37.365Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8e342f625e5d1a9117bd6"
+  },
+  "firstName": "Emmanuel",
+  "lastName": "Achugo",
+  "email": "achugoemmanuel18@gmail.com",
+  "role": "Career Professional",
+  "companyName": "N/A",
+  "country": "Nigeria",
+  "concerns": "How AI will impact job opportunities and how to stay relevant by building the right skills to work alongside AI in data and business roles.",
+  "createdAt": {
+    "$date": "2026-04-10T11:47:14.326Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T11:47:14.326Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d8f459f625e5d1a9117caa"
+  },
+  "firstName": "Abigail",
+  "lastName": "Apute",
+  "email": "aputeabigail1007@gmail.com",
+  "role": "University Student",
+  "companyName": "None",
+  "country": "Nigeria",
+  "concerns": "Relational dependency on AI",
+  "createdAt": {
+    "$date": "2026-04-10T13:00:09.625Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T13:00:09.625Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d9058ef625e5d1a9117ddb"
+  },
+  "firstName": "Christopher",
+  "lastName": "Emah",
+  "email": "intellectsmartestemah@gmail.com",
+  "role": "University Student",
+  "companyName": "National Open University of Nigeria",
+  "country": "Nigeria",
+  "concerns": "What I am most concerned about when it comes to AI isn’t the technology itself, but how it’s applied. For example, I am worried that AI may be abused or over-relied upon in contexts such as education, where critical thinking and creativity could potentially be limited, as a result of AI replacing the learning experience instead of enhancing it.\n\nI also have concerns about the privacy of data and the bias that’s inherent in AI technologies; decisions made based on false or biased information can have adverse effects on individuals and entire communities.\n\nHowever, I’m convinced that AI can offer valuable tools to improve our efficiency, expand learning possibilities, and create opportunities in the fields such as remote working and education, if and only when used appropriately.\n\nThat’s why I’m keen to gain knowledge on how to apply AI skillfully, ethically, and productively to various real-world situations and how this webinar can support my understanding of AI tools in application.",
+  "createdAt": {
+    "$date": "2026-04-10T14:13:34.338Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T14:13:34.338Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d918b1f625e5d1a9117e8f"
+  },
+  "firstName": "Timothy",
+  "lastName": "Adepegba",
+  "email": "timothyadepegba06@gmail.com",
+  "role": "Other",
+  "companyName": "NYSC",
+  "country": "Nigeria",
+  "concerns": "My biggest concern is that AI is like a GPS that moves at a thousand miles per hour but sometimes points you off a cliff. In pharmaceutical science, we cannot afford to be wrong even once. AI is great at making guesses, but those guesses can be biologically impossible. I worry that we might trust the machine too much and skip the slow, careful human testing that actually saves lives.",
+  "createdAt": {
+    "$date": "2026-04-10T15:35:14.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T15:35:14.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d91f08f625e5d1a9117eb8"
+  },
+  "firstName": "Ezekiel Moyinoluwa Deborah",
+  "lastName": "Ezekiel Moyinoluwa Deborah",
+  "email": "moyinoluwaezekiel72@gmail.com",
+  "role": "University Student",
+  "companyName": "Crawford University",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is how it can be misused if it’s not developed and applied responsibly. For example, issues like misinformation, bias in algorithms, and data privacy can have real impacts on people and society. I’m also mindful of how over-reliance on AI could reduce critical thinking if people stop questioning outputs.\n\nThat said, I don’t see AI as something to fear, but something to manage carefully. I believe the key is building AI systems that are transparent, fair, and aligned with human values. As a developer, I think it’s important to use AI as a tool to enhance human work rather than replace human judgment.",
+  "createdAt": {
+    "$date": "2026-04-10T16:02:16.207Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T16:02:16.207Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69d9e7ecf625e5d1a91181f8"
+  },
+  "firstName": "Chimara Chibugo ",
+  "lastName": "Esther ",
+  "email": "chimarachibugoesther@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Star Graphics NG",
+  "country": "Nigeria",
+  "concerns": "As a creative, I’m concerned about how AI could lead to over-saturation of generic or repetitive content. When everyone has access to the same tools, there’s a risk that originality and unique creative voices might get diluted. I also think it raises questions around ownership and intellectual property.",
+  "createdAt": {
+    "$date": "2026-04-11T06:19:24.369Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-11T06:19:24.369Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69da0087f625e5d1a9118229"
+  },
+  "firstName": "Haruna",
+  "lastName": "Ademoye ",
+  "email": "ademoyeharuna@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Humility Hub",
+  "country": "Nigeria",
+  "concerns": "Its astonishing power of uncertainty and uneded possibilities.",
+  "createdAt": {
+    "$date": "2026-04-11T08:04:23.810Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-11T08:04:23.810Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dbacbff625e5d1a9118729"
+  },
+  "firstName": "Ayodeji ",
+  "lastName": "Osinusi ",
+  "email": "ayodejiokiki2@gmail.com",
+  "role": "Career Professional",
+  "companyName": "DataVerse Africa ",
+  "country": "Nigeria",
+  "concerns": "It's constant transformation and improvement ",
+  "createdAt": {
+    "$date": "2026-04-12T14:31:27.944Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-12T14:31:27.944Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dce5f3f625e5d1a9118cc7"
+  },
+  "firstName": "Praise",
+  "lastName": "Ekwueme",
+  "email": "praiseemmanuel026@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Crown and Essence",
+  "country": "Nigeria",
+  "concerns": "The most significant concerns regarding AI include the amplification of societal bias, massive job displacement, and the rapid spread of misinformation. Other top concerns involve AI-powered cybersecurity threats, loss of data privacy, lack of transparency in decision-making, and the erosion of critical thinking skills.",
+  "createdAt": {
+    "$date": "2026-04-13T12:47:47.080Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T12:47:47.080Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1bcff625e5d1a9118e87"
+  },
+  "firstName": "Olaide",
+  "lastName": "Opaleke",
+  "email": "opalekeolaide473@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Talent Pop",
+  "country": "Nigeria",
+  "concerns": "Its usage in upskilling and efficiency.",
+  "createdAt": {
+    "$date": "2026-04-13T16:37:35.399Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:37:35.399Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1bd7f625e5d1a9118e8e"
+  },
+  "firstName": "Thomas",
+  "lastName": "Ogunmakinju",
+  "email": "gunmakinthomas7@gmail.com",
+  "role": "Career Professional",
+  "companyName": "No job for now",
+  "country": "Nigeria",
+  "concerns": "To apply Ai in my field ",
+  "createdAt": {
+    "$date": "2026-04-13T16:37:43.853Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:37:43.853Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1bf4f625e5d1a9118e91"
+  },
+  "firstName": "Idris ",
+  "lastName": "Dahiru Ak",
+  "email": "idrisakdahiru@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Moniepoint MFB ",
+  "country": "Nigeria",
+  "concerns": "Data extraction ",
+  "createdAt": {
+    "$date": "2026-04-13T16:38:12.413Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:38:12.413Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1bf5f625e5d1a9118e94"
+  },
+  "firstName": "tamera",
+  "lastName": "okafor",
+  "email": "tamydmaestra@gmail.com",
+  "role": "Other",
+  "companyName": "METSORA LTD",
+  "country": "Nigeria",
+  "concerns": "The Opportunities.",
+  "createdAt": {
+    "$date": "2026-04-13T16:38:13.940Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:38:13.940Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1bf9f625e5d1a9118e97"
+  },
+  "firstName": "Micheal",
+  "lastName": "Alesari",
+  "email": "alesarimicheal@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Quevedo International Limited",
+  "country": "Nigeria",
+  "concerns": "The data privacy of users data to AI and it's restrictions",
+  "createdAt": {
+    "$date": "2026-04-13T16:38:17.480Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:38:17.480Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1c2af625e5d1a9118e9a"
+  },
+  "firstName": "Mmenyeneabasi",
+  "lastName": "Akpan",
+  "email": "mmenyeabasi@gmail.com",
+  "role": "Career Professional",
+  "companyName": "TotalEnergies Nigeria PLC",
+  "country": "Nigeria",
+  "concerns": "Critical thinking and algorithm",
+  "createdAt": {
+    "$date": "2026-04-13T16:39:06.380Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:39:06.380Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1c5cf625e5d1a9118ea6"
+  },
+  "firstName": "Liberty",
+  "lastName": "Edwin",
+  "email": "libertyedwin947@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "I want to be knowledgeable about AI and it's applications. It's a skill that comes in need at the present age",
+  "createdAt": {
+    "$date": "2026-04-13T16:39:56.960Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:39:56.960Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1c6af625e5d1a9118eaa"
+  },
+  "firstName": "Idowu",
+  "lastName": "Apara",
+  "email": "aparaidowu123@gmail.com",
+  "role": "Other",
+  "companyName": "NIL",
+  "country": "Nigeria",
+  "concerns": "My main concern is how AI will reshape the workforce and the need for continuous upskilling so people and businesses can adapt without being left behind.",
+  "createdAt": {
+    "$date": "2026-04-13T16:40:10.325Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:40:10.325Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1ca4f625e5d1a9118f00"
+  },
+  "firstName": "Chinwendu Treasure",
+  "lastName": "Emele",
+  "email": "chinwenduemele02@gmail.com",
+  "role": "Other",
+  "companyName": "Tobams group ",
+  "country": "Nigeria",
+  "concerns": "How it is revolving and how individuals misuse AI in our current time and age",
+  "createdAt": {
+    "$date": "2026-04-13T16:41:08.323Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:41:08.323Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1cd1f625e5d1a9118f39"
+  },
+  "firstName": "Evi",
+  "lastName": "Urevbu ",
+  "email": "urevburobert@gmail.com",
+  "role": "Other",
+  "companyName": "Eval flow",
+  "country": "Nigeria",
+  "concerns": "If A.I will truly replace workers and if so i will love to be an ai specialist ",
+  "createdAt": {
+    "$date": "2026-04-13T16:41:53.689Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:41:53.689Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1cd7f625e5d1a9118f3e"
+  },
+  "firstName": "Oluwatosin",
+  "lastName": "Oshingbade",
+  "email": "oshingbadeoluwatosin@gmail.com",
+  "role": "University Student",
+  "companyName": "To answer",
+  "country": "Nigeria",
+  "concerns": "It’s abilities ",
+  "createdAt": {
+    "$date": "2026-04-13T16:41:59.204Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:41:59.204Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd1fa7f625e5d1a91190ec"
+  },
+  "firstName": "Gracious ",
+  "lastName": "Kingsley ",
+  "email": "joelwendy36@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Genesys Tech Hub",
+  "country": "Nigeria",
+  "concerns": "I love how AI is changing the course of things in the world and work space. AI helps in content writing, design any thing, everything. ",
+  "createdAt": {
+    "$date": "2026-04-13T16:53:59.752Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:53:59.752Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd2085f625e5d1a911916e"
+  },
+  "firstName": "Jude ",
+  "lastName": "Ogwu",
+  "email": "judechinedu96@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Judec",
+  "country": "Nigeria",
+  "concerns": "The seamless work it provide",
+  "createdAt": {
+    "$date": "2026-04-13T16:57:41.543Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:57:41.543Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd219bf625e5d1a91191ba"
+  },
+  "firstName": "Kehinde",
+  "lastName": "Afolayan",
+  "email": "tosinafols12@gmail.com",
+  "role": "Other",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "Leveraging on it, Coz AI has come to stay",
+  "createdAt": {
+    "$date": "2026-04-13T17:02:19.842Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T17:02:19.842Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd23e2f625e5d1a9119258"
+  },
+  "firstName": "Onyinyechi",
+  "lastName": "Onwukamuche",
+  "email": "lynda.onyin@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Onwukamuche Onyinyechi Lynda",
+  "country": "Nigeria",
+  "concerns": "The rise of deepfakes and AI generated misinformation is a significant concerns. The ability to create highly convincing but false content makes it increasingly difficult to verify information , which can have serious implications for public discourse and digital security",
+  "createdAt": {
+    "$date": "2026-04-13T17:12:02.190Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T17:12:02.190Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd26b0f625e5d1a91192bf"
+  },
+  "firstName": "Titilayo ",
+  "lastName": "Abdulaziz-Bada",
+  "email": "titilayoabdulazizbada@gmail.com",
+  "role": "Other",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI, is it's ability answer virtually all questions even if it's wrong. It always has answers for everything ",
+  "createdAt": {
+    "$date": "2026-04-13T17:24:00.667Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T17:24:00.667Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dd4f45f625e5d1a91195c6"
+  },
+  "firstName": "Jonathan",
+  "lastName": "Egbe",
+  "email": "egbe.jonathan@yahoo.com",
+  "role": "Other",
+  "companyName": "Oyi International Express",
+  "country": "Nigeria",
+  "concerns": "The misuse of AI and the spread of misinformation.",
+  "createdAt": {
+    "$date": "2026-04-13T20:17:09.308Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T20:17:09.308Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dde6def625e5d1a91197aa"
+  },
+  "firstName": "Onyeka ",
+  "lastName": "CORNELIUS",
+  "email": "corlchiawazie1@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Conet innovation Technology ",
+  "country": "Nigeria",
+  "concerns": "Ai Video creation",
+  "createdAt": {
+    "$date": "2026-04-14T07:03:58.274Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T07:03:58.274Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ddf50ef625e5d1a9119971"
+  },
+  "firstName": "Aisha",
+  "lastName": "Hamza",
+  "email": "hamzaaisha798@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Zuri Trybe Concepts",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is how quickly it is changing the definition of value in the workplace. It’s not just about automation of tasks, but the possibility of skills becoming outdated faster than people can adapt. Many professionals may not even realize this shift is happening until they begin to feel its impact on their roles and opportunities.\n\nI’m also concerned about the gap between being AI-aware and truly AI-ready. While many people know about AI, fewer understand how to integrate it into their workflows or use it to enhance decision-making and productivity. This gap could create inequality in career growth and opportunities.\n\nHowever, beyond the concern, I see it as a call to evolve. It pushes me to be more intentional about continuous learning, adaptability, and developing skills like analytical thinking, problem-solving, and systems thinking that remain valuable even as technology advances.",
+  "createdAt": {
+    "$date": "2026-04-14T08:04:30.371Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T08:04:30.371Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de04edf625e5d1a9119d68"
+  },
+  "firstName": "Ifeanyi",
+  "lastName": "Simeon",
+  "email": "ifeanyisimeon22@gmail.com",
+  "role": "Other",
+  "companyName": "Job seeker",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is not the technology itself, but how it’s used and understood.\n\nI worry about a world where people rely on it too quickly, without pausing to question the results. When decisions are driven by outputs that aren’t fully understood, the risk isn’t just error. It’s misplaced confidence.\n\nI’m also concerned about the quality of the data behind it. If the input is biased, incomplete, or poorly structured, the insights can be misleading, no matter how advanced the system is.\n\nAt the core, my concern is clarity; making sure AI supports thoughtful decision-making rather than replacing it.",
+  "createdAt": {
+    "$date": "2026-04-14T09:12:13.766Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T09:12:13.766Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de08eff625e5d1a9119d95"
+  },
+  "firstName": "Oluwatofunmi",
+  "lastName": "Akinlolu.",
+  "email": "tofunmiakinlolu@gmail.com",
+  "role": "University Student",
+  "companyName": "Fortis",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is the risk of over-reliance, ethical issues like data privacy and bias, and potential job displacement. I believe AI should be used responsibly to support human decision-making, not replace it.",
+  "createdAt": {
+    "$date": "2026-04-14T09:29:19.534Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T09:29:19.534Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de1a9df625e5d1a9119e67"
+  },
+  "firstName": "Sulaimon",
+  "lastName": "Afolabi Olanrewaju",
+  "email": "softgraphicstudio@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Soft Graphic Studio",
+  "country": "Nigeria",
+  "concerns": "Leverage Income ",
+  "createdAt": {
+    "$date": "2026-04-14T10:44:45.106Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T10:44:45.106Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de1bc2f625e5d1a9119e72"
+  },
+  "firstName": "Samuel",
+  "lastName": "Owadokun",
+  "email": "owadokunsamuel350@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Self Employed",
+  "country": "Nigeria",
+  "concerns": "the dynamism, its ability to learn and strategy.",
+  "createdAt": {
+    "$date": "2026-04-14T10:49:38.015Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T10:49:38.015Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6bb8f625e5d1a911a7e7"
+  },
+  "firstName": "Deborah",
+  "lastName": "Alabi",
+  "email": "alabideborahlove@gmail.com",
+  "role": "Career Professional",
+  "companyName": "FMDQ",
+  "country": "Nigeria",
+  "concerns": "How to use AI to improve my productivity ",
+  "createdAt": {
+    "$date": "2026-04-14T16:30:48.312Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:30:48.312Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6bbbf625e5d1a911a7ea"
+  },
+  "firstName": "Lydia ",
+  "lastName": "Azide ",
+  "email": "lydiaazide@yahoo.com",
+  "role": "Other",
+  "companyName": "NIl",
+  "country": "Nigeria",
+  "concerns": "How it evolves and catching up with them",
+  "createdAt": {
+    "$date": "2026-04-14T16:30:51.859Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:30:51.859Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6be9f625e5d1a911a7ee"
+  },
+  "firstName": "Oladimeji",
+  "lastName": "Odeyemi",
+  "email": "oladimejidaniel261@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Benix Technology",
+  "country": "Nigeria",
+  "concerns": "The best way to keep up with updates due to how fast AI is growing. ",
+  "createdAt": {
+    "$date": "2026-04-14T16:31:37.040Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:31:37.040Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6c29f625e5d1a911a7fd"
+  },
+  "firstName": "Nofisat",
+  "lastName": "Ibrahim",
+  "email": "inofisat5@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Ibrahim Nofisat",
+  "country": "Nigeria",
+  "concerns": "How to balance using AI and making sure I learn and not just be mediocre",
+  "createdAt": {
+    "$date": "2026-04-14T16:32:41.193Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:32:41.193Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6c2ff625e5d1a911a803"
+  },
+  "firstName": "Nnamdi",
+  "lastName": "Etumnu",
+  "email": "etumnukelvin@gmail.com",
+  "role": "Career Professional",
+  "companyName": "None",
+  "country": "Nigeria",
+  "concerns": "I want to build an AI company, ",
+  "createdAt": {
+    "$date": "2026-04-14T16:32:47.554Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:32:47.554Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6c3bf625e5d1a911a808"
+  },
+  "firstName": "Adanna",
+  "lastName": "Nwogu",
+  "email": "nwoguadanna85@gmail.com",
+  "role": "Other",
+  "companyName": "Unemployed",
+  "country": "Nigeria",
+  "concerns": "To what extent do you think the use of AI is admissible in different sectors?",
+  "createdAt": {
+    "$date": "2026-04-14T16:32:59.753Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:32:59.753Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6c3cf625e5d1a911a80b"
+  },
+  "firstName": "Oyinkansola ",
+  "lastName": "Odunsi ",
+  "email": "oyinkansolaodunsi23@gmail.com",
+  "role": "Other",
+  "companyName": "Koyn",
+  "country": "Nigeria",
+  "concerns": "I'm impressed about how AI makes everyday tasks easier for me. But I am concerned about how it sometimes hallucinates and shares inaccurate information. ",
+  "createdAt": {
+    "$date": "2026-04-14T16:33:00.451Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:33:00.451Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6c8ff625e5d1a911a833"
+  },
+  "firstName": "Marvellous ",
+  "lastName": "Majaroola ",
+  "email": "majaroola.m@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Trinixbyte Solutions",
+  "country": "Nigeria",
+  "concerns": "Positioning myself rightly to maximize the growth and expansion of AI to scale my skills effectiveness",
+  "createdAt": {
+    "$date": "2026-04-14T16:34:23.162Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:34:23.162Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6cd3f625e5d1a911a844"
+  },
+  "firstName": "Stephen ",
+  "lastName": "Oluwaseun ",
+  "email": "oladipupos052@gmail.com",
+  "role": "University Student",
+  "companyName": "Neolife international",
+  "country": "Nigeria",
+  "concerns": "How they solve human problems without being feed or giving too much instructions to them.",
+  "createdAt": {
+    "$date": "2026-04-14T16:35:31.719Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:35:31.719Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6ce5f625e5d1a911a84d"
+  },
+  "firstName": "ESTHER",
+  "lastName": "AYODELE",
+  "email": "estherayodele10@gmail.com",
+  "role": "Other",
+  "companyName": "Nil",
+  "country": "Nigeria",
+  "concerns": "As a future business analyst, I think it’s important to ensure data used in AI is accurate and fair.",
+  "createdAt": {
+    "$date": "2026-04-14T16:35:49.573Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:35:49.573Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de6dfdf625e5d1a911a8a5"
+  },
+  "firstName": "Christiana",
+  "lastName": "Banjo",
+  "email": "christianabanjo983@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Eterna Plc",
+  "country": "Nigeria",
+  "concerns": "Research ",
+  "createdAt": {
+    "$date": "2026-04-14T16:40:29.398Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T16:40:29.398Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69de781ef625e5d1a911aa94"
+  },
+  "firstName": "Samson",
+  "lastName": "Moradeyo",
+  "email": "samsonmoradeyo@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Frontend developer ",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is how it can be misused or applied without proper oversight. Issues like biased decision-making, misinformation, and over-reliance on AI systems can have real-world consequences if not carefully managed. I’m also concerned about how AI might impact jobs, especially for people who don’t have access to upskilling opportunities.\nAt the same time, I see AI as a powerful tool, so I think the focus should be on responsible development, transparency, and ensuring people are equipped with the skills to work alongside it.",
+  "createdAt": {
+    "$date": "2026-04-14T17:23:42.792Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T17:23:42.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69df5962f625e5d1a911b29e"
+  },
+  "firstName": "Abdulrasheed",
+  "lastName": "Aminu",
+  "email": "aminuabdulrasheed055@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Excel Netware Technologies",
+  "country": "Nigeria",
+  "concerns": "I want to learn how to apply it in my professional career, Thanks for this",
+  "createdAt": {
+    "$date": "2026-04-15T09:24:50.286Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-15T09:24:50.286Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69df5a95f625e5d1a911b2b9"
+  },
+  "firstName": "Bolaji",
+  "lastName": "Onatunde",
+  "email": "onatunde.samuel@gmail.com",
+  "role": "University Student",
+  "companyName": "Bsonatunde",
+  "country": "Nigeria",
+  "concerns": "Technology",
+  "createdAt": {
+    "$date": "2026-04-15T09:29:57.864Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-15T09:29:57.864Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69df5ba2f625e5d1a911b2e1"
+  },
+  "firstName": "Eniola",
+  "lastName": "Saliu",
+  "email": "eniolaolashile@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Cleaner Vibe LLC",
+  "country": "Russia",
+  "concerns": "The world is evolving, and so are the in-demand skills. I'm looking to leverage AI in my work.",
+  "createdAt": {
+    "$date": "2026-04-15T09:34:26.966Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-15T09:34:26.966Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69df5c7df625e5d1a911b309"
+  },
+  "firstName": "Oghenefejiro",
+  "lastName": "Bazunu",
+  "email": "odihandchi@gmail.com",
+  "role": "Entrepreneur",
+  "companyName": "Odihandchi Medical Supplies Limited",
+  "country": "Nigeria",
+  "concerns": "It aids my WorkFlow a lot and I would like to learn more about using it responsibly as well as know more benefits I can derive from using AI",
+  "createdAt": {
+    "$date": "2026-04-15T09:38:05.351Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-15T09:38:05.351Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69df60ccf625e5d1a911b344"
+  },
+  "firstName": "Unyime",
+  "lastName": "Iniunam",
+  "email": "unyimeiniunam@gmail.com",
+  "role": "University Student",
+  "companyName": "None ",
+  "country": "Nigeria",
+  "concerns": "I love AI, playing with AI tools, prompting and all. Looking a build a career in AI",
+  "createdAt": {
+    "$date": "2026-04-15T09:56:28.966Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-15T09:56:28.966Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69df8048f625e5d1a911b470"
+  },
+  "firstName": "Birtukan",
+  "lastName": "Kefyalew",
+  "email": "birtukan2017@gmail.com",
+  "role": "Other",
+  "companyName": "Truemind",
+  "country": "Ethiopia",
+  "concerns": "AI is very helpful for improving productivity, but I believe it should always be used responsibly.",
+  "createdAt": {
+    "$date": "2026-04-15T12:10:48.814Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-15T12:10:48.814Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69dfde72f625e5d1a911b682"
+  },
+  "firstName": "Pelumi",
+  "lastName": "Ogunleye",
+  "email": "ogunleyepelumi123@gmail.com",
+  "role": "University Student",
+  "companyName": "Tobams group",
+  "country": "Nigeria",
+  "concerns": "Using AI to build real scalable products and solve problems",
+  "createdAt": {
+    "$date": "2026-04-15T18:52:34.071Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-15T18:52:34.071Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69e08abbf625e5d1a911bba1"
+  },
+  "firstName": "Funmilayo",
+  "lastName": "Oba",
+  "email": "funmilayo.oba@outlook.com",
+  "role": "Career Professional",
+  "companyName": "Freelancing",
+  "country": "Nigeria",
+  "concerns": "How i can maximize AI to optimize my work rather AI replacing me.",
+  "createdAt": {
+    "$date": "2026-04-16T07:07:39.993Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-16T07:07:39.993Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69e115aaf625e5d1a911c1dc"
+  },
+  "firstName": "Sharon",
+  "lastName": "Scott",
+  "email": "srenee.scott@gmail.com",
+  "role": "Career Professional",
+  "companyName": "currently seeking employment",
+  "country": "United States",
+  "concerns": "My concern is keeping up with AI , and not being able to personally afford the \"new\" tools to learn at home.  I am currently unemployed but ready to re-enter the workforce after overcoming healthcare issues.  I've been upskilling to prepare myself for the AI world, but I am feeling overwhelmed.",
+  "createdAt": {
+    "$date": "2026-04-16T17:00:26.504Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-16T17:00:26.504Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69e267b2ccd68368ceb708b2"
+  },
+  "firstName": "Faith",
+  "lastName": "Umukoro",
+  "email": "ortegafaith.aan@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Adler Greenhouse Ltd",
+  "country": "Nigeria",
+  "concerns": "It can save time and boost productivity by handling repetitive tasks, helping you learn faster, and giving quick access to information.",
+  "createdAt": {
+    "$date": "2026-04-17T17:02:42.164Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-17T17:02:42.164Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69e37959ccd68368ceb70b33"
+  },
+  "firstName": "James",
+  "lastName": "Orji",
+  "email": "ignatiusorji@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Oars and D'Wind",
+  "country": "Nigeria",
+  "concerns": "How to ensure that ethical boundaries are maintained ",
+  "createdAt": {
+    "$date": "2026-04-18T12:30:17.445Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-18T12:30:17.445Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69e93a69532c943dc327e51d"
+  },
+  "firstName": "Matilda",
+  "lastName": "Njau",
+  "email": "njaumatildawanjiru@gmail.com",
+  "role": "Other",
+  "companyName": "KodeHauz",
+  "country": "Nigeria",
+  "concerns": "How to use it as a partner and not competitor",
+  "createdAt": {
+    "$date": "2026-04-22T21:15:21.776Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-22T21:15:21.776Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ea06cc532c943dc327e6ec"
+  },
+  "firstName": "Mariam",
+  "lastName": "Sodeke",
+  "email": "mariam.sodeke@tobamsgroup.com",
+  "role": "Career Professional",
+  "companyName": "Toba",
+  "country": "Nigeria",
+  "concerns": "The evolvement",
+  "createdAt": {
+    "$date": "2026-04-23T11:47:24.656Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-23T11:47:24.656Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ecdb9383176bf7276cb46a"
+  },
+  "firstName": "Toyeebah ",
+  "lastName": "Ogundele ",
+  "email": "ogundeletoyyeebah@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Al Mosruur Private School",
+  "country": "Nigeria",
+  "concerns": "One of my main concerns about AI is that, although it is very useful and easily accessible, it does not always give complete or accurate results.\n\nAlso, now that we are in the AI era, it is beginning to take over some human jobs, which is a concern because it may reduce opportunities for people.\n",
+  "createdAt": {
+    "$date": "2026-04-25T15:19:47.437Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-25T15:19:47.437Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69ecfa6c83176bf7276cb49b"
+  },
+  "firstName": "Fawaz",
+  "lastName": "Abdganiyu",
+  "email": "fawaz.abdganiyu@tobamsgroup.com",
+  "role": "Career Professional",
+  "companyName": "Tobams Group ",
+  "country": "Nigeria",
+  "concerns": "What worries me the most is how quickly AI is developing in a variety of fields and what the future holds for human intelligence.",
+  "createdAt": {
+    "$date": "2026-04-25T17:31:24.736Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-25T17:31:24.736Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f0ee3e8472df7899d39ab7"
+  },
+  "firstName": "Olanike ",
+  "lastName": "OLOW ",
+  "email": "nikeolanrewaju1@gmail.com",
+  "role": "Career Professional",
+  "companyName": "Self employed ",
+  "country": "Nigeria",
+  "concerns": "Responsible use of AI",
+  "createdAt": {
+    "$date": "2026-04-28T17:28:30.855Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-28T17:28:30.855Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8c49fb240ec4c89b97bd1"
+  },
+  "firstName": "CHIAWAZIE",
+  "lastName": "CORNELIUS",
+  "email": "corneliuschiawazie@gmail.com",
+  "role": "Other",
+  "companyName": "Not yet ",
+  "country": "Nigeria",
+  "concerns": "Video generation ",
+  "createdAt": {
+    "$date": "2026-05-04T16:09:03.687Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-04T16:09:03.687Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8c959b240ec4c89b97be7"
+  },
+  "firstName": "Praise",
+  "lastName": "Aremu",
+  "email": "moyosola662@gmail.com",
+  "role": "University Student",
+  "companyName": "Student ",
+  "country": "Nigeria",
+  "concerns": "What concerns me most about AI is its fast growth without enough awareness or regulation. I worry about misuse like misinformation, people relying on it too much, and unfair access that could increase inequality. Overall, I believe AI is useful but must be used responsibly.",
+  "createdAt": {
+    "$date": "2026-05-04T16:29:13.281Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-04T16:29:13.281Z"
+  },
+  "__v": 0
+}]

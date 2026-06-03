@@ -1,0 +1,416 @@
+[{
+  "_id": {
+    "$oid": "694144aff3a4e71b0c12a671"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "eventType": "Online",
+  "externalLink": "https://example.com/event-image.jpg",
+  "title": "Patience and Gratitude",
+  "description": "Join us for an exciting tech conference where industry leaders will discuss the latest trends and innovations in technology.",
+  "about": "A conference to discuss the latest trends in technology.",
+  "host": "Tobams Group",
+  "extra": "Join us on this journey toward a more sustainable, inclusive, and resilient future. Together, let's transform goals into action and make a lasting difference for generations to come.",
+  "eventsDetails": {
+    "About the Event: Patience and Gratitude": "Welcome to the Sustainable Development Goals (SDGs) event—an inspiring gathering dedicated to advancing global progress and fostering a shared commitment to sustainability. This event serves as a platform for collaboration, innovation, and dialogue, bringing together diverse stakeholders, thought leaders, and change-makers.",
+    "Key Highlights": [
+      "Insightful Discussions: Engage in thought-provoking conversations led by experts in sustainable development addressing current challenges and opportunities.",
+      "Innovative Solutions: Discover groundbreaking projects and solutions that align with the SDGs, driving positive change across various sectors.",
+      "Networking Opportunities: Connect with like-minded individuals, organizations, and influencers passionate about creating a sustainable future."
+    ]
+  },
+  "location": "Tech Convention Center, San Francisco, CA",
+  "isPaid": {
+    "status": true,
+    "currency": "$",
+    "price": 200
+  },
+  "timezone": "GMT + 3",
+  "interval": {
+    "start": {
+      "date": {
+        "$date": "2025-04-29T00:00:00.000Z"
+      },
+      "time": "09:00 AM"
+    },
+    "end": {
+      "date": {
+        "$date": "2025-04-30T00:00:00.000Z"
+      },
+      "time": "12:00 PM"
+    }
+  },
+  "image": "https://example.com/event-image.jpg",
+  "createdAt": {
+    "$date": "2025-12-16T11:38:23.362Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-16T11:38:23.362Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6941464bf3a4e71b0c12a67b"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "eventType": "Online",
+  "externalLink": "https://meet.google.com/ura-nkuo-fbj",
+  "title": "Technical Knowhow",
+  "description": "You'll learn how to join a google meet, share your screen, exit a google meet, play games in there and more.",
+  "about": "This event is the tehcnical know how for joining a google meet session",
+  "host": "New Things",
+  "extra": "Come with a heart to learn",
+  "eventsDetails": {
+    "Key Highlights": [
+      "Technical Session",
+      "Practical Session"
+    ],
+    "Why Attend": [
+      "One on One Session after class"
+    ]
+  },
+  "location": "Google meet",
+  "isPaid": {
+    "status": false,
+    "price": 0,
+    "currency": ""
+  },
+  "timezone": "GMT + 1",
+  "interval": {
+    "start": {
+      "date": {
+        "$date": "2025-12-24T00:00:00.000Z"
+      },
+      "time": "12:00 PM"
+    },
+    "end": {
+      "date": {
+        "$date": "2025-12-24T00:00:00.000Z"
+      },
+      "time": "01:00 PM"
+    }
+  },
+  "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1765885512207_ss_ch8.png",
+  "createdAt": {
+    "$date": "2025-12-16T11:45:15.097Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-16T13:06:02.093Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6942d61da00d4e4658c33860"
+  },
+  "userId": {
+    "$oid": "690c63fc45047c4e4030fee3"
+  },
+  "eventType": "Offline",
+  "externalLink": "https://www.google.com",
+  "title": "Workshop",
+  "description": "Innovative and Interesting",
+  "about": "Coding competition",
+  "host": "Ericsson",
+  "extra": "Competitive Event",
+  "eventsDetails": {
+    "Key Highlights": [
+      "Dev event",
+      "Innovative"
+    ],
+    "Why Attend": [
+      "Learn"
+    ]
+  },
+  "location": "Lagos, Nigeria",
+  "isPaid": {
+    "status": false,
+    "currency": "",
+    "price": 0
+  },
+  "timezone": "GMT + 1",
+  "interval": {
+    "start": {
+      "date": {
+        "$date": "2026-02-01T00:00:00.000Z"
+      },
+      "time": "08:30 AM"
+    },
+    "end": {
+      "date": {
+        "$date": "2026-06-01T00:00:00.000Z"
+      },
+      "time": "09:30 AM"
+    }
+  },
+  "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1765987866319_Sakuta.png",
+  "createdAt": {
+    "$date": "2025-12-17T16:11:09.037Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-17T16:11:09.037Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69456b05af239e8238541c89"
+  },
+  "userId": {
+    "$oid": "690c63fc45047c4e4030fee3"
+  },
+  "eventType": "Offline",
+  "externalLink": "https://www.google.com",
+  "title": "Tobams Hangout",
+  "description": "Come prepared",
+  "about": "Come test your coding skills",
+  "host": "Ericsson",
+  "extra": "Nil",
+  "eventsDetails": {
+    "Key Highlights": [
+      "Coding",
+      "Innovation"
+    ],
+    "Why Attend": [
+      "Insightful"
+    ]
+  },
+  "location": "Lagos, Nigeria",
+  "isPaid": {
+    "status": false,
+    "price": 0,
+    "currency": ""
+  },
+  "timezone": "GMT + 1",
+  "interval": {
+    "start": {
+      "date": {
+        "$date": "2026-02-01T00:00:00.000Z"
+      },
+      "time": "12:30 AM"
+    },
+    "end": {
+      "date": {
+        "$date": "2026-06-01T00:00:00.000Z"
+      },
+      "time": "03:30 AM"
+    }
+  },
+  "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1766157059186_Me.jpg",
+  "createdAt": {
+    "$date": "2025-12-19T15:11:01.742Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-19T15:12:26.616Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "695bb5dd079a9ac6eac8616d"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "eventType": "Offline",
+  "externalLink": "https://meet.google.com/ura-nkuo-fbj",
+  "title": "Testing",
+  "description": "Description",
+  "about": "About event",
+  "host": "New Things",
+  "extra": "Extra",
+  "eventsDetails": {
+    "Key Highlights": [
+      "none"
+    ],
+    "Why Attend": [
+      "none"
+    ]
+  },
+  "location": "Aguda, ogba",
+  "isPaid": {
+    "status": false,
+    "currency": "",
+    "price": 0
+  },
+  "timezone": "GMT + 1",
+  "interval": {
+    "start": {
+      "date": {
+        "$date": "2026-02-01T00:00:00.000Z"
+      },
+      "time": "12:30 PM"
+    },
+    "end": {
+      "date": {
+        "$date": "2026-02-01T00:00:00.000Z"
+      },
+      "time": "03:00 PM"
+    }
+  },
+  "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1767618010685_ss_ch10_2.png",
+  "createdAt": {
+    "$date": "2026-01-05T13:00:13.150Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-05T13:00:13.150Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "696a52cf6b4632601d56e587"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "eventType": "Offline",
+  "externalLink": "https://www.tobamsgroup.com",
+  "title": "Tobams Hangout",
+  "description": "Hangout for all tobams group members",
+  "about": "Hangout for all tobams group members",
+  "host": "New Things",
+  "extra": "Hangout for all tobams group members",
+  "eventsDetails": {
+    "Key Highlights": [
+      "Fun",
+      "Gist",
+      "Kahoot"
+    ],
+    "Why Attend": [
+      "Inovative",
+      "Educative"
+    ]
+  },
+  "location": "Sheffield, UK",
+  "isPaid": {
+    "status": false,
+    "currency": "",
+    "price": 0
+  },
+  "timezone": "GMT",
+  "interval": {
+    "start": {
+      "date": {
+        "$date": "2026-02-14T00:00:00.000Z"
+      },
+      "time": "10:00 AM"
+    },
+    "end": {
+      "date": {
+        "$date": "2026-02-14T00:00:00.000Z"
+      },
+      "time": "03:00 PM"
+    }
+  },
+  "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1768575693821_test-logo.jpeg",
+  "createdAt": {
+    "$date": "2026-01-16T15:01:35.967Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-16T15:01:35.967Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c550bdc0c69d505a1200d7"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "eventType": "Offline",
+  "externalLink": "https://meet.google.com/ura-nkuo-fbj",
+  "title": "Event",
+  "description": "Description",
+  "about": "About",
+  "host": "New Things",
+  "extra": "Info",
+  "eventsDetails": {
+    "Key Highlights": [
+      "Hughlights"
+    ],
+    "Why Attend": [
+      "Why"
+    ]
+  },
+  "location": "Lagos, Nigeria",
+  "isPaid": {
+    "status": false,
+    "currency": "",
+    "price": 0
+  },
+  "timezone": "GMT - 12",
+  "interval": {
+    "start": {
+      "date": {
+        "$date": "2025-05-03T00:00:00.000Z"
+      },
+      "time": "12:00 PM"
+    },
+    "end": {
+      "date": {
+        "$date": "2025-05-05T00:00:00.000Z"
+      },
+      "time": "06:00 PM"
+    }
+  },
+  "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1774538938485_ss_ch9_1.png",
+  "createdAt": {
+    "$date": "2026-03-26T15:29:01.079Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-26T15:29:01.079Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69cbe6b549efb29554af61af"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "eventType": "Offline",
+  "externalLink": "https:/www./link.com",
+  "title": "Testing Finale",
+  "description": "Description",
+  "about": "About",
+  "host": "New Things",
+  "extra": "Extra",
+  "eventsDetails": {
+    "Key Highlights": [
+      "Key",
+      "Highlights"
+    ],
+    "Why Attend": [
+      "Why",
+      "Attend"
+    ]
+  },
+  "location": "Lagos, Nigeria",
+  "isPaid": {
+    "status": false,
+    "currency": "",
+    "price": 0
+  },
+  "timezone": "GMT + 1",
+  "interval": {
+    "start": {
+      "date": {
+        "$date": "2026-05-04T00:00:00.000Z"
+      },
+      "time": "09:00 AM"
+    },
+    "end": {
+      "date": {
+        "$date": "2026-06-05T00:00:00.000Z"
+      },
+      "time": "04:30 PM"
+    }
+  },
+  "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1774970545258_ai-webinar.png",
+  "createdAt": {
+    "$date": "2026-03-31T15:22:29.045Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T15:22:29.045Z"
+  }
+}]

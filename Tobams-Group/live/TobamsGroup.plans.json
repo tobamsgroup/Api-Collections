@@ -1,0 +1,240 @@
+[{
+  "_id": {
+    "$oid": "688772e850412d1e84333088"
+  },
+  "name": "Free-trial",
+  "currency": "NGN",
+  "monthlyPrice": 0,
+  "annualPrice": 0,
+  "annualDiscount": "NaN%",
+  "features": {
+    "jobListingsPerMonth": 2,
+    "internshipListings": true,
+    "targetAudience": "Interns",
+    "talentPoolSearch": false,
+    "filteringTools": "None",
+    "featuredJobPromotions": 0,
+    "inAppMessaging": false,
+    "analyticsLevel": "None",
+    "teamMembersAllowed": 1,
+    "priorityListing": false,
+    "customerSupport": "Community"
+  },
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-28T12:54:00.150Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-28T12:54:00.150Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "688868c1dfaaaf49b8e6bceb"
+  },
+  "name": "Standard",
+  "currency": "GBP",
+  "monthlyPrice": 179,
+  "annualPrice": 1699,
+  "annualDiscount": "Save $449 (21%)",
+  "features": {
+    "jobListingsPerMonth": 30,
+    "internshipListings": true,
+    "targetAudience": "Both",
+    "talentPoolSearch": false,
+    "filteringTools": "Standard",
+    "featuredJobPromotions": 2,
+    "inAppMessaging": true,
+    "analyticsLevel": "Advanced",
+    "teamMembersAllowed": 5,
+    "priorityListing": true,
+    "customerSupport": "Priority Email"
+  },
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-29T06:22:57.330Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-29T06:22:57.330Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68886050fc5e5f12ac1ce94f"
+  },
+  "name": "Premium",
+  "currency": "NGN",
+  "monthlyPrice": 220000,
+  "annualPrice": 2000000,
+  "annualDiscount": "Save ₦640,000 (24%)",
+  "features": {
+    "jobListingsPerMonth": 1000,
+    "internshipListings": true,
+    "targetAudience": "Both",
+    "talentPoolSearch": false,
+    "filteringTools": "AI-Powered",
+    "featuredJobPromotions": 5,
+    "inAppMessaging": true,
+    "analyticsLevel": "Full + Export",
+    "teamMembersAllowed": 15,
+    "priorityListing": true,
+    "customerSupport": "Dedicated"
+  },
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-29T05:46:56.627Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T11:28:11.203Z"
+  },
+  "paymentProvider": {
+    "type": "paystack",
+    "details": {
+      "monthlyPlanId": "3578740",
+      "monthlyPlanCode": "PLN_9lebgut67x3jybr",
+      "lastSyncedAt": {
+        "$date": "2026-03-16T11:28:10.929Z"
+      }
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "688783b694a57ed0100af0ea"
+  },
+  "name": "Basic",
+  "currency": "NGN",
+  "monthlyPrice": 45000,
+  "annualPrice": 450000,
+  "annualDiscount": "Save ₦90,000 (17%)",
+  "features": {
+    "jobListingsPerMonth": 10,
+    "internshipListings": true,
+    "targetAudience": "Interns",
+    "talentPoolSearch": false,
+    "filteringTools": "Basic",
+    "featuredJobPromotions": 0,
+    "inAppMessaging": false,
+    "analyticsLevel": "None",
+    "teamMembersAllowed": 1,
+    "priorityListing": false,
+    "customerSupport": "Email"
+  },
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-28T14:05:42.925Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-12T13:53:40.280Z"
+  },
+  "paymentProvider": {
+    "type": "paystack",
+    "details": {
+      "monthlyPlanId": "3574134",
+      "monthlyPlanCode": "PLN_66a5htv3w7dczun",
+      "lastSyncedAt": {
+        "$date": "2026-03-12T13:53:39.992Z"
+      }
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "68885ef0fc5e5f12ac1ce94c"
+  },
+  "name": "Standard",
+  "currency": "NGN",
+  "monthlyPrice": 110000,
+  "annualPrice": 1050000,
+  "annualDiscount": "Save ₦270,000 (21%)",
+  "features": {
+    "jobListingsPerMonth": 30,
+    "internshipListings": true,
+    "targetAudience": "Both",
+    "talentPoolSearch": false,
+    "filteringTools": "Standard",
+    "featuredJobPromotions": 2,
+    "inAppMessaging": true,
+    "analyticsLevel": "Advanced",
+    "teamMembersAllowed": 5,
+    "priorityListing": true,
+    "customerSupport": "Priority Email"
+  },
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-29T05:41:04.966Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-12T16:29:53.989Z"
+  },
+  "paymentProvider": {
+    "type": "paystack",
+    "details": {
+      "monthlyPlanId": "3575136",
+      "monthlyPlanCode": "PLN_ljzxd54qcrzk707",
+      "lastSyncedAt": {
+        "$date": "2026-03-12T16:29:53.707Z"
+      }
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "688861b71e201b5806cc95a9"
+  },
+  "name": "Basic",
+  "currency": "GBP",
+  "monthlyPrice": 89,
+  "annualPrice": 899,
+  "annualDiscount": "Save $169 (16%)",
+  "features": {
+    "jobListingsPerMonth": 10,
+    "internshipListings": true,
+    "targetAudience": "Interns",
+    "talentPoolSearch": false,
+    "filteringTools": "Basic",
+    "featuredJobPromotions": 0,
+    "inAppMessaging": false,
+    "analyticsLevel": "None",
+    "teamMembersAllowed": 1,
+    "priorityListing": false,
+    "customerSupport": "Email"
+  },
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-29T05:52:55.980Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-29T05:52:55.980Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6888692edfaaaf49b8e6bcee"
+  },
+  "name": "Premium",
+  "currency": "GBP",
+  "monthlyPrice": 349,
+  "annualPrice": 3299,
+  "annualDiscount": "Save $889 (21%)",
+  "features": {
+    "jobListingsPerMonth": 1000,
+    "internshipListings": true,
+    "targetAudience": "Both",
+    "talentPoolSearch": false,
+    "filteringTools": "AI-Powered",
+    "featuredJobPromotions": 5,
+    "inAppMessaging": true,
+    "analyticsLevel": "Full + Export",
+    "teamMembersAllowed": 15,
+    "priorityListing": true,
+    "customerSupport": "Dedicated"
+  },
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-29T06:24:46.363Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-29T06:24:46.363Z"
+  }
+}]

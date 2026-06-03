@@ -1,0 +1,1260 @@
+[{
+  "_id": {
+    "$oid": "6801567d578019ddec349c70"
+  },
+  "userId": {
+    "$oid": "68015495578019ddec349c17"
+  },
+  "companyName": "Collindigson Group of Companies",
+  "title": "Machine Learning Developer",
+  "jobDescription": "Machine Learning Developer",
+  "contractType": "Full-time",
+  "location": "Remote",
+  "region": [
+    "Africa",
+    "Asia",
+    "Europe"
+  ],
+  "jobData": [
+    {
+      "Key Responsibilities": [
+        "Train our platform with your machine learning skills."
+      ]
+    },
+    {
+      "Benefits": [
+        "Learning and Free Health Insurance"
+      ]
+    }
+  ],
+  "extraText": "Machine Learning Developer Extra Text",
+  "applicationCount": 2,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 800000,
+  "salaryMaxRange": 1200000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2025-04-30",
+  "status": "Published",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-04-17T19:29:01.610Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-23T13:21:09.665Z"
+  },
+  "visibility": "All"
+},
+{
+  "_id": {
+    "$oid": "68015696578019ddec349c79"
+  },
+  "userId": {
+    "$oid": "68015495578019ddec349c17"
+  },
+  "companyName": "Collindigson Group of Companies",
+  "title": "Machine Learning Developer",
+  "jobDescription": "Machine Learning Developer",
+  "contractType": "Full-time",
+  "location": "Remote",
+  "region": [
+    "Africa",
+    "Asia",
+    "Europe"
+  ],
+  "jobData": [
+    {
+      "Key Responsibilities": [
+        "Train our platform with your machine learning skills."
+      ]
+    },
+    {
+      "Benefits": [
+        "Learning and Free Health Insurance"
+      ]
+    }
+  ],
+  "extraText": "Machine Learning Developer Extra Text",
+  "applicationCount": 1,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 800000,
+  "salaryMaxRange": 1200000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2025-04-30",
+  "status": "Published",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-04-17T19:29:26.857Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-23T14:30:17.698Z"
+  },
+  "visibility": "All"
+},
+{
+  "_id": {
+    "$oid": "686519c9d83df753df842146"
+  },
+  "userId": {
+    "$oid": "6865179998f0bca3fcb312ec"
+  },
+  "companyName": "Ite Ego International",
+  "title": " Senior Product Designer",
+  "jobDescription": " Design intuitive and elegant interfaces across web and mobile products. Lead design sprints, guide junior designers, and ensure user-centric approaches in all product features.",
+  "contractType": "Full-time",
+  "location": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [],
+  "extraText": "5+ years of experience in product design\nMastery of Figma, Sketch, Adobe XD\nStrong UX research capabilities\nExcellent collaboration and storytelling skills",
+  "applicationCount": 2,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 1300000,
+  "salaryMaxRange": 1800000,
+  "owner": "Client",
+  "duration": "3 - 6 Months",
+  "deadlineDate": "2025-07-25",
+  "status": "Published",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-07-02T11:36:41.964Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-12T18:54:29.787Z"
+  },
+  "visibility": "Interns"
+},
+{
+  "_id": {
+    "$oid": "68651a22d83df753df842167"
+  },
+  "userId": {
+    "$oid": "6865179998f0bca3fcb312ec"
+  },
+  "companyName": "Ite Ego International",
+  "title": "Senior Product Designer",
+  "jobDescription": " Design intuitive and elegant interfaces across web and mobile products. Lead design sprints, guide junior designers, and ensure user-centric approaches in all product features.\n",
+  "contractType": "Full-time",
+  "location": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [],
+  "extraText": "5+ years of experience in product design\nMastery of Figma, Sketch, Adobe XD\nStrong UX research capabilities\nExcellent collaboration and storytelling skills\n",
+  "applicationCount": 1,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 120000,
+  "salaryMaxRange": 1800000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2025-07-25",
+  "status": "Published",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-07-02T11:38:10.503Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-24T08:37:40.329Z"
+  },
+  "visibility": "Talents"
+},
+{
+  "_id": {
+    "$oid": "6939672aebee9f28afd74f71"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "companyName": "New Things",
+  "title": "Sales Manager",
+  "jobDescription": "You will manage sales",
+  "contractType": "Full-time",
+  "location": "Hybrid",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Business Development & Client Acquisition": [
+        "Develop and execute a comprehensive business development strategy to attract and onboard community governments, schools, universities, and corporations",
+        "Identify, engage, and negotiate partnerships with decision-makers, procurement officers, and key stakeholders in education and training sectors"
+      ]
+    },
+    {
+      "Sales Strategy & Revenue Growth": [
+        "Develop and maintain a strong sales pipeline, ensuring a consistent flow of new business opportunities.",
+        "Work closely with the finance and leadership teams to create customized pricing models for different client segments."
+      ]
+    },
+    {
+      "Performance Tracking and Reporting": [
+        "Work closely with the finance and leadership teams to create customized pricing models for different client segments"
+      ]
+    },
+    {
+      "Stakeholder Engagement and Relationship Management": [
+        "Build and maintain long-term relationships with key government officials, school administrators, university deans, corporate executives, and learning & development managers.",
+        "Establish strategic alliances with international organizations for global expansion."
+      ]
+    }
+  ],
+  "extraText": "Join us and Make an Impact! This is a rare opportunity to be at the forefront of educational innovation and sustainability-driven learning. If you are an ambitious, target-driven professional looking for high earning potential and the chance to drive real change in education, we would love to hear from you and can't wait to receive you!",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 250000,
+  "salaryMaxRange": 300000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-01-04",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-12-10T12:27:22.742Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-11T13:42:29.772Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693ac40ba15253f517fcef60"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "companyName": "New Things",
+  "title": "Chief Business Manager",
+  "jobDescription": "Just do your job",
+  "contractType": "Full-time",
+  "location": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Key Resposibilities": [
+        "Resposibilities",
+        "Resposibilities 2"
+      ]
+    },
+    {
+      "Overviewssssssssssssss": [
+        "Overview 1",
+        "Overview 2"
+      ]
+    }
+  ],
+  "extraText": "Extra text again and edited",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 350000,
+  "salaryMaxRange": 450000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-01-10",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-12-11T13:15:55.917Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-11T13:18:39.022Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693af131a15253f517fcf0b7"
+  },
+  "userId": {
+    "$oid": "692f062b96b1c0a661282679"
+  },
+  "companyName": "Olareign Cop",
+  "title": "Backend Developer",
+  "jobDescription": "Tobams Group is a global innovation and talent-development company dedicated to transforming how people learn, grow, and connect through AI-driven education, sustainability, and digital empowerment. The CTO will serve as the architect and innovation leader for all Tobams Group's technology initiatives. This role demands a bold, forward-thinking leader who can translate the company's ambitious vision into scalable, world-class digital solutions. You will drive AI strategy, technology architecture, platform scalability, and innovation culture across multiple business units - including Recycled Learning, Rare Eat, and other global projects. The ideal candidate will combine deep technical expertise with strategic leadership, a passion for AI in education, and the ability to build and manage high-performing global teams.",
+  "contractType": "Full-time",
+  "location": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Technology Vision & Leadership": [
+        "Define and execute Tobams Group's overall technology roadmap across AI, EdTech, sustainability, and data-driven learning ecosystems.",
+        "Build the long-term technology strategy that aligns with the company's mission to democratize access to quality learning globally.",
+        "Serve as the principal advisor to the CEO and executive team on emerging technologies, AI ethics, scalability, and innovation priorities.",
+        "Foster a culture of innovation, experimentation, and excellence within the technology and product teams."
+      ]
+    },
+    {
+      "Product & Platform Development": [
+        "Oversee the architecture, design, and deployment of AI-powered platforms, including Recycled Learning adaptive learning system, Recycled Learning for Kids (AI-augmented learning platform), Tobams Group dashboards and analytics tools, and Global Teacher Learning Management System (LMS).",
+        "Ensure all systems are scalable, secure, and data-driven, supporting millions of users globally.",
+        "Lead the integration of personalized learning algorithms, gamified experiences, and adaptive assessment engines."
+      ]
+    }
+  ],
+  "extraText": "Reports To: Chief Executive Officer (CEO). Department: Technology & Innovation. Future Potential: This role has the potential to evolve into a Co-Founder position for the right candidate, as Tobams Group continues to scale globally.",
+  "applicationCount": 1,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 250,
+  "salaryMaxRange": 100,
+  "owner": "Client",
+  "duration": "3 - 6 Months",
+  "deadlineDate": "2025-12-11",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-12-11T16:28:33.790Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-16T19:15:06.983Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693af64fa15253f517fcf1a6"
+  },
+  "userId": {
+    "$oid": "692f062b96b1c0a661282679"
+  },
+  "companyName": "Olareign Cop",
+  "title": "Chief Technology Officer ",
+  "jobDescription": "Tobams Group is a global innovation and talent-development company dedicated to transforming how people learn, grow, and connect through AI-driven education, sustainability, and digital empowerment. The CTO will serve as the architect and innovation leader for all Tobams Group's technology initiatives. This role demands a bold, forward-thinking leader who can translate the company's ambitious vision into scalable, world-class digital solutions. You will drive AI strategy, technology architecture, platform scalability, and innovation culture across multiple business units - including Recycled Learning, Rare Eat, and other global projects. The ideal candidate will combine deep technical expertise with strategic leadership, a passion for AI in education, and the ability to build and manage high-performing global teams.",
+  "contractType": "Part-time",
+  "location": "On-site",
+  "region": [
+    "Africa",
+    "Asia"
+  ],
+  "jobData": [
+    {
+      "Partnerships & Innovation Ecosystem": [
+        "Forge and manage strategic partnerships with AI labs, EdTech organizations, universities, and industry bodies.",
+        "Represent Tobams Group at conferences, innovation summits, and investor meetings as a technology thought leader."
+      ]
+    }
+  ],
+  "extraText": "Reports To: Chief Executive Officer (CEO). Department: Technology & Innovation. Future Potential: This role has the potential to evolve into a Co-Founder position for the right candidate, as Tobams Group continues to scale globally.",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "$",
+  "salaryMinRange": 100,
+  "salaryMaxRange": 200,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2025-12-11",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-12-11T16:50:23.109Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-11T16:50:23.109Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "694254f4a00d4e4658c33712"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "companyName": "New Things",
+  "title": "Test Job",
+  "jobDescription": "Test job description",
+  "contractType": "Contract",
+  "location": "Lagos, Nigeria",
+  "jobType": "On-site",
+  "region": [
+    "Africa",
+    "Europe"
+  ],
+  "jobData": [
+    {
+      "Responsibilities": [
+        "Responsibilities 1",
+        "Responsibilities 2"
+      ]
+    },
+    {
+      "Functions": [
+        "Functions 1",
+        "Functions 2"
+      ]
+    }
+  ],
+  "extraText": "Extra text here",
+  "applicationCount": 1,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 300000,
+  "salaryMaxRange": 350000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2025-12-29",
+  "status": "Published",
+  "visibility": "All",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-12-17T07:00:04.332Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-24T09:24:12.302Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69456564af239e8238541b15"
+  },
+  "userId": {
+    "$oid": "690c63fc45047c4e4030fee3"
+  },
+  "companyName": "Ericsson",
+  "title": "Backend & Frontend Developer",
+  "jobDescription": "hhhhhhhhhhhhhhhhh",
+  "contractType": "Full-time",
+  "location": "Lagos, Nigeria",
+  "jobType": "On-site",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "yyyyyyyyyyy": []
+    }
+  ],
+  "extraText": "hiiiiiiiiiiiiiiiiiiii",
+  "applicationCount": 4,
+  "postStatus": "Open",
+  "currencySymbol": "$",
+  "salaryMinRange": 200000,
+  "salaryMaxRange": 4000000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-02-02",
+  "status": "Published",
+  "visibility": "All",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-12-19T14:47:00.926Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-16T19:12:02.759Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "694569a1af239e8238541c39"
+  },
+  "userId": {
+    "$oid": "690c63fc45047c4e4030fee3"
+  },
+  "companyName": "Ericsson",
+  "title": "Fullstack Developer",
+  "jobDescription": "An experienced backend Developer",
+  "contractType": "Full-time",
+  "location": "Lagos, Nigeria",
+  "jobType": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Code Architecturing": []
+    },
+    {
+      "Write/Read Code": []
+    }
+  ],
+  "extraText": "Only experienced developers should apply",
+  "applicationCount": 3,
+  "postStatus": "Open",
+  "currencySymbol": "$",
+  "salaryMinRange": 200000,
+  "salaryMaxRange": 4000000,
+  "owner": "Client",
+  "duration": "1 - 3 Years",
+  "deadlineDate": "2026-02-02",
+  "status": "Published",
+  "visibility": "All",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2025-12-19T15:05:05.642Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T13:59:18.296Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69843782322a4beb7f584fd5"
+  },
+  "userId": {
+    "$oid": "690c63fc45047c4e4030fee3"
+  },
+  "companyName": "Ericsson",
+  "title": "Software Engineer",
+  "jobDescription": "Code",
+  "contractType": "Full-time",
+  "location": "Abuja, Nigeria",
+  "jobType": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [],
+  "extraText": "Apply",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "£",
+  "salaryMinRange": 20,
+  "salaryMaxRange": 5000000,
+  "owner": "Client",
+  "duration": "3+ Years",
+  "deadlineDate": "2027-02-02",
+  "status": "Published",
+  "visibility": "All",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-02-05T06:24:02.457Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-05T06:24:02.457Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6989fc1c4c122ff72e60a361"
+  },
+  "userId": {
+    "$oid": "6989a35f322a4beb7f585800"
+  },
+  "companyName": "Sa’eedah Group",
+  "title": "Business Analyst",
+  "jobDescription": "We need an experience business analyst who have and understand basic business analyst skills like Requirement Gathering, Stakeholder Engagement, Stakeholder Management, Process Mapping, Gap Analysis.",
+  "contractType": "Full-time",
+  "location": "United Kingdom",
+  "jobType": "Remote",
+  "region": [
+    "Europe"
+  ],
+  "jobData": [],
+  "extraText": "Nil",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "£",
+  "salaryMinRange": 50000,
+  "salaryMaxRange": 60000,
+  "owner": "Client",
+  "duration": "1 - 3 Years",
+  "deadlineDate": "2026-06-12",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-02-09T15:24:12.760Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T15:24:12.760Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a85cf2df4a0f3d42a301c9"
+  },
+  "userId": {
+    "$oid": "69a85adcdf4a0f3d42a30184"
+  },
+  "companyName": "Rlk",
+  "title": "Ceo",
+  "jobDescription": "To be very good at your job",
+  "contractType": "Full-time",
+  "location": "Lagos, Nigeria ",
+  "jobType": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [],
+  "extraText": "N/A",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 100000,
+  "salaryMaxRange": 150000,
+  "owner": "Client",
+  "duration": "3 - 6 Months",
+  "deadlineDate": "2026-09-08",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-04T16:25:22.643Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-04T16:25:22.643Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a899c5e5676a11c67b1060"
+  },
+  "userId": {
+    "$oid": "69a88af85c15203126248f2e"
+  },
+  "companyName": "Peace Launchpad",
+  "title": "Frontend Developer Intern",
+  "jobDescription": "About the Role:\n\nWe are looking for a motivated Front-End Developer Intern to join our team. You will work closely with our developers and designers to create responsive, user-friendly web applications while gaining hands-on experience in modern front-end development.",
+  "contractType": "Internship",
+  "location": "Singapore",
+  "jobType": "Hybrid",
+  "region": [
+    "Asia"
+  ],
+  "jobData": [
+    {
+      "Requirements:": [
+        "Basic knowledge of HTML, CSS, and JavaScript",
+        "Interest in front-end development and web technologies."
+      ]
+    }
+  ],
+  "extraText": "This is a test",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "$",
+  "salaryMinRange": 2000,
+  "salaryMaxRange": 10000,
+  "owner": "Client",
+  "duration": "3 - 6 Months",
+  "deadlineDate": "2026-10-02",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-04T20:44:53.653Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-04T20:51:59.685Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a900b0e5676a11c67b12d2"
+  },
+  "userId": {
+    "$oid": "69a83e6bf0accb322483371b"
+  },
+  "companyName": "DAVID CONSULTING",
+  "title": "Software Engineering Intern",
+  "jobDescription": "This is the description for an SWE Intern",
+  "contractType": "Internship",
+  "location": "Nigeria",
+  "jobType": "On-site",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Requirements": [
+        "Must know JavaScript"
+      ]
+    }
+  ],
+  "extraText": "This is a good internship.",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 50000,
+  "salaryMaxRange": 200000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-03-06",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-05T04:04:00.387Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-05T04:04:00.387Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a958d8e5676a11c67b1972"
+  },
+  "userId": {
+    "$oid": "69a84028f0accb3224833770"
+  },
+  "companyName": "THE WALTER GROUP",
+  "title": "Data Analyst",
+  "jobDescription": "Ability to use Excel and Power BI",
+  "contractType": "Contract",
+  "location": "Enugu",
+  "jobType": "Hybrid",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Works Monday to Saturday in a bank": []
+    }
+  ],
+  "extraText": "Have you worked with a company before?",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 360000,
+  "salaryMaxRange": 499999,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-02-04",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-05T10:20:08.360Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-05T10:20:08.360Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a99aebe5676a11c67b1b34"
+  },
+  "userId": {
+    "$oid": "69a7003ef0accb3224832c11"
+  },
+  "companyName": "Fawaz Advisory",
+  "title": "Devops Engineer",
+  "jobDescription": "Focus on infrastructure, deployment, security, and system reliability.",
+  "contractType": "Contract",
+  "location": "Oyo, Nigeria",
+  "jobType": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [],
+  "extraText": "Good communication skills is an added advantage ",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 150000,
+  "salaryMaxRange": 220000,
+  "owner": "Client",
+  "duration": "3 - 6 Months",
+  "deadlineDate": "2026-03-21",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-05T15:02:03.439Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-06T09:45:10.551Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69ae665ac4150aec38da69f9"
+  },
+  "userId": {
+    "$oid": "69a7003ef0accb3224832c11"
+  },
+  "companyName": "Fawaz Advisory",
+  "title": "Cloud Architect",
+  "jobDescription": "Focus on infrastructure, deployment, security, and system reliability.",
+  "contractType": "Contract",
+  "location": "Oyo State, Nigeria",
+  "jobType": "Hybrid",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [],
+  "extraText": "Good communication skills is an added advantage ",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "$",
+  "salaryMinRange": 200000,
+  "salaryMaxRange": 300000,
+  "owner": "Client",
+  "duration": "3 - 6 Months",
+  "deadlineDate": "2026-03-10",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-09T06:19:06.101Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-09T06:19:06.101Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69aea1ccc4150aec38da6df0"
+  },
+  "userId": {
+    "$oid": "69a98b22e5676a11c67b1a13"
+  },
+  "companyName": "Smart",
+  "title": "Project Manager",
+  "jobDescription": "Communication",
+  "contractType": "Full-time",
+  "location": "Lagos",
+  "jobType": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "CV": []
+    }
+  ],
+  "extraText": "An excellent experience Talent Is needed",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 500000,
+  "salaryMaxRange": 700000,
+  "owner": "Client",
+  "duration": "3 - 6 Months",
+  "deadlineDate": "2026-07-07",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-09T10:32:44.175Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-09T10:32:44.175Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69aea367c4150aec38da6e76"
+  },
+  "userId": {
+    "$oid": "69a98b22e5676a11c67b1a13"
+  },
+  "companyName": "Smart",
+  "title": "Product Manager",
+  "jobDescription": "An Awesome Manager",
+  "contractType": "Full-time",
+  "location": "London",
+  "jobType": "On-site",
+  "region": [
+    "North America"
+  ],
+  "jobData": [
+    {
+      "Cover Letter": []
+    }
+  ],
+  "extraText": "An Excellent",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "$",
+  "salaryMinRange": 150000,
+  "salaryMaxRange": 199995,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-05-22",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-09T10:39:35.976Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-09T10:39:35.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b28c64700560090278e05d"
+  },
+  "userId": {
+    "$oid": "69b28b8a700560090278dffa"
+  },
+  "companyName": "Bliss Tech",
+  "title": "Intern Developer",
+  "jobDescription": "intern developer",
+  "contractType": "Contract",
+  "location": "Lagos, Nigeria",
+  "jobType": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Responsibilities": [
+        "Write code",
+        "Read code"
+      ]
+    }
+  ],
+  "extraText": "None",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 250000,
+  "salaryMaxRange": 280000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-04-02",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-12T09:50:28.321Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-12T09:50:28.321Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b28cf2700560090278e11f"
+  },
+  "userId": {
+    "$oid": "69b28b8a700560090278dffa"
+  },
+  "companyName": "Bliss Tech",
+  "title": "Junior Developer",
+  "jobDescription": "Developer",
+  "contractType": "Full-time",
+  "location": "London, UK",
+  "jobType": "Remote",
+  "region": [
+    "Europe"
+  ],
+  "jobData": [
+    {
+      "Duties": [
+        "One duty",
+        "Another duty"
+      ]
+    }
+  ],
+  "extraText": "None",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "$",
+  "salaryMinRange": 500,
+  "salaryMaxRange": 700,
+  "owner": "Client",
+  "duration": "1 - 3 Years",
+  "deadlineDate": "2026-04-02",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-12T09:52:50.548Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-12T09:52:50.548Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c4ec31c778e78a80dc13cc"
+  },
+  "userId": {
+    "$oid": "69a98b22e5676a11c67b1a13"
+  },
+  "companyName": "Smart",
+  "title": "Testing",
+  "jobDescription": "Desciption",
+  "contractType": "Contract",
+  "location": "Lagos",
+  "jobType": "On-site",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Section": [
+        "One",
+        "Two"
+      ]
+    }
+  ],
+  "extraText": "Extra",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 500000,
+  "salaryMaxRange": 700000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-04-04",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-26T08:20:01.819Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-26T08:20:01.819Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c4ecb3c778e78a80dc14ca"
+  },
+  "userId": {
+    "$oid": "69a98b22e5676a11c67b1a13"
+  },
+  "companyName": "Smart",
+  "title": "Testing Again",
+  "jobDescription": "Description again",
+  "contractType": "Part-time",
+  "location": "Lagos",
+  "jobType": "On-site",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Section again": [
+        "One gain",
+        "Twi again"
+      ]
+    }
+  ],
+  "extraText": "Extra again",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 200000,
+  "salaryMaxRange": 300000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-04-04",
+  "status": "Published",
+  "visibility": "Talents",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-26T08:22:11.239Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-26T08:22:11.239Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c4ed05c778e78a80dc154b"
+  },
+  "userId": {
+    "$oid": "69a98b22e5676a11c67b1a13"
+  },
+  "companyName": "Smart",
+  "title": "Testing Third",
+  "jobDescription": "Description third",
+  "contractType": "Part-time",
+  "location": "Lagos",
+  "jobType": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Section third": [
+        "One third",
+        "Two third'"
+      ]
+    }
+  ],
+  "extraText": "Extra third",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 300000,
+  "salaryMaxRange": 320000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-04-02",
+  "status": "Published",
+  "visibility": "All",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-26T08:23:33.057Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-26T08:23:33.057Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c4edabc778e78a80dc16c3"
+  },
+  "userId": {
+    "$oid": "69a98b22e5676a11c67b1a13"
+  },
+  "companyName": "Smart",
+  "title": "Digital Marketer",
+  "jobDescription": "Everything",
+  "contractType": "Full-time",
+  "location": "Lagos",
+  "jobType": "On-site",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "cv": []
+    }
+  ],
+  "extraText": "nil",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 500000,
+  "salaryMaxRange": 1000000,
+  "owner": "Client",
+  "duration": "6 - 12 Months",
+  "deadlineDate": "2026-06-23",
+  "status": "Published",
+  "visibility": "Interns",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-26T08:26:19.896Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-26T08:26:19.896Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c4f004c778e78a80dc17cb"
+  },
+  "userId": {
+    "$oid": "69a98b22e5676a11c67b1a13"
+  },
+  "companyName": "Smart",
+  "title": "Content Creator",
+  "jobDescription": "Everthing",
+  "contractType": "Part-time",
+  "location": "Ibadan",
+  "jobType": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "CV": []
+    }
+  ],
+  "extraText": "NIL",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 400000,
+  "salaryMaxRange": 600000,
+  "owner": "Client",
+  "duration": "3 - 6 Months",
+  "deadlineDate": "2026-09-24",
+  "status": "Published",
+  "visibility": "Talents",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-26T08:36:20.882Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-26T08:36:20.882Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c4f0b0c778e78a80dc184d"
+  },
+  "userId": {
+    "$oid": "69a98b22e5676a11c67b1a13"
+  },
+  "companyName": "Smart",
+  "title": "Business Analyst",
+  "jobDescription": "Everything",
+  "contractType": "Contract",
+  "location": "Lagos",
+  "jobType": "Hybrid",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "Portfolio": []
+    }
+  ],
+  "extraText": "nil",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 1000000,
+  "salaryMaxRange": 1500000,
+  "owner": "Client",
+  "duration": "1 - 3 Years",
+  "deadlineDate": "2026-07-22",
+  "status": "Published",
+  "visibility": "All",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-03-26T08:39:12.014Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-26T08:39:12.014Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d3b5b5dba4f810e63760b7"
+  },
+  "userId": {
+    "$oid": "69a98b22e5676a11c67b1a13"
+  },
+  "companyName": "Smart",
+  "title": "Cyber Security Analyst",
+  "jobDescription": "Everything",
+  "contractType": "Full-time",
+  "location": "Lagos",
+  "jobType": "Remote",
+  "region": [
+    "Africa"
+  ],
+  "jobData": [
+    {
+      "CV": []
+    }
+  ],
+  "extraText": "Nil",
+  "applicationCount": 0,
+  "postStatus": "Open",
+  "currencySymbol": "₦",
+  "salaryMinRange": 500000,
+  "salaryMaxRange": 999999,
+  "owner": "Client",
+  "duration": "1 - 3 Years",
+  "deadlineDate": "2026-06-20",
+  "status": "Published",
+  "visibility": "All",
+  "isPostVerifiedByAdmin": "Pending Approval",
+  "createdAt": {
+    "$date": "2026-04-06T13:31:33.254Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T13:31:33.254Z"
+  }
+}]
