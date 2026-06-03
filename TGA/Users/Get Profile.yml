@@ -1,0 +1,53 @@
+info:
+  name: Get Profile
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/users/me"
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Returns the authenticated user's profile.
+
+    **Auth:** Bearer token required.
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "data": {
+        "id": "uuid",
+        "email": "john.doe@example.com",
+        "name": "John Doe",
+        "role": "LEARNER",
+        "emailVerified": true,
+        "phone": null,
+        "bio": null,
+        "avatarUrl": null,
+        "linkedinUrl": null,
+        "facebookUrl": null,
+        "instagramUrl": null,
+        "xUrl": null,
+        "createdAt": "2024-01-01T00:00:00.000Z",
+        "updatedAt": "2024-01-01T00:00:00.000Z"
+      }
+    }
+    ```
+
+    **Errors:**
+    - `401` — Unauthorized.
+    - `404` — User not found.
+  type: text/markdown

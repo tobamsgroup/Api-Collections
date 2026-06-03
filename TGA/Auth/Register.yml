@@ -1,0 +1,41 @@
+info:
+  name: Register
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/register"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "password": "password123"
+      }
+  auth:
+    type: none
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Creates a new learner account. A verification email is sent to the provided address.
+
+    **Body fields:**
+    | Field | Type | Required | Notes |
+    |-------|------|----------|-------|
+    | name | string | Yes | Must be non-empty |
+    | email | string | Yes | Must be a valid email |
+    | password | string | Yes | Minimum 8 characters |
+
+    **Responses:**
+    - `200` — Registration successful. User must verify email before logging in.
+    - `400` — Validation error (missing/invalid fields).
+    - `409` — Email already in use.
+  type: text/markdown

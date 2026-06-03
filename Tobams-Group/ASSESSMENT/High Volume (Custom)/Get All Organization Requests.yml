@@ -1,0 +1,48 @@
+info:
+  name: Get All Organization Requests
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{BASE}}/assessment/organization-request"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Expected Response
+    request:
+      url: "{{BASE}}/assessment/organization-request"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |
+          {
+            "success": true,
+            "message": "Organization requests retrieved successfully",
+            "data": [
+              {
+                "_id": "507f1f77bcf86cd799439011",
+                "organisationName": "Tech Innovations Ltd",
+                "contactPersonName": "John Smith",
+                "contactPersonEmail": "john.smith@techinnovations.com",
+                "assessmentPurpose": "Pre-Hiring Screening",
+                "audienceType": "New Employees",
+                "participantNumber": 25,
+                "assessmentType": "Technical Skills",
+                "reasonForAssessment": "Team Expansion",
+                "assessmentReadinessTimeline": "Within 2 Weeks",
+                "specialInstructions": "Please focus on Python and JavaScript skills",
+                "createdAt": "2026-04-17T10:30:00Z",
+                "updatedAt": "2026-04-17T10:30:00Z"
+              }
+            ]
+          }

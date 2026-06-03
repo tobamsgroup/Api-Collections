@@ -1,0 +1,23 @@
+info:
+  name: Configure help a tech talent form registration activeness
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/config/help-a-tech-talent/registration"
+  body:
+    type: json
+    data: |-
+      {
+        "open": false
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

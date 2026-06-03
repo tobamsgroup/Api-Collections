@@ -1,0 +1,177 @@
+info:
+  name: Get Workshop Plans
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/pricing/workshop-plans"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{base_url}}/pricing/workshop-plans"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "2485"
+        - name: etag
+          value: W/"9b5-ByBKdF84RLzcfYsXAwXcNSj5llk"
+        - name: date
+          value: Fri, 24 Apr 2026 17:17:56 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Workshop plans fetched successfully",
+            "timestamp": "2026-04-24T17:17:56.203Z",
+            "path": "/api/v1/pricing/workshop-plans",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "teacher": [
+                {
+                  "id": "teacher_introduction_session",
+                  "name": "Teacher Introduction Session",
+                  "description": "Group Training (In-person or Virtual)",
+                  "displayPrice": "£650",
+                  "maxParticipants": 20,
+                  "features": [
+                    "Up to 20 teachers",
+                    "Overview of RLK 6 life-skill pillars",
+                    "Walkthrough of books & workbooks",
+                    "Sample lesson demonstration",
+                    "Basic classroom integration tips",
+                    "Q&A session"
+                  ]
+                },
+                {
+                  "id": "classroom_delivery_workshop",
+                  "name": "Classroom Delivery Workshop",
+                  "description": "Hands-on Training (In-person preferred)",
+                  "displayPrice": "£1,250",
+                  "maxParticipants": 15,
+                  "features": [
+                    "Up to 15 teachers",
+                    "Deep dive into RLK curriculum delivery",
+                    "How to use books + workbooks together",
+                    "Lesson structuring techniques",
+                    "Classroom engagement strategies",
+                    "Practical teaching exercises",
+                    "Mini lesson practice session"
+                  ],
+                  "mostPopular": true
+                },
+                {
+                  "id": "programme_integration_leadership_training",
+                  "name": "Programme Integration & Leadership Training",
+                  "description": "Strategic + Practical (Leadership + Teachers",
+                  "displayPrice": "£1,950",
+                  "maxParticipants": 12,
+                  "features": [
+                    "Up to 12 participants",
+                    "RLK curriculum integration planning",
+                    "Term/year delivery framework",
+                    "Book club implementation model",
+                    "Teacher role allocation",
+                    "Programme structure design",
+                    "Monitoring & engagement strategies",
+                    "Implementation planning session"
+                  ]
+                }
+              ],
+              "student": [
+                {
+                  "id": "assembly_experience",
+                  "name": "Assembly Experience",
+                  "description": "Large group / Assembly",
+                  "displayPrice": "£450",
+                  "maxParticipants": 120,
+                  "features": [
+                    "Up to 120 students",
+                    "1 RLK Life-Skill Topic (any of the 6 series)",
+                    "Interactive talk & storytelling",
+                    "Real-life examples",
+                    "Student Q&A",
+                    "Key takeaway message"
+                  ]
+                },
+                {
+                  "id": "interactive_workshop",
+                  "name": "Interactive Workshop",
+                  "description": "Classroom / Group session",
+                  "displayPrice": "£850",
+                  "maxParticipants": 35,
+                  "features": [
+                    "Up to 35 students",
+                    "1 RLK Life-Skill Topic",
+                    "Guided teaching session",
+                    "Group discussion",
+                    "Scenario-based activity",
+                    "Reflection exercise",
+                    "Optional workbook usage"
+                  ],
+                  "mostPopular": true
+                },
+                {
+                  "id": "mini_challenge_workshop",
+                  "name": "Mini Challenge Workshop",
+                  "description": "Interactive / Team-based",
+                  "displayPrice": "£1,250",
+                  "maxParticipants": 30,
+                  "features": [
+                    "Up to 30 students",
+                    "1 RLK Life-Skill Topic",
+                    "Challenge-based learning",
+                    "Group activity & problem-solving",
+                    "Idea development",
+                    "Student presentations",
+                    "Facilitator feedback"
+                  ]
+                }
+              ]
+            }
+          }

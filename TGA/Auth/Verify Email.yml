@@ -1,0 +1,33 @@
+info:
+  name: Verify Email
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/verify-email?token=<verification_token>"
+  body:
+    type: none
+  auth:
+    type: none
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Verifies a user's email address using the token from the verification email.
+
+    **Query parameters:**
+    | Param | Type | Required |
+    |-------|------|----------|
+    | token | string | Yes |
+
+    **Responses:**
+    - `200` — Email verified successfully.
+    - `400` — Token query param missing.
+    - `401` — Invalid or expired token.
+  type: text/markdown
