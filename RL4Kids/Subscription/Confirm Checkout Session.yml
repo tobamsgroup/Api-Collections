@@ -1,13 +1,13 @@
 request:
   auth: inherit
 info:
-  name: Get My Subscription
+  name: Confirm Checkout Session
   type: http
-  seq: 2
+  seq: 4
 
 http:
-  method: GET
-  url: "{{base_url}}/subscription/me"
+  method: POST
+  url: "{{base_url}}/subscription/confirm?session_id={{stripe_session_id}}"
   auth: inherit
 
 settings:
@@ -17,10 +17,10 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Success — guardian with Stripe customer
+  - name: Success
     request:
-      url: "{{base_url}}/subscription/me"
-      method: GET
+      url: "{{base_url}}/subscription/confirm?session_id=cs_test_abc123"
+      method: POST
     response:
       status: 200
       statusText: OK
@@ -34,20 +34,16 @@ examples:
         data: |-
           {
             "statusCode": 200,
-            "message": "Billing info fetched",
+            "message": "Subscription confirmed",
             "timestamp": "2026-06-03T10:00:00.000Z",
-            "path": "/api/v1/subscription/me",
+            "path": "/api/v1/subscription/confirm",
             "service": "RL4KIDS",
-            "version": "1.0.0",
-            "data": {
-              "stripeCustomerId": "cus_Ud318VQtX70RT9",
-              "noOfAllowedChildren": 5
-            }
+            "version": "1.0.0"
           }
-  - name: Success — guardian without Stripe customer (never subscribed)
+  - name: Session not complete yet
     request:
-      url: "{{base_url}}/subscription/me"
-      method: GET
+      url: "{{base_url}}/subscription/confirm?session_id=cs_test_pending"
+      method: POST
     response:
       status: 200
       statusText: OK
@@ -61,13 +57,9 @@ examples:
         data: |-
           {
             "statusCode": 200,
-            "message": "Billing info fetched",
+            "message": "Subscription confirmed",
             "timestamp": "2026-06-03T10:00:00.000Z",
-            "path": "/api/v1/subscription/me",
+            "path": "/api/v1/subscription/confirm",
             "service": "RL4KIDS",
-            "version": "1.0.0",
-            "data": {
-              "stripeCustomerId": null,
-              "noOfAllowedChildren": 5
-            }
+            "version": "1.0.0"
           }
