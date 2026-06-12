@@ -1,0 +1,47 @@
+info:
+  name: My Enrollment Stats
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{BASE}}/enrollments/me/stats"
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Returns aggregate learning statistics for the authenticated user across all their enrollments.
+
+    **Auth:** Bearer token required.
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "data": {
+        "coursesInProgress": 2,
+        "totalLearningMinutes": 180,
+        "averageProgress": 55
+      }
+    }
+    ```
+
+    | Field | Description |
+    |-------|-------------|
+    | coursesInProgress | Number of enrolled courses with progress < 100% |
+    | totalLearningMinutes | Sum of durations (in minutes) for all completed lessons |
+    | averageProgress | Average completion percentage across all enrollments |
+
+    **Errors:**
+    - `401` — Unauthorized.
+  type: text/markdown

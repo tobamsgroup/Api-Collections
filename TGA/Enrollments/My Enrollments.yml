@@ -1,0 +1,79 @@
+info:
+  name: My Enrollments
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/enrollments/me"
+  params:
+    - name: page
+      value: "1"
+      enabled: true
+    - name: limit
+      value: "6"
+      enabled: true
+    - name: search
+      value: ""
+      enabled: false
+    - name: tab
+      value: "all"
+      enabled: true
+    - name: sort
+      value: "recent"
+      enabled: true
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Returns a paginated list of courses the authenticated user is enrolled in, with computed progress for each course.
+
+    **Auth:** Bearer token required.
+
+    **Query parameters:**
+    | Param | Type | Default | Notes |
+    |-------|------|---------|-------|
+    | page | number | 1 | Page number |
+    | limit | number | 6 | Items per page (max 50) |
+    | search | string | — | Filter by course title (case-insensitive) |
+    | tab | string | `all` | `all` \| `inProgress` \| `completed` |
+    | sort | string | `recent` | `recent` (enrolled date desc) \| `active` (progress desc) \| `az` (title A–Z) |
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "message": "Success",
+      "data": [
+        {
+          "enrollmentId": "uuid",
+          "courseId": "uuid",
+          "courseTitle": "Course Title",
+          "courseThumbnail": "https://...",
+          "progress": 45,
+          "lastAccessedAt": "2026-06-10T12:00:00.000Z",
+          "completedAt": null
+        }
+      ],
+      "meta": {
+        "total": 3,
+        "page": 1,
+        "limit": 6,
+        "totalPages": 1
+      }
+    }
+    ```
+
+    **Errors:**
+    - `401` — Unauthorized.
+  type: text/markdown
