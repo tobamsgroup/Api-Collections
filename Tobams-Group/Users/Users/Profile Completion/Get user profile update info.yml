@@ -15,7 +15,7 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Success
+  - name: "Intern Success "
     request:
       url: "{{BASE}}/users/profile-completion"
       method: GET
