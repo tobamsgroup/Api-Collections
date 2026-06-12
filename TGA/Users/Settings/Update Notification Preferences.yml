@@ -1,0 +1,80 @@
+info:
+  name: Update Notification Preferences
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{BASE}}/users/me/notification-preferences"
+  body:
+    type: json
+    data: |-
+      {
+        "courseUpdatesEmail": true,
+        "courseUpdatesInApp": true,
+        "assessmentRemindersEmail": false,
+        "assessmentRemindersInApp": true,
+        "engagementPromptsEmail": false,
+        "engagementPromptsInApp": true
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Updates the authenticated user's notification preferences. Send only the fields you want to change — all other preferences remain untouched.
+
+    **Auth:** Bearer token required.
+
+    **Accepted fields (all optional, all boolean):**
+    | Field | Default | Description |
+    |-------|---------|-------------|
+    | `registrationSetupEmail` | `true` | Registration & Setup — email |
+    | `registrationSetupInApp` | `true` | Registration & Setup — in-app |
+    | `enrollmentConfirmEmail` | `true` | Enrollment Confirmation — email |
+    | `enrollmentConfirmInApp` | `true` | Enrollment Confirmation — in-app |
+    | `courseUpdatesEmail` | `true` | Course Updates — email |
+    | `courseUpdatesInApp` | `true` | Course Updates — in-app |
+    | `assessmentRemindersEmail` | `false` | Assessment Reminders — email |
+    | `assessmentRemindersInApp` | `true` | Assessment Reminders — in-app |
+    | `progressTrackingEmail` | `false` | Progress Tracking — email |
+    | `progressTrackingInApp` | `true` | Progress Tracking — in-app |
+    | `certificationAlertsEmail` | `true` | Certification Alerts — email |
+    | `certificationAlertsInApp` | `true` | Certification Alerts — in-app |
+    | `engagementPromptsEmail` | `true` | Engagement Prompts — email |
+    | `engagementPromptsInApp` | `true` | Engagement Prompts — in-app |
+
+    **Success response (200):**
+    ```json
+    {
+      "message": "Preferences updated",
+      "data": {
+        "registrationSetupEmail": true,
+        "registrationSetupInApp": true,
+        "enrollmentConfirmEmail": true,
+        "enrollmentConfirmInApp": true,
+        "courseUpdatesEmail": true,
+        "courseUpdatesInApp": true,
+        "assessmentRemindersEmail": false,
+        "assessmentRemindersInApp": true,
+        "progressTrackingEmail": false,
+        "progressTrackingInApp": true,
+        "certificationAlertsEmail": true,
+        "certificationAlertsInApp": true,
+        "engagementPromptsEmail": false,
+        "engagementPromptsInApp": true
+      }
+    }
+    ```
+
+    **Errors:**
+    - `400` — Unknown key, non-boolean value, or no fields provided.
+    - `401` — Unauthorized.
+  type: text/markdown

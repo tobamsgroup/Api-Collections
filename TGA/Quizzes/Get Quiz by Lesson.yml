@@ -1,0 +1,66 @@
+info:
+  name: Get Quiz by Lesson
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/quizzes/lesson/:lessonId"
+  params:
+    - name: lessonId
+      value: "uuid"
+      enabled: true
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Returns the quiz associated with a given lesson, including all questions and answer options. Correct answers are never exposed — `isCorrect` is omitted from option objects.
+
+    **Auth:** Bearer token required.
+
+    **Path parameters:**
+    | Param | Type | Required |
+    |-------|------|----------|
+    | lessonId | string (UUID) | Yes |
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "data": {
+        "id": "uuid",
+        "timeLimit": 300,
+        "passingScore": 70,
+        "attemptsAllowed": 3,
+        "questionType": "MULTIPLE_CHOICE",
+        "totalQuestions": 5,
+        "questions": [
+          {
+            "id": "uuid",
+            "text": "What is the capital of France?",
+            "position": 1,
+            "options": [
+              { "id": "uuid", "text": "Paris", "position": 1 },
+              { "id": "uuid", "text": "Berlin", "position": 2 }
+            ]
+          }
+        ]
+      }
+    }
+    ```
+
+    **Errors:**
+    - `400` — `lessonId` missing.
+    - `401` — Unauthorized.
+    - `404` — Quiz not found for this lesson.
+  type: text/markdown

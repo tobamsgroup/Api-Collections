@@ -1,0 +1,53 @@
+info:
+  name: Toggle Two Factor
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/users/me/two-factor"
+  body:
+    type: json
+    data: |-
+      {
+        "password": "YourPassword123!",
+        "enable": true
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Activates or deactivates two-factor authentication (2FA) for the authenticated user. The user's current password must be provided to confirm the action.
+
+    When 2FA is **enabled**, subsequent logins will pause after credential validation and email a 6-digit OTP. The user must submit that OTP to `POST /auth/verify-2fa` to receive tokens.
+
+    **Auth:** Bearer token required.
+
+    **Body fields:**
+    | Field | Type | Required |
+    |-------|------|----------|
+    | password | string | Yes — current account password |
+    | enable | boolean | Yes — `true` to activate, `false` to deactivate |
+
+    **Success response (200):**
+    ```json
+    {
+      "message": "Two-factor authentication enabled",
+      "data": {
+        "twoFactorEnabled": true
+      }
+    }
+    ```
+
+    **Errors:**
+    - `400` — Missing or invalid fields.
+    - `401` — Incorrect password or unauthorized.
+  type: text/markdown

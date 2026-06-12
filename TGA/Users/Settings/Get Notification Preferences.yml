@@ -1,0 +1,65 @@
+info:
+  name: Get Notification Preferences
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{BASE}}/users/me/notification-preferences"
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Returns the authenticated user's notification preferences across all categories. If the user has never set preferences before, defaults are created and returned automatically.
+
+    **Auth:** Bearer token required.
+
+    **Preference categories:**
+    | Key prefix | Category |
+    |-----------|----------|
+    | `registrationSetup` | Registration & Setup |
+    | `enrollmentConfirm` | Enrollment Confirmation |
+    | `courseUpdates` | Course Updates |
+    | `assessmentReminders` | Assessment Reminders |
+    | `progressTracking` | Progress Tracking |
+    | `certificationAlerts` | Certification Alerts |
+    | `engagementPrompts` | Engagement Prompts |
+
+    Each category has two boolean flags: `<key>Email` and `<key>InApp`.
+
+    **Success response (200):**
+    ```json
+    {
+      "message": "Success",
+      "data": {
+        "registrationSetupEmail": true,
+        "registrationSetupInApp": true,
+        "enrollmentConfirmEmail": true,
+        "enrollmentConfirmInApp": true,
+        "courseUpdatesEmail": true,
+        "courseUpdatesInApp": true,
+        "assessmentRemindersEmail": false,
+        "assessmentRemindersInApp": true,
+        "progressTrackingEmail": false,
+        "progressTrackingInApp": true,
+        "certificationAlertsEmail": true,
+        "certificationAlertsInApp": true,
+        "engagementPromptsEmail": true,
+        "engagementPromptsInApp": true
+      }
+    }
+    ```
+
+    **Errors:**
+    - `401` — Unauthorized.
+  type: text/markdown

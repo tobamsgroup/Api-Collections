@@ -1,0 +1,57 @@
+info:
+  name: Verify 2FA
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{BASE}}/auth/verify-2fa"
+  body:
+    type: json
+    data: |-
+      {
+        "userId": "{{user_id}}",
+        "otp": "123456"
+      }
+  auth:
+    type: none
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Completes the two-factor authentication login step. When a user with 2FA enabled submits valid credentials to `POST /auth/login`, a 6-digit OTP is emailed to them and the login response contains `twoFactorRequired: true` along with `userId`. Submit that `userId` and the received OTP here to receive tokens.
+
+    The OTP is **single-use** and expires after **10 minutes**.
+
+    **Body fields:**
+    | Field | Type | Required |
+    |-------|------|----------|
+    | userId | string | Yes — returned by `/auth/login` |
+    | otp | string | Yes — 6-digit code sent by email |
+
+    **Success response (200):**
+    ```json
+    {
+      "message": "Login successful",
+      "data": {
+        "accessToken": "<jwt>",
+        "refreshToken": "<jwt>",
+        "user": {
+          "id": "uuid",
+          "name": "John Doe",
+          "email": "john.doe@example.com",
+          "role": "LEARNER"
+        }
+      }
+    }
+    ```
+
+    **Errors:**
+    - `400` — Missing `userId` or `otp`.
+    - `401` — Invalid OTP, expired OTP, or no pending 2FA session (log in again).
+  type: text/markdown
