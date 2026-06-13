@@ -1,0 +1,128 @@
+request:
+  auth: inherit
+info:
+  name: Get Workbooks for Series
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/workbooks/series/{{series_id}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Kid with 2 assigned chapters — chapter 1 complete, chapter 2 in progress
+    request:
+      url: "{{base_url}}/workbooks/series/6507f1f77bcf86cd799439011"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks/series/6507f1f77bcf86cd799439011",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "chapterId": "6507f1f77bcf86cd799439021",
+                "chapterName": "What is Sustainability?",
+                "chapterIndex": 1,
+                "start": 1,
+                "end": 18,
+                "pdfUrl": "https://cdn.rl4kids.com/workbooks/think-sustainability.pdf",
+                "workbookName": "Think Sustainability",
+                "isAccessible": true,
+                "isStarted": true,
+                "isCompleted": false
+              },
+              {
+                "chapterId": "6507f1f77bcf86cd799439022",
+                "chapterName": "Energy Around Us",
+                "chapterIndex": 2,
+                "start": 19,
+                "end": 36,
+                "pdfUrl": "https://cdn.rl4kids.com/workbooks/think-sustainability.pdf",
+                "workbookName": "Think Sustainability",
+                "isAccessible": false,
+                "isStarted": false,
+                "isCompleted": false
+              }
+            ]
+          }
+  - name: Kid with 1 assigned chapter — not yet finished reading
+    request:
+      url: "{{base_url}}/workbooks/series/6507f1f77bcf86cd799439011"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks/series/6507f1f77bcf86cd799439011",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "chapterId": "6507f1f77bcf86cd799439021",
+                "chapterName": "What is Sustainability?",
+                "chapterIndex": 1,
+                "start": 1,
+                "end": 18,
+                "pdfUrl": "https://cdn.rl4kids.com/workbooks/think-sustainability.pdf",
+                "workbookName": "Think Sustainability",
+                "isAccessible": false,
+                "isStarted": false,
+                "isCompleted": false
+              }
+            ]
+          }
+  - name: No workbook found for series
+    request:
+      url: "{{base_url}}/workbooks/series/000000000000000000000000"
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 404,
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks/series/000000000000000000000000",
+            "message": "No workbook found for series \"000000000000000000000000\"",
+            "error": "Not Found",
+            "service": "RL4KIDS"
+          }
