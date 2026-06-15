@@ -1,0 +1,164 @@
+request:
+  auth: inherit
+info:
+  name: Get Workbooks by Book (Kid)
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/workbooks/kid/book/{{book_id}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Book with workbooks and kid stats uploaded for all series
+    request:
+      url: "{{base_url}}/workbooks/kid/book/69bd02cd30dab04d16f8f135"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-06-15T00:53:42.746Z",
+            "path": "/api/v1/workbooks/kid/book/69bd02cd30dab04d16f8f135",
+            "service": "RL4Kids",
+            "version": "1.0.0",
+            "data": [
+              {
+                "chapterId": {
+                  "_id": "69bd160bbf4b5f089eefebd2",
+                  "title": "What Is Artificial Intelligence?",
+                  "index": 1
+                },
+                "chapterName": "What Is Artificial Intelligence?",
+                "chapterIndex": 1,
+                "start": 11,
+                "end": 26,
+                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                "workbookName": "What is AI and How Does It Think",
+                "isAccessible": false,
+                "isStarted": false,
+                "isCompleted": false
+              },
+              {
+                "chapterId": {
+                  "_id": "69bd1643bf4b5f089eefebd5",
+                  "title": "How Do Machines Learn?",
+                  "index": 2
+                },
+                "chapterName": "How Do Machines Learn?",
+                "chapterIndex": 2,
+                "start": 27,
+                "end": 43,
+                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                "workbookName": "What is AI and How Does It Think",
+                "isAccessible": false,
+                "isStarted": false,
+                "isCompleted": false
+              },
+              {
+                "chapterId": {
+                  "_id": "69bd166ebf4b5f089eefebd8",
+                  "title": "Where Do We See AI Every Day?",
+                  "index": 3
+                },
+                "chapterName": "Where Do We See AI Every Day?",
+                "chapterIndex": 3,
+                "start": 44,
+                "end": 62,
+                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                "workbookName": "What is AI and How Does It Think",
+                "isAccessible": false,
+                "isStarted": false,
+                "isCompleted": false
+              },
+              {
+                "chapterId": {
+                  "_id": "69bd1899c1a35f58b8a9dbf9",
+                  "title": "Can AI Make Mistakes?",
+                  "index": 4
+                },
+                "chapterName": "Can AI Make Mistakes?",
+                "chapterIndex": 4,
+                "start": 63,
+                "end": 79,
+                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                "workbookName": "What is AI and How Does It Think",
+                "isAccessible": false,
+                "isStarted": false,
+                "isCompleted": false
+              },
+              {
+                "chapterId": {
+                  "_id": "69bd1731bf4b5f089eefebe4",
+                  "title": "AI and Humans - Working Together",
+                  "index": 5
+                },
+                "chapterName": "AI and Humans - Working Together",
+                "chapterIndex": 5,
+                "start": 80,
+                "end": 96,
+                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                "workbookName": "What is AI and How Does It Think",
+                "isAccessible": false,
+                "isStarted": false,
+                "isCompleted": false
+              },
+              {
+                "chapterId": {
+                  "_id": "69bd1705bf4b5f089eefebe1",
+                  "title": "Becoming an AI Thinker",
+                  "index": 6
+                },
+                "chapterName": "Becoming an AI Thinker",
+                "chapterIndex": 6,
+                "start": 97,
+                "end": 113,
+                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                "workbookName": "What is AI and How Does It Think",
+                "isAccessible": false,
+                "isStarted": false,
+                "isCompleted": false
+              }
+            ]
+          }
+  - name: Book with no workbooks uploaded yet
+    request:
+      url: "{{base_url}}/workbooks/kid/book/69bd02cd30dab04d16f8f135"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks/kid/book/69bd02cd30dab04d16f8f135",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": []
+          }
