@@ -35,106 +35,125 @@ examples:
           {
             "statusCode": 200,
             "message": "Success",
-            "timestamp": "2026-06-15T00:53:42.746Z",
+            "timestamp": "2026-06-15T01:19:20.255Z",
             "path": "/api/v1/workbooks/kid/book/69bd02cd30dab04d16f8f135",
             "service": "RL4Kids",
             "version": "1.0.0",
             "data": [
               {
-                "chapterId": {
-                  "_id": "69bd160bbf4b5f089eefebd2",
-                  "title": "What Is Artificial Intelligence?",
-                  "index": 1
-                },
-                "chapterName": "What Is Artificial Intelligence?",
-                "chapterIndex": 1,
-                "start": 11,
-                "end": 26,
-                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
-                "workbookName": "What is AI and How Does It Think",
-                "isAccessible": false,
-                "isStarted": false,
-                "isCompleted": false
+                "seriesId": "69bd08c021d8513c2774d7f5",
+                "seriesName": "What is AI and How Does It Think",
+                "seriesIndex": 1,
+                "seriesImage": "https://res.cloudinary.com/dddiqpeib/image/upload/v1773994260/rl4kids/2733896ec851c15ac231541654a2d9f8fcced25a.png",
+                "chapters": [
+                  {
+                    "chapterId": "69bd160bbf4b5f089eefebd2",
+                    "chapterName": "What Is Artificial Intelligence?",
+                    "chapterIndex": 1,
+                    "start": 11,
+                    "end": 26,
+                    "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                    "workbookName": "What is AI and How Does It Think",
+                    "isAccessible": false,
+                    "isStarted": false,
+                    "isCompleted": false
+                  },
+                  {
+                    "chapterId": "69bd1643bf4b5f089eefebd5",
+                    "chapterName": "How Do Machines Learn?",
+                    "chapterIndex": 2,
+                    "start": 27,
+                    "end": 43,
+                    "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                    "workbookName": "What is AI and How Does It Think",
+                    "isAccessible": false,
+                    "isStarted": false,
+                    "isCompleted": false
+                  },
+                  {
+                    "chapterId": "69bd166ebf4b5f089eefebd8",
+                    "chapterName": "Where Do We See AI Every Day?",
+                    "chapterIndex": 3,
+                    "start": 44,
+                    "end": 62,
+                    "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                    "workbookName": "What is AI and How Does It Think",
+                    "isAccessible": false,
+                    "isStarted": false,
+                    "isCompleted": false
+                  },
+                  {
+                    "chapterId": "69bd1899c1a35f58b8a9dbf9",
+                    "chapterName": "Can AI Make Mistakes?",
+                    "chapterIndex": 4,
+                    "start": 63,
+                    "end": 79,
+                    "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                    "workbookName": "What is AI and How Does It Think",
+                    "isAccessible": false,
+                    "isStarted": false,
+                    "isCompleted": false
+                  },
+                  {
+                    "chapterId": "69bd1731bf4b5f089eefebe4",
+                    "chapterName": "AI and Humans - Working Together",
+                    "chapterIndex": 5,
+                    "start": 80,
+                    "end": 96,
+                    "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                    "workbookName": "What is AI and How Does It Think",
+                    "isAccessible": false,
+                    "isStarted": false,
+                    "isCompleted": false
+                  },
+                  {
+                    "chapterId": "69bd1705bf4b5f089eefebe1",
+                    "chapterName": "Becoming an AI Thinker",
+                    "chapterIndex": 6,
+                    "start": 97,
+                    "end": 113,
+                    "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
+                    "workbookName": "What is AI and How Does It Think",
+                    "isAccessible": false,
+                    "isStarted": false,
+                    "isCompleted": false
+                  }
+                ]
               },
               {
-                "chapterId": {
-                  "_id": "69bd1643bf4b5f089eefebd5",
-                  "title": "How Do Machines Learn?",
-                  "index": 2
-                },
-                "chapterName": "How Do Machines Learn?",
-                "chapterIndex": 2,
-                "start": 27,
-                "end": 43,
-                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
-                "workbookName": "What is AI and How Does It Think",
-                "isAccessible": false,
-                "isStarted": false,
-                "isCompleted": false
+                "seriesId": "69bd1364bf4b5f089eefebbf",
+                "seriesName": "Smart Machines Around Us",
+                "seriesIndex": 2,
+                "seriesImage": "https://res.cloudinary.com/dddiqpeib/image/upload/v1773994260/rl4kids/2733896ec851c15ac231541654a2d9f8fcced25a.png",
+                "chapters": []
               },
               {
-                "chapterId": {
-                  "_id": "69bd166ebf4b5f089eefebd8",
-                  "title": "Where Do We See AI Every Day?",
-                  "index": 3
-                },
-                "chapterName": "Where Do We See AI Every Day?",
-                "chapterIndex": 3,
-                "start": 44,
-                "end": 62,
-                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
-                "workbookName": "What is AI and How Does It Think",
-                "isAccessible": false,
-                "isStarted": false,
-                "isCompleted": false
+                "seriesId": "69bd13a6bf4b5f089eefebc2",
+                "seriesName": "Creating With AI",
+                "seriesIndex": 3,
+                "seriesImage": "https://res.cloudinary.com/dddiqpeib/image/upload/v1773994260/rl4kids/2733896ec851c15ac231541654a2d9f8fcced25a.png",
+                "chapters": []
               },
               {
-                "chapterId": {
-                  "_id": "69bd1899c1a35f58b8a9dbf9",
-                  "title": "Can AI Make Mistakes?",
-                  "index": 4
-                },
-                "chapterName": "Can AI Make Mistakes?",
-                "chapterIndex": 4,
-                "start": 63,
-                "end": 79,
-                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
-                "workbookName": "What is AI and How Does It Think",
-                "isAccessible": false,
-                "isStarted": false,
-                "isCompleted": false
+                "seriesId": "69bd13d1bf4b5f089eefebc5",
+                "seriesName": "AI Ethics and Responsibility",
+                "seriesIndex": 4,
+                "seriesImage": "https://res.cloudinary.com/dddiqpeib/image/upload/v1773994260/rl4kids/2733896ec851c15ac231541654a2d9f8fcced25a.png",
+                "chapters": []
               },
               {
-                "chapterId": {
-                  "_id": "69bd1731bf4b5f089eefebe4",
-                  "title": "AI and Humans - Working Together",
-                  "index": 5
-                },
-                "chapterName": "AI and Humans - Working Together",
-                "chapterIndex": 5,
-                "start": 80,
-                "end": 96,
-                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
-                "workbookName": "What is AI and How Does It Think",
-                "isAccessible": false,
-                "isStarted": false,
-                "isCompleted": false
+                "seriesId": "69bd13f8bf4b5f089eefebc8",
+                "seriesName": "Solving Big Problems With AI",
+                "seriesIndex": 5,
+                "seriesImage": "https://res.cloudinary.com/dddiqpeib/image/upload/v1773994260/rl4kids/2733896ec851c15ac231541654a2d9f8fcced25a.png",
+                "chapters": []
               },
               {
-                "chapterId": {
-                  "_id": "69bd1705bf4b5f089eefebe1",
-                  "title": "Becoming an AI Thinker",
-                  "index": 6
-                },
-                "chapterName": "Becoming an AI Thinker",
-                "chapterIndex": 6,
-                "start": 97,
-                "end": 113,
-                "pdfUrl": "https://res.cloudinary.com/dddiqpeib/image/upload/v1781380400/rl4kids/rlk-workbook/Think%20AI%20Series%201%20Workbook%20%281%29.pdf",
-                "workbookName": "What is AI and How Does It Think",
-                "isAccessible": false,
-                "isStarted": false,
-                "isCompleted": false
+                "seriesId": "69bd1413bf4b5f089eefebcb",
+                "seriesName": "Becoming AI Ready Leaders",
+                "seriesIndex": 6,
+                "seriesImage": "https://res.cloudinary.com/dddiqpeib/image/upload/v1773994260/rl4kids/2733896ec851c15ac231541654a2d9f8fcced25a.png",
+                "chapters": []
               }
             ]
           }
