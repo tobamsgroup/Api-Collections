@@ -1,0 +1,95 @@
+request:
+  auth: inherit
+info:
+  name: Get Workbooks by Book (Admin)
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{base_url}}/workbooks/book/{{book_id}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Book with workbooks uploaded for all series
+    request:
+      url: "{{base_url}}/workbooks/book/6507f1f77bcf86cd799439000"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks/book/6507f1f77bcf86cd799439000",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "_id": "6507f1f77bcf86cd799439099",
+                "seriesId": "6507f1f77bcf86cd799439011",
+                "seriesName": "Think Sustainability",
+                "name": "Think Sustainability",
+                "pdfUrl": "https://cdn.rl4kids.com/workbooks/think-sustainability.pdf",
+                "chapters": [
+                  { "chapterId": "6507f1f77bcf86cd799439021", "start": 1, "end": 18 },
+                  { "chapterId": "6507f1f77bcf86cd799439022", "start": 19, "end": 36 },
+                  { "chapterId": "6507f1f77bcf86cd799439023", "start": 37, "end": 55 }
+                ],
+                "createdAt": "2026-06-13T10:00:00.000Z",
+                "updatedAt": "2026-06-13T10:00:00.000Z"
+              },
+              {
+                "_id": "6507f1f77bcf86cd799439098",
+                "seriesId": "6507f1f77bcf86cd799439012",
+                "seriesName": "Green Leaders",
+                "name": "Green Leaders",
+                "pdfUrl": "https://cdn.rl4kids.com/workbooks/green-leaders.pdf",
+                "chapters": [
+                  { "chapterId": "6507f1f77bcf86cd799439031", "start": 1, "end": 22 },
+                  { "chapterId": "6507f1f77bcf86cd799439032", "start": 23, "end": 44 }
+                ],
+                "createdAt": "2026-06-13T09:00:00.000Z",
+                "updatedAt": "2026-06-13T09:00:00.000Z"
+              }
+            ]
+          }
+  - name: Book with no workbooks uploaded yet
+    request:
+      url: "{{base_url}}/workbooks/book/6507f1f77bcf86cd799439001"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks/book/6507f1f77bcf86cd799439001",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": []
+          }

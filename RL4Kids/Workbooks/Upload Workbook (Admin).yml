@@ -1,0 +1,222 @@
+request:
+  auth: inherit
+info:
+  name: Upload Workbook (Admin)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/workbooks"
+  body:
+    type: json
+    data: |-
+      {
+        "seriesId": "{{series_id}}",
+        "pdfUrl": "https://cdn.rl4kids.com/workbooks/think-sustainability.pdf",
+        "chapters": [
+          {
+            "chapterId": "{{chapter_id_1}}",
+            "start": 1,
+            "end": 18
+          },
+          {
+            "chapterId": "{{chapter_id_2}}",
+            "start": 19,
+            "end": 36
+          },
+          {
+            "chapterId": "{{chapter_id_3}}",
+            "start": 37,
+            "end": 55
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Upload workbook for a series (creates or replaces)
+    request:
+      url: "{{base_url}}/workbooks"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "seriesId": "6507f1f77bcf86cd799439011",
+            "pdfUrl": "https://cdn.rl4kids.com/workbooks/think-sustainability.pdf",
+            "chapters": [
+              {
+                "chapterId": "6507f1f77bcf86cd799439021",
+                "start": 1,
+                "end": 18
+              },
+              {
+                "chapterId": "6507f1f77bcf86cd799439022",
+                "start": 19,
+                "end": 36
+              },
+              {
+                "chapterId": "6507f1f77bcf86cd799439023",
+                "start": 37,
+                "end": 55
+              }
+            ]
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 201,
+            "message": "Success",
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "_id": "6507f1f77bcf86cd799439099",
+              "seriesId": "6507f1f77bcf86cd799439011",
+              "seriesName": "Think Sustainability",
+              "name": "Think Sustainability",
+              "pdfUrl": "https://cdn.rl4kids.com/workbooks/think-sustainability.pdf",
+              "chapters": [
+                { "chapterId": "6507f1f77bcf86cd799439021", "start": 1, "end": 18 },
+                { "chapterId": "6507f1f77bcf86cd799439022", "start": 19, "end": 36 },
+                { "chapterId": "6507f1f77bcf86cd799439023", "start": 37, "end": 55 }
+              ],
+              "createdAt": "2026-06-13T10:00:00.000Z",
+              "updatedAt": "2026-06-13T10:00:00.000Z"
+            }
+          }
+  - name: Replace existing workbook with updated PDF
+    request:
+      url: "{{base_url}}/workbooks"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "seriesId": "6507f1f77bcf86cd799439011",
+            "pdfUrl": "https://cdn.rl4kids.com/workbooks/think-sustainability-v2.pdf",
+            "chapters": [
+              {
+                "chapterId": "6507f1f77bcf86cd799439021",
+                "start": 1,
+                "end": 20
+              },
+              {
+                "chapterId": "6507f1f77bcf86cd799439022",
+                "start": 21,
+                "end": 40
+              }
+            ]
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 201,
+            "message": "Success",
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "_id": "6507f1f77bcf86cd799439099",
+              "seriesId": "6507f1f77bcf86cd799439011",
+              "seriesName": "Think Sustainability",
+              "name": "Think Sustainability",
+              "pdfUrl": "https://cdn.rl4kids.com/workbooks/think-sustainability-v2.pdf",
+              "chapters": [
+                { "chapterId": "6507f1f77bcf86cd799439021", "start": 1, "end": 20 },
+                { "chapterId": "6507f1f77bcf86cd799439022", "start": 21, "end": 40 }
+              ],
+              "createdAt": "2026-06-13T10:00:00.000Z",
+              "updatedAt": "2026-06-13T10:02:00.000Z"
+            }
+          }
+  - name: Series not found
+    request:
+      url: "{{base_url}}/workbooks"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "seriesId": "000000000000000000000000",
+            "pdfUrl": "https://cdn.rl4kids.com/workbooks/think-sustainability.pdf",
+            "chapters": [
+              { "chapterId": "6507f1f77bcf86cd799439021", "start": 1, "end": 18 }
+            ]
+          }
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 404,
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks",
+            "message": "Series \"000000000000000000000000\" not found",
+            "error": "Not Found",
+            "service": "RL4KIDS"
+          }
+  - name: Validation error — missing pdfUrl
+    request:
+      url: "{{base_url}}/workbooks"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "seriesId": "6507f1f77bcf86cd799439011",
+            "chapters": []
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks",
+            "message": ["pdfUrl must be a URL address"],
+            "error": "Bad Request",
+            "service": "RL4KIDS"
+          }

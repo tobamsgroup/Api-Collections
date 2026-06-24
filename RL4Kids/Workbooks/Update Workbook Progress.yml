@@ -1,0 +1,130 @@
+request:
+  auth: inherit
+info:
+  name: Update Workbook Progress
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{base_url}}/workbooks/{{workbook_id}}/chapter/{{chapter_id}}/progress"
+  body:
+    type: json
+    data: |-
+      {
+        "status": "started"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Mark workbook chapter as started
+    request:
+      url: "{{base_url}}/workbooks/6507f1f77bcf86cd799439099/chapter/6507f1f77bcf86cd799439021/progress"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "status": "started"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks/6507f1f77bcf86cd799439099/chapter/6507f1f77bcf86cd799439021/progress",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "_id": "6507f1f77bcf86cd799439077",
+              "kidId": "6507f1f77bcf86cd799439001",
+              "workbookId": "6507f1f77bcf86cd799439099",
+              "chapterId": "6507f1f77bcf86cd799439021",
+              "status": "started",
+              "createdAt": "2026-06-13T10:00:00.000Z",
+              "updatedAt": "2026-06-13T10:00:00.000Z"
+            }
+          }
+  - name: Mark workbook chapter as completed
+    request:
+      url: "{{base_url}}/workbooks/6507f1f77bcf86cd799439099/chapter/6507f1f77bcf86cd799439021/progress"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "status": "completed"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks/6507f1f77bcf86cd799439099/chapter/6507f1f77bcf86cd799439021/progress",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "_id": "6507f1f77bcf86cd799439077",
+              "kidId": "6507f1f77bcf86cd799439001",
+              "workbookId": "6507f1f77bcf86cd799439099",
+              "chapterId": "6507f1f77bcf86cd799439021",
+              "status": "completed",
+              "createdAt": "2026-06-13T10:00:00.000Z",
+              "updatedAt": "2026-06-13T10:05:00.000Z"
+            }
+          }
+  - name: Invalid status value
+    request:
+      url: "{{base_url}}/workbooks/6507f1f77bcf86cd799439099/chapter/6507f1f77bcf86cd799439021/progress"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "status": "in_progress"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-06-13T10:00:00.000Z",
+            "path": "/api/v1/workbooks/6507f1f77bcf86cd799439099/chapter/6507f1f77bcf86cd799439021/progress",
+            "message": ["status must be one of the following values: started, completed"],
+            "error": "Bad Request",
+            "service": "RL4KIDS"
+          }
