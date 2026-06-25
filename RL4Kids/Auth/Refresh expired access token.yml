@@ -20,8 +20,8 @@ runtime:
   scripts:
     - type: after-response
       code: |-
-        bru.setEnvVar("access", res.getBody().data.accessToken);
-        bru.setEnvVar("refresh", res.getBody().data.refreshToken);
+        bru.setVar("access", res.getBody().data.accessToken);
+        bru.setVar("refresh", res.getBody().data.refreshToken);
 
 settings:
   encodeUrl: true

@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/users/67b661d7c84dd7079b9e7d56"
+  url: "{{BASE}}/users/:userId"
+  params:
+    - name: userId
+      value: 67b661d7c84dd7079b9e7d56
+      type: path
   auth:
     type: bearer
     token: "{{mentor_access}}"
