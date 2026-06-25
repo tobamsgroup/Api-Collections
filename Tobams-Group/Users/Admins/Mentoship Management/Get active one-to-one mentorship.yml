@@ -1,0 +1,101 @@
+info:
+  name: Get active one-to-one mentorship
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{BASE}}/admin/mentorship/one-to-one"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Empty
+    request:
+      url: "{{BASE}}/admin/mentorship/one-to-one"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: date
+          value: Thu, 25 Jun 2026 18:05:44 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "136"
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"b2-xVmLlpEa6Us6KzNIPagHvexTWSg"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 69dc204a-e3a3-496f
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1782410744065-mprgmtw6u
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a115e6ecdd9e368e-LHR
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "One-to-one mentorships fetched successfully",
+            "data": {
+              "data": [],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 0,
+                "pages": 0,
+                "hasNext": false,
+                "hasPrev": false
+              }
+            }
+          }
