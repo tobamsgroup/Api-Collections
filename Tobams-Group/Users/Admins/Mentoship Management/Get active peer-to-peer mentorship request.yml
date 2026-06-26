@@ -99,3 +99,53 @@ examples:
               }
             }
           }
+  - name: Success
+    request:
+      url: "{{BASE}}/admin/mentorship/peer-to-peer"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |
+          {
+            "success": true,
+            "message": "Peer-to-peer mentorships fetched successfully",
+            "data": {
+              "data": [
+                {
+                  "user": {
+                    "id": "5f4e8b10c9e2b1a2f3d4e5f",
+                    "name": "Aisha N. Khan",
+                    "email": "aisha@example.com",
+                    "photo": "https://cdn.example.com/photos/aisha.jpg",
+                    "occupation": "Software Engineer"
+                  },
+                  "userType": "MENTOR",
+                  "dateInitiated": "2024-02-15T09:10:00Z",
+                  "sessions": null
+                },
+                {
+                  "user": {
+                    "id": "7d6c3b22f8a9e1c3d4f5e6g",
+                    "name": "Jamal T. Rojas",
+                    "email": "jamal@example.com",
+                    "photo": "https://cdn.example.com/photos/jamal.png",
+                    "occupation": "Product Manager"
+                  },
+                  "userType": "MENTEE",
+                  "dateInitiated": "2024-03-02T14:22:00Z",
+                  "sessions": null
+                }
+              ],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 2,
+                "pages": 1,
+                "hasNext": false,
+                "hasPrev": false
+              }
+            }
+          }

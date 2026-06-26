@@ -99,3 +99,43 @@ examples:
               }
             }
           }
+  - name: Success
+    request:
+      url: "{{BASE}}/admin/mentorship/group"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |
+          {
+            "success": true,
+            "message": "Group mentorships fetched successfully",
+            "data": {
+              "data": [
+                {
+                  "id": "c3a9f1b8d4e6f7a2b3c4d5e",
+                  "groupName": "Data Science Cohort – Q2 2024",
+                  "createdBy": {
+                    "id": "2a1b6c3d9e7f8a4b5c6d7e",
+                    "name": "Nadia S. Patel",
+                    "email": "nadia@example.com",
+                    "photo": "https://cdn.example.com/photos/nadia.png",
+                    "occupation": "Data Scientist"
+                  },
+                  "dateCreated": "2024-04-05T08:00:00Z",
+                  "noOfMembers": 12,
+                  "sessions": null
+                }
+              ],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 1,
+                "pages": 1,
+                "hasNext": false,
+                "hasPrev": false
+              }
+            }
+          }
