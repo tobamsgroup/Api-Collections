@@ -45,7 +45,7 @@ docs:
     | limit | number | 12 | Items per page (max 50) |
     | courseName | string | — | Filter by course name |
     | status | string | — | Filter by status |
-    | range  | string | — | filter by date range |
+    | range  | string | — | filter by date range Options: THIS_WEEK, THIS_MONTH, LAST_60_DAYS, LAST_90_DAYS |
 
     **Success response (200):**
     ```json
