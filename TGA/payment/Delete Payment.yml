@@ -1,0 +1,47 @@
+info:
+  name: Delete Payment
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{BASE}}/payments/:paymentId"
+  params:
+    - name: paymentId
+      value: "uuid"
+      enabled: true
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Deletes a payment of a user by its Id.
+
+    **Auth:** Bearer token required.
+
+    **Path parameters:**
+    | Param | Type | Required |
+    |-------|------|----------|
+    | paymentId | string (UUID) | Yes |
+
+    **Success response (200):**
+    ```json
+    {
+      "message": "success"
+    }
+    ```
+
+    **Errors:**
+    - `400` — `paymentId` missing.
+    - `401` — Unauthorized.
+    - `404` — payment not found.
+  type: text/markdown

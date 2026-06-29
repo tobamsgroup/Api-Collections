@@ -11,14 +11,14 @@ http:
     data: |-
       {
           // "password": "MentorExpert2023!",
-          "email": "fawaz.abdganiyu@tobamsgroup.com",
+      //     "email": "fawaz.abdganiyu@tobamsgroup.com",
           // "email": "ericsson.raphael@tobamsgroup.com",
           "password": "Password123!"
           // "email": "casi04@pirkong.com",
           // "email": "paul.elugbaju@tobamsgroup.com",
           // "password": "Paul.Elugbaju@tobamsgroup26"
-      //    "email": "taofeeq.abdulrasaq@tobamsgroup.com",
-          // "password": "Admin@1234"
+         "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+      //     "password": "Admin@1234"
       //     "email": "omokorede.adeyeye@tobamsgroup.com",
       //     "password": "Omokorede99#"
           // "email": "abdulrasaqolarewaju88@gmail.com",
@@ -35,27 +35,27 @@ runtime:
 
         if (data && data.role) {
           if (data.role === "Organisation"){
-            bru.setEnvVar("org_access", data.accessToken);
-            bru.setEnvVar("org_refresh", data.refreshToken);
+            bru.setVar("org_access", data.accessToken);
+            bru.setVar("org_refresh", data.refreshToken);
         }
           if (data.role === "Intern"){
-            bru.setEnvVar("intern_access", data.accessToken);
-            bru.setEnvVar("intern_refresh", data.refreshToken);
+            bru.setVar("intern_access", data.accessToken);
+            bru.setVar("intern_refresh", data.refreshToken);
           }
 
           if (data.role === "Talent"){
-            bru.setEnvVar("talent_access", data.accessToken);
-            bru.setEnvVar("talent_refresh", data.refreshToken);
+            bru.setVar("talent_access", data.accessToken);
+            bru.setVar("talent_refresh", data.refreshToken);
           }
 
           if (data.role === "Mentor"){
-            bru.setEnvVar("mentor_access", data.accessToken);
-            bru.setEnvVar("mentor_refresh", data.refreshToken);
+            bru.setVar("mentor_access", data.accessToken);
+            bru.setVar("mentor_refresh", data.refreshToken);
           }
 
           if (data.role === "Super_Admin" || data.role === "Admin"){
-            bru.setEnvVar("admin_access", data.accessToken);
-            bru.setEnvVar("admin_refresh", data.refreshToken);
+            bru.setVar("admin_access", data.accessToken);
+            bru.setVar("admin_refresh", data.refreshToken);
           } 
         }
 
