@@ -21,7 +21,8 @@ http:
           "weeklyLearningReport": { "inApp": false, "email": true },
           "ideaWall": { "inApp": true, "email": false },
           "submissionApproved": { "inApp": false, "email": false },
-          "policyTermsUpdate": { "inApp": false, "email": false }
+          "policyTermsUpdate": { "inApp": false, "email": false },
+          "workbookUpdates": { inApp: true, email: false }
       }
   auth:
     type: bearer
@@ -71,6 +72,7 @@ examples:
                   "ideaWall": { "inApp": true, "email": false },
                   "submissionApproved": { "inApp": false, "email": false },
                   "policyTermsUpdate": { "inApp": false, "email": false },
+                  "workbookUpdates": { inApp: true, email: false },
                   "createdAt": "2025-05-11T10:00:00.000Z",
                   "updatedAt": "2025-05-11T10:30:00.000Z"
               }
