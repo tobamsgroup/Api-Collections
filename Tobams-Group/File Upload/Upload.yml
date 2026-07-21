@@ -16,7 +16,7 @@ http:
       - name: file
         type: file
         value:
-          - /Users/mac/Downloads/image.png
+          - /Users/mac/Downloads/blog pics.jpeg
   auth: inherit
 
 settings:

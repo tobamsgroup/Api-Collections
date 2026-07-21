@@ -1,0 +1,28 @@
+info:
+  name: Apply for Webinar
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BASE}}/webinar-applications"
+  body:
+    type: json
+    data: |-
+      {
+        "firstName": "Adewale",
+        "lastName": "Ogunleye",
+        "email": "rolatzarza@gmail.com",
+        "role": "Career Professional",
+        "companyName": "Tobamsgroup",
+        "country": "Nigeria",
+        "concerns": "I'm worried about how AI will affect entry-level tech roles and which skills I should prioritise learning to stay employable.",
+        "webinarId": "6a5fb05bafb6fba76b5a8c53"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

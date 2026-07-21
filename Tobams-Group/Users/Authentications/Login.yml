@@ -11,18 +11,19 @@ http:
     data: |-
       {
           // "password": "MentorExpert2023!",
-          // "email": "mentor.expert@example.com"
+          "email": "theteam@tobamsgroup.com",
           // "email": "ericsson.raphael@tobamsgroup.com",
           // "password": "123456"
           // "email": "casi04@pirkong.com",
           // "email": "paul.elugbaju@tobamsgroup.com",
           // "password": "Paul.Elugbaju@tobamsgroup26"
       //    "email": "taofeeq.abdulrasaq@tobamsgroup.com",
-          // "password": "Admin@1234"
-          "email": "Ifeanyi.eze@tobamsgroup.com",
-          "password": ".Tobams1234."
+      //   "email": "theteam@tobamsgroup.com",
+          "password": "Admin@1234"
+      //     "email": "Ifeanyi.eze@tobamsgroup.com",
+      //     "password": ".Tobams1234."
           // "email": "abdulrasaqolarewaju88@gmail.com",
-          // "password": "P@ssW0rd"
+          // "password": "P@ssW0rd" 
           // "email": "harjibbolar26@gmail.com",
           // "password": "Harjibbolar26@"
       }

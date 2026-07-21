@@ -12,7 +12,7 @@ http:
       - name: file
         type: file
         value:
-          - /Users/mac/Downloads/image.png
+          - /Users/mac/Downloads/webinar-image2.jpeg
   auth: inherit
 
 settings:

@@ -5,12 +5,12 @@ info:
 
 http:
   method: POST
-  url: https://tobams-group-be-development.onrender.com/api/v1/auth/delete-user
+  url: "{{BASE}}/auth/delete-user"
   body:
     type: json
     data: |-
       {
-        "email": "emmanuellaosawe17@gmail.com"
+        "email": "jite.newton@tobamsgroup.com"
       }
   auth: inherit
 
