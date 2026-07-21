@@ -1,7 +1,9 @@
+request:
+  auth: inherit
 info:
   name: Get Billing History
   type: http
-  seq: 6
+  seq: 8
 
 http:
   method: GET
@@ -15,7 +17,7 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Success
+  - name: Success — invoices with kid details
     request:
       url: "{{base_url}}/subscription/billing-history"
       method: GET
@@ -27,30 +29,32 @@ examples:
           value: application/json; charset=utf-8
         - name: access-control-allow-origin
           value: "*"
-        - name: date
-          value: Tue, 29 Apr 2026 10:00:00 GMT
-        - name: connection
-          value: keep-alive
       body:
         type: json
         data: |-
           {
             "statusCode": 200,
             "message": "Billing history fetched",
-            "timestamp": "2026-04-29T10:00:00.000Z",
+            "timestamp": "2026-06-03T10:00:00.000Z",
             "path": "/api/v1/subscription/billing-history",
             "service": "RL4KIDS",
             "version": "1.0.0",
             "data": [
               {
                 "id": "in_abc123",
-                "planName": "Explorer",
-                "amount": 1399,
+                "planName": "Starter",
+                "amount": 799,
                 "currency": "gbp",
                 "status": "Paid",
-                "date": "2026-04-01T00:00:00.000Z",
+                "date": "2026-06-03T00:00:00.000Z",
                 "receiptUrl": "https://pay.stripe.com/receipts/abc123",
-                "pdfUrl": "https://pay.stripe.com/invoice/abc123/pdf"
+                "pdfUrl": "https://pay.stripe.com/invoice/abc123/pdf",
+                "kid": {
+                  "kidId": "6a1dfcea1f9dff5f43f873c6",
+                  "name": "Milo Meelo",
+                  "username": "meelo",
+                  "picture": ""
+                }
               },
               {
                 "id": "in_def456",
@@ -58,13 +62,19 @@ examples:
                 "amount": 1399,
                 "currency": "gbp",
                 "status": "Paid",
-                "date": "2026-03-01T00:00:00.000Z",
+                "date": "2026-05-03T00:00:00.000Z",
                 "receiptUrl": "https://pay.stripe.com/receipts/def456",
-                "pdfUrl": "https://pay.stripe.com/invoice/def456/pdf"
+                "pdfUrl": "https://pay.stripe.com/invoice/def456/pdf",
+                "kid": {
+                  "kidId": "6a1eb7c04850b3d405268314",
+                  "name": "Ikki Aang",
+                  "username": "ikki",
+                  "picture": ""
+                }
               }
             ]
           }
-  - name: No billing history (free plan)
+  - name: Success — no billing history (never subscribed)
     request:
       url: "{{base_url}}/subscription/billing-history"
       method: GET
@@ -76,17 +86,13 @@ examples:
           value: application/json; charset=utf-8
         - name: access-control-allow-origin
           value: "*"
-        - name: date
-          value: Tue, 29 Apr 2026 10:00:00 GMT
-        - name: connection
-          value: keep-alive
       body:
         type: json
         data: |-
           {
             "statusCode": 200,
             "message": "Billing history fetched",
-            "timestamp": "2026-04-29T10:00:00.000Z",
+            "timestamp": "2026-06-03T10:00:00.000Z",
             "path": "/api/v1/subscription/billing-history",
             "service": "RL4KIDS",
             "version": "1.0.0",

@@ -1,0 +1,53 @@
+info:
+  name: Deactivate Account
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{BASE}}/users/me/deactivate"
+  body:
+    type: json
+    data: |-
+      {
+        "password": "YourPassword123!",
+        "reason": "Taking a break from learning"
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Soft-deactivates the authenticated user's account. The account is **not deleted** — it is marked inactive and can be fully restored at any time by logging in again with the same credentials.
+
+    A deactivation confirmation email is sent to the user.
+
+    **Auth:** Bearer token required.
+
+    **Body fields:**
+    | Field | Type | Required |
+    |-------|------|----------|
+    | password | string | Yes — current account password |
+    | reason | string | Yes — non-empty reason for deactivation |
+
+    **Success response (200):**
+    ```json
+    {
+      "message": "Account deactivated. You can reactivate it by logging in again."
+    }
+    ```
+
+    **Reactivation:** Simply call `POST /auth/login` with the existing credentials. The account will be automatically restored.
+
+    **Errors:**
+    - `400` — Missing password or empty reason.
+    - `401` — Incorrect password or unauthorized.
+    - `409` — Account is already deactivated.
+  type: text/markdown

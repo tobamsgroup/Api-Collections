@@ -1,0 +1,51 @@
+info:
+  name: Get Course Progress
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{BASE}}/enrollments/:courseId/progress"
+  params:
+    - name: courseId
+      value: "uuid"
+      enabled: true
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Returns the authenticated user's progress for a specific enrolled course, including overall percentage and the list of completed lesson IDs.
+
+    **Auth:** Bearer token required.
+
+    **Path parameters:**
+    | Param | Type | Required |
+    |-------|------|----------|
+    | courseId | string (UUID) | Yes |
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "data": {
+        "progress": 60,
+        "completedLessonIds": ["uuid-1", "uuid-2", "uuid-3"]
+      }
+    }
+    ```
+
+    **Errors:**
+    - `400` — `courseId` missing.
+    - `401` — Unauthorized.
+    - `403` — Not enrolled in this course.
+  type: text/markdown

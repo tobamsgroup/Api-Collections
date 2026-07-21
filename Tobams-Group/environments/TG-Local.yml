@@ -10,5 +10,5 @@ variables:
     name: org_access
   - secret: true
     name: org_refresh
-  - name: DIGEST_KEY
-    value: EMAIL_DIGEST_KEY
+  - secret: true
+    name: DIGEST_KEY

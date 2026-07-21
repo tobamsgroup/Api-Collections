@@ -1,3 +1,5 @@
+request:
+  auth: inherit
 info:
   name: Get My Subscription
   type: http
@@ -15,7 +17,7 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Success
+  - name: Success — guardian with Stripe customer
     request:
       url: "{{base_url}}/subscription/me"
       method: GET
@@ -27,33 +29,22 @@ examples:
           value: application/json; charset=utf-8
         - name: access-control-allow-origin
           value: "*"
-        - name: date
-          value: Tue, 29 Apr 2026 10:00:00 GMT
-        - name: connection
-          value: keep-alive
       body:
         type: json
         data: |-
           {
             "statusCode": 200,
-            "message": "Subscription fetched",
-            "timestamp": "2026-04-29T10:00:00.000Z",
+            "message": "Billing info fetched",
+            "timestamp": "2026-06-03T10:00:00.000Z",
             "path": "/api/v1/subscription/me",
             "service": "RL4KIDS",
             "version": "1.0.0",
             "data": {
-              "plan": "explorer",
-              "status": "active",
-              "stripeCustomerId": "cus_abc123",
-              "stripeSubscriptionId": "sub_abc123",
-              "stripePriceId": "price_abc123",
-              "currentPeriodEnd": "2026-05-29T10:00:00.000Z",
-              "cancelAtPeriodEnd": false,
-              "cancellationReason": null,
-              "additionalKids": 0
+              "stripeCustomerId": "cus_Ud318VQtX70RT9",
+              "noOfAllowedChildren": 5
             }
           }
-  - name: Free plan (no Stripe data)
+  - name: Success — guardian without Stripe customer (never subscribed)
     request:
       url: "{{base_url}}/subscription/me"
       method: GET
@@ -65,29 +56,18 @@ examples:
           value: application/json; charset=utf-8
         - name: access-control-allow-origin
           value: "*"
-        - name: date
-          value: Tue, 29 Apr 2026 10:00:00 GMT
-        - name: connection
-          value: keep-alive
       body:
         type: json
         data: |-
           {
             "statusCode": 200,
-            "message": "Subscription fetched",
-            "timestamp": "2026-04-29T10:00:00.000Z",
+            "message": "Billing info fetched",
+            "timestamp": "2026-06-03T10:00:00.000Z",
             "path": "/api/v1/subscription/me",
             "service": "RL4KIDS",
             "version": "1.0.0",
             "data": {
-              "plan": "free",
-              "status": "active",
               "stripeCustomerId": null,
-              "stripeSubscriptionId": null,
-              "stripePriceId": null,
-              "currentPeriodEnd": null,
-              "cancelAtPeriodEnd": false,
-              "cancellationReason": null,
-              "additionalKids": 0
+              "noOfAllowedChildren": 5
             }
           }

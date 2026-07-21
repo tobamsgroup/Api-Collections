@@ -5,10 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/talent/email/finaldays@gmail.com"
+  url: "{{BASE}}/talents/email/:email"
+  params:
+    - name: email
+      value: fawaz.abdganiyu@tobamsgroup.com
+      type: path
   auth:
     type: bearer
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoicm9sYXR6YXJ6YUBnbWFpbC5jb20iLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNzIxOTI3MzExLCJleHAiOjE3NTM0NjMzMTF9.mptu9ZXstg-PtlDvgKXljJQYP3AXmr28kjMvW_xz9No
+    token: "{{talent_access}}"
 
 settings:
   encodeUrl: true

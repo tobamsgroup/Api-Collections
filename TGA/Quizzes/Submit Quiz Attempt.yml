@@ -1,0 +1,68 @@
+info:
+  name: Submit Quiz Attempt
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/quizzes/:quizId/attempts"
+  params:
+    - name: quizId
+      value: "uuid"
+      enabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "answers": {
+          "<questionId>": "<selectedOptionId>",
+          "<questionId>": "<selectedOptionId>"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Submits a quiz attempt and returns the score, pass/fail result, and the correct answers for each question.
+
+    **Auth:** Bearer token required.
+
+    **Path parameters:**
+    | Param | Type | Required |
+    |-------|------|----------|
+    | quizId | string (UUID) | Yes |
+
+    **Body fields:**
+    | Field | Type | Required | Notes |
+    |-------|------|----------|-------|
+    | answers | object | Yes | Map of `questionId → selectedOptionId` |
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "data": {
+        "score": 80,
+        "isPassed": true,
+        "correctAnswers": {
+          "<questionId>": "<correctOptionId>",
+          "<questionId>": "<correctOptionId>"
+        }
+      }
+    }
+    ```
+
+    **Errors:**
+    - `400` — `answers` missing or malformed.
+    - `401` — Unauthorized.
+    - `404` — Quiz not found.
+    - `429` — Maximum attempt limit reached.
+  type: text/markdown

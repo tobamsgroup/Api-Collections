@@ -20,7 +20,7 @@ http:
 runtime:
   scripts:
     - type: after-response
-      code: bru.setEnvVar("jwt", res.getBody().token);
+      code: bru.setVar("jwt", res.getBody().token);
 
 settings:
   encodeUrl: true

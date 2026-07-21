@@ -1,0 +1,66 @@
+info:
+  name: Enroll in Course
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/enrollments"
+  body:
+    type: json
+    data: |-
+      {
+        "courseId": "uuid"
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Enrolls the authenticated user in a published course. If the user is already enrolled, updates `lastAccessedAt` and returns the existing enrollment.
+
+    **Auth:** Bearer token required.
+
+    **Body fields:**
+    | Field | Type | Required |
+    |-------|------|----------|
+    | courseId | string (UUID) | Yes |
+
+    **Success response — new enrollment (201):**
+    ```json
+    {
+      "success": true,
+      "message": "Enrolled successfully",
+      "data": {
+        "id": "uuid",
+        "courseId": "uuid",
+        "enrolledAt": "2026-06-12T00:00:00.000Z"
+      }
+    }
+    ```
+
+    **Success response — already enrolled (200):**
+    ```json
+    {
+      "success": true,
+      "message": "Already enrolled",
+      "data": {
+        "id": "uuid",
+        "courseId": "uuid",
+        "enrolledAt": "2026-06-01T00:00:00.000Z"
+      }
+    }
+    ```
+
+    **Errors:**
+    - `400` — `courseId` missing.
+    - `401` — Unauthorized.
+    - `404` — Course not found or not published.
+  type: text/markdown

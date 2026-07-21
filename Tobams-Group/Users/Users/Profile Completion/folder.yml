@@ -1,0 +1,9 @@
+info:
+  name: Profile Completion
+  type: folder
+  seq: 7
+
+request:
+  auth:
+    type: bearer
+    token: "{{intern_access}}"

@@ -11,19 +11,18 @@ http:
     data: |-
       {
           // "password": "MentorExpert2023!",
-          "email": "theteam@tobamsgroup.com",
+      //     "email": "fawaz.abdganiyu@tobamsgroup.com",
           // "email": "ericsson.raphael@tobamsgroup.com",
-          // "password": "123456"
+          "password": "Password123!"
           // "email": "casi04@pirkong.com",
           // "email": "paul.elugbaju@tobamsgroup.com",
           // "password": "Paul.Elugbaju@tobamsgroup26"
-      //    "email": "taofeeq.abdulrasaq@tobamsgroup.com",
-      //   "email": "theteam@tobamsgroup.com",
-          "password": "Admin@1234"
-      //     "email": "Ifeanyi.eze@tobamsgroup.com",
-      //     "password": ".Tobams1234."
+         "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+      //     "password": "Admin@1234"
+      //     "email": "omokorede.adeyeye@tobamsgroup.com",
+      //     "password": "Omokorede99#"
           // "email": "abdulrasaqolarewaju88@gmail.com",
-          // "password": "P@ssW0rd" 
+          // "password": "P@ssW0rd"
           // "email": "harjibbolar26@gmail.com",
           // "password": "Harjibbolar26@"
       }
@@ -32,27 +31,32 @@ runtime:
   scripts:
     - type: after-response
       code: |-
-        bru.setEnvVar("access", res.getBody().data.accessToken);
-        bru.setEnvVar("refresh", res.getBody().data.refreshToken);
+        const data = res.getBody().data;
 
-        if (res.getBody().data.role === "Organisation"){
-            bru.setEnvVar("org_access", res.getBody().data.accessToken);
-            bru.setEnvVar("org_refresh", res.getBody().data.refreshToken);
+        if (data && data.role) {
+          if (data.role === "Organisation"){
+            bru.setVar("org_access", data.accessToken);
+            bru.setVar("org_refresh", data.refreshToken);
         }
+          if (data.role === "Intern"){
+            bru.setVar("intern_access", data.accessToken);
+            bru.setVar("intern_refresh", data.refreshToken);
+          }
 
-        if (res.getBody().data.role === "Intern"){
-            bru.setEnvVar("intern_access", res.getBody().data.accessToken);
-            bru.setEnvVar("intern_refresh", res.getBody().data.refreshToken);
-        }
+          if (data.role === "Talent"){
+            bru.setVar("talent_access", data.accessToken);
+            bru.setVar("talent_refresh", data.refreshToken);
+          }
 
-        if (res.getBody().data.role === "Talent"){
-            bru.setEnvVar("talent_access", res.getBody().data.accessToken);
-            bru.setEnvVar("talent_refresh", res.getBody().data.refreshToken);
-        }
+          if (data.role === "Mentor"){
+            bru.setVar("mentor_access", data.accessToken);
+            bru.setVar("mentor_refresh", data.refreshToken);
+          }
 
-        if (res.getBody().data.role === "Super_Admin" || res.getBody().data.role === "Admin"){
-            bru.setEnvVar("admin_access", res.getBody().data.accessToken);
-            bru.setEnvVar("admin_refresh", res.getBody().data.refreshToken);
+          if (data.role === "Super_Admin" || data.role === "Admin"){
+            bru.setVar("admin_access", data.accessToken);
+            bru.setVar("admin_refresh", data.refreshToken);
+          } 
         }
 
 settings:

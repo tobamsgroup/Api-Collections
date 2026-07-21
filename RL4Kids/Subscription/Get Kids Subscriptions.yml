@@ -1,0 +1,106 @@
+request:
+  auth: inherit
+info:
+  name: Get Kids Subscriptions
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/subscription/kids"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success — kids with active subscriptions
+    request:
+      url: "{{base_url}}/subscription/kids"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Kids subscriptions fetched",
+            "timestamp": "2026-06-03T10:00:00.000Z",
+            "path": "/api/v1/subscription/kids",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "kidId": "6a1dfcea1f9dff5f43f873c6",
+                "name": "Milo Meelo",
+                "username": "meelo",
+                "picture": "",
+                "age": 7,
+                "gender": "Male",
+                "preferredLearningTopics": ["Think Entrepreneurship"],
+                "totalXp": 120,
+                "subscription": {
+                  "plan": "starter",
+                  "status": "active",
+                  "stripeSubscriptionId": "sub_1Tdne5Ge5p9kCW13esLfPomI",
+                  "stripePriceId": "price_1TOwbiGe5p9kCW134KCfdXh2",
+                  "currentPeriodEnd": "2026-07-03T10:00:00.000Z",
+                  "cancelAtPeriodEnd": false,
+                  "cancellationReason": null
+                }
+              },
+              {
+                "kidId": "6a1eb7c04850b3d405268314",
+                "name": "Ikki Aang",
+                "username": "ikki",
+                "picture": "",
+                "age": 8,
+                "gender": "Female",
+                "preferredLearningTopics": ["Think AI"],
+                "totalXp": 80,
+                "subscription": {
+                  "plan": "free",
+                  "status": "active",
+                  "stripeSubscriptionId": null,
+                  "stripePriceId": null,
+                  "currentPeriodEnd": null,
+                  "cancelAtPeriodEnd": false,
+                  "cancellationReason": null
+                }
+              }
+            ]
+          }
+  - name: Success — no kids
+    request:
+      url: "{{base_url}}/subscription/kids"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Kids subscriptions fetched",
+            "timestamp": "2026-06-03T10:00:00.000Z",
+            "path": "/api/v1/subscription/kids",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": []
+          }

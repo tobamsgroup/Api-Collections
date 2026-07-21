@@ -1,0 +1,56 @@
+info:
+  name: Complete Lesson
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{BASE}}/enrollments/:courseId/lessons/:lessonId/complete"
+  params:
+    - name: courseId
+      value: "uuid"
+      enabled: true
+    - name: lessonId
+      value: "uuid"
+      enabled: true
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Marks a lesson as complete for the authenticated user. Idempotent — calling it multiple times has no additional effect. If this lesson completion brings overall progress to 100%, `completedAt` is automatically set on the enrollment.
+
+    **Auth:** Bearer token required.
+
+    **Path parameters:**
+    | Param | Type | Required |
+    |-------|------|----------|
+    | courseId | string (UUID) | Yes |
+    | lessonId | string (UUID) | Yes |
+
+    **Success response (200):**
+    ```json
+    {
+      "success": true,
+      "data": {
+        "progress": 80,
+        "completedLessonIds": ["uuid-1", "uuid-2", "uuid-3", "uuid-4"]
+      }
+    }
+    ```
+
+    **Errors:**
+    - `400` — `courseId` or `lessonId` missing.
+    - `401` — Unauthorized.
+    - `403` — Not enrolled in this course.
+    - `404` — Lesson not found in this course.
+  type: text/markdown

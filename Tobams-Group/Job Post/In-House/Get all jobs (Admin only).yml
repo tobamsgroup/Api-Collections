@@ -1,0 +1,820 @@
+info:
+  name: Get all jobs (Admin only)
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: "{{BASE}}/job_in_house/admin/all"
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/job_in_house/admin/all"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1783077145571-5ry1j7c31
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "38847"
+        - name: etag
+          value: W/"97bf-ZxbsVC/6bKIMJuFXGItvpV1JYvQ"
+        - name: date
+          value: Fri, 03 Jul 2026 11:12:26 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Jobs Posted found",
+            "data": {
+              "count": 52,
+              "result": [
+                {
+                  "visibility": "Interns",
+                  "_id": "6837261ac04303ad82747d7b",
+                  "companyName": "Tobams Group",
+                  "title": "Junior Business Operations Manager",
+                  "jobDescription": "Tobams Group is a leading consultancy focused on transforming training, development, and education in entrepreneurship, career, and talent development. Our flagship initiative, Recycled Learning, is an innovative learning management system (LMS) for kids, incorporating books, digital platforms, and AI-driven learning solutions. We are actively engaging community governments, schools, universities, and corporations to adopt Recycled Learning as a sustainable education solution. Our mission is to bridge educational gaps, enhance learning experiences, and create opportunities for young learners through a technology-driven approach.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Role Summary": [
+                        "As a Junior Business Operations Manager, you will support the strategic and operational execution of various initiatives across the group, particularly in international expansion, product development, project coordination, and business process improvement. You’ll work closely with the Head of Business Operations and other key stakeholders to ensure seamless delivery of key projects and operations."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities:": []
+                    },
+                    {
+                      "Operations & Administrative Support": [
+                        "Assist in day-to-day operations including planning, documentation, and reporting.",
+                        "Help track progress against internal goals and KPIs.",
+                        "Maintain up-to-date records and internal documentation (strategy decks, feasibility reports, SOPs).",
+                        "Provide administrative support for cross-functional teams and leadership."
+                      ]
+                    },
+                    {
+                      "International Product Expansion & Launch Support": [
+                        "Assist with coordination of product launch activities in the US, UK, and European markets.",
+                        "Conduct and compile market research, compliance requirements, and fulfillment strategies.",
+                        "Support the setup and configuration of platforms for international launches (e.g., Amazon).",
+                        "Help document regional expansion strategies and feasibility studies."
+                      ]
+                    },
+                    {
+                      "Strategy & Project Coordination": [
+                        "Support the development and review of strategic documents and growth plans.",
+                        "Collaborate with various departments to coordinate timelines and deliverables for new projects.",
+                        "Track execution of business development activities and expansion milestones."
+                      ]
+                    },
+                    {
+                      "Talent & Team Coordination": [
+                        "Coordinate intern onboarding, performance tracking, and exit documentation.",
+                        "Support communication and collaboration across project teams."
+                      ]
+                    },
+                    {
+                      "Skills & Qualifications": [
+                        "1–3 years experience in operations, admin, or project support roles.",
+                        "Strong organizational and multitasking skills.",
+                        "Excellent written and verbal communication.",
+                        "Familiarity with business tools (Google Workspace, Trello, Notion, Excel).",
+                        "Ability to conduct and present basic research and strategic documentation."
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "applicationCount": 210,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibleTo": "All",
+                  "createdAt": "2025-05-28T15:04:58.194Z"
+                },
+                {
+                  "_id": "68a8d1237d811edda3bfa4ff",
+                  "companyName": "Tobams Group",
+                  "title": "Associate Backend Developer",
+                  "jobDescription": "Tobams Group is a forward-thinking company committed to delivering innovative digital solutions across multiple sectors. We build scalable platforms, AI-powered applications, and gamified user experiences that empower businesses and individuals to thrive in today’s fast-paced digital economy. We are looking for a Backend Developer to join our growing engineering team. In this role, you will design, develop, and maintain robust backend services and APIs that power Tobamsgroup’s web applications. You’ll collaborate with product, design, and AI/ML teams to deliver high-quality, data-driven software solutions.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Responsibilities": [
+                        "Design, build, and maintain scalable backend services and APIs for Tobamsgroup products.",
+                        "Collaborate with AI/ML engineers to integrate machine learning models into production environments.",
+                        "Implement and support gamification features (progress tracking, leaderboards, reward systems, badges, challenges) through backend logic and APIs.",
+                        "Work closely with frontend developers, product managers, and designers to deliver seamless user experiences.",
+                        "Maintain and optimize databases (SQL/NoSQL) for performance, scalability, and reliability.",
+                        "Ensure code quality by writing clean, testable, and maintainable solutions.",
+                        "Monitor, debug, and improve application performance, reliability, and security.",
+                        "Participate in code reviews, architecture discussions, and process improvements."
+                      ]
+                    },
+                    {
+                      "Required Qualifications": [
+                        "Bachelor’s degree in Computer Science, Software Engineering, or related field (or equivalent experience).",
+                        "Strong programming skills in TypeScript and JavaScript.",
+                        "Strong proficiency in Node.js (NestJS/Express.js) or similar backend frameworks.",
+                        "Solid understanding of RESTful APIs and microservices architecture.",
+                        "Proven experience working on AI/ML model integration (e.g., exposing models via APIs, handling inference at scale).",
+                        "Proven experience building or supporting gamification features (e.g., points systems, leaderboards, challenges, rewards).",
+                        "Experience with databases (MongoDB, PostgreSQL, or MySQL).",
+                        "Familiarity with containerization (Docker, Kubernetes) and deployment on cloud platforms (AWS, GCP, or Azure).",
+                        "Understanding of authentication/authorization protocols (JWT, OAuth2).",
+                        "Experience with CI/CD pipelines and version control (Git).",
+                        "Strong problem-solving, debugging, and analytical skills.",
+                        "Excellent communication skills (technical documentation & stakeholder reporting).",
+                        "Adaptability and ability to thrive in a fast-paced, evolving environment.",
+                        "Humble, hardworking, and ambitious mindset."
+                      ]
+                    },
+                    {
+                      "Nice-to-Have Skills": [
+                        "Knowledge of Python.",
+                        "Experience with message queues (RabbitMQ, Kafka).",
+                        "Exposure to DevOps practices and infrastructure as code (Terraform).",
+                        "Familiarity with event-driven systems and webhook handling.",
+                        "Experience with AI/ML integration and MLOps practices."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "Competitive salary package.",
+                        "Opportunity to work on challenging and impactful projects and AI solutions.",
+                        "A collaborative and innovative work environment.",
+                        "Professional growth and career development opportunities.",
+                        "Flexible work arrangements (remote)."
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "applicationCount": 49,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "createdAt": "2025-08-22T20:20:51.145Z"
+                },
+                {
+                  "_id": "68fa11a13901b7b11e3e38d4",
+                  "companyName": "Tobams Group",
+                  "title": "Associate Social Media Manager",
+                  "jobDescription": "We are seeking a creative, strategic, and proactive Associate Social Media Manager to join our dynamic team. In this role, you will manage our digital presence across multiple platforms, craft engaging multimedia content, and help shape the brand's storytelling voice. You will collaborate closely with internal teams to execute impactful campaigns that drive engagement, strengthen brand identity, and expand our global audience. This is a fully remote role suited for a self-motivated professional who thrives in a fast-paced, creative, and collaborative environment.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Required Skills and Experience": [
+                        "1–3 years of hands-on experience in social media management, content creation, or digital marketing.",
+                        "Proficiency in video editing (Premiere Pro, CapCut).",
+                        "Proficiency in graphic design (Canva, Adobe Creative Suite).",
+                        "Familiarity with AI-based tools for content optimization.",
+                        "A strong eye for aesthetics, storytelling, and audience engagement.",
+                        "Exceptional written and verbal communication skills.",
+                        "Ability to manage multiple projects simultaneously and meet deadlines in a remote work environment.",
+                        "Independent, innovative, and results-driven mindset.",
+                        "Passion for staying ahead of digital and creative trends."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities": [
+                        "Develop, plan, and manage compelling content across all social platforms — including Instagram, LinkedIn, TikTok, YouTube, and X (Twitter).",
+                        "Create, edit, and produce high-quality multimedia content (short-form videos, graphics, and reels).",
+                        "Use tools such as Adobe Premiere Pro, CapCut, Canva, and AI-powered editing tools.",
+                        "Foster authentic online relationships and respond to comments, messages, and conversations that align with the brand's tone and values.",
+                        "Identify emerging social media trends and monitor competitors.",
+                        "Translate insights into actionable growth strategies.",
+                        "Track, analyze, and report on key performance metrics to evaluate content effectiveness and engagement.",
+                        "Work closely with the Marketing, Design, and Product teams to ensure social content aligns with broader campaign goals and organizational strategy.",
+                        "Bring the brand's vision to life through thoughtful storytelling and apply visual creativity while maintaining a consistent voice across all digital touchpoints."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "A collaborative, global, and innovation-driven team environment.",
+                        "Opportunities for growth, learning, and creative experimentation.",
+                        "Flexible remote working arrangements.",
+                        "The chance to shape and elevate a fast-growing digital brand.",
+                        "Professional development opportunities in digital marketing and content strategy."
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "applicationCount": 57,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "createdAt": "2025-10-16T17:00:00.000Z"
+                },
+                {
+                  "_id": "68fa14683901b7b11e3e38d5",
+                  "companyName": "Tobams Group",
+                  "title": "Chief Technology Officer - CTO",
+                  "jobDescription": "Tobams Group is a global innovation and talent-development company dedicated to transforming how people learn, grow, and connect through AI-driven education, sustainability, and digital empowerment. The CTO will serve as the architect and innovation leader for all Tobams Group's technology initiatives. This role demands a bold, forward-thinking leader who can translate the company's ambitious vision into scalable, world-class digital solutions. You will drive AI strategy, technology architecture, platform scalability, and innovation culture across multiple business units - including Recycled Learning, Rare Eat, and other global projects. The ideal candidate will combine deep technical expertise with strategic leadership, a passion for AI in education, and the ability to build and manage high-performing global teams.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Technology Vision & Leadership": [
+                        "Define and execute Tobams Group's overall technology roadmap across AI, EdTech, sustainability, and data-driven learning ecosystems.",
+                        "Build the long-term technology strategy that aligns with the company's mission to democratize access to quality learning globally.",
+                        "Serve as the principal advisor to the CEO and executive team on emerging technologies, AI ethics, scalability, and innovation priorities.",
+                        "Foster a culture of innovation, experimentation, and excellence within the technology and product teams."
+                      ]
+                    },
+                    {
+                      "Product & Platform Development": [
+                        "Oversee the architecture, design, and deployment of AI-powered platforms, including Recycled Learning adaptive learning system, Recycled Learning for Kids (AI-augmented learning platform), Tobams Group dashboards and analytics tools, and Global Teacher Learning Management System (LMS).",
+                        "Ensure all systems are scalable, secure, and data-driven, supporting millions of users globally.",
+                        "Lead the integration of personalized learning algorithms, gamified experiences, and adaptive assessment engines.",
+                        "Collaborate with Product Design & Learning Experience teams to create intuitive user interfaces and immersive learning journeys."
+                      ]
+                    },
+                    {
+                      "AI, Data, and Automation": [
+                        "Drive the company's AI strategy, including the use of machine learning, NLP, computer vision, and predictive analytics in learning and talent assessment.",
+                        "Oversee the development of AI recommendation systems for content, mentorship, and skills-based learning.",
+                        "Lead the design of data governance frameworks, learning analytics dashboards, and AI model evaluation systems.",
+                        "Explore partnerships with leading AI and cloud technology providers to accelerate innovation."
+                      ]
+                    },
+                    {
+                      "Technical Architecture & Infrastructure": [
+                        "Build and maintain a robust, modular, and scalable infrastructure to support multi-tenant LMS and platform solutions.",
+                        "Champion cloud-native architecture using AWS, GCP, or Azure with CI/CD pipelines and containerized deployments (Docker/Kubernetes).",
+                        "Ensure systems meet high standards of security, compliance, and data protection (GDPR, COPPA, etc.).",
+                        "Introduce DevOps and MLOps best practices for rapid iteration and deployment."
+                      ]
+                    },
+                    {
+                      "Team Building & Leadership": [
+                        "Recruit, mentor, and scale a world-class team of engineers, AI specialists, data scientists, and DevOps professionals.",
+                        "Lead cross-functional collaboration with Product Design, Learning Experience, and Business Strategy teams.",
+                        "Establish a strong performance culture built on transparency, accountability, and creative problem-solving."
+                      ]
+                    },
+                    {
+                      "Partnerships & Innovation Ecosystem": [
+                        "Forge and manage strategic partnerships with AI labs, EdTech organizations, universities, and industry bodies.",
+                        "Represent Tobams Group at conferences, innovation summits, and investor meetings as a technology thought leader.",
+                        "Contribute to product roadmaps and fundraising discussions by providing technical insights and scalability projections."
+                      ]
+                    },
+                    {
+                      "Required Experience & Skills": [
+                        "10+ years of experience in technology leadership roles, preferably in EdTech, AI, SaaS, or platform-based businesses.",
+                        "Proven record of building and scaling AI-driven learning or data platforms from concept to global deployment.",
+                        "Deep expertise in machine learning, natural language processing, and adaptive systems.",
+                        "Strong technical skills in Python, Node.js, React, cloud services (AWS/GCP/Azure), and data pipeline architecture.",
+                        "Experience integrating LMS/LXP technologies, APIs, and analytics frameworks (xAPI, SCORM, or LTI).",
+                        "Understanding of AI ethics, data security, and educational technology compliance standards.",
+                        "Exceptional leadership, communication, and stakeholder management skills.",
+                        "Entrepreneurial mindset, capable of working across strategy, technology, and business development."
+                      ]
+                    },
+                    {
+                      "Preferred Qualifications": [
+                        "Master's or PhD in Computer Science, AI, Data Science, or Educational Technology.",
+                        "Experience leading technology in rapid-growth startups or innovation-driven global organizations.",
+                        "Proven ability to manage multi-country engineering and product teams.",
+                        "Prior involvement in AI-EdTech or adaptive learning product development is highly desirable."
+                      ]
+                    },
+                    {
+                      "Personal Attributes": [
+                        "Visionary with the ability to think big while executing meticulously.",
+                        "Passionate about using technology to create equitable, sustainable access to learning.",
+                        "Collaborative and adaptable, thriving in a global, multicultural team.",
+                        "Strategic thinker who can balance innovation with operational excellence.",
+                        "Entrepreneurial spirit with a readiness to grow into a Co-Founder capacity as the company scales."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "Lead the global technology transformation of one of the most innovative education and sustainability ecosystems.",
+                        "Shape AI-driven learning systems that impact millions of learners across continents.",
+                        "Collaborate with visionary leaders, educators, and technologists who believe in sustainable change through innovation.",
+                        "Build and scale platforms that redefine how talent is discovered, developed, and empowered.",
+                        "Competitive compensation, equity options, and a potential Co-Founder trajectory for outstanding performance and commitment."
+                      ]
+                    }
+                  ],
+                  "extraText": "Reports To: Chief Executive Officer (CEO). Department: Technology & Innovation. Future Potential: This role has the potential to evolve into a Co-Founder position for the right candidate, as Tobams Group continues to scale globally.",
+                  "applicationCount": 9,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "Permanent",
+                  "status": "Published",
+                  "visibility": "Public",
+                  "createdAt": "2025-10-23T00:00:00.000Z"
+                },
+                {
+                  "_id": "69145d3186e2bdfb100d2f55",
+                  "companyName": "Tobams Group",
+                  "title": "Associate Social Media Manager",
+                  "jobDescription": "We are seeking a creative, strategic, and proactive Associate Social Media Manager to join our dynamic team. In this role, you will manage our digital presence across multiple platforms, craft engaging multimedia content, and help shape the brand's storytelling voice. You will collaborate closely with internal teams to execute impactful campaigns that drive engagement, strengthen brand identity, and expand our global audience. This is a fully remote role suited for a self-motivated professional who thrives in a fast-paced, creative, and collaborative environment.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Required Skills and Experience": [
+                        "1–3 years of hands-on experience in social media management, content creation, or digital marketing.",
+                        "Proficiency in video editing (Premiere Pro, CapCut).",
+                        "Proficiency in graphic design (Canva, Adobe Creative Suite).",
+                        "Familiarity with AI-based tools for content optimization.",
+                        "A strong eye for aesthetics, storytelling, and audience engagement.",
+                        "Exceptional written and verbal communication skills.",
+                        "Ability to manage multiple projects simultaneously and meet deadlines in a remote work environment.",
+                        "Independent, innovative, and results-driven mindset.",
+                        "Passion for staying ahead of digital and creative trends."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities": [
+                        "Develop, plan, and manage compelling content across all social platforms — including Instagram, LinkedIn, TikTok, YouTube, and X (Twitter).",
+                        "Create, edit, and produce high-quality multimedia content (short-form videos, graphics, and reels).",
+                        "Use tools such as Adobe Premiere Pro, CapCut, Canva, and AI-powered editing tools.",
+                        "Foster authentic online relationships and respond to comments, messages, and conversations that align with the brand's tone and values.",
+                        "Identify emerging social media trends and monitor competitors.",
+                        "Translate insights into actionable growth strategies.",
+                        "Track, analyze, and report on key performance metrics to evaluate content effectiveness and engagement.",
+                        "Work closely with the Marketing, Design, and Product teams to ensure social content aligns with broader campaign goals and organizational strategy.",
+                        "Bring the brand's vision to life through thoughtful storytelling and apply visual creativity while maintaining a consistent voice across all digital touchpoints."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "A collaborative, global, and innovation-driven team environment.",
+                        "Opportunities for growth, learning, and creative experimentation.",
+                        "Flexible remote working arrangements.",
+                        "The chance to shape and elevate a fast-growing digital brand.",
+                        "Professional development opportunities in digital marketing and content strategy."
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "applicationCount": 41,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "createdAt": "2025-11-12T11:00:00.000Z"
+                },
+                {
+                  "visibility": "Interns",
+                  "_id": "6965fdc401bf490134411805",
+                  "companyName": "Tobams Group",
+                  "title": "Associate Social Media Manager",
+                  "jobDescription": "We are seeking a creative, strategic, and proactive Associate Social Media Manager to join our dynamic team. In this role, you will manage our digital presence across multiple platforms, craft engaging multimedia content, and help shape the brand’s storytelling voice. You will collaborate closely with internal teams to execute impactful campaigns that drive engagement, strengthen brand identity, and expand our global audience. This is a fully remote role suited for a self-motivated professional who thrives in a fast-paced, creative, and collaborative environment.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Required Skills and Experience": [
+                        "1–3 years of hands-on experience in social media management, content creation, or digital marketing.",
+                        "Proficiency in video editing tools such as Adobe Premiere Pro and CapCut.",
+                        "Proficiency in graphic design tools including Canva and Adobe Creative Suite.",
+                        "Familiarity with AI-based tools for content optimization.",
+                        "Strong eye for aesthetics, storytelling, and audience engagement.",
+                        "Exceptional written and verbal communication skills.",
+                        "Ability to manage multiple projects simultaneously and meet deadlines in a remote work environment.",
+                        "Independent, innovative, and results-driven mindset.",
+                        "Passion for staying ahead of digital and creative trends."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities": [
+                        "Develop, plan, and manage compelling content across all social platforms including Instagram, LinkedIn, TikTok, YouTube, and X (Twitter).",
+                        "Create, edit, and produce high-quality multimedia content such as short-form videos, graphics, and reels.",
+                        "Utilize tools such as Adobe Premiere Pro, CapCut, Canva, and AI-powered editing tools.",
+                        "Foster authentic online relationships and engage with the community.",
+                        "Respond to comments, messages, and conversations in line with the brand’s tone and values.",
+                        "Identify emerging social media trends and monitor competitors.",
+                        "Translate insights into actionable growth strategies.",
+                        "Track, analyze, and report on key performance metrics to evaluate content effectiveness and engagement.",
+                        "Collaborate closely with the Marketing, Design, and Product teams.",
+                        "Ensure social content aligns with broader campaign goals and organizational strategy.",
+                        "Bring the brand’s vision to life through thoughtful storytelling while maintaining a consistent voice across all digital touchpoints."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "A collaborative, global, and innovation-driven team environment.",
+                        "Opportunities for growth, learning, and creative experimentation.",
+                        "Flexible remote working arrangements.",
+                        "The opportunity to shape and elevate a fast-growing digital brand."
+                      ]
+                    }
+                  ],
+                  "extraText": "If you are passionate about digital storytelling, creative strategy, and community engagement, and you thrive in bringing ideas to life through social media, we would love to hear from you.",
+                  "applicationCount": 50,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "createdAt": "2026-01-12T11:00:00.000Z"
+                },
+                {
+                  "visibility": "Interns",
+                  "_id": "699c6e6cbe2e747d922bc7bd",
+                  "companyName": "Tobams Group",
+                  "title": "Junior Business Operations Manager",
+                  "jobDescription": "Tobams Group is a leading consultancy focused on transforming training, development, and education in entrepreneurship, career, and talent development. Our flagship initiative, Recycled Learning, is an innovative learning management system (LMS) for kids, incorporating books, digital platforms, and AI-driven learning solutions. We are actively engaging community governments, schools, universities, and corporations to adopt Recycled Learning as a sustainable education solution. Our mission is to bridge educational gaps, enhance learning experiences, and create opportunities for young learners through a technology-driven approach.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa",
+                    "Lagos"
+                  ],
+                  "jobData": [
+                    {
+                      "Role Summary": [
+                        "Tobams Group is seeking a highly organized and proactive Junior Business Operations Manager to support the execution of key operational, recruitment, product delivery, and expansion initiatives across the group. In this role, you will work closely with the Team Lead and external stakeholders to ensure projects are delivered efficiently, internal processes are followed, and cross-functional teams stay aligned. You will also support recruitment operations, stakeholder engagement, product delivery coordination, and international expansion activities. This is a hands-on role suited for someone who thrives in a fast-paced environment, enjoys managing multiple workstreams, and is passionate about building systems that improve execution."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities:": []
+                    },
+                    {
+                      "Business Operations & Administrative Support": [
+                        "Support day-to-day operations including planning, documentation, reporting, and task tracking.",
+                        "Maintain up-to-date internal documentation such as SOPs, strategy decks, project briefs, feasibility reports, and trackers.",
+                        "Track progress against internal goals, timelines, and KPIs.",
+                        "Provide administrative support to leadership and cross-functional teams to ensure smooth execution of deliverables."
+                      ]
+                    },
+                    {
+                      "Recruitment & Hiring Operations": [
+                        "Support end-to-end recruitment processes across Tobams Group.",
+                        "Collaborate with team leads to develop and refine job descriptions (JDs) and role requirements.",
+                        "Coordinate with the development team to ensure application forms/pages are created and functional.",
+                        "Support job advertising and promotion across social media platforms when required.",
+                        "Manage shortlisting and applicant communication.",
+                        "Coordinate assessments: sending assessment tasks, communicating deadlines, and following up on submissions.",
+                        "Liaise with team leads to ensure timely review of assessment submissions.",
+                        "Schedule interviews for qualified candidates and coordinate interview logistics.",
+                        "Support offer management including sending offer letters, ensuring contracts are issued, signed, and properly documented.",
+                        "Coordinate onboarding processes including documentation, internal introductions, and onboarding checklists."
+                      ]
+                    },
+                    {
+                      "Project Coordination & Cross-functional Execution": [
+                        "Coordinate internal projects across multiple teams (Product, Marketing, Operations, Recruitment, Partnerships).",
+                        "Support project planning by tracking deliverables, deadlines, risks, and dependencies.",
+                        "Ensure communication flows across teams to prevent delays and missed handoffs.",
+                        "Prepare meeting notes, action items, and follow-up documentation."
+                      ]
+                    },
+                    {
+                      "International Expansion & Market Research Support": [
+                        "Assist in the coordination of international product launch activities (US, UK, and Europe).",
+                        "Conduct and compile market research including compliance requirements, pricing benchmarks, and fulfillment strategies.",
+                        "Support the setup and configuration of platforms for international launches (e.g., Amazon and other ecommerce tools).",
+                        "Support documentation of regional expansion strategies and feasibility studies."
+                      ]
+                    },
+                    {
+                      "Product Delivery, Inventory & Supplier Coordination": [
+                        "Support coordination with suppliers and vendors to procure materials for events and projects.",
+                        "Assist with product delivery coordination across business units.",
+                        "Support inventory tracking and stock management for products such as Rare Eat and books.",
+                        "Work with relevant teams to ensure fulfillment timelines and product delivery processes are followed."
+                      ]
+                    },
+                    {
+                      "Stakeholder Engagement & Partnerships Support": [
+                        "Support stakeholder engagement activities including communications, scheduling, documentation, and follow-ups.",
+                        "Assist in managing relationships with partners, collaborators, and external stakeholders.",
+                        "Support preparation of stakeholder materials, engagement documents, and presentations.",
+                        "Support grant research by identifying relevant funding opportunities aligned with Tobams Group’s initiatives.",
+                        "Assist in drafting grant requirements, summaries, and supporting documentation.",
+                        "Help coordinate internal inputs needed for proposals and reporting."
+                      ]
+                    },
+                    {
+                      "Skills & Qualifications": [
+                        "1–3 years experience in business operations, project coordination, admin support, HR/recruitment operations, or similar roles.",
+                        "Strong organizational and multitasking ability with attention to detail.",
+                        "Excellent written and verbal communication skills.",
+                        "Strong follow-up culture and ability to manage deadlines across multiple stakeholders.",
+                        "Comfortable working with business tools such as Google Workspace, Jira, and Excel/Sheets.",
+                        "Ability to conduct research and present findings clearly in reports or slides.",
+                        "Ability to work independently in a remote environment while staying accountable."
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "applicationCount": 75,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibleTo": "All",
+                  "createdAt": "2026-02-23T00:00:00.000Z"
+                },
+                {
+                  "_id": "69a7e52c934396ba8bb60df2",
+                  "companyName": "Tobams Group",
+                  "title": "Backend Developer Intern",
+                  "jobDescription": "Tobams Group is a forward-thinking company committed to delivering innovative digital solutions across multiple sectors. We build scalable platforms, AI-powered applications, and gamified user experiences that empower businesses and individuals to thrive in today’s fast-paced digital economy. We are looking for a Backend Developer to join our growing engineering team. In this role, you will design, develop, and maintain robust backend services and APIs that power Tobamsgroup’s web applications. You’ll collaborate with product, design, and AI/ML teams to deliver high-quality, data-driven software solutions.",
+                  "contractType": "Internship",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Responsibilities": [
+                        "Assist in designing and building scalable backend services and RESTful APIs.",
+                        "Support maintenance and improvement of existing backend systems.",
+                        "Collaborate with AI/ML engineers to help integrate machine learning models into production environments.",
+                        "Implement backend logic for gamification features such as points systems, leaderboards, badges, rewards, challenges, and progress tracking.",
+                        "Work closely with frontend developers, product managers, and designers to deliver seamless user experiences.",
+                        "Write clean, testable, and maintainable code under supervision.",
+                        "Assist in database design, optimization, and maintenance (MongoDB, PostgreSQL, or MySQL).",
+                        "Support debugging, performance optimization, and application monitoring.",
+                        "Contribute to API documentation and technical documentation.",
+                        "Participate in code reviews, architecture discussions, and sprint meetings.",
+                        "Support CI/CD processes and deployment activities."
+                      ]
+                    },
+                    {
+                      "Required Qualifications": [
+                        "Bachelor’s degree in Computer Science, Software Engineering, or related field (or equivalent experience).",
+                        "Basic to intermediate proficiency in JavaScript and TypeScript.",
+                        "Foundational knowledge of Node.js (NestJS/Express.js).",
+                        "Understanding of RESTful API principles.",
+                        "Familiarity with MongoDB, PostgreSQL, or MySQL.",
+                        "Basic understanding of authentication and authorization (JWT, OAuth2).",
+                        "Familiarity with Git and version control workflows.",
+                        "Understanding of backend architecture fundamentals and microservices concepts.",
+                        "Basic exposure to Docker or cloud platforms (AWS, GCP, or Azure) is an advantage.",
+                        "Strong problem-solving and analytical skills.",
+                        "Good written and verbal communication skills.",
+                        "Willingness to learn, adapt, and work in a fast-paced remote team.",
+                        "Humble, hardworking, and ambitious mindset."
+                      ]
+                    },
+                    {
+                      "Nice-to-Have Skills": [
+                        "Knowledge of Python.",
+                        "Experience with message queues (RabbitMQ, Kafka).",
+                        "Exposure to DevOps practices and infrastructure as code (Terraform).",
+                        "Familiarity with event-driven systems and webhook handling.",
+                        "Experience with AI/ML integration and MLOps practices."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "Monthly internship stipend.",
+                        "Hands-on experience working on real-world backend and AI-powered projects.",
+                        "Mentorship from experienced engineers and technical leads.",
+                        "Opportunity to contribute to impactful digital products used by real users.",
+                        "Exposure to modern backend architecture, DevOps, and production environments.",
+                        "Professional growth and skill development opportunities.",
+                        "Potential full-time employment opportunity based on performance.",
+                        "Flexible remote work arrangement."
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "applicationCount": 184,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "createdAt": "2026-03-03T00:00:00.000Z"
+                },
+                {
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "_id": "69ca7ab1cc542dfc1db2f6d4",
+                  "companyName": "Tobams Group",
+                  "title": "Frontend Developer Intern",
+                  "jobDescription": "We are searching for a dynamic and motivated Intern React/React Native Developer to contribute to a groundbreaking project. As an Intern React/React Native Developer, you will be key in crafting user interfaces for web and mobile applications. This internship offers an exciting opportunity to work on innovative projects, collaborate with cross-functional teams, and gain hands-on experience with cutting-edge technologies.",
+                  "contractType": "Internship",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Responsibilities": [
+                        "Develop user interfaces using React and React Native frameworks.",
+                        "Work closely with designers, product managers, and backend developers to comprehend and translate requirements into functional user interfaces.",
+                        "Implement code following best practices and coding standards under the guidance of senior developers.",
+                        "Support in optimizing application performance for web and mobile platforms.",
+                        "Engage in thorough testing and debugging to ensure application quality and reliability."
+                      ]
+                    },
+                    {
+                      "Qualifications and Skills:": [
+                        "Basic experience developing user interfaces using React and React Native is a plus.",
+                        "Familiarity with JavaScript and a keen interest in front-end development practices.",
+                        "Understanding of web and mobile development principles, including responsive design.",
+                        "Eagerness to learn and work with state management libraries such as Redux or MobX.",
+                        "Exposure to RESTful APIs and asynchronous programming is advantageous."
+                      ]
+                    }
+                  ],
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "createdAt": "2026-03-30T00:00:00.000Z",
+                  "applicationCount": 165
+                },
+                {
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "_id": "67dc0e0ed6fad895d144e2f1",
+                  "companyName": "Tobams Group",
+                  "title": "Senior SharePoint Consultant - Developer - Architect",
+                  "jobDescription": "Tobams Group is implementing a SharePoint-based Intranet and Document Management System (DMS) to modernize internal communication, document storage workflow automation, and compliance management. This initiative requires a highly experienced SharePoint Consultant, Developer, and Architect to design, develop, and deploy a robust and scalable system tailored to operational needs.",
+                  "contractType": "Contract",
+                  "location": "Hybrid",
+                  "region": [
+                    "Anywhere"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Responsibilities": [
+                        "SharePoint Intranet and DMS Architecture Development",
+                        "Lead the design, architecture, implementation of a SharePoint Online-based Intranet and Document Management System.",
+                        "Develop and configure departmental subsites, metadata taxonomy, managed terms, and search functionalities.",
+                        "Implement structured folder hierarchies and document libraries with role-based security access.",
+                        "Ensure seamless integration between SharePoint Online, Microsoft Teams, OneDrive, Outlook, and Power BI.",
+                        "Workflow Automation and Power Platform Integration",
+                        "Design and develop Power Automate workflows for automated document approvals, notifications, and escalations.",
+                        "Implement Power Apps-based document submission forms with metadata-driven categorization.",
+                        "Enable automated compliance tracking and audit logging for document history and user actions.",
+                        "Ensure efficient workflow performance and optimization to reduce approval timeframes and streamline processes.",
+                        "Security, Compliance and Governance",
+                        "Implement role-based access control (RBAC) and multi-layered security policies.",
+                        "Configure SharePoint security groups, permission levels, and conditional access policies.",
+                        "Develop document retention policies and compliance frameworks in line with key regulations.",
+                        "Ensure adherence to ISO 27001, GDPR, and data governance policies.",
+                        "Data Migration and System Optimization",
+                        "Oversee the migration of existing documents into the new SharePoint DMS.",
+                        "Develop automated scripts and batch processing for bulk uploads and metadata assignment.",
+                        "Optimize SharePoint performance, indexing, and query execution for large datasets.",
+                        "Training, Documentation and Knowledge Transfer",
+                        "Conduct training sessions for key stakeholders and system users.",
+                        "Develop technical documentation, user guides, and best practice guidelines.",
+                        "Provide post-implementation support and knowledge transfer to IT teams."
+                      ]
+                    },
+                    {
+                      "Required Skills and Experience": [
+                        "Expert-level SharePoint Online, Microsoft 365, and Power Platform development.",
+                        "Strong SharePoint Framework (SPFx), Power Automate, Power Apps, and Power BI experience.",
+                        "Advanced Microsoft Azure AD integration for authentication and security.",
+                        "Proficiency in Microsoft Graph API, REST API, and SharePoint PnP scripting.",
+                        "Experience with metadata-driven document management and taxonomy implementation.",
+                        "Strong knowledge of PowerShell scripting for automation.",
+                        "Ability to configure Microsoft Teams integration with SharePoint and workflow automation.",
+                        "Deep understanding of ISO 27001, GDPR, and Nigerian data protection laws.",
+                        "Experience implementing SharePoint security best practices.",
+                        "Ability to enforce compliance policies and audit tracking.",
+                        "Strong problem-solving and troubleshooting skills.",
+                        "Excellent stakeholder communication and requirement gathering skills.",
+                        "Ability to work independently and lead end-to-end project implementation.",
+                        "Strong documentation and training abilities."
+                      ]
+                    },
+                    {
+                      "Preferred Qualifications": [
+                        "Microsoft Certified: SharePoint Developer/Architect Expert.",
+                        "Microsoft Certified: Power Platform Solution Architect.",
+                        "Previous experience working with government or financial institutions.",
+                        "Minimum 7+ years of SharePoint & Microsoft 365 development experience."
+                      ]
+                    },
+                    {
+                      "Compensation and Benefits": [
+                        "Highly competitive contract rate based on experience.",
+                        "Flexible work arrangements (Hybrid – Remote & Onsite as required).",
+                        "Opportunity to work on a high-impact government project.",
+                        "Potential long-term engagement and career growth."
+                      ]
+                    },
+                    {
+                      "Application Process": [
+                        "Interested candidates should submit their CV, portfolio, and relevant Microsoft certifications. Shortlisted candidates will be contacted for an initial technical interview, followed by a practical SharePoint development assessment."
+                      ]
+                    }
+                  ],
+                  "isCoverLetterRequired": false,
+                  "postStatus": "Closed",
+                  "owner": "In-House",
+                  "createdAt": "2025-03-20T12:46:06.240Z",
+                  "applicationCount": 13
+                }
+              ]
+            }
+          }

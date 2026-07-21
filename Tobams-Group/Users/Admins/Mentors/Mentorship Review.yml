@@ -1,0 +1,29 @@
+info:
+  name: Mentorship Review
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/admin/mentorship-review/:mentorId"
+  params:
+    - name: ""
+      value: ""
+      type: query
+    - name: mentorId
+      value: "123"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "feedback": "", // optional
+        "status": "" // Approved or Rejected
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
