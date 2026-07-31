@@ -5,38 +5,48 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/blog?page=1&limit=10&status=published&category=6553f1a2b2c3d4e5f6a7b8c9&author=jane&search=tech&dateFrom=2026-01-01&dateTo=2026-07-31&sortBy=publishedAt&sortOrder=desc"
+  url: "{{BASE}}/blog"
   params:
     - name: page
       value: "1"
       type: query
+      disabled: true
     - name: limit
       value: "10"
       type: query
+      disabled: true
     - name: status
       value: published
       type: query
+      disabled: true
     - name: category
       value: 6553f1a2b2c3d4e5f6a7b8c9
       type: query
+      disabled: true
     - name: author
       value: jane
       type: query
+      disabled: true
     - name: search
       value: tech
       type: query
+      disabled: true
     - name: dateFrom
       value: 2026-01-01
       type: query
+      disabled: true
     - name: dateTo
       value: 2026-07-31
       type: query
+      disabled: true
     - name: sortBy
       value: publishedAt
       type: query
+      disabled: true
     - name: sortOrder
       value: desc
       type: query
+      disabled: true
   auth: inherit
 
 settings:
@@ -44,3 +54,247 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Success (empty)
+    request:
+      url: "{{BASE}}/blog?page=1&limit=10&status=published&category=6553f1a2b2c3d4e5f6a7b8c9&author=jane&search=tech&dateFrom=2026-01-01&dateTo=2026-07-31&sortBy=publishedAt&sortOrder=desc"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+        - name: status
+          value: published
+          type: query
+        - name: category
+          value: 6553f1a2b2c3d4e5f6a7b8c9
+          type: query
+        - name: author
+          value: jane
+          type: query
+        - name: search
+          value: tech
+          type: query
+        - name: dateFrom
+          value: 2026-01-01
+          type: query
+        - name: dateTo
+          value: 2026-07-31
+          type: query
+        - name: sortBy
+          value: publishedAt
+          type: query
+        - name: sortOrder
+          value: desc
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1785491580998-0fqq063g1
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "164"
+        - name: etag
+          value: W/"a4-Txf/HATbjMjwoy6rxkJ4RiMubbI"
+        - name: date
+          value: Fri, 31 Jul 2026 09:53:01 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Blogs retrieved successfully",
+            "data": {
+              "blogs": [],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 0,
+                "pages": 0,
+                "hasNext": false,
+                "hasPrev": false
+              }
+            }
+          }
+  - name: Success
+    request:
+      url: "{{BASE}}/blog"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "10"
+          type: query
+          disabled: true
+        - name: status
+          value: published
+          type: query
+          disabled: true
+        - name: category
+          value: 6553f1a2b2c3d4e5f6a7b8c9
+          type: query
+          disabled: true
+        - name: author
+          value: jane
+          type: query
+          disabled: true
+        - name: search
+          value: tech
+          type: query
+          disabled: true
+        - name: dateFrom
+          value: 2026-01-01
+          type: query
+          disabled: true
+        - name: dateTo
+          value: 2026-07-31
+          type: query
+          disabled: true
+        - name: sortBy
+          value: publishedAt
+          type: query
+          disabled: true
+        - name: sortOrder
+          value: desc
+          type: query
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1785491622800-7j1fevsfb
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "851"
+        - name: etag
+          value: W/"353-fah2mU7e76l2xXxxjvcOLbF1c8w"
+        - name: date
+          value: Fri, 31 Jul 2026 09:53:43 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Blogs retrieved successfully",
+            "data": {
+              "blogs": [
+                {
+                  "_id": "6a6c7062db0a8876d5fca7e1",
+                  "title": "5 Tips for Landing Your First Tech Job",
+                  "content": "<p>Breaking into tech doesn't require a CS degree...</p>",
+                  "description": "A practical guide for career switchers",
+                  "duration": "6 min read",
+                  "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/blogs/1785491551415_Scale Up.png",
+                  "author": "Jane Doe",
+                  "categories": [
+                    {
+                      "_id": "6a6c5f43d79df93d44fb2060",
+                      "name": "Career Advice"
+                    },
+                    {
+                      "_id": "6a6c702ddb0a8876d5fca7da",
+                      "name": "Rmote Work",
+                      "description": "Posts about remote work system"
+                    }
+                  ],
+                  "status": "draft",
+                  "url": "5-tips-for-landing-your-first-tech-job",
+                  "publishedAt": null,
+                  "createdAt": "2026-07-31T09:52:34.488Z",
+                  "updatedAt": "2026-07-31T09:52:34.488Z"
+                }
+              ],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 1,
+                "pages": 1,
+                "hasNext": false,
+                "hasPrev": false
+              }
+            }
+          }
