@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "698367fedf8e5bd8c90bab4a"
+  },
+  "userId": {
+    "$oid": "698367fedf8e5bd8c90bab49"
+  },
+  "privilege": [
+    "SUPER"
+  ],
+  "deletedHistory": [],
+  "createdAt": {
+    "$date": "2026-02-04T15:38:38.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T15:38:38.076Z"
+  }
+}]

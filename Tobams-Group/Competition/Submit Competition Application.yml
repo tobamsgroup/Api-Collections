@@ -1,0 +1,162 @@
+info:
+  name: Submit Competition Application
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/competition-applications/"
+  body:
+    type: json
+    data: |-
+      {
+        "firstName": "Adaeze",
+        "lastName": "Okonkwo",
+        "phoneNumber": "+2348012345678",
+        "email": "rolatzarza1@gmail.com",
+        "organisation": "BrightPath AI Labs",
+        "linkedInProfile": "https://www.linkedin.com/in/adaeze-okonkwo",
+
+        "projectTitle": "MediTriage: AI-Powered Patient Triage Assistant",
+        "category": "AI Solutions",
+        "projectType": "Applications",
+        "currentStatus": "Prototype",
+
+        "problemStatement": "Rural clinics in Nigeria face long patient wait times and a shortage of trained triage staff, leading to delayed care for critical cases.",
+        "inspiration": "After visiting a understaffed clinic where my grandmother waited six hours to be seen, I wanted to build a tool that helps prioritise patients by urgency.",
+        "aiContribution": "The system uses a fine-tuned NLP model to interpret symptom descriptions in local languages and classify patients into urgency tiers, plus a triage recommendation engine.",
+        "beneficiaries": "Underserved patients in rural and peri-urban clinics, as well as overworked nurses and community health workers.",
+        "impact": "In pilot testing across three clinics, average triage time dropped from 25 minutes to under 5, and critical cases were flagged 3x faster.",
+
+        "pitchDeckUrl": "https://drive.google.com/file/d/1AbCdEfGhIjKlMnOpQrStUv/view",
+        "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "additionalLinks": "https://github.com/adaezeo/meditriage",
+        "termsAccepted": true,
+        "videoSharingConsent": true,
+        "webinarId": "6a5fb05bafb6fba76b5a8c53"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Competition Application
+    request:
+      url: "{{BASE}}/competition-applications/"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "firstName": "Adaeze",
+            "lastName": "Okonkwo",
+            "phoneNumber": "+2348012345678",
+            "email": "rolatzarza@gmail.com",
+            "organisation": "BrightPath AI Labs",
+            "linkedInProfile": "https://www.linkedin.com/in/adaeze-okonkwo",
+
+            "projectTitle": "MediTriage: AI-Powered Patient Triage Assistant",
+            "category": "AI Solutions",
+            "projectType": "Applications",
+            "currentStatus": "Prototype",
+
+            "problemStatement": "Rural clinics in Nigeria face long patient wait times and a shortage of trained triage staff, leading to delayed care for critical cases.",
+            "inspiration": "After visiting a understaffed clinic where my grandmother waited six hours to be seen, I wanted to build a tool that helps prioritise patients by urgency.",
+            "aiContribution": "The system uses a fine-tuned NLP model to interpret symptom descriptions in local languages and classify patients into urgency tiers, plus a triage recommendation engine.",
+            "beneficiaries": "Underserved patients in rural and peri-urban clinics, as well as overworked nurses and community health workers.",
+            "impact": "In pilot testing across three clinics, average triage time dropped from 25 minutes to under 5, and critical cases were flagged 3x faster.",
+
+            "pitchDeckUrl": "https://drive.google.com/file/d/1AbCdEfGhIjKlMnOpQrStUv/view",
+            "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "additionalLinks": "https://github.com/adaezeo/meditriage",
+            "termsAccepted": true,
+            "videoSharingConsent": true,
+            "webinarId": "6a5fb05bafb6fba76b5a8c53"
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1784729436530-sdupl51d2
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "1626"
+        - name: etag
+          value: W/"65a-H6EeVHzM0OAcfp3zFDxwQXc7Nuw"
+        - name: date
+          value: Wed, 22 Jul 2026 14:10:37 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Competition application submitted successfully",
+            "data": {
+              "firstName": "Adaeze",
+              "lastName": "Okonkwo",
+              "phoneNumber": "+2348012345678",
+              "email": "rolatzarza@gmail.com",
+              "organisation": "BrightPath AI Labs",
+              "linkedInProfile": "https://www.linkedin.com/in/adaeze-okonkwo",
+              "projectTitle": "MediTriage: AI-Powered Patient Triage Assistant",
+              "category": "AI Solutions",
+              "projectType": "Applications",
+              "currentStatus": "Prototype",
+              "problemStatement": "Rural clinics in Nigeria face long patient wait times and a shortage of trained triage staff, leading to delayed care for critical cases.",
+              "inspiration": "After visiting a understaffed clinic where my grandmother waited six hours to be seen, I wanted to build a tool that helps prioritise patients by urgency.",
+              "aiContribution": "The system uses a fine-tuned NLP model to interpret symptom descriptions in local languages and classify patients into urgency tiers, plus a triage recommendation engine.",
+              "beneficiaries": "Underserved patients in rural and peri-urban clinics, as well as overworked nurses and community health workers.",
+              "impact": "In pilot testing across three clinics, average triage time dropped from 25 minutes to under 5, and critical cases were flagged 3x faster.",
+              "pitchDeckUrl": "https://drive.google.com/file/d/1AbCdEfGhIjKlMnOpQrStUv/view",
+              "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "additionalLinks": "https://github.com/adaezeo/meditriage",
+              "termsAccepted": true,
+              "videoSharingConsent": true,
+              "webinarId": "6a5fb05bafb6fba76b5a8c53",
+              "_id": "6a60cf5c0c11d8a92e226dc2",
+              "createdAt": "2026-07-22T14:10:36.849Z",
+              "updatedAt": "2026-07-22T14:10:36.849Z"
+            }
+          }

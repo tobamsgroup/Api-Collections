@@ -16,7 +16,7 @@ http:
       - name: file
         type: file
         value:
-          - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
+          - /Users/mac/Downloads/blog pics.jpeg
   auth: inherit
 
 settings:

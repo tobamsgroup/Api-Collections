@@ -1,0 +1,5301 @@
+[{
+  "_id": {
+    "$oid": "6822f4cf5683b0d6b1d56c2a"
+  },
+  "userId": {
+    "$oid": "6822f4cf5683b0d6b1d56c29"
+  },
+  "languages": "English",
+  "companyName": "Tobams Group",
+  "industry": "Technology",
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": false,
+  "certifications": [],
+  "primaryExpertise": "Design and Creativity",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    "Product Management"
+  ],
+  "disciplines": [
+    "UI/UX Design",
+    "UI Design",
+    "UX Research"
+  ],
+  "tools": [
+    "Figma"
+  ],
+  "skills": [
+    "Communication",
+    "Leadership"
+  ],
+  "previousMentorshipExperience": false,
+  "previousMentorshipExperienceDescription": "",
+  "mentoringDisciplines": [
+    "UI/UX Design"
+  ],
+  "mentorshipAim": "Connection",
+  "areasOfExpertise": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-05-13T07:29:19.103Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-13T07:29:22.158Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ada9"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad89"
+  },
+  "bio": "Experienced technology mentor with 10+ years in software development",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "MON",
+        "WEEKDAYS"
+      ],
+      "times": [
+        "9:00 AM",
+        "11:00 AM",
+        "12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adaa"
+      }
+    }
+  ],
+  "jobTitle": "Data Analyst",
+  "companyName": "Lindgren - Hintz",
+  "industry": "Retail & E-commerce",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "tres consequuntur substantia"
+  ],
+  "primaryExpertise": "Design and Creativity",
+  "secondaryExpertise": [
+    "Other Professional Skills",
+    "Development & Technology",
+    "Leadership and Management"
+  ],
+  "disciplines": [
+    "Backend Development",
+    "Content Writing"
+  ],
+  "tools": [
+    "Adobe Illustrator",
+    "Python/R Programming",
+    "Axure"
+  ],
+  "skills": [
+    "Data Visualization",
+    "Strategic Planning",
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Confido aperte explicabo.",
+  "mentoringDisciplines": [
+    "UX Research"
+  ],
+  "mentorshipAim": "Facere cometes patria vapulus sequi quos corrigo.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Morning",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "ceno ultio vulticulus",
+  "rating": 0,
+  "status": "Approved",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": [
+    "Group, One-to-one"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adad"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad77"
+  },
+  "bio": "Defetiscor deficio copiose demulceo.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "WEEKDAYS",
+        "TUE"
+      ],
+      "times": [
+        "9:00 AM",
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adae"
+      }
+    }
+  ],
+  "jobTitle": "Data Engineer",
+  "companyName": "Cummings, Kub and Gusikowski",
+  "industry": "Media & Entertainment",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "solvo stultus occaecati"
+  ],
+  "primaryExpertise": "Leadership and Management",
+  "secondaryExpertise": [
+    "AI & Advanced Technology"
+  ],
+  "disciplines": [
+    "Graphic Design",
+    "Business Strategy",
+    "UI Design"
+  ],
+  "tools": [
+    "Wordpress",
+    "Vimeo",
+    "Youtube"
+  ],
+  "skills": [
+    "Leadership"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Distinctio decimus astrum.",
+  "mentoringDisciplines": [
+    "Business Transformation"
+  ],
+  "mentorshipAim": "Consectetur conatus dolorem attollo.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "totidem iste alveus",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adbb"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad7e"
+  },
+  "bio": "Canto uterque trepide vicinus similique volubilis carus tactus.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "TUE",
+        "WEEKDAYS"
+      ],
+      "times": [
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adbc"
+      }
+    }
+  ],
+  "jobTitle": "Project Manager",
+  "companyName": "Kuvalis Group",
+  "industry": "Retail & E-commerce",
+  "yearsOfExperience": "10 years and above",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "calculus exercitationem temperantia"
+  ],
+  "primaryExpertise": "Marketing and Content Creation",
+  "secondaryExpertise": [
+    "Leadership and Management",
+    "Design and Creativity",
+    "Product Management"
+  ],
+  "disciplines": [
+    "Business Strategy",
+    "Product Marketing",
+    "Sustainability Practices"
+  ],
+  "tools": [
+    "Airtable"
+  ],
+  "skills": [
+    "Strategic Planning",
+    "Communication"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Deserunt quas curriculum somniculosus ciminatio vulgus.",
+  "mentoringDisciplines": [
+    "UX Research",
+    "Business Strategy"
+  ],
+  "mentorshipAim": "Temptatio censura uterque decimus illum exercitationem.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Evening",
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "asperiores arceo cribro",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group, One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adbf"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad80"
+  },
+  "bio": "Cubo creber clamo inventore centum bardus complectus ascisco degero succurro.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "WEEKDAYS"
+      ],
+      "times": [
+        "11:00 AM",
+        "9:00 AM",
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adc0"
+      }
+    }
+  ],
+  "jobTitle": "Mobile Developer",
+  "companyName": "Heidenreich - Dickinson",
+  "industry": "Finance & Insurance",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "neque tendo uredo"
+  ],
+  "primaryExpertise": "Marketing and Content Creation",
+  "secondaryExpertise": [
+    "AI & Advanced Technology",
+    "Video & Content Creation"
+  ],
+  "disciplines": [
+    "Content Writing"
+  ],
+  "tools": [
+    "Vimeo",
+    "Adobe Illustrator",
+    "Adobe Creative Suite"
+  ],
+  "skills": [
+    "Communication",
+    "Leadership"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Cometes cruciamentum delectus deduco utroque repudiandae.",
+  "mentoringDisciplines": [
+    "Marketing Strategy",
+    "Multimedia Design"
+  ],
+  "mentorshipAim": "Aer compello admoveo adfectus depraedor somnus repellendus deinde vehemens somnus.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "acceptus succedo defero",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adcb"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad86"
+  },
+  "bio": "Amitto corpus depopulo.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "WED",
+        "WEEKENDS"
+      ],
+      "times": [
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adcc"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Bins - Rogahn",
+  "industry": "Manufacturing",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "umbra baiulus fuga"
+  ],
+  "primaryExpertise": "Data & Business Analysis",
+  "secondaryExpertise": [
+    "Leadership and Management"
+  ],
+  "disciplines": [
+    "UX Testing",
+    "Frontend Development"
+  ],
+  "tools": [
+    "BigML"
+  ],
+  "skills": [
+    "Market Research",
+    "SEO",
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Carpo officia assumenda.",
+  "mentoringDisciplines": [
+    "Data Engineering",
+    "Content Writing"
+  ],
+  "mentorshipAim": "Conor sursum tredecim victus pariatur.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Evening",
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "uberrime voluptate appositus",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group, One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adcf"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad88"
+  },
+  "bio": "Usitas casus acervus articulus acceptus acer.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "FRI",
+        "TUE",
+        "WEEKENDS"
+      ],
+      "times": [
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086add0"
+      }
+    }
+  ],
+  "jobTitle": "Frontend Developer",
+  "companyName": "Yost - Mitchell",
+  "industry": "Agriculture & Food",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "cresco sulum defero"
+  ],
+  "primaryExpertise": "AI & Advanced Technology",
+  "secondaryExpertise": [
+    "Development & Technology"
+  ],
+  "disciplines": [
+    "Artificial Intelligence",
+    "UX Research",
+    "Marketing Strategy"
+  ],
+  "tools": [
+    "Wordpress",
+    "Tableau"
+  ],
+  "skills": [
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Vitiosus tui dolorum cibus sustineo abutor bonus eaque.",
+  "mentoringDisciplines": [
+    "Full Stack"
+  ],
+  "mentorshipAim": "Aegre adipisci conatus uter tantum concido varietas thalassinus autem.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Morning",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "vulnero alii vulariter",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ade5"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad93"
+  },
+  "bio": "Vita voluptatibus audio tabella speciosus volo possimus vulariter tergo conqueror.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "FRI",
+        "WEEKENDS"
+      ],
+      "times": [
+        "12:00 PM",
+        "10:00 AM",
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ade6"
+      }
+    }
+  ],
+  "jobTitle": "Software Engineer",
+  "companyName": "Kunde - Murray",
+  "industry": "Media & Entertainment",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "aut acquiro sol"
+  ],
+  "primaryExpertise": "AI & Advanced Technology",
+  "secondaryExpertise": [
+    "Leadership and Management"
+  ],
+  "disciplines": [
+    "Customer Experience"
+  ],
+  "tools": [
+    "Wordpress",
+    "Trello",
+    "SQL/MySQL"
+  ],
+  "skills": [
+    "Leadership",
+    "Market Research"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Uberrime comprehendo adfero ea clibanus commodo spiritus timidus conqueror.",
+  "mentoringDisciplines": [
+    "Sustainability Practices",
+    "Business Strategy",
+    "Interaction Design"
+  ],
+  "mentorshipAim": "Creta versus aer stella.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "ulciscor ademptio conventus",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adef"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad98"
+  },
+  "bio": "Varietas ipsam creator ante ocer una bardus coniecto.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "WED",
+        "MON",
+        "WEEKENDS"
+      ],
+      "times": [
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adf0"
+      }
+    }
+  ],
+  "jobTitle": "Project Manager",
+  "companyName": "Frami, McKenzie and Reilly",
+  "industry": "Retail & E-commerce",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "tandem capto vinculum"
+  ],
+  "primaryExpertise": "Data & Business Analysis",
+  "secondaryExpertise": [
+    "Development & Technology",
+    "AI & Advanced Technology"
+  ],
+  "disciplines": [
+    "3D Design",
+    "Educational Development",
+    "Graphic Design"
+  ],
+  "tools": [
+    "AWS/Cloud Computing",
+    "Microsoft Office Suite"
+  ],
+  "skills": [
+    "Public Speaking"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Sophismata ater accommodo adeo adinventitias adhaero temperantia et tolero caecus.",
+  "mentoringDisciplines": [
+    "Content Production",
+    "Data Engineering",
+    "AI/ML Engineering"
+  ],
+  "mentorshipAim": "Cariosus benevolentia officiis bonus valeo veritatis.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "beatus veritatis bis",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "One-to-one"
+},
+{
+  "_id": {
+    "$oid": "680948161e940f8c477846bb"
+  },
+  "userId": {
+    "$oid": "680948161e940f8c477846ba"
+  },
+  "bio": "Experienced technology mentor with over 10 years in software development.",
+  "languages": "English, Spanish",
+  "companyName": "Tech Solutions Inc.",
+  "industry": "Technology",
+  "otherIndustry": "Software Development",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "Certified Scrum Master",
+    "AWS Certified Solutions Architect"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "secondaryExpertise": [
+    "DevOps"
+  ],
+  "disciplines": [
+    "UI/UX Design",
+    "Game Design"
+  ],
+  "tools": [
+    "Jira",
+    "AWS",
+    "Airtable"
+  ],
+  "skills": [
+    "SEO",
+    "Agile Methodologies",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Mentored junior developers in previous roles.",
+  "mentoringDisciplines": [
+    "UI Design",
+    "Game Design"
+  ],
+  "mentorshipAim": "Help mentees grow in their careers and achieve their goals.",
+  "areasOfExpertise": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Pending",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-04-23T20:05:42.594Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T20:05:42.594Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68190df2d2ffbb8b53d624fd"
+  },
+  "userId": {
+    "$oid": "68190df2d2ffbb8b53d624fc"
+  },
+  "bio": "Experienced technology mentor with over 10 years in software development.",
+  "languages": "English, Spanish",
+  "companyName": "Tech Solutions Inc.",
+  "industry": "Technology",
+  "otherIndustry": "Software Development",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "Certified Scrum Master",
+    "AWS Certified Solutions Architect"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "secondaryExpertise": [
+    "DevOps"
+  ],
+  "disciplines": [
+    "UI/UX Design",
+    "Game Design"
+  ],
+  "tools": [
+    "Jira",
+    "AWS",
+    "Airtable"
+  ],
+  "skills": [
+    "SEO",
+    "Agile Methodologies",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Mentored junior developers in previous roles.",
+  "mentoringDisciplines": [
+    "UI Design",
+    "Game Design"
+  ],
+  "mentorshipAim": "Help mentees grow in their careers and achieve their goals.",
+  "areasOfExpertise": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Pending",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-05-05T19:13:54.136Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-05T19:13:54.136Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681912bb8ef2f43145bc30b3"
+  },
+  "userId": {
+    "$oid": "681912bb8ef2f43145bc30b2"
+  },
+  "bio": "Experienced technology mentor with over 10 years in software development.",
+  "languages": "English, Spanish",
+  "companyName": "Tech Solutions Inc.",
+  "industry": "Technology",
+  "otherIndustry": "Software Development",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "Certified Scrum Master",
+    "AWS Certified Solutions Architect"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "secondaryExpertise": [
+    "DevOps"
+  ],
+  "disciplines": [
+    "UI/UX Design",
+    "Game Design"
+  ],
+  "tools": [
+    "Jira",
+    "AWS",
+    "Airtable"
+  ],
+  "skills": [
+    "SEO",
+    "Agile Methodologies",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Mentored junior developers in previous roles.",
+  "mentoringDisciplines": [
+    "UI Design",
+    "Game Design"
+  ],
+  "mentorshipAim": "Help mentees grow in their careers and achieve their goals.",
+  "areasOfExpertise": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Pending",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-05-05T19:34:19.179Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-05T19:34:19.179Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adb1"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad79"
+  },
+  "bio": "Aurum delectus rerum tenus arguo.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "THU"
+      ],
+      "times": [
+        "12:00 PM",
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adb2"
+      }
+    }
+  ],
+  "jobTitle": "Mobile Developer",
+  "companyName": "Orn, West and Grimes",
+  "industry": "Healthcare",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "centum teneo bos"
+  ],
+  "primaryExpertise": "Product Management",
+  "secondaryExpertise": [
+    "Development & Technology",
+    "Other Professional Skills"
+  ],
+  "disciplines": [
+    "Data Engineering"
+  ],
+  "tools": [
+    "Tiktok",
+    "Webflow"
+  ],
+  "skills": [
+    "Strategic Planning",
+    "Public Speaking"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Solvo umerus arto sortitus.",
+  "mentoringDisciplines": [
+    "Financial Analysis",
+    "AI/ML Engineering"
+  ],
+  "mentorshipAim": "Trado triumphus cultellus cunae.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Evening",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "qui carbo abscido",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adb7"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad7c"
+  },
+  "bio": "Venustas articulus sollers vilis ullus deleniti cunabula copiose capillus tres.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "WED",
+        "WEEKENDS"
+      ],
+      "times": [
+        "9:00 AM",
+        "10:00 AM",
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adb8"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Veum Inc",
+  "industry": "Engineering",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "civis aliqua corpus"
+  ],
+  "primaryExpertise": "Design and Creativity",
+  "secondaryExpertise": [
+    "Other Professional Skills",
+    "Video & Content Creation",
+    "Leadership and Management"
+  ],
+  "disciplines": [
+    "Multimedia Design"
+  ],
+  "tools": [
+    "BigML",
+    "Jira"
+  ],
+  "skills": [
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "At stillicidium officiis comminor crudelis coruscus voro.",
+  "mentoringDisciplines": [
+    "Multimedia Design",
+    "Educational Development",
+    "Customer Experience"
+  ],
+  "mentorshipAim": "Beatae amaritudo tondeo cariosus eos arma colo calco.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "decor ultio tot",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adbd"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad7f"
+  },
+  "bio": "Casus victus eum adeo amor tristis validus sursum.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "WED",
+        "TUE",
+        "WEEKDAYS"
+      ],
+      "times": [
+        "11:00 AM",
+        "12:00 PM",
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adbe"
+      }
+    }
+  ],
+  "jobTitle": "UX Designer",
+  "companyName": "Grant - DuBuque",
+  "industry": "Healthcare",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "utroque creator spero"
+  ],
+  "primaryExpertise": "Video & Content Creation",
+  "secondaryExpertise": [
+    "Design and Creativity",
+    "Other Professional Skills"
+  ],
+  "disciplines": [
+    "Backend Development",
+    "Industrial Design",
+    "AI/ML Engineering"
+  ],
+  "tools": [
+    "Microsoft Office Suite",
+    "Adobe Illustrator"
+  ],
+  "skills": [
+    "Strategic Planning",
+    "Market Research"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Utique pauper suggero tempus uterque coruscus arma accommodo atrocitas demulceo.",
+  "mentoringDisciplines": [
+    "Graphic Design",
+    "Game Design"
+  ],
+  "mentorshipAim": "Utilis copia aegrus.",
+  "communicationStyle": [
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Morning",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "caelestis vere condico",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adc3"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad82"
+  },
+  "bio": "Reiciendis somniculosus custodia demergo.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "THU"
+      ],
+      "times": [
+        "12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adc4"
+      }
+    }
+  ],
+  "jobTitle": "UX Designer",
+  "companyName": "Conn, Ritchie and Fritsch",
+  "industry": "Engineering",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "arto ambulo conduco"
+  ],
+  "primaryExpertise": "Marketing and Content Creation",
+  "secondaryExpertise": [
+    "Other Professional Skills",
+    "Leadership and Management",
+    "Development & Technology"
+  ],
+  "disciplines": [
+    "Content Writing",
+    "UI/UX Design"
+  ],
+  "tools": [
+    "Wordpress",
+    "Axure",
+    "Google Analytics"
+  ],
+  "skills": [
+    "Public Speaking",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Velut auxilium sto denego adamo paens.",
+  "mentoringDisciplines": [
+    "QA Engineer",
+    "Educational Development",
+    "Project Management"
+  ],
+  "mentorshipAim": "Conventus trepide vulariter caveo asper temporibus subseco adeptio.",
+  "communicationStyle": [
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "arbustum minus credo",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adc7"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad84"
+  },
+  "bio": "Vesper tenuis suasoria tabernus comis.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "WED",
+        "MON",
+        "WEEKENDS"
+      ],
+      "times": [
+        "10:00 AM",
+        "12:00 PM",
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adc8"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Hamill - Huels",
+  "industry": "Finance & Insurance",
+  "yearsOfExperience": "10 years and above",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "creber surgo conturbo"
+  ],
+  "primaryExpertise": "Data & Business Analysis",
+  "secondaryExpertise": [
+    "Development & Technology",
+    "AI & Advanced Technology"
+  ],
+  "disciplines": [
+    "Project Management",
+    "Business Strategy",
+    "Business Transformation"
+  ],
+  "tools": [
+    "Figma",
+    "Webflow",
+    "Adobe XD"
+  ],
+  "skills": [
+    "Public Speaking"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Sed tametsi ad solus aliqua abundans arcus vito corrigo.",
+  "mentoringDisciplines": [
+    "Motion Design",
+    "3D Design"
+  ],
+  "mentorshipAim": "Desparatus trans conservo.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Evening",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "impedit comptus statua",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adc9"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad85"
+  },
+  "bio": "Delego nam aptus somniculosus damnatio cursim dolore custodia.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "MON",
+        "WEEKENDS",
+        "WED"
+      ],
+      "times": [
+        "9:00 AM",
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adca"
+      }
+    }
+  ],
+  "jobTitle": "Machine Learning Engineer",
+  "companyName": "Schneider LLC",
+  "industry": "Healthcare",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "magnam apto quae"
+  ],
+  "primaryExpertise": "Marketing and Content Creation",
+  "secondaryExpertise": [
+    "Marketing and Content Creation"
+  ],
+  "disciplines": [
+    "UI Design",
+    "Financial Analysis",
+    "Interaction Design"
+  ],
+  "tools": [
+    "Trello"
+  ],
+  "skills": [
+    "Collaboration",
+    "Data Visualization"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Veniam sunt video tristis contra accommodo aggero curto benevolentia.",
+  "mentoringDisciplines": [
+    "Industrial Design",
+    "XR Design"
+  ],
+  "mentorshipAim": "Spargo vox aptus tergum patruus coaegresco caveo cauda aestas volup.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Evening",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "congregatio textor cibus",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adcd"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad87"
+  },
+  "bio": "Utpote doloribus appositus nemo teres comburo decretum.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "THU"
+      ],
+      "times": [
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adce"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Lemke - Crona",
+  "industry": "Healthcare",
+  "yearsOfExperience": "10 years and above",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "bibo ascisco tolero"
+  ],
+  "primaryExpertise": "AI & Advanced Technology",
+  "secondaryExpertise": [
+    "Data & Business Analysis",
+    "AI & Advanced Technology"
+  ],
+  "disciplines": [
+    "Financial Analysis"
+  ],
+  "tools": [
+    "Notion",
+    "Microsoft Office Suite",
+    "Content Writing"
+  ],
+  "skills": [
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Tabernus pecus substantia ustilo.",
+  "mentoringDisciplines": [
+    "Project Management",
+    "Product Marketing",
+    "UX Research"
+  ],
+  "mentorshipAim": "Stillicidium sui repudiandae summopere colligo sophismata patria.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "veritatis at cetera",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086add1"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad89"
+  },
+  "bio": "Experienced technology mentor with 10+ years in software development",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "2025-04-30T23:00:00.000Z"
+      ],
+      "times": [
+        "12:45 PM - 02:15 PM",
+        "10:30 AM - 12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67ed96cc51931fcd3073235d"
+      }
+    },
+    {
+      "days": [
+        "Weekdays"
+      ],
+      "times": [
+        "09:00 AM - 03:45 PM",
+        "01:00 PM - 03:45 PM"
+      ],
+      "_id": {
+        "$oid": "67ed96cc51931fcd3073235e"
+      }
+    },
+    {
+      "days": [
+        "Weekends"
+      ],
+      "times": [
+        "04:00 PM - 07:00 PM"
+      ],
+      "_id": {
+        "$oid": "67ed96cc51931fcd3073235f"
+      }
+    }
+  ],
+  "jobTitle": "Software Engineer",
+  "companyName": "Hilpert LLC",
+  "industry": "Engineering",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "vorago delectatio demitto"
+  ],
+  "primaryExpertise": "Other Professional Skills",
+  "secondaryExpertise": [
+    "Data & Business Analysis"
+  ],
+  "disciplines": [
+    "AI/ML Engineering",
+    "XR Design",
+    "Artificial Intelligence"
+  ],
+  "tools": [
+    "Wordpress",
+    "Adobe XD",
+    "Google Workspace"
+  ],
+  "skills": [
+    "Agile Methodologies",
+    "Strategic Planning",
+    "Leadership"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Amplus velit vel aperte quibusdam strenuus velum sit vaco.",
+  "mentoringDisciplines": [
+    "UX Research",
+    "Product Management"
+  ],
+  "mentorshipAim": "Circumvenio trans voluntarius depono.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Evening"
+  ],
+  "mentees": [
+    {
+      "$oid": "67b65c0c2478ee6593c49827"
+    },
+    {
+      "$oid": "67b65c0c2478ee6593c49828"
+    },
+    {
+      "$oid": "67b65c0c2478ee6593c49830"
+    },
+    {
+      "$oid": "67b65c0c2478ee6593c49845"
+    },
+    {
+      "$oid": "67b661d7c84dd7079b9e7d44"
+    },
+    {
+      "$oid": "67b65c0c2478ee6593c4983a"
+    },
+    {
+      "$oid": "67aa06b2539d9f032f3241f7"
+    }
+  ],
+  "portfolioLinkText": "ars validus artificiose",
+  "rating": 0,
+  "status": "Approved",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T17:20:07.695Z"
+  },
+  "linkText": "Sasha's LinkedIn",
+  "areasOfExpertise": [
+    "Web Development",
+    "Software Engineering",
+    "Computer Networking",
+    "Hardware Solution"
+  ],
+  "mentorshipType": "Group, One-to-one",
+  "savedMentees": [
+    {
+      "$oid": "67b661d7c84dd7079b9e7d44"
+    },
+    {
+      "$oid": "67b661d7c84dd7079b9e7d5e"
+    },
+    {
+      "$oid": "67b65c0c2478ee6593c49835"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086add5"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad8b"
+  },
+  "bio": "Vulticulus vapulus itaque iusto demonstro.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "WEEKENDS",
+        "TUE"
+      ],
+      "times": [
+        "9:00 AM",
+        "12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086add6"
+      }
+    }
+  ],
+  "jobTitle": "Project Manager",
+  "companyName": "Ernser, Parisian and Wilkinson",
+  "industry": "Engineering",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "absorbeo cibo totus"
+  ],
+  "primaryExpertise": "Leadership and Management",
+  "secondaryExpertise": [
+    "Leadership and Management",
+    "AI & Advanced Technology"
+  ],
+  "disciplines": [
+    "Data Engineering"
+  ],
+  "tools": [
+    "Google Workspace",
+    "Affinity",
+    "Instagram"
+  ],
+  "skills": [
+    "Communication"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Thermae tabula argentum.",
+  "mentoringDisciplines": [
+    "UX Testing",
+    "Game Design",
+    "Data Engineering"
+  ],
+  "mentorshipAim": "Brevis comparo vehemens.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "coruscus succurro ipsum",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group, One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086add7"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad8c"
+  },
+  "bio": "Sit sol adduco voluptas autus utrum.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "MON",
+        "WED",
+        "FRI"
+      ],
+      "times": [
+        "12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086add8"
+      }
+    }
+  ],
+  "jobTitle": "DevOps Engineer",
+  "companyName": "Pacocha and Sons",
+  "industry": "Engineering",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "corrumpo tam corrigo"
+  ],
+  "primaryExpertise": "Leadership and Management",
+  "secondaryExpertise": [
+    "AI & Advanced Technology"
+  ],
+  "disciplines": [
+    "Product Marketing",
+    "Sustainability Practices",
+    "Data Engineering"
+  ],
+  "tools": [
+    "Tableau",
+    "Adobe Illustrator",
+    "SQL/MySQL"
+  ],
+  "skills": [
+    "Leadership"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Totam suspendo aggredior admiratio civitas quibusdam.",
+  "mentoringDisciplines": [
+    "Graphic Design",
+    "UX Research"
+  ],
+  "mentorshipAim": "Xiphias cupiditas velit alo vergo demonstro repudiandae super.",
+  "communicationStyle": [
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "contra cras exercitationem",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086addb"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad8e"
+  },
+  "bio": "Appositus occaecati creator summisse.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "TUE"
+      ],
+      "times": [
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086addc"
+      }
+    }
+  ],
+  "jobTitle": "UI Designer",
+  "companyName": "Friesen Group",
+  "industry": "Media & Entertainment",
+  "yearsOfExperience": "10 years and above",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "admiratio conor molestias"
+  ],
+  "primaryExpertise": "Marketing and Content Creation",
+  "secondaryExpertise": [
+    "Design and Creativity"
+  ],
+  "disciplines": [
+    "OutSystems",
+    "Business Transformation"
+  ],
+  "tools": [
+    "Affinity"
+  ],
+  "skills": [
+    "Leadership",
+    "Collaboration"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Approbo tenus volubilis thorax.",
+  "mentoringDisciplines": [
+    "Motion Design",
+    "Product Design"
+  ],
+  "mentorshipAim": "Tracto utor cogo cogito acer aspernatur aiunt centum adhaero.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Evening",
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "cubo decipio cetera",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ade7"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad94"
+  },
+  "bio": "Ait pecus circumvenio dens.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "MON",
+        "WEEKDAYS",
+        "FRI"
+      ],
+      "times": [
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ade8"
+      }
+    }
+  ],
+  "jobTitle": "Product Manager",
+  "companyName": "Schimmel and Sons",
+  "industry": "Finance & Insurance",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "arcesso vis trans"
+  ],
+  "primaryExpertise": "Leadership and Management",
+  "secondaryExpertise": [
+    "Video & Content Creation"
+  ],
+  "disciplines": [
+    "Business Transformation",
+    "Financial Analysis"
+  ],
+  "tools": [
+    "Wordpress",
+    "Affinity"
+  ],
+  "skills": [
+    "Communication"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Similique derelinquo denuo suffragium decipio tempus architecto cunabula auditor.",
+  "mentoringDisciplines": [
+    "Product Marketing",
+    "Full Stack",
+    "Brand/Identity Design"
+  ],
+  "mentorshipAim": "Vomica adeptio reprehenderit ver uberrime angelus viridis inflammatio.",
+  "communicationStyle": [
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Morning",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "vergo sperno cultellus",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adeb"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad96"
+  },
+  "bio": "Sordeo crux xiphias allatus cuppedia.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "WED"
+      ],
+      "times": [
+        "10:00 AM",
+        "12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adec"
+      }
+    }
+  ],
+  "jobTitle": "Frontend Developer",
+  "companyName": "Kiehn LLC",
+  "industry": "Agriculture & Food",
+  "yearsOfExperience": "10 years and above",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "valens tabula copiose"
+  ],
+  "primaryExpertise": "Data & Business Analysis",
+  "secondaryExpertise": [
+    "Leadership and Management",
+    "Product Management"
+  ],
+  "disciplines": [
+    "UX Research",
+    "Data Engineering"
+  ],
+  "tools": [
+    "Adobe Creative Suite",
+    "Asana"
+  ],
+  "skills": [
+    "SEO",
+    "Data Visualization"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Cohaero vulnus crebro sordeo admiratio vox autus suspendo trepide vesper.",
+  "mentoringDisciplines": [
+    "Product Design",
+    "Product Management"
+  ],
+  "mentorshipAim": "Amaritudo quibusdam cerno aggero cultura curia.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Evening",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "impedit thorax volubilis",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086aded"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad97"
+  },
+  "bio": "Vivo suppono dignissimos aliqua confugo votum.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "WEEKDAYS"
+      ],
+      "times": [
+        "10:00 AM",
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adee"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Wisoky, Boyer and Bauch",
+  "industry": "Finance & Insurance",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "surculus concedo admoveo"
+  ],
+  "primaryExpertise": "Data & Business Analysis",
+  "secondaryExpertise": [
+    "Product Management",
+    "Other Professional Skills",
+    "Leadership and Management"
+  ],
+  "disciplines": [
+    "Brand/Identity Design",
+    "Artificial Intelligence",
+    "Sustainability Practices"
+  ],
+  "tools": [
+    "Facebook",
+    "Framer",
+    "Google Workspace"
+  ],
+  "skills": [
+    "Leadership",
+    "Data Visualization",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Odit paulatim clibanus officiis theatrum.",
+  "mentoringDisciplines": [
+    "Motion Design"
+  ],
+  "mentorshipAim": "Cunabula clementia demergo.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Evening",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "alter calcar virgo",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adf3"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad9a"
+  },
+  "bio": "Cupiditate arma toties sub decet defleo commodo tunc.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "WED"
+      ],
+      "times": [
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adf4"
+      }
+    }
+  ],
+  "jobTitle": "UI Designer",
+  "companyName": "Hegmann - Lang",
+  "industry": "Retail & E-commerce",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "ubi toties est"
+  ],
+  "primaryExpertise": "Video & Content Creation",
+  "secondaryExpertise": [
+    "Product Management",
+    "AI & Advanced Technology",
+    "Marketing and Content Creation"
+  ],
+  "disciplines": [
+    "Product Marketing",
+    "UX Testing"
+  ],
+  "tools": [
+    "Instagram",
+    "Figma"
+  ],
+  "skills": [
+    "Communication",
+    "SEO"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Callide alo acsi urbanus coma.",
+  "mentoringDisciplines": [
+    "QA Engineer",
+    "Business Transformation",
+    "UX Testing"
+  ],
+  "mentorshipAim": "Depraedor quasi suffoco.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Morning",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "certus verus facere",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adf5"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad9b"
+  },
+  "bio": "Totam terror minus creta defungo subvenio decipio ambulo ultra.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "TUE"
+      ],
+      "times": [
+        "10:00 AM",
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adf6"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Stark - Strosin",
+  "industry": "Retail & E-commerce",
+  "yearsOfExperience": "10 years and above",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "comparo coniecto eligendi"
+  ],
+  "primaryExpertise": "Data & Business Analysis",
+  "secondaryExpertise": [
+    "Data & Business Analysis",
+    "Design and Creativity"
+  ],
+  "disciplines": [
+    "Motion Design",
+    "3D Design",
+    "QA Engineer"
+  ],
+  "tools": [
+    "Google Workspace",
+    "Tableau",
+    "BigML"
+  ],
+  "skills": [
+    "Collaboration"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Error tunc volutabrum voluntarius amaritudo.",
+  "mentoringDisciplines": [
+    "Customer Experience",
+    "Graphic Design"
+  ],
+  "mentorshipAim": "Allatus tui aufero tunc paulatim nam despecto canto colligo.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Morning",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "suadeo allatus cedo",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ae09"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ada5"
+  },
+  "bio": "Suggero defessus crux.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "WEEKENDS",
+        "TUE"
+      ],
+      "times": [
+        "10:00 AM",
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ae0a"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Rath Group",
+  "industry": "Media & Entertainment",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "vito acsi aperte"
+  ],
+  "primaryExpertise": "Marketing and Content Creation",
+  "secondaryExpertise": [
+    "Product Management",
+    "Video & Content Creation"
+  ],
+  "disciplines": [
+    "UX Testing"
+  ],
+  "tools": [
+    "BigML"
+  ],
+  "skills": [
+    "Data Visualization",
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Minus temeritas mollitia.",
+  "mentoringDisciplines": [
+    "Backend Development",
+    "Motion Design"
+  ],
+  "mentorshipAim": "Verecundia amet pauci contigo possimus dens corona.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "neque templum ancilla",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.806Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.806Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ae0b"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ada6"
+  },
+  "bio": "Universe verbum clementia.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "WED",
+        "WEEKDAYS"
+      ],
+      "times": [
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ae0c"
+      }
+    }
+  ],
+  "jobTitle": "Data Engineer",
+  "companyName": "Dietrich, Koch and Bosco",
+  "industry": "Healthcare",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "denuo capillus arcus"
+  ],
+  "primaryExpertise": "Design and Creativity",
+  "secondaryExpertise": [
+    "Product Management",
+    "Other Professional Skills"
+  ],
+  "disciplines": [
+    "Game Design",
+    "Sustainability Practices"
+  ],
+  "tools": [
+    "Adobe Illustrator",
+    "Wordpress",
+    "Jira"
+  ],
+  "skills": [
+    "Leadership",
+    "SEO",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Crepusculum tutis volup decumbo unus umquam texo abeo.",
+  "mentoringDisciplines": [
+    "Graphic Design",
+    "Data Science"
+  ],
+  "mentorshipAim": "Creptio consequatur condico argentum averto defleo aegre adsum templum convoco.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Evening",
+    "Afternoon",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "appono vesica ubi",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.806Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.806Z"
+  },
+  "mentorshipType": "One-to-one"
+},
+{
+  "_id": {
+    "$oid": "68190f51644e5f78a387586e"
+  },
+  "userId": {
+    "$oid": "68190f51644e5f78a387586d"
+  },
+  "bio": "Experienced technology mentor with over 10 years in software development.",
+  "languages": "English, Spanish",
+  "companyName": "Tech Solutions Inc.",
+  "industry": "Technology",
+  "otherIndustry": "Software Development",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "Certified Scrum Master",
+    "AWS Certified Solutions Architect"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "secondaryExpertise": [
+    "DevOps"
+  ],
+  "disciplines": [
+    "UI/UX Design",
+    "Game Design"
+  ],
+  "tools": [
+    "Jira",
+    "AWS",
+    "Airtable"
+  ],
+  "skills": [
+    "SEO",
+    "Agile Methodologies",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Mentored junior developers in previous roles.",
+  "mentoringDisciplines": [
+    "UI Design",
+    "Game Design"
+  ],
+  "mentorshipAim": "Help mentees grow in their careers and achieve their goals.",
+  "areasOfExpertise": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Pending",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-05-05T19:19:45.841Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-05T19:19:45.841Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819145a04cba2501665085e"
+  },
+  "userId": {
+    "$oid": "6819145a04cba2501665085d"
+  },
+  "bio": "Experienced technology mentor with over 10 years in software development.",
+  "languages": "English, Spanish",
+  "companyName": "Tech Solutions Inc.",
+  "industry": "Technology",
+  "otherIndustry": "Software Development",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "Certified Scrum Master",
+    "AWS Certified Solutions Architect"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "secondaryExpertise": [
+    "DevOps"
+  ],
+  "disciplines": [
+    "UI/UX Design",
+    "Game Design"
+  ],
+  "tools": [
+    "Jira",
+    "AWS",
+    "Airtable"
+  ],
+  "skills": [
+    "SEO",
+    "Agile Methodologies",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Mentored junior developers in previous roles.",
+  "mentoringDisciplines": [
+    "UI Design",
+    "Game Design"
+  ],
+  "mentorshipAim": "Help mentees grow in their careers and achieve their goals.",
+  "areasOfExpertise": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-05-05T19:41:14.839Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-05T19:41:27.437Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adaf"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad78"
+  },
+  "bio": "Damno ventus aurum curiositas aspicio thesaurus thorax comminor.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "MON"
+      ],
+      "times": [
+        "10:00 AM",
+        "11:00 AM",
+        "12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adb0"
+      }
+    }
+  ],
+  "jobTitle": "Data Engineer",
+  "companyName": "Ward, Sporer and Prosacco",
+  "industry": "Technology",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "suscipio venio tametsi"
+  ],
+  "primaryExpertise": "Design and Creativity",
+  "secondaryExpertise": [
+    "AI & Advanced Technology",
+    "Development & Technology",
+    "Other Professional Skills"
+  ],
+  "disciplines": [
+    "Industrial Design"
+  ],
+  "tools": [
+    "Adobe Creative Suite",
+    "Asana"
+  ],
+  "skills": [
+    "Communication",
+    "Leadership"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Confugo vindico sophismata optio abduco vespillo compello aequus adinventitias.",
+  "mentoringDisciplines": [
+    "Interaction Design",
+    "Motion Design",
+    "Game Design"
+  ],
+  "mentorshipAim": "Subseco accusator pel curatio basium.",
+  "communicationStyle": [
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "anser degero censura",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group, One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adb3"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad7a"
+  },
+  "bio": "Crur sono antiquus molestiae possimus.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "WED"
+      ],
+      "times": [
+        "9:00 AM",
+        "12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adb4"
+      }
+    }
+  ],
+  "jobTitle": "Data Engineer",
+  "companyName": "Sawayn LLC",
+  "industry": "Retail & E-commerce",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "blanditiis voluptate conscendo"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "secondaryExpertise": [
+    "Product Management"
+  ],
+  "disciplines": [
+    "OutSystems",
+    "Content Production"
+  ],
+  "tools": [
+    "Vimeo",
+    "AWS",
+    "Figma"
+  ],
+  "skills": [
+    "Market Research"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Aperiam defetiscor soleo inventore antepono caritas administratio calco arguo.",
+  "mentoringDisciplines": [
+    "Brand/Identity Design",
+    "Marketing Strategy"
+  ],
+  "mentorshipAim": "Confido comprehendo dapifer articulus cuius.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Evening",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "color despecto aggero",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adc1"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad81"
+  },
+  "bio": "Demonstro deludo studio defluo itaque annus.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "THU",
+        "WEEKDAYS",
+        "WED"
+      ],
+      "times": [
+        "12:00 PM",
+        "10:00 AM",
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adc2"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Bogan and Sons",
+  "industry": "Healthcare",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "caelum compono cogo"
+  ],
+  "primaryExpertise": "Data & Business Analysis",
+  "secondaryExpertise": [
+    "AI & Advanced Technology",
+    "Development & Technology",
+    "Leadership and Management"
+  ],
+  "disciplines": [
+    "OutSystems",
+    "Sustainability Practices"
+  ],
+  "tools": [
+    "ChatGPT"
+  ],
+  "skills": [
+    "Collaboration",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Nam absque surculus auctus vetus xiphias non vis.",
+  "mentoringDisciplines": [
+    "Product Marketing",
+    "UI Design",
+    "Sustainability Practices"
+  ],
+  "mentorshipAim": "Corpus conforto aedificium tonsor toties depraedor tamdiu tribuo.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Evening",
+    "Morning",
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "defungo maiores alienus",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086add9"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad8d"
+  },
+  "bio": "Thermae expedita advoco.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "TUE",
+        "WEEKDAYS",
+        "MON"
+      ],
+      "times": [
+        "12:00 PM",
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adda"
+      }
+    }
+  ],
+  "jobTitle": "UX Designer",
+  "companyName": "Dooley - Nicolas",
+  "industry": "Engineering",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "at tamen vomito"
+  ],
+  "primaryExpertise": "Product Management",
+  "secondaryExpertise": [
+    "Product Management"
+  ],
+  "disciplines": [
+    "3D Design",
+    "Backend Development"
+  ],
+  "tools": [
+    "Adobe Illustrator",
+    "Notion"
+  ],
+  "skills": [
+    "Leadership",
+    "Public Speaking",
+    "Communication"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Contra audentia in deduco desolo adulatio nihil talus claro arbitro.",
+  "mentoringDisciplines": [
+    "UI Design",
+    "QA Engineer"
+  ],
+  "mentorshipAim": "Cotidie compono adipiscor crastinus acerbitas magnam.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "uter vespillo traho",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086addf"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad90"
+  },
+  "bio": "Crur contigo tergiversatio cupressus civis delicate umbra.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "MON",
+        "WED",
+        "TUE"
+      ],
+      "times": [
+        "10:00 AM",
+        "9:00 AM",
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ade0"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Ullrich - Beahan",
+  "industry": "Technology",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "bellicus adipisci reiciendis"
+  ],
+  "primaryExpertise": "Marketing and Content Creation",
+  "secondaryExpertise": [
+    "Video & Content Creation"
+  ],
+  "disciplines": [
+    "Customer Experience",
+    "Multimedia Design",
+    "AI/ML Engineering"
+  ],
+  "tools": [
+    "Webflow",
+    "Facebook",
+    "Adobe XD"
+  ],
+  "skills": [
+    "Leadership",
+    "Collaboration"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Umquam cruentus angelus socius contego teneo amicitia animadverto summisse.",
+  "mentoringDisciplines": [
+    "Motion Design",
+    "Data Science"
+  ],
+  "mentorshipAim": "Crepusculum tener validus.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Evening",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "ante vilis laudantium",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ade1"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad91"
+  },
+  "bio": "Consequuntur tepidus torqueo.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "WED",
+        "TUE",
+        "WEEKDAYS"
+      ],
+      "times": [
+        "10:00 AM",
+        "11:00 AM",
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ade2"
+      }
+    }
+  ],
+  "jobTitle": "Data Analyst",
+  "companyName": "Wintheiser, Pfeffer and Bartoletti",
+  "industry": "Engineering",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "delego consuasor porro"
+  ],
+  "primaryExpertise": "Product Management",
+  "secondaryExpertise": [
+    "AI & Advanced Technology"
+  ],
+  "disciplines": [
+    "AI/ML Engineering",
+    "Business Transformation"
+  ],
+  "tools": [
+    "Adobe Illustrator",
+    "Python/R Programming"
+  ],
+  "skills": [
+    "Collaboration"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Corrumpo quibusdam statim natus synagoga aggredior totidem cicuta ullam vox.",
+  "mentoringDisciplines": [
+    "Content Writing"
+  ],
+  "mentorshipAim": "Ipsam arx vox caecus solus sumptus doloremque subito denego.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Morning",
+    "Evening",
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "candidus peccatus eaque",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ade3"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad92"
+  },
+  "bio": "Voluntarius stipes creber curtus tredecim textus supplanto vehemens cavus coniuratio.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "MON",
+        "WEEKDAYS",
+        "TUE"
+      ],
+      "times": [
+        "12:00 PM",
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ade4"
+      }
+    }
+  ],
+  "jobTitle": "Data Engineer",
+  "companyName": "Sauer - Metz",
+  "industry": "Media & Entertainment",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "textor eaque adipisci"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "secondaryExpertise": [
+    "Design and Creativity"
+  ],
+  "disciplines": [
+    "Sustainability Practices",
+    "Marketing Strategy",
+    "QA Engineer"
+  ],
+  "tools": [
+    "ChatGPT",
+    "Google Workspace",
+    "Content Writing"
+  ],
+  "skills": [
+    "Leadership",
+    "Data Visualization"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Despecto beatus caries.",
+  "mentoringDisciplines": [
+    "Multimedia Design",
+    "3D Design"
+  ],
+  "mentorshipAim": "Vae artificiose annus aestivus.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Morning",
+    "Evening",
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "canonicus sublime depereo",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adf1"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad99"
+  },
+  "bio": "Ustilo damnatio corrigo corpus apparatus ventosus dolorum carmen vulnus ascisco.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "MON"
+      ],
+      "times": [
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adf2"
+      }
+    }
+  ],
+  "jobTitle": "Mobile Developer",
+  "companyName": "Schuppe LLC",
+  "industry": "Healthcare",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "aperio ago consequatur"
+  ],
+  "primaryExpertise": "Data & Business Analysis",
+  "secondaryExpertise": [
+    "Video & Content Creation"
+  ],
+  "disciplines": [
+    "Content Writing",
+    "XR Design"
+  ],
+  "tools": [
+    "Adobe Creative Suite"
+  ],
+  "skills": [
+    "Data Visualization"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Causa casso hic virga.",
+  "mentoringDisciplines": [
+    "Sustainability Practices",
+    "Marketing Strategy"
+  ],
+  "mentorshipAim": "Tollo alias admoveo statim.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "tutis curtus calculus",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adf7"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad9c"
+  },
+  "bio": "Aestivus usus vomito abundans vis quibusdam verus.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "TUE",
+        "THU"
+      ],
+      "times": [
+        "10:00 AM",
+        "11:00 AM",
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adf8"
+      }
+    }
+  ],
+  "jobTitle": "Data Analyst",
+  "companyName": "Wilkinson, Huel and Denesik",
+  "industry": "Manufacturing",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "calcar blandior repellendus"
+  ],
+  "primaryExpertise": "Design and Creativity",
+  "secondaryExpertise": [
+    "Product Management",
+    "Design and Creativity",
+    "Video & Content Creation"
+  ],
+  "disciplines": [
+    "XR Design"
+  ],
+  "tools": [
+    "Python/R Programming"
+  ],
+  "skills": [
+    "Leadership",
+    "Data Visualization",
+    "Collaboration"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Depraedor tero curia aer adipiscor tardus avaritia clementia tenetur.",
+  "mentoringDisciplines": [
+    "Graphic Design",
+    "Industrial Design"
+  ],
+  "mentorshipAim": "Voluptatum adimpleo attollo cursus patria.",
+  "communicationStyle": [
+    "Closed"
+  ],
+  "schedule": [
+    "Morning",
+    "Afternoon",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "sustineo quibusdam expedita",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adf9"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad9d"
+  },
+  "bio": "Censura studio surculus harum cavus dolorum.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "WED",
+        "FRI"
+      ],
+      "times": [
+        "11:00 AM",
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adfa"
+      }
+    }
+  ],
+  "jobTitle": "Data Engineer",
+  "companyName": "Schneider LLC",
+  "industry": "Professional Services",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "tergum conduco succurro"
+  ],
+  "primaryExpertise": "Product Management",
+  "secondaryExpertise": [
+    "Video & Content Creation",
+    "Development & Technology",
+    "Product Management"
+  ],
+  "disciplines": [
+    "Interaction Design",
+    "Brand/Identity Design"
+  ],
+  "tools": [
+    "Affinity"
+  ],
+  "skills": [
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Provident volup aetas sed facere.",
+  "mentoringDisciplines": [
+    "Content Production"
+  ],
+  "mentorshipAim": "Aperiam cohors iusto.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "talus cur comparo",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ae01"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ada1"
+  },
+  "bio": "Corporis defleo suadeo conculco cubo varietas.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "WEEKDAYS"
+      ],
+      "times": [
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ae02"
+      }
+    }
+  ],
+  "jobTitle": "Software Engineer",
+  "companyName": "Reichert and Sons",
+  "industry": "Manufacturing",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "videlicet ancilla arto"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "secondaryExpertise": [
+    "Development & Technology",
+    "Design and Creativity"
+  ],
+  "disciplines": [
+    "Data Engineering",
+    "UI Design"
+  ],
+  "tools": [
+    "Google Workspace",
+    "Tiktok"
+  ],
+  "skills": [
+    "SEO",
+    "Market Research"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Depulso conor adopto patrocinor credo vulticulus caput.",
+  "mentoringDisciplines": [
+    "UX Testing",
+    "Product Management"
+  ],
+  "mentorshipAim": "Coadunatio amor inventore error vos incidunt arma.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "adfero cena arbitro",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ae05"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ada3"
+  },
+  "bio": "Qui degenero vestrum vinculum voro comprehendo decipio delibero.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "FRI",
+        "WEEKDAYS",
+        "MON"
+      ],
+      "times": [
+        "11:00 AM",
+        "10:00 AM",
+        "9:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ae06"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Kuhic - Barton",
+  "industry": "Media & Entertainment",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "tertius amiculum creta"
+  ],
+  "primaryExpertise": "Design and Creativity",
+  "secondaryExpertise": [
+    "Product Management",
+    "Development & Technology"
+  ],
+  "disciplines": [
+    "Data Science"
+  ],
+  "tools": [
+    "ClickUp",
+    "ChatGPT",
+    "Vimeo"
+  ],
+  "skills": [
+    "Collaboration",
+    "SEO",
+    "Market Research"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Tutis acquiro virga crux cultura cometes distinctio vado suggero.",
+  "mentoringDisciplines": [
+    "Data Science",
+    "Backend Development",
+    "Multimedia Design"
+  ],
+  "mentorshipAim": "Autem vehemens ullam desipio statua.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "antepono tendo demens",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67caac76f916a68ab326613d"
+  },
+  "userId": {
+    "$oid": "67caac76f916a68ab326613c"
+  },
+  "languages": "English, French and Spanish",
+  "companyName": "Tobams Group",
+  "industry": "Technology",
+  "otherIndustry": "",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "PMP 1",
+    "PMP 2",
+    "PMP 3"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    "AI & Advanced Technology"
+  ],
+  "disciplines": [
+    "Frontend Development",
+    "Backend Development",
+    "AI/ML Engineering"
+  ],
+  "tools": [
+    "Trello",
+    "Jira",
+    "AWS/Cloud Computing",
+    "Wordpress",
+    "Google Workspace"
+  ],
+  "skills": [
+    "Communication",
+    "Collaboration",
+    "Leadership",
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "I don't have, just testing the form field to be sure it's working properly.",
+  "mentoringDisciplines": [
+    "Frontend Development",
+    "Backend Development",
+    "Full Stack"
+  ],
+  "mentorshipAim": "I don't have, just testing the form field to be sure it's working properly.",
+  "areasOfExpertise": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "mentees": [],
+  "rating": 0,
+  "status": "Pending",
+  "savedMentees": [],
+  "availability": [],
+  "reviews": [],
+  "createdAt": {
+    "$date": "2025-03-07T08:21:10.282Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-07T08:21:10.282Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68095adffff796a649be2410"
+  },
+  "userId": {
+    "$oid": "68095adffff796a649be240f"
+  },
+  "bio": "Experienced technology mentor with over 10 years in software development.",
+  "languages": "English, Spanish",
+  "companyName": "Tech Solutions Inc.",
+  "industry": "Technology",
+  "otherIndustry": "Software Development",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "Certified Scrum Master",
+    "AWS Certified Solutions Architect"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "secondaryExpertise": [
+    "DevOps"
+  ],
+  "disciplines": [
+    "UI/UX Design",
+    "Game Design"
+  ],
+  "tools": [
+    "Jira",
+    "AWS",
+    "Airtable"
+  ],
+  "skills": [
+    "SEO",
+    "Agile Methodologies",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Mentored junior developers in previous roles.",
+  "mentoringDisciplines": [
+    "UI Design",
+    "Game Design"
+  ],
+  "mentorshipAim": "Help mentees grow in their careers and achieve their goals.",
+  "areasOfExpertise": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Pending",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-04-23T21:25:51.414Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T21:25:51.414Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6819114b12e3b356b5ca7cd0"
+  },
+  "userId": {
+    "$oid": "6819114b12e3b356b5ca7ccf"
+  },
+  "bio": "Experienced technology mentor with over 10 years in software development.",
+  "languages": "English, Spanish",
+  "companyName": "Tech Solutions Inc.",
+  "industry": "Technology",
+  "otherIndustry": "Software Development",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "Certified Scrum Master",
+    "AWS Certified Solutions Architect"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "secondaryExpertise": [
+    "DevOps"
+  ],
+  "disciplines": [
+    "UI/UX Design",
+    "Game Design"
+  ],
+  "tools": [
+    "Jira",
+    "AWS",
+    "Airtable"
+  ],
+  "skills": [
+    "SEO",
+    "Agile Methodologies",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Mentored junior developers in previous roles.",
+  "mentoringDisciplines": [
+    "UI Design",
+    "Game Design"
+  ],
+  "mentorshipAim": "Help mentees grow in their careers and achieve their goals.",
+  "areasOfExpertise": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Pending",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-05-05T19:28:11.283Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-05T19:28:11.283Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adab"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad76"
+  },
+  "bio": "Clarus clibanus villa veritatis carcer.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "TUE",
+        "FRI",
+        "THU"
+      ],
+      "times": [
+        "12:00 PM",
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adac"
+      }
+    }
+  ],
+  "jobTitle": "Machine Learning Engineer",
+  "companyName": "Schaefer Group",
+  "industry": "Technology",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "testimonium cribro defendo"
+  ],
+  "primaryExpertise": "Leadership and Management",
+  "secondaryExpertise": [
+    "Other Professional Skills",
+    "Product Management",
+    "Leadership and Management"
+  ],
+  "disciplines": [
+    "Business Transformation",
+    "Graphic Design"
+  ],
+  "tools": [
+    "Miro",
+    "Zapier"
+  ],
+  "skills": [
+    "SEO",
+    "Communication",
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Vulpes alveus copia conculco earum doloremque trado.",
+  "mentoringDisciplines": [
+    "AI/ML Engineering",
+    "Frontend Development",
+    "Content Writing"
+  ],
+  "mentorshipAim": "Officiis celo terreo vomica minus.",
+  "communicationStyle": [
+    "Closed"
+  ],
+  "schedule": [
+    "Evening",
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "surculus tenus templum",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group, One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adb5"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad7b"
+  },
+  "bio": "Illum uberrime xiphias approbo vallum celo conturbo uxor surculus.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "THU"
+      ],
+      "times": [
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adb6"
+      }
+    }
+  ],
+  "jobTitle": "Data Scientist",
+  "companyName": "Skiles, Wyman and O'Conner",
+  "industry": "Agriculture & Food",
+  "yearsOfExperience": "10 years and above",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "baiulus depraedor crapula"
+  ],
+  "primaryExpertise": "Marketing and Content Creation",
+  "secondaryExpertise": [
+    "Marketing and Content Creation",
+    "Other Professional Skills"
+  ],
+  "disciplines": [
+    "AI/ML Engineering"
+  ],
+  "tools": [
+    "AWS/Cloud Computing",
+    "Google Analytics"
+  ],
+  "skills": [
+    "Communication",
+    "Agile Methodologies",
+    "Market Research"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Tergum arbor socius delectatio.",
+  "mentoringDisciplines": [
+    "Product Marketing"
+  ],
+  "mentorshipAim": "Deputo venia ratione volo alo clibanus nobis ducimus solio.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Morning",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "dolorum atavus arceo",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group, One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adb9"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad7d"
+  },
+  "bio": "Vilis quas callide vox aeger tantillus canis acerbitas subnecto possimus.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "TUE",
+        "FRI"
+      ],
+      "times": [
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adba"
+      }
+    }
+  ],
+  "jobTitle": "Fullstack Developer",
+  "companyName": "Krajcik and Sons",
+  "industry": "Technology",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "arbitro explicabo tribuo"
+  ],
+  "primaryExpertise": "AI & Advanced Technology",
+  "secondaryExpertise": [
+    "Marketing and Content Creation",
+    "AI & Advanced Technology",
+    "Other Professional Skills"
+  ],
+  "disciplines": [
+    "Data Science"
+  ],
+  "tools": [
+    "Google Analytics"
+  ],
+  "skills": [
+    "Communication"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Concedo concedo benigne tui et theologus coniuratio.",
+  "mentoringDisciplines": [
+    "Product Design",
+    "XR Design",
+    "Data Engineering"
+  ],
+  "mentorshipAim": "Thermae doloremque virgo adicio coruscus caritas.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "consuasor vox tabernus",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adc5"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad83"
+  },
+  "bio": "Decor decor dolorum uredo cohors deduco id collum.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "TUE"
+      ],
+      "times": [
+        "11:00 AM",
+        "12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adc6"
+      }
+    }
+  ],
+  "jobTitle": "Data Engineer",
+  "companyName": "Haag Inc",
+  "industry": "Technology",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "vinum aveho fugit"
+  ],
+  "primaryExpertise": "Leadership and Management",
+  "secondaryExpertise": [
+    "Data & Business Analysis"
+  ],
+  "disciplines": [
+    "AI/ML Engineering",
+    "Project Management",
+    "Marketing Strategy"
+  ],
+  "tools": [
+    "Tableau",
+    "Zapier"
+  ],
+  "skills": [
+    "Leadership",
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Vergo capio minima stella averto.",
+  "mentoringDisciplines": [
+    "Data Engineering",
+    "Motion Design",
+    "XR Design"
+  ],
+  "mentorshipAim": "Caries conculco ustulo ipsam.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "aestivus voluntarius dolores",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.804Z"
+  },
+  "mentorshipType": "Group, One-to-one"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086add3"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad8a"
+  },
+  "bio": "Aestus derelinquo denique suffragium cohaero sunt arbustum.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "WEEKENDS",
+        "MON"
+      ],
+      "times": [
+        "11:00 AM",
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086add4"
+      }
+    }
+  ],
+  "jobTitle": "Data Analyst",
+  "companyName": "Shields, Mertz and Casper",
+  "industry": "Media & Entertainment",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "bellicus aurum nesciunt"
+  ],
+  "primaryExpertise": "Data & Business Analysis",
+  "secondaryExpertise": [
+    "Data & Business Analysis",
+    "Video & Content Creation",
+    "Other Professional Skills"
+  ],
+  "disciplines": [
+    "XR Design",
+    "Interaction Design",
+    "OutSystems"
+  ],
+  "tools": [
+    "Affinity"
+  ],
+  "skills": [
+    "Strategic Planning"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Aspicio tabula adipiscor tabella beatae crepusculum creptio comedo.",
+  "mentoringDisciplines": [
+    "UI/UX Design",
+    "Graphic Design",
+    "3D Design"
+  ],
+  "mentorshipAim": "Damno neque derideo velociter nesciunt carpo.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Evening",
+    "Afternoon",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "demitto curto eaque",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086addd"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad8f"
+  },
+  "bio": "Aegrus caute pax amaritudo tempus vicinus delibero sortitus altus.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "WEEKENDS"
+      ],
+      "times": [
+        "9:00 AM",
+        "11:00 AM",
+        "12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adde"
+      }
+    }
+  ],
+  "jobTitle": "Data Analyst",
+  "companyName": "Jakubowski, Dickinson and Beahan",
+  "industry": "Manufacturing",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "ago thalassinus acidus"
+  ],
+  "primaryExpertise": "Video & Content Creation",
+  "secondaryExpertise": [
+    "Product Management",
+    "Development & Technology"
+  ],
+  "disciplines": [
+    "Sustainability Practices"
+  ],
+  "tools": [
+    "Wordpress",
+    "ClickUp"
+  ],
+  "skills": [
+    "Market Research",
+    "Data Visualization"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Caecus universe defetiscor spoliatio color maxime cariosus.",
+  "mentoringDisciplines": [
+    "Industrial Design",
+    "Multimedia Design"
+  ],
+  "mentorshipAim": "Caelum quas optio vigor amet tondeo ad natus aperiam.",
+  "communicationStyle": [
+    "Closed",
+    "Open"
+  ],
+  "schedule": [
+    "Morning",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "tergeo arx suadeo",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ade9"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad95"
+  },
+  "bio": "Ultra valetudo vorax adulescens earum.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "FRI",
+        "WED"
+      ],
+      "times": [
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adea"
+      }
+    }
+  ],
+  "jobTitle": "Machine Learning Engineer",
+  "companyName": "Johnston - Goodwin",
+  "industry": "Healthcare",
+  "yearsOfExperience": "10 years and above",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "casso averto culpo"
+  ],
+  "primaryExpertise": "Leadership and Management",
+  "secondaryExpertise": [
+    "Development & Technology",
+    "Video & Content Creation",
+    "Leadership and Management"
+  ],
+  "disciplines": [
+    "AI/ML Engineering",
+    "Product Marketing"
+  ],
+  "tools": [
+    "Affinity",
+    "Zapier",
+    "Instagram"
+  ],
+  "skills": [
+    "SEO"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Deleo officiis tergo vomito crebro arbustum voluptatum.",
+  "mentoringDisciplines": [
+    "UX Testing",
+    "UI/UX Design",
+    "Educational Development"
+  ],
+  "mentorshipAim": "Caelestis culpo temptatio vinum coma desipio aliquam attonbitus tum suscipit.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Morning",
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "abbas timor censura",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adfb"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad9e"
+  },
+  "bio": "Porro antea doloribus adulatio.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "MON"
+      ],
+      "times": [
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adfc"
+      }
+    }
+  ],
+  "jobTitle": "Data Engineer",
+  "companyName": "Berge, Sanford and Wiegand",
+  "industry": "Manufacturing",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "curto brevis stipes"
+  ],
+  "primaryExpertise": "Leadership and Management",
+  "secondaryExpertise": [
+    "Marketing and Content Creation"
+  ],
+  "disciplines": [
+    "Artificial Intelligence",
+    "Frontend Development"
+  ],
+  "tools": [
+    "Webflow"
+  ],
+  "skills": [
+    "Collaboration",
+    "SEO",
+    "Data Visualization"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Cariosus contigo totus delectus super.",
+  "mentoringDisciplines": [
+    "Data Engineering"
+  ],
+  "mentorshipAim": "Appositus certe creo aperiam saepe barba thesis possimus thymum collum.",
+  "communicationStyle": [
+    "Open",
+    "Closed"
+  ],
+  "schedule": [
+    "Afternoon"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "absens nisi patria",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adfd"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ad9f"
+  },
+  "bio": "Ait tenetur supra.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "THU",
+        "TUE",
+        "WED"
+      ],
+      "times": [
+        "12:00 PM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086adfe"
+      }
+    }
+  ],
+  "jobTitle": "Machine Learning Engineer",
+  "companyName": "Wolf - Schaefer",
+  "industry": "Media & Entertainment",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "coniecto demum delinquo"
+  ],
+  "primaryExpertise": "AI & Advanced Technology",
+  "secondaryExpertise": [
+    "Design and Creativity",
+    "Leadership and Management",
+    "Development & Technology"
+  ],
+  "disciplines": [
+    "Financial Analysis",
+    "Customer Experience"
+  ],
+  "tools": [
+    "ClickUp",
+    "Adobe Photoshop",
+    "Axure"
+  ],
+  "skills": [
+    "Leadership",
+    "SEO"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Conspergo animi sursum tergeo deprecator ara vapulus vulticulus.",
+  "mentoringDisciplines": [
+    "Product Marketing",
+    "Project Management"
+  ],
+  "mentorshipAim": "Suffragium clarus tabula supellex summopere acceptus adsuesco apparatus.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Evening",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "uxor auditor usitas",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086adff"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ada0"
+  },
+  "bio": "Atrocitas correptius defendo minus perspiciatis libero viridis usus confero.",
+  "languages": "Spanish",
+  "availability": [
+    {
+      "days": [
+        "FRI",
+        "THU",
+        "WED"
+      ],
+      "times": [
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ae00"
+      }
+    }
+  ],
+  "jobTitle": "Project Manager",
+  "companyName": "Ferry, Balistreri and Smitham",
+  "industry": "Retail & E-commerce",
+  "yearsOfExperience": "10 years and above",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "aqua articulus adstringo"
+  ],
+  "primaryExpertise": "Data & Business Analysis",
+  "secondaryExpertise": [
+    "AI & Advanced Technology",
+    "Marketing and Content Creation"
+  ],
+  "disciplines": [
+    "UX Research",
+    "Customer Experience",
+    "Game Design"
+  ],
+  "tools": [
+    "Adobe Illustrator"
+  ],
+  "skills": [
+    "Public Speaking",
+    "SEO",
+    "Leadership"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Centum curatio aeger comes pel advoco.",
+  "mentoringDisciplines": [
+    "Business Transformation",
+    "3D Design",
+    "Brand/Identity Design"
+  ],
+  "mentorshipAim": "Ago demitto demoror custodia credo excepturi urbs.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Afternoon",
+    "Morning"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "anser aer compono",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ae03"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ada2"
+  },
+  "bio": "Sumo defaeco cras.",
+  "languages": "French",
+  "availability": [
+    {
+      "days": [
+        "MON"
+      ],
+      "times": [
+        "11:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ae04"
+      }
+    }
+  ],
+  "jobTitle": "Backend Developer",
+  "companyName": "Cole Inc",
+  "industry": "Agriculture & Food",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "tres verecundia stips"
+  ],
+  "primaryExpertise": "Design and Creativity",
+  "secondaryExpertise": [
+    "Marketing and Content Creation",
+    "Video & Content Creation",
+    "Data & Business Analysis"
+  ],
+  "disciplines": [
+    "Brand/Identity Design"
+  ],
+  "tools": [
+    "Adobe Photoshop",
+    "Notion"
+  ],
+  "skills": [
+    "SEO",
+    "Strategic Planning",
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Urbs quas tabesco aegrotatio cena.",
+  "mentoringDisciplines": [
+    "Multimedia Design",
+    "Product Marketing",
+    "UI/UX Design"
+  ],
+  "mentorshipAim": "Praesentium cultellus ver uberrime torqueo aureus conscendo tum usque depraedor.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "distinctio aureus arcesso",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.805Z"
+  },
+  "mentorshipType": "Group"
+},
+{
+  "_id": {
+    "$oid": "67b66149ad4271308086ae07"
+  },
+  "userId": {
+    "$oid": "67b66148ad4271308086ada4"
+  },
+  "bio": "Spiculum amoveo communis adeptio.",
+  "languages": "English",
+  "availability": [
+    {
+      "days": [
+        "MON",
+        "WED",
+        "THU"
+      ],
+      "times": [
+        "10:00 AM"
+      ],
+      "_id": {
+        "$oid": "67b66149ad4271308086ae08"
+      }
+    }
+  ],
+  "jobTitle": "Project Manager",
+  "companyName": "Mayert, Heathcote and Hansen",
+  "industry": "Manufacturing",
+  "yearsOfExperience": "less than 3 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "torrens voluptate cupressus"
+  ],
+  "primaryExpertise": "Design and Creativity",
+  "secondaryExpertise": [
+    "Marketing and Content Creation",
+    "Design and Creativity",
+    "Data & Business Analysis"
+  ],
+  "disciplines": [
+    "Motion Design",
+    "Financial Analysis",
+    "UI/UX Design"
+  ],
+  "tools": [
+    "Python/R Programming",
+    "Webflow"
+  ],
+  "skills": [
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Ullus vita patrocinor ceno admiratio optio curto.",
+  "mentoringDisciplines": [
+    "Product Design",
+    "XR Design",
+    "Customer Experience"
+  ],
+  "mentorshipAim": "Succedo accedo ubi.",
+  "communicationStyle": [
+    "Open"
+  ],
+  "schedule": [
+    "Morning",
+    "Evening"
+  ],
+  "mentees": [],
+  "portfolioLinkText": "clarus doloribus cunabula",
+  "rating": 0,
+  "status": "Pending",
+  "reviews": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-02-19T22:55:05.806Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T22:55:05.806Z"
+  },
+  "mentorshipType": "One-to-one"
+},
+{
+  "_id": {
+    "$oid": "68371aa0d88672837443a444"
+  },
+  "userId": {
+    "$oid": "68371aa0d88672837443a443"
+  },
+  "languages": "English, French and Spanish",
+  "companyName": "1963 Movies",
+  "industry": "Technology",
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "PMP 1"
+  ],
+  "primaryExpertise": "Leadership and Management",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    "Design & Creativity"
+  ],
+  "disciplines": [
+    "Business Strategy"
+  ],
+  "tools": [
+    "Microsoft Office Suite"
+  ],
+  "skills": [
+    "Communication"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "I don't have. I'm just testing out the Mentor registration.",
+  "mentoringDisciplines": [
+    "Business Strategy"
+  ],
+  "mentorshipAim": "I don't have. I'm just testing out the Mentor registration.",
+  "areasOfExpertise": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-05-28T14:16:00.618Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T14:16:03.423Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "690464c61eeb838da355b1ed"
+  },
+  "userId": {
+    "$oid": "690464c61eeb838da355b1ec"
+  },
+  "languages": "English",
+  "companyName": "Dev",
+  "industry": [
+    "Technology"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "PMP"
+  ],
+  "primaryExpertise": "Product Management",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    ""
+  ],
+  "disciplines": [
+    "Backend Development"
+  ],
+  "tools": [
+    "SQL/MySQL"
+  ],
+  "skills": [
+    "Leadership"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "I mentored a community",
+  "mentoringDisciplines": [
+    "Full Stack"
+  ],
+  "mentorshipAim": "Inspire young ones",
+  "areasOfExpertise": [
+    "Software Engineering",
+    "Web Development",
+    "Networking"
+  ],
+  "mentorshipType": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [
+    {
+      "days": [
+        "Weekends"
+      ],
+      "times": [
+        "12:00 AM - 11:45 PM"
+      ],
+      "_id": {
+        "$oid": "690466a61eeb838da355b271"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-31T07:27:02.140Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-31T07:35:02.431Z"
+  },
+  "bio": "Inspire young ones"
+},
+{
+  "_id": {
+    "$oid": "6924567796b1c0a66128224d"
+  },
+  "userId": {
+    "$oid": "6924567796b1c0a66128224c"
+  },
+  "languages": "English and Yoruba",
+  "companyName": "Tobams Group",
+  "industry": [
+    "Technology"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": false,
+  "certifications": [],
+  "primaryExpertise": "Data & Business Analysis",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    ""
+  ],
+  "disciplines": [
+    "Business Strategy"
+  ],
+  "tools": [
+    "Jira"
+  ],
+  "skills": [
+    "Communication"
+  ],
+  "previousMentorshipExperience": false,
+  "previousMentorshipExperienceDescription": "",
+  "mentoringDisciplines": [
+    "Business Transformation"
+  ],
+  "mentorshipAim": "Everything",
+  "areasOfExpertise": [],
+  "mentorshipType": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-11-24T12:58:31.387Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T12:58:33.884Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "694a7af3af239e8238541f85"
+  },
+  "userId": {
+    "$oid": "694a7af3af239e8238541f84"
+  },
+  "languages": "English",
+  "companyName": "Tobams",
+  "industry": [
+    "Technology"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": false,
+  "certifications": [],
+  "primaryExpertise": "Development & Technology",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    ""
+  ],
+  "disciplines": [
+    "Backend Development"
+  ],
+  "tools": [
+    "AWS",
+    "ChatGPT"
+  ],
+  "skills": [
+    "Communication",
+    "Collaboration",
+    "SEO"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Lorem Ipsum",
+  "mentoringDisciplines": [
+    "Backend Development"
+  ],
+  "mentorshipAim": "Lorem Ipsum",
+  "areasOfExpertise": [
+    "Software Engineering",
+    "Computer Science",
+    "Web Development"
+  ],
+  "mentorshipType": [
+    "One-on-One"
+  ],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [
+    {
+      "days": [
+        "Weekdays"
+      ],
+      "times": [
+        "08:00 AM - 11:00 PM"
+      ],
+      "_id": {
+        "$oid": "6953a7ca314500ddfa21dae0"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-23T11:20:19.342Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-27T07:58:16.280Z"
+  },
+  "notificationSettings": {
+    "menteeRecommendation": {
+      "newMenteeProfiles": {
+        "inApp": true,
+        "email": true
+      }
+    },
+    "mentorshipNotification": {
+      "mentorshipRequestUpdate": {
+        "inApp": true,
+        "email": true
+      },
+      "mentorshipAcceptance": {
+        "inApp": true,
+        "email": true
+      }
+    },
+    "communication": {
+      "messagesFromMentees": {
+        "inApp": true,
+        "email": true
+      }
+    },
+    "groupNotifications": {
+      "newChatMessage": {
+        "inApp": true,
+        "email": false
+      },
+      "mentionInChat": {
+        "inApp": true,
+        "email": false
+      },
+      "groupChatActivity": {
+        "inApp": true,
+        "email": false
+      },
+      "fileSharing": {
+        "inApp": true,
+        "email": false
+      }
+    },
+    "eventNotifications": {
+      "upcomingEvents": {
+        "inApp": true,
+        "email": true
+      },
+      "eventReminders": {
+        "inApp": true,
+        "email": true
+      }
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "69528c8e314500ddfa21d806"
+  },
+  "userId": {
+    "$oid": "69528c8e314500ddfa21d805"
+  },
+  "languages": "English",
+  "companyName": "Olareign Cop",
+  "industry": [
+    "Technology"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": false,
+  "certifications": [],
+  "primaryExpertise": "Development & Technology",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    ""
+  ],
+  "disciplines": [
+    "Backend Development"
+  ],
+  "tools": [
+    "ChatGPT"
+  ],
+  "skills": [
+    "Communication"
+  ],
+  "previousMentorshipExperience": false,
+  "previousMentorshipExperienceDescription": "",
+  "mentoringDisciplines": [
+    "Backend Development"
+  ],
+  "mentorshipAim": "Hello world",
+  "areasOfExpertise": [
+    "Web Development",
+    "Software Engineering",
+    "Communication",
+    "Computer Science",
+    "Computer Engineering"
+  ],
+  "mentorshipType": [
+    "Group",
+    "One on One"
+  ],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [
+    {
+      "days": [
+        "Weekdays"
+      ],
+      "times": [
+        "12:00 AM - 11:45 PM"
+      ],
+      "_id": {
+        "$oid": "6953ab63d01900b055c9e92a"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-29T14:13:34.251Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-30T10:37:23.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69538c94314500ddfa21d929"
+  },
+  "userId": {
+    "$oid": "69538c94314500ddfa21d928"
+  },
+  "languages": "English",
+  "companyName": "Pacifylabs ",
+  "industry": [
+    "Technology"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": false,
+  "certifications": [],
+  "primaryExpertise": "Development & Technology",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    ""
+  ],
+  "disciplines": [
+    "Backend Development"
+  ],
+  "tools": [
+    "Microsoft Office Suite"
+  ],
+  "skills": [
+    "Communication"
+  ],
+  "previousMentorshipExperience": false,
+  "previousMentorshipExperienceDescription": "",
+  "mentoringDisciplines": [
+    "Backend Development"
+  ],
+  "mentorshipAim": "Hello world",
+  "areasOfExpertise": [],
+  "mentorshipType": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2025-12-30T08:25:56.488Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-30T08:25:58.435Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "695399c5314500ddfa21d9b1"
+  },
+  "userId": {
+    "$oid": "695399c5314500ddfa21d9b0"
+  },
+  "languages": "English, Spanish",
+  "companyName": "Interswitch",
+  "industry": [
+    "Technology",
+    "Engineering",
+    "Healthcare",
+    "Agriculture & Food"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": false,
+  "certifications": [],
+  "primaryExpertise": "Development & Technology",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    "Leadership & Management"
+  ],
+  "disciplines": [
+    "Frontend Development",
+    "Backend Development",
+    "AI/ML Engineering"
+  ],
+  "tools": [
+    "AWS",
+    "AWS/Cloud Computing",
+    "Python/R Programming",
+    "SQL/MySQL",
+    "Google Workspace"
+  ],
+  "skills": [
+    "Communication",
+    "Leadership",
+    "Collaboration",
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Mentored young ladies in frontend devlopment\nMentored interns in my previous organization",
+  "mentoringDisciplines": [
+    "Frontend Development",
+    "Backend Development"
+  ],
+  "mentorshipAim": "Teach people who can become experts in their field",
+  "areasOfExpertise": [
+    "Software Engineering",
+    "Web Development",
+    "Computer Networking",
+    "Computer Science",
+    "Communication"
+  ],
+  "mentorshipType": [
+    "Group",
+    "One-on-One"
+  ],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [
+    {
+      "days": [
+        "Weekdays"
+      ],
+      "times": [
+        "09:00 AM - 04:00 PM"
+      ],
+      "_id": {
+        "$oid": "6954eda578e46ba978bb5a60"
+      }
+    },
+    {
+      "days": [
+        "Weekends"
+      ],
+      "times": [
+        "10:00 AM - 03:00 PM"
+      ],
+      "_id": {
+        "$oid": "6954eda578e46ba978bb5a61"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-30T09:22:13.925Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-18T09:40:09.050Z"
+  },
+  "linkText": "Linkedin"
+},
+{
+  "_id": {
+    "$oid": "695dad50f03a420a3cf6a647"
+  },
+  "userId": {
+    "$oid": "695dad50f03a420a3cf6a646"
+  },
+  "languages": "English",
+  "companyName": "Tobams",
+  "industry": [
+    "Technology"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "W"
+  ],
+  "primaryExpertise": "Development & Technology",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    ""
+  ],
+  "disciplines": [
+    "Full Stack",
+    "Backend Development",
+    "Frontend Development",
+    "Data Engineering"
+  ],
+  "tools": [
+    "Python/R Programming"
+  ],
+  "skills": [
+    "Leadership",
+    "Communication",
+    "Collaboration",
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Mentored Junior staffs",
+  "mentoringDisciplines": [
+    "Full Stack",
+    "Backend Development",
+    "Data Engineering"
+  ],
+  "mentorshipAim": "Groom future Innovators",
+  "areasOfExpertise": [],
+  "mentorshipType": [
+    "Group",
+    "One-on-One"
+  ],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [
+    {
+      "$oid": "690c58c445047c4e4030fe01"
+    }
+  ],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2026-01-07T00:48:16.973Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-11T11:03:06.443Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a6cd36f0accb3224832b16"
+  },
+  "userId": {
+    "$oid": "69a6cd36f0accb3224832b15"
+  },
+  "languages": "English",
+  "companyName": "Tobamsgroup",
+  "industry": [
+    "Technology"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "CPD"
+  ],
+  "primaryExpertise": "Product Management",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    ""
+  ],
+  "disciplines": [
+    "Backend Development"
+  ],
+  "tools": [
+    "Python/R Programming"
+  ],
+  "skills": [
+    "Collaboration",
+    "Leadership"
+  ],
+  "previousMentorshipExperience": false,
+  "previousMentorshipExperienceDescription": "",
+  "mentoringDisciplines": [
+    "Backend Development"
+  ],
+  "mentorshipAim": "learn and frustrate younger ones",
+  "areasOfExpertise": [],
+  "mentorshipType": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2026-03-03T11:59:50.912Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-03T11:59:52.287Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a6d17bf0accb3224832b7c"
+  },
+  "userId": {
+    "$oid": "69a6d17bf0accb3224832b7b"
+  },
+  "languages": "English, Spanish",
+  "companyName": "New Things",
+  "industry": [
+    "Technology"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "6-10 years",
+  "anyProfessionalCertifications": false,
+  "certifications": [],
+  "primaryExpertise": "Development & Technology",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    "Leadership & Management"
+  ],
+  "disciplines": [
+    "Project Management",
+    "Product Management"
+  ],
+  "tools": [
+    "Figma"
+  ],
+  "skills": [
+    "Communication"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Mdntorship details",
+  "mentoringDisciplines": [
+    "Frontend Development",
+    "Backend Development"
+  ],
+  "mentorshipAim": "Mentoring",
+  "areasOfExpertise": [],
+  "mentorshipType": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2026-03-03T12:18:03.100Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-03T12:18:04.387Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a7e857f0accb3224832e80"
+  },
+  "userId": {
+    "$oid": "69a7e857f0accb3224832e7f"
+  },
+  "languages": "English",
+  "companyName": "Tobams Group",
+  "industry": [
+    "Technology"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "Product Design"
+  ],
+  "primaryExpertise": "Design and Creativity",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    ""
+  ],
+  "disciplines": [
+    "UI/UX Design",
+    "UI Design",
+    "UX Research",
+    "Product Design",
+    "UX Testing"
+  ],
+  "tools": [
+    "Figma",
+    "Trello",
+    "Jira",
+    "ClickUp",
+    "Miro",
+    "Framer",
+    "ChatGPT",
+    "Notion",
+    "Google Workspace"
+  ],
+  "skills": [
+    "Communication",
+    "Collaboration",
+    "Leadership",
+    "Strategic Planning",
+    "Agile Methodologies"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "No",
+  "mentoringDisciplines": [
+    "UI/UX Design",
+    "UI Design",
+    "UX Research"
+  ],
+  "mentorshipAim": "Signs and Wonders",
+  "areasOfExpertise": [
+    "Web Development",
+    "Networking",
+    "Computer Networking"
+  ],
+  "mentorshipType": [
+    "One-on-One"
+  ],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [
+    {
+      "days": [
+        "Weekdays"
+      ],
+      "times": [
+        "12:00 AM - 12:00 AM"
+      ],
+      "_id": {
+        "$oid": "69a81520f0accb3224833247"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2026-03-04T08:07:51.703Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T12:52:48.805Z"
+  },
+  "linkText": "Linkedin",
+  "bio": " Wonders"
+},
+{
+  "_id": {
+    "$oid": "69bbfabfd24095619d18b459"
+  },
+  "userId": {
+    "$oid": "69bbfabfd24095619d18b458"
+  },
+  "languages": "English",
+  "companyName": "Lahooooo",
+  "industry": [
+    "Technology"
+  ],
+  "otherIndustry": "",
+  "yearsOfExperience": "3-5 years",
+  "anyProfessionalCertifications": true,
+  "certifications": [
+    "SDE"
+  ],
+  "primaryExpertise": "Design and Creativity",
+  "otherPrimaryExpertise": "",
+  "secondaryExpertise": [
+    ""
+  ],
+  "disciplines": [
+    "UI/UX Design",
+    "Product Design"
+  ],
+  "tools": [
+    "Figma",
+    "Adobe Creative Suite",
+    "Adobe Photoshop",
+    "ClickUp"
+  ],
+  "skills": [
+    "Leadership",
+    "Communication"
+  ],
+  "previousMentorshipExperience": true,
+  "previousMentorshipExperienceDescription": "Senior mentor ohhhhh",
+  "mentoringDisciplines": [
+    "UI/UX Design",
+    "Product Design"
+  ],
+  "mentorshipAim": "Tecah all i know so they can teach all they know also.",
+  "areasOfExpertise": [],
+  "mentorshipType": [],
+  "communicationStyle": [],
+  "schedule": [],
+  "status": "Approved",
+  "savedMentees": [],
+  "savedEvents": [],
+  "availability": [],
+  "createdAt": {
+    "$date": "2026-03-19T13:31:43.105Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-19T13:31:44.449Z"
+  }
+}]

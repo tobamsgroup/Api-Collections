@@ -1,0 +1,7 @@
+info:
+  name: Competition
+  type: folder
+  seq: 46
+
+request:
+  auth: inherit

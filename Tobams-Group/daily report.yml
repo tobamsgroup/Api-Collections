@@ -1,0 +1,19 @@
+info:
+  name: "daily report "
+  type: http
+  seq: 40
+
+http:
+  method: GET
+  url: "{{BASE}}/report/platform-stats?key=iq1cwnme9er0ta1thtbltst7t3t9fiendcs8afva4cs3s0sa"
+  params:
+    - name: key
+      value: iq1cwnme9er0ta1thtbltst7t3t9fiendcs8afva4cs3s0sa
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

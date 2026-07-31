@@ -12,7 +12,7 @@ http:
       - name: file
         type: file
         value:
-          - /Users/fawazabdganiyu/Downloads/br12.jpg
+          - /Users/mac/Downloads/webinar-image2.jpeg
   auth: inherit
 
 settings:
