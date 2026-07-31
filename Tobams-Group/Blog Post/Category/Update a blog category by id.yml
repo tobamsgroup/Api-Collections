@@ -1,0 +1,25 @@
+info:
+  name: Update a blog category by id
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{BASE}}/blog/category/:id"
+  params:
+    - name: id
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "description": "Updated description"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

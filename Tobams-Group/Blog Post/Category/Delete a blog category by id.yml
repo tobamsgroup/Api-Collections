@@ -1,0 +1,21 @@
+info:
+  name: Delete a blog category by id
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{BASE}}/blog/category/:id"
+  params:
+    - name: id
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: Deletes the category and pulls it from every blog's `categories` array — blogs are untouched otherwise.

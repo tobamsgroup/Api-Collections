@@ -1,0 +1,32 @@
+info:
+  name: Update a blog by id — multipart/form-data (all fields optional)
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/blog/:id"
+  params:
+    - name: id
+      value: ""
+      type: path
+  body:
+    type: multipart-form
+    data:
+      - name: status
+        type: text
+        value: published
+      - name: categories
+        type: text
+        value: '["Career Advice", "Remote Work"]'
+      - name: file
+        type: text
+        value: ""
+        description: Binary image, optional — only if replacing the photo
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

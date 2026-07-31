@@ -1,0 +1,23 @@
+info:
+  name: Create multiple blog categories — application/json (names only, no descriptions)
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/blog/category/bulk"
+  body:
+    type: json
+    data: |-
+      {
+        "names": ["Remote Work", "Tech News", "Interview Prep"]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: Response includes a per-name `created/skipped_duplicate` report.
