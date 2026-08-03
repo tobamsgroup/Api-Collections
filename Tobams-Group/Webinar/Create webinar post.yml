@@ -56,7 +56,16 @@ http:
           "NYSC members",
           "Students and recent graduates"
         ],
-        "speaker": "",
+        "speaker": [
+          {
+            "title": "",
+            "firstName": "Fawaz", // required
+            "LastName": "Abdganiyu", // required
+            "position": "",
+            "company": "",
+            "imageUrl": ""
+          }
+        ],
         "category": "AI & Technology",
         "status": "upcoming",
         "applicationCount": 0
@@ -235,7 +244,11 @@ examples:
                 "NYSC members",
                 "Students and recent graduates"
               ],
-              "speaker": "",
+              "speakers": [
+                {
+                  
+                }
+              ],
               "category": "AI & Technology",
               "status": "upcoming",
               "applicationCount": 0,
