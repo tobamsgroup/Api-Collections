@@ -11,33 +11,34 @@ http:
     data:
       - name: title
         type: text
-        value: 5 Tips for Landing Your First Tech Job
+        value: "From Campus to Career: Why Universities Need Industry Partnerships More Than Ever"
       - name: content
         type: text
-        value: <p>Breaking into tech doesn't require a CS degree...</p>
+        value: <p>A university degree remains a valuable foundation, but today&rsquo;s employers are looking for more than academic knowledge. They want graduates who can solve problems, adapt quickly, collaborate effectively, communicate confidently, and contribute from day one.</p><p>&nbsp;</p><p>The challenge is that many graduates leave university equipped with theoretical knowledge but limited exposure to the realities of the workplace. As industries evolve rapidly through digital transformation, artificial intelligence, and changing business needs, the gap between education and employment continues to widen. Closing that gap requires more than curriculum updates&mdash;it requires collaboration.</p><p>&nbsp;</p><p>This is why strong partnerships between universities and industry have become more important than ever. Through internships, mentorship programmes, industry-led projects, guest lectures, apprenticeships, innovation hubs, and work-integrated learning, students gain practical experience while developing the technical and professional skills employers value most. At the same time, organisations build a stronger pipeline of future-ready talent, reduce recruitment challenges, and help shape the workforce they will eventually hire.</p><p>&nbsp;</p><p>These partnerships also benefit universities by ensuring academic programmes remain relevant to current industry needs. When employers contribute insights into curriculum design and emerging trends, graduates are better prepared for real-world challenges rather than simply passing examinations.</p><p>&nbsp;</p><p>For students, the impact goes beyond employability. Exposure to experienced professionals builds confidence, expands networks, encourages innovation, and provides clarity about career paths long before graduation. It transforms learning from something that happens only in lecture halls into an experience that prepares students to thrive in dynamic workplaces.</p><p>&nbsp;</p><p>The future of higher education is not about choosing between academic excellence and practical experience&mdash;it is about combining both. Universities and employers each have a critical role to play, but lasting impact happens when they work together.</p><p>&nbsp;</p><p>Closing the gap between classroom learning and workplace expectations requires collaboration, not competition. The journey from campus to career should not begin after graduation&mdash;it should start while students are still learning.</p>
       - name: description
         type: text
-        value: A practical guide for career switchers
+        value: ""
+        disabled: true
       - name: duration
         type: text
-        value: 6 min read
+        value: 3 mins read
       - name: author
         type: text
-        value: Jane Doe
+        value: Ona Newton
       - name: url
         type: text
-        value: 5-tips-for-landin
+        value: why-universities-need-industry-partnerships-more-than-ever
       - name: status
         type: text
-        value: draft
+        value: published
       - name: categories
         type: text
         value: Career Advice
       - name: file
         type: file
         value:
-          - /Users/fawazabdganiyu/Documents/Scale Up.png
-        contentType: image/png
+          - /Users/fawazabdganiyu/Downloads/From Campus to Career.jpg
+        contentType: image/jpeg
         description: Binary image, field name "file"
   auth: inherit
 

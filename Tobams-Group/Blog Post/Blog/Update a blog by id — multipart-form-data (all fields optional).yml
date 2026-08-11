@@ -8,7 +8,7 @@ http:
   url: "{{BASE}}/blog/:id"
   params:
     - name: id
-      value: 6a6c7062db0a8876d5fca7e1
+      value: 6a74c801eb02f0ba40dc05ed
       type: path
   body:
     type: multipart-form
@@ -16,14 +16,22 @@ http:
       - name: status
         type: text
         value: published
+        disabled: true
       - name: categories
         type: text
-        value: '["Career Advice", "Remote Work"]'
+        value: Career Tips
+        disabled: true
       - name: file
         type: text
         value: ""
         description: Binary image, optional — only if replacing the photo
         disabled: true
+      - name: description
+        type: text
+        value: A university degree remains a valuable foundation, but in today’s rapidly evolving job market, academic knowledge alone is no longer enough. Employers are increasingly seeking graduates who can think critically, solve complex problems, adapt to change, collaborate effectively, communicate with confidence, and add value from their very first day at work.
+      - name: content
+        type: text
+        value: <p>The reality, however, is that many graduates leave university with strong theoretical knowledge but limited practical experience. As industries continue to evolve through digital transformation, artificial intelligence, automation, and shifting workforce demands, the gap between what students learn in the classroom and what employers expect in the workplace continues to grow. Bridging this gap requires more than updating academic curricula—it demands meaningful collaboration between universities and industry.</p><p>&nbsp;</p><p>This is why strong partnerships between universities and industry have become more important than ever. Through internships, mentorship programmes, industry-led projects, guest lectures, apprenticeships, innovation hubs, and work-integrated learning, students gain practical experience while developing the technical and professional skills employers value most. At the same time, organisations build a stronger pipeline of future-ready talent, reduce recruitment challenges, and help shape the workforce they will eventually hire.</p><p>&nbsp;</p><p>These partnerships also benefit universities by ensuring academic programmes remain relevant to current industry needs. When employers contribute insights into curriculum design and emerging trends, graduates are better prepared for real-world challenges rather than simply passing examinations.</p><p>&nbsp;</p><p>For students, the impact goes beyond employability. Exposure to experienced professionals builds confidence, expands networks, encourages innovation, and provides clarity about career paths long before graduation. It transforms learning from something that happens only in lecture halls into an experience that prepares students to thrive in dynamic workplaces.</p><p>&nbsp;</p><p>The future of higher education is not about choosing between academic excellence and practical experience&mdash;it is about combining both. Universities and employers each have a critical role to play, but lasting impact happens when they work together.</p><p>&nbsp;</p><p>Closing the gap between classroom learning and workplace expectations requires collaboration, not competition. The journey from campus to career should not begin after graduation&mdash;it should start while students are still learning.</p>
   auth: inherit
 
 settings:
