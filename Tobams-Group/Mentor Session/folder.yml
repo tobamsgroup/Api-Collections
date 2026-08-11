@@ -1,7 +1,7 @@
 info:
   name: Mentor Session
   type: folder
-  seq: 27
+  seq: 30
 
 request:
   auth: inherit

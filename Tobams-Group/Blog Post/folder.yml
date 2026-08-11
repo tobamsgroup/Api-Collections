@@ -1,7 +1,7 @@
 info:
   name: Blog Post
   type: folder
-  seq: 13
+  seq: 16
 
 request:
   auth:

@@ -1,7 +1,7 @@
 info:
   name: Secure Seat (AI Webinar)
   type: folder
-  seq: 39
+  seq: 42
 
 request:
   auth: inherit
