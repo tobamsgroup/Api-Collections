@@ -5,12 +5,12 @@ info:
 
 http:
   method: POST
-  url: "{{BASE}}/webinars"
+  url: "{{BASE}}/webinarsapp"
   body:
     type: json
     data: |-
       {
-        "title": "Preparing Nigeria's Next Generation to Win in an AI-Powered World",
+        "title": "The Skills They Don't Teach But Always Test",
         "description": "Discover the skills, opportunities and practical actions young Nigerians need to learn, work, innovate and lead confidently in an AI-powered future.",
         "date": "2026-09-18T00:00:00.000Z",
         "time": "4:00 - 6:00PM WAT",
@@ -70,7 +70,9 @@ http:
         "status": "upcoming",
         "applicationCount": 0
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
 
 settings:
   encodeUrl: true
