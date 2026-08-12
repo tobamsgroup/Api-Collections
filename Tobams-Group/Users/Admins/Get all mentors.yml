@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/mentors"
+  url: "{{BASE}}/admin/mentors"
   auth: inherit
 
 settings:
@@ -17,18 +17,18 @@ settings:
 examples:
   - name: Success
     request:
-      url: "{{BASE}}/mentors"
+      url: "{{BASE}}/admin/mentors"
       method: GET
     response:
       status: 200
       statusText: OK
       headers:
         - name: date
-          value: Wed, 12 Aug 2026 19:25:55 GMT
+          value: Wed, 12 Aug 2026 19:30:24 GMT
         - name: content-type
           value: application/json; charset=utf-8
         - name: content-length
-          value: "790"
+          value: "1098"
         - name: connection
           value: keep-alive
         - name: access-control-allow-credentials
@@ -46,13 +46,13 @@ examples:
         - name: cross-origin-resource-policy
           value: same-origin
         - name: etag
-          value: W/"a4f-/OD9PZuSVy012K8bw5iR/iSEMmg"
+          value: W/"e84-K2StXU4gxmqiPGvm6rZ54gm4ZiE"
         - name: origin-agent-cluster
           value: ?1
         - name: referrer-policy
           value: no-referrer
         - name: rndr-id
-          value: a32a4f14-f102-45d3
+          value: 40c4103d-cc0a-47bc
         - name: server
           value: cloudflare
         - name: strict-transport-security
@@ -72,13 +72,13 @@ examples:
         - name: x-render-origin-server
           value: Render
         - name: x-request-id
-          value: 1786562754138-248n3qwfv
+          value: 1786563023667-zbkratuwe
         - name: x-xss-protection
           value: "0"
         - name: cf-cache-status
           value: DYNAMIC
         - name: cf-ray
-          value: a2a1de5afe2cfb99-AMS
+          value: a2a1e4f05adaa11d-AMS
         - name: alt-svc
           value: h3=":443"; ma=86400
       body:
@@ -86,10 +86,10 @@ examples:
         data: |-
           {
             "success": true,
-            "message": "Mentors retrieved successfully",
+            "message": "All mentors retrieved successfully",
             "data": {
-              "currentCount": 5,
-              "totalCount": 5,
+              "currentCount": 7,
+              "totalCount": 7,
               "usersObj": [
                 {
                   "_id": "69fdc999714f9aab6ea2d9ac",
@@ -115,8 +115,7 @@ examples:
                   "createdAt": "2026-05-08T11:31:37.485Z",
                   "updatedAt": "2026-07-11T09:52:52.522Z",
                   "yearsOfExperience": "3-5 years",
-                  "availability": [],
-                  "isApplied": false
+                  "availability": []
                 },
                 {
                   "_id": "69fdcb52714f9aab6ea2d9c7",
@@ -141,8 +140,7 @@ examples:
                   "createdAt": "2026-05-08T11:38:58.680Z",
                   "updatedAt": "2026-05-08T11:38:59.271Z",
                   "yearsOfExperience": "3-5 years",
-                  "availability": [],
-                  "isApplied": false
+                  "availability": []
                 },
                 {
                   "_id": "69fe1aa16118101464fd5485",
@@ -168,8 +166,35 @@ examples:
                   "createdAt": "2026-05-08T17:17:21.653Z",
                   "updatedAt": "2026-05-08T17:17:22.624Z",
                   "yearsOfExperience": "<3 years",
-                  "availability": [],
-                  "isApplied": false
+                  "availability": []
+                },
+                {
+                  "_id": "6a3dabcb7b242fe11c38a6bd",
+                  "title": "Product Development Specialist",
+                  "bio": "Experienced mentor with a background in product development, team collaboration, and guiding early-career professionals in technology.",
+                  "firstName": "Chinenye",
+                  "lastName": "Okafor",
+                  "email": "chinenye.okafor@example.com",
+                  "telephone": "+2348034567890",
+                  "location": {
+                    "country": "Nigeria",
+                    "city": "Abuja"
+                  },
+                  "photo": "",
+                  "profile": "Mentor",
+                  "skills": [
+                    "SEO",
+                    "Agile Methodologies",
+                    "Strategic Planning"
+                  ],
+                  "mentorshipType": [],
+                  "averageRating": 0,
+                  "companyName": "Nova Tech Consult",
+                  "status": "Approved",
+                  "createdAt": "2026-06-25T22:29:31.164Z",
+                  "updatedAt": "2026-06-25T23:47:57.654Z",
+                  "yearsOfExperience": "3-5 years",
+                  "availability": []
                 },
                 {
                   "_id": "6a3e620cdffede881bd0ec0e",
@@ -194,8 +219,7 @@ examples:
                   "createdAt": "2026-06-26T11:27:08.306Z",
                   "updatedAt": "2026-06-26T11:32:05.214Z",
                   "yearsOfExperience": "3-5 years",
-                  "availability": [],
-                  "isApplied": false
+                  "availability": []
                 },
                 {
                   "_id": "6a403d5739b378997c7d4d07",
@@ -223,8 +247,32 @@ examples:
                   "createdAt": "2026-06-27T21:15:03.226Z",
                   "updatedAt": "2026-06-27T22:04:13.141Z",
                   "yearsOfExperience": "3-5 years",
-                  "availability": [],
-                  "isApplied": false
+                  "availability": []
+                },
+                {
+                  "_id": "6a69e9b4947b15b0af0f2f76",
+                  "title": "Design",
+                  "firstName": "Emmanuella",
+                  "lastName": "Osawe",
+                  "email": "emmanuellaosawe17@gmail.com",
+                  "telephone": "+2349081859911",
+                  "location": {
+                    "country": "Nigeria",
+                    "city": "lagos"
+                  },
+                  "photo": "",
+                  "profile": "Mentor",
+                  "skills": [
+                    "Communication"
+                  ],
+                  "mentorshipType": [],
+                  "averageRating": 0,
+                  "companyName": "Tobams",
+                  "status": "Pending",
+                  "createdAt": "2026-07-29T11:53:24.862Z",
+                  "updatedAt": "2026-07-29T11:53:24.862Z",
+                  "yearsOfExperience": "3-5 years",
+                  "availability": []
                 }
               ]
             }
