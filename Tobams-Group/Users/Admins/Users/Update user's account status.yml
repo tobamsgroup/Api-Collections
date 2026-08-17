@@ -10,6 +10,12 @@ http:
     - name: userId
       value: "999"
       type: path
+  body:
+    type: json
+    data: |-
+      {
+        "accountStatus": "Suspended" // Active Inactive
+      }
   auth: inherit
 
 settings:
