@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/analytics/executive?key={{DIGEST_KEY}}&startDate=2026-07-01&endDate=2026-07-15&email=fawaz.abdganiyu@tobamsgroup.com"
+  url: "{{BASE}}/analytics/executive?key={{DIGEST_KEY}}&startDate=2026-07-01&endDate=2026-08-15&email=fawaz.abdganiyu@tobamsgroup.com"
   params:
     - name: key
       value: "{{DIGEST_KEY}}"
@@ -14,12 +14,17 @@ http:
       value: 2026-07-01
       type: query
     - name: endDate
-      value: 2026-07-15
+      value: 2026-08-15
       type: query
     - name: email
       value: fawaz.abdganiyu@tobamsgroup.com
       type: query
   auth: inherit
+
+runtime:
+  variables:
+    - name: DIGEST_KEY
+      value: iq1cwnme9er0ta1thtbltst7t3t9fiendcs8afva4cs3s0sa
 
 settings:
   encodeUrl: true
