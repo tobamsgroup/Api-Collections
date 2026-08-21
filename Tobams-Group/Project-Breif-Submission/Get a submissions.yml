@@ -1,0 +1,60 @@
+info:
+  name: Create-submission
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/project-briefs"
+  body:
+    type: json
+    data: |
+      {
+        "contactFirstName": "Omokorede",
+        "contactLastName": "Adeyeye",
+        "countryCode": "+234",
+        "phoneNumber": "08012345678",
+        "email": "omokorede.adeyeye@acmecorp.test",
+        "jobTitle": "Head of People",
+        "contactCountry": "Nigeria",
+
+        "organisationName": "Lex Corp",
+        "industry": "Technology",
+        "organisationWebsite": "https://lexcorp.test",
+        "organisationCountry": "Nigeria",
+        "cityState": "Lagos",
+        "organisationDescription": "Acme Corp builds internal tools for logistics companies.",
+
+        "projectCategory": "Leadership & Consulting",
+        "challengeType": "Leadership Consulting Challenge",
+        "projectTitle": "Improve new-hire onboarding",
+        "projectOrChallengeTypes": ["Industry Project", "Innovation Challenge"],
+        "projectSummary": "We want students to redesign our onboarding flow for new logistics coordinators.",
+        "businessChallenge": "New hires take 6 weeks to become productive; we suspect onboarding materials are the bottleneck.",
+        "projectBackground": "We've grown from 20 to 120 employees in 18 months and onboarding hasn't scaled with us.",
+        "supportingDocuments": [
+          { "name": "onboarding-current-state.pdf", "url": "https://example-bucket.s3.amazonaws.com/uploads/onboarding-current-state.pdf" }
+        ],
+
+        "informationResources": "We can share our current onboarding deck and new-hire survey results.",
+        "outcomeArea": "A redesigned onboarding journey with clear milestones for the first 90 days.",
+        "whyImportant": "Faster ramp-up directly reduces the cost of our hiring push this year.",
+        "constraints": "Must work within our existing HR tooling (BambooHR).",
+
+        "targetAudience": "New logistics coordinators and their team leads.",
+        "previousAttempts": "We tried a generic onboarding checklist last year; it wasn't followed consistently.",
+        "isRealBusinessNeed": "Yes",
+        "relatedSkills": ["Research", "Business Strategy", "UX Design"],
+
+        "hasSensitiveInfo": "Yes",
+        "sensitiveInfoTypes": ["Business Strategy or Internal Operations"],
+        "sensitiveInfoDescription": "Please don't share our internal attrition numbers outside the student team.",
+        "termsAccepted": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
