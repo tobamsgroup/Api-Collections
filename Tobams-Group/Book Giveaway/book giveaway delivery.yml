@@ -1,0 +1,54 @@
+info:
+  name: Submit Book Giveaway Delivery Details
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/book-giveaway/delivery/{{delivery_token}}"
+  body:
+    type: json
+    data: |-
+      {
+        "recipientFullAddress": "12 Allen Avenue, Ikeja",
+        "city": "Ikeja",
+        "stateOrProvince": "Lagos",
+        "country": "Nigeria",
+        "postalCode": "100001",
+        "landmark": "Near Ikeja City Mall",
+        "additionalDeliveryInformation": "Please call me before delivery."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Submit Delivery Details
+    request:
+      url: "{{BASE}}/book-giveaway/delivery/{{delivery_token}}"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "recipientFullAddress": "12 Allen Avenue, Ikeja",
+            "city": "Ikeja",
+            "stateOrProvince": "Lagos",
+            "country": "Nigeria",
+            "postalCode": "100001",
+            "landmark": "Near Ikeja City Mall",
+            "additionalDeliveryInformation": "Please call me before delivery."
+          }
+    response:
+      statusText: "200"
+      body:
+        type: json
+        data: |-
+          {
+            "status": "success",
+            "message": "Delivery details submitted successfully"
+          }
