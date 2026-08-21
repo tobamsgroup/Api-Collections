@@ -10,13 +10,13 @@ http:
     type: json
     data: |-
       {
-        "role": "", // Intern, Talent, Mentor, Organisation, Admin, or Super_Admin,
-        "firstName": "",
-        "lastName": "",
-        "email": "",
-        "telephone": "",
-        "password": "",
-        "privilege": [""] // Optional current admin privileges: 'SUPER', 'JOB POST MANAGEMENT', 'USER MANAGEMENT', 'CUSTOMER SERVICE', 'ASSESSMENT MANAGER', 'CONTENT MANAGEMENT'
+        "role": "Talent", // Intern, Talent, Mentor, Organisation, Admin, or Super_Admin,
+        "firstName": "Fawaz",
+        "lastName": "Abdganiyu",
+        "email": "fawaz.abdganiyu+addUserTest@tobamsgroup.com",
+        "telephone": "+2348179656740",
+        "password": "Password123!"
+      //   "privilege": [] // Optional current admin privileges: 'SUPER', 'JOB POST MANAGEMENT', 'USER MANAGEMENT', 'CUSTOMER SERVICE', 'ASSESSMENT MANAGER', 'CONTENT MANAGEMENT'
       }
   auth: inherit
 
@@ -25,3 +25,274 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Invalid privilege option
+    request:
+      url: "{{BASE}}/admin/add"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "role": "Talent", // Intern, Talent, Mentor, Organisation, Admin, or Super_Admin,
+            "firstName": "Fawaz",
+            "lastName": "Abdganiyu",
+            "email": "fawaz.abdganiyu+addUserTest@tobamsgroup.com",
+            "telephone": "+2348179656740",
+            "password": "Password123!"
+          //   "privilege": [""] // Optional current admin privileges: 'SUPER', 'JOB POST MANAGEMENT', 'USER MANAGEMENT', 'CUSTOMER SERVICE', 'ASSESSMENT MANAGER', 'CONTENT MANAGEMENT'
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1787331349336-25nukpdvt
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "221"
+        - name: etag
+          value: W/"dd-3+lt3Y6K6jr4FKJDUneaq3djYwc"
+        - name: date
+          value: Fri, 21 Aug 2026 16:55:49 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "privilege.0: Invalid option: expected one of \"SUPER\"|\"JOB POST MANAGEMENT\"|\"USER MANAGEMENT\"|\"CUSTOMER SERVICE\"|\"ASSESSMENT MANAGER\"|\"CONTENT MANAGEMENT\""
+          }
+  - name: Success
+    request:
+      url: "{{BASE}}/admin/add"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "role": "Talent", // Intern, Talent, Mentor, Organisation, Admin, or Super_Admin,
+            "firstName": "Fawaz",
+            "lastName": "Abdganiyu",
+            "email": "fawaz.abdganiyu+addUserTest@tobamsgroup.com",
+            "telephone": "+2348179656740",
+            "password": "Password123!"
+          //   "privilege": [] // Optional current admin privileges: 'SUPER', 'JOB POST MANAGEMENT', 'USER MANAGEMENT', 'CUSTOMER SERVICE', 'ASSESSMENT MANAGER', 'CONTENT MANAGEMENT'
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: date
+          value: Fri, 21 Aug 2026 18:07:21 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "692"
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"6bb-nzfAFC5Cbgk8fYmkOe/I8CW1I4A"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 1ab37e2c-0c6a-492a
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1787335638685-o9emq3hhc
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a2eb939c3a730ae0-AMS
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Talent added successfully",
+            "data": {
+              "userId": "6a8893d7ed356504e698fa63",
+              "isPeer": false,
+              "briefBio": "",
+              "portfolioLink": "",
+              "linkText": "",
+              "skills": [],
+              "interviewsScheduled": 0,
+              "yearsOfExperience": "",
+              "jobPreferences": {
+                "role": [],
+                "industryOfInterest": [],
+                "preferredLocation": [],
+                "workMode": [],
+                "workType": [],
+                "currencySymbol": "",
+                "salaryMinRange": 0,
+                "salaryMaxRange": 0
+              },
+              "mentorPreferences": {
+                "role": [],
+                "industryOfInterest": [],
+                "experienceLevel": [],
+                "mentorshipType": []
+              },
+              "savedCourses": [],
+              "savedMentors": [],
+              "savedMentorshipGroups": [],
+              "jobsAppliedTo": [],
+              "savedJobs": [],
+              "savedEvents": [],
+              "myApplicationsCount": 0,
+              "savedJobsCount": 0,
+              "interviewSchedulesCount": 0,
+              "ongoingJobsCount": 0,
+              "defaultResume": "",
+              "hasTakenAssessment": false,
+              "hasPassedAssessment": false,
+              "notificationSettings": {
+                "jobNotifications": {
+                  "newJobPosting": {
+                    "inApp": true,
+                    "email": true
+                  },
+                  "applicationStatusUpdate": {
+                    "inApp": true,
+                    "email": true
+                  }
+                },
+                "mentorshipNotifications": {
+                  "mentorshipApplicationUpdates": {
+                    "inApp": true,
+                    "email": true
+                  },
+                  "mentorshipAcceptance": {
+                    "inApp": true,
+                    "email": true
+                  }
+                },
+                "communityAndCommunication": {
+                  "messagesFromMentors": {
+                    "inApp": true,
+                    "email": true
+                  },
+                  "communityMessages": {
+                    "inApp": true,
+                    "email": false
+                  },
+                  "adminAnnouncements": {
+                    "inApp": true,
+                    "email": true
+                  }
+                },
+                "chatRoomNotifications": {
+                  "newChatMessages": {
+                    "inApp": true,
+                    "email": false
+                  },
+                  "mentionsInChat": {
+                    "inApp": true,
+                    "email": true
+                  },
+                  "groupChatActivity": {
+                    "inApp": true,
+                    "email": false
+                  },
+                  "fileSharing": {
+                    "inApp": true,
+                    "email": false
+                  }
+                },
+                "eventNotifications": {
+                  "upcomingEvents": {
+                    "inApp": true,
+                    "email": true
+                  },
+                  "eventReminders": {
+                    "inApp": true,
+                    "email": true
+                  }
+                }
+              },
+              "_id": "6a8893d7ed356504e698fa64",
+              "educations": [],
+              "workExperiences": [],
+              "certifications": [],
+              "resumes": [],
+              "createdAt": "2026-08-21T18:07:19.650Z",
+              "updatedAt": "2026-08-21T18:07:19.650Z"
+            }
+          }
