@@ -1,7 +1,7 @@
 info:
   name: Notification
   type: folder
-  seq: 28
+  seq: 31
 
 request:
   auth: inherit

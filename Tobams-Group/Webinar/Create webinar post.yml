@@ -1,0 +1,267 @@
+info:
+  name: Create webinar post
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/webinars"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "The Skills They Don't Teach, But Always Test",
+        "description": "Knowing your school work or technical job is great, but success in the real world also depends on how well you work with people. This session unpacks the unwritten rules of the workplace and equips you with the everyday communication and collaboration skills that classrooms rarely teach, but every workplace tests.",
+        "preview": {
+          "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1786545052682_Preview-pic-4.jpeg",
+          "description": "Many people miss out on good opportunities not because they lack skill, but because nobody taught them the unwritten rules of the workplace. This session teaches the everyday skills you need to speak clearly, handle difficult situations calmly, and work well with any team, so your talent gets seen and your growth doesn't stall on the things school never covered.",
+          "previewPoints": [
+            "How to explain big ideas in simple ways that leaders and managers easily understand",
+            "How to solve disagreements calmly without hurting your relationships with teammates.",
+            "How to build trust and work smoothly with people from different departments."
+          ]
+        },
+        "date": "2026-08-29",
+        "time": "4:00 - 5:00PM WAT",
+        "mode": "Virtual",
+        "duration": "1 hour",
+        "price": 0,
+        "registrationLink": "",
+        "heroImage": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1786545052682_Preview-pic-4.jpeg",
+      //   "sponsors": [
+      //     { "name": "Tobams Group x Access Bank", "logo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1784654958367_sponsor.jpeg" }
+      //   ],
+        "about": {
+          "header": "Prepare Yourself for the Real World of Work",
+          "description": "Many people miss out on good opportunities not because they lack skill, but because nobody taught them the unwritten rules of the workplace. This session teaches the everyday skills you need to speak clearly, handle difficult situations calmly, and work well with any team, so your talent gets seen and your growth doesn't stall on the things school never covered.",
+          "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1786545799016_Preview-pic-2.jpeg"
+        },
+        "whatYouWillLearn": {
+          "header": "Build the Everyday Skills That Set You Apart",
+          "description": "n this session, you will learn simple, practical ways to communicate better and stand out, whatever seat you're in:",
+          "learningPoints": [
+            "<b>Clear Communication:</b> How to explain big ideas in simple ways that leaders and managers easily understand.",
+            "<b>Handling Misunderstandings:</b> How to solve disagreements calmly without hurting your relationships with teammates.",
+            "<b>Working with Others:</b> How to build trust and work smoothly with people from different departments."
+          ]
+        },
+        "keyTopics": [
+          "Clear, confident workplace communication",
+          "Handling disagreements and difficult conversations",
+          "Building trust across teams and departments",
+          "Reading the unwritten rules of the workplace",
+          "Turning technical skill into real-world impact"
+        ],
+        "whoShouldAttend": [
+          "<b>Young Professionals:</b> Learn how to speak up and grow faster in your workplace.",
+          "<b>Students & Recent Graduates:</b> Get ready for the work world before you even apply for jobs.",
+          "<b>Tech Workers & Developers:</b> Combine your coding and technical skills with great communication.",
+          "<b>Team Leaders & Managers:</b> Learn how to guide your team with clear words and less friction."
+        ],
+        "speakers": [
+          {
+            "title": "Dr.",
+            "firstName": "Ona", // required
+            "lastName": "NewTon", // required
+            "position": "CEO",
+            "company": "Tobams Group",
+            "imageUrl": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1785788457132_Dr_Ona_Newton.png"
+          }
+        ], // default: []
+        "category": "Career Development",
+        "status": "upcoming", // default: upcoming
+      //   "partner": {
+      //     "name": "",
+      //     "collectsAccountHolder": true
+      //   }, // default: undefined
+        "hasCompetition": false // default: false
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Webinar Data
+    request:
+      url: "{{BASE}}/webinars"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "title": "Preparing Nigeria's Next Generation to Win in an AI-Powered World",
+            "description": "Discover the skills, opportunities and practical actions young Nigerians need to learn, work, innovate and lead confidently in an AI-powered future.",
+            "date": "2026-09-18T00:00:00.000Z",
+            "time": "4:00 - 6:00PM WAT",
+            "mode": "Virtual",
+            "duration": "2 hours",
+            "price": 0,
+            "registrationLink": "",
+            "heroImage": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1784655145103_webinar-image.png.jpeg",
+            "sponsors": [
+              { "name": "Tobams Group x Access Bank", "logo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1784654958367_sponsor.jpeg" }
+            ],
+            "about": {
+              "header": "Prepare Yourself for an AI-Powered Future",
+              "description": "Artificial Intelligence is changing how people learn, work, build businesses and solve everyday problems. To compete and create meaningful impact, Nigeria's next generation needs more than awareness of AI; they need the right skills, mindset and practical understanding to use it responsibly. This Access Bank x Tobams Group webinar brings together industry leaders, innovators and emerging talent to explore how young Nigerians can prepare for new career",
+              "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1784655192086_webinar-image2.jpeg"
+            },
+            "whatYouWillLearn": {
+              "header": "Build the Skills and Confidence to Thrive with AI",
+              "description": "Get practical insights to help you understand AI, recognise new opportunities and make informed decisions about your career, learning or business.",
+              "learningPoints": [
+          "Understand how AI is reshaping careers, industries and business opportunities.",
+          "Identify the skills needed to remain relevant in an AI-powered economy.",
+          "Explore practical ways to use AI for learning, productivity and innovation."
+              ]
+            },
+            "keyTopics": [
+              "Skills required in an AI-powered economy",
+              "AI and the future of work in Nigeria",
+              "AI for career and workforce readiness",
+              "Practical AI tools for learning and productivity",
+              "Building useful AI-powered solutions",
+              "Innovation and entrepreneurship with AI",
+              "Responsible and ethical use of AI",
+              "Opportunities for students and early-career professionals"
+            ],
+            "whoShouldAttend": [
+              "Business professionals",
+              "AI enthusiasts",
+              "Educators and researchers",
+              "Entrepreneurs and startup founders",
+              "Developers and technology professionals",
+              "Early-career professionals",
+              "NYSC members",
+              "Students and recent graduates"
+            ],
+            "speaker": "",
+            "category": "AI & Technology",
+            "status": "upcoming",
+            "applicationCount": 0
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1784655963514-zyjouqkj3
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "2655"
+        - name: etag
+          value: W/"a5f-i+kwi02CZAO0Nl3FFDNzCKzNTjs"
+        - name: date
+          value: Tue, 21 Jul 2026 17:46:03 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Webinar post created successfully",
+            "data": {
+              "title": "Preparing Nigeria's Next Generation to Win in an AI-Powered World",
+              "description": "Discover the skills, opportunities and practical actions young Nigerians need to learn, work, innovate and lead confidently in an AI-powered future.",
+              "date": "2026-09-18T00:00:00.000Z",
+              "time": "4:00 - 6:00PM WAT",
+              "mode": "Virtual",
+              "duration": "2 hours",
+              "price": 0,
+              "registrationLink": "",
+              "heroImage": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1784655145103_webinar-image.png.jpeg",
+              "sponsors": [
+                {
+                  "name": "Tobams Group x Access Bank",
+                  "logo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1784654958367_sponsor.jpeg"
+                }
+              ],
+              "about": {
+                "header": "Prepare Yourself for an AI-Powered Future",
+                "description": "Artificial Intelligence is changing how people learn, work, build businesses and solve everyday problems. To compete and create meaningful impact, Nigeria's next generation needs more than awareness of AI; they need the right skills, mindset and practical understanding to use it responsibly. This Access Bank x Tobams Group webinar brings together industry leaders, innovators and emerging talent to explore how young Nigerians can prepare for new career",
+                "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1784655192086_webinar-image2.jpeg"
+              },
+              "whatYouWillLearn": {
+                "header": "Build the Skills and Confidence to Thrive with AI",
+                "description": "Get practical insights to help you understand AI, recognise new opportunities and make informed decisions about your career, learning or business.",
+                "learningPoints": [
+                  "Understand how AI is reshaping careers, industries and business opportunities.",
+                  "Identify the skills needed to remain relevant in an AI-powered economy.",
+                  "Explore practical ways to use AI for learning, productivity and innovation."
+                ]
+              },
+              "keyTopics": [
+                "Skills required in an AI-powered economy",
+                "AI and the future of work in Nigeria",
+                "AI for career and workforce readiness",
+                "Practical AI tools for learning and productivity",
+                "Building useful AI-powered solutions",
+                "Innovation and entrepreneurship with AI",
+                "Responsible and ethical use of AI",
+                "Opportunities for students and early-career professionals"
+              ],
+              "whoShouldAttend": [
+                "Business professionals",
+                "AI enthusiasts",
+                "Educators and researchers",
+                "Entrepreneurs and startup founders",
+                "Developers and technology professionals",
+                "Early-career professionals",
+                "NYSC members",
+                "Students and recent graduates"
+              ],
+              "speakers": [
+                {
+                  
+                }
+              ],
+              "category": "AI & Technology",
+              "status": "upcoming",
+              "applicationCount": 0,
+              "_id": "6a5fb05bafb6fba76b5a8c53",
+              "createdAt": "2026-07-21T17:46:03.573Z",
+              "updatedAt": "2026-07-21T17:46:03.573Z"
+            }
+          }

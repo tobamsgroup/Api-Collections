@@ -12,9 +12,7 @@ http:
       {
           "period": "weekly" // 'daily' | 'weekly' | 'monthly'
       }
-  auth:
-    type: bearer
-    token: "{{org_access}}"
+  auth: inherit
 
 settings:
   encodeUrl: true

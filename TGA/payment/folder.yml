@@ -1,0 +1,9 @@
+info:
+  name: payment
+  type: folder
+  seq: 5
+
+request:
+  auth:
+    type: bearer
+    token: "{{access_token}}"

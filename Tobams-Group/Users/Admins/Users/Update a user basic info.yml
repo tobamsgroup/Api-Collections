@@ -1,0 +1,30 @@
+info:
+  name: Update a user basic info
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{BASE}}/admin/users/:userId"
+  params:
+    - name: userId
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "role": "", // Intern, Talent, Mentor, Organisation, Admin, or Super_Admin,
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "telephone": "",
+        "privilege": [""] // Optional current admin privileges: 'SUPER', 'JOB POST MANAGEMENT', 'USER MANAGEMENT', 'CUSTOMER SERVICE', 'ASSESSMENT MANAGER', 'CONTENT MANAGEMENT'
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

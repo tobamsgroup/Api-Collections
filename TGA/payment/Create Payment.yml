@@ -1,0 +1,70 @@
+info:
+  name: Create Payment
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/payments"
+  body:
+    type: json
+    data: |-
+      {
+        "courseId": "uuid"
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Creates a payment and enrolls the authenticated user into a course. If the user is already enrolled, 
+    updates `lastAccessedAt` and returns the existing enrollment.
+
+    **Auth:** Bearer token required.
+
+    **Body fields:**
+    | Field | Type | Required |
+    |-------|------|----------|
+    | courseId | string (UUID) | Yes |
+
+     **Success response — new payment and enrollment (201):**
+    ```json
+    {
+      "message": "Course Payment successful",
+      "data": {
+        "courseId": "uuid",
+        "enrollmentId": "uuid",
+        "paymentId": "uuid",
+        "paymentStatus": "COMPLETED",
+        "reference": "FREE-234d-nd34-44r5",
+        "transactionId": null,
+      }
+    }
+    ```
+
+    **Success response — already enrolled (200):**
+    ```json
+    {
+      "message": "Already enrolled",
+      "data": {
+        "id": "uuid",
+        "courseId": "uuid",
+        "enrolledAt": "2026-06-25T00:00:00.000Z"
+      }
+    }
+    ```
+
+    **Errors:**
+
+    - 401 Unauthorized
+    - 404 Course not found
+    - 400 No courseId provided 
+
+  type: text/markdown

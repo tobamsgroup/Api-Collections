@@ -8,7 +8,7 @@ http:
   url: "{{BASE}}/jobs"
   auth:
     type: bearer
-    token: "{{intern_access}}"
+    token: "{{admin_access}}"
 
 settings:
   encodeUrl: true
@@ -1255,4 +1255,1197 @@ examples:
                       }
                   ]
               }
+          }
+  - name: Success (As an admin)
+    request:
+      url: "{{BASE}}/jobs"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: date
+          value: Thu, 02 Jul 2026 11:37:58 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"c93d-ZDvIvjEpVojZeNn4gYSa24kMttQ"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 65311c5a-1e8d-4cff
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1782992276649-drc0qavux
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a14d5c7f79e6f658-LHR
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "All posted jobs retrieved successfully",
+            "data": {
+              "currentCount": 20,
+              "totalCount": 71,
+              "jobs": [
+                {
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "_id": "6779024e76e2ceead659295a",
+                  "companyName": "Tobams Group",
+                  "title": "Career Development Consultant",
+                  "jobDescription": "The Career Development Consultant will be responsible for designing, customizing, and delivering career development training aligned with the workshop's objectives. The consultant will play a key role in inspiring students, equipping them with practical tools, and providing insights into the future of work and personal branding. This position is ideal for professionals passionate about career coaching, employability skills, and student empowerment. The consultant will work closely with Tobams Group to ensure the program is engaging, relevant, and impactful.",
+                  "contractType": "Contract",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Responsibilities": [
+                        "Develop workshop content aligned with the objectives outlined Clients proposal.",
+                        "Customize sessions to suit the needs of Nigerian university students, incorporating local and global career trends.",
+                        "Create interactive materials, including case studies, exercises, and practical tools.",
+                        "Developing adaptability and resilience in dynamic job markets.",
+                        "Building a Personal Brand: Mastering networking and professional identity.",
+                        "Use innovative teaching techniques to ensure active student participation and retention of concepts.",
+                        "Share real-life examples, industry insights, and actionable strategies during the training sessions.",
+                        "Evaluation and Feedback: Assess students’ understanding and engagement through pre- and post-training evaluations.",
+                        "Provide a detailed report on the workshop's outcomes, including recommendations for future sessions.",
+                        "Stakeholder Collaboration: Collaborate with Tobams Group’s team to align content with organizational goals.",
+                        "Liaise with University representatives to ensure seamless program delivery."
+                      ]
+                    },
+                    {
+                      "Key Qualifications and Skills:": [
+                        "Bachelor's degree or Advanced degree, certifications in Career Development, Coaching, or Employability Training are an advantage.",
+                        "Minimum of 5 years of experience in career development, employability training, or a related field.",
+                        "Proven track record of delivering impactful workshops or training sessions, particularly for university students.",
+                        "Strong understanding of Nigerian labor market trends and global career development practices.",
+                        "Exceptional facilitation and presentation skills with the ability to engage diverse audiences.",
+                        "Expertise in topics such as adaptability, resilience, personal branding, and networking.",
+                        "Strong interpersonal and communication skills, with the ability to connect with students and inspire confidence.",
+                        "Ability to design and deliver training materials using various methodologies (e.g., case studies, role-playing, group discussions).",
+                        "Knowledge of digital tools and platforms for virtual or hybrid workshop delivery."
+                      ]
+                    },
+                    {
+                      "Desirable Attributes": [
+                        "Passionate about student empowerment and career development.",
+                        "Culturally aware, with the ability to relate training content to the Nigerian context.",
+                        "Innovative and creative thinker who can design engaging and memorable learning experiences.",
+                        "Strong organizational skills, with attention to detail and the ability to meet deadlines."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "Competitive remuneration based on experience and expertise.",
+                        "Opportunity to work with a dynamic team committed to transforming education and career development.",
+                        "Potential for long-term collaboration on future projects across Nigeria and beyond.",
+                        "A platform to impact the next generation of professionals and contribute to sustainable growth in the Nigerian education sector."
+                      ]
+                    },
+                    {
+                      "Application Process": [
+                        "Interested candidates should submit the following:",
+                        "A detailed CV highlighting relevant experience and achievements.",
+                        "A cover letter outlining why you are the ideal candidate for this role, including examples of past workshops or training sessions delivered.",
+                        "A sample training agenda or content (if available) demonstrating your expertise."
+                      ]
+                    },
+                    {
+                      "Equal Opportunity Statement": [
+                        "Tobams Group is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all consultants and team members.",
+                        "We look forward to receiving your application and exploring how your expertise can contribute to the success of this transformative workshop!"
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "createdAt": "2025-01-04T09:41:34.800Z",
+                  "applicationCount": 18,
+                  "isApplied": false
+                },
+                {
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "_id": "67af2ae8cd5ffcbe9f474fad",
+                  "companyName": "Tobams Group",
+                  "title": "Social Media Management Intern",
+                  "jobDescription": "Tobams Group is seeking a creative and enthusiastic Social Media Management Intern to join our team. This internship offers an exciting opportunity for individuals passionate about digital marketing and social media to gain hands-on experience in managing and growing our online presence. The successful candidate will work closely with our marketing team to develop and execute engaging social media strategies that align with Tobams Group's brand identity and business objectives.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Responsibilities": [
+                        "Assist in developing and implementing social media strategies to increase brand awareness, engagement, and online visibility across various platforms (e.g., Facebook, Instagram, Twitter, LinkedIn).",
+                        "Create and curate high-quality content for social media posts, including images, videos, infographics, and written copy, that resonates with our target audience.",
+                        "Schedule and publish social media content using social media management tools (e.g., Hootsuite, Buffer) to ensure consistent and timely posting.",
+                        "Monitor social media channels for comments, messages, and mentions, and engage with our audience in a timely and professional manner.",
+                        "Analyze social media metrics and performance data to track key performance indicators (KPIs) and identify trends, insights, and opportunities for optimization.",
+                        "Collaborate with internal teams to develop social media campaigns and promotions that support marketing initiatives, product launches, events, and other company initiatives.",
+                        "Stay updated on industry trends, best practices, and emerging social media platforms to continually enhance Tobams Group's social media presence and strategy."
+                      ]
+                    },
+                    {
+                      "Qualifications and Skills:": [
+                        "Strong passion for social media marketing and digital content creation, with a creative mindset and an eye for detail.",
+                        "Excellent written and verbal communication skills, with the ability to craft compelling and engaging content for social media platforms.",
+                        "Proficiency in using social media platforms (e.g., Facebook, Instagram, Twitter, LinkedIn) and social media management tools.",
+                        "Basic knowledge of social media analytics and metrics, with the ability to interpret data and derive actionable insights.",
+                        "Prior experience managing social media accounts (personal or professional) and creating content for social media is preferred but not required.",
+                        "Ability to work independently and collaboratively in a fast-paced environment, with strong organizational and time management skills.",
+                        "A positive attitude, eagerness to learn, and willingness to take on new challenges."
+                      ]
+                    },
+                    {
+                      "Benefits:": [
+                        "Hands-on experience in social media management and digital marketing within a supportive and collaborative team environment.",
+                        "Opportunity to work on diverse projects and gain exposure to various industries.",
+                        "Mentorship from experienced professionals in the field of digital marketing and social media.",
+                        "Networking opportunities with industry experts and potential for future career advancement within Tobams Group."
+                      ]
+                    }
+                  ],
+                  "isCoverLetterRequired": false,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "createdAt": "2025-02-17T15:31:14.169Z",
+                  "applicationCount": 258,
+                  "isApplied": false
+                },
+                {
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "_id": "67e29d10aa2e0899f4399080",
+                  "companyName": "Recycled Learning",
+                  "title": "Gamification Specialist – Educational Interactive Learning",
+                  "jobDescription": "We are an international education innovation company creating the future of how children learn vital life and leadership skills. Our Recycled Learning platform teaches Leadership, Entrepreneurship, Sustainability, Financial Literacy, and Strategy to children aged 7–14 using AI, animation, and gamified experiences.",
+                  "contractType": "Full-time",
+                  "location": "Remote (Global) | Hybrid options available in select regions",
+                  "region": [
+                    "Global"
+                  ],
+                  "jobData": [
+                    {
+                      "Position Overview": [
+                        "As a Gamification Specialist, you'll work alongside animators, developers, educators, and UX designers to build game-based learning mechanics that motivate and reward students. Your mission is to make learning feel like an adventure—where students earn points, level up, unlock badges, and grow as global citizens.",
+                        "You will design game logic and progression paths, implement feedback loops, and help us use gamification to boost engagement, retention, and learning outcomes."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities:": [
+                        "Design and implement gamification systems (points, levels, leaderboards, badges, rewards, missions) across all subjects",
+                        "Collaborate with UX/UI, education, and animation teams to integrate game mechanics into learning content",
+                        "Create engaging progression models for students aged 7–14, ensuring that achievements align with educational objectives",
+                        "Develop game balancing strategies that maintain challenge, fairness, and motivation",
+                        "Build positive reinforcement loops using game psychology principles to support behavior and learning habits",
+                        "Work with developers to integrate gamification systems into the LMS (Unity3D, Phaser.js, or WebGL)",
+                        "Design gamified feedback messages for students based on performance",
+                        "Evaluate and iterate systems based on user analytics, feedback, and engagement rates",
+                        "Contribute to brainstorming sessions on how to make each subject more game-like and rewarding"
+                      ]
+                    },
+                    {
+                      "Essential Skills & Experience": [
+                        "Minimum 3 years of experience in gamification design, game development, or educational gaming",
+                        "Strong portfolio demonstrating implemented gamification systems (games, apps, educational platforms, or interactive media)",
+                        "Proven expertise in game design thinking, especially in progression systems, reward mechanics, and user motivation",
+                        "Experience with at least one game development engine (Unity3D, Phaser.js, or similar)",
+                        "Solid understanding of game loops, feedback systems, leveling, and player journey mapping",
+                        "Ability to design for young users (ages 7–14) with age-appropriate themes and difficulty curves",
+                        "Collaborative team player with excellent communication and organizational skills",
+                        "Ability to translate educational content into playful experiences that still meet pedagogical goals"
+                      ]
+                    },
+                    {
+                      "Desirable Skills": [
+                        "Experience with AI-driven or adaptive learning platforms",
+                        "Familiarity with accessibility and inclusive design in game mechanics",
+                        "Background or strong interest in education, instructional design, or psychology",
+                        "Experience working with multi-cultural or multilingual game design frameworks",
+                        "Ability to analyze user data to improve and iterate on gameplay mechanics"
+                      ]
+                    },
+                    {
+                      "Tools We Use": [
+                        "Game Engines: Unity3D, Phaser.js, Construct, Godot",
+                        "Design & Wireframing: Figma, Adobe XD",
+                        "Animation Integration: Spine2D, Lottie, WebGL",
+                        "Project Collaboration: Notion, Trello, GitHub",
+                        "Communication: Slack, Zoom, Google Workspace",
+                        "Data Analytics: Google Analytics, custom LMS tracking tools"
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "Be part of a globally transformative mission to educate children with powerful life skills",
+                        "Creative freedom to design gamification systems from the ground up",
+                        "Work in a collaborative, international team of creatives, educators, and technologists",
+                        "Flexible working hours and remote work opportunities",
+                        "Opportunities for growth, leadership, and creative input on global education products"
+                      ]
+                    },
+                    {
+                      "How To Apply": [
+                        "Please submit your resume/CV and A link to your animation portfolio (Vimeo, Behance, or personal website)",
+                        "A short note describing why you believe gamification can transform children’s learning.\n"
+                      ]
+                    }
+                  ],
+                  "extraText": "To deliver powerful, engaging lessons that inspire learning through play, we're building an AI-powered, gamified Learning Management System (LMS) and need an expert Gamification Specialist to lead the design and implementation of our scoring, achievements, rewards, and motivation systems.",
+                  "isCoverLetterRequired": true,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "createdAt": "2025-03-25T12:09:52.222Z",
+                  "neededInterest": true,
+                  "applicationCount": 9,
+                  "isApplied": false
+                },
+                {
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "_id": "67e29f17aa2e0899f439908c",
+                  "companyName": "Recycled Learning",
+                  "title": "2d and 3d Animator – Educational Interactive Learning",
+                  "jobDescription": "We are a global educational innovation company transforming the way children learn essential 21st-century subjects like Leadership, Entrepreneurship, Sustainability, Financial Literacy, and Strategy. Our flagship initiative, Recycled Learning, combines AI, interactive content, and gamification to deliver engaging educational experiences to children aged 7–14.",
+                  "contractType": "Full-time",
+                  "location": "Remote (Global) | Hybrid options available in select regions",
+                  "region": [
+                    "Global"
+                  ],
+                  "jobData": [
+                    {
+                      "Position Overview": [
+                        "As a 2D/3D Animator, you will be responsible for developing visually engaging and pedagogically rich animated scenes, characters, and storytelling components that explain complex educational topics to young learners in fun, memorable ways. You'll collaborate with educators, content developers, UX designers, and developers to ensure every animation supports a specific learning outcome.",
+                        "You will create content that makes students feel like they're on an adventure—learning about leadership through storytelling, exploring financial concepts through animated simulations, or discovering sustainability through virtual field trips."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities:": [
+                        "Create high-quality 2D and 3D animations aligned with our educational content for ages 7–14",
+                        "Develop animated storytelling modules that explain lesson concepts (based on provided scripts or teacher manuals)",
+                        "Design characters, scenes, environments, and interactive assets suitable for use in web and mobile applications",
+                        "Collaborate with educators and illustrators to transform static content into motion using platforms like Adobe Animate or Blender",
+                        "Work closely with developers to integrate animations into the LMS, ensuring performance and cross-device compatibility",
+                        "Animate educational simulations, story-driven explainer videos, and character interactions",
+                        "Apply user-centered design thinking to adapt visuals for different age groups, learning styles, and accessibility needs",
+                        "Ensure that all animations are appropriate, inclusive, and culturally sensitive, especially for a global audience",
+                        "Optimize animations for loading speed and interactivity, especially for low-bandwidth environments",
+                        "Contribute to creative brainstorming sessions on how to turn learning objectives into visual stories"
+                      ]
+                    },
+                    {
+                      "Essential Skills & Experience": [
+                        "Proven experience in 2D and 3D animation production for educational content, games, explainer videos, or children's media",
+                        "Strong portfolio demonstrating ability to create engaging, character-driven animations",
+                        "Proficiency in at least two of the following animation tools: Adobe Animate (or Adobe After Effects), Blender, Spine 2D",
+                        "Strong understanding of storyboarding, timing, transitions, keyframing, rigging, and character animation",
+                        "Ability to interpret educational scripts and translate them into engaging visuals",
+                        "Experience working with developers and UI/UX teams to integrate animations into digital platforms",
+                        "Excellent attention to detail, creative problem-solving, and communication skills",
+                        "Ability to manage time and prioritize tasks across multiple animation projects"
+                      ]
+                    },
+                    {
+                      "Desirable Skills": [
+                        "Experience working on children's educational content or with EdTech startups",
+                        "Familiarity with Unity 3D, WebGL, or interactive HTML5 animations",
+                        "Experience in creating motion graphics with voiceover timing and syncing",
+                        "Understanding of accessibility standards for animated content",
+                        "Interest or background in education, storytelling, game design, or instructional design"
+                      ]
+                    },
+                    {
+                      "Tools We Use": [
+                        "Animation & Design: Adobe Animate, Blender, Spine2D, Figma, Illustrator",
+                        "Development Collaboration: Notion, Trello, GitHub",
+                        "Communication: Slack, Google Workspace, Zoom",
+                        "Learning Systems: Moodle (LMS), Custom AI-driven LMS under development"
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "Work on a globally impactful project that redefines how children learn critical life skills",
+                        "Flexible working hours and remote collaboration with a diverse, international team",
+                        "Creative freedom to shape the visual style of a pioneering educational platform",
+                        "Access to ongoing training, upskilling opportunities, and expert collaborators",
+                        "A mission-driven work culture that values innovation, inclusion, and imagination"
+                      ]
+                    },
+                    {
+                      "How To Apply": [
+                        "Please submit your resume/CV and A link to your animation portfolio (Vimeo, Behance, or personal website)",
+                        "A short paragraph describing why you're passionate about using animation to make learning magical for kids."
+                      ]
+                    }
+                  ],
+                  "extraText": "We are currently building a world-class AI-powered Learning Management System (LMS), and we're seeking a highly creative and detail-oriented 2D/3D Animator to bring our lessons to life through storytelling, motion graphics, and animated scenes.",
+                  "isCoverLetterRequired": true,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "createdAt": "2025-03-25T12:18:31.038Z",
+                  "neededInterest": true,
+                  "applicationCount": 29,
+                  "isApplied": false
+                },
+                {
+                  "visibility": "Interns",
+                  "_id": "6837261ac04303ad82747d7b",
+                  "companyName": "Tobams Group",
+                  "title": "Junior Business Operations Manager",
+                  "jobDescription": "Tobams Group is a leading consultancy focused on transforming training, development, and education in entrepreneurship, career, and talent development. Our flagship initiative, Recycled Learning, is an innovative learning management system (LMS) for kids, incorporating books, digital platforms, and AI-driven learning solutions. We are actively engaging community governments, schools, universities, and corporations to adopt Recycled Learning as a sustainable education solution. Our mission is to bridge educational gaps, enhance learning experiences, and create opportunities for young learners through a technology-driven approach.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Role Summary": [
+                        "As a Junior Business Operations Manager, you will support the strategic and operational execution of various initiatives across the group, particularly in international expansion, product development, project coordination, and business process improvement. You’ll work closely with the Head of Business Operations and other key stakeholders to ensure seamless delivery of key projects and operations."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities:": []
+                    },
+                    {
+                      "Operations & Administrative Support": [
+                        "Assist in day-to-day operations including planning, documentation, and reporting.",
+                        "Help track progress against internal goals and KPIs.",
+                        "Maintain up-to-date records and internal documentation (strategy decks, feasibility reports, SOPs).",
+                        "Provide administrative support for cross-functional teams and leadership."
+                      ]
+                    },
+                    {
+                      "International Product Expansion & Launch Support": [
+                        "Assist with coordination of product launch activities in the US, UK, and European markets.",
+                        "Conduct and compile market research, compliance requirements, and fulfillment strategies.",
+                        "Support the setup and configuration of platforms for international launches (e.g., Amazon).",
+                        "Help document regional expansion strategies and feasibility studies."
+                      ]
+                    },
+                    {
+                      "Strategy & Project Coordination": [
+                        "Support the development and review of strategic documents and growth plans.",
+                        "Collaborate with various departments to coordinate timelines and deliverables for new projects.",
+                        "Track execution of business development activities and expansion milestones."
+                      ]
+                    },
+                    {
+                      "Talent & Team Coordination": [
+                        "Coordinate intern onboarding, performance tracking, and exit documentation.",
+                        "Support communication and collaboration across project teams."
+                      ]
+                    },
+                    {
+                      "Skills & Qualifications": [
+                        "1–3 years experience in operations, admin, or project support roles.",
+                        "Strong organizational and multitasking skills.",
+                        "Excellent written and verbal communication.",
+                        "Familiarity with business tools (Google Workspace, Trello, Notion, Excel).",
+                        "Ability to conduct and present basic research and strategic documentation."
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "applicationCount": 210,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibleTo": "All",
+                  "createdAt": "2025-05-28T15:04:58.194Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "68a8d1237d811edda3bfa4ff",
+                  "companyName": "Tobams Group",
+                  "title": "Associate Backend Developer",
+                  "jobDescription": "Tobams Group is a forward-thinking company committed to delivering innovative digital solutions across multiple sectors. We build scalable platforms, AI-powered applications, and gamified user experiences that empower businesses and individuals to thrive in today’s fast-paced digital economy. We are looking for a Backend Developer to join our growing engineering team. In this role, you will design, develop, and maintain robust backend services and APIs that power Tobamsgroup’s web applications. You’ll collaborate with product, design, and AI/ML teams to deliver high-quality, data-driven software solutions.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Responsibilities": [
+                        "Design, build, and maintain scalable backend services and APIs for Tobamsgroup products.",
+                        "Collaborate with AI/ML engineers to integrate machine learning models into production environments.",
+                        "Implement and support gamification features (progress tracking, leaderboards, reward systems, badges, challenges) through backend logic and APIs.",
+                        "Work closely with frontend developers, product managers, and designers to deliver seamless user experiences.",
+                        "Maintain and optimize databases (SQL/NoSQL) for performance, scalability, and reliability.",
+                        "Ensure code quality by writing clean, testable, and maintainable solutions.",
+                        "Monitor, debug, and improve application performance, reliability, and security.",
+                        "Participate in code reviews, architecture discussions, and process improvements."
+                      ]
+                    },
+                    {
+                      "Required Qualifications": [
+                        "Bachelor’s degree in Computer Science, Software Engineering, or related field (or equivalent experience).",
+                        "Strong programming skills in TypeScript and JavaScript.",
+                        "Strong proficiency in Node.js (NestJS/Express.js) or similar backend frameworks.",
+                        "Solid understanding of RESTful APIs and microservices architecture.",
+                        "Proven experience working on AI/ML model integration (e.g., exposing models via APIs, handling inference at scale).",
+                        "Proven experience building or supporting gamification features (e.g., points systems, leaderboards, challenges, rewards).",
+                        "Experience with databases (MongoDB, PostgreSQL, or MySQL).",
+                        "Familiarity with containerization (Docker, Kubernetes) and deployment on cloud platforms (AWS, GCP, or Azure).",
+                        "Understanding of authentication/authorization protocols (JWT, OAuth2).",
+                        "Experience with CI/CD pipelines and version control (Git).",
+                        "Strong problem-solving, debugging, and analytical skills.",
+                        "Excellent communication skills (technical documentation & stakeholder reporting).",
+                        "Adaptability and ability to thrive in a fast-paced, evolving environment.",
+                        "Humble, hardworking, and ambitious mindset."
+                      ]
+                    },
+                    {
+                      "Nice-to-Have Skills": [
+                        "Knowledge of Python.",
+                        "Experience with message queues (RabbitMQ, Kafka).",
+                        "Exposure to DevOps practices and infrastructure as code (Terraform).",
+                        "Familiarity with event-driven systems and webhook handling.",
+                        "Experience with AI/ML integration and MLOps practices."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "Competitive salary package.",
+                        "Opportunity to work on challenging and impactful projects and AI solutions.",
+                        "A collaborative and innovative work environment.",
+                        "Professional growth and career development opportunities.",
+                        "Flexible work arrangements (remote)."
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "applicationCount": 49,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "createdAt": "2025-08-22T20:20:51.145Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "68fa11a13901b7b11e3e38d4",
+                  "companyName": "Tobams Group",
+                  "title": "Associate Social Media Manager",
+                  "jobDescription": "We are seeking a creative, strategic, and proactive Associate Social Media Manager to join our dynamic team. In this role, you will manage our digital presence across multiple platforms, craft engaging multimedia content, and help shape the brand's storytelling voice. You will collaborate closely with internal teams to execute impactful campaigns that drive engagement, strengthen brand identity, and expand our global audience. This is a fully remote role suited for a self-motivated professional who thrives in a fast-paced, creative, and collaborative environment.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Required Skills and Experience": [
+                        "1–3 years of hands-on experience in social media management, content creation, or digital marketing.",
+                        "Proficiency in video editing (Premiere Pro, CapCut).",
+                        "Proficiency in graphic design (Canva, Adobe Creative Suite).",
+                        "Familiarity with AI-based tools for content optimization.",
+                        "A strong eye for aesthetics, storytelling, and audience engagement.",
+                        "Exceptional written and verbal communication skills.",
+                        "Ability to manage multiple projects simultaneously and meet deadlines in a remote work environment.",
+                        "Independent, innovative, and results-driven mindset.",
+                        "Passion for staying ahead of digital and creative trends."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities": [
+                        "Develop, plan, and manage compelling content across all social platforms — including Instagram, LinkedIn, TikTok, YouTube, and X (Twitter).",
+                        "Create, edit, and produce high-quality multimedia content (short-form videos, graphics, and reels).",
+                        "Use tools such as Adobe Premiere Pro, CapCut, Canva, and AI-powered editing tools.",
+                        "Foster authentic online relationships and respond to comments, messages, and conversations that align with the brand's tone and values.",
+                        "Identify emerging social media trends and monitor competitors.",
+                        "Translate insights into actionable growth strategies.",
+                        "Track, analyze, and report on key performance metrics to evaluate content effectiveness and engagement.",
+                        "Work closely with the Marketing, Design, and Product teams to ensure social content aligns with broader campaign goals and organizational strategy.",
+                        "Bring the brand's vision to life through thoughtful storytelling and apply visual creativity while maintaining a consistent voice across all digital touchpoints."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "A collaborative, global, and innovation-driven team environment.",
+                        "Opportunities for growth, learning, and creative experimentation.",
+                        "Flexible remote working arrangements.",
+                        "The chance to shape and elevate a fast-growing digital brand.",
+                        "Professional development opportunities in digital marketing and content strategy."
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "applicationCount": 57,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "createdAt": "2025-10-16T17:00:00.000Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "68fa14683901b7b11e3e38d5",
+                  "companyName": "Tobams Group",
+                  "title": "Chief Technology Officer - CTO",
+                  "jobDescription": "Tobams Group is a global innovation and talent-development company dedicated to transforming how people learn, grow, and connect through AI-driven education, sustainability, and digital empowerment. The CTO will serve as the architect and innovation leader for all Tobams Group's technology initiatives. This role demands a bold, forward-thinking leader who can translate the company's ambitious vision into scalable, world-class digital solutions. You will drive AI strategy, technology architecture, platform scalability, and innovation culture across multiple business units - including Recycled Learning, Rare Eat, and other global projects. The ideal candidate will combine deep technical expertise with strategic leadership, a passion for AI in education, and the ability to build and manage high-performing global teams.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Technology Vision & Leadership": [
+                        "Define and execute Tobams Group's overall technology roadmap across AI, EdTech, sustainability, and data-driven learning ecosystems.",
+                        "Build the long-term technology strategy that aligns with the company's mission to democratize access to quality learning globally.",
+                        "Serve as the principal advisor to the CEO and executive team on emerging technologies, AI ethics, scalability, and innovation priorities.",
+                        "Foster a culture of innovation, experimentation, and excellence within the technology and product teams."
+                      ]
+                    },
+                    {
+                      "Product & Platform Development": [
+                        "Oversee the architecture, design, and deployment of AI-powered platforms, including Recycled Learning adaptive learning system, Recycled Learning for Kids (AI-augmented learning platform), Tobams Group dashboards and analytics tools, and Global Teacher Learning Management System (LMS).",
+                        "Ensure all systems are scalable, secure, and data-driven, supporting millions of users globally.",
+                        "Lead the integration of personalized learning algorithms, gamified experiences, and adaptive assessment engines.",
+                        "Collaborate with Product Design & Learning Experience teams to create intuitive user interfaces and immersive learning journeys."
+                      ]
+                    },
+                    {
+                      "AI, Data, and Automation": [
+                        "Drive the company's AI strategy, including the use of machine learning, NLP, computer vision, and predictive analytics in learning and talent assessment.",
+                        "Oversee the development of AI recommendation systems for content, mentorship, and skills-based learning.",
+                        "Lead the design of data governance frameworks, learning analytics dashboards, and AI model evaluation systems.",
+                        "Explore partnerships with leading AI and cloud technology providers to accelerate innovation."
+                      ]
+                    },
+                    {
+                      "Technical Architecture & Infrastructure": [
+                        "Build and maintain a robust, modular, and scalable infrastructure to support multi-tenant LMS and platform solutions.",
+                        "Champion cloud-native architecture using AWS, GCP, or Azure with CI/CD pipelines and containerized deployments (Docker/Kubernetes).",
+                        "Ensure systems meet high standards of security, compliance, and data protection (GDPR, COPPA, etc.).",
+                        "Introduce DevOps and MLOps best practices for rapid iteration and deployment."
+                      ]
+                    },
+                    {
+                      "Team Building & Leadership": [
+                        "Recruit, mentor, and scale a world-class team of engineers, AI specialists, data scientists, and DevOps professionals.",
+                        "Lead cross-functional collaboration with Product Design, Learning Experience, and Business Strategy teams.",
+                        "Establish a strong performance culture built on transparency, accountability, and creative problem-solving."
+                      ]
+                    },
+                    {
+                      "Partnerships & Innovation Ecosystem": [
+                        "Forge and manage strategic partnerships with AI labs, EdTech organizations, universities, and industry bodies.",
+                        "Represent Tobams Group at conferences, innovation summits, and investor meetings as a technology thought leader.",
+                        "Contribute to product roadmaps and fundraising discussions by providing technical insights and scalability projections."
+                      ]
+                    },
+                    {
+                      "Required Experience & Skills": [
+                        "10+ years of experience in technology leadership roles, preferably in EdTech, AI, SaaS, or platform-based businesses.",
+                        "Proven record of building and scaling AI-driven learning or data platforms from concept to global deployment.",
+                        "Deep expertise in machine learning, natural language processing, and adaptive systems.",
+                        "Strong technical skills in Python, Node.js, React, cloud services (AWS/GCP/Azure), and data pipeline architecture.",
+                        "Experience integrating LMS/LXP technologies, APIs, and analytics frameworks (xAPI, SCORM, or LTI).",
+                        "Understanding of AI ethics, data security, and educational technology compliance standards.",
+                        "Exceptional leadership, communication, and stakeholder management skills.",
+                        "Entrepreneurial mindset, capable of working across strategy, technology, and business development."
+                      ]
+                    },
+                    {
+                      "Preferred Qualifications": [
+                        "Master's or PhD in Computer Science, AI, Data Science, or Educational Technology.",
+                        "Experience leading technology in rapid-growth startups or innovation-driven global organizations.",
+                        "Proven ability to manage multi-country engineering and product teams.",
+                        "Prior involvement in AI-EdTech or adaptive learning product development is highly desirable."
+                      ]
+                    },
+                    {
+                      "Personal Attributes": [
+                        "Visionary with the ability to think big while executing meticulously.",
+                        "Passionate about using technology to create equitable, sustainable access to learning.",
+                        "Collaborative and adaptable, thriving in a global, multicultural team.",
+                        "Strategic thinker who can balance innovation with operational excellence.",
+                        "Entrepreneurial spirit with a readiness to grow into a Co-Founder capacity as the company scales."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "Lead the global technology transformation of one of the most innovative education and sustainability ecosystems.",
+                        "Shape AI-driven learning systems that impact millions of learners across continents.",
+                        "Collaborate with visionary leaders, educators, and technologists who believe in sustainable change through innovation.",
+                        "Build and scale platforms that redefine how talent is discovered, developed, and empowered.",
+                        "Competitive compensation, equity options, and a potential Co-Founder trajectory for outstanding performance and commitment."
+                      ]
+                    }
+                  ],
+                  "extraText": "Reports To: Chief Executive Officer (CEO). Department: Technology & Innovation. Future Potential: This role has the potential to evolve into a Co-Founder position for the right candidate, as Tobams Group continues to scale globally.",
+                  "applicationCount": 9,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "Permanent",
+                  "status": "Published",
+                  "visibility": "Public",
+                  "createdAt": "2025-10-23T00:00:00.000Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "69145d3186e2bdfb100d2f55",
+                  "companyName": "Tobams Group",
+                  "title": "Associate Social Media Manager",
+                  "jobDescription": "We are seeking a creative, strategic, and proactive Associate Social Media Manager to join our dynamic team. In this role, you will manage our digital presence across multiple platforms, craft engaging multimedia content, and help shape the brand's storytelling voice. You will collaborate closely with internal teams to execute impactful campaigns that drive engagement, strengthen brand identity, and expand our global audience. This is a fully remote role suited for a self-motivated professional who thrives in a fast-paced, creative, and collaborative environment.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Required Skills and Experience": [
+                        "1–3 years of hands-on experience in social media management, content creation, or digital marketing.",
+                        "Proficiency in video editing (Premiere Pro, CapCut).",
+                        "Proficiency in graphic design (Canva, Adobe Creative Suite).",
+                        "Familiarity with AI-based tools for content optimization.",
+                        "A strong eye for aesthetics, storytelling, and audience engagement.",
+                        "Exceptional written and verbal communication skills.",
+                        "Ability to manage multiple projects simultaneously and meet deadlines in a remote work environment.",
+                        "Independent, innovative, and results-driven mindset.",
+                        "Passion for staying ahead of digital and creative trends."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities": [
+                        "Develop, plan, and manage compelling content across all social platforms — including Instagram, LinkedIn, TikTok, YouTube, and X (Twitter).",
+                        "Create, edit, and produce high-quality multimedia content (short-form videos, graphics, and reels).",
+                        "Use tools such as Adobe Premiere Pro, CapCut, Canva, and AI-powered editing tools.",
+                        "Foster authentic online relationships and respond to comments, messages, and conversations that align with the brand's tone and values.",
+                        "Identify emerging social media trends and monitor competitors.",
+                        "Translate insights into actionable growth strategies.",
+                        "Track, analyze, and report on key performance metrics to evaluate content effectiveness and engagement.",
+                        "Work closely with the Marketing, Design, and Product teams to ensure social content aligns with broader campaign goals and organizational strategy.",
+                        "Bring the brand's vision to life through thoughtful storytelling and apply visual creativity while maintaining a consistent voice across all digital touchpoints."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "A collaborative, global, and innovation-driven team environment.",
+                        "Opportunities for growth, learning, and creative experimentation.",
+                        "Flexible remote working arrangements.",
+                        "The chance to shape and elevate a fast-growing digital brand.",
+                        "Professional development opportunities in digital marketing and content strategy."
+                      ]
+                    }
+                  ],
+                  "extraText": "",
+                  "applicationCount": 41,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "createdAt": "2025-11-12T11:00:00.000Z",
+                  "isApplied": false
+                },
+                {
+                  "visibility": "Interns",
+                  "_id": "6965fdc401bf490134411805",
+                  "companyName": "Tobams Group",
+                  "title": "Associate Social Media Manager",
+                  "jobDescription": "We are seeking a creative, strategic, and proactive Associate Social Media Manager to join our dynamic team. In this role, you will manage our digital presence across multiple platforms, craft engaging multimedia content, and help shape the brand’s storytelling voice. You will collaborate closely with internal teams to execute impactful campaigns that drive engagement, strengthen brand identity, and expand our global audience. This is a fully remote role suited for a self-motivated professional who thrives in a fast-paced, creative, and collaborative environment.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Required Skills and Experience": [
+                        "1–3 years of hands-on experience in social media management, content creation, or digital marketing.",
+                        "Proficiency in video editing tools such as Adobe Premiere Pro and CapCut.",
+                        "Proficiency in graphic design tools including Canva and Adobe Creative Suite.",
+                        "Familiarity with AI-based tools for content optimization.",
+                        "Strong eye for aesthetics, storytelling, and audience engagement.",
+                        "Exceptional written and verbal communication skills.",
+                        "Ability to manage multiple projects simultaneously and meet deadlines in a remote work environment.",
+                        "Independent, innovative, and results-driven mindset.",
+                        "Passion for staying ahead of digital and creative trends."
+                      ]
+                    },
+                    {
+                      "Key Responsibilities": [
+                        "Develop, plan, and manage compelling content across all social platforms including Instagram, LinkedIn, TikTok, YouTube, and X (Twitter).",
+                        "Create, edit, and produce high-quality multimedia content such as short-form videos, graphics, and reels.",
+                        "Utilize tools such as Adobe Premiere Pro, CapCut, Canva, and AI-powered editing tools.",
+                        "Foster authentic online relationships and engage with the community.",
+                        "Respond to comments, messages, and conversations in line with the brand’s tone and values.",
+                        "Identify emerging social media trends and monitor competitors.",
+                        "Translate insights into actionable growth strategies.",
+                        "Track, analyze, and report on key performance metrics to evaluate content effectiveness and engagement.",
+                        "Collaborate closely with the Marketing, Design, and Product teams.",
+                        "Ensure social content aligns with broader campaign goals and organizational strategy.",
+                        "Bring the brand’s vision to life through thoughtful storytelling while maintaining a consistent voice across all digital touchpoints."
+                      ]
+                    },
+                    {
+                      "What We Offer": [
+                        "A collaborative, global, and innovation-driven team environment.",
+                        "Opportunities for growth, learning, and creative experimentation.",
+                        "Flexible remote working arrangements.",
+                        "The opportunity to shape and elevate a fast-growing digital brand."
+                      ]
+                    }
+                  ],
+                  "extraText": "If you are passionate about digital storytelling, creative strategy, and community engagement, and you thrive in bringing ideas to life through social media, we would love to hear from you.",
+                  "applicationCount": 50,
+                  "postStatus": "Closed",
+                  "currencySymbol": "N",
+                  "salaryMinRange": null,
+                  "salaryMaxRange": null,
+                  "owner": "In-House",
+                  "duration": "3 months",
+                  "status": "Published",
+                  "createdAt": "2026-01-12T11:00:00.000Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "6801567d578019ddec349c70",
+                  "userId": "68015495578019ddec349c17",
+                  "companyName": "Collindigson Group of Companies",
+                  "title": "Machine Learning Developer",
+                  "jobDescription": "Machine Learning Developer",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa",
+                    "Asia",
+                    "Europe"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Responsibilities": [
+                        "Train our platform with your machine learning skills."
+                      ]
+                    },
+                    {
+                      "Benefits": [
+                        "Learning and Free Health Insurance"
+                      ]
+                    }
+                  ],
+                  "extraText": "Machine Learning Developer Extra Text",
+                  "applicationCount": 2,
+                  "postStatus": "Open",
+                  "currencySymbol": "₦",
+                  "salaryMinRange": 800000,
+                  "salaryMaxRange": 1200000,
+                  "owner": "Client",
+                  "duration": "6 - 12 Months",
+                  "deadlineDate": "2025-04-30",
+                  "status": "Published",
+                  "isPostVerifiedByAdmin": "Pending Approval",
+                  "createdAt": "2025-04-17T19:29:01.610Z",
+                  "visibility": "All",
+                  "isApplied": false
+                },
+                {
+                  "_id": "6989fc1c4c122ff72e60a361",
+                  "userId": "6989a35f322a4beb7f585800",
+                  "companyName": "Sa’eedah Group",
+                  "title": "Business Analyst",
+                  "jobDescription": "We need an experience business analyst who have and understand basic business analyst skills like Requirement Gathering, Stakeholder Engagement, Stakeholder Management, Process Mapping, Gap Analysis.",
+                  "contractType": "Full-time",
+                  "location": "United Kingdom",
+                  "jobType": "Remote",
+                  "region": [
+                    "Europe"
+                  ],
+                  "jobData": [],
+                  "extraText": "Nil",
+                  "applicationCount": 0,
+                  "postStatus": "Open",
+                  "currencySymbol": "£",
+                  "salaryMinRange": 50000,
+                  "salaryMaxRange": 60000,
+                  "owner": "Client",
+                  "duration": "1 - 3 Years",
+                  "deadlineDate": "2026-06-12",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "isPostVerifiedByAdmin": "Pending Approval",
+                  "createdAt": "2026-02-09T15:24:12.760Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "69a900b0e5676a11c67b12d2",
+                  "userId": "69a83e6bf0accb322483371b",
+                  "companyName": "DAVID CONSULTING",
+                  "title": "Software Engineering Intern",
+                  "jobDescription": "This is the description for an SWE Intern",
+                  "contractType": "Internship",
+                  "location": "Nigeria",
+                  "jobType": "On-site",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Requirements": [
+                        "Must know JavaScript"
+                      ]
+                    }
+                  ],
+                  "extraText": "This is a good internship.",
+                  "applicationCount": 0,
+                  "postStatus": "Open",
+                  "currencySymbol": "₦",
+                  "salaryMinRange": 50000,
+                  "salaryMaxRange": 200000,
+                  "owner": "Client",
+                  "duration": "6 - 12 Months",
+                  "deadlineDate": "2026-03-06",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "isPostVerifiedByAdmin": "Pending Approval",
+                  "createdAt": "2026-03-05T04:04:00.387Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "69b28cf2700560090278e11f",
+                  "userId": "69b28b8a700560090278dffa",
+                  "companyName": "Bliss Tech",
+                  "title": "Junior Developer",
+                  "jobDescription": "Developer",
+                  "contractType": "Full-time",
+                  "location": "London, UK",
+                  "jobType": "Remote",
+                  "region": [
+                    "Europe"
+                  ],
+                  "jobData": [
+                    {
+                      "Duties": [
+                        "One duty",
+                        "Another duty"
+                      ]
+                    }
+                  ],
+                  "extraText": "None",
+                  "applicationCount": 0,
+                  "postStatus": "Open",
+                  "currencySymbol": "$",
+                  "salaryMinRange": 500,
+                  "salaryMaxRange": 700,
+                  "owner": "Client",
+                  "duration": "1 - 3 Years",
+                  "deadlineDate": "2026-04-02",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "isPostVerifiedByAdmin": "Pending Approval",
+                  "createdAt": "2026-03-12T09:52:50.548Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "69c4ecb3c778e78a80dc14ca",
+                  "userId": "69a98b22e5676a11c67b1a13",
+                  "companyName": "Smart",
+                  "title": "Testing Again",
+                  "jobDescription": "Description again",
+                  "contractType": "Part-time",
+                  "location": "Lagos",
+                  "jobType": "On-site",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Section again": [
+                        "One gain",
+                        "Twi again"
+                      ]
+                    }
+                  ],
+                  "extraText": "Extra again",
+                  "applicationCount": 0,
+                  "postStatus": "Open",
+                  "currencySymbol": "₦",
+                  "salaryMinRange": 200000,
+                  "salaryMaxRange": 300000,
+                  "owner": "Client",
+                  "duration": "6 - 12 Months",
+                  "deadlineDate": "2026-04-04",
+                  "status": "Published",
+                  "visibility": "Talents",
+                  "isPostVerifiedByAdmin": "Pending Approval",
+                  "createdAt": "2026-03-26T08:22:11.239Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "68015696578019ddec349c79",
+                  "userId": "68015495578019ddec349c17",
+                  "companyName": "Collindigson Group of Companies",
+                  "title": "Machine Learning Developer",
+                  "jobDescription": "Machine Learning Developer",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa",
+                    "Asia",
+                    "Europe"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Responsibilities": [
+                        "Train our platform with your machine learning skills."
+                      ]
+                    },
+                    {
+                      "Benefits": [
+                        "Learning and Free Health Insurance"
+                      ]
+                    }
+                  ],
+                  "extraText": "Machine Learning Developer Extra Text",
+                  "applicationCount": 1,
+                  "postStatus": "Open",
+                  "currencySymbol": "₦",
+                  "salaryMinRange": 800000,
+                  "salaryMaxRange": 1200000,
+                  "owner": "Client",
+                  "duration": "6 - 12 Months",
+                  "deadlineDate": "2025-04-30",
+                  "status": "Published",
+                  "isPostVerifiedByAdmin": "Pending Approval",
+                  "createdAt": "2025-04-17T19:29:26.857Z",
+                  "visibility": "All",
+                  "isApplied": false
+                },
+                {
+                  "_id": "693ac40ba15253f517fcef60",
+                  "userId": "69395794ebee9f28afd74f33",
+                  "companyName": "New Things",
+                  "title": "Chief Business Manager",
+                  "jobDescription": "Just do your job",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Resposibilities": [
+                        "Resposibilities",
+                        "Resposibilities 2"
+                      ]
+                    },
+                    {
+                      "Overviewssssssssssssss": [
+                        "Overview 1",
+                        "Overview 2"
+                      ]
+                    }
+                  ],
+                  "extraText": "Extra text again and edited",
+                  "applicationCount": 0,
+                  "postStatus": "Open",
+                  "currencySymbol": "₦",
+                  "salaryMinRange": 350000,
+                  "salaryMaxRange": 450000,
+                  "owner": "Client",
+                  "duration": "6 - 12 Months",
+                  "deadlineDate": "2026-01-10",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "isPostVerifiedByAdmin": "Pending Approval",
+                  "createdAt": "2025-12-11T13:15:55.917Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "693af131a15253f517fcf0b7",
+                  "userId": "692f062b96b1c0a661282679",
+                  "companyName": "Olareign Cop",
+                  "title": "Backend Developer",
+                  "jobDescription": "Tobams Group is a global innovation and talent-development company dedicated to transforming how people learn, grow, and connect through AI-driven education, sustainability, and digital empowerment. The CTO will serve as the architect and innovation leader for all Tobams Group's technology initiatives. This role demands a bold, forward-thinking leader who can translate the company's ambitious vision into scalable, world-class digital solutions. You will drive AI strategy, technology architecture, platform scalability, and innovation culture across multiple business units - including Recycled Learning, Rare Eat, and other global projects. The ideal candidate will combine deep technical expertise with strategic leadership, a passion for AI in education, and the ability to build and manage high-performing global teams.",
+                  "contractType": "Full-time",
+                  "location": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Technology Vision & Leadership": [
+                        "Define and execute Tobams Group's overall technology roadmap across AI, EdTech, sustainability, and data-driven learning ecosystems.",
+                        "Build the long-term technology strategy that aligns with the company's mission to democratize access to quality learning globally.",
+                        "Serve as the principal advisor to the CEO and executive team on emerging technologies, AI ethics, scalability, and innovation priorities.",
+                        "Foster a culture of innovation, experimentation, and excellence within the technology and product teams."
+                      ]
+                    },
+                    {
+                      "Product & Platform Development": [
+                        "Oversee the architecture, design, and deployment of AI-powered platforms, including Recycled Learning adaptive learning system, Recycled Learning for Kids (AI-augmented learning platform), Tobams Group dashboards and analytics tools, and Global Teacher Learning Management System (LMS).",
+                        "Ensure all systems are scalable, secure, and data-driven, supporting millions of users globally.",
+                        "Lead the integration of personalized learning algorithms, gamified experiences, and adaptive assessment engines."
+                      ]
+                    }
+                  ],
+                  "extraText": "Reports To: Chief Executive Officer (CEO). Department: Technology & Innovation. Future Potential: This role has the potential to evolve into a Co-Founder position for the right candidate, as Tobams Group continues to scale globally.",
+                  "applicationCount": 1,
+                  "postStatus": "Open",
+                  "currencySymbol": "₦",
+                  "salaryMinRange": 250,
+                  "salaryMaxRange": 100,
+                  "owner": "Client",
+                  "duration": "3 - 6 Months",
+                  "deadlineDate": "2025-12-11",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "isPostVerifiedByAdmin": "Pending Approval",
+                  "createdAt": "2025-12-11T16:28:33.790Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "693af64fa15253f517fcf1a6",
+                  "userId": "692f062b96b1c0a661282679",
+                  "companyName": "Olareign Cop",
+                  "title": "Chief Technology Officer ",
+                  "jobDescription": "Tobams Group is a global innovation and talent-development company dedicated to transforming how people learn, grow, and connect through AI-driven education, sustainability, and digital empowerment. The CTO will serve as the architect and innovation leader for all Tobams Group's technology initiatives. This role demands a bold, forward-thinking leader who can translate the company's ambitious vision into scalable, world-class digital solutions. You will drive AI strategy, technology architecture, platform scalability, and innovation culture across multiple business units - including Recycled Learning, Rare Eat, and other global projects. The ideal candidate will combine deep technical expertise with strategic leadership, a passion for AI in education, and the ability to build and manage high-performing global teams.",
+                  "contractType": "Part-time",
+                  "location": "On-site",
+                  "region": [
+                    "Africa",
+                    "Asia"
+                  ],
+                  "jobData": [
+                    {
+                      "Partnerships & Innovation Ecosystem": [
+                        "Forge and manage strategic partnerships with AI labs, EdTech organizations, universities, and industry bodies.",
+                        "Represent Tobams Group at conferences, innovation summits, and investor meetings as a technology thought leader."
+                      ]
+                    }
+                  ],
+                  "extraText": "Reports To: Chief Executive Officer (CEO). Department: Technology & Innovation. Future Potential: This role has the potential to evolve into a Co-Founder position for the right candidate, as Tobams Group continues to scale globally.",
+                  "applicationCount": 0,
+                  "postStatus": "Open",
+                  "currencySymbol": "$",
+                  "salaryMinRange": 100,
+                  "salaryMaxRange": 200,
+                  "owner": "Client",
+                  "duration": "6 - 12 Months",
+                  "deadlineDate": "2025-12-11",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "isPostVerifiedByAdmin": "Pending Approval",
+                  "createdAt": "2025-12-11T16:50:23.109Z",
+                  "isApplied": false
+                },
+                {
+                  "_id": "69843782322a4beb7f584fd5",
+                  "userId": "690c63fc45047c4e4030fee3",
+                  "companyName": "Ericsson",
+                  "title": "Software Engineer",
+                  "jobDescription": "Code",
+                  "contractType": "Full-time",
+                  "location": "Abuja, Nigeria",
+                  "jobType": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [],
+                  "extraText": "Apply",
+                  "applicationCount": 0,
+                  "postStatus": "Open",
+                  "currencySymbol": "£",
+                  "salaryMinRange": 20,
+                  "salaryMaxRange": 5000000,
+                  "owner": "Client",
+                  "duration": "3+ Years",
+                  "deadlineDate": "2027-02-02",
+                  "status": "Published",
+                  "visibility": "All",
+                  "isPostVerifiedByAdmin": "Pending Approval",
+                  "createdAt": "2026-02-05T06:24:02.457Z",
+                  "isApplied": false
+                }
+              ]
+            }
           }

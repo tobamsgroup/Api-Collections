@@ -1,0 +1,27 @@
+info:
+  name: Add an new user
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/admin/add"
+  body:
+    type: json
+    data: |-
+      {
+        "role": "", // Intern, Talent, Mentor, Organisation, Admin, or Super_Admin,
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "telephone": "",
+        "password": "",
+        "privilege": [""] // Optional current admin privileges: 'SUPER', 'JOB POST MANAGEMENT', 'USER MANAGEMENT', 'CUSTOMER SERVICE', 'ASSESSMENT MANAGER', 'CONTENT MANAGEMENT'
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

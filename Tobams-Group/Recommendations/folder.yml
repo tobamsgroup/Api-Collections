@@ -1,7 +1,7 @@
 info:
   name: Recommendations
   type: folder
-  seq: 19
+  seq: 22
 
 request:
   auth:

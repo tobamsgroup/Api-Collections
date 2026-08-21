@@ -1,0 +1,68 @@
+info:
+  name: Get Payments
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/payments"
+  params:
+    - name: page
+      value: "1"
+      enabled: true
+    - name: limit
+      value: "12"
+      enabled: true
+    - name: courseName
+      value: ""
+      enabled: false
+    - name: status
+      value: ""
+      enabled: false
+    - name: range
+      value: ""
+      enabled: false
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |
+    Returns a paginated list of all payments of a user. Supports filtering.
+
+    **Query parameters:**
+    | Param | Type | Default | Notes |
+    |-------|------|---------|-------|
+    | page | number | 1 | Page number |
+    | limit | number | 12 | Items per page (max 50) |
+    | courseName | string | — | Filter by course name |
+    | status | string | — | Filter by status |
+    | range  | string | — | filter by date range Options: THIS_WEEK, THIS_MONTH, LAST_60_DAYS, LAST_90_DAYS |
+
+    **Success response (200):**
+    ```json
+    {
+      "message": "Success",
+      "data": [...],
+      "meta": {
+        "total": 100,
+        "page": 1,
+        "limit": 12,
+        "totalPages": 9
+      }
+    }
+    ```
+    Each payment object includes: `id`, `amount`, `status`, `createdAt`, `course title`.
+
+    **Errors:**
+
+    - 401 Unauthorized
+  type: text/markdown

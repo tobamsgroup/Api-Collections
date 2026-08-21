@@ -16,7 +16,8 @@ http:
           "age": 12,
           "preferredLearningTopics": "Think Sustainability",
           "password": "Passme",
-          "role": "kid"
+          "role": "kid",
+          "gender": "Female"
       }
 
 settings:
@@ -40,7 +41,9 @@ examples:
               "age": 8,
               "preferredLearningTopics": "Think Entrepreneurship",
               "password": "Passme",
-              "role": "kid"
+              "role": "kid",
+              "gender": "Female"
+
           }
     response:
       statusText: "201"
