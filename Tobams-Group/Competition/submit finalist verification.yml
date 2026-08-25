@@ -1,0 +1,85 @@
+info:
+  name: Submit Finalist Verification
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/competition-applications/verify/{{VERIFICATION_TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "firstName": "Adaeze",
+        "lastName": "Okonkwo",
+        "linkedInProfile": "https://www.linkedin.com/in/adaeze-okonkwo",
+        "identificationType": "International Passport",
+        "identificationDocumentUrl": "https://s3.amazonaws.com/docs/adaeze-passport.jpg",
+        "consentToVerification": true
+      }
+  auth: none
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Submit Finalist Verification
+    request:
+      url: "{{BASE}}/competition-applications/verify/{{VERIFICATION_TOKEN}}"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "firstName": "Adaeze",
+            "lastName": "Okonkwo",
+            "linkedInProfile": "https://www.linkedin.com/in/adaeze-okonkwo",
+            "identificationType": "International Passport",
+            "identificationDocumentUrl": "https://s3.amazonaws.com/docs/adaeze-passport.jpg",
+            "consentToVerification": true
+          }
+    response:
+    status: 200
+    statusText: OK
+    body:
+      type: json
+      data: |-
+        {
+          "success": true,
+          "message": "Verification documents submitted successfully",
+          "data": {
+            "firstName": "Adaeze",
+            "lastName": "Okonkwo",
+            "phoneNumber": "+2348012345678",
+            "email": "rolatzarza1@gmail.com",
+            "organisation": "BrightPath AI Labs",
+            "linkedInProfile": "https://www.linkedin.com/in/adaeze-okonkwo",
+            "dateOfBirth": "1998-04-12T00:00:00.000Z",
+            "projectTitle": "MediTriage: AI-Powered Patient Triage Assistant",
+            "category": "AI Solutions",
+            "projectType": "Applications",
+            "currentStatus": "Prototype",
+            "problemStatement": "Rural clinics in Nigeria face long patient wait times and a shortage of trained triage staff, leading to delayed care for critical cases.",
+            "inspiration": "After visiting an understaffed clinic where my grandmother waited six hours to be seen, I wanted to build a tool that helps prioritise patients by urgency.",
+            "aiContribution": "The system uses a fine-tuned NLP model to interpret symptom descriptions in local languages and classify patients into urgency tiers, plus a triage recommendation engine.",
+            "beneficiaries": "Underserved patients in rural and peri-urban clinics, as well as overworked nurses and community health workers.",
+            "impact": "In pilot testing across three clinics, average triage time dropped from 25 minutes to under 5, and critical cases were flagged 3x faster.",
+            "pitchDeckUrl": "https://drive.google.com/file/d/1AbCdEfGhIjKlMnOpQrStUv/view",
+            "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "additionalLinks": "https://github.com/adaezeo/meditriage",
+            "termsAccepted": true,
+            "videoSharingConsent": true,
+            "isFinalist": true,
+            "identificationType": "International Passport",
+            "identificationDocumentUrl": "https://s3.amazonaws.com/docs/adaeze-passport.jpg",
+            "consentToVerification": true,
+            "verificationStatus": "pending",
+            "webinarId": "6a5fb05bafb6fba76b5a8c53",
+            "_id": "6a60cf5c0c11d8a92e226dc2",
+            "createdAt": "2026-07-22T14:10:36.849Z",
+            "updatedAt": "2026-08-25T11:30:00.000Z"
+          }
+        }
