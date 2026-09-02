@@ -1,0 +1,177 @@
+info:
+  name: Cast a Vote
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/votes/:webinarId"
+  body:
+    type: json
+    data: |-
+      {
+        "candidateId": "66f1a2b3c4d5e6f7a8b9c0d1",
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane.doe@example.com"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "candidateId": "66f1a2b3c4d5e6f7a8b9c0d1",
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "jane.doe@example.com"
+          }
+    response:
+      statusText: "201"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Vote submitted successfully",
+            "data": {
+              "candidateName": "Jane Doe",
+              "projectTitle": "AI Healthcare Assistant",
+              "votedAt": "2026-09-02T06:30:00.000Z"
+            }
+          }
+
+  - name: Already Voted - Device Cookie
+    request:
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "candidateId": "66f1a2b3c4d5e6f7a8b9c0d1",
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "jane.doe@example.com"
+          }
+    response:
+      statusText: "409"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "DuplicateError",
+            "message": "Vote already submitted for this competition."
+          }
+
+  - name: Already Voted - Email
+    request:
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "candidateId": "66f1a2b3c4d5e6f7a8b9c0d1",
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "jane.doe@example.com"
+          }
+    response:
+      statusText: "409"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "DuplicateError",
+            "message": "You have already voted in this competition."
+          }
+
+  - name: IP Vote Limit Exceeded
+    request:
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "candidateId": "66f1a2b3c4d5e6f7a8b9c0d1",
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "jane.doe@example.com"
+          }
+    response:
+      statusText: "429"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "RateLimitError",
+            "message": "Too many vote submissions from this network. Please try again later."
+          }
+
+  - name: Candidate Not Eligible
+    request:
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "candidateId": "66f1a2b3c4d5e6f7a8b9c0d1",
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "jane.doe@example.com"
+          }
+    response:
+      statusText: "400"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "This candidate is not eligible for voting."
+          }
+
+docs: |-
+  ## Cast a Vote
+
+  This endpoint allows a user to submit a vote for an eligible competition candidate.
+
+  The `webinarId` is required as a route parameter.
+
+  The following request body fields are required:
+
+  - `candidateId` — The ObjectId of the candidate being voted for.
+  - `firstName` — The voter's first name.
+  - `lastName` — The voter's last name.
+  - `email` — The voter's email address.
+
+  Before the vote is submitted, the API checks whether the current device has already voted in the competition using a competition-specific HTTP-only cookie.
+
+  The API then checks the number of vote submissions from the request IP address. A maximum of 5 submissions is allowed according to the configured IP vote limit.
+
+  If Redis is unavailable while checking the IP vote limit, the request is allowed to continue.
+
+  The candidate must belong to the specified competition, have `isFinalist` set to `true`, and have a verification status of `VERIFIED`.
+
+  The voter's email address must be unique within the competition. The database enforces this uniqueness using a unique index on `webinarId` and `voterEmail`.
+
+  On successful submission, the vote is recorded, the candidate's vote count is incremented, a competition-specific HTTP-only vote cookie is created, and a vote confirmation email is queued.
+
+  A `201 Created` response is returned when the vote is successfully recorded.
