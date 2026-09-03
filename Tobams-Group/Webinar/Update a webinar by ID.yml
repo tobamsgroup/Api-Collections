@@ -1,7 +1,7 @@
 info:
   name: Update a webinar by ID
   type: http
-  seq: 6
+  seq: 4
 
 http:
   method: PATCH
@@ -14,31 +14,32 @@ http:
     type: json
     data: |-
       {
-        "speakers": [
-          {
-            "title": "Dr.",
-            "firstName": "Ona", // required
-            "lastName": "NewTon", // required
-            "position": "CEO",
-            "company": "Tobams Group",
-            "imageUrl": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1785788457132_Dr_Ona_Newton.png"
-          }
-        ],
-        "whoShouldAttend": [
-          "Young Professionals: Learn how to speak up and grow faster in your workplace.",
-          "Students & Recent Graduates: Get ready for the work world before you even apply for jobs.",
-          "Tech Workers & Developers: Combine your coding and technical skills with great communication.",
-          "Team Leaders & Managers: Learn how to guide your team with clear words and less friction."
-        ],
-        "whatYouWillLearn": {
-          "header": "Build the Everyday Skills That Set You Apart",
-          "description": "n this session, you will learn simple, practical ways to communicate better and stand out, whatever seat you're in:",
-          "learningPoints": [
-            "Clear Communication: How to explain big ideas in simple ways that leaders and managers easily understand.",
-            "Handling Misunderstandings: How to solve disagreements calmly without hurting your relationships with teammates.",
-            "Working with Others: How to build trust and work smoothly with people from different departments."
-          ]
-        }
+        "date": "2026-09-26"
+      //   "speakers": [
+      //     {
+      //       "title": "Dr.",
+      //       "firstName": "Ona", // required
+      //       "lastName": "NewTon", // required
+      //       "position": "CEO",
+      //       "company": "Tobams Group",
+      //       "imageUrl": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1785788457132_Dr_Ona_Newton.png"
+      //     }
+      //   ],
+      //   "whoShouldAttend": [
+      //     "Young Professionals: Learn how to speak up and grow faster in your workplace.",
+      //     "Students & Recent Graduates: Get ready for the work world before you even apply for jobs.",
+      //     "Tech Workers & Developers: Combine your coding and technical skills with great communication.",
+      //     "Team Leaders & Managers: Learn how to guide your team with clear words and less friction."
+      //   ],
+      //   "whatYouWillLearn": {
+      //     "header": "Build the Everyday Skills That Set You Apart",
+      //     "description": "n this session, you will learn simple, practical ways to communicate better and stand out, whatever seat you're in:",
+      //     "learningPoints": [
+      //       "Clear Communication: How to explain big ideas in simple ways that leaders and managers easily understand.",
+      //       "Handling Misunderstandings: How to solve disagreements calmly without hurting your relationships with teammates.",
+      //       "Working with Others: How to build trust and work smoothly with people from different departments."
+      //     ]
+      //   }
       }
   auth:
     type: bearer
@@ -49,6 +50,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Success
