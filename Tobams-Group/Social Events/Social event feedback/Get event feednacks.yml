@@ -1,0 +1,185 @@
+info:
+  name: Get event feednacks
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/feedbacks/receiver/:receiverId?type=Events&page=1&limit=20"
+  params:
+    - name: type
+      value: Events
+      type: query
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "20"
+      type: query
+    - name: receiverId
+      value: 6a9950f3568a07e019d1a6e6
+      type: path
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: Empty feedbacks
+    request:
+      url: "{{BASE}}/feedbacks/receiver/:receiverId?type=Events&page=1&limit=20"
+      method: GET
+      params:
+        - name: type
+          value: Events
+          type: query
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "20"
+          type: query
+        - name: receiverId
+          value: 6a9950f3568a07e019d1a6e6
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: date
+          value: Thu, 03 Sep 2026 11:02:28 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "95"
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"73-B4NGCESz+ovFGKxmgqGfd+R0qZo"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 43ddc961-9e9c-4fe3
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1788433347356-ft2zsaoux
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a354432348c311f3-AMS
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Feedbacks fetched successfully",
+            "data": {
+              "currentCount": 0,
+              "totalCount": 0,
+              "feedbacks": []
+            }
+          }
+  - name: Success Sample
+    request:
+      url: "{{BASE}}/feedbacks/receiver/:receiverId?type=Events&page=1&limit=20"
+      method: GET
+      params:
+        - name: type
+          value: Events
+          type: query
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "20"
+          type: query
+        - name: receiverId
+          value: 6a9950f3568a07e019d1a6e6
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |
+          {
+            "success": true,
+            "message": "Feedbacks fetched successfully",
+            "data": {
+              "currentCount": 2,
+              "totalCount": 154,
+              "feedbacks": [
+                {
+                  "_id": "66f1a2...",
+                  "reviewerId": "66e0c1...",
+                  "receiverId": "66f0a9...",
+                  "type": "Events",
+                  "feedback": "I have a question, please",
+                  "fullname": "John Doe",
+                  "replies": [
+                    {
+                      "_id": "66f1a9...",
+                      "reviewerId": "66d4f0...",
+                      "fullname": "Jordan Foxx",
+                      "feedback": "Go ahead, please",
+                      "createdAt": "2026-08-24T09:12:00Z",
+                      "updatedAt": "2026-08-24T09:12:00Z"
+                    }
+                  ],
+                  "createdAt": "2026-08-24T09:10:03Z",
+                  "updatedAt": "2026-08-24T09:12:00Z",
+                  "receiver": { /* full event document */ },
+                  "reviewer": {
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "photo": "https://...",
+                    "averageRating": 4.2
+                    // + currentCompany, companyName, currentRole, occupation, title
+                  }
+                }
+              ]
+            }
+          }

@@ -17,3 +17,83 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: Not Found
+    request:
+      url: "{{BASE}}/social_events/search/title?title=Sustainable"
+      method: GET
+      params:
+        - name: title
+          value: Sustainable
+          type: query
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: date
+          value: Thu, 03 Sep 2026 10:52:20 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "62"
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"41-ox4PYxYaCaDL3MaD39Nf26JJ+Z4"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: eba4722c-9395-48c3
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1788432740543-xj8m0v2og
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a3543450de553c26-AMS
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "message": "No events found for the given title"
+          }
