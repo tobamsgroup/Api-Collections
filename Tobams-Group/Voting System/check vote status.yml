@@ -1,0 +1,63 @@
+info:
+  name: Check Vote Status
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/v1/votes/:webinarId/status"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Not Voted
+    request:
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92/status"
+      method: GET
+    response:
+      statusText: "200"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Vote status retrieved successfully",
+            "data": {
+              "hasVoted": false
+            }
+          }
+
+  - name: Already Voted
+    request:
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92/status"
+      method: GET
+    response:
+      statusText: "200"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Vote status retrieved successfully",
+            "data": {
+              "hasVoted": true
+            }
+          }
+
+docs: |-
+  ## Check Vote Status
+
+  This endpoint checks whether the current device has already submitted a vote for the specified competition.
+
+  The endpoint checks for the competition-specific vote cookie.
+
+  The response returns `hasVoted: true` when the vote cookie is present and `hasVoted: false` when the vote cookie is not present.
+
+  This endpoint does not query the database to determine vote status. The returned status is based on the presence of the vote cookie.
+
+  This endpoint is optional because the vote submission endpoint also checks for the presence of the vote cookie before accepting a vote.

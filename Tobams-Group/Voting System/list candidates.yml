@@ -1,0 +1,84 @@
+info:
+  name: List Candidates
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/v1/votes/:webinarId/candidates"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92/candidates"
+      method: GET
+    response:
+      statusText: "200"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Candidates retrieved successfully",
+            "data": [
+              {
+                "_id": "66f1a2b3c4d5e6f7a8b9c0d1",
+                "firstName": "Jane",
+                "lastName": "Doe",
+                "projectTitle": "AI Healthcare Assistant",
+                "selfiePhotoUrl": "https://example.com/uploads/jane-doe.jpg"
+              }
+            ]
+          }
+
+  - name: No Candidates
+    request:
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92/candidates"
+      method: GET
+    response:
+      statusText: "200"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Candidates retrieved successfully",
+            "data": []
+          }
+
+  - name: Webinar ID Missing
+    request:
+      url: "{{baseUrl}}/api/v1/votes//candidates"
+      method: GET
+    response:
+      statusText: "400"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Webinar ID is required"
+          }
+
+docs: |-
+  ## List Candidates
+
+  This endpoint retrieves the candidates who are eligible for voting in the specified competition.
+
+  The `webinarId` is required as a route parameter.
+
+  The endpoint returns only candidates whose:
+
+  - `webinarId` matches the specified competition.
+  - `isFinalist` is `true`.
+  - `verificationStatus` is `VERIFIED`.
+
+  A `200 OK` response is returned when the candidates are successfully retrieved. If no eligible candidates are found, the `data` array is empty.

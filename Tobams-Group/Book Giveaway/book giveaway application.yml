@@ -5,26 +5,30 @@ info:
 
 http:
   method: POST
-  url: "{{BASE}}/educator-partner-requests/application"
+  url: "{{BASE}}/book-giveaway/applications"
   body:
     type: json
     data: |-
       {
-        "firstName": "John",
+        "bookTitle": "Career Now: AI, Work and the Future",
+        "firstName": "Jane",
         "lastName": "Doe",
-        "email": "john.doe@example.com",
+        "email": "jane.doe@example.com",
         "phoneNumber": "+2348012345678",
         "country": "Nigeria",
         "role": "Software Engineer",
-        "ageGroup": "25-40",
-        "linkedinProfile": "https://www.linkedin.com/in/johndoe",
+        "ageGroup": "25-40 years",
+        "linkedinProfile": "https://www.linkedin.com/in/janedoe",
         "reasonForReceivingBook": "I would like to receive this book because it will help me improve my career and professional development.",
         "referralSource": "LinkedIn",
-        "informationPreference": "Career Insights",
-        "bookType": "Physical Copy",
+        "informationPreference": [
+          "Career insights",
+          "Future book launches"
+        ],
+        "bookType": "Physical copy",
         "complimentaryCopyAgreement": true,
         "reviewAgreement": true
-      }"
+      }
   auth: inherit
 
 settings:
@@ -36,24 +40,28 @@ settings:
 examples:
   - name: Submit Book Giveaway Application
     request:
-      url: "{{BASE}}/book-giveaway/application"
+      url: "{{BASE}}/book-giveaway/applications"
       method: POST
       body:
         type: json
         data: |-
           {
-            "firstName": "John",
+            "bookTitle": "Career Now: AI, Work and the Future",
+            "firstName": "Jane",
             "lastName": "Doe",
-            "email": "john.doe@example.com",
+            "email": "jane.doe@example.com",
             "phoneNumber": "+2348012345678",
             "country": "Nigeria",
             "role": "Software Engineer",
-            "ageGroup": "25-40",
-            "linkedinProfile": "https://www.linkedin.com/in/johndoe",
+            "ageGroup": "25-40 years",
+            "linkedinProfile": "https://www.linkedin.com/in/janedoe",
             "reasonForReceivingBook": "I would like to receive this book because it will help me improve my career and professional development.",
             "referralSource": "LinkedIn",
-            "informationPreference": "Career Insights",
-            "bookType": "Physical Copy",
+            "informationPreference": [
+              "Career insights",
+              "Future book launches"
+            ],
+            "bookType": "Physical copy",
             "complimentaryCopyAgreement": true,
             "reviewAgreement": true
           }
