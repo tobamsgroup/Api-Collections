@@ -1,0 +1,34 @@
+info:
+  name: reopen ticket
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{BASE}}/contact-us/:ticketNumber/status"
+  params:
+    - name: ticketNumber
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "status": "open"
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  Puts a ticket back in the queue after it was closed in error, so a mistake
+  does not need a database edit to undo.
+
+  Clears the handler and the time it was handled, and the ticket starts
+  appearing in the 17:00 review again from that evening.

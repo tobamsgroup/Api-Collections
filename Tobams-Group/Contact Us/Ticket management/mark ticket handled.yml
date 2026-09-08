@@ -1,0 +1,38 @@
+info:
+  name: mark ticket handled
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{BASE}}/contact-us/:ticketNumber/status"
+  params:
+    - name: ticketNumber
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "status": "handled"
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  Takes a ticket out of the open queue so it stops appearing in the 17:00
+  review.
+
+  Keyed on the ticket number, not the database id — that is the reference
+  printed on the Google Chat card and in the digest, and the only one whoever
+  is closing the ticket has to hand. Paste it into the `ticketNumber` path
+  param, e.g. TG-260908-4KQ2XM.
+
+  Admin or super-admin only. Records who marked it and when.

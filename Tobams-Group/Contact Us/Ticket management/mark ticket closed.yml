@@ -1,0 +1,32 @@
+info:
+  name: mark ticket closed
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{BASE}}/contact-us/:ticketNumber/status"
+  params:
+    - name: ticketNumber
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "status": "closed"
+      }
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  Same effect on the digest as `handled` — both leave the open queue. The
+  distinction is for reporting: handled means someone dealt with it, closed
+  covers duplicates, spam and enquiries that needed no reply.

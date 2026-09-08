@@ -1,0 +1,50 @@
+info:
+  name: create contact us with attachment
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BASE}}/contact-us/"
+  body:
+    type: multipart-form
+    data:
+      - name: fullName
+        type: text
+        value: Ada Obi
+      - name: email
+        type: text
+        value: ada@example.com
+      - name: subject
+        type: text
+        value: Billing query
+      - name: message
+        type: text
+        value: I was charged twice for the same assessment. Screenshot attached.
+      - name: attachment
+        type: file
+        value: []
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  Multipart, because the file is uploaded with the message rather than after it.
+
+  The field must be named `attachment` — anything else is ignored and the
+  ticket is created without one. One file only; a second is rejected.
+
+  Accepts images, PDF, doc/docx, txt, csv and xlsx up to 10MB. The file goes to
+  S3 and the ticket carries its link, which is what appears in the Google Chat
+  card — a webhook cannot carry an upload.
+
+  Pick a file for the `attachment` field before sending; the value is
+  deliberately left empty so it does not point at a path on someone else's
+  machine.
+
+  The response carries `ticketNumber` (e.g. TG-260908-4KQ2XM). Keep it — it is
+  what the status requests below are keyed on.
