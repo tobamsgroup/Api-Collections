@@ -1,0 +1,91 @@
+info:
+name: Toggle Voting Active Status
+type: http
+seq: 5
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/votes/:webinarId/voting-status"
+  body:
+    type: json
+    data: |-
+    {
+      "isActive": false
+    }
+  auth:
+  type: bearer
+  token: "{{adminAccessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+
+  - name: Disable Voting
+    request:
+    url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92/voting-status"
+    method: PATCH
+    body:
+      type: json
+      data: |-
+      {
+        "isActive": false
+      }
+    response:
+      statusText: "200"
+      body:
+      type: json
+      data: |-
+      {
+        "success": true,
+        "message": "Voting deactivated successfully",
+        "data": {
+          "isActive": false
+        }
+      }
+
+  - name: Enable Voting
+    request:
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92/voting-status"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+        {
+         "isActive": true
+        }
+      response:
+        statusText: "200"
+        body:
+        type: json
+        data: |-
+        {
+          "success": true,
+          "message": "Voting activated successfully",
+          "data": {
+            "isActive": true
+          }
+        }
+
+docs: |-
+
+## Toggle Voting Active Status
+
+  This endpoint allows an administrator to enable or disable voting for a specific competition.
+
+  This endpoint requires administrator authentication using a Bearer access token.
+
+  The `webinarId` is required as a route parameter.
+
+  The request body contains:
+
+  * `isActive` — A boolean indicating whether voting should be active.
+
+  Set `isActive` to `true` to allow votes to be submitted.
+
+  Set `isActive` to `false` to stop the voting process.
+
+  A `200 OK` response is returned when the voting status is successfully updated.
