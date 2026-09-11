@@ -15,6 +15,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Assessment Products
@@ -129,4 +130,250 @@ examples:
                       "allocatedTime": 7200
                   }
               ]
+          }
+  - name: Success
+    request:
+      url: "{{BASE}}/assessment_products"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: date
+          value: Wed, 26 Aug 2026 21:53:34 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"c38-F2QwLdkmh/c5f9ImBrDHf6liwBw"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 48909904-56c4-4c0b
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1787781213705-bjxq7rtpq
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a31611e54d6ad5d8-AMS
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "All products fetched successfully",
+            "data": [
+              {
+                "_id": "6a8f59bd48bfba083b217611",
+                "name": "High Volume (Custom)",
+                "prices": [],
+                "keyFocus": [],
+                "description": "Our Custom Assessment is tailored to your goals, covering specialised skills, industry knowledge, and training needs. Get clear insights to make smarter decisions.",
+                "features": [],
+                "productType": "assessment",
+                "isMandatory": false,
+                "allocatedTime": 0,
+                "userCategory": [
+                  "Guest User"
+                ],
+                "idealFor": [
+                  "Teams",
+                  "Organisations",
+                  "Universities"
+                ],
+                "createdAt": "2026-08-26T21:25:17.021Z",
+                "updatedAt": "2026-08-26T21:53:02.187Z",
+                "price": 0,
+                "currency": "NGN"
+              },
+              {
+                "keyFocus": [],
+                "_id": "676a567340e02eff51e6cc25",
+                "name": "Career & Employability Assessment",
+                "price": 15000,
+                "description": "Select your current or aspiring career and get a personalised assessment of the key professional capabilities employers expect for that role.",
+                "features": [],
+                "isMandatory": true,
+                "createdAt": "2024-12-27T06:36:36.290Z",
+                "updatedAt": "2026-08-26T21:40:23.883Z",
+                "oldPrice": 40000,
+                "productType": "assessment",
+                "prices": [
+                  {
+                    "currency": "NGN",
+                    "amount": 15000
+                  },
+                  {
+                    "currency": "GBP",
+                    "amount": 15
+                  },
+                  {
+                    "currency": "USD",
+                    "amount": 20
+                  }
+                ],
+                "idealFor": [
+                  "Students",
+                  "Graduates",
+                  "Job Seekers",
+                  "Professionals"
+                ],
+                "userCategory": [
+                  "Platform User"
+                ],
+                "currency": "NGN"
+              },
+              {
+                "keyFocus": [],
+                "_id": "67cad47bed2e918d8967da1e",
+                "name": "Professional Skills Assessment",
+                "price": 15000,
+                "description": "Measure the workplace skills employers value most and receive a personalised report to help you strengthen and grow.",
+                "features": [],
+                "isMandatory": false,
+                "createdAt": "2024-12-27T05:36:36.290Z",
+                "updatedAt": "2026-08-26T21:33:16.274Z",
+                "oldPrice": 40000,
+                "productType": "assessment",
+                "prices": [
+                  {
+                    "currency": "NGN",
+                    "amount": 15000
+                  },
+                  {
+                    "currency": "GBP",
+                    "amount": 15
+                  },
+                  {
+                    "currency": "USD",
+                    "amount": 20
+                  }
+                ],
+                "idealFor": [
+                  "Everyone",
+                  "Teams",
+                  "Professionals",
+                  "Leaders"
+                ],
+                "userCategory": [
+                  "Guest User"
+                ],
+                "currency": "NGN"
+              },
+              {
+                "keyFocus": [],
+                "_id": "676ed33a3f1c9dabce114292",
+                "name": "Entrepreneurship Assessment",
+                "price": 15000,
+                "description": "Assess your entrepreneurial mindset, business potential, and innovation capability. Identify what it takes to build and grow a successful business.",
+                "features": [],
+                "isMandatory": false,
+                "createdAt": "2024-12-26T16:18:02.307Z",
+                "updatedAt": "2026-08-26T21:37:06.852Z",
+                "oldPrice": 40000,
+                "productType": "assessment",
+                "prices": [
+                  {
+                    "currency": "NGN",
+                    "amount": 15000
+                  },
+                  {
+                    "currency": "GBP",
+                    "amount": 15
+                  },
+                  {
+                    "currency": "USD",
+                    "amount": 20
+                  }
+                ],
+                "idealFor": [
+                  "Aspiring Founder",
+                  "Entrepreneurs",
+                  "Innovators",
+                  "Creators"
+                ],
+                "userCategory": [
+                  "Guest User"
+                ],
+                "currency": "NGN"
+              },
+              {
+                "keyFocus": [],
+                "_id": "69ce46e0a0a2e7160017627a",
+                "name": "Leadership Assessment",
+                "price": 15000,
+                "description": "Discover your leadership strengths, decision-making style, and influence. Get practical insights to help you lead with confidence and purpose.",
+                "features": [],
+                "isMandatory": false,
+                "createdAt": "2024-12-25T17:36:36.290Z",
+                "updatedAt": "2026-08-26T21:30:08.478Z",
+                "oldPrice": 40000,
+                "productType": "assessment",
+                "prices": [
+                  {
+                    "currency": "NGN",
+                    "amount": 15000
+                  },
+                  {
+                    "currency": "GBP",
+                    "amount": 15
+                  },
+                  {
+                    "currency": "USD",
+                    "amount": 20
+                  }
+                ],
+                "idealFor": [
+                  "Leaders",
+                  "Managers",
+                  "Team Leads",
+                  "High Potentials"
+                ],
+                "userCategory": [
+                  "Guest User"
+                ],
+                "currency": "NGN"
+              }
+            ]
           }
