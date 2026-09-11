@@ -41,19 +41,19 @@ examples:
       body:
         type: json
         data: |-
-        {
-          "webinarId": "671821b0bad7612a1c48de92",
-          "finalists": [
-            {
-              "name": "Jane Doe",
-              "email": "janedoe@gmail.com"
-            },
-            {
-              "name": "Omokorede Usman",
-              "email": "adeyeyeusman@gmail.com"
-            }
-          ]
-        }
+          {
+            "webinarId": "671821b0bad7612a1c48de92",
+            "finalists": [
+              {
+                "name": "Jane Doe",
+                "email": "janedoe@gmail.com"
+              },
+              {
+                "name": "Omokorede Usman",
+                "email": "adeyeyeusman@gmail.com"
+              }
+            ]
+          }
 
 docs: |-
 
