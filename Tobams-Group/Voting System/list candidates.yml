@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/v1/votes/:webinarId/candidates"
+  url: "{{BASE}}/votes/:webinarId/candidates"
+  params:
+    - name: webinarId
+      value: 6a5fb05bafb6fba76b5a8c53
+      type: path
   auth: inherit
 
 settings:
@@ -13,6 +17,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Success
@@ -37,7 +42,6 @@ examples:
               }
             ]
           }
-
   - name: No Candidates
     request:
       url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92/candidates"
@@ -52,7 +56,6 @@ examples:
             "message": "Candidates retrieved successfully",
             "data": []
           }
-
   - name: Webinar ID Missing
     request:
       url: "{{baseUrl}}/api/v1/votes//candidates"

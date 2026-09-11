@@ -5,7 +5,11 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/api/v1/votes/:webinarId"
+  url: "{{BASE}}/votes/:webinarId"
+  params:
+    - name: webinarId
+      value: ""
+      type: path
   body:
     type: json
     data: |-
@@ -22,6 +26,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Success
@@ -51,7 +56,6 @@ examples:
               "votedAt": "2026-09-02T06:30:00.000Z"
             }
           }
-
   - name: Already Voted - Device Cookie
     request:
       url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92"
@@ -75,7 +79,6 @@ examples:
             "error": "DuplicateError",
             "message": "Vote already submitted for this competition."
           }
-
   - name: Already Voted - Email
     request:
       url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92"
@@ -99,7 +102,6 @@ examples:
             "error": "DuplicateError",
             "message": "You have already voted in this competition."
           }
-
   - name: IP Vote Limit Exceeded
     request:
       url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92"
@@ -123,7 +125,6 @@ examples:
             "error": "RateLimitError",
             "message": "Too many vote submissions from this network. Please try again later."
           }
-
   - name: Candidate Not Eligible
     request:
       url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92"
