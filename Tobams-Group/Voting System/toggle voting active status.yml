@@ -1,7 +1,7 @@
 info:
-name: Toggle Voting Active Status
-type: http
-seq: 5
+  name: Toggle Voting Active Status
+  type: http
+  seq: 6
 
 http:
   method: PATCH
@@ -9,9 +9,9 @@ http:
   body:
     type: json
     data: |-
-    {
-      "isActive": false
-    }
+      {
+        "isActive": false
+      }
   auth:
   type: bearer
   token: "{{adminAccessToken}}"
@@ -26,26 +26,26 @@ examples:
 
   - name: Disable Voting
     request:
-    url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92/voting-status"
-    method: PATCH
-    body:
-      type: json
-      data: |-
-      {
-        "isActive": false
-      }
+      url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92/voting-status"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "isActive": false
+          }
     response:
       statusText: "200"
       body:
-      type: json
-      data: |-
-      {
-        "success": true,
-        "message": "Voting deactivated successfully",
-        "data": {
-          "isActive": false
-        }
-      }
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Voting deactivated successfully",
+            "data": {
+              "isActive": false
+            }
+          }
 
   - name: Enable Voting
     request:
@@ -54,21 +54,21 @@ examples:
       body:
         type: json
         data: |-
-        {
-         "isActive": true
-        }
-      response:
-        statusText: "200"
-        body:
+          {
+          "isActive": true
+          }
+    response:
+      statusText: "200"
+      body:
         type: json
         data: |-
-        {
-          "success": true,
-          "message": "Voting activated successfully",
-          "data": {
-            "isActive": true
+          {
+            "success": true,
+            "message": "Voting activated successfully",
+            "data": {
+              "isActive": true
+            }
           }
-        }
 
 docs: |-
 
@@ -77,15 +77,3 @@ docs: |-
   This endpoint allows an administrator to enable or disable voting for a specific competition.
 
   This endpoint requires administrator authentication using a Bearer access token.
-
-  The `webinarId` is required as a route parameter.
-
-  The request body contains:
-
-  * `isActive` — A boolean indicating whether voting should be active.
-
-  Set `isActive` to `true` to allow votes to be submitted.
-
-  Set `isActive` to `false` to stop the voting process.
-
-  A `200 OK` response is returned when the voting status is successfully updated.

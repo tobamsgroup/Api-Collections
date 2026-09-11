@@ -1,7 +1,7 @@
 info:
   name: Notify Finalists
   type: http
-  seq: 4
+  seq: 5
 
 http:
   method: POST
@@ -9,19 +9,19 @@ http:
   body:
     type: json
     data: |-
-    {
-      "webinarId": "66f1a2b3c4d5e6f7a8b9c0d1",
-      "finalists": [
-          {
-          "name": "Jane Doe",
-          "email": "[janedoe@gmail.com](mailto:janedoe@gmail.com)"
-          },
-          {
-            "name": "Omokorede Usman",
-            "email": "[adeyeyeusman@gmail.com](mailto:adeyeyeusman@gmail.com)"
-            }
-        ]
-    }
+      {
+        "webinarId": "66f1a2b3c4d5e6f7a8b9c0d1",
+        "finalists": [
+            {
+            "name": "Jane Doe",
+            "email": "janedoe@gmail.com"
+            },
+            {
+              "name": "Omokorede Usman",
+              "email": "adeyeyeusman@gmail.com"
+              }
+          ]
+      }
   auth:
   type: bearer
   token: "{{adminAccessToken}}"
@@ -39,21 +39,21 @@ examples:
       url: "{{baseUrl}}/api/v1/competition-applications/finalists/notify"
       method: POST
       body:
-      type: json
-      data: |-
-      {
+        type: json
+        data: |-
+        {
           "webinarId": "671821b0bad7612a1c48de92",
           "finalists": [
             {
-            "name": "Jane Doe",
-            "email": "[janedoe@gmail.com](mailto:janedoe@gmail.com)"
+              "name": "Jane Doe",
+              "email": "janedoe@gmail.com"
             },
             {
-            "name": "Omokorede Usman",
-            "email": "[adeyeyeusman@gmail.com](mailto:adeyeyeusman@gmail.com)"
+              "name": "Omokorede Usman",
+              "email": "adeyeyeusman@gmail.com"
             }
-        ]
-      }
+          ]
+        }
 
 docs: |-
 
@@ -62,14 +62,3 @@ docs: |-
   This endpoint sends a notification email to a list of competition finalists.
 
   This endpoint requires administrator authentication using a Bearer access token.
-
-  The following request body fields are required:
-
-  * `webinarId` — The ObjectId of the competition.
-  * `finalists` — An array containing the finalists to be notified.
-  * `finalists[].name` — The finalist's name.
-  * `finalists[].email` — The finalist's email address.
-
-  The endpoint is intended for bulk notification of finalists after the competition finalists have been selected.
-
-  A `200 OK` response is returned when the finalist notification request is successfully processed.
