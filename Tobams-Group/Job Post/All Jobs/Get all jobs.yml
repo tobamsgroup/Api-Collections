@@ -5,7 +5,39 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/jobs"
+  url: "{{BASE}}/jobs?jobType=&contractType=&industry=&location=&region=&currencySymbol=&duration=&salaryMin=&salaryMax=&sort="
+  params:
+    - name: jobType
+      value: ""
+      type: query
+    - name: contractType
+      value: ""
+      type: query
+    - name: industry
+      value: ""
+      type: query
+    - name: location
+      value: ""
+      type: query
+    - name: region
+      value: ""
+      type: query
+    - name: currencySymbol
+      value: ""
+      type: query
+    - name: duration
+      value: ""
+      type: query
+    - name: salaryMin
+      value: ""
+      type: query
+    - name: salaryMax
+      value: ""
+      type: query
+    - name: sort
+      value: ""
+      type: query
+      description: sort=newest|oldest|relevance
   auth:
     type: bearer
     token: "{{admin_access}}"
@@ -15,6 +47,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Success
