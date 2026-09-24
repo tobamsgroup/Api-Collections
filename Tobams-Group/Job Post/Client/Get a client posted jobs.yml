@@ -1,11 +1,11 @@
 info:
   name: Get a client posted jobs
   type: http
-  seq: 8
+  seq: 6
 
 http:
   method: GET
-  url: "{{BASE}}/job_client/organisations?page=1&limit=10"
+  url: "{{BASE}}/job_client/organisations?page=1&limit=10&status=&visibility=&company=&search=&location=&jobType=&contractType=&industry=&region=&currencySymbol=&duration=&salaryMin=&salaryMax=&sort="
   params:
     - name: page
       value: "1"
@@ -13,6 +13,50 @@ http:
     - name: limit
       value: "10"
       type: query
+    - name: status
+      value: ""
+      type: query
+      description: Draft|Published|Inactive|Rejected
+    - name: visibility
+      value: ""
+      type: query
+    - name: company
+      value: ""
+      type: query
+    - name: search
+      value: ""
+      type: query
+    - name: location
+      value: ""
+      type: query
+    - name: jobType
+      value: ""
+      type: query
+    - name: contractType
+      value: ""
+      type: query
+    - name: industry
+      value: ""
+      type: query
+    - name: region
+      value: ""
+      type: query
+    - name: currencySymbol
+      value: ""
+      type: query
+    - name: duration
+      value: ""
+      type: query
+    - name: salaryMin
+      value: ""
+      type: query
+    - name: salaryMax
+      value: ""
+      type: query
+    - name: sort
+      value: ""
+      type: query
+      description: newest|oldest|relevance|company
   auth:
     type: bearer
     token: "{{org_access}}"
@@ -22,6 +66,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Get a client posted jobs
@@ -193,4 +238,113 @@ examples:
                       }
                   ]
               }
+          }
+  - name: Success
+    request:
+      url: "{{BASE}}/job_client/organisations?page=1&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: vary
+          value: Origin
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: x-request-id
+          value: 1789976517690-4f509ttzw
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "2555"
+        - name: etag
+          value: W/"9fb-3Bq3MANWva9HtMp6MwKZgfZTTVY"
+        - name: date
+          value: Mon, 21 Sep 2026 07:41:58 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Organisation posted jobs fetched successfully",
+            "data": {
+              "jobs": [
+                {
+                  "_id": "6aaa309a8339af23374bd4e8",
+                  "userId": "6aa9358d43506a3b71f0b2b7",
+                  "companyName": "David Enterprise",
+                  "title": "Frontend Developer",
+                  "jobDescription": "We're looking for a skilled Frontend Developer to join our team and take ownership of the user-facing side of our web applications. In this role, you'll be the bridge between design and engineering — translating wireframes, mockups, and product requirements into polished, responsive, and accessible interfaces that real users interact with every day.\n\nYou'll work closely with designers to ensure visual fidelity and thoughtful UX, partner with backend engineers to integrate APIs and data efficiently, and collaborate with product managers to prioritize and ship features that matter. Beyond writing code, you'll help shape how our frontend is built — contributing to architecture decisions, component design, and best practices that keep our codebase clean, scalable, and maintainable as the product grows.\n\nWe're looking for someone who cares about the details: pixel-perfect layouts, smooth performance, cross-browser consistency, and interfaces that work well for everyone, including users relying on assistive technology. You should be comfortable working in a fast-paced environment, adapting to shifting priorities, and communicating clearly with both technical and non-technical teammates.\n\nThis is a great opportunity for someone who wants to have real impact on product direction, work with modern tools and frameworks, and grow alongside a team that values craftsmanship, collaboration, and continuous learning.\n\nWant me to add the responsibilities/qualifications sections back in, or keep it as a standalone overview?",
+                  "contractType": "Full-time",
+                  "location": "Nigeria",
+                  "jobType": "Remote",
+                  "region": [
+                    "Africa"
+                  ],
+                  "jobData": [
+                    {
+                      "Key Responsibilities": [
+                        "Build responsive, cross-browser user interfaces using HTML, CSS, and JavaScript/TypeScript",
+                        "Develop reusable UI components with modern frameworks (React, Vue, or Angular)",
+                        "Develop reusable UI components with modern frameworks (React, Vue, or Angular)"
+                      ]
+                    }
+                  ],
+                  "extraText": "The role is all about a Frontend Developer",
+                  "applicationCount": 0,
+                  "currencySymbol": "₦",
+                  "salaryMinRange": 200000,
+                  "salaryMaxRange": 300000,
+                  "owner": "Client",
+                  "duration": "3+ Years",
+                  "deadlineDate": "2026-09-21",
+                  "status": "Published",
+                  "visibility": "Interns",
+                  "createdAt": "2026-09-16T06:00:58.478Z"
+                }
+              ],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 1,
+                "pages": 1,
+                "hasNext": false,
+                "hasPrev": false
+              }
+            }
           }

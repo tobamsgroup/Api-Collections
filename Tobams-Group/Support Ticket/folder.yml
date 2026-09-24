@@ -1,7 +1,7 @@
 info:
-  name: Admin
+  name: Support Ticket
   type: folder
-  seq: 1
+  seq: 50
 
 request:
   auth: inherit

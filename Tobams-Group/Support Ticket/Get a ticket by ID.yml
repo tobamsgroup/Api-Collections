@@ -1,0 +1,167 @@
+info:
+  name: Get a ticket by ID
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{BASE}}/support-tickets/:id"
+  params:
+    - name: id
+      value: 6ab1a2866c1ad2c0ff306340
+      type: path
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: Auth error
+    request:
+      url: "{{BASE}}/support-tickets/:id"
+      method: GET
+      params:
+        - name: id
+          value: 6ab1a2866c1ad2c0ff306340
+          type: path
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: date
+          value: Mon, 21 Sep 2026 21:35:30 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "77"
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"4d-CzyFfeUZSNltIwNoN0zt04AVxFk"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: fb2b626d-6508-4d76
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Origin, Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1790026530702-jmzzilcn7
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a3ec333579d11ca7-AMS
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Invalid digest key"
+          }
+  - name: Success
+    request:
+      url: "{{BASE}}/support-tickets/:id"
+      method: GET
+      params:
+        - name: id
+          value: 6ab1a2866c1ad2c0ff306340
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: vary
+          value: Origin
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: x-request-id
+          value: 1790027043851-b0mi60d2j
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "425"
+        - name: etag
+          value: W/"1a9-2nwtJ/4DXoik22ItyKPti8kR39M"
+        - name: date
+          value: Mon, 21 Sep 2026 21:44:04 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Support ticket retrieved successfully",
+            "data": {
+              "_id": "6ab1a2866c1ad2c0ff306340",
+              "email": "fawaz.abdganiyu@tobamsgroup.com",
+              "category": "Jobs",
+              "description": "Test ticket",
+              "attachmentUrl": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1790026373680_Screenshot 2026-08-09 at 19.15.12.png",
+              "status": "open",
+              "createdAt": "2026-09-21T21:32:54.715Z",
+              "updatedAt": "2026-09-21T21:32:54.715Z"
+            }
+          }

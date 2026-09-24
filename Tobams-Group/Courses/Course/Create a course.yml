@@ -7,17 +7,36 @@ http:
   method: POST
   url: "{{BASE}}/courses"
   body:
-    type: json
-    data: |-
-      {
-          "name": "Computer software development",
-          "description": "Important development course",
-          "category": "Career Development",
-          "price": "100",
-          "status": "status", // specific
-          "imageUrl": "file",
-          "courseUrl": "string"
-      }
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: Test course
+      - name: description
+        type: text
+        value: This is a good start
+        description: Optional course description
+      - name: category
+        type: text
+        value: Personal Development2
+      - name: price
+        type: text
+        value: Free
+        description: Optional course price
+      - name: status
+        type: text
+        value: Published
+        description: Optional course status (Draft, Published, Archived)
+      - name: image
+        type: file
+        value:
+          - /Users/fawazabdganiyu/Downloads/Image_20260908_090843_001.png
+        contentType: image/png
+        description: Optional course image
+      - name: courseUrl
+        type: text
+        value: test-course
+        description: courseUrl course URL
   auth:
     type: bearer
     token: "{{admin_access}}"
@@ -27,47 +46,214 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
-  - name: Create a course
+  - name: Invalid Course Category
     request:
-      url: "{{DEV_BASE}}/courses"
+      url: "{{BASE}}/courses"
       method: POST
-      headers:
-        - name: Content-Type
-          value: application/json
       body:
-        type: json
-        data: |-
-          {
-              "name": "number 89",
-              "description": "string",
-              "category": "string",
-              "price": "string",
-              "status": "string", // specific
-              "imageUrl": "file",
-              "courseUrl": "string"
-          }
+        type: multipart-form
+        data:
+          - name: name
+            type: text
+            value: Test course
+          - name: description
+            type: text
+            value: This is a good start
+            description: Optional course description
+          - name: category
+            type: text
+            value: Test Category
+          - name: price
+            type: text
+            value: Free
+            description: Optional course price
+          - name: status
+            type: text
+            value: Published
+            description: Optional course status (Draft, Published, Archived)
+          - name: image
+            type: file
+            value:
+              - /Users/fawazabdganiyu/Downloads/Image_20260908_090843_001.png
+            contentType: image/png
+            description: Optional course image
+          - name: courseUrl
+            type: text
+            value: test-course
+            description: courseUrl course URL
     response:
+      status: 500
+      statusText: Internal Server Error
       headers:
-        - name: Content-Type
-          value: application/json
+        - name: date
+          value: Mon, 14 Sep 2026 08:18:19 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "45"
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"34-J8uUfOV/RNos6nqPDMYqt87/aYU"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 24d3b5ad-ae21-445f
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Origin, Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1789373895773-fy11y91z2
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a3adf5adc8d9285a-AMS
+        - name: alt-svc
+          value: h3=":443"; ma=86400
       body:
         type: json
         data: |-
           {
-              "success": true,
-              "message": "Course created successfully",
-              "data": {
-                  "name": "string",
-                  "description": "string",
-                  "category": "string",
-                  "price": "string",
-                  "status": "string",
-                  "imageUrl": "file",
-                  "courseUrl": "string",
-                  "_id": "67a3b73e39a3ccf8c2903ebc",
-                  "createdAt": "2025-02-05T19:08:46.529Z",
-                  "updatedAt": "2025-02-05T19:08:46.529Z"
-              }
+            "success": true,
+            "message": "Category does not exist"
+          }
+  - name: Success
+    request:
+      url: "{{BASE}}/courses"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: name
+            type: text
+            value: Test course
+          - name: description
+            type: text
+            value: This is a good start
+            description: Optional course description
+          - name: category
+            type: text
+            value: Personal Development2
+          - name: price
+            type: text
+            value: Free
+            description: Optional course price
+          - name: status
+            type: text
+            value: Published
+            description: Optional course status (Draft, Published, Archived)
+          - name: image
+            type: file
+            value:
+              - /Users/fawazabdganiyu/Downloads/Image_20260908_090843_001.png
+            contentType: image/png
+            description: Optional course image
+          - name: courseUrl
+            type: text
+            value: test-course
+            description: courseUrl course URL
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: date
+          value: Mon, 14 Sep 2026 08:19:39 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "293"
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"1c5-07BP3ipafbsNOvn0I9EMq+WCLC8"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 2966f4bb-17d4-4ba4
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Origin, Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1789373976192-e9d1knp9y
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a3adf7abbef6971a-AMS
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Course created successfully",
+            "data": {
+              "name": "Test course",
+              "description": "This is a good start",
+              "category": "Personal Development2",
+              "price": "Free",
+              "status": "Published",
+              "imageUrl": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/courses/1789373976538_Image_20260908_090843_001.png",
+              "courseUrl": "test-course",
+              "_id": "6aa7ae1b85124ad518da6039",
+              "createdAt": "2026-09-14T08:19:39.360Z",
+              "updatedAt": "2026-09-14T08:19:39.360Z"
+            }
           }
