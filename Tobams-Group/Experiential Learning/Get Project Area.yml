@@ -1,0 +1,20 @@
+info:
+  name: Get Project Area
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{BASE}}/experiential-learning/project-areas/:slug"
+  params:
+    - name: slug
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
