@@ -1,0 +1,63 @@
+info:
+  name: Bulk Update Job Application Stage
+  type: http
+  seq: 10
+
+http:
+  method: PATCH
+  url: "{{BASE}}/job-apply/stages/bulk"
+  body:
+    type: json
+    data: |-
+      {
+        "applicationIds": [
+          "67d95f590b44aad1ccf50a4e",
+          "67d95f590b44aad1ccf50a4f"
+        ],
+        "stage": "Shortlisted"
+      }
+  auth:
+    type: bearer
+    token: "{{client_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Bulk Update Stage
+    request:
+      url: "{{BASE}}/job-apply/stages/bulk"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "applicationIds": [
+              "67d95f590b44aad1ccf50a4e",
+              "67d95f590b44aad1ccf50a4f"
+            ],
+            "stage": "Shortlisted"
+          }
+    response:
+      statusText: "200"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "2 applicant stages updated successfully",
+            "data": {
+              "matchedCount": 2,
+              "modifiedCount": 2,
+              "applicationIds": [
+                "67d95f590b44aad1ccf50a4e",
+                "67d95f590b44aad1ccf50a4f"
+              ],
+              "stage": "Shortlisted"
+            }
+          }
+
+# stage: Shortlisted | Assessment | Interview | Hired | Rejected

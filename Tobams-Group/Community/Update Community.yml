@@ -1,0 +1,28 @@
+info:
+  name: Update Community
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{BASE}}/communities/:communityId"
+  params:
+    - name: communityId
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "description":"",
+        "rules": [],
+        "industry":""
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

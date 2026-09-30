@@ -1,0 +1,23 @@
+info:
+  name: Ban Community Member -- Admin
+  type: http
+  seq: 10
+
+http:
+  method: DELETE
+  url: "{{BASE}}/communities/:communityId/members/:memberId"
+  params:
+    - name: communityId
+      value: ""
+      type: path
+    - name: memberId
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

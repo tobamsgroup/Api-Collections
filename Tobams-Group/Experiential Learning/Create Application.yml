@@ -1,0 +1,41 @@
+info:
+  name: Create Application
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BASE}}/experiential-learning/applications"
+  body:
+    type: json
+    data: |
+      {
+        "firstName": "Omokorede",
+        "lastName": "Adeyeye",
+        "email": "omokorede@gmail.com",
+        "country": "Nigeria",
+        "phone": "+2348012345678",
+        "institution": "University of Lagos",
+        "currentStage": "Student",
+        "courseOfStudy": "Computer Science",
+        "graduationYear": 2027,
+        "projectArea": "AI & Digital Transformation",
+        "projects": ["AI Strategy & Readiness", "Responsible AI"],
+        "whyInterested": "I want practical experience with AI.",
+        "skillsBrought": "Research and communication.",
+        "learningGoals": "Learn how organisations adopt AI.",
+        "skills": ["Teamwork", "Project Management"],
+        "hasPriorExperience": true,
+        "experienceSummary": "Led a campus AI club project.",
+        "cvUrl": "https://<bucket>.s3.<region>.amazonaws.com/experiential-learning/cv/123_cv.pdf",
+        "confirmCommitment": true,
+        "acceptTerms": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

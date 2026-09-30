@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/api/v1/votes/:webinarId/status"
+  url: "{{BASE}}/votes/:webinarId/status"
+  params:
+    - name: webinarId
+      value: ""
+      type: path
   auth: inherit
 
 settings:
@@ -13,6 +17,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Not Voted
@@ -31,7 +36,6 @@ examples:
               "hasVoted": false
             }
           }
-
   - name: Already Voted
     request:
       url: "{{baseUrl}}/api/v1/votes/671821b0bad7612a1c48de92/status"

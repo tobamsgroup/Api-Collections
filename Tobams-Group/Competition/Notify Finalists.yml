@@ -1,0 +1,46 @@
+info:
+  name: Notify Finalists
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{BASE}}/competition-applications/finalists/notify"
+  body:
+    type: json
+    data: |-
+      {
+        "webinarId": "6a5fb05bafb6fba76b5a8c53",
+        "finalists": [
+          {
+            "name": "GodsLove Adigwe",
+            "email": "godslove.adigwe@tobamsgroup.com"
+          },
+          {
+            "name": "lilian nwachukwu",
+            "email": "lilian.nwachukwu@tobamsgroup.com"
+          },
+          {
+            "name": "ebubechukwu okoye",
+            "email": "ebubechukwu.okoye@tobamsgroup.com"
+          },
+          {
+            "name": "kareemat ibraheem",
+            "email": "kareemat.ibraheem@tobamsgroup.com"
+          },
+          {
+            "name": "Tabitha Imafidon",
+            "email": "imafidontabitha@gmail.com"
+          }
+        ]
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTgzNjdmZWRmOGU1YmQ4YzkwYmFiNDkiLCJlbWFpbCI6InRoZXRlYW1AdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6IlN1cGVyX0FkbWluIiwiaWF0IjoxNzg5MDUwMDU0LCJleHAiOjE3ODkwNjQ0NTR9.4jU4NyrFjrJM8_Ro8w9wD9LVfwhGibluCyQuXJe_NoU
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
