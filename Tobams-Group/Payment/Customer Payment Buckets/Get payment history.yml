@@ -1,0 +1,182 @@
+info:
+  name: Get platform payment history
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{BASE}}/pay/customer-buckets/platform-transactions"
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get all payment transactions
+    request:
+      url: "{{BASE}}/pay/customer-buckets/platform-transactions?page=1&limit=20"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "20"
+          type: query
+    response:
+      statusText: "200"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Platform transactions retrieved successfully",
+            "data": {
+              "data": [
+                {
+                  "transactionId": "5431609472",
+                  "customerId": "CUS_lykvx7wemeqk8x1",
+                  "userId": "68e65ef6014bf70ef70f063b",
+                  "userEmail": "customer@example.com",
+                  "serviceProvider": "paystack",
+                  "amount": 110000,
+                  "currency": "NGN",
+                  "paymentStatus": "success",
+                  "purpose": "Subscription",
+                  "paymentMethod": "card",
+                  "createdAt": "2025-10-15T11:06:35.929Z"
+                }
+              ],
+              "total": 1,
+              "page": 1,
+              "limit": 20
+            }
+          }
+
+  - name: Filter by payment method
+    request:
+      url: "{{BASE}}/pay/customer-buckets/platform-transactions?paymentMethod=card"
+      method: GET
+      params:
+        - name: paymentMethod
+          value: card
+          type: query
+    response:
+      statusText: "200"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Platform transactions retrieved successfully",
+            "data": {
+              "data": [
+                {
+                  "transactionId": "5431609472",
+                  "customerId": "CUS_lykvx7wemeqk8x1",
+                  "userId": "68e65ef6014bf70ef70f063b",
+                  "userEmail": "customer@example.com",
+                  "serviceProvider": "paystack",
+                  "amount": 110000,
+                  "currency": "NGN",
+                  "paymentStatus": "success",
+                  "purpose": "Subscription",
+                  "paymentMethod": "card",
+                  "createdAt": "2025-10-15T11:06:35.929Z"
+                }
+              ],
+              "total": 1,
+              "page": 1,
+              "limit": 20
+            }
+          }
+
+  - name: Filter by status, purpose and date range
+    request:
+      url: "{{BASE}}/pay/customer-buckets/platform-transactions?status=success&purpose=Subscription&startDate=2025-10-01&endDate=2025-10-31"
+      method: GET
+      params:
+        - name: status
+          value: success
+          type: query
+        - name: purpose
+          value: Subscription
+          type: query
+        - name: startDate
+          value: "2025-10-01"
+          type: query
+        - name: endDate
+          value: "2025-10-31"
+          type: query
+    response:
+      statusText: "200"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Platform transactions retrieved successfully",
+            "data": {
+              "data": [
+                {
+                  "transactionId": "5431609472",
+                  "customerId": "CUS_lykvx7wemeqk8x1",
+                  "userId": "68e65ef6014bf70ef70f063b",
+                  "userEmail": "customer@example.com",
+                  "serviceProvider": "paystack",
+                  "amount": 110000,
+                  "currency": "NGN",
+                  "paymentStatus": "success",
+                  "purpose": "Subscription",
+                  "paymentMethod": "card",
+                  "createdAt": "2025-10-15T11:06:35.929Z"
+                }
+              ],
+              "total": 1,
+              "page": 1,
+              "limit": 20
+            }
+          }
+
+  - name: Search transactions
+    request:
+      url: "{{BASE}}/pay/customer-buckets/platform-transactions?search=5431609472"
+      method: GET
+      params:
+        - name: search
+          value: "5431609472"
+          type: query
+    response:
+      statusText: "200"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Platform transactions retrieved successfully",
+            "data": {
+              "data": [
+                {
+                  "transactionId": "5431609472",
+                  "customerId": "CUS_lykvx7wemeqk8x1",
+                  "userId": "68e65ef6014bf70ef70f063b",
+                  "userEmail": "customer@example.com",
+                  "serviceProvider": "paystack",
+                  "amount": 110000,
+                  "currency": "NGN",
+                  "paymentStatus": "success",
+                  "purpose": "Subscription",
+                  "paymentMethod": "card",
+                  "createdAt": "2025-10-15T11:06:35.929Z"
+                }
+              ],
+              "total": 1,
+              "page": 1,
+              "limit": 20
+            }
+          }
