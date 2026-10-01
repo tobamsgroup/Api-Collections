@@ -1,11 +1,11 @@
 info:
   name: job by ID
   type: http
-  seq: 2
+  seq: 6
 
 http:
   method: DELETE
-  url: "{{BASE}}/job_in_house/:jobID"
+  url: "{{BASE}}/job_client/:jobID"
   params:
     - name: jobID
       value: 67f0c9ddc2324c0dfcf5563d
