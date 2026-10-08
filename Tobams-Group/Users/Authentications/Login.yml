@@ -10,21 +10,8 @@ http:
     type: json
     data: |-
       {
-          // "password": "MentorExpert2023!",
-      //     "email": "fawaz.abdganiyu@tobamsgroup.com",
-          // "email": "ericsson.raphael@tobamsgroup.com",
-      //     "password": "Password123!"
-          // "email": "casi04@pirkong.com",
-          "email": "theteam@tobamsgroup.com",
-          // "password": "Paul.Elugbaju@tobamsgroup26"
-      //    "email": "taofeeq.abdulrasaq@tobamsgroup.com",
-          "password": "Admin@1234"
-      //     "email": "omokorede.adeyeye@tobamsgroup.com",
-      //     "password": "Omokorede99#"
-          // "email": "abdulrasaqolarewaju88@gmail.com",
-          // "password": "P@ssW0rd"
-          // "email": "harjibbolar26@gmail.com",
-          // "password": "Harjibbolar26@"
+        "email": "{{LOGIN_EMAIL}}",
+        "password": "{{LOGIN_PASSWORD}}"
       }
 
 runtime:
@@ -64,6 +51,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Wrong password

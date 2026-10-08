@@ -10,8 +10,8 @@ http:
     type: json
     data: |-
       {
-          "email": "theteam@tobamsgroup.com",
-          "password": "Test1234"
+          "email": "{{ADMIN_EMAIL}}",
+          "password": "{{ADMIN_PASSWORD}}"
       }
   auth: inherit
 

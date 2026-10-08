@@ -1,1 +1,8 @@
 *.DS_Store
+.env
+
+# Added by ggshield
+.cache_ggshield
+
+# Added by ggshield
+.cache_ggshield
