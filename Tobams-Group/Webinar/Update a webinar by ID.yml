@@ -8,38 +8,70 @@ http:
   url: "{{BASE}}/webinars/:id"
   params:
     - name: id
-      value: 6a7c8aa857a2ff0931b00171
+      value: 6a670691043cb8f5c9d398bc
       type: path
   body:
     type: json
     data: |-
       {
-        "date": "2026-09-26"
-      //   "speakers": [
-      //     {
-      //       "title": "Dr.",
-      //       "firstName": "Ona", // required
-      //       "lastName": "NewTon", // required
-      //       "position": "CEO",
-      //       "company": "Tobams Group",
-      //       "imageUrl": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1785788457132_Dr_Ona_Newton.png"
-      //     }
-      //   ],
-      //   "whoShouldAttend": [
-      //     "Young Professionals: Learn how to speak up and grow faster in your workplace.",
-      //     "Students & Recent Graduates: Get ready for the work world before you even apply for jobs.",
-      //     "Tech Workers & Developers: Combine your coding and technical skills with great communication.",
-      //     "Team Leaders & Managers: Learn how to guide your team with clear words and less friction."
-      //   ],
-      //   "whatYouWillLearn": {
-      //     "header": "Build the Everyday Skills That Set You Apart",
-      //     "description": "n this session, you will learn simple, practical ways to communicate better and stand out, whatever seat you're in:",
-      //     "learningPoints": [
-      //       "Clear Communication: How to explain big ideas in simple ways that leaders and managers easily understand.",
-      //       "Handling Misunderstandings: How to solve disagreements calmly without hurting your relationships with teammates.",
-      //       "Working with Others: How to build trust and work smoothly with people from different departments."
-      //     ]
-      //   }
+        "prices": [
+          {
+            "currency": "GBP",
+            "amount": 199,
+            "earlyBirdAmount": 29.99
+          },
+          {
+            "currency": "NGN",
+            "amount": 349143,
+            "earlyBirdAmount": 52700
+          },
+          {
+            "currency": "USD",
+            "amount": 262.62,
+            "earlyBirdAmount": 39.58
+          }
+        ],
+        //   "date": "2026-09-26"
+        "speakers": [
+          {
+            "title": "Dr.",
+            "firstName": "Ona", // required
+            "lastName": "NewTon", // required
+            "position": "CEO",
+            "company": "Tobams Group",
+            "imageUrl": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1785788457132_Dr_Ona_Newton.png"
+          }
+        ],
+        "heroImage": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1791467102136_Will_AI_Replace_Project_Managers_Hero .png",
+        "about": {
+          "header": "Empower Yourself As A Project Manager With AI",
+          "description": "Artificial Intelligence is rapidly transforming the way projects are planned, managed, monitored, and delivered. From automated reporting and predictive risk management to AI-powered reporting and decision support, organizations across the world are beginning to rethink what project management looks like in the age of intelligent technologies.\nIn this highly practical and thought-provoking webinar, Dr Ona Newton will explore how AI is transforming project delivery, what aspects of project management are most vulnerable to automation, what skills will become increasingly valuable, and how project professionals can future-proof their careers.",
+          "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1791467102136_Will_AI_Replace_Project_Managers_Hero .png"
+        },
+        "preview": {
+          "image": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1791467102136_Will_AI_Replace_Project_Managers_Hero .png",
+          "description": "Artificial Intelligence is changing how we learn, work and create opportunities. Discover how you can build relevant skills, embrace emerging possibilities and confidently prepare for an AI-powered future.",
+          "previewPoints": [
+            "How AI is reshaping careers, businesses and the future of work",
+            "The skills you need to remain relevant and competitive",
+            "Practical ways to use AI for learning, productivity and innovation"
+          ]
+        }
+        //   "whoShouldAttend": [
+        //     "Young Professionals: Learn how to speak up and grow faster in your workplace.",
+        //     "Students & Recent Graduates: Get ready for the work world before you even apply for jobs.",
+        //     "Tech Workers & Developers: Combine your coding and technical skills with great communication.",
+        //     "Team Leaders & Managers: Learn how to guide your team with clear words and less friction."
+        //   ],
+        //   "whatYouWillLearn": {
+        //     "header": "Build the Everyday Skills That Set You Apart",
+        //     "description": "n this session, you will learn simple, practical ways to communicate better and stand out, whatever seat you're in:",
+        //     "learningPoints": [
+        //       "Clear Communication: How to explain big ideas in simple ways that leaders and managers easily understand.",
+        //       "Handling Misunderstandings: How to solve disagreements calmly without hurting your relationships with teammates.",
+        //       "Working with Others: How to build trust and work smoothly with people from different departments."
+        //     ]
+        //   }
       }
   auth:
     type: bearer

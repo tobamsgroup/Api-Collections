@@ -18,7 +18,9 @@ http:
         "status": "Cancelled", // must be "Cancelled". Any other value returns a 400
         "reason": "Hiring freeze for Q4" // optional
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
 
 settings:
   encodeUrl: true
