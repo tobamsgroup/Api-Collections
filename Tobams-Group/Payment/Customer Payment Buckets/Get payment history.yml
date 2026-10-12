@@ -5,7 +5,36 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/pay/customer-buckets/platform-transactions"
+  url: "{{BASE}}/pay/customer-buckets/platform-transactions?page=&limit=&status=&provider=&paymentMethod=&purpose=&startDate=&endDate=&search="
+  params:
+    - name: page
+      value: ""
+      type: query
+    - name: limit
+      value: ""
+      type: query
+    - name: status
+      value: ""
+      type: query
+    - name: provider
+      value: ""
+      type: query
+    - name: paymentMethod
+      value: ""
+      type: query
+    - name: purpose
+      value: ""
+      type: query
+      description: "'assessment'|'project building'|'hosting event'|'join our platform'|'training'|'recruitment'|'subscription only'|'subscription with addOns'|'addOns only'|'hatt_support'|'webinar'|'course'"
+    - name: startDate
+      value: ""
+      type: query
+    - name: endDate
+      value: ""
+      type: query
+    - name: search
+      value: ""
+      type: query
   auth:
     type: bearer
     token: "{{admin_access}}"
@@ -15,6 +44,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Get all payment transactions
@@ -57,7 +87,6 @@ examples:
               "limit": 20
             }
           }
-
   - name: Filter by payment method
     request:
       url: "{{BASE}}/pay/customer-buckets/platform-transactions?paymentMethod=card"
@@ -95,7 +124,6 @@ examples:
               "limit": 20
             }
           }
-
   - name: Filter by status, purpose and date range
     request:
       url: "{{BASE}}/pay/customer-buckets/platform-transactions?status=success&purpose=Subscription&startDate=2025-10-01&endDate=2025-10-31"
@@ -108,10 +136,10 @@ examples:
           value: Subscription
           type: query
         - name: startDate
-          value: "2025-10-01"
+          value: 2025-10-01
           type: query
         - name: endDate
-          value: "2025-10-31"
+          value: 2025-10-31
           type: query
     response:
       statusText: "200"
@@ -142,7 +170,6 @@ examples:
               "limit": 20
             }
           }
-
   - name: Search transactions
     request:
       url: "{{BASE}}/pay/customer-buckets/platform-transactions?search=5431609472"

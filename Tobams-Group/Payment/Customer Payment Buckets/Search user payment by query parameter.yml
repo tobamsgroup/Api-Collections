@@ -16,6 +16,7 @@ http:
     - name: purpose
       value: subscription only
       type: query
+      description: "'assessment'|'project building'|'hosting event'|'join our platform'|'training'|'recruitment'|'subscription only'|'subscription with addOns'|'addOns only'|'hatt_support'|'webinar'|'course'"
     - name: customerId
       value: ""
       type: query
