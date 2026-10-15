@@ -140,7 +140,7 @@ examples:
         - name: sort
           value: ""
           type: query
-          description: newest|oldest|relevance|company
+          description: newest|oldest|relevance|company|salary-asc|salary-desc|title-asc|title-desc
           disabled: true
     response:
       status: 400

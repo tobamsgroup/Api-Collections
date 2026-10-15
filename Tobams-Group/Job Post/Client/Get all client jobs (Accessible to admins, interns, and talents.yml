@@ -46,7 +46,7 @@ http:
     - name: sort
       value: ""
       type: query
-      description: sort=newest|oldest|relevance
+      description: sort=newest|oldest|relevance||salary-asc|salary-desc|title-asc|title-desc
       disabled: true
   auth:
     type: bearer
