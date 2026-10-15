@@ -1,0 +1,29 @@
+info:
+  name: Update Project
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/experiential-learning/projects/:id"
+  params:
+    - name: id
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Grid Insights",
+        "projectAreaId": "6ad0ec1a06a65052198ea770"
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
