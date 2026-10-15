@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/job_in_house/id/:jobId"
+  url: "{{BASE}}/job_client/id/:jobId"
   params:
     - name: jobId
       value: 67f0c9ddc2324c0dfcf5563d

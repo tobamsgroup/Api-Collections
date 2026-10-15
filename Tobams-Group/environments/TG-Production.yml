@@ -4,3 +4,11 @@ variables:
     value: https://tobams-group-be.onrender.com/api/v1
   - secret: true
     name: DIGEST_KEY
+  - secret: true
+    name: LOGIN_EMAIL
+  - secret: true
+    name: LOGIN_PASSWORD
+  - secret: true
+    name: ADMIN_EMAIL
+  - secret: true
+    name: ADMIN_PASSWORD

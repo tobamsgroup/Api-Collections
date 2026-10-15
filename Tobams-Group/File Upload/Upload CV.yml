@@ -12,7 +12,7 @@ http:
       - name: file
         type: file
         value:
-          - /Users/fawazabdganiyu/Downloads/Dr_Ona_Newton.png
+          - /Users/fawazabdganiyu/Downloads/Will_AI_Replace_Project_Managers_.png
         contentType: image/png
   auth: inherit
 
@@ -21,6 +21,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Dr image

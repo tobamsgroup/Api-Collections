@@ -25,6 +25,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Bulk Update Stage
@@ -50,14 +51,15 @@ examples:
             "success": true,
             "message": "2 applicant stages updated successfully",
             "data": {
+              "stage": "Shortlisted",
               "matchedCount": 2,
               "modifiedCount": 2,
-              "applicationIds": [
+              "updatedApplicationIds": [
                 "67d95f590b44aad1ccf50a4e",
                 "67d95f590b44aad1ccf50a4f"
               ],
-              "stage": "Shortlisted"
+              "unchangedApplicationIds": [],
+              "conflictedApplicationIds": []
+              
             }
           }
-
-# stage: Shortlisted | Assessment | Interview | Hired | Rejected

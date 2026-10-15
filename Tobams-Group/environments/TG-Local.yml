@@ -12,3 +12,11 @@ variables:
     name: org_refresh
   - secret: true
     name: DIGEST_KEY
+  - secret: true
+    name: LOGIN_EMAIL
+  - secret: true
+    name: LOGIN_PASSWORD
+  - secret: true
+    name: ADMIN_EMAIL
+  - secret: true
+    name: ADMIN_PASSWORD
