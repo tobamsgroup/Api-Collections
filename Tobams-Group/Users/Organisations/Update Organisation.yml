@@ -10,8 +10,6 @@ http:
     type: json
     data: "{\r
 
-      \    \"companyName\": \"Tech Innovations Inc.\",\r
-
       \    \"companyType\": \"Consultation Company\",\r
 
       \    \"companySize\": \"0-9\", // Optional, Enum Options: '0-9', '10-49', '50-249', '250-999', '1000 and above' \r
@@ -47,8 +45,6 @@ examples:
       body:
         type: json
         data: "{\r
-
-          \    \"companyName\": \"Tech Innovations Inc.\",\r
 
           \    \"companyType\": \"Consultation Company\",\r
 
@@ -87,7 +83,6 @@ examples:
                   "recentHiresCount": 0,
                   "_id": "67bf2c6a974a6b52304105a1",
                   "userId": "67bf2c6a974a6b52304105a0",
-                  "companyName": "Tech Innovations Inc.",
                   "companySize": "0-9",
                   "industry": "Technology",
                   "rating": 0,
@@ -137,7 +132,6 @@ examples:
                   "recentHiresCount": 0,
                   "_id": "67bf2c6a974a6b52304105a1",
                   "userId": "67bf2c6a974a6b52304105a0",
-                  "companyName": "Tech Innovations Inc.",
                   "companySize": "0-9",
                   "industry": "Technology",
                   "rating": 0,
@@ -180,7 +174,6 @@ examples:
                   "recentHiresCount": 0,
                   "_id": "67bf2c6a974a6b52304105a1",
                   "userId": "67bf2c6a974a6b52304105a0",
-                  "companyName": "Tech Innovations Inc.",
                   "companySize": "0-9",
                   "industry": "Technology",
                   "rating": 0,
@@ -247,7 +240,6 @@ examples:
                   "recentHiresCount": 0,
                   "_id": "67bf2c6a974a6b52304105a1",
                   "userId": "67bf2c6a974a6b52304105a0",
-                  "companyName": "Tech Innovations Inc.",
                   "companySize": "0-9",
                   "industry": "Technology",
                   "rating": 0,
@@ -255,6 +247,83 @@ examples:
                   "createdAt": "2025-02-26T14:59:54.295Z",
                   "updatedAt": "2025-03-12T23:13:56.740Z",
                   "about": "Tobams Group is a leading provider of digital solutions, focusing on mobile app development, website design, tech talent acquisition, and strategic marketing, aiming to elevate businesses to new heights.",
+                  "companyType": "Consultation Company",
+                  "website": "www.tobamsgroup.com"
+              }
+          }
+  - name: update companyName
+    request:
+      url: "{{BASE}}/organisation/"
+      method: PATCH
+      body:
+        type: json
+        data: "{\r
+
+          \    \"companyName\": \"Tech Innovations Inc.\"\r
+
+          }"
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "message": "Company name cannot be updated without admin approval."
+          }
+
+  - name: update companyName with about field
+    request:
+      url: "{{BASE}}/organisation/"
+      method: PATCH
+      body:
+        type: json
+        data: "{\r
+
+          \    \"companyName\": \"Tech Innovations Inc.\",\r
+
+          \    \"about\": \"Tobams Group is a leading provider of digital solutions, focusing on mobile app development, aiming to elevate businesses to new heights.\"\r
+
+          }"
+    response:
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Profile updated successfully. Company name cannot be edited without admin approval.."
+              "data": {
+                  "hiringNeeds": {
+                      "industry": "Technology and Software Development",
+                      "coreValues": [
+                          "integrity",
+                          "transparency",
+                          "excellence"
+                      ],
+                      "preferredCandidate": "We are seeking dynamic individuals who are passionate about technology, eager to innovate, and committed to delivering high-quality solutions. Candidates should be self-motivated, adaptable, and ready to take on new challenges in a fast-paced environment.",
+                      "preferredSkills": "Technical Expertise: Strong skills in software development, cloud computing, or data analysis are crucial.\nProblem-Solving: The ability to think critically and find creative solutions to complex challenges.\nCommunication: Excellent interpersonal and communication skills are key for team collaboration and client interactions.\nAdaptability: Being open to change and able to quickly learn new technologies and methodologies.\nProactive Mindset: Taking initiative and ownership of tasks to drive projects forward.",
+                      "preferredJobType": [
+                          "Full Time",
+                          "Remote"
+                      ]
+                  },
+                  "openPositionsCount": 0,
+                  "candidatesCount": 0,
+                  "recentHiresCount": 0,
+                  "_id": "67bf2c6a974a6b52304105a1",
+                  "userId": "67bf2c6a974a6b52304105a0",
+                  "companySize": "0-9",
+                  "industry": "Technology",
+                  "rating": 0,
+                  "reviews": [],
+                  "createdAt": "2025-02-26T14:59:54.295Z",
+                  "updatedAt": "2025-03-12T23:13:56.740Z",
+                  "about": "Tobams Group is a leading provider of digital solutions, focusing on mobile app development, aiming to elevate businesses to new heights.",
                   "companyType": "Consultation Company",
                   "website": "www.tobamsgroup.com"
               }
@@ -276,3 +345,6 @@ docs: |-
   ABOVE_ONE_THOUSAND = "1000 and above", //Very Large Enterprise
 
   }
+
+  companyName is not editable, it is set during the registration process and cannot be changed later. 
+  It can only be changed by admin approval.
