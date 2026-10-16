@@ -1,16 +1,18 @@
 info:
-  name: Get Project Area
+  name: Delete Project Area
   type: http
-  seq: 2
+  seq: 5
 
 http:
-  method: GET
-  url: "{{BASE}}/experiential-learning/project-areas/:slug"
+  method: DELETE
+  url: "{{BASE}}/experiential-learning/project-areas/:id"
   params:
-    - name: slug
+    - name: id
       value: ""
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: ""
 
 settings:
   encodeUrl: true
