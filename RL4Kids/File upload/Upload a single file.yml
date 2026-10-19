@@ -12,12 +12,16 @@ http:
       - name: file
         type: file
         value:
-          - Bk6ZoyI-2/birthday badge.png
+          - /Users/mac/Downloads/blog pics.jpeg
       - name: folder
         type: text
-        value: badges
-        description: RLK badges
+        value: BLOG
   auth: inherit
+
+runtime:
+  variables:
+    - name: base_url
+      value: https://rl4kids-be.onrender.com/api/v1
 
 settings:
   encodeUrl: true

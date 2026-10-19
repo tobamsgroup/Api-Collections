@@ -1,0 +1,3233 @@
+[{
+  "_id": {
+    "$oid": "66b4daa4ae52ce617b076691"
+  },
+  "Contact": {
+    "email": "emmanuelgodloves@gmail.com",
+    "telephone": "+2349057499613"
+  },
+  "Location": {
+    "address": "5, Thompson street, Abule Eko off Ijede road, Ikorodu, Lagos state",
+    "state": "Lagos ",
+    "city": "Ikorodu",
+    "country": "Nigeria"
+  },
+  "FirstName": "Emmanuel",
+  "LastName": "Odusanya",
+  "DOB": "1994-03-21",
+  "TechSpecialisation": {
+    "field": "Data Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/emmanuel-odusanya-b423b0141_mytechjourney-tech-data-activity-7219510800330145792-Wb9X?utm_source=share&utm_medium=member_ios",
+    "postedOnSocials": true
+  },
+  "PhysicalAvalability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": false,
+  "createdAt": {
+    "$date": "2024-08-08T14:48:04.686Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-08T14:48:04.686Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66b5c79cae52ce617b0767f0"
+  },
+  "Contact": {
+    "email": "juliusinam27@gmail.com",
+    "telephone": "+23409043350473"
+  },
+  "Location": {
+    "address": "Eka street Uyo ",
+    "state": "Akwa Ibom State ",
+    "city": "Uyo ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Julius ",
+  "LastName": "Inam",
+  "DOB": "2003-05-17",
+  "TechSpecialisation": {
+    "field": "Content Creation",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.facebook.com/julius.inam/videos/1224883918674789/?mibextid=rS40aB7S9Ucbxw6v",
+    "postedOnSocials": true
+  },
+  "PhysicalAvalability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-09T07:39:08.576Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-09T07:39:08.576Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66b5db80ae52ce617b076801"
+  },
+  "Contact": {
+    "email": "udemeoudofia@gmail.com",
+    "telephone": "+2348120704038"
+  },
+  "Location": {
+    "address": "No. 10 Deeper Life Avenue, Off IBB Way",
+    "state": "Akwa Ibom",
+    "city": "uyo",
+    "country": "Nigeria"
+  },
+  "FirstName": "Udeme",
+  "LastName": "Udofia ",
+  "DOB": "2003-10-28",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/udeme-ofonime-b41b251a6_thank-you-very-much-for-this-opportunity-activity-7227599296391507968-dTkp?utm_source=share&utm_medium=member_android",
+    "postedOnSocials": true
+  },
+  "PhysicalAvalability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-09T09:04:00.210Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-09T09:04:00.210Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66b611f3ae52ce617b07684e"
+  },
+  "Contact": {
+    "email": "mhizfrank001@gmail.com",
+    "telephone": "+2347039119717"
+  },
+  "Location": {
+    "address": "8 Akpa urua street, Effiat offot, uyo. Akwa Ibom State",
+    "state": "Akwa Ibom",
+    "city": "Uyo",
+    "country": "Nigeria"
+  },
+  "FirstName": "Mfoniso ",
+  "LastName": "Frank ",
+  "DOB": "2003-09-12",
+  "TechSpecialisation": {
+    "field": "Digital Marketing",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "Alright ",
+    "postedOnSocials": false
+  },
+  "PhysicalAvalability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-09T12:56:19.873Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-09T12:56:19.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66b644a9ae52ce617b0768ab"
+  },
+  "Contact": {
+    "email": "dannyudo15@gmail.com",
+    "telephone": "+23409026876052"
+  },
+  "Location": {
+    "address": "56 Enenekpene Road",
+    "state": "Akwa Ibom",
+    "city": "Eket",
+    "country": "Nigeria"
+  },
+  "FirstName": "Daniel",
+  "LastName": "Udo",
+  "DOB": "2005-05-09",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/daniel-udo-3327392a7_my-tech-journey-tobams-group-dr-activity-7227704300351721474-eyMZ?utm_source=share&utm_medium=member_android",
+    "postedOnSocials": true
+  },
+  "PhysicalAvalability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-09T16:32:41.834Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-09T16:32:41.834Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66b6510aae52ce617b0768c0"
+  },
+  "Contact": {
+    "email": "silasabasiodiong36@gmail.com",
+    "telephone": "+2349011455066"
+  },
+  "Location": {
+    "address": "Idoro road by Berger yard ",
+    "state": "Akwa ibom state ",
+    "city": "Uyo ",
+    "country": "Nigeria "
+  },
+  "FirstName": "Abasiodiong ",
+  "LastName": "Silas ",
+  "DOB": "2004-01-30",
+  "TechSpecialisation": {
+    "field": "Social Media Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://tobamsgroup.com/help-a-tech-talent-form-2.0",
+    "postedOnSocials": false
+  },
+  "PhysicalAvalability": false,
+  "TobamsSocialFollower": false,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-09T17:25:30.312Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-09T17:25:30.312Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66b9b06dae52ce617b076b9d"
+  },
+  "Contact": {
+    "email": "simeonreuben6@gmail.com",
+    "telephone": "+23409047274304"
+  },
+  "Location": {
+    "address": "Eastern Obolo, Akwa Ibom state",
+    "state": "Akwa Ibom",
+    "city": "Eastern Obolo",
+    "country": "Nigeria"
+  },
+  "FirstName": "Reuben",
+  "LastName": "Simeon",
+  "DOB": "2000-08-04",
+  "TechSpecialisation": {
+    "field": "Product Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://vm.tiktok.com/ZMrgXRvMr/",
+    "postedOnSocials": false
+  },
+  "PhysicalAvalability": false,
+  "TobamsSocialFollower": false,
+  "SubscribeToNewsletter": false,
+  "createdAt": {
+    "$date": "2024-08-12T06:49:17.675Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-12T06:49:17.675Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bb5143b2336f49cd4b0adc"
+  },
+  "Contact": {
+    "email": "etimbukudoetuk@gmail.com",
+    "telephone": "+2347045106488"
+  },
+  "Location": {
+    "address": "No. 22 Davis Ekpo Street, Abak",
+    "state": "Akwa Ibom",
+    "city": "Abak",
+    "country": "Nigeria"
+  },
+  "FirstName": "ETIMBUK",
+  "LastName": "UDOETUK",
+  "DOB": "2005-08-22",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.facebook.com/JohnsonConcept",
+    "postedOnSocials": false
+  },
+  "PhysicalAvalability": false,
+  "TobamsSocialFollower": false,
+  "SubscribeToNewsletter": false,
+  "createdAt": {
+    "$date": "2024-08-13T12:27:47.537Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-13T12:27:47.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c8a55b68303de0cde9ea7c"
+  },
+  "Contact": {
+    "email": "aminatrauf34@gmail.com",
+    "telephone": "+2349133214035"
+  },
+  "Location": {
+    "address": "N5B\\645 itutaba ibadan",
+    "state": "Ibadan",
+    "city": "Ibadan",
+    "country": "Nigeria"
+  },
+  "FirstName": "Aminat",
+  "LastName": "Rauf",
+  "DOB": "2004-04-04",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.figma.com/design/W456UFYaM7Ajvzp2A3IYiz/Our-Story?node-id=0-1&t=Aqu0cWo4nReRbtjn-1",
+    "postedOnSocials": false
+  },
+  "PhysicalAvalability": true,
+  "TobamsSocialFollower": false,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-23T15:06:03.435Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-23T15:06:03.435Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c8dbb668303de0cde9ebae"
+  },
+  "Contact": {
+    "email": "abubakarlawanishaq98@gmail.com",
+    "telephone": "+23408167738725"
+  },
+  "Location": {
+    "address": "No.49 Dorayi sabonfegi ",
+    "state": "Kano",
+    "city": "Kano ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Abubakar",
+  "LastName": "Lawan Ishaq ",
+  "DOB": "2002-01-01",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/abubakar-lawan-ishaq-78175227b_journey-to-teach-talent-activity-7232813961505587201-o-Z4?utm_source=share&utm_medium=member_android",
+    "postedOnSocials": true
+  },
+  "PhysicalAvalability": false,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-23T18:57:58.201Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-23T18:57:58.201Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c99ef468303de0cde9ebee"
+  },
+  "Contact": {
+    "email": "eoggraphixworld@gmail.com",
+    "telephone": "+23409033707708"
+  },
+  "Location": {
+    "address": "RM 6, Chocolate Castle, Welder Street, Permanent site, Akungba-Akoko",
+    "state": "Ondo",
+    "city": "Akungba",
+    "country": "Nigeria"
+  },
+  "FirstName": "Israel",
+  "LastName": "Adenekan",
+  "DOB": "2003-07-25",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/adenekan-israel-34135923b_tobams-tobamsgroup-jitenewton-activity-7224238566627790848-Wdto?utm_source=share&utm_medium=member_desktop",
+    "postedOnSocials": true
+  },
+  "PhysicalAvalability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-24T08:51:00.831Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T08:51:00.831Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c9aa8f68303de0cde9ebfd"
+  },
+  "Contact": {
+    "email": "bamigboyesunday11@gmail.com",
+    "telephone": "+2349066487370"
+  },
+  "Location": {
+    "address": "22, Oke Odo Tanke, Bungalow",
+    "state": "Kwara",
+    "city": "Ilorin",
+    "country": "Nigeria"
+  },
+  "FirstName": "Sunday ",
+  "LastName": "Bamigboye ",
+  "DOB": "1999-01-17",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/bamigboye-sunday-17832226b_i-am-excited-to-share-about-my-tech-journey-activity-7232722606683037696-v2WB?utm_source=share&utm_medium=member_android",
+    "postedOnSocials": true
+  },
+  "PhysicalAvalability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-24T09:40:31.822Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-24T09:40:31.822Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66ca83d57dd6214deb04d7b3"
+  },
+  "Contact": {
+    "email": "elijahtunde41@gmail.com",
+    "telephone": "+2348078674683"
+  },
+  "Location": {
+    "address": "5 Mosafote Street Jabutu area, Ascon bus-stop along Lagos-Ibadan express way ",
+    "state": "Ogun State ",
+    "city": "Asese",
+    "country": "Nigeria"
+  },
+  "FirstName": "Elijah ",
+  "LastName": "Raheem",
+  "DOB": "1993-05-08",
+  "TechSpecialisation": {
+    "field": "Digital Marketing",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/elijah-raheem_thank-you-tobams-group-for-the-great-insights-activity-7233277431346810881-WmIs?utm_source=share&utm_medium=member_android",
+    "postedOnSocials": true
+  },
+  "PhysicalAvalability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-25T01:07:33.881Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T01:07:33.881Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66cb9e1c3887397532adb883"
+  },
+  "Contact": {
+    "email": "adejoksasuke@gmail.com",
+    "telephone": "+2349065622305"
+  },
+  "Location": {
+    "address": "2, omosanya street, ologuneru, Ibadan",
+    "state": "Oyo",
+    "city": "Ibadan",
+    "country": "Nigeria"
+  },
+  "FirstName": "Obaoluwa",
+  "LastName": "Adejokun",
+  "DOB": "2005-12-29",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/obaloluwa-adejokun-247b47324_sharing-my-journey-in-tech-with-tobams-group-activity-7233552515210821632-3u94?utm_source=share&utm_medium=member_android",
+    "postedOnSocials": true
+  },
+  "PhysicalAvalability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2024-08-25T21:11:56.079Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-25T21:11:56.079Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d825b8a5ef4413e268dd2e"
+  },
+  "Contact": {
+    "email": "mobolaji.oginni@tobamsgroup.com",
+    "telephone": "+2348064461872"
+  },
+  "Location": {
+    "address": "asdfghjkl",
+    "state": "xcvbnjmk,l",
+    "city": "xcvbhnjmk,l",
+    "country": "Algeria"
+  },
+  "FirstName": "Mobolaji",
+  "LastName": "Richard",
+  "DOB": "2025-12-24",
+  "TechSpecialisation": {
+    "field": "Product Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "cfvgbhnjmk,",
+    "postedOnSocials": true
+  },
+  "PhysicalAvailability": true,
+  "TobamsSocialFollower": false,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-03-17T13:38:00.357Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-17T13:38:00.357Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d82a69a5ef4413e268dd52"
+  },
+  "Contact": {
+    "email": "mobolajirichard23@gmail.com",
+    "telephone": "+2348064461872"
+  },
+  "Location": {
+    "address": "asdfghjkl;'zxcvbnm,.",
+    "state": "dfghjkfghj",
+    "city": "fghjghjk",
+    "country": "Nigeria"
+  },
+  "FirstName": "Mobolaji",
+  "LastName": "Richard",
+  "DOB": "2025-03-20",
+  "TechSpecialisation": {
+    "field": "Social Media Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "asdfghjk",
+    "postedOnSocials": true
+  },
+  "PhysicalAvailability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-03-17T13:58:01.038Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-17T13:58:01.038Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d82b96a5ef4413e268dd58"
+  },
+  "Contact": {
+    "email": "mariam.sodeke@tobamsgroup.com",
+    "telephone": "+2348085445606"
+  },
+  "Location": {
+    "address": "Gbagada ",
+    "state": "Lagos",
+    "city": "Lagos",
+    "country": "Nigeria"
+  },
+  "FirstName": "Mariam ",
+  "LastName": "Sodeke ",
+  "DOB": "2024-03-17",
+  "TechSpecialisation": {
+    "field": "Social Media Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "Wsfttyuu",
+    "postedOnSocials": true
+  },
+  "PhysicalAvailability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-03-17T14:03:02.212Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-17T14:03:02.212Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d83a1ea5ef4413e268dd92"
+  },
+  "Contact": {
+    "email": "testing@gmail.com",
+    "telephone": "+2349075847598"
+  },
+  "Location": {
+    "address": "Not available",
+    "state": "Lagos",
+    "city": "Ikeja",
+    "country": "Nigeria"
+  },
+  "FirstName": "test ola",
+  "LastName": "test alo",
+  "DOB": "date",
+  "TechSpecialisation": {
+    "field": "Product Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "link.com",
+    "postedOnSocials": true
+  },
+  "PhysicalAvailability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-03-17T15:05:02.429Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-19T09:48:43.471Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d94f4ca5ef4413e268de17"
+  },
+  "Contact": {
+    "email": "favourpeter99@gmail.com",
+    "telephone": "+2349031590927"
+  },
+  "Location": {
+    "address": "ALAGBADO, LAGOS",
+    "state": "LAGOS",
+    "city": "LAGOS",
+    "country": "Nigeria"
+  },
+  "FirstName": "FAVOUR",
+  "LastName": "PETER",
+  "DOB": "2000-03-10",
+  "TechSpecialisation": {
+    "field": "Project Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://tobamsgroup.com/",
+    "postedOnSocials": true
+  },
+  "PhysicalAvailability": true,
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-03-18T10:47:40.323Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-18T10:47:40.323Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e54feb6bc12bf3abac2697"
+  },
+  "Contact": {
+    "email": "mobolajirichard24@gmail.com",
+    "telephone": "+2348064461872"
+  },
+  "Location": {
+    "address": "mhngbfvdcxsza",
+    "state": "yhtgrfedw",
+    "city": "htgrfedws",
+    "country": "Albania"
+  },
+  "FirstName": "Mobolaji",
+  "LastName": "ertytre",
+  "DOB": "2023-01-23",
+  "TechSpecialisation": {
+    "field": "Others Specify",
+    "others": "yhtgrfed"
+  },
+  "VideoDetails": {
+    "link": "jyhtgrfedws",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": false,
+  "SubscribeToNewsletter": false,
+  "createdAt": {
+    "$date": "2025-03-27T13:17:31.919Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-27T13:17:31.919Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e554066bc12bf3abac26a6"
+  },
+  "Contact": {
+    "email": "mariamsodeke@gmail.com",
+    "telephone": "+2348085445606"
+  },
+  "Location": {
+    "address": "Gbagada Lagos ",
+    "state": "Lagos",
+    "city": "Lagos",
+    "country": "Nigeria"
+  },
+  "FirstName": "Mariam ",
+  "LastName": "Sodeke ",
+  "DOB": "2024-12-11",
+  "TechSpecialisation": {
+    "field": "Social Media Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "Hhjjjk",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-03-27T13:35:02.163Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-27T13:35:02.163Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67e5a92c6bc12bf3abac26f4"
+  },
+  "Contact": {
+    "email": "nicholasdaramola70@gmail.com",
+    "telephone": "+2349031875266"
+  },
+  "Location": {
+    "address": "No 64b, Afuremu Street, Okebedo Quarters, Ilawe Ekiti.",
+    "state": "Ekiti State ",
+    "city": "Ilawe Ekiti",
+    "country": "Nigeria"
+  },
+  "FirstName": "Nicholas",
+  "LastName": "Daramola",
+  "DOB": "2007-09-13",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/nicholas-ayomide-daramola-23b278295_helpatechtalent-tobamgroup-techjourney-activity-7310794766898622464-XRlQ?utm_source=share&utm_medium=member_android&rcm=ACoAAEdolk8BDGpKoqQM-guN922TW3aYGKzSCIA",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-03-27T19:38:20.254Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-27T19:38:20.254Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ee5baac2324c0dfcf554f0"
+  },
+  "Contact": {
+    "email": "mobolajirichard2d3@gmail.com",
+    "telephone": "+2348064461872"
+  },
+  "Location": {
+    "address": "No 5, Concord Estate, Ologuneru Ibadan, Oyo State",
+    "state": "nvjfnvfj",
+    "city": "ndnjdnc",
+    "country": "Algeria"
+  },
+  "FirstName": "Mobolaji",
+  "LastName": "Richard",
+  "DOB": "2025-04-23",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "nfjnrjfnrjnfrjfnjrf",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": false,
+  "SubscribeToNewsletter": false,
+  "createdAt": {
+    "$date": "2025-04-03T09:58:02.351Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-03T09:58:02.351Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ee5c1cc2324c0dfcf554f3"
+  },
+  "Contact": {
+    "email": "mobolajiricharnjd23@gmail.com",
+    "telephone": "+2348064461872"
+  },
+  "Location": {
+    "address": "No 5, Concord Estate, Ologuneru Ibadan, Oyo State",
+    "state": "nvjfnvfj",
+    "city": "Lagos",
+    "country": "Andorra"
+  },
+  "FirstName": "Mobolaji",
+  "LastName": "Richard",
+  "DOB": "2025-04-19",
+  "TechSpecialisation": {
+    "field": "Others Specify",
+    "others": "specify"
+  },
+  "VideoDetails": {
+    "link": "nfjnrjfnrjnfrjfnjrfrtrt",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": false,
+  "SubscribeToNewsletter": false,
+  "createdAt": {
+    "$date": "2025-04-03T09:59:56.661Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-03T09:59:56.661Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67ee5f91c2324c0dfcf55509"
+  },
+  "Contact": {
+    "email": "ogundeletoyyeebah@gmail.com",
+    "telephone": "+2349167610176"
+  },
+  "Location": {
+    "address": "11, Adetola Street, Asipa Ijeja, Soyoye, Abeokuta",
+    "state": "Ogun",
+    "city": "Abeokuta",
+    "country": "Nigeria"
+  },
+  "FirstName": "Omolara ",
+  "LastName": "Ogundele ",
+  "DOB": "1997-12-31",
+  "TechSpecialisation": {
+    "field": "Social Media Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/omolara-ogundele-4379a82b6_thank-you-tombams-group-for-the-invaluable-activity-7313122959257219073-uBqT?utm_source=share&utm_medium=member_android&rcm=ACoAAEv3LmsBhzLt7ebQxvRCGxKWrwj-NWfkcXU",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-03T10:14:41.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-20T19:22:43.401Z"
+  },
+  "PhysicalAvailability": true
+},
+{
+  "_id": {
+    "$oid": "67f10624c2324c0dfcf55689"
+  },
+  "Contact": {
+    "email": "feliciamosunmola2018@gmail.com",
+    "telephone": "+23408074989459"
+  },
+  "Location": {
+    "address": "9, Ogundola Street ",
+    "state": "Lagos ",
+    "city": "Lagos ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Felicia ",
+  "LastName": "Shofoluwe ",
+  "DOB": "2000-07-18",
+  "TechSpecialisation": {
+    "field": "Social Media Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/felicia-shofoluwe-ab605830a_here-is-my-entry-video-for-the-help-and-ugcPost-7313929456803368963-g-Kb?utm_source=share&utm_medium=member_android&rcm=ACoAAE6scSoB-zzILJIhTLpenY9KuNfGn_NWoQo",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-05T10:29:56.468Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-05T10:29:56.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f4ed9dedc4ea908f842c28"
+  },
+  "Contact": {
+    "email": "petergrace1996@gmail.com",
+    "telephone": "+2348165489319"
+  },
+  "Location": {
+    "address": "26, Toyin Lampty Street, Alaso, Alagbado, Lagos State, Nigeria.",
+    "state": "Lagos",
+    "city": "Lagos",
+    "country": "Nigeria"
+  },
+  "FirstName": "Grace",
+  "LastName": "Peter",
+  "DOB": "1996-07-07",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/grace-peter-b3031018a_helpatechtalent-tobamsgroup-techforimpact-activity-7315305519726977024-rTFh?utm_source=share&utm_medium=member_desktop&rcm=ACoAACyKW1QBrY8pHk9ryDZe1KUi7NN1WP02qt8",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-08T09:34:21.232Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-08T09:34:21.232Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f8316d1592a0d5e14b2530"
+  },
+  "Contact": {
+    "email": "ilawoletobos@gmail.com",
+    "telephone": "+2342348116769670"
+  },
+  "Location": {
+    "address": "15 Medoye Street Sabo Ilaje Ajangbadi Ojo Lagos State",
+    "state": "LA",
+    "city": "Lagos",
+    "country": "Nigeria"
+  },
+  "FirstName": "Oluwatobi",
+  "LastName": "Ilawole",
+  "DOB": "2020-06-19",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://oluwatobby007.framer.webs",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": false,
+  "createdAt": {
+    "$date": "2025-04-10T21:00:29.423Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-10T21:00:29.423Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f96895b896c973a71af7b9"
+  },
+  "Contact": {
+    "email": "iamakintayo@gmail.com",
+    "telephone": "+23408169232205"
+  },
+  "Location": {
+    "address": "Ayeni house, Yemetu, UCH. ",
+    "state": "Oyo",
+    "city": "Ibadan",
+    "country": "Nigeria"
+  },
+  "FirstName": "Akintayo",
+  "LastName": "Adewale",
+  "DOB": "2002-01-16",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://surl.li/lbdvgq",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-11T19:08:05.713Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-11T19:08:05.713Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67fe193ffb94d7c4b5d310dc"
+  },
+  "Contact": {
+    "email": "akintadetemi19@gmail.com",
+    "telephone": "+2349063084231"
+  },
+  "Location": {
+    "address": "Agbowo, Opposite University of Ibadan ",
+    "state": "Oyo",
+    "city": "Ibadan",
+    "country": "Nigeria"
+  },
+  "FirstName": "Temiloluwa ",
+  "LastName": "Akintade ",
+  "DOB": "2004-05-28",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/temiloluwa-akintade-4b6798254_tobamsgroup-frontend-activity-7317825498745585664-haeJ?utm_source=share&utm_medium=member_android&rcm=ACoAAD7DpcoBpcYpC0A13UY-KfQT9DTp-46IlBQ",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": false,
+  "createdAt": {
+    "$date": "2025-04-15T08:30:55.090Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-15T08:30:55.090Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68064ed4e2167de9f96dcac3"
+  },
+  "Contact": {
+    "email": "ruthjanetsule@gmail.com",
+    "telephone": "+2348107676177"
+  },
+  "Location": {
+    "address": "Central Police Station, Barracks Old UNTH Road Enugu.",
+    "state": "Enugu",
+    "city": "Enugu ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Ruth Janet ",
+  "LastName": "Sule ",
+  "DOB": "1995-10-09",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/ruth-janet-sule-de-design-dynamo%F0%9F%92%BB-5170241b5_tobamsgroup-tech-helpatechtalent-activity-7319011098412650496-JaYx?utm_source=share&utm_medium=member_android&rcm=ACoAADIDz-MBNVVcivtfTJ_Too4sjwArZ53h8ss",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-21T13:57:40.682Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-21T13:57:40.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680748f5ca82ca12032cfb4b"
+  },
+  "Contact": {
+    "email": "gabriellaeze.va@gmail.com",
+    "telephone": "+23409039413920"
+  },
+  "Location": {
+    "address": "Rayfield",
+    "state": "Plateau State",
+    "city": "Jos",
+    "country": "Nigeria"
+  },
+  "FirstName": "Gabriella",
+  "LastName": "Eze",
+  "DOB": "1999-05-11",
+  "TechSpecialisation": {
+    "field": "Social Media Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/gabriella-eze_helpatechtalent3-techsis-digitalmarketing-activity-7320302879355867136-BE29?",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-22T07:44:53.305Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-22T07:44:53.305Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6808899e78b7a3983fbcf164"
+  },
+  "Contact": {
+    "email": "nicholasayomidedaramola@gmail.com",
+    "telephone": "+23409031875236"
+  },
+  "Location": {
+    "address": "No 65b Afuremu Street Ilawe Ekiti",
+    "state": "EKITI",
+    "city": "Ilawe Ekiti",
+    "country": "Nigeria"
+  },
+  "FirstName": "Nicholas",
+  "LastName": "Daramola",
+  "DOB": "2007-09-13",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/nicholas-ayomide-daramola-699199360_techjourney-innovation-growth-activity-7317592090329169920-aRKc?utm_source=share&utm_medium=member_android&rcm=ACoAAFm6ZZUB_FaFgwpFHV0W9kEXkY6QFOUHEsc",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-23T06:33:02.800Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-23T06:33:02.800Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680a02d9c0baabe1cfae9557"
+  },
+  "Contact": {
+    "email": "tofunmiagbaje@gmail.com",
+    "telephone": "+23407058128781"
+  },
+  "Location": {
+    "address": "5,overcomer agbaje str,kosigiri busstop okearo ,ogun state",
+    "state": "ogun",
+    "city": "matogun",
+    "country": "Nigeria"
+  },
+  "FirstName": "Tofunmi",
+  "LastName": "Agbaje",
+  "DOB": "2000-05-28",
+  "TechSpecialisation": {
+    "field": "WordPress Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://drive.google.com/file/d/1Xqs8excz6GtHd2rL8Mp1iD_vTvXRwj_n/view?usp=sharing",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-24T09:22:33.964Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-24T09:22:33.964Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680cff400d823528df3a529b"
+  },
+  "Contact": {
+    "email": "oladejomayowa.ovm@gmail.com",
+    "telephone": "+2347044692610"
+  },
+  "Location": {
+    "address": "30 Folarin Street off Ladipo road Mushin Lagos ",
+    "state": "Lagos",
+    "city": "Mushin",
+    "country": "Nigeria"
+  },
+  "FirstName": "Mayowa",
+  "LastName": "Oladejo ",
+  "DOB": "1999-01-29",
+  "TechSpecialisation": {
+    "field": "Business Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/mayowa-oladejo-ovm_helpatechtalent3-tobamsgroup-activity-7321920076037672960-2Er3?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADraAtcB8mxpf41dzc8HdJNG5eW-OMvazqU&utm_campaign=copy_link",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-26T15:44:00.091Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T15:44:00.091Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680d90970d823528df3a533b"
+  },
+  "Contact": {
+    "email": "amosgodswill00@gmail.com",
+    "telephone": "+23408169035424"
+  },
+  "Location": {
+    "address": "Westgate, FUTA",
+    "state": "Ondo",
+    "city": "Akure",
+    "country": "Nigeria"
+  },
+  "FirstName": "Godswill",
+  "LastName": "Amos",
+  "DOB": "2004-10-10",
+  "TechSpecialisation": {
+    "field": "Others Specify",
+    "others": "IoT and embedded system"
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/godswill-amos-542731248_iot-hardware-embeddedsystems-activity-7322076555541667840-VeCw?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1VEMIB9DYDErhqwm_g1p2kkQnQOjg91W8",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-27T02:04:07.391Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-27T02:04:07.391Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680dfd350d823528df3a5395"
+  },
+  "Contact": {
+    "email": "gunmakinthomas7@gmail.com",
+    "telephone": "+2349130340087"
+  },
+  "Location": {
+    "address": "Ijoka Road , Oke Iya Akure ",
+    "state": "Ondo ",
+    "city": "Akure ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Thomas ",
+  "LastName": "Ogunmakinju ",
+  "DOB": "1998-01-07",
+  "TechSpecialisation": {
+    "field": "Data Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/thomas-ogunmakinju-bb420a233_activity-7321861309250125824-JD28?utm_source=share&utm_medium=member_android&rcm=ACoAADo60jgB29PHPQ3L-H9oKTwpBfBAD-SPNgI  ",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-27T09:47:33.392Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-27T09:47:33.392Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680e3d900d823528df3a53a5"
+  },
+  "Contact": {
+    "email": "danielbabatunde21@gmail.com",
+    "telephone": "+2347081028881"
+  },
+  "Location": {
+    "address": "NewSite Buk Kano",
+    "state": "Kano",
+    "city": "Kano",
+    "country": "Nigeria"
+  },
+  "FirstName": "Daniel",
+  "LastName": "Babatunde",
+  "DOB": "1998-03-07",
+  "TechSpecialisation": {
+    "field": "Cyber Security Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/daniel-babatunde-0626b517a_tobamsgroup-dronanewton-techtalentgrant-activity-7322262902944546816-GZ2f?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAACp2RQoB8_7ZCl2k7sMtw6mfoGJATksiSb4&utm_campaign=copy_link",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-27T14:22:08.733Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-27T14:22:08.733Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "680e47f00d823528df3a53c3"
+  },
+  "Contact": {
+    "email": "oojumola@gmail.com",
+    "telephone": "+2348140703604"
+  },
+  "Location": {
+    "address": "FUTA South Gate, Akure Ondo State",
+    "state": "Ondo",
+    "city": "Akure",
+    "country": "Nigeria"
+  },
+  "FirstName": "Faith",
+  "LastName": "Ojumola ",
+  "DOB": "1998-11-13",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/faith-ojumola-71156b195_helpatechtalent-tobamsgroup-techjourney-activity-7322274030286188545-ZW91?utm_source=share&utm_medium=member_android&rcm=ACoAAC3SwD0B5bY4A2IOucO-yCsK7fQbnjMKIT8",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-04-27T15:06:24.914Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-27T15:06:24.914Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68330bc3e59a70e27b25dd3e"
+  },
+  "Contact": {
+    "email": "Samuelfemi2020@gmail.com",
+    "telephone": "+2347086634543"
+  },
+  "Location": {
+    "address": "11 Idris Ogunlaja Drive ETI- OSA LGA",
+    "state": "Lagos",
+    "city": "Majek",
+    "country": "Nigeria"
+  },
+  "FirstName": "Femi",
+  "LastName": "Olushola ",
+  "DOB": "1998-02-01",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/femi-olushola_this-is-my-entry-for-the-help-a-tech-talent-activity-7332380567738462208-LyhN?utm_medium=ios_app&rcm=ACoAACfwFuUBqTmjJOQibCXp7gB2c7oYYSgpDPE&utm_source=social_share_send&utm_campaign=copy_link",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-05-25T12:23:31.387Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-25T12:23:31.387Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683b7fa6341be04ecc9d3b50"
+  },
+  "Contact": {
+    "email": "alameensnr@gmail.com",
+    "telephone": "+23408136899907"
+  },
+  "Location": {
+    "address": "Plot 141 Gado Nasko Road Kubwa FCT Abuja",
+    "state": "Abuja",
+    "city": "Kubwa",
+    "country": "Nigeria"
+  },
+  "FirstName": "Alamin",
+  "LastName": "Ahmed",
+  "DOB": "2000-06-25",
+  "TechSpecialisation": {
+    "field": "Backend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://drive.google.com/file/d/166DbyH_lYEXI63gse9WmQ68EmjaDJYf2/view?usp=sharing&t=38",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "createdAt": {
+    "$date": "2025-05-31T22:16:06.111Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-31T22:16:06.111Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "684feb667b2ae44ef3982014"
+  },
+  "Contact": {
+    "email": "Oladejomayowa.ovm@gmail.com",
+    "telephone": "+23408171735398"
+  },
+  "Location": {
+    "address": "30, Folarin street, Off Ladipo road, Mushin, Lagos.",
+    "state": "Lagos",
+    "city": "Lagos",
+    "country": "Albania"
+  },
+  "FirstName": "Mayowa",
+  "LastName": "Oladejo",
+  "DOB": "2025-06-16",
+  "TechSpecialisation": {
+    "field": "Project Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://tobamsgroup.com/tech-talent/register",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": false,
+  "createdAt": {
+    "$date": "2025-06-16T10:01:10.894Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-16T10:01:10.894Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6964d456dae96a7164320886"
+  },
+  "Contact": {
+    "email": "favour.ihotu@aul.student.edu.ng",
+    "telephone": "+2347015698654"
+  },
+  "Location": {
+    "address": "jhg",
+    "state": "k",
+    "city": "k",
+    "country": "Nigeria"
+  },
+  "FirstName": "Favour",
+  "LastName": "Peter",
+  "DOB": "2005-06-08",
+  "TechSpecialisation": {
+    "field": "WordPress Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://tobamsgroup.com/tech-talent/register",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": false,
+  "createdAt": {
+    "$date": "2026-01-12T11:00:38.747Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-12T11:00:38.747Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6984d483322a4beb7f585611"
+  },
+  "Contact": {
+    "email": "abigailafolayemi@gmail.com",
+    "telephone": "+23408138401610"
+  },
+  "Location": {
+    "address": "Abimbola Estate, oja-oba,agege road, abule egba, lagos,Nigeria.",
+    "state": "Lagos",
+    "city": "Ikeja",
+    "country": "Nigeria"
+  },
+  "FirstName": "Abigail ",
+  "LastName": "Orimiobayaku ",
+  "DOB": "1998-05-31",
+  "TechSpecialisation": {
+    "field": "Backend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "I'd tag on LinkedIn due to the fact I just got notified as I'm filling the form",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": false,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-02-05T17:33:55.897Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-05T17:33:55.897Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "698c670b4c122ff72e60b72b"
+  },
+  "Contact": {
+    "email": "ayomitomiwa53@gmail.com",
+    "telephone": "+2348103506816"
+  },
+  "Location": {
+    "address": "No 9 ilamoji basiri ado Ekiti",
+    "state": "Ekiti",
+    "city": "Ado Ekito",
+    "country": "Nigeria"
+  },
+  "FirstName": "Opeyemi ",
+  "LastName": "Ayomide",
+  "DOB": "2004-03-15",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/ayomitomiwa_2026-is-about-making-moves-not-excuses-activity-7427296563527487488-Ilej?utm_source=share&utm_medium=member_android&rcm=ACoAADwwMOsBSFsXTwbb_ZdIQHeISHtfJYJAOKU",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-02-11T11:24:59.962Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-11T11:24:59.962Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "698c71a54c122ff72e60b73e"
+  },
+  "Contact": {
+    "email": "mosesoluwa2005@gmail.com",
+    "telephone": "+2348109176764"
+  },
+  "Location": {
+    "address": "4 the apostolic church close,olowora ",
+    "state": "Lagos",
+    "city": "Berger ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Moses",
+  "LastName": "Kouakanou ",
+  "DOB": "2005-11-30",
+  "TechSpecialisation": {
+    "field": "WordPress Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/moses-kouakanou-b7995b385_helpatechtalent-hatt4-wordpressdeveloper-activity-7427321019385704449-1rMJ?utm_medium=ios_app&rcm=ACoAAF8A4c0BFFSVK6QIo32Jv-lR0XQQiVbGvuU&utm_source=social_share_send&utm_campaign=copy_link",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-02-11T12:10:13.254Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-11T12:10:13.254Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "699549f65559a5887bfb23ef"
+  },
+  "Contact": {
+    "email": "david.dappa@tobamsgroup.com",
+    "telephone": "+2347066239881"
+  },
+  "Location": {
+    "address": "Rumuekini",
+    "state": "Rivers",
+    "city": "Port Harcourt",
+    "country": "Afghanistan"
+  },
+  "FirstName": "David",
+  "LastName": "Dappa",
+  "DOB": "2016-02-17",
+  "TechSpecialisation": {
+    "field": "Project Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://okay.com",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-02-18T05:11:18.611Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-18T05:45:36.124Z"
+  },
+  "PhysicalAvailability": true
+},
+{
+  "_id": {
+    "$oid": "69a9ae29e5676a11c67b1bbd"
+  },
+  "Contact": {
+    "email": "mercylawrence01@gmail.com",
+    "telephone": "+2348141333518"
+  },
+  "Location": {
+    "address": "18, Joy Ogunbanwo street, off Adeba road, Ibeju-Lekki, Lagos.",
+    "state": "Lagos",
+    "city": "Lakowe Town",
+    "country": "Nigeria"
+  },
+  "FirstName": "Mercy ",
+  "LastName": "lawrence",
+  "DOB": "2000-04-19",
+  "TechSpecialisation": {
+    "field": "Cyber Security Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/mercy-lawrence-2ab79229a_techtalenthunt-cybersecurity-edtech-ugcPost-7435342721353113602-_2Lw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEhf3CMBwAfjgnv9XlKQ9JTxuh1B6E1oGrc",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-05T16:24:09.094Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-05T16:24:09.094Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69ab03f4dc85ac73cb3e90b9"
+  },
+  "Contact": {
+    "email": "henryyamah26@gmail.com",
+    "telephone": "+23408188543462"
+  },
+  "Location": {
+    "address": "Block 21, Flat 8, Ogba Phase 2, off wemco road, odusanmi street, Lagos staff quarters, Ogba, Lagos State, Nigeria.",
+    "state": "Lagos",
+    "city": "Lagos",
+    "country": "Nigeria"
+  },
+  "FirstName": "Henry",
+  "LastName": "Yamah",
+  "DOB": "2004-12-15",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "Nil",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": false,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-06T16:42:28.099Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-06T16:42:28.099Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69ab18aed40bfa7d89721ff8"
+  },
+  "Contact": {
+    "email": "shafiabdullateef2018@gmail.com",
+    "telephone": "+2348108488739"
+  },
+  "Location": {
+    "address": "13 Ile Alagbede ojagboro ilorin kwara state ",
+    "state": "Kwara state ",
+    "city": "Ilorin",
+    "country": "Nigeria"
+  },
+  "FirstName": "SHAFI",
+  "LastName": "ABDULLATEEF",
+  "DOB": "2000-02-16",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://tobamsgroup.com/tech-talent/register",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-06T18:10:54.764Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-06T18:10:54.764Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69ac4805c4150aec38da6618"
+  },
+  "Contact": {
+    "email": "ayomusa47@gmail.com",
+    "telephone": "+23408104888093"
+  },
+  "Location": {
+    "address": "Damangaza Primary Healthcare inside Gudu",
+    "state": "Abuja",
+    "city": "Apo",
+    "country": "Nigeria"
+  },
+  "FirstName": "MUSA",
+  "LastName": "AYOMIKUN",
+  "DOB": "1999-05-05",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/musa-umar-ayo-a8a5a4297_hatt-techtalent-graphicdesign-activity-7436060598104195072-hp9w?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEfP9woBYfVwFsd4T7OxBa9LGDx3dwiaTKc",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-07T15:45:09.555Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-07T15:45:09.555Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69ade699c4150aec38da6915"
+  },
+  "Contact": {
+    "email": "happinessakolapo@gmail.com",
+    "telephone": "+23407037817699"
+  },
+  "Location": {
+    "address": "Ilorin, Kwara state",
+    "state": "Kwara",
+    "city": "Ilorin",
+    "country": "Nigeria"
+  },
+  "FirstName": "Happiness",
+  "LastName": "Akolapo",
+  "DOB": "2006-05-31",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "IG: https://www.instagram.com/ultra_designx/reel/DVotG16DxQp/      LinkedIn: https://www.linkedin.com/posts/happiness-akolapo-605410331_helpatechtalent-techjourney-designjourney-activity-7436508925908336641-xaWm?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFOIVGUB76yJkeV_LFzgp19EzLcdYT7k4CA",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-08T21:14:01.506Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-08T21:14:01.506Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69aeb4a40e6e0d602ab68e18"
+  },
+  "Contact": {
+    "email": "demystiktech@gmail.com",
+    "telephone": "+2349059569913"
+  },
+  "Location": {
+    "address": "Number 12, Gidan Mangoro, Bosso LGA",
+    "state": "Niger",
+    "city": "Minna",
+    "country": "Nigeria"
+  },
+  "FirstName": "SAOBAN",
+  "LastName": "ABDRASHEED",
+  "DOB": "1997-12-05",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/abdrasheed-thaoban-162097360_tobams-group-dr-ona-newton-fbcs-frsa-ugcPost-7436461659210182657-JRcF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFm2iRoB8SK-Akwvnzzg9uMyrLr4AYP-_vk",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-09T11:53:08.276Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-09T11:53:08.276Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b15f030e6e0d602ab6b0eb"
+  },
+  "Contact": {
+    "email": "semiatoyelowo0@gmail.com",
+    "telephone": "+23408062197576"
+  },
+  "Location": {
+    "address": "No47 orisun anu",
+    "state": "Lagos",
+    "city": "Lagos ikotun",
+    "country": "Nigeria"
+  },
+  "FirstName": "Oyelowo",
+  "LastName": "Semiat",
+  "DOB": "2000-06-06",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/semiat-oyelowo_uxdesign-techjourney-growthmindset-ugcPost-7437457640558915584-ySm_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEpI_KMB7QlDAQq7t8gwb5DiW3vt7kz7NMM",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-11T12:24:35.559Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-11T12:24:35.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b7c507842eb8a3f1859ac5"
+  },
+  "Contact": {
+    "email": "courage.eze@tobamsgroup.com",
+    "telephone": "+2349081859913"
+  },
+  "Location": {
+    "address": "bbbbbbb",
+    "state": "lagos",
+    "city": "lagos",
+    "country": "Nigeria"
+  },
+  "FirstName": "courage",
+  "LastName": "eze",
+  "DOB": "1998-03-06",
+  "TechSpecialisation": {
+    "field": "Project Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.tobamsgroup.com/tech-talent/register",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-16T08:53:27.653Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-16T08:53:27.653Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b97c7cc8be8c49345d21bd"
+  },
+  "Contact": {
+    "email": "johnedheke@gmail.com",
+    "telephone": "+2348055025883"
+  },
+  "Location": {
+    "address": "Delta State, Nigeria",
+    "state": "Delta",
+    "city": "Warri",
+    "country": "Nigeria"
+  },
+  "FirstName": "John",
+  "LastName": "Edheke",
+  "DOB": "2008-06-09",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/john-edheke-a80a1137b_hello-everyone-my-name-is-edheke-john-jnr-ugcPost-7439697874918989824--TjS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF3xxcAByu7MV5uqykvf5tyuQblUPe8uwz4",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-17T16:08:28.869Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-17T16:08:28.869Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b9aec2292ae1ee164c6e77"
+  },
+  "Contact": {
+    "email": "henriettaosawe123@gmail.com",
+    "telephone": "+2349049690053"
+  },
+  "Location": {
+    "address": "No 6, eweka street, off Aso rock junction, iduomwina",
+    "state": "Edo state ",
+    "city": "Benin city ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Henrietta ",
+  "LastName": "Osawe ",
+  "DOB": "2004-02-23",
+  "TechSpecialisation": {
+    "field": "Others Specify",
+    "others": "Virtual assistance "
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/henrietta-osawe-abb3623b8_hello-everyone-im-applying-for-the-help-activity-7439749751991869440-ksRV?utm_medium=ios_app&rcm=ACoAAGXbHa8BpbpXzkwumrcTB7KtgS5CW0Vd2oM&utm_source=social_share_send&utm_campaign=copy_link",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-17T19:42:58.299Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-17T19:42:58.299Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b9e116292ae1ee164c6eb5"
+  },
+  "Contact": {
+    "email": "aremupraisebosede@gmail.com",
+    "telephone": "+2348146967825"
+  },
+  "Location": {
+    "address": "Beside New dawn model school agbeola oro Kwara state",
+    "state": "Kwara",
+    "city": "Oro,Kwara state ",
+    "country": "Nigeria"
+  },
+  "FirstName": "AREMU",
+  "LastName": " Praise BOSEDE",
+  "DOB": "2005-10-30",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/aremu-praise-9759a1369_helpatechtalent-techtalent-frontenddevelopment-activity-7439509189732782080-t-sr?utm_source=share&utm_medium=member_android&rcm=ACoAAFty8ikBd_5drnrXsxkHRrmPxn-F072P6g0",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-17T23:17:42.624Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-17T23:17:42.624Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69bac8de292ae1ee164c7744"
+  },
+  "Contact": {
+    "email": "corneliuschiawazie@gmail.com",
+    "telephone": "+23408061197636"
+  },
+  "Location": {
+    "address": "8 GIG Estate Adoo road Ajah lekki Lagos",
+    "state": "Anambra",
+    "city": "Onitsha",
+    "country": "Nigeria"
+  },
+  "FirstName": "onyeka",
+  "LastName": "chiawazie",
+  "DOB": "1992-02-11",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/onyeka-cornelius-b594b2254_tobamsgroup-dronanewton-chineduchikwem-activity-7440048089429704704-qhjp?utm_source=share&utm_medium=member_android&rcm=ACoAAD64vvUBDTe3R0acKnRVyVhdYv2xr2g0Mrk",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-18T15:46:38.295Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-18T15:46:38.295Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c3dd0fc778e78a80dc118a"
+  },
+  "Contact": {
+    "email": "adamuhawwaahmed@gmail.com",
+    "telephone": "+2347040799440"
+  },
+  "Location": {
+    "address": "No. 6 PB Road Opposite GDSS Rumde Jabbi Mbamba Yola ",
+    "state": "Adamawa ",
+    "city": "Yola South ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Hawwa",
+  "LastName": "Adamu Ahmed",
+  "DOB": "2004-05-23",
+  "TechSpecialisation": {
+    "field": "Data Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/hawwa-adamu-ahmed-a834092ba_my-tech-journey-what-if-the-future-ugcPost-7442554912112164864-cfKe?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAEyXUsMB6redbo6ubr1q_LnJ8K_CHOHc1-w&utm_campaign=copy_link",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-25T13:03:11.240Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-25T13:03:11.240Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c5aa3ac0c69d505a1202ec"
+  },
+  "Contact": {
+    "email": "christiesanwo72@gmail.com",
+    "telephone": "+2349043722931"
+  },
+  "Location": {
+    "address": "Akera Estate Agbado-Ijaye Lagos",
+    "state": "Lagod",
+    "city": "Agege",
+    "country": "Nigeria"
+  },
+  "FirstName": "Christie ",
+  "LastName": "Ogunsanwo ",
+  "DOB": "1972-04-10",
+  "TechSpecialisation": {
+    "field": "Digital Marketing",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/christiethegirlscoach_techtalent4-mytechjourney-mytechvision-ugcPost-7443047841498972160-muG6?utm_source=share&utm_medium=member_android&rcm=ACoAADhFnQEB039G_hz99jM9WJ0cwklelolYoL0",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-26T21:50:50.727Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-26T21:50:50.727Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c6caafe48cb3c0f61021e9"
+  },
+  "Contact": {
+    "email": "bikoteebaba@gmail.com",
+    "telephone": "+23408149516694"
+  },
+  "Location": {
+    "address": "4 Makanjuola Street Meiran Lagos",
+    "state": "Lagos",
+    "city": "Lagos",
+    "country": "Nigeria"
+  },
+  "FirstName": "Adeyemi",
+  "LastName": "Ralpheal Tope",
+  "DOB": "1996-04-02",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/adeyemi-ralpheal-tope-20692b201_this-is-my-entry-for-the-participation-of-ugcPost-7443356991130877953-rEyE?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOSqWYBcW8cw5w1FKy9pAEigUCH1JI5lCg",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-27T18:21:35.678Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-27T18:21:35.678Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c76f9ee48cb3c0f6102332"
+  },
+  "Contact": {
+    "email": "chidinmamary994@gmail.com",
+    "telephone": "+2347032336204"
+  },
+  "Location": {
+    "address": "Apo Abuja Nigeria",
+    "state": "FCT ",
+    "city": "Abuja",
+    "country": "Nigeria"
+  },
+  "FirstName": "CHIDINMA MARY ",
+  "LastName": "ONYEKACHI (NWOSU)",
+  "DOB": "1988-02-14",
+  "TechSpecialisation": {
+    "field": "Content Creation",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/chidinmamarynwosu_helpatechtalent4-dronanewton-activity-7443537776093843456-TL9C?utm_source=share&utm_medium=member_android&rcm=ACoAABeMS20BkuwcjLpw9d6DCT3hEifJu7tn5_c",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-28T06:05:18.696Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-28T06:05:18.696Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c8fbb4e48cb3c0f61026cf"
+  },
+  "Contact": {
+    "email": "sanusiabiodun593@gmail.com",
+    "telephone": "+23409014792032"
+  },
+  "Location": {
+    "address": "Lariken College, Olonde, Ologuneru Ibadan.",
+    "state": "Oyo",
+    "city": "Ibadan",
+    "country": "Nigeria"
+  },
+  "FirstName": "Abiodun",
+  "LastName": "Sanusi",
+  "DOB": "2005-03-29",
+  "TechSpecialisation": {
+    "field": "Others Specify",
+    "others": "Intelligent Mechatronics (Robotics/3D Prototyping & AI/Automation)"
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/abiodun-sanusi-2a306930b_helpatalent-helpatalent-tobamsgroup-ugcPost-7443948570048749568-jH0Y?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAE7aVFsB0y4M1qTQuqQ4hznRd-zG8xrktXE&utm_campaign=copy_link",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-29T10:15:16.497Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-29T10:15:16.497Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c951ffe48cb3c0f6102779"
+  },
+  "Contact": {
+    "email": "nikeolanrewaju1@gmail.com",
+    "telephone": "+2349040266748"
+  },
+  "Location": {
+    "address": "Behind Health centre Elebu off Akala express Ibadan ",
+    "state": "Oyo ",
+    "city": "Ibadan ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Olanike ",
+  "LastName": "OLOWU ",
+  "DOB": "1996-05-05",
+  "TechSpecialisation": {
+    "field": "Product Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/olanike-olanrewaju_productmanagement-juniorproductmanager-womenintech-activity-7444055409268523008-RGmj?utm_source=share&utm_medium=member_android&rcm=ACoAADTJX_UBNbslsh00vGvFbAgCUGuugqRRrLs",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-29T16:23:27.037Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-29T16:23:27.037Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69ca8088fa62f4779904c7d4"
+  },
+  "Contact": {
+    "email": "eugeneebuks@gmail.com",
+    "telephone": "+2348151178728"
+  },
+  "Location": {
+    "address": "43 kudirat abiola way lagos",
+    "state": "Lagos",
+    "city": "Ikeja",
+    "country": "Nigeria"
+  },
+  "FirstName": "Eugene ",
+  "LastName": "Iroegbu ",
+  "DOB": "2004-08-19",
+  "TechSpecialisation": {
+    "field": "Digital Marketing",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://youtube.com/shorts/LYrw1zSJMKo?si=zNZKrOjwTNmC3BwF",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-30T13:54:16.609Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T13:54:16.609Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69cad0c28b571b9772b1f389"
+  },
+  "Contact": {
+    "email": "olarindeolufunso120@gmail.com",
+    "telephone": "+23407011578730"
+  },
+  "Location": {
+    "address": "No 6, First gate, Erelu, Oyo town, Oyo state",
+    "state": "Oyo",
+    "city": "Oyo",
+    "country": "Nigeria"
+  },
+  "FirstName": "Olarinde",
+  "LastName": "John",
+  "DOB": "1997-12-06",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/olarinde-olufunso-22a400177_tobamsgroup-dronanewton-ugcPost-7444466507251863552-vCuE?utm_source=share&utm_medium=member_android&rcm=ACoAACniYUIBsW3hR79W9olqdU32nj4ATcw9f8Q",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-30T19:36:34.968Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T19:36:34.968Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69cbe92249efb29554af62e0"
+  },
+  "Contact": {
+    "email": "johsontundefemi@gmail.com",
+    "telephone": "+23408035404891"
+  },
+  "Location": {
+    "address": "Dakata after police station Kano State Nigeria",
+    "state": "Kano State",
+    "city": "Kano",
+    "country": "Nigeria"
+  },
+  "FirstName": "Tunde femi ",
+  "LastName": "Johnson ",
+  "DOB": "1982-03-22",
+  "TechSpecialisation": {
+    "field": "Product Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "Nil",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-03-31T15:32:50.906Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-31T15:32:50.906Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69cea8b9dba4f810e63751d8"
+  },
+  "Contact": {
+    "email": "saidhassano658@gmail.com",
+    "telephone": "+254708281852"
+  },
+  "Location": {
+    "address": "1100-80100",
+    "state": "mombasa",
+    "city": "mombas",
+    "country": "Kenya"
+  },
+  "FirstName": "HASSAN",
+  "LastName": "SAID",
+  "DOB": "1979-11-25",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/ugcPost-7445520090319695872-9eoq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElvAJABtOLhm7-YYcYo7a-S5iKekbxCelQ",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-02T17:34:49.053Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-02T17:34:49.053Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d18cd1dba4f810e6375878"
+  },
+  "Contact": {
+    "email": "adewunmmy16@gmail.com",
+    "telephone": "+23408036081465"
+  },
+  "Location": {
+    "address": "Tekobo, Idiaba",
+    "state": "Ogun State",
+    "city": "Abeokuta",
+    "country": "Nigeria"
+  },
+  "FirstName": "Mojetoluwa ",
+  "LastName": "Oshoniyi ",
+  "DOB": "2000-04-18",
+  "TechSpecialisation": {
+    "field": "Digital Marketing",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/oshoniyi-mojetoluwa-mjay_thank-you-dr-ona-newton-fbcs-frsa-fsip-ugcPost-7446302576964202498-n8Vr?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADqNC0gBpF6eHLydiY7qXN1VQ8W4Xd5QIXc&utm_campaign=copy_link",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": false,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-04T22:12:33.210Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-04T22:12:33.210Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d36d2cdba4f810e6375d90"
+  },
+  "Contact": {
+    "email": "awwal.bello@tobamsgroup.com",
+    "telephone": "+23408065262763"
+  },
+  "Location": {
+    "address": "kd wsk klw. lw ",
+    "state": "kasnnni",
+    "city": "mkne ek",
+    "country": "Nigeria"
+  },
+  "FirstName": "Awwal",
+  "LastName": "Bello",
+  "DOB": "2012-02-25",
+  "TechSpecialisation": {
+    "field": "Project Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "link to my video",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": false,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-06T08:22:04.652Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T08:22:04.652Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d3e464dba4f810e63764c8"
+  },
+  "Contact": {
+    "email": "h.said@mombasawater.co.ke",
+    "telephone": "+254708281852"
+  },
+  "Location": {
+    "address": "hse number 2,old kilindini road mombasa kenya",
+    "state": "mombasa",
+    "city": "mombasa",
+    "country": "Kenya"
+  },
+  "FirstName": "HASSAN",
+  "LastName": "SAID",
+  "DOB": "1979-11-25",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/ugcPost-7446943423095476226-LZbL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElvAJABtOLhm7-YYcYo7a-S5iKekbxCelQ",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-06T16:50:44.142Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T16:50:44.142Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d604a4e3a4c67cb9d4e25d"
+  },
+  "Contact": {
+    "email": "josh4.onye@gmail.com",
+    "telephone": "+23407050418384"
+  },
+  "Location": {
+    "address": "Offin, Ile Road",
+    "state": "Lagos",
+    "city": "Ikorodu",
+    "country": "Nigeria"
+  },
+  "FirstName": "Joshua",
+  "LastName": "Ogbolu",
+  "DOB": "2000-04-30",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/josh-ogbolu-43a299309_tobams-group-thanks-for-the-opportunity-ugcPost-7447546602463985664-cqhe?utm_source=share&utm_medium=member_android&rcm=ACoAAE6HwC4BTLUq4LXuLyAHrhyvhS1brZio6H4",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-08T07:32:52.678Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T07:32:52.678Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d62e6ce3a4c67cb9d4e549"
+  },
+  "Contact": {
+    "email": "okuwisdom8@gmail.com",
+    "telephone": "+2349125442676"
+  },
+  "Location": {
+    "address": "5 Ogundiran Street, Idimu",
+    "state": "Lagos",
+    "city": "Alimosho",
+    "country": "Nigeria"
+  },
+  "FirstName": "Wisdom",
+  "LastName": "Oku",
+  "DOB": "2002-10-01",
+  "TechSpecialisation": {
+    "field": "Backend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/wisdom-oku_helpatechtalent4-tobamsgroup-dronanewton-ugcPost-7447590345174847488-XJyh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGaAvt4B6NVxJgDwCoXDejiCZMaOoOrzvQs",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-08T10:31:08.545Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T10:31:08.545Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d69a22d9126eb277a78ae5"
+  },
+  "Contact": {
+    "email": "danielpromise1234@gmail.com",
+    "telephone": "+23408021358937"
+  },
+  "Location": {
+    "address": "Omotayo Street off abaranje road ikotun Lagos Nigeria ",
+    "state": "Lagos",
+    "city": "Ikotun ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Ekekwe ",
+  "LastName": "Daniel ",
+  "DOB": "2001-10-08",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/ekekwe-daniel-671ab226b_tobams-group-ugcPost-7447705116532613120-ZQ4E?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAEIxNDUBRcEjDxb37WjfCpkuesR0TG03694&utm_campaign=copy_link",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-08T18:10:42.622Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T18:10:42.622Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d6b424d9126eb277a78bb2"
+  },
+  "Contact": {
+    "email": "shuaibolaoluwa43@gmail.com",
+    "telephone": "+2348137990702"
+  },
+  "Location": {
+    "address": "16, Adewusi Street, Bolorunpelu Bus stop. ",
+    "state": "Lagos",
+    "city": "Ikotun",
+    "country": "Nigeria"
+  },
+  "FirstName": "Shuaib",
+  "LastName": "Adeshina",
+  "DOB": "2000-10-05",
+  "TechSpecialisation": {
+    "field": "Graphic Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/shuaibadeshina_help-a-tech-talent-by-tobams-group-and-dr-activity-7447733353337753600-oL5m ",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-08T20:01:40.164Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-08T20:01:40.164Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d7533ad9126eb277a78db5"
+  },
+  "Contact": {
+    "email": "kandichisom@gmail.com",
+    "telephone": "+23407068647454"
+  },
+  "Location": {
+    "address": "No 4 de limit lodge okpuno awka anambra state",
+    "state": "Anambra",
+    "city": "Awka South",
+    "country": "Nigeria"
+  },
+  "FirstName": "Kandilichukwu",
+  "LastName": "Amuzie",
+  "DOB": "1991-04-21",
+  "TechSpecialisation": {
+    "field": "Digital Marketing",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://LinkedIn.com/kandy",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": false,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-09T07:20:26.259Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T07:20:26.259Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d7ca526469458c6f91fa8c"
+  },
+  "Contact": {
+    "email": "noceeruolamilekan@gmail.com",
+    "telephone": "+2348165122467"
+  },
+  "Location": {
+    "address": "No 6 Gordlove Street Egbeda Alimosho Lagos ",
+    "state": "Lagos state ",
+    "city": "Lagos",
+    "country": "Nigeria"
+  },
+  "FirstName": "Nosiru ",
+  "LastName": "Yakub ",
+  "DOB": "2006-01-28",
+  "TechSpecialisation": {
+    "field": "Product Design",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/nosiru-olamilekan-08257238b_today-im-sharing-a-short-video-of-myself-ugcPost-7448030289953509377-VhnG?utm_source=share&utm_medium=member_ios&rcm=ACoAAGADcOIBQyFqu4OP9NSLy7DNJirZT_jLI6I",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-09T15:48:34.204Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T15:48:34.204Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d7da4b6469458c6f92003e"
+  },
+  "Contact": {
+    "email": "unuhuahmad@gmail.com",
+    "telephone": "+23408032705322"
+  },
+  "Location": {
+    "address": "DANSARAI ",
+    "state": "KANO ",
+    "city": "KANO ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Umar Nuhu ",
+  "LastName": "Ahmad ",
+  "DOB": "2001-02-26",
+  "TechSpecialisation": {
+    "field": "Social Media Management",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.facebook.com/share/r/1DazDnxLWM/",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-09T16:56:43.602Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T16:56:43.602Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d7e9ff6469458c6f920235"
+  },
+  "Contact": {
+    "email": "saidhassano98@yahoo.com",
+    "telephone": "+2540708281852"
+  },
+  "Location": {
+    "address": "mombasa kenya,old kilindini road",
+    "state": "mombasa",
+    "city": "mombasa",
+    "country": "Kenya"
+  },
+  "FirstName": "HASSAN ",
+  "LastName": "SAID",
+  "DOB": "1979-11-25",
+  "TechSpecialisation": {
+    "field": "Business Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/ugcPost-7447558413783396352-gvJ9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElvAJABtOLhm7-YYcYo7a-S5iKekbxCelQ",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-09T18:03:43.025Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T18:03:43.025Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d7ee906469458c6f920250"
+  },
+  "Contact": {
+    "email": "ayodejiokiki2@gmail.com",
+    "telephone": "+2348116374393"
+  },
+  "Location": {
+    "address": "Ijari",
+    "state": "Ogun",
+    "city": "Ijebu ode",
+    "country": "Nigeria"
+  },
+  "FirstName": "Ayodeji",
+  "LastName": "Okiki",
+  "DOB": "2003-09-30",
+  "TechSpecialisation": {
+    "field": "Data Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/ayodejiokiki_techtalent-dataanalytics-careergrowth-activity-7448068704992452608-G9hv?utm_source=share&utm_medium=member_android&rcm=ACoAAD9fFz0Bdg3rpJUHkjPRC6xzzWBv1wYmxBk",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-09T18:23:12.059Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T18:23:12.059Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d81f846469458c6f9204f0"
+  },
+  "Contact": {
+    "email": "akenmacindy25@gmail.com",
+    "telephone": "+233534714580"
+  },
+  "Location": {
+    "address": "Weija New Aplaku Around Accra Institute of Technology Seaview Campus",
+    "state": "Accra",
+    "city": "Accra",
+    "country": "Ghana"
+  },
+  "FirstName": "Cindy",
+  "LastName": "Akenma",
+  "DOB": "2003-08-18",
+  "TechSpecialisation": {
+    "field": "Data Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/cindy-akenma-445133254_tobamsgroup-techtalent-womenintech-activity-7448124197261910016-4R5q?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD6q1bUB2VR6rgNuZJqi7wMiZIO5y-f1WB8",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-09T21:52:04.383Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-09T21:52:04.383Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d89be7f625e5d1a911763c"
+  },
+  "Contact": {
+    "email": "softgraphicstudio@gmail.com",
+    "telephone": "+23408060827188"
+  },
+  "Location": {
+    "address": "21/25, Broad Street, Lagos island Lagos State",
+    "state": "Lagos State",
+    "city": "Lagos Island",
+    "country": "Nigeria"
+  },
+  "FirstName": "Sulaimon ",
+  "LastName": "Afolabi Olanrewaju ",
+  "DOB": "1996-10-29",
+  "TechSpecialisation": {
+    "field": "Data Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/afolabi-o-sulaimon-492685169_hi-there-am-really-impactful-with-live-zoom-ugcPost-7448084486107521024-8ltz?utm_source=share&utm_medium=member_android&rcm=ACoAACglBG4Buiz_qhdPOnpTd1RmqN1vEuqcZaU",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-10T06:42:47.616Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T06:42:47.616Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d8dd19f625e5d1a9117bae"
+  },
+  "Contact": {
+    "email": "ademoyeharuna@gmail.com",
+    "telephone": "+2349016632883"
+  },
+  "Location": {
+    "address": "13, shipeolu street onipanu Shomolu Lagos",
+    "state": "Lagos",
+    "city": "Lagos",
+    "country": "Nigeria"
+  },
+  "FirstName": "Haruna",
+  "LastName": "Ademoye ",
+  "DOB": "1993-03-03",
+  "TechSpecialisation": {
+    "field": "Backend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/haruna-ademoye-859486110_helpatechtalent4-helpatechtalent-ai-activity-7448322606778421249-soF4?utm_source=share&utm_medium=member_android&rcm=ACoAABvVpUUBsKZw39z2tumirJpecsjdc72eRVo",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-10T11:20:57.095Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T11:20:57.095Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d8e567f625e5d1a9117bef"
+  },
+  "Contact": {
+    "email": "oluwaseyilikinyo0@gmail.com",
+    "telephone": "+23408155373618"
+  },
+  "Location": {
+    "address": "Jahi, Abuja Nigeria.",
+    "state": "FCT ",
+    "city": "Jahi",
+    "country": "Nigeria"
+  },
+  "FirstName": "Oluwaseyi",
+  "LastName": "Likinyo",
+  "DOB": "2000-11-27",
+  "TechSpecialisation": {
+    "field": "Data Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/oluwaseyi-likinyo_helpatechtalent-techjourney-dataanalytics-ugcPost-7448328424491950081-g2Lx?utm_source=share&utm_medium=member_android&rcm=ACoAAEM9cEkBwVjEa6B7MjTsNt3E2bYIWkGD268",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-10T11:56:23.746Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-10T11:56:23.746Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69dd1feff625e5d1a911911f"
+  },
+  "Contact": {
+    "email": "michealadefioye94@gmail.com",
+    "telephone": "+23409068855268"
+  },
+  "Location": {
+    "address": "51 Ifeoluwa Idi Araba Cda,Ifo",
+    "state": "lagos",
+    "city": "ijaye",
+    "country": "Nigeria"
+  },
+  "FirstName": "Micheal",
+  "LastName": "Adefioye",
+  "DOB": "2001-10-22",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/adefioye-micheal-26294a39a_i-remember-when-i-did-this-back-then-and-activity-7449499963690143744-EMIq?utm_source=share&utm_medium=member_android&rcm=ACoAAGIHFOoBkZTnHj42RDuKB71eRjqcrAzQRIU",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-13T16:55:11.397Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T16:55:11.397Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69dd4b1af625e5d1a9119570"
+  },
+  "Contact": {
+    "email": "ohazulikechiomajoy@gmail.com",
+    "telephone": "+23408031341266"
+  },
+  "Location": {
+    "address": "RSQ 164C CHURCH ROAD KARIJI KADUNA",
+    "state": "kaduna North",
+    "city": "kaduna",
+    "country": "Nigeria"
+  },
+  "FirstName": "Chioma",
+  "LastName": "Ohazulike",
+  "DOB": "2001-05-16",
+  "TechSpecialisation": {
+    "field": "Data Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/chioma-o-893ba5191_thank-you-tobams-group-for-this-opportunity-activity-7449543688990572544-SexA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC00ZK8BSFjq8G_T-72yzfIleRka3oMPHCY",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-13T19:59:22.673Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-13T19:59:22.673Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69de362ef625e5d1a911a07c"
+  },
+  "Contact": {
+    "email": "emmyt29@gmail.com",
+    "telephone": "+2348032261583"
+  },
+  "Location": {
+    "address": "3, Olokonla estate along ogombo lekki lago state",
+    "state": "Lagos",
+    "city": "Lekki",
+    "country": "Nigeria"
+  },
+  "FirstName": "Oluwaseyi",
+  "LastName": "Ogundipe",
+  "DOB": "1990-04-19",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "www.linkedln.com/oluwaseyi/",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-14T12:42:22.619Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T12:42:22.619Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69de4ec9f625e5d1a911a637"
+  },
+  "Contact": {
+    "email": "orimoladeayodeji@gmail.con",
+    "telephone": "+2348166904154"
+  },
+  "Location": {
+    "address": "No 25, Olootu street, Alakia-Isebo road.",
+    "state": "Oyo",
+    "city": "Ibadan",
+    "country": "Nigeria"
+  },
+  "FirstName": "Ayodeji ",
+  "LastName": "Orimolade ",
+  "DOB": "1996-10-01",
+  "TechSpecialisation": {
+    "field": "Digital Marketing",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "I https://www.linkedin.com/posts/ayodeji-orimolade-832b8b184_i-just-submitted-my-entry-for-help-a-tech-activity-7449821758804713472-SiGa?utm_source=share&utm_medium=member_ios&rcm=ACoAACuZ2uYBSlmPxX2tRM7zPMDSqoLykRyswa8",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-14T14:27:21.952Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T14:27:21.952Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69de5087f625e5d1a911a655"
+  },
+  "Contact": {
+    "email": "odihandchi@gmail.com",
+    "telephone": "+2348165397512"
+  },
+  "Location": {
+    "address": "2nd Edewor Estate, Enerhen Road",
+    "state": "Delta",
+    "city": "Warri",
+    "country": "Nigeria"
+  },
+  "FirstName": "Oghenefejiro",
+  "LastName": "Bazunu",
+  "DOB": "1997-11-30",
+  "TechSpecialisation": {
+    "field": "Data Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/oghenefejiro-bazunu-88a354381_dataanalytics-businessanalyst-tobamsgroup-activity-7449821886202695681-eji6?utm_source=share&utm_medium=member_android&rcm=ACoAAF4zqOoBQY2tMllF-Qx5I3j9vYCeRya2bYc",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-14T14:34:47.719Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T14:34:47.719Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69dec4aff625e5d1a911b034"
+  },
+  "Contact": {
+    "email": "alesarimicheal@gmail.com",
+    "telephone": "+23409138097163"
+  },
+  "Location": {
+    "address": "No 2 Itowolo Estate, Ikorodu Road",
+    "state": "Lagos",
+    "city": "Ikorodu",
+    "country": "Nigeria"
+  },
+  "FirstName": "Micheal",
+  "LastName": "Alesari",
+  "DOB": "2001-12-14",
+  "TechSpecialisation": {
+    "field": "Data Analysis",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/alesari-micheal-2ab6802aa_my-journey-in-tech-as-a-data-analyst-has-ugcPost-7449520616480628736--jlA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEp-caMBXk6wJk8b9mXQt4Rgd3EWczzGMac",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-14T22:50:23.020Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-14T22:50:23.020Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69df5a66f625e5d1a911b2b1"
+  },
+  "Contact": {
+    "email": "danielikeogu28@gmail.com",
+    "telephone": "+23409018588193"
+  },
+  "Location": {
+    "address": "No 12, yanusi Jellily, Greenville estate, badore, Ajah",
+    "state": "Lagos",
+    "city": "Ajah",
+    "country": "Nigeria"
+  },
+  "FirstName": "Daniel",
+  "LastName": "Ikeogu",
+  "DOB": "2000-10-07",
+  "TechSpecialisation": {
+    "field": "Backend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/daniel-ikeogu-0a0a72293_im-excited-to-share-my-tech-journey-as-a-ugcPost-7450110858111803392-Npeb?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEcrrPgBGuHbSAOtuj0L63mZ63dEe4rfq_k",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-15T09:29:10.243Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-15T09:29:10.243Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69e4bdb8ccd68368ceb70e38"
+  },
+  "Contact": {
+    "email": "michaelishioku25@gmail.com",
+    "telephone": "+2347068003153"
+  },
+  "Location": {
+    "address": "Abiola Segun Ajayi Street ",
+    "state": "Lagos ",
+    "city": "Victoria Island ",
+    "country": "Nigeria"
+  },
+  "FirstName": "Michael",
+  "LastName": "Ishioku",
+  "DOB": "1991-05-19",
+  "TechSpecialisation": {
+    "field": "Frontend Development",
+    "others": ""
+  },
+  "VideoDetails": {
+    "link": "https://www.linkedin.com/posts/michael-ishioku-02b816164_my-tech-story-tobams-group-dr-ona-newton-activity-7451592683229188096-iBLR?utm_source=share&utm_medium=member_ios&rcm=ACoAACdGmaMBxHJMf6NyXHWP3CqxPRsocvnBSLs ",
+    "postedOnSocials": true
+  },
+  "TobamsSocialFollower": true,
+  "SubscribeToNewsletter": true,
+  "version": "4.0",
+  "createdAt": {
+    "$date": "2026-04-19T11:34:16.002Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-19T11:34:16.002Z"
+  }
+}]

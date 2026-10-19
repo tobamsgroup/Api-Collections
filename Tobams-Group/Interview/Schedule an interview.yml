@@ -1,7 +1,7 @@
 info:
   name: Schedule an interview
   type: http
-  seq: 3
+  seq: 2
 
 http:
   method: POST
@@ -34,6 +34,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Success

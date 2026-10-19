@@ -1,0 +1,15 @@
+info:
+  name: EMAIL verify
+  type: graphql
+  seq: 2
+
+graphql:
+  method: POST
+  url: https://oauth2.googleapis.com/token
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

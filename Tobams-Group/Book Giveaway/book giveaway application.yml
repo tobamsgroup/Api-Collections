@@ -1,0 +1,76 @@
+info:
+  name: Submit Book Giveaway Application
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/book-giveaway/applications"
+  body:
+    type: json
+    data: |-
+      {
+        "bookTitle": "Career Now: AI, Work and the Future",
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane.doe@example.com",
+        "phoneNumber": "+2348012345678",
+        "country": "Nigeria",
+        "role": "Software Engineer",
+        "ageGroup": "25-40 years",
+        "linkedinProfile": "https://www.linkedin.com/in/janedoe",
+        "reasonForReceivingBook": "I would like to receive this book because it will help me improve my career and professional development.",
+        "referralSource": "LinkedIn",
+        "informationPreference": [
+          "Career insights",
+          "Future book launches"
+        ],
+        "bookType": "Physical copy",
+        "complimentaryCopyAgreement": true,
+        "reviewAgreement": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Submit Book Giveaway Application
+    request:
+      url: "{{BASE}}/book-giveaway/applications"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "bookTitle": "Career Now: AI, Work and the Future",
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "jane.doe@example.com",
+            "phoneNumber": "+2348012345678",
+            "country": "Nigeria",
+            "role": "Software Engineer",
+            "ageGroup": "25-40 years",
+            "linkedinProfile": "https://www.linkedin.com/in/janedoe",
+            "reasonForReceivingBook": "I would like to receive this book because it will help me improve my career and professional development.",
+            "referralSource": "LinkedIn",
+            "informationPreference": [
+              "Career insights",
+              "Future book launches"
+            ],
+            "bookType": "Physical copy",
+            "complimentaryCopyAgreement": true,
+            "reviewAgreement": true
+          }
+    response:
+      statusText: "201"
+      body:
+        type: json
+        data: |-
+          {
+            "status": "success",
+            "message": "Book giveaway application submitted successfully"
+          }

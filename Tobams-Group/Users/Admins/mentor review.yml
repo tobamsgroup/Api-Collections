@@ -1,0 +1,30 @@
+info:
+  name: mentor review
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: http://localhost:5200/api/v1/admin/mentorship-review/6a09b3308a287705ca2c9ef8?status=Rejected&key=iq1cwnme9er0ta1thtbltst7t3t9fiendcs8afva4cs3s0sa
+  params:
+    - name: status
+      value: Rejected
+      type: query
+    - name: key
+      value: iq1cwnme9er0ta1thtbltst7t3t9fiendcs8afva4cs3s0sa
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "success": false,
+        "error": "TypeError",
+        "message": "Cannot destructure property 'status' of 'req.body' as it is undefined."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -10,7 +10,7 @@ http:
     type: json
     data: |-
       {
-        "email": "reelcoins@gmail.com",
+        "email": "theteam@rareeat.com",
         "planName": "Premium",
         "duration": "3mo"
       }

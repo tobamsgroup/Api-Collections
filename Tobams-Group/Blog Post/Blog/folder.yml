@@ -1,0 +1,13 @@
+info:
+  name: Blog
+  type: folder
+  seq: 1
+
+request:
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+docs:
+  content: "All require Authorization: Bearer <token> for a SUPER_ADMIN/ADMIN user with SUPER or CONTENT_MANAGEMENT privilege"
+  type: text/markdown

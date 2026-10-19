@@ -2,3 +2,11 @@ name: TG-Staging
 variables:
   - name: BASE
     value: https://tobams-group-be-development.onrender.com/api/v1
+  - secret: true
+    name: LOGIN_EMAIL
+  - secret: true
+    name: LOGIN_PASSWORD
+  - secret: true
+    name: ADMIN_EMAIL
+  - secret: true
+    name: ADMIN_PASSWORD

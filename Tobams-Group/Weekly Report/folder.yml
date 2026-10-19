@@ -1,7 +1,7 @@
 info:
   name: Weekly Report
   type: folder
-  seq: 33
+  seq: 36
 
 request:
   auth: inherit

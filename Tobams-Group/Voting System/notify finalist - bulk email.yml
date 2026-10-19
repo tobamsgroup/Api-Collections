@@ -1,0 +1,64 @@
+info:
+  name: Notify Finalists
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/competition-applications/finalists/notify"
+  body:
+    type: json
+    data: |-
+      {
+        "webinarId": "66f1a2b3c4d5e6f7a8b9c0d1",
+        "finalists": [
+            {
+            "name": "Jane Doe",
+            "email": "janedoe@gmail.com"
+            },
+            {
+              "name": "Omokorede Usman",
+              "email": "adeyeyeusman@gmail.com"
+              }
+          ]
+      }
+  auth:
+  type: bearer
+  token: "{{adminAccessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+
+  - name: Success
+    request:
+      url: "{{baseUrl}}/api/v1/competition-applications/finalists/notify"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "webinarId": "671821b0bad7612a1c48de92",
+            "finalists": [
+              {
+                "name": "Jane Doe",
+                "email": "janedoe@gmail.com"
+              },
+              {
+                "name": "Omokorede Usman",
+                "email": "adeyeyeusman@gmail.com"
+              }
+            ]
+          }
+
+docs: |-
+
+## Notify Finalists
+
+  This endpoint sends a notification email to a list of competition finalists.
+
+  This endpoint requires administrator authentication using a Bearer access token.

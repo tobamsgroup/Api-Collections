@@ -8,27 +8,17 @@ http:
   url: "{{BASE}}/job-apply/public"
   body:
     type: json
-    data: "{\r
-
-      \    \"fullName\": \"Olareign\",\r
-
-      \    \"phoneNumber\": \"+2340970087834\",\r
-
-      \    \"email\": \"taofeeq.abdulrasaq@tobamsgroup.com\",\r
-
-      \    \"country\": \"Nigeria\",\r
-
-      \    \"bio\": \"this is a brief summary of me\",\r
-
-      \    \"portfolioLink\": \"portfolio Link\",\r
-
-      \    \"attachment\": \"image url in cloudinary\",\r
-
-      \    \"postId\": \"68f12129d18b6b055acff38a\",\r
-
-      \    \"company\": \"Tobams Group\"\r
-
-      }"
+    data: |-
+      {
+          "fullName": "abdulrasaq ola",
+          "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+          "bio": "iusbu ib uucniunvahsdihfsiuivjnfdindvubsbjvlseinwvubnsunvniuvwuhfuwqu",
+          "phoneNumber": "+2347012345678",
+          "country": "Nigeria",
+          "postId": "69ca45374e5d9fe46aef7613",
+          "reasonForInterest": "iusbu ib uucniunvahsdihfsiuivjnfdindvubsbjvlseinwvubnsunvniuvwuhfuwqu",
+          "attachment": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1782082562110_Abdulrasaq Taofeeq Olarewaju CV (2).pdf"
+      }
   auth:
     type: bearer
     token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2FhMGVmZTJmOGEzNWUxN2UzOGU2MWUiLCJlbWFpbCI6ImVyaWNzc29ucmFwaGFlbEBnbWFpbC5jb20iLCJyb2xlIjoiSW50ZXJuIiwiaWF0IjoxNzM5NDY0MTQxLCJleHAiOjE3Mzk1NTA1NDF9.EdYyH9F9JZdHXUp6hEKfYhek5yJHayYD0y9Kcuju31M

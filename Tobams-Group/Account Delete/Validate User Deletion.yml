@@ -10,9 +10,11 @@ http:
     type: json
     data: |-
       {
-        "email": "ona.newton@tobamsgroup.com"
+        "email": "jite.newton@tobamsgroup.com"
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTgzNjdmZWRmOGU1YmQ4YzkwYmFiNDkiLCJlbWFpbCI6InRoZXRlYW1AdG9iYW1zZ3JvdXAuY29tIiwicm9sZSI6IlN1cGVyX0FkbWluIiwiaWF0IjoxNzg0NTU1Mzc5LCJleHAiOjE3ODQ1Njk3Nzl9.WONyTAcPPJANX8JozjMTLUbOt1fCUhRlAoBCR4CNce0
 
 settings:
   encodeUrl: true

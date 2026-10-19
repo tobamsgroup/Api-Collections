@@ -1,0 +1,2734 @@
+info:
+  name: Get executive analytics
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{BASE}}/analytics/executive?key={{DIGEST_KEY}}&startDate=2026-07-01&endDate=2026-08-15&email=fawaz.abdganiyu@tobamsgroup.com"
+  params:
+    - name: key
+      value: "{{DIGEST_KEY}}"
+      type: query
+    - name: startDate
+      value: 2026-07-01
+      type: query
+    - name: endDate
+      value: 2026-08-15
+      type: query
+    - name: email
+      value: fawaz.abdganiyu@tobamsgroup.com
+      type: query
+  auth: inherit
+
+runtime:
+  variables:
+    - name: DIGEST_KEY
+      value: iq1cwnme9er0ta1thtbltst7t3t9fiendcs8afva4cs3s0sa
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/analytics/executive?key={{DIGEST_KEY}}&startDate=2026-07-01&endDate=2026-07-15&email=fawaz.abdganiyu@tobamsgroup.com"
+      method: GET
+      params:
+        - name: key
+          value: "{{DIGEST_KEY}}"
+          type: query
+        - name: startDate
+          value: 2026-07-01
+          type: query
+        - name: endDate
+          value: 2026-07-15
+          type: query
+        - name: email
+          value: fawaz.abdganiyu@tobamsgroup.com
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-headers
+          value: "*"
+        - name: x-request-id
+          value: 1784142260626-337b1cqhb
+        - name: content-type
+          value: text/html; charset=utf-8
+        - name: content-length
+          value: "72526"
+        - name: etag
+          value: W/"11b4e-Y7EctaqMcWoWINwDSm6eer/npIM"
+        - name: date
+          value: Wed, 15 Jul 2026 19:04:21 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: html
+        data: "
+
+          \        <html><body style=\"font-family: sans-serif; background: #f5f5f5; padding: 20px;\">
+
+          \          <h2>Executive Analytics — JSON Preview</h2>
+
+          \          <pre style=\"background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 12px; overflow: auto; max-height: 400px;\">{
+
+          \  \"generatedAt\": \"2026-07-15T19:04:21.643Z\",
+
+          \  \"dateRange\": {
+
+          \    \"startDate\": \"2026-07-01T00:00:00.000Z\",
+
+          \    \"endDate\": \"2026-07-15T00:00:00.000Z\"
+
+          \  },
+
+          \  \"level1_ceoDashboard\": {
+
+          \    \"newRegistrations\": 0,
+
+          \    \"activeUsersSnapshot\": 1,
+
+          \    \"assessmentsCompleted\": 0,
+
+          \    \"avgEmployabilityScore\": null,
+
+          \    \"learningCompletionRate\": null,
+
+          \    \"mentorSessionsCompleted\": 0,
+
+          \    \"referralsGenerated\": 2,
+
+          \    \"employerSignUps\": 0,
+
+          \    \"jobPostStats\": {
+
+          \      \"client\": {
+
+          \        \"internship\": 0,
+
+          \        \"professional\": 0,
+
+          \        \"total\": 0
+
+          \      },
+
+          \      \"inHouse\": {
+
+          \        \"internship\": 0,
+
+          \        \"professional\": 0,
+
+          \        \"total\": 0
+
+          \      },
+
+          \      \"totalPosted\": 0,
+
+          \      \"totalInternships\": 0,
+
+          \      \"totalProfessional\": 0
+
+          \    },
+
+          \    \"interviewsSecured\": 0,
+
+          \    \"jobsSecured\": 0,
+
+          \    \"userRetentionRate\": null,
+
+          \    \"mrr\": {
+
+          \      \"paidMRR\": 0,
+
+          \      \"provisionedMRR\": 0
+
+          \    },
+
+          \    \"totalEmployabilityOutcomes\": 0,
+
+          \    \"goldenMetric\": 0
+
+          \  },
+
+          \  \"level2_talentPipeline\": {
+
+          \    \"registered\": 1,
+
+          \    \"assessed\": 0,
+
+          \    \"developed\": 0,
+
+          \    \"certified\": 0,
+
+          \    \"connected\": 0,
+
+          \    \"interviewed\": 0,
+
+          \    \"employed\": 0,
+
+          \    \"retained\": null,
+
+          \    \"dropOffAnalysis\": [
+
+          \      {
+
+          \        \"stage\": \"Registered\",
+
+          \        \"count\": 1,
+
+          \        \"dropOffRate\": \"0%\"
+
+          \      },
+
+          \      {
+
+          \        \"stage\": \"Assessed\",
+
+          \        \"count\": 0,
+
+          \        \"dropOffRate\": \"100.0%\"
+
+          \      },
+
+          \      {
+
+          \        \"stage\": \"Developed\",
+
+          \        \"count\": 0,
+
+          \        \"dropOffRate\": \"0%\"
+
+          \      },
+
+          \      {
+
+          \        \"stage\": \"Certified\",
+
+          \        \"count\": 0,
+
+          \        \"dropOffRate\": \"0%\"
+
+          \      },
+
+          \      {
+
+          \        \"stage\": \"Connected\",
+
+          \        \"count\": 0,
+
+          \        \"dropOffRate\": \"0%\"
+
+          \      },
+
+          \      {
+
+          \        \"stage\": \"Interviewed\",
+
+          \        \"count\": 0,
+
+          \        \"dropOffRate\": \"0%\"
+
+          \      },
+
+          \      {
+
+          \        \"stage\": \"Employed\",
+
+          \        \"count\": 0,
+
+          \        \"dropOffRate\": \"0%\"
+
+          \      }
+
+          \    ]
+
+          \  },
+
+          \  \"level3_employabilityData\": {
+
+          \    \"employabilityIndex\": {
+
+          \      \"average\": 0,
+
+          \      \"totalAssessed\": 0
+
+          \    },
+
+          \    \"careerReadiness\": {},
+
+          \    \"categoryScores\": {
+
+          \      \"entry\": {
+
+          \        \"average\": 0,
+
+          \        \"count\": 0
+
+          \      },
+
+          \      \"effectiveness\": {
+
+          \        \"average\": 0,
+
+          \        \"count\": 0
+
+          \      },
+
+          \      \"acceleration\": {
+
+          \        \"average\": 0,
+
+          \        \"count\": 0
+
+          \      }
+
+          \    },
+
+          \    \"badgeDistribution\": {
+
+          \      \"jobReady\": 0,
+
+          \      \"workplaceReady\": 0,
+
+          \      \"leadershipEmerging\": 0
+
+          \    },
+
+          \    \"proficiencyDistribution\": {},
+
+          \    \"nexusEligibilityRate\": {
+
+          \      \"eligible\": 0,
+
+          \      \"total\": 0,
+
+          \      \"rate\": \"0%\",
+
+          \      \"avgTechnicalScore\": null,
+
+          \      \"avgSoftSkillsScore\": null,
+
+          \      \"technicalThreshold\": 70,
+
+          \      \"softSkillsThreshold\": 50
+
+          \    }
+
+          \  },
+
+          \  \"level4_universityDashboard\": null,
+
+          \  \"level5_employerDashboard\": {
+
+          \    \"totalEmployers\": 0,
+
+          \    \"newEmployerSignUps\": 0,
+
+          \    \"candidatesInPipeline\": 0,
+
+          \    \"topSkillsInDemand\": [],
+
+          \    \"interviewsConducted\": 0,
+
+          \    \"hiresMade\": 0,
+
+          \    \"avgCandidateScore\": null
+
+          \  },
+
+          \  \"level6_mentorData\": {
+
+          \    \"activeMentors\": 0,
+
+          \    \"sessionsCompleted\": 0,
+
+          \    \"sessionsCancelled\": 0,
+
+          \    \"mentorshipRequests\": {
+
+          \      \"pending\": 0,
+
+          \      \"approved\": 0,
+
+          \      \"rejected\": 0,
+
+          \      \"accepted\": 0,
+
+          \      \"declined\": 0,
+
+          \      \"cancelled\": 0
+
+          \    }
+
+          \  },
+
+          \  \"level7_ambassadorData\": {
+
+          \    \"applications\": 2,
+
+          \    \"selected\": 1,
+
+          \    \"totalReferrals\": 2,
+
+          \    \"topAmbassadors\": [
+
+          \      {
+
+          \        \"email\": \"fawazabdganiyu@gmail.com\",
+
+          \        \"referralCount\": 2
+
+          \      }
+
+          \    ]
+
+          \  },
+
+          \  \"level8_productData\": {
+
+          \    \"currentOnlineUsers\": 1,
+
+          \    \"dauWauMau\": null,
+
+          \    \"timeOnPlatform\": null,
+
+          \    \"featureUsage\": null,
+
+          \    \"abandonmentRates\": null
+
+          \  },
+
+          \  \"level9_revenueData\": {
+
+          \    \"revenueByCurrency\": [],
+
+          \    \"revenueByPurpose\": [],
+
+          \    \"subscriptions\": {
+
+          \      \"active\": 0,
+
+          \      \"trial\": 0,
+
+          \      \"provisioned\": {
+
+          \        \"active\": 0,
+
+          \        \"revoked\": 0,
+
+          \        \"expired\": 0,
+
+          \        \"total\": 0
+
+          \      },
+
+          \      \"paid\": 0
+
+          \    },
+
+          \    \"mrrBreakdown\": {
+
+          \      \"paid\": [],
+
+          \      \"provisioned\": []
+
+          \    },
+
+          \    \"paidMRR\": 0,
+
+          \    \"provisionedMRR\": 0,
+
+          \    \"totalMRR\": 0,
+
+          \    \"paymentSuccessRate\": {
+
+          \      \"successful\": 0,
+
+          \      \"total\": 0,
+
+          \      \"rate\": \"0%\"
+
+          \    }
+
+          \  },
+
+          \  \"level10_impactData\": {
+
+          \    \"jobsSecured\": 0,
+
+          \    \"internshipsSecured\": 0,
+
+          \    \"skillsImproved\": {
+
+          \      \"usersWithRetakes\": 0,
+
+          \      \"avgScoreImprovement\": null
+
+          \    },
+
+          \    \"promotionsSecured\": null,
+
+          \    \"businessesStarted\": null,
+
+          \    \"incomeGenerated\": null
+
+          \  },
+
+          \  \"unavailableMetrics\": [
+
+          \    {
+
+          \      \"level\": 1,
+
+          \      \"metric\": \"learningCompletionRate\",
+
+          \      \"reason\": \"No per-user course enrollment/completion tracking\",
+
+          \      \"requiredModel\": \"CourseEnrollment model with userId, courseId, completedAt, progress\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 1,
+
+          \      \"metric\": \"userRetentionRate\",
+
+          \      \"reason\": \"No persistent login event history\",
+
+          \      \"requiredModel\": \"LoginEvent model with userId, loginAt, logoutAt, sessionDuration\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 1,
+
+          \      \"metric\": \"activeUsers (historical)\",
+
+          \      \"reason\": \"Redis snapshot only — no historical DAU/WAU/MAU\",
+
+          \      \"requiredModel\": \"LoginEvent model for daily unique login counts\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 2,
+
+          \      \"metric\": \"retained (pipeline stage)\",
+
+          \      \"reason\": \"No return-visit tracking\",
+
+          \      \"requiredModel\": \"LoginEvent model\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 4,
+
+          \      \"metric\": \"entire level\",
+
+          \      \"reason\": \"No university affiliation field on BaseUser/Student model\",
+
+          \      \"requiredModel\": \"universityId field on BaseUser or Student model + University entity\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 5,
+
+          \      \"metric\": \"retentionOfHires\",
+
+          \      \"reason\": \"No post-hire retention tracking\",
+
+          \      \"requiredModel\": \"PlacementOutcome model with hireDate, retentionStatus, checkInDate\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 5,
+
+          \      \"metric\": \"hiringSatisfaction\",
+
+          \      \"reason\": \"No employer satisfaction survey\",
+
+          \      \"requiredModel\": \"EmployerFeedback model\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 6,
+
+          \      \"metric\": \"menteeRatings\",
+
+          \      \"reason\": \"No rating model for mentorship sessions\",
+
+          \      \"requiredModel\": \"MentorSessionRating model with rating, feedback\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 6,
+
+          \      \"metric\": \"avgResponseTime\",
+
+          \      \"reason\": \"No timestamp tracking on mentor responses to requests\",
+
+          \      \"requiredModel\": \"responseAt timestamp on MentorshipRequest\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 6,
+
+          \      \"metric\": \"placementsInfluenced\",
+
+          \      \"reason\": \"No attribution of placements to mentors\",
+
+          \      \"requiredModel\": \"mentorId on JobApplication or PlacementOutcome\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 7,
+
+          \      \"metric\": \"eventAttendance\",
+
+          \      \"reason\": \"No event check-in tracking\",
+
+          \      \"requiredModel\": \"EventAttendance model with eventId, userId, attendedAt\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 7,
+
+          \      \"metric\": \"referralConversionRate\",
+
+          \      \"reason\": \"No linkage between referral code usage and user registration\",
+
+          \      \"requiredModel\": \"referralCode field on BaseUser registration\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 8,
+
+          \      \"metric\": \"dauWauMau\",
+
+          \      \"reason\": \"No login event logging for historical daily/weekly/monthly active users\",
+
+          \      \"requiredModel\": \"LoginEvent model\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 8,
+
+          \      \"metric\": \"timeOnPlatform\",
+
+          \      \"reason\": \"No session duration tracking\",
+
+          \      \"requiredModel\": \"LoginEvent model with sessionDuration\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 8,
+
+          \      \"metric\": \"featureUsage\",
+
+          \      \"reason\": \"No feature analytics tracking\",
+
+          \      \"requiredModel\": \"FeatureUsageEvent model\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 8,
+
+          \      \"metric\": \"abandonmentRates\",
+
+          \      \"reason\": \"No funnel step tracking (registration, assessment, course)\",
+
+          \      \"requiredModel\": \"FunnelEvent model\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 9,
+
+          \      \"metric\": \"revenueByUserType\",
+
+          \      \"reason\": \"Payment purpose field only partially covers this\",
+
+          \      \"requiredModel\": \"Explicit userType field on payment or cross-join with BaseUser.role\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 10,
+
+          \      \"metric\": \"promotionsSecured\",
+
+          \      \"reason\": \"No career progression tracking\",
+
+          \      \"requiredModel\": \"CareerOutcome model with type (promotion, raise, transition)\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 10,
+
+          \      \"metric\": \"businessesStarted\",
+
+          \      \"reason\": \"No entrepreneurship outcome tracking\",
+
+          \      \"requiredModel\": \"CareerOutcome model\"
+
+          \    },
+
+          \    {
+
+          \      \"level\": 10,
+
+          \      \"metric\": \"incomeGenerated\",
+
+          \      \"reason\": \"No salary/income data collected\",
+
+          \      \"requiredModel\": \"Salary field on PlacementOutcome\"
+
+          \    }
+
+          \  ]
+
+          }</pre>
+
+          \          <h2>Executive Analytics — Email HTML Preview</h2>
+
+          \          <div style=\"background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 12px;\"><!DOCTYPE html>
+
+          \    <html
+
+          \    lang=\"en\"
+
+          \        xmlns:o=\"urn:schemas-microsoft-com:office:office\"
+
+          \        xmlns:v=\"urn:schemas-microsoft-com:vml\"
+
+          \    >
+
+          \    <head>
+
+          \    <title></title>
+
+          \    <meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />
+
+          \    <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\" />
+
+          \    <link
+
+          \        href=\"https://fonts.googleapis.com/css?family=Montserrat\"
+
+          \        rel=\"stylesheet\"
+
+          \        type=\"text/css\"
+
+          \    />
+
+          \    <style>
+
+          \        /* Reset styles */
+
+          \        * { box-sizing: border-box; }
+
+          \        body, table, td, th { margin: 0; padding: 0; }
+
+
+          \        /* Base styles (Mobile-first) */
+
+          \        body {
+
+          \            background-color: #ddd0da;
+
+          \            padding: 24px 16px;
+
+          \            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+          \        }
+
+
+          \        th {
+
+          \            text-align: start;
+
+          \            font-size: 20px;
+
+          \            line-height: 1.4;
+
+          \            font-weight: 700;
+
+          \            color: #333;
+
+          \        }
+
+
+          \        td {
+
+          \            font-size: 16px;
+
+          \            line-height: 1.6;
+
+          \            color: #555;
+
+          \        }
+
+
+          \        .salutation {
+
+          \            line-height: 1.5;
+
+          \            font-weight: 600;
+
+          \        }
+
+
+          \        .user-info-card {
+
+          \            background-color: #ddd0da;
+
+          \            padding: 16px;
+
+          \            border-radius: 8px;
+
+          \            text-align: center;
+
+          \            line-height: 1.5;
+
+          \        }
+
+
+          \        .info-label {
+
+          \            font-size: 16px;
+
+          \            line-height: 1.5;
+
+          \        }
+
+
+          \        .info-value {
+
+          \            font-size: 18px;
+
+          \            color: #571244;
+
+          \            font-weight: 700;
+
+          \            line-height: 1.5;
+
+          \        }
+
+
+          \        .cta-button {
+
+          \            background-color: #571244;
+
+          \            color: #ffffff;
+
+          \            font-size: 18px;
+
+          \            font-weight: bold;
+
+          \            letter-spacing: 1px;
+
+          \            padding: 12px 16px;
+
+          \            border-radius: 4px;
+
+          \            display: inline-block;
+
+          \            text-align: center;
+
+          \            width: 100%;
+
+          \        }
+
+
+          \        .cta-button:hover {
+
+          \            transform: translateY(-2px);
+
+          \            box-shadow: 0 6px 20px rgba(87, 18, 68, 0.4);
+
+          \        }
+
+
+          \        .cta-link {
+
+          \            color: #ffffff;
+
+          \            font-size: 16px;
+
+          \            text-decoration: none;
+
+          \            text-transform: uppercase;
+
+          \            font-weight: bold;
+
+          \            letter-spacing: 1px;
+
+          \        }
+
+
+          \        /* Tablet styles */
+
+          \        @media only screen and (min-width: 768px) {
+
+          \            body {
+
+          \                padding: 32px;
+
+          \            }
+
+
+          \            th {
+
+          \                font-size: 24px;
+
+          \            }
+
+
+          \           .info-label {
+
+          \                display: inline-block;
+
+          \                font-size: 18px;
+
+          \                line-height: 1;
+
+          \            }
+
+
+          \            .info-value {
+
+          \                display: inline-block;
+
+          \                font-size: 20px;
+
+          \                margin-left: 16px;
+
+          \            }
+
+
+          \            .cta-button {
+
+          \                padding: 16px 48px;
+
+          \            }
+
+
+          \            .cta-link {
+
+          \                font-size: 18px;
+
+          \            }
+
+          \        }
+
+
+          \        /* Desktop styles */
+
+          \        @media only screen and (min-width: 1024px) {
+
+          \            th {
+
+          \                font-size: 28px;
+
+          \            }
+
+
+          \            .user-id-value {
+
+          \                font-size: 32px;
+
+          \            }
+
+
+          \            .discount-value {
+
+          \                font-size: 28px;
+
+          \            }
+
+          \        }
+
+
+          \    </style>
+
+          \    </head>
+
+          \    <body style=\"background-color: #ddd0da; padding:2.3vh\">
+
+          \    <img src=\"https://res.cloudinary.com/dscnzgig1/image/upload/v1723440489/o67wayoqjj5ulugrlxba.png\" style=\"height: 10vh;\"/>
+
+          \    <table
+
+          \        border=\"0\"
+
+          \        cellpadding=\"0\"
+
+          \        cellspacing=\"0\"
+
+          \        class=\"nl-container\"
+
+          \        role=\"presentation\"
+
+          \        style=\"
+
+          \            mso-table-lspace: 0pt;
+
+          \            mso-table-rspace: 0pt;
+
+          \            background-color: #ffffff;
+
+          \            padding: 2vh;
+
+          \            border-radius: 5px;
+
+          \        \"
+
+          \        width=\"100%\"
+
+          \    >
+
+          \    <tbody>
+
+
+          \    <!-- header -->
+
+          \   \ 
+
+          \      <tr>
+
+          \        <td style=\"padding: 20px;\">
+
+          \          <div style=\"max-width: 700px; margin: 0 auto;\">
+
+          \            <h2 style=\"color: #571244; margin-bottom: 4px;\">TG Nexus Executive Analytics Report</h2>
+
+          \            <p style=\"color: #888; font-size: 14px; margin-top: 0; margin-bottom: 20px;\">
+
+          \              Generated at: 2026-07-15T19:04:21.643Z | Date range: 2026-07-01 to 2026-07-15
+
+          \            </p>
+
+
+          \            <p>Hi Admin,</p>
+
+          \            <p>Here is the executive analytics summary across all 10 levels of the TG Nexus platform.</p>
+
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Level 1 — CEO (Chief Executive Officer) Dashboard</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">Daily KPIs (Key Performance Indicators)</p>
+
+          \      </div>
+
+          \      <table style=\"width: 100%; border-collapse: collapse; margin-top: 12px; background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);\">
+
+          \        <thead>
+
+          \          <tr style=\"background-color: #571244;\">
+
+          \            <th style=\"padding: 10px 12px; text-align: left; color: #fff; font-size: 13px;\">Metric</th>
+
+          \            <th style=\"padding: 10px 12px; text-align: right; color: #fff; font-size: 13px;\">Value</th>
+
+          \          </tr>
+
+          \        </thead>
+
+          \        <tbody>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">New Registrations</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Active Users (Snapshot)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">1</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Assessments Completed</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Avg Employability Score</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Learning Completion Rate</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Mentor Sessions Completed</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Referrals Generated</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">2</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Employer Sign-Ups</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Total Jobs Posted</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Total Internships Posted</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Total Professional Jobs Posted</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Client Jobs (Total)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Client Jobs (Internship)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Client Jobs (Professional)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">In-House Jobs (Total)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">In-House Jobs (Internship)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">In-House Jobs (Professional)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Interviews Secured</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Jobs Secured</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">User Retention Rate</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Paid MRR</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">$0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Provisioned MRR (non-revenue)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">$0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Total Employability Outcomes</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr></tbody>
+
+          \      </table><div style=\"margin-top: 16px; background-color: #f3e5f5; border-radius: 6px; padding: 16px; text-align: center;\">
+
+          \        <p style=\"margin: 0 0 4px; color: #571244; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;\">Golden Metric</p>
+
+          \        <p style=\"margin: 0; color: #571244; font-size: 32px; font-weight: bold;\">0</p>
+
+          \        <p style=\"margin: 4px 0 0; color: #777; font-size: 12px;\">Total Career Outcomes (Jobs + Mentorships)</p>
+
+          \      </div>
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Level 2 — Talent Pipeline</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">Funnel: Registered → Employed</p>
+
+          \      </div><div style=\"margin-top: 12px; background-color: #f0f4ff; border-radius: 6px; padding: 16px;\">
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #dde8ff;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #c5d3f0; text-align: left;\">Stage</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #c5d3f0; text-align: center;\">Count</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #c5d3f0; text-align: center;\">Note</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody>
+
+          \            <tr>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Registered</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\">1</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888; font-size: 12px;\"></td>
+
+          \      </tr>
+
+          \            <tr>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Assessed</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\">0</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888; font-size: 12px;\"></td>
+
+          \      </tr>
+
+          \            <tr>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Developed</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\">0</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888; font-size: 12px;\"></td>
+
+          \      </tr>
+
+          \            <tr>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Certified</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\">0</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888; font-size: 12px;\">Users with assessment certificates</td>
+
+          \      </tr>
+
+          \            <tr>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Connected</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\">0</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888; font-size: 12px;\"></td>
+
+          \      </tr>
+
+          \            <tr>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Interviewed</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\">0</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888; font-size: 12px;\"></td>
+
+          \      </tr>
+
+          \            <tr>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Employed</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\">0</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888; font-size: 12px;\"></td>
+
+          \      </tr>
+
+          \            <tr>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Retained</td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\"><em>N/A</em></td>
+
+          \        <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888; font-size: 12px;\">Requires LoginEvent model</td>
+
+          \      </tr>
+
+          \          </tbody>
+
+          \        </table>
+
+          \      </div>
+
+          \      <div style=\"margin-top: 12px; background-color: #f9f9f9; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Drop-Off Analysis</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #e8e8e8;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left;\">Stage</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">Count</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">Drop-Off Rate</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Registered</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">1</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888;\">0%</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Assessed</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">0</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #c62828;\">100.0%</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Developed</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">0</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888;\">0%</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Certified</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">0</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888;\">0%</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Connected</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">0</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888;\">0%</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Interviewed</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">0</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888;\">0%</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Employed</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">0</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888;\">0%</td>
+
+          \        </tr></tbody>
+
+          \        </table>
+
+          \      </div>
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Level 3 — Employability Data</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">Career Readiness & Assessment Outcomes</p>
+
+          \      </div><div style=\"margin-top: 12px; background-color: #f0f4ff; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 4px; color: #333; font-size: 14px;\">Employability Index</h4>
+
+          \        <p style=\"font-size: 28px; font-weight: bold; color: #571244; margin: 4px 0;\">0%</p>
+
+          \        <p style=\"margin: 0; color: #888; font-size: 12px;\">Average across 0 assessed users</p>
+
+          \      </div>
+
+
+          \      <div style=\"margin-top: 12px; background-color: #f9f9f9; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Category Scores</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #e8e8e8;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left;\">Category</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">Avg Score</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">Submissions</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody>
+
+          \            <tr><td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Career Entry</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\">0%</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">0</td></tr>
+
+          \            <tr style=\"background-color:#f5f5f5;\"><td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Career Effectiveness</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\">0%</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">0</td></tr>
+
+          \            <tr><td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Career Acceleration</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;\">0%</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">0</td></tr>
+
+          \          </tbody>
+
+          \        </table>
+
+          \      </div>
+
+
+          \      <div style=\"margin-top: 12px; background-color: #f0f4ff; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Badge Distribution</h4>
+
+          \        <ul style=\"margin: 0; padding-left: 20px; color: #555; font-size: 14px;\">
+
+          \          <li>Job Ready: <strong>0</strong></li>
+
+          \          <li>Workplace Ready: <strong>0</strong></li>
+
+          \          <li>Leadership Emerging: <strong>0</strong></li>
+
+          \        </ul>
+
+          \      </div>
+
+
+          \      <div style=\"margin-top: 12px; background-color: #f9f9f9; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Proficiency Distribution</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #e8e8e8;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left;\">Level</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">Count</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody></tbody>
+
+          \        </table>
+
+          \      </div>
+
+
+          \      <div style=\"margin-top: 12px; background-color: #e8f5e9; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Nexus Eligibility (Employment Platform Access)</h4>
+
+          \        <p style=\"margin: 4px 0; color: #555; font-size: 14px;\"><strong>0</strong> of 0 users eligible (<strong>0%</strong>)</p>
+
+          \      </div>
+
+
+          \      <div style=\"margin-top: 12px; background-color: #f9f9f9; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Career Readiness by Area (20 Areas)</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #e8e8e8;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left;\">Area</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right;\">Avg Score</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody></tbody>
+
+          \        </table>
+
+          \      </div>
+
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Level 4 — University Dashboard</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">Unavailable — No university affiliation field on users</p>
+
+          \      </div>
+
+          \            <div style=\"margin-top: 12px; background-color: #fff3e0; border-radius: 6px; padding: 16px;\">
+
+          \              <p style=\"margin: 0; color: #888; font-size: 13px;\"><em>This level requires a universityId field on BaseUser/Student model and a University entity.</em></p>
+
+          \            </div>
+
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Level 5 — Employer Dashboard</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">Hiring Activity & Talent Demand</p>
+
+          \      </div>
+
+          \      <table style=\"width: 100%; border-collapse: collapse; margin-top: 12px; background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);\">
+
+          \        <thead>
+
+          \          <tr style=\"background-color: #571244;\">
+
+          \            <th style=\"padding: 10px 12px; text-align: left; color: #fff; font-size: 13px;\">Metric</th>
+
+          \            <th style=\"padding: 10px 12px; text-align: right; color: #fff; font-size: 13px;\">Value</th>
+
+          \          </tr>
+
+          \        </thead>
+
+          \        <tbody>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Total Employers</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">New Employer Sign-Ups</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Candidates in Pipeline</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Interviews Conducted</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Hires Made</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Avg Candidate Score</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr></tbody>
+
+          \      </table><div style=\"margin-top: 12px; background-color: #f9f9f9; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Top Skills in Demand</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #e8e8e8;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left; width: 30px;\">#</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left;\">Skill</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right;\">Talents</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody></tbody>
+
+          \        </table>
+
+          \      </div>
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Level 6 — Mentor Data</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">Mentorship Sessions & Requests</p>
+
+          \      </div>
+
+          \      <table style=\"width: 100%; border-collapse: collapse; margin-top: 12px; background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);\">
+
+          \        <thead>
+
+          \          <tr style=\"background-color: #571244;\">
+
+          \            <th style=\"padding: 10px 12px; text-align: left; color: #fff; font-size: 13px;\">Metric</th>
+
+          \            <th style=\"padding: 10px 12px; text-align: right; color: #fff; font-size: 13px;\">Value</th>
+
+          \          </tr>
+
+          \        </thead>
+
+          \        <tbody>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Active Mentors</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Sessions Completed</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Sessions Cancelled</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr></tbody>
+
+          \      </table><div style=\"margin-top: 12px; background-color: #f0f4ff; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Mentorship Requests by Status</h4>
+
+          \        <ul style=\"margin: 0; padding-left: 20px; color: #555; font-size: 14px;\">
+
+          \          <li>Pending: <strong>0</strong></li>
+
+          \          <li>Approved: <strong>0</strong></li>
+
+          \          <li>Accepted: <strong>0</strong></li>
+
+          \          <li>Rejected: <strong>0</strong></li>
+
+          \          <li>Declined: <strong>0</strong></li>
+
+          \          <li>Cancelled: <strong>0</strong></li>
+
+          \        </ul>
+
+          \      </div>
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Level 7 — Ambassador Data</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">Campus Ambassador Program</p>
+
+          \      </div>
+
+          \      <table style=\"width: 100%; border-collapse: collapse; margin-top: 12px; background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);\">
+
+          \        <thead>
+
+          \          <tr style=\"background-color: #571244;\">
+
+          \            <th style=\"padding: 10px 12px; text-align: left; color: #fff; font-size: 13px;\">Metric</th>
+
+          \            <th style=\"padding: 10px 12px; text-align: right; color: #fff; font-size: 13px;\">Value</th>
+
+          \          </tr>
+
+          \        </thead>
+
+          \        <tbody>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Applications</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">2</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Selected</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">1</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Total Referrals</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">2</td>
+
+          \      </tr></tbody>
+
+          \      </table><div style=\"margin-top: 12px; background-color: #f9f9f9; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Top Ambassadors (by Referrals)</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #e8e8e8;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; width: 30px;\">#</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left;\">Email</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right;\">Referrals</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">1</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">fawazabdganiyu@gmail.com</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right; font-weight: bold;\">2</td>
+
+          \        </tr></tbody>
+
+          \        </table>
+
+          \      </div>
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Level 8 — Product Data</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">Platform Usage (partial — snapshot only)</p>
+
+          \      </div>
+
+          \      <table style=\"width: 100%; border-collapse: collapse; margin-top: 12px; background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);\">
+
+          \        <thead>
+
+          \          <tr style=\"background-color: #571244;\">
+
+          \            <th style=\"padding: 10px 12px; text-align: left; color: #fff; font-size: 13px;\">Metric</th>
+
+          \            <th style=\"padding: 10px 12px; text-align: right; color: #fff; font-size: 13px;\">Value</th>
+
+          \          </tr>
+
+          \        </thead>
+
+          \        <tbody>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Current Online Users</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">1</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">DAU (Daily Active Users) / WAU (Weekly Active Users) / MAU (Monthly Active Users)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Time on Platform</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Feature Usage</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Abandonment Rates</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr></tbody>
+
+          \      </table>
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Level 9 — Revenue Data</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">Payments, Subscriptions & MRR (Monthly Recurring Revenue)</p>
+
+          \      </div>
+
+          \      <table style=\"width: 100%; border-collapse: collapse; margin-top: 12px; background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);\">
+
+          \        <thead>
+
+          \          <tr style=\"background-color: #571244;\">
+
+          \            <th style=\"padding: 10px 12px; text-align: left; color: #fff; font-size: 13px;\">Metric</th>
+
+          \            <th style=\"padding: 10px 12px; text-align: right; color: #fff; font-size: 13px;\">Value</th>
+
+          \          </tr>
+
+          \        </thead>
+
+          \        <tbody>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Paid MRR</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Provisioned MRR (non-revenue)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Total MRR (Paid + Provisioned)</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Payment Success Rate</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0% (0/0)</td>
+
+          \      </tr></tbody>
+
+          \      </table><div style=\"margin-top: 12px; background-color: #e8f5e9; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Revenue by Currency</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #c8e6c9;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #a5d6a7; text-align: left;\">Currency</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #a5d6a7; text-align: center;\">Transactions</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #a5d6a7; text-align: right;\">Total</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody></tbody>
+
+          \        </table>
+
+          \      </div>
+
+          \      <div style=\"margin-top: 12px; background-color: #f0f4ff; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Subscription Breakdown</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #dde8ff;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #c5d3f0; text-align: left;\">Category</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #c5d3f0; text-align: right;\">Count</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody>
+
+          \            <tr><td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Active Subscriptions (Total)</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right; font-weight: bold;\">0</td></tr>
+
+          \            <tr style=\"background-color:#f5f5f5;\"><td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Paid Subscriptions</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right; font-weight: bold;\">0</td></tr>
+
+          \            <tr><td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Trial Subscriptions</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right; font-weight: bold;\">0</td></tr>
+
+          \            <tr style=\"background-color:#f5f5f5;\"><td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Provisioned (Active)</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right; font-weight: bold;\">0</td></tr>
+
+          \            <tr><td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Provisioned (Revoked)</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right; font-weight: bold;\">0</td></tr>
+
+          \            <tr style=\"background-color:#f5f5f5;\"><td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Provisioned (Expired)</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right; font-weight: bold;\">0</td></tr>
+
+          \            <tr><td style=\"padding: 6px 8px; border: 1px solid #ddd;\">Provisioned (Total)</td><td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right; font-weight: bold;\">0</td></tr>
+
+          \          </tbody>
+
+          \        </table>
+
+          \      </div>
+
+          \      <div style=\"margin-top: 12px; background-color: #f9f9f9; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Revenue by Purpose</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #e8e8e8;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left;\">Purpose</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">Currency</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">Transactions</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: right;\">Amount</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody></tbody>
+
+          \        </table>
+
+          \      </div>
+
+          \      <div style=\"margin-top: 12px; background-color: #e8f5e9; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Paid MRR Breakdown by Plan</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #c8e6c9;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #a5d6a7; text-align: left;\">Plan</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #a5d6a7; text-align: right;\">MRR</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody><tr><td colspan=\"2\" style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888;\">No paid subscriptions</td></tr></tbody>
+
+          \        </table>
+
+          \      </div>
+
+          \      <div style=\"margin-top: 12px; background-color: #fff3e0; border-radius: 6px; padding: 16px;\">
+
+          \        <h4 style=\"margin: 0 0 8px; color: #333; font-size: 14px;\">Provisioned MRR Breakdown by Plan (non-revenue)</h4>
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #ffe0b2;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ffcc80; text-align: left;\">Plan</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ffcc80; text-align: right;\">MRR</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody><tr><td colspan=\"2\" style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; color: #888;\">No provisioned subscriptions</td></tr></tbody>
+
+          \        </table>
+
+          \      </div>
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Level 10 — Impact Data</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">Career Outcomes & Skill Improvement</p>
+
+          \      </div>
+
+          \      <table style=\"width: 100%; border-collapse: collapse; margin-top: 12px; background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);\">
+
+          \        <thead>
+
+          \          <tr style=\"background-color: #571244;\">
+
+          \            <th style=\"padding: 10px 12px; text-align: left; color: #fff; font-size: 13px;\">Metric</th>
+
+          \            <th style=\"padding: 10px 12px; text-align: right; color: #fff; font-size: 13px;\">Value</th>
+
+          \          </tr>
+
+          \        </thead>
+
+          \        <tbody>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Jobs Secured</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Internships Secured</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Users with Retakes</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\">0</td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Avg Score Improvement</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Promotions Secured</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Businesses Started</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr>
+
+          \      <tr>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; color: #333; font-size: 14px;\">Income Generated</td>
+
+          \        <td style=\"padding: 8px 12px; border-bottom: 1px solid #eee; font-weight: bold; color: #571244; font-size: 14px; text-align: right;\"><em>N/A — requires data model</em></td>
+
+          \      </tr></tbody>
+
+          \      </table>
+
+          \           \ 
+
+          \      <div style=\"margin-top: 32px; border-bottom: 2px solid #571244; padding-bottom: 4px;\">
+
+          \        <h3 style=\"margin: 0; color: #571244; font-size: 16px;\">Unavailable Metrics</h3>
+
+          \        <p style=\"margin: 2px 0 0; color: #888; font-size: 12px;\">20 metrics require new data models</p>
+
+          \      </div><div style=\"margin-top: 12px; background-color: #fff3e0; border-radius: 6px; padding: 16px;\">
+
+          \        <table style=\"width: 100%; border-collapse: collapse; font-size: 13px;\">
+
+          \          <thead>
+
+          \            <tr style=\"background-color: #ffe0b2;\">
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center; width: 40px;\">Lvl</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left;\">Metric</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left;\">Reason</th>
+
+          \              <th style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: left;\">Required Model</th>
+
+          \            </tr>
+
+          \          </thead>
+
+          \          <tbody><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">1</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">learningCompletionRate</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No per-user course enrollment/completion tracking</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">CourseEnrollment model with userId, courseId, completedAt, progress</td>
+
+          \        </tr><tr style=\"background-color:#f5f5f5;\">
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">1</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">userRetentionRate</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No persistent login event history</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">LoginEvent model with userId, loginAt, logoutAt, sessionDuration</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">1</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">activeUsers (historical)</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">Redis snapshot only — no historical DAU/WAU/MAU</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">LoginEvent model for daily unique login counts</td>
+
+          \        </tr><tr style=\"background-color:#f5f5f5;\">
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">2</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">retained (pipeline stage)</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No return-visit tracking</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">LoginEvent model</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">4</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">entire level</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No university affiliation field on BaseUser/Student model</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">universityId field on BaseUser or Student model + University entity</td>
+
+          \        </tr><tr style=\"background-color:#f5f5f5;\">
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">5</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">retentionOfHires</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No post-hire retention tracking</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">PlacementOutcome model with hireDate, retentionStatus, checkInDate</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">5</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">hiringSatisfaction</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No employer satisfaction survey</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">EmployerFeedback model</td>
+
+          \        </tr><tr style=\"background-color:#f5f5f5;\">
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">6</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">menteeRatings</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No rating model for mentorship sessions</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">MentorSessionRating model with rating, feedback</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">6</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">avgResponseTime</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No timestamp tracking on mentor responses to requests</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">responseAt timestamp on MentorshipRequest</td>
+
+          \        </tr><tr style=\"background-color:#f5f5f5;\">
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">6</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">placementsInfluenced</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No attribution of placements to mentors</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">mentorId on JobApplication or PlacementOutcome</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">7</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">eventAttendance</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No event check-in tracking</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">EventAttendance model with eventId, userId, attendedAt</td>
+
+          \        </tr><tr style=\"background-color:#f5f5f5;\">
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">7</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">referralConversionRate</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No linkage between referral code usage and user registration</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">referralCode field on BaseUser registration</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">8</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">dauWauMau</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No login event logging for historical daily/weekly/monthly active users</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">LoginEvent model</td>
+
+          \        </tr><tr style=\"background-color:#f5f5f5;\">
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">8</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">timeOnPlatform</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No session duration tracking</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">LoginEvent model with sessionDuration</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">8</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">featureUsage</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No feature analytics tracking</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">FeatureUsageEvent model</td>
+
+          \        </tr><tr style=\"background-color:#f5f5f5;\">
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">8</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">abandonmentRates</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No funnel step tracking (registration, assessment, course)</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">FunnelEvent model</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">9</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">revenueByUserType</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">Payment purpose field only partially covers this</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">Explicit userType field on payment or cross-join with BaseUser.role</td>
+
+          \        </tr><tr style=\"background-color:#f5f5f5;\">
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">10</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">promotionsSecured</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No career progression tracking</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">CareerOutcome model with type (promotion, raise, transition)</td>
+
+          \        </tr><tr>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">10</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">businessesStarted</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No entrepreneurship outcome tracking</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">CareerOutcome model</td>
+
+          \        </tr><tr style=\"background-color:#f5f5f5;\">
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; text-align: center;\">10</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd;\">incomeGenerated</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 12px; color: #555;\">No salary/income data collected</td>
+
+          \          <td style=\"padding: 6px 8px; border: 1px solid #ddd; font-size: 11px; font-family: monospace; color: #888;\">Salary field on PlacementOutcome</td>
+
+          \        </tr></tbody>
+
+          \        </table>
+
+          \      </div>
+
+
+          \            <p style=\"margin-top: 24px;\">Best regards,</p>
+
+          \            <p style=\"margin-top: 0;\"><strong>Tobams Group Team</strong></p>
+
+          \          </div>
+
+          \        </td>
+
+          \      </tr>
+
+          \   \ 
+
+          \    <!-- footer -->
+
+          \    <!-- footer -->
+
+          \             <tr>
+
+          \                <td>
+
+          \                    <br>
+
+          \                </td>
+
+          \             </tr>
+
+          \             <tr>
+
+          \                <td>
+
+          \                    <div style=\"background-color: #C4C4C4; height: 1px;\"></div>
+
+          \                </td>
+
+          \             </tr>
+
+
+          \             <tr>
+
+          \                <td>
+
+          \                    <table style=\"width: 100%;\">
+
+          \                        <tbody>
+
+          \                            <tr>
+
+          \                                <td >
+
+          \                                    <img  src=\"https://res.cloudinary.com/dscnzgig1/image/upload/v1723440489/o67wayoqjj5ulugrlxba.png\" style=\"height: 10vh;\"/>
+
+
+          \                                </td>
+
+
+          \                                <td style=\" width: 20%;\">
+
+          \                                    <table style=\"width: 100%; text-align: end;\">
+
+          \                                        <tbody>
+
+          \                                            <tr>
+
+
+
+          \                                                <td style=\"width: fit-content;\">
+
+          \                                                    <a href=\"https://linkedin.com/company/tobams-group\">
+
+
+          \                                                        <img style=\"height: 3vh;\" src=\"https://res.cloudinary.com/dscnzgig1/image/upload/v1723440990/hwdg25qn9fq2s7lp4zkg.png\"/>
+
+          \                                                    </a>
+
+          \                             </td>
+
+          \                             <td style=\"width: fit-content;\">
+
+          \                                <a href=\"https://www.instagram.com/tobamsgroup/?igsh=cmkxY2hremU5a2Zw\">
+
+
+          \                                    <img style=\"height: 3vh;\" src=\"https://res.cloudinary.com/dscnzgig1/image/upload/v1723440990/juik8ellohjuhqxkklqn.png\"/>
+
+          \                                </a>
+
+          \                             </td>
+
+          \                             <td style=\"width: fit-content;\">
+
+          \                                <a href=\"\">
+
+
+          \                                    <img style=\"height: 3vh;\" src=\"https://res.cloudinary.com/dscnzgig1/image/upload/v1723440990/kdk3wjm4gpnj0zpifr95.png\"/>
+
+          \                                </a>
+
+          \                             </td>
+
+          \                             <td style=\"width: fit-content;\">
+
+          \                                <a href=\"\">
+
+
+          \                                    <img style=\"height: 3vh;\" src=\"https://res.cloudinary.com/dscnzgig1/image/upload/v1723440990/prmajf8jfm0dhimw2bvv.png\"/>
+
+          \                                </a>
+
+          \                            </td>
+
+          \                             </tr>
+
+          \                                     </tbody>
+
+          \                                    </table>
+
+          \                                </td>
+
+          \                            </tr>
+
+
+          \                            <tr>
+
+          \                                <td align=\"center\" colspan=\"2\">
+
+          \                                    <table>
+
+          \                                        <tbody style=\"text-decoration: underline;  color: #696969; font-size: 12px;\">
+
+          \                                            <tr>
+
+
+          \                                                <td style=\"padding-right: 12px; font-size: 12px;\">
+
+          \                                                    <a style=\"color: #696969; text-align: center;\" href=\"https://www.tobamsgroup.com/blog\">
+
+          \                                                        Our Blog
+
+          \                                                    </a>
+
+          \                                                   </td>
+
+          \                                                <td>
+
+          \                                                    <div style=\"height: 15px; background-color:#cacaca; width: 1px;\"></div>
+
+          \                                                </td>
+
+
+          \                                                <td style=\"padding:0 12px; font-size: 12px;\">
+
+          \                                                    <a style=\"color: #696969; text-align: center;\" href=\"https://www.tobamsgroup.com/terms-and-conditions\">
+
+          \                                                        Terms
+
+          \                                                    </a>
+
+          \                                                   </td>
+
+          \                                                <td>
+
+          \                                                    <div style=\"height: 15px; background-color:#cacaca; width: 1px;\"></div>
+
+          \                                                </td>
+
+
+          \                                                <td style=\"padding:0 12px; font-size: 12px;\">
+
+          \                                                    <a style=\"color: #696969; text-align: center;\" href=\"https://www.tobamsgroup.com/privacy-policy\">
+
+          \                                                        Privacy
+
+          \                                                    </a>
+
+          \                                                   </td>
+
+          \                                                <td>
+
+          \                                                    <div style=\"height: 15px; background-color:#cacaca; width: 1px;\"></div>
+
+          \                                                </td>
+
+
+          \                                                <td style=\"padding:0 12px; font-size: 12px;\">
+
+          \                                                    <a style=\"color: #696969; text-align: center;\" href=\"https://www.tobamsgroup.com/contact\">
+
+          \                                                        Contact Us
+
+          \                                                    </a>
+
+          \                                                   </td>
+
+          \                                            </tr>
+
+          \                                        </tbody>
+
+          \                                    </table>
+
+          \                                </td>
+
+          \                            </tr>
+
+          \                            <tr>
+
+          \                                <td>
+
+          \                                    <br>
+
+          \                                </td>
+
+          \                            </tr>
+
+          \                            <tr  style=\" width: 100%;\">
+
+          \                                <td colspan=\"2\" style=\"text-align: center; color: #696969; font-size: 12px;\">
+
+          \                                    ©2025 Tobams Group, All rights reserved.
+
+          \                                </td>
+
+          \                            </tr>
+
+          \                        </tbody>
+
+          \                    </table>
+
+          \                </td>
+
+          \             </tr>
+
+          \      </tbody>
+
+          \    </table>
+
+          \  </body>
+
+          </html></div>
+
+          \          <p style=\"color: green; font-weight: bold;\">Report email queued to: fawaz.abdganiyu@tobamsgroup.com</p>
+
+          \        </body></html>
+
+          \      "

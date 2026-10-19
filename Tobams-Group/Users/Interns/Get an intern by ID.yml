@@ -5,11 +5,257 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/interns/67b65c0c2478ee6593c4983a"
-  auth: inherit
+  url: "{{BASE}}/interns/:id"
+  params:
+    - name: id
+      value: 6a0d7512c629597c60c9c022
+      type: path
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/interns/:id"
+      method: GET
+      params:
+        - name: id
+          value: 6a0d7512c629597c60c9c022
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: date
+          value: Tue, 18 Aug 2026 09:31:10 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"a3e-OiXRHN17f7KtYEEB0vBKx7isgLs"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: b225dd73-c157-42e8
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1787045468478-skge06x5a
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a2cfe75d9f833441-AMS
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Intern profile retrieved successfully",
+            "data": {
+              "internshipPreferences": {
+                "role": [],
+                "industryOfInterest": [
+                  "Education",
+                  "Finance",
+                  "Technology"
+                ],
+                "preferredLocation": [],
+                "workMode": [
+                  "Remote"
+                ],
+                "duration": [
+                  "1 Year",
+                  "6 Months",
+                  "3 Months"
+                ],
+                "internshipType": [
+                  "Paid"
+                ],
+                "workType": [
+                  "Full-Time",
+                  "Contract",
+                  "Part-time"
+                ]
+              },
+              "mentorPreferences": {
+                "role": [
+                  "Business Analyst",
+                  "Data Scientist",
+                  "Machine Learning Engineer"
+                ],
+                "industryOfInterest": [
+                  "Education",
+                  "Finance",
+                  "Technology"
+                ],
+                "experienceLevel": [
+                  "Senior-Level",
+                  "Executive"
+                ],
+                "mentorshipType": [
+                  "One-to-One",
+                  "Peer-to-Peer",
+                  "Group"
+                ]
+              },
+              "notificationSettings": {
+                "internshipNotifications": {
+                  "newInternshipPosting": {
+                    "inApp": true,
+                    "email": true
+                  },
+                  "applicationStatusUpdate": {
+                    "inApp": true,
+                    "email": true
+                  }
+                },
+                "mentorshipNotifications": {
+                  "mentorshipApplicationUpdates": {
+                    "inApp": true,
+                    "email": true
+                  },
+                  "mentorshipAcceptance": {
+                    "inApp": true,
+                    "email": true
+                  }
+                },
+                "communityAndCommunication": {
+                  "messagesFromMentors": {
+                    "inApp": true,
+                    "email": true
+                  },
+                  "communityMessages": {
+                    "inApp": true,
+                    "email": false
+                  },
+                  "adminAnnouncements": {
+                    "inApp": true,
+                    "email": true
+                  }
+                },
+                "chatRoomNotifications": {
+                  "newChatMessages": {
+                    "inApp": true,
+                    "email": false
+                  },
+                  "mentionsInChat": {
+                    "inApp": true,
+                    "email": true
+                  },
+                  "groupChatActivity": {
+                    "inApp": true,
+                    "email": false
+                  },
+                  "fileSharing": {
+                    "inApp": true,
+                    "email": false
+                  }
+                },
+                "eventNotifications": {
+                  "upcomingEvents": {
+                    "inApp": true,
+                    "email": true
+                  },
+                  "eventReminders": {
+                    "inApp": true,
+                    "email": true
+                  }
+                }
+              },
+              "_id": "6a0d7512c629597c60c9c023",
+              "userId": "6a0d7512c629597c60c9c022",
+              "skills": [],
+              "savedCourses": [],
+              "savedMentors": [],
+              "savedMentorshipGroups": [],
+              "savedInternships": [
+                "6a0ecd901334be917900c735"
+              ],
+              "savedEvents": [],
+              "myApplicationsCount": 0,
+              "jobsAppliedTo": [],
+              "ongoingMentorshipCount": 0,
+              "ongoingInternshipsCount": 0,
+              "interviewSchedulesCount": 0,
+              "ongoingJobsCount": 0,
+              "educations": [
+                {
+                  "otherFieldOfStudy": null,
+                  "school": "Nnamdi Azikiwe University",
+                  "degree": "Bachelor's Degree",
+                  "fieldOfStudy": "Natural Sciences",
+                  "grade": "4.62",
+                  "startDate": "2018-10-18T00:00:00.000Z",
+                  "endDate": "2023-04-21T00:00:00.000Z",
+                  "isStudyingHere": false,
+                  "description": "",
+                  "skills": [],
+                  "_id": "6a10534d9544856bb283f7b2"
+                }
+              ],
+              "workExperiences": [],
+              "certifications": [],
+              "resumes": [
+                {
+                  "fileName": "Ebubechukwu_Okoye_CV",
+                  "fileURL": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1779456135992_Ebubechukwu_Okoye_CV.pdf",
+                  "fileKey": "uploads/1779456135992_Ebubechukwu_Okoye_CV.pdf",
+                  "updatedAt": "2026-05-22T13:22:17.271Z",
+                  "_id": "6a1058899544856bb283fb22"
+                }
+              ],
+              "createdAt": "2026-05-20T08:47:14.017Z",
+              "updatedAt": "2026-05-27T07:18:10.651Z",
+              "yearsOfExperience": "3",
+              "bio": "ipso lorem dipo",
+              "linkText": "",
+              "portfolioLink": "https://boobe551.github.io",
+              "defaultResume": "6a1058899544856bb283fb22"
+            }
+          }

@@ -1,0 +1,29 @@
+info:
+  name: Update Project Area
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{BASE}}/experiential-learning/project-areas/:id"
+  params:
+    - name: id
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "tagline": "Build Climate Solutions That Scale",
+        "displayOrder": 14
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

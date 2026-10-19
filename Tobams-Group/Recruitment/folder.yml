@@ -1,7 +1,7 @@
 info:
   name: Recruitment
   type: folder
-  seq: 38
+  seq: 41
 
 request:
   auth: inherit

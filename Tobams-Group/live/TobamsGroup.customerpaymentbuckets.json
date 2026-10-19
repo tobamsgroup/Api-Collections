@@ -1,0 +1,1728 @@
+[{
+  "_id": {
+    "$oid": "6916f3fe786d845942868a91"
+  },
+  "userId": {
+    "$oid": "6916ec77786d8459428689ce"
+  },
+  "uuid": "TG-2XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_h6ldydvvuh6v7e1",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5532159536",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6916f3de786d845942868a8f"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "qxvsvewnm3",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_nohfzjkeek",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_h6ldydvvuh6v7e1"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-11-14T09:18:54.567Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-14T09:27:11.083Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69244fa196b1c0a661282139"
+  },
+  "userId": {
+    "$oid": "69244e6796b1c0a661282119"
+  },
+  "uuid": "TG-5XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_c1gl97dgueu060h",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5566584035",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "69244f8096b1c0a661282138"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "6jqn298slc",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_eumpqtq7x5",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_c1gl97dgueu060h"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-11-24T12:29:21.922Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T12:39:16.368Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692f1b4f96b1c0a6612827a4"
+  },
+  "userId": {
+    "$oid": "692eed4d96b1c0a661282645"
+  },
+  "uuid": "TG-7XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_smb2746m9sym2rt",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5595686143",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "692f1b3596b1c0a6612827a2"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "v8fp5rcddk",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_0td45e03z3",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_smb2746m9sym2rt"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-02T17:01:03.340Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T13:39:10.486Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6930057196b1c0a661282915"
+  },
+  "userId": {
+    "$oid": "692f219596b1c0a66128282e"
+  },
+  "uuid": "TG-8XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_sglqwspp1b5skr5",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5597877381",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6930055496b1c0a661282912"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "yhaal7h7sm",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_tx2vruihp1",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_sglqwspp1b5skr5"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-03T09:40:01.749Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T09:40:32.940Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69303d397044816d72e348bb"
+  },
+  "userId": {
+    "$oid": "692eed4d96b1c0a661282645"
+  },
+  "uuid": "TG-7XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_smb2746m9sym2rt",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5598644068",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "69303d397044816d72e348ba"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "41qmur1kx2",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_fz4igxwbbl",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_smb2746m9sym2rt"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-03T13:38:01.520Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T13:38:25.115Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69304f557044816d72e3498c"
+  },
+  "userId": {
+    "$oid": "69304eac7044816d72e3496b"
+  },
+  "uuid": "TG-14XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_vrmf5t94rn6xlfy",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5598822586",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "69304f457044816d72e3498b"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "v1toz04nwa",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_kci5pqrt5z",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_vrmf5t94rn6xlfy"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-03T14:55:17.189Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T15:17:11.117Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693050967044816d72e349e7"
+  },
+  "userId": {
+    "$oid": "69304eac7044816d72e3496b"
+  },
+  "uuid": "TG-14XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_vrmf5t94rn6xlfy",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5598833468",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6930506c7044816d72e349e5"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "7ip3reesvx",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_3n2vu4zxk8",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_vrmf5t94rn6xlfy"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-03T15:00:38.060Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T15:17:07.847Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693054bb7044816d72e34a42"
+  },
+  "userId": {
+    "$oid": "69304eac7044816d72e3496b"
+  },
+  "uuid": "TG-14XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_vrmf5t94rn6xlfy",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5598879653",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "693054a07044816d72e34a40"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "s0r6em81eg",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_o85k43mo0i",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_vrmf5t94rn6xlfy"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-03T15:18:19.417Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T16:28:39.355Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693067707044816d72e34b0e"
+  },
+  "userId": {
+    "$oid": "693066f87044816d72e34af2"
+  },
+  "uuid": "TG-15XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_s5mk5t3nw6kug8x",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5599088194",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "693067527044816d72e34b09"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "v3jrtu0uxr",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_pqzf9q907w",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_s5mk5t3nw6kug8x"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-03T16:38:08.009Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T17:10:45.318Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69306fc139251f1c4e37a383"
+  },
+  "userId": {
+    "$oid": "693066f87044816d72e34af2"
+  },
+  "uuid": "TG-15XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_s5mk5t3nw6kug8x",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5599191117",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "69306f9839251f1c4e37a381"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "x6thwzlzpb",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_5tavhir34f",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_s5mk5t3nw6kug8x"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-03T17:13:37.201Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T17:14:35.237Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693071d139251f1c4e37a3f8"
+  },
+  "userId": {
+    "$oid": "6930713939251f1c4e37a3d4"
+  },
+  "uuid": "TG-16XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_d6xttdl5iyh2sgk",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5599213446",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "693071a839251f1c4e37a3f3"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "jfnhqqavfv",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_76g6dazofs",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_d6xttdl5iyh2sgk"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-03T17:22:25.391Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T17:25:35.044Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693146b04ea98c8dd8bdc551"
+  },
+  "userId": {
+    "$oid": "6930713939251f1c4e37a3d4"
+  },
+  "uuid": "TG-16XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_d6xttdl5iyh2sgk",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5601167837",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6931468a4ea98c8dd8bdc54e"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "dzwbny7907",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_lk23j7wvev",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_d6xttdl5iyh2sgk"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-04T08:30:40.083Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T08:31:39.912Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931484d4ea98c8dd8bdc5dd"
+  },
+  "userId": {
+    "$oid": "693147bf4ea98c8dd8bdc5ba"
+  },
+  "uuid": "TG-17XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_afx5tfg2a110on4",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5601191974",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "693148234ea98c8dd8bdc5d4"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "36n0eu6lhi",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_razj84qqo2",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_afx5tfg2a110on4"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-04T08:37:33.937Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T08:38:31.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693150814ea98c8dd8bdc6c8"
+  },
+  "userId": {
+    "$oid": "693147bf4ea98c8dd8bdc5ba"
+  },
+  "uuid": "TG-17XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_afx5tfg2a110on4",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5601310168",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6931504e4ea98c8dd8bdc6c1"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "4v26vndsha",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_vyq1k2higj",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_afx5tfg2a110on4"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-04T09:12:33.630Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T13:54:54.342Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693152b54ea98c8dd8bdc6fb"
+  },
+  "userId": {
+    "$oid": "693151f04ea98c8dd8bdc6df"
+  },
+  "uuid": "TG-18XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_2adubmn2b5awc8z",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5601340554",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "693152984ea98c8dd8bdc6fa"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "ddmjfelyr2",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_1t5whl4fbd",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_2adubmn2b5awc8z"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-04T09:21:57.644Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T09:22:32.862Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931549a4ea98c8dd8bdc7ab"
+  },
+  "userId": {
+    "$oid": "693151f04ea98c8dd8bdc6df"
+  },
+  "uuid": "TG-18XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_2adubmn2b5awc8z",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5601366169",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6931547f4ea98c8dd8bdc7a9"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "rz6b8y3yp1",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_bw2e845ylv",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_2adubmn2b5awc8z"
+  },
+  "usedServicePaidFor": false,
+  "createdAt": {
+    "$date": "2025-12-04T09:30:02.040Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T09:32:12.245Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693177334ea98c8dd8bdc7e6"
+  },
+  "userId": {
+    "$oid": "6931767c4ea98c8dd8bdc7cb"
+  },
+  "uuid": "TG-19XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_uifx9t4dvw9waxh",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5601845348",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "693176fa4ea98c8dd8bdc7e5"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "75a5m1h2i9",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_77xowpe31e",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_uifx9t4dvw9waxh"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-04T11:57:39.893Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T12:01:34.861Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "693199f9606533d27c2d6833"
+  },
+  "userId": {
+    "$oid": "693198ec606533d27c2d680f"
+  },
+  "uuid": "TG-27XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_po6uxbn9h4ojscr",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5602237566",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "693199da606533d27c2d6829"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "b8kcycowp4",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_ba4c9zgh29",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_po6uxbn9h4ojscr"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-04T14:26:01.266Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T14:27:02.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931a4c0606533d27c2d6942"
+  },
+  "userId": {
+    "$oid": "6931a417606533d27c2d6919"
+  },
+  "uuid": "TG-29XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_xrvuqxm5vzzzirk",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5602339881",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6931a490606533d27c2d6938"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "cjtmwo145t",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_5pt1eua9hu",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_xrvuqxm5vzzzirk"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-04T15:12:00.249Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T15:12:46.467Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931a775606533d27c2d6a0e"
+  },
+  "userId": {
+    "$oid": "6931a69e606533d27c2d69bc"
+  },
+  "uuid": "TG-30XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_js2j86oue2jw317",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5602365075",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6931a75b606533d27c2d6a0d"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "ze5gdftsin",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_tvgn57i724",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_js2j86oue2jw317"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-04T15:23:33.884Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T15:24:24.457Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931a849606533d27c2d6aac"
+  },
+  "userId": {
+    "$oid": "6931a417606533d27c2d6919"
+  },
+  "uuid": "TG-29XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_xrvuqxm5vzzzirk",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5602371344",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6931a823606533d27c2d6a7d"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "q3mjz2hgsx",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_w7revmfwhw",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_xrvuqxm5vzzzirk"
+  },
+  "usedServicePaidFor": false,
+  "createdAt": {
+    "$date": "2025-12-04T15:27:05.630Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T15:27:05.630Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931f1d0606533d27c2d6b52"
+  },
+  "userId": {
+    "$oid": "6931f140606533d27c2d6b2d"
+  },
+  "uuid": "TG-19XTA",
+  "purpose": "assessment",
+  "customerId": "CUS_yi2vt49kvqbkyaw",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5603174369",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6931f1a4606533d27c2d6b47"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "wxlkwczh6q",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_cb38f3xkc5",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_yi2vt49kvqbkyaw"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-04T20:40:48.710Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T20:41:26.209Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931f3be606533d27c2d6c24"
+  },
+  "userId": {
+    "$oid": "6931f140606533d27c2d6b2d"
+  },
+  "uuid": "TG-19XTA",
+  "purpose": "assessment",
+  "customerId": "CUS_yi2vt49kvqbkyaw",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5603190664",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planId": {
+      "$oid": "6931f386606533d27c2d6c20"
+    },
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "flva0hiu2q",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_7xwcrykm8a",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_yi2vt49kvqbkyaw"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2025-12-04T20:49:02.580Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T20:54:45.636Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6996f8ce0171a521ad822395"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "uuid": "TG-4XOR",
+  "purpose": "subscription only",
+  "customerId": "CUS_k7tp80b0vtpzv4s",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5852968376",
+  "currency": "NGN",
+  "totalAmountPaid": 110000,
+  "metadata": {
+    "planId": {
+      "$oid": "68885ef0fc5e5f12ac1ce94c"
+    },
+    "subscriptionId": {
+      "$oid": "6996f8c60171a521ad822390"
+    },
+    "planName": "Standard",
+    "planCode": "PLN_383h83lt7cfxvyd",
+    "planPrice": "110000",
+    "interval": "monthly",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "ak8iuioa98",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_zvd8t9pras",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_k7tp80b0vtpzv4s"
+  },
+  "usedServicePaidFor": false,
+  "createdAt": {
+    "$date": "2026-02-19T11:49:34.894Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-19T11:49:34.894Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "699781628bcb2c9142d4764d"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "uuid": "TG-4XOR",
+  "purpose": "hatt_support",
+  "customerId": "CUS_k7tp80b0vtpzv4s",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5854343432",
+  "currency": "NGN",
+  "totalAmountPaid": 300000,
+  "metadata": {
+    "planId": {
+      "$oid": "699781628bcb2c9142d4764c"
+    },
+    "planPrice": "300000",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "s2y54g1vuk",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_1ccea8013l",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_k7tp80b0vtpzv4s"
+  },
+  "usedServicePaidFor": false,
+  "createdAt": {
+    "$date": "2026-02-19T21:32:18.776Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-19T21:32:18.776Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "699784be8bcb2c9142d4765e"
+  },
+  "userId": {
+    "$oid": "695399c5314500ddfa21d9b0"
+  },
+  "uuid": "TG-6XMT",
+  "purpose": "hatt_support",
+  "customerId": "CUS_6wff61jgfclwwj2",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5854377693",
+  "currency": "NGN",
+  "totalAmountPaid": 1000000,
+  "metadata": {
+    "planId": {
+      "$oid": "699784be8bcb2c9142d4765d"
+    },
+    "planPrice": "1000000",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "rgbhknv4oy",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_tfj05ejujt",
+    "bin": "408408",
+    "last4": "0409",
+    "exp_month": "01",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_oyZKx3b97efusrbCvyHJ",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_6wff61jgfclwwj2"
+  },
+  "usedServicePaidFor": false,
+  "createdAt": {
+    "$date": "2026-02-19T21:46:38.878Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-19T21:46:38.878Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "699792aaebf3350df359c650"
+  },
+  "userId": {
+    "$oid": "695399c5314500ddfa21d9b0"
+  },
+  "uuid": "TG-6XMT",
+  "purpose": "hatt_support",
+  "customerId": "CUS_6wff61jgfclwwj2",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5854460351",
+  "currency": "NGN",
+  "totalAmountPaid": 500000,
+  "metadata": {
+    "planId": {
+      "$oid": "699792aaebf3350df359c64f"
+    },
+    "planPrice": "500000",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "btroinclls",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_s6onrhs8lo",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_6wff61jgfclwwj2"
+  },
+  "usedServicePaidFor": false,
+  "createdAt": {
+    "$date": "2026-02-19T22:46:02.713Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-19T22:46:02.713Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "699825a89cebca3f8222272b"
+  },
+  "userId": {
+    "$oid": "6929a35296b1c0a6612823bf"
+  },
+  "uuid": "TG-6XIN",
+  "purpose": "hatt_support",
+  "customerId": "CUS_yv2fcz8mbtte4h1",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5855537260",
+  "currency": "NGN",
+  "totalAmountPaid": 50000000,
+  "metadata": {
+    "planPrice": "50000000",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "er1z26da48",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_lv8fji0jvc",
+    "bin": "408408",
+    "last4": "0409",
+    "exp_month": "01",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_oyZKx3b97efusrbCvyHJ",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_yv2fcz8mbtte4h1"
+  },
+  "usedServicePaidFor": false,
+  "createdAt": {
+    "$date": "2026-02-20T09:13:12.262Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-20T09:13:12.262Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "699842e9fe6f6b4202ff5c5a"
+  },
+  "userId": {
+    "$oid": "69395794ebee9f28afd74f33"
+  },
+  "uuid": "TG-4XOR",
+  "purpose": "hatt_support",
+  "customerId": "CUS_k7tp80b0vtpzv4s",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5855955496",
+  "currency": "NGN",
+  "totalAmountPaid": 1000,
+  "metadata": {
+    "planPrice": "1000",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "oy3srh6tnu",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_3f100zb32o",
+    "bin": "408408",
+    "last4": "4081",
+    "exp_month": "12",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "visa ",
+    "bank": "TEST BANK",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_FxSpT2bjpCmMMx0PoRf7",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_k7tp80b0vtpzv4s"
+  },
+  "usedServicePaidFor": false,
+  "createdAt": {
+    "$date": "2026-02-20T11:18:01.282Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-20T11:18:01.282Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a6160bf0accb322483297a"
+  },
+  "userId": {
+    "$oid": "69a615adf0accb3224832962"
+  },
+  "uuid": "TG-42XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_94tzk8kmw0cayd2",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5895212346",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "8ijqymti48",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_vsbwy02q94",
+    "bin": "418745",
+    "last4": "6938",
+    "exp_month": "03",
+    "exp_year": "2026",
+    "channel": "card",
+    "card_type": "visa debit",
+    "bank": "Access Bank",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_k9BukLMvNLcYEaWwUTNE",
+    "account_name": "PAUL AJIBOLA ELUGBAJU",
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_94tzk8kmw0cayd2"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2026-03-02T22:58:19.576Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-02T23:08:27.166Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69ab0aaddc85ac73cb3e91de"
+  },
+  "userId": {
+    "$oid": "69ab0809dc85ac73cb3e9156"
+  },
+  "uuid": "TG-41XTA",
+  "purpose": "assessment",
+  "customerId": "CUS_zeyrxs7ziwj4spe",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5908476939",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "uwp99e2jww",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_d3igls8fbq",
+    "bin": "507872",
+    "last4": "6740",
+    "exp_month": "09",
+    "exp_year": "2028",
+    "channel": "card",
+    "card_type": "verve debit",
+    "bank": "PAYCOM",
+    "country_code": "NG",
+    "brand": "verve",
+    "reusable": true,
+    "signature": "SIG_j8rHL6P8ZPSxhBTMuAao",
+    "account_name": "ISRAEL ONAH ADEGWU",
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_zeyrxs7ziwj4spe"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2026-03-06T17:11:09.916Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-06T17:29:02.884Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69ae8d1dc4150aec38da6ce4"
+  },
+  "userId": {
+    "$oid": "69ae8b7dc4150aec38da6caa"
+  },
+  "uuid": "TG-42XTA",
+  "purpose": "assessment",
+  "customerId": "CUS_lnlfxq20rj4p0rj",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5917048953",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "38f36oae78",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_5l1vdu9xgw",
+    "bin": "539983",
+    "last4": "2930",
+    "exp_month": "01",
+    "exp_year": "2030",
+    "channel": "card",
+    "card_type": "mastercard debit",
+    "bank": "Guaranty Trust Bank",
+    "country_code": "NG",
+    "brand": "mastercard",
+    "reusable": true,
+    "signature": "SIG_hiYAcQDizAznhHTdUyUy",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_lnlfxq20rj4p0rj"
+  },
+  "usedServicePaidFor": false,
+  "createdAt": {
+    "$date": "2026-03-09T09:04:29.380Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-09T09:04:29.380Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69b2eab89276d25980a818d6"
+  },
+  "userId": {
+    "$oid": "69b28b8a700560090278dffa"
+  },
+  "uuid": "TG-19XOR",
+  "purpose": "subscription only",
+  "customerId": "CUS_to815w0ijpgogis",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5928043318",
+  "currency": "NGN",
+  "totalAmountPaid": 105,
+  "metadata": {
+    "planId": {
+      "$oid": "68885ef0fc5e5f12ac1ce94c"
+    },
+    "subscriptionId": {
+      "$oid": "69b2ea029276d25980a818c0"
+    },
+    "planName": "Standard",
+    "planCode": "PLN_ljzxd54qcrzk707",
+    "planPrice": "105",
+    "interval": "monthly",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "p8tvlfmfih",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_gp9lva1rh7",
+    "bin": "418745",
+    "last4": "6938",
+    "exp_month": "03",
+    "exp_year": "2026",
+    "channel": "card",
+    "card_type": "visa debit",
+    "bank": "Access Bank",
+    "country_code": "NG",
+    "brand": "visa",
+    "reusable": true,
+    "signature": "SIG_k9BukLMvNLcYEaWwUTNE",
+    "account_name": "PAUL AJIBOLA ELUGBAJU",
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_to815w0ijpgogis"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2026-03-12T16:32:56.969Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-13T15:50:12.901Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69c1b31831c082bb9e391da3"
+  },
+  "userId": {
+    "$oid": "69c1ae4731c082bb9e391d49"
+  },
+  "uuid": "TG-81XIN",
+  "purpose": "assessment",
+  "customerId": "CUS_92568hd3osxy2fu",
+  "serviceProvider": "paystack",
+  "paymentMethod": "card",
+  "transactionId": "5964365091",
+  "currency": "NGN",
+  "totalAmountPaid": 50,
+  "metadata": {
+    "planPrice": "50",
+    "addOnIds": [],
+    "addOnNames": ""
+  },
+  "referenceId": "snoaijop80",
+  "paymentStatus": "success",
+  "cardAuthorizationCode": {
+    "authorization_code": "AUTH_rg4tpejrp3",
+    "bin": "506105",
+    "last4": "7323",
+    "exp_month": "04",
+    "exp_year": "2028",
+    "channel": "card",
+    "card_type": "verve ",
+    "bank": "First Bank of Nigeria",
+    "country_code": "NG",
+    "brand": "verve",
+    "reusable": true,
+    "signature": "SIG_QN0bD2mEUyBqZeuGEKze",
+    "account_name": null,
+    "receiver_bank_account_number": null,
+    "receiver_bank": null,
+    "customerId": "CUS_92568hd3osxy2fu"
+  },
+  "usedServicePaidFor": true,
+  "createdAt": {
+    "$date": "2026-03-23T21:39:36.654Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-23T21:46:39.224Z"
+  }
+}]

@@ -1,0 +1,5223 @@
+[{
+  "_id": {
+    "$oid": "680f6caf97218dc74b52bc97"
+  },
+  "firstName": "Olaosebikan ",
+  "lastName": "Emmanuel",
+  "email": "oladaminuel@gmail.com",
+  "phoneNumber": "08130466995",
+  "ageRange": "20-29",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Wuse 2",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "No, there is nothing to talk about ",
+  "createdAt": {
+    "$date": "2025-04-28T11:55:27.584Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-28T11:55:27.584Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682cbb5969cdddce41cf513b"
+  },
+  "firstName": "Samuel",
+  "lastName": "Jeremy",
+  "email": "Samjerry@gmail.com",
+  "phoneNumber": "07983888383",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Abia",
+  "city": "Aba",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "no",
+  "createdAt": {
+    "$date": "2025-05-20T17:26:49.031Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-20T17:26:49.031Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682cc14069cdddce41cf513d"
+  },
+  "firstName": "Sam",
+  "lastName": "Jeremy ",
+  "email": "Samheremy2020@gmail.com",
+  "phoneNumber": "896614516161",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Abia",
+  "city": "Gauraka",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "No",
+  "createdAt": {
+    "$date": "2025-05-20T17:52:00.664Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-20T17:52:00.664Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682cc25f69cdddce41cf513f"
+  },
+  "firstName": "Jeremy",
+  "lastName": "James",
+  "email": "Jamesjeremy@gmail.com",
+  "phoneNumber": "8276789903",
+  "ageRange": "Under 18",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Kuje",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "yes",
+  "createdAt": {
+    "$date": "2025-05-20T17:56:47.650Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-20T17:56:47.650Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682ccac469cdddce41cf5145"
+  },
+  "firstName": "Ifeanyichukwu ",
+  "lastName": "Eze",
+  "email": "ezeifeanyij@gmail.com",
+  "phoneNumber": "09134755176",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ebonyi",
+  "city": "Abakaliki ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-20T18:32:36.150Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-20T18:32:36.150Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682ccdc469cdddce41cf5147"
+  },
+  "firstName": "Israel",
+  "lastName": "Adigun",
+  "email": "israel.adigun@tobamsgroup.com",
+  "phoneNumber": "08161322947",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-20T18:45:24.424Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-20T18:45:24.424Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682cd8dd69cdddce41cf5149"
+  },
+  "firstName": "Akare",
+  "lastName": " Agwom",
+  "email": "akare.azikang@tobamsgroup.com",
+  "phoneNumber": "09056817953",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Plateau",
+  "city": " Jos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-20T19:32:45.753Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-20T19:32:45.753Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682cdba269cdddce41cf514b"
+  },
+  "firstName": "Oluwatobi",
+  "lastName": "Ibikunle",
+  "email": "ibikunleoluwatobi99@gmail.com",
+  "phoneNumber": "07034469252",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "ilorin",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Pitching & Presentation Skills",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-20T19:44:34.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-20T19:44:34.125Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d64f669cdddce41cf5156"
+  },
+  "firstName": "Favour",
+  "lastName": "Peter",
+  "email": "favour.peter@tobamsgroup.com",
+  "phoneNumber": "09031590927",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Alagbado",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "None",
+  "createdAt": {
+    "$date": "2025-05-21T05:30:30.708Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T05:30:30.708Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d6a0f69cdddce41cf5159"
+  },
+  "firstName": "Ihotu",
+  "lastName": "Peter",
+  "email": "favourpeter99@gmail.com",
+  "phoneNumber": "09031590927",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ajah",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "None",
+  "createdAt": {
+    "$date": "2025-05-21T05:52:15.083Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T05:52:15.083Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d6b2b69cdddce41cf515b"
+  },
+  "firstName": "femi",
+  "lastName": "jeremy",
+  "email": "samjerry@gmail.com",
+  "phoneNumber": "78907654323",
+  "ageRange": "Under 18",
+  "country": "Nigeria",
+  "state": "Abia",
+  "city": "Aba",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "yes",
+  "createdAt": {
+    "$date": "2025-05-21T05:56:59.411Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T05:56:59.411Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d71a369cdddce41cf515f"
+  },
+  "firstName": "Jeremy ",
+  "lastName": "Samuel",
+  "email": "Femi.oluhshola@tobamsgroup.com",
+  "phoneNumber": "07086634547",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Gauraka",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Full 4-week paid training only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Yes",
+  "createdAt": {
+    "$date": "2025-05-21T06:24:35.675Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T06:24:35.675Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d7d1f69cdddce41cf5161"
+  },
+  "firstName": "Fawaz",
+  "lastName": "Abdganiyu",
+  "email": "fawaz.abdganiyu@tobamsgroup.com",
+  "phoneNumber": "2348179656740",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Saki",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "I look forward to learning the sustainable strategy to confidently and effectively run a business",
+  "createdAt": {
+    "$date": "2025-05-21T07:13:35.884Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T07:13:35.884Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d7e6c69cdddce41cf5163"
+  },
+  "firstName": "Ifeoluwa ",
+  "lastName": "Adeniji ",
+  "email": "ifeoluwa.adeniji@tobamsgroup.com",
+  "phoneNumber": "07036191568",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-21T07:19:08.929Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T07:19:08.929Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d7ecd69cdddce41cf5165"
+  },
+  "firstName": "Femi",
+  "lastName": "Olushola ",
+  "email": "Femi.olushola@tobamsgroup.com",
+  "phoneNumber": "07086634543",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Majek",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "None",
+  "createdAt": {
+    "$date": "2025-05-21T07:20:45.684Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T07:20:45.684Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d813d011d789d0a9d672f"
+  },
+  "firstName": "Gabriella ",
+  "lastName": "Eze",
+  "email": "gabriellaeze.va@gmail.com",
+  "phoneNumber": "09039413920",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Plateau",
+  "city": "Jos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "None",
+  "createdAt": {
+    "$date": "2025-05-21T07:31:09.143Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T07:31:09.143Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d886f011d789d0a9d6739"
+  },
+  "firstName": "Fidelis Miebaka ",
+  "lastName": "Iniayemana ",
+  "email": "phidell007@gmail.com",
+  "phoneNumber": "08037961350",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Rivers",
+  "city": "Port Harcourt",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "I am expecting to get key insights on entrepreneurship training which should get me to improve on business planning and strategy.",
+  "createdAt": {
+    "$date": "2025-05-21T08:01:51.170Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T08:01:51.170Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682d9a0b011d789d0a9d673f"
+  },
+  "firstName": "Tofunmi ",
+  "lastName": "AGBAJE",
+  "email": "tofunmiagbaje@gmail.com",
+  "phoneNumber": "08136103342",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ikeja",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "The knowledge to be gained.",
+  "createdAt": {
+    "$date": "2025-05-21T09:16:59.803Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T09:16:59.803Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682dba57011d789d0a9d6752"
+  },
+  "firstName": "Mayowa",
+  "lastName": "Oladejo",
+  "email": "mayowa.oladejo@tobamsgroup.com",
+  "phoneNumber": "08171735398",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "1. To leave with actionable insights or tools that can be implemented right away.\n2. To understand basic financial planning and funding options for startups.\n3. To learn about common pitfalls new entrepreneurs face and how to avoid them.\n4. To explore practical strategies for validating business ideas before launching.\n\nQuestions:\n1. Are there opportunities for follow-up mentorship or access to resources after the session?\n2. Will real-life case studies or success stories be shared?\n3. Is the session focused on any particular industry, or is it general for all types of entrepreneurs?\n4. Will a recording or summary of the webinar be made available afterward for review?\n\n\n",
+  "createdAt": {
+    "$date": "2025-05-21T11:34:47.586Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T11:34:47.586Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682dca5c011d789d0a9d6756"
+  },
+  "firstName": "Ericsson",
+  "lastName": "Raphael",
+  "email": "ericssonraphael@gmail.com",
+  "phoneNumber": "07039105823",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-21T12:43:08.028Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T12:43:08.028Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682dd561011d789d0a9d6765"
+  },
+  "firstName": "Precious",
+  "lastName": "Nsa",
+  "email": "preciousnsa4@gmail.com",
+  "phoneNumber": "08162687319",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Gbagada",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-21T13:30:09.260Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T13:30:09.260Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682dd842011d789d0a9d6767"
+  },
+  "firstName": "Kenneth",
+  "lastName": "Nkwocha",
+  "email": "nkwochakenneth.c@gmail.com",
+  "phoneNumber": "09156450592",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Abuja",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-21T13:42:26.826Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T13:42:26.826Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682de501011d789d0a9d6769"
+  },
+  "firstName": "Dotun ",
+  "lastName": "Olatowode ",
+  "email": "olatowodedotun@gmail.com",
+  "phoneNumber": "7039857459",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ondo",
+  "city": "Akure",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-21T14:36:49.827Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T14:36:49.827Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682df58f011d789d0a9d677b"
+  },
+  "firstName": "Idris",
+  "lastName": "Asoko",
+  "email": "asokoidris98@gmail.com",
+  "phoneNumber": "08084609392",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Egbeda",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-21T15:47:27.463Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T15:47:27.463Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682df8f3011d789d0a9d6785"
+  },
+  "firstName": "Bashirat",
+  "lastName": "Tijani",
+  "email": "bashirattijani2020@gmail.com",
+  "phoneNumber": "09030864463",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Bwari",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-21T16:01:55.388Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T16:01:55.388Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682e03b2011d789d0a9d678d"
+  },
+  "firstName": "Victor",
+  "lastName": "Agi",
+  "email": "victoragi@yahoo.com",
+  "phoneNumber": "07036024648",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Abuja",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-21T16:47:46.246Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T16:47:46.246Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682e19ba011d789d0a9d679e"
+  },
+  "firstName": "Emmanuel",
+  "lastName": "Timilehin",
+  "email": "emmanuel.ta.va.2@gmail.com",
+  "phoneNumber": "09157460242",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Ekiti",
+  "city": "Oye",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-21T18:21:46.140Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T18:21:46.140Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682e1a59011d789d0a9d67a0"
+  },
+  "firstName": "Emmanuel",
+  "lastName": "Fatade",
+  "email": "timilehin934@gmail.com",
+  "phoneNumber": "08039771205",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Ekiti",
+  "city": "Oye",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-21T18:24:25.433Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-21T18:24:25.433Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682eb5e5011d789d0a9d67f9"
+  },
+  "firstName": "Tobi",
+  "lastName": "Adedeji",
+  "email": "tobiisaac428@gmail.com",
+  "phoneNumber": "08136596295",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Kindly let me know the cost to enroll for the 4 week program. ",
+  "createdAt": {
+    "$date": "2025-05-22T05:28:05.973Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-22T05:28:05.973Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682ed243011d789d0a9d67ff"
+  },
+  "firstName": "Yemisi",
+  "lastName": "Shokunbi",
+  "email": "yemisi.shokunbi@tobamsgroup.com",
+  "phoneNumber": "08066209424",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ogun",
+  "city": "Agbado",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": ".",
+  "createdAt": {
+    "$date": "2025-05-22T07:29:07.095Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-22T07:29:07.095Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682ed852011d789d0a9d6801"
+  },
+  "firstName": "Mariam",
+  "lastName": "Sodeke",
+  "email": "sodekemosunmola23@gmail.com",
+  "phoneNumber": "08085445606",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-22T07:54:58.112Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-22T07:54:58.112Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682f1484011d789d0a9d6817"
+  },
+  "firstName": "Paul",
+  "lastName": "Elugbaju",
+  "email": "paul.elugbaju@tobamsgroup.com",
+  "phoneNumber": "08148804209",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ajah",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-22T12:11:48.286Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-22T12:11:48.286Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682f5ef9011d789d0a9d6836"
+  },
+  "firstName": "Boluwatife ",
+  "lastName": "Oyeyemi ",
+  "email": "boluwatifeoyeyemi18@gmail.com",
+  "phoneNumber": "09078339939",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Mushin ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "I want to learn more about entrepreneurship and how to make my business grow in a standard way. ",
+  "createdAt": {
+    "$date": "2025-05-22T17:29:29.627Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-22T17:29:29.627Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682f8a47011d789d0a9d683e"
+  },
+  "firstName": "Ismail ",
+  "lastName": "Ayomide",
+  "email": "ismailagboola939@gmail.com",
+  "phoneNumber": "08165776116",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Full 4-week paid training only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "I expect to learn a whole lot of new things.\nThanks.",
+  "createdAt": {
+    "$date": "2025-05-22T20:34:15.781Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-22T20:34:15.781Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682f8cf7011d789d0a9d6844"
+  },
+  "firstName": "Isaac",
+  "lastName": "Udoetor",
+  "email": "Udoetori@gmail.com",
+  "phoneNumber": "09024943938",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Akwa Ibom",
+  "city": "Ikot Akpaden ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "None for now.",
+  "createdAt": {
+    "$date": "2025-05-22T20:45:43.183Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-22T20:45:43.183Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68316108e59a70e27b25dcea"
+  },
+  "firstName": "Olamide",
+  "lastName": "Akinola",
+  "email": "akinolaolamide2016@gmail.com",
+  "phoneNumber": "07069667221",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kaduna",
+  "city": "Kaduna",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T06:02:48.192Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T06:02:48.192Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68318f06e59a70e27b25dcf6"
+  },
+  "firstName": "Evelyn ",
+  "lastName": "Mensah ",
+  "email": "evemensah2012@gmail.com",
+  "phoneNumber": "00447841592771",
+  "ageRange": "35-44",
+  "country": "United Kingdom",
+  "state": "United Kingdom",
+  "city": "Harwich",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T09:19:02.705Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T09:19:02.705Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68318face59a70e27b25dcf8"
+  },
+  "firstName": "Marian",
+  "lastName": "Ebe",
+  "email": "marianebe02@gmail.com",
+  "phoneNumber": "08051750833",
+  "ageRange": "45+",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ikeja",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "I'm truly looking forward to gaining more insights and actionable steps for the next level of my business. ",
+  "createdAt": {
+    "$date": "2025-05-24T09:21:48.101Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T09:21:48.101Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683190a4e59a70e27b25dcfa"
+  },
+  "firstName": "Abigail",
+  "lastName": "Festus",
+  "email": "festusabigail12@gmail.com",
+  "phoneNumber": "07063466328",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Kubwa",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "Having been stalled in business, I’m looking forward to acquiring knowledge that will help me scale, broaden my knowledge, and help tackle fear in business. ",
+  "createdAt": {
+    "$date": "2025-05-24T09:25:56.363Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T09:25:56.363Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68319156e59a70e27b25dcfc"
+  },
+  "firstName": "Lovely",
+  "lastName": "Agbonlahor",
+  "email": "imuetinyan3@yahoo.com",
+  "phoneNumber": "07951711752",
+  "ageRange": "45+",
+  "country": "United Kingdom",
+  "state": "City of Nottingham",
+  "city": "Stapleford",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "Expecting to gain more knowledge about proper business planning and strategy to break into business space.",
+  "createdAt": {
+    "$date": "2025-05-24T09:28:54.364Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T09:28:54.364Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683191fee59a70e27b25dd02"
+  },
+  "firstName": "Busola ",
+  "lastName": "Ajibade",
+  "email": "busola_ajibade@yahoo.con",
+  "phoneNumber": "07949748760",
+  "ageRange": "45+",
+  "country": "United Kingdom",
+  "state": "London Borough of Waltham Forest",
+  "city": "Grays",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T09:31:42.604Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T09:31:42.604Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6831937ee59a70e27b25dd04"
+  },
+  "firstName": "Ona",
+  "lastName": "Newton",
+  "email": "najit80@me.com",
+  "phoneNumber": "07985332697",
+  "ageRange": "45+",
+  "country": "United Kingdom",
+  "state": "United Kingdom",
+  "city": "London",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Pitching & Presentation Skills",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "None",
+  "createdAt": {
+    "$date": "2025-05-24T09:38:06.156Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T09:38:06.156Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683194e0e59a70e27b25dd06"
+  },
+  "firstName": "Sarah Terry ",
+  "lastName": "Akiteng",
+  "email": "akitengsarah2@gmaul.com",
+  "phoneNumber": "256773070952",
+  "ageRange": "35-44",
+  "country": "Uganda",
+  "state": "Kampala District",
+  "city": "Kampala",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T09:44:00.096Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T09:44:00.096Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68319584e59a70e27b25dd08"
+  },
+  "firstName": "Selasie",
+  "lastName": "Yomekpe",
+  "email": "Sdyomekpe@gmail.com",
+  "phoneNumber": "07876651610",
+  "ageRange": "45+",
+  "country": "United Kingdom",
+  "state": "London Borough of Bromley",
+  "city": "London",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T09:46:44.541Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T09:46:44.541Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683196c4e59a70e27b25dd0a"
+  },
+  "firstName": "Lisa",
+  "lastName": "Gordon",
+  "email": "Leeboug@icloud.com",
+  "phoneNumber": "07712278497",
+  "ageRange": "45+",
+  "country": "United Kingdom",
+  "state": "United Kingdom",
+  "city": "Gravesend ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T09:52:04.373Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T09:52:04.373Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6831a05de59a70e27b25dd0c"
+  },
+  "firstName": "Ojeranti ",
+  "lastName": "Doris",
+  "email": "dorisojeranti@gmail.com",
+  "phoneNumber": "09130370920",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T10:33:01.927Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T10:33:01.927Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6831aa4ae59a70e27b25dd0e"
+  },
+  "firstName": "Lateef",
+  "lastName": "Muftau ",
+  "email": "Lateef.muftau@tobamsgroup.com",
+  "phoneNumber": "07018524447",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Pitching & Presentation Skills",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T11:15:22.236Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T11:15:22.236Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6831ac64e59a70e27b25dd10"
+  },
+  "firstName": "Rita",
+  "lastName": "Adu-Peprah",
+  "email": "Rap50limited@gmail.com",
+  "phoneNumber": "07984431139",
+  "ageRange": "35-44",
+  "country": "United Kingdom",
+  "state": "United Kingdom",
+  "city": "Rayleigh",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T11:24:20.332Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T11:24:20.332Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6831c9fbe59a70e27b25dd12"
+  },
+  "firstName": "Shola",
+  "lastName": "A",
+  "email": "ladyshola@gmail.com",
+  "phoneNumber": "07891741944",
+  "ageRange": "45+",
+  "country": "United Kingdom",
+  "state": "Royal Borough of Greenwich",
+  "city": "London",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T13:30:35.827Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T13:30:35.827Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6831ed20e59a70e27b25dd16"
+  },
+  "firstName": "Conchita ",
+  "lastName": "Adebayo ",
+  "email": "batahandje2@gmail.com",
+  "phoneNumber": "07599806578",
+  "ageRange": "45+",
+  "country": "United Kingdom",
+  "state": "United Kingdom",
+  "city": "Dartford ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "At the end of the program I will have learned something about starting my business.",
+  "createdAt": {
+    "$date": "2025-05-24T16:00:32.769Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T16:00:32.769Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6831ee8de59a70e27b25dd19"
+  },
+  "firstName": "Sarah ",
+  "lastName": "Fungaloko ",
+  "email": "fungalokosarah@gmail.com",
+  "phoneNumber": "260969173661",
+  "ageRange": "25-34",
+  "country": "Zambia",
+  "state": "Lusaka Province",
+  "city": "Lusaka",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-24T16:06:37.013Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-24T16:06:37.013Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6832b118e59a70e27b25dd37"
+  },
+  "firstName": "Doreen ",
+  "lastName": "Fungaloko ",
+  "email": "fungalokod@gmail.com",
+  "phoneNumber": "260967422208",
+  "ageRange": "45+",
+  "country": "Zambia",
+  "state": "Lusaka Province",
+  "city": "Lusaka",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Looking forward to a great time of learning.\nThank you for the opportunity.",
+  "createdAt": {
+    "$date": "2025-05-25T05:56:40.326Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-25T05:56:40.326Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6833284ce59a70e27b25dd4e"
+  },
+  "firstName": "stellah Racheal Asio",
+  "lastName": " Asio",
+  "email": "rachealcorda@gmail.com",
+  "phoneNumber": "039351709328",
+  "ageRange": "35-44",
+  "country": "Italy",
+  "state": "Sardinia",
+  "city": "caligliari",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Looking forward to learn ",
+  "createdAt": {
+    "$date": "2025-05-25T14:25:16.297Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-25T14:25:16.297Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6833297ce59a70e27b25dd50"
+  },
+  "firstName": "stellah Racheal Asio",
+  "lastName": "stellah Racheal Asio",
+  "email": "rachealcorda@gmail.com",
+  "phoneNumber": "039351709328",
+  "ageRange": "35-44",
+  "country": "Italy",
+  "state": "Sardinia",
+  "city": "caligliari",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Looking forward to deepening my knowledge ",
+  "createdAt": {
+    "$date": "2025-05-25T14:30:20.055Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-25T14:30:20.055Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68335c30e59a70e27b25dd56"
+  },
+  "firstName": "Naomi Edem ",
+  "lastName": "Akpan",
+  "email": "naomicreate101@gmail.com",
+  "phoneNumber": "07063152980",
+  "ageRange": "45+",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Abuja",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Pitching & Presentation Skills",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "No",
+  "createdAt": {
+    "$date": "2025-05-25T18:06:40.577Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-25T18:06:40.577Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683391ade59a70e27b25dd67"
+  },
+  "firstName": "Eniye ",
+  "lastName": "Bufedoh ",
+  "email": "Bufedoh@gmail.com",
+  "phoneNumber": "08070845247",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Delta",
+  "city": "Asaba ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "What is my benefits in this program and will I get back after the training?",
+  "createdAt": {
+    "$date": "2025-05-25T21:54:53.643Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-25T21:54:53.643Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683452f0e59a70e27b25dd89"
+  },
+  "firstName": "Olakunle",
+  "lastName": "Mobolaji",
+  "email": "mobolajiolakunle8@gmail.com",
+  "phoneNumber": "09030192034",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ekiti",
+  "city": "Otun Ekiti",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-26T11:39:28.507Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-26T11:39:28.507Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683485e4d88672837443a335"
+  },
+  "firstName": "Ademola",
+  "lastName": "Bolarinwa",
+  "email": "ademolabt@gmail.com",
+  "phoneNumber": "08167424917",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ogun",
+  "city": "Ado-Odo/Ota",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-26T15:16:52.221Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-26T15:16:52.221Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6834a49bd88672837443a34f"
+  },
+  "firstName": "Akpojivi",
+  "lastName": "Ogheneovo Philip",
+  "email": "philokos@gmail.com",
+  "phoneNumber": "07068591426",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ikorodu",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-26T17:27:55.635Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-26T17:27:55.635Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6834af2fd88672837443a359"
+  },
+  "firstName": "Taiwo ",
+  "lastName": "Adebayo ",
+  "email": "taiwodorcasadebayo@gmail.com",
+  "phoneNumber": "08165576622",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan ",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "None yet ",
+  "createdAt": {
+    "$date": "2025-05-26T18:13:03.425Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-26T18:13:03.425Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6834bfdfd88672837443a35f"
+  },
+  "firstName": "Eniola ",
+  "lastName": "Kogbe ",
+  "email": "kogbeeniola005@gmail.com",
+  "phoneNumber": "08105405262",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ketu",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-26T19:24:15.226Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-26T19:24:15.226Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6834c349d88672837443a361"
+  },
+  "firstName": "Nurat",
+  "lastName": "Adedokun",
+  "email": "riapalace23@gmail.com",
+  "phoneNumber": "9021956334",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "No ",
+  "createdAt": {
+    "$date": "2025-05-26T19:38:49.190Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-26T19:38:49.190Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6834df24d88672837443a363"
+  },
+  "firstName": "Paul Osayanmo",
+  "lastName": "Osajede",
+  "email": "posayanmo83@gmail.com",
+  "phoneNumber": "08063480619",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Edo",
+  "city": "Lagos ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-26T21:37:40.559Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-26T21:37:40.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68353b66d88672837443a36b"
+  },
+  "firstName": "Isaac",
+  "lastName": "Ojugbele",
+  "email": "kuhotadeyon@gmail.com",
+  "phoneNumber": "09045941249",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Badagry",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "Just to learn in a new dimensions and a way that application can be done ",
+  "createdAt": {
+    "$date": "2025-05-27T04:11:18.700Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T04:11:18.700Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68359902d88672837443a377"
+  },
+  "firstName": "shoetan",
+  "lastName": "hammed",
+  "email": "Hammed.shoetan@transnetcloud.com",
+  "phoneNumber": "08188417054",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Yaba",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T10:50:42.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T10:50:42.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68359d1fd88672837443a379"
+  },
+  "firstName": "Iyanu ",
+  "lastName": "Owoeye ",
+  "email": "olaoluwaolasco7@gmail.com",
+  "phoneNumber": "08039861472",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T11:08:15.352Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T11:08:15.352Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835a070d88672837443a37b"
+  },
+  "firstName": "Abubakar ",
+  "lastName": "Fatimah Akewusola ",
+  "email": "fatimahbibire106@gmail.com",
+  "phoneNumber": "08156330547",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T11:22:24.959Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T11:22:24.959Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835a0c6d88672837443a37d"
+  },
+  "firstName": "Sobura",
+  "lastName": "Bukola",
+  "email": "soburaalawode7@gmail.com",
+  "phoneNumber": "09137574582",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Surulere ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T11:23:50.687Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T11:23:50.687Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835a0eed88672837443a37f"
+  },
+  "firstName": "Nathaniel ",
+  "lastName": "Ojesanmi ",
+  "email": "nathanielojesanmi@gmail.com",
+  "phoneNumber": "08052736175",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Osun",
+  "city": "Ayegbogbo",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T11:24:30.152Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T11:24:30.152Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835a199d88672837443a381"
+  },
+  "firstName": "Rofiat ",
+  "lastName": "Adeniregun ",
+  "email": "Adeniregunrofiat@gmail.com",
+  "phoneNumber": "09014423533",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Surulere ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T11:27:21.319Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T11:27:21.319Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835a1a6d88672837443a383"
+  },
+  "firstName": "Temitope",
+  "lastName": "Olayemi",
+  "email": "tolayemi46@gmail.com",
+  "phoneNumber": "08137456611",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ogun State",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T11:27:34.576Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T11:27:34.576Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835a388d88672837443a389"
+  },
+  "firstName": "Olawuyi ",
+  "lastName": "Comfort abike ",
+  "email": "comfortolawuyi04@gmail.com",
+  "phoneNumber": "09155978397",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Irepodun",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T11:35:36.818Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T11:35:36.818Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835a42bd88672837443a38f"
+  },
+  "firstName": "Ridwan",
+  "lastName": "Tobiloba",
+  "email": "Ajetunmobireed1@gmail.com",
+  "phoneNumber": "07089981513",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ikeja",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T11:38:19.420Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T11:38:19.420Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835a5abd88672837443a391"
+  },
+  "firstName": "Thomas ",
+  "lastName": "Ogunmakinju ",
+  "email": "gunmakinthomas7@gmail.com",
+  "phoneNumber": "2349130340087",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ondo",
+  "city": "Akure ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "How to be a successful agric business and Technology and innovation in material science and corrosion engineering entrepreneur",
+  "createdAt": {
+    "$date": "2025-05-27T11:44:43.053Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T11:44:43.053Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835aa32d88672837443a397"
+  },
+  "firstName": "Maimunah ",
+  "lastName": "Salahudeen ",
+  "email": "salahudeenmunah@gmail.com",
+  "phoneNumber": "07032474271",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Networking opportunities ",
+  "createdAt": {
+    "$date": "2025-05-27T12:04:02.433Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T12:04:02.433Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835ace6d88672837443a399"
+  },
+  "firstName": "Love ",
+  "lastName": "Aborah ",
+  "email": "aborahlove@gmail.com",
+  "phoneNumber": "07016751323",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Plateau",
+  "city": "Jos",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Expecting am Impactful session that will scale my idea ",
+  "createdAt": {
+    "$date": "2025-05-27T12:15:34.443Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T12:15:34.443Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835b18ed88672837443a39b"
+  },
+  "firstName": "Popoola ",
+  "lastName": "Mutiat ",
+  "email": "popoolamutiat838@gmail.com",
+  "phoneNumber": "08112350934",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Saki",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Full 4-week paid training only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "What are we to do?",
+  "createdAt": {
+    "$date": "2025-05-27T12:35:26.943Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T12:35:26.943Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835b283d88672837443a39d"
+  },
+  "firstName": "Abdul Afeez ",
+  "lastName": "Yunus ",
+  "email": "yunusabdulafeezolarewaju@gmail.com",
+  "phoneNumber": "09028224733",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Who are the instructor or organizer of this program?",
+  "createdAt": {
+    "$date": "2025-05-27T12:39:31.689Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T12:39:31.689Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835b318d88672837443a39f"
+  },
+  "firstName": "Azeezat ",
+  "lastName": "Onigbanjo",
+  "email": "004aramide@gmail.com",
+  "phoneNumber": "07034231882",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Ondo",
+  "city": "Akure",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "School group ",
+  "createdAt": {
+    "$date": "2025-05-27T12:42:00.123Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T12:42:00.123Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835b7a8d88672837443a3a1"
+  },
+  "firstName": "Onibonokuta ",
+  "lastName": "Rofiat ",
+  "email": "rofiatonibonokuta@gmail.com",
+  "phoneNumber": "09039513048",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T13:01:28.113Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T13:01:28.113Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835b99ad88672837443a3a3"
+  },
+  "firstName": "Comfort ",
+  "lastName": "Akinola",
+  "email": "Princesslizzygold79@gmail.com",
+  "phoneNumber": "08136853000",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ayetoro ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T13:09:46.456Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T13:09:46.456Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835bb48d88672837443a3a5"
+  },
+  "firstName": "Godwin ",
+  "lastName": "Ocheido ",
+  "email": "ocheidogodwin@gmail.com",
+  "phoneNumber": "09077094915",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ikeja ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T13:16:56.517Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T13:16:56.517Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835bbf7d88672837443a3a7"
+  },
+  "firstName": "Bilikis",
+  "lastName": "Damilola",
+  "email": "Dammyqueen2020@gmail.com",
+  "phoneNumber": "08146476815",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "How to be consistent,grow and market my business and to know profitable business ",
+  "createdAt": {
+    "$date": "2025-05-27T13:19:51.505Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T13:19:51.505Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835bff7d88672837443a3a9"
+  },
+  "firstName": "Basit ",
+  "lastName": "Ajibade ",
+  "email": "abdullateefabdulbasit612@gmail.com",
+  "phoneNumber": "09042541639",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T13:36:55.783Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T13:36:55.783Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835c559d88672837443a3ab"
+  },
+  "firstName": "Ese",
+  "lastName": "Omoregie",
+  "email": "eseangel76@hotmail.co.uk",
+  "phoneNumber": "07821146173",
+  "ageRange": "45+",
+  "country": "United Kingdom",
+  "state": "United Kingdom",
+  "city": "Essex",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T13:59:53.058Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T13:59:53.058Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835c580d88672837443a3ad"
+  },
+  "firstName": "Shakirah",
+  "lastName": "ADELODUN",
+  "email": "adelodunshakirah88@gmail.com",
+  "phoneNumber": "09051031823",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Pitching & Presentation Skills",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "At the end of the program i was expecting to have achieve how to grow and analyze my bisiness for the purpose of growth",
+  "createdAt": {
+    "$date": "2025-05-27T14:00:32.744Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T14:00:32.744Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835c5a6d88672837443a3af"
+  },
+  "firstName": "Shakirah",
+  "lastName": "ADELODUN",
+  "email": "adelodunshakirah88@gmail.com",
+  "phoneNumber": "09051031823",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Pitching & Presentation Skills",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "At the end of the program i was expecting to have achieve how to grow and analyze my bisiness for the purpose of growth",
+  "createdAt": {
+    "$date": "2025-05-27T14:01:10.003Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T14:01:10.003Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835cf2ed88672837443a3b1"
+  },
+  "firstName": "Shukurat Mojirayo ",
+  "lastName": "Abdulsalam",
+  "email": "shukuratmojirayoabdulsalam@gmail.com",
+  "phoneNumber": "08135656500",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T14:41:50.714Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T14:41:50.714Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835d72fd88672837443a3b3"
+  },
+  "firstName": "Vera",
+  "lastName": "Okoh",
+  "email": "silversterhenry@gmail.com",
+  "phoneNumber": "08177687300",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T15:15:59.047Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T15:15:59.047Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835df95d88672837443a3b5"
+  },
+  "firstName": "Ayoola",
+  "lastName": "Oluwatobiloba ",
+  "email": "oreoluwaayoola43@gmail.com",
+  "phoneNumber": "09063206462",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T15:51:49.423Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T15:51:49.423Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835dfded88672837443a3b7"
+  },
+  "firstName": "MURITALA ",
+  "lastName": "ROKEEB ADEWALE ",
+  "email": "muritadohrokeebadewale@gmail.com",
+  "phoneNumber": "08103202509",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Malete",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "No",
+  "createdAt": {
+    "$date": "2025-05-27T15:53:02.321Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T15:53:02.321Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835e19bd88672837443a3b9"
+  },
+  "firstName": "MUSA",
+  "lastName": "KAMALDEEN",
+  "email": "musa.kamaldeen@kwasu.edu.ng",
+  "phoneNumber": "08054924844",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Malete",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Am expecting WOW 😯😳😯 experience as  you always do. Can't wait to hear and meet you ☺️",
+  "createdAt": {
+    "$date": "2025-05-27T16:00:27.172Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T16:00:27.172Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835e9e9d88672837443a3bb"
+  },
+  "firstName": "Fathia ",
+  "lastName": "Amoo",
+  "email": "amoofathia376@gmail.com",
+  "phoneNumber": "09137116927",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Full 4-week paid training only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "It shouldn't be a scam",
+  "createdAt": {
+    "$date": "2025-05-27T16:35:53.714Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T16:35:53.714Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835ee1ed88672837443a3bd"
+  },
+  "firstName": "Oyindamola ",
+  "lastName": "Anuoluwapo ",
+  "email": "Oyindamolaanuoluwapo7@gmail.com",
+  "phoneNumber": "09035253533",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T16:53:50.622Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T16:53:50.622Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835ef5ed88672837443a3bf"
+  },
+  "firstName": "Usman",
+  "lastName": "Sulaiman",
+  "email": "usmansulaiman6@gmail.com",
+  "phoneNumber": "08136427477",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Zamfara",
+  "city": "Bungudu",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T16:59:10.693Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T16:59:10.693Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6835fed0d88672837443a3c1"
+  },
+  "firstName": "Kowiyat",
+  "lastName": "Muili",
+  "email": "lipspink141@gmail.com",
+  "phoneNumber": "09158506800",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Ogun",
+  "city": "Ota",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Full 4-week paid training only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T18:05:04.577Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T18:05:04.577Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68360264d88672837443a3c3"
+  },
+  "firstName": "Ummulkhair Olohuntoyin ",
+  "lastName": "Imam Aliagan ",
+  "email": "ummulkhairimamaliagan22@gmail.com",
+  "phoneNumber": "08132332746",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T18:20:20.569Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T18:20:20.569Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68360385d88672837443a3c5"
+  },
+  "firstName": "Abiodun ",
+  "lastName": "Olamide ",
+  "email": "Olamiden162@gmail.com",
+  "phoneNumber": "09152711815",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan ",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "You should expect some form of  orientation, training manual or demo session to help us to understand how the system works ",
+  "createdAt": {
+    "$date": "2025-05-27T18:25:09.913Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T18:25:09.913Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68360497d88672837443a3c7"
+  },
+  "firstName": "Abdullahi ",
+  "lastName": "Waliyat bako ",
+  "email": "waliyatbako52@gmail.com",
+  "phoneNumber": "08148351575",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "None",
+  "createdAt": {
+    "$date": "2025-05-27T18:29:43.808Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T18:29:43.808Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68360510d88672837443a3c9"
+  },
+  "firstName": "JAMIU",
+  "lastName": "AREMU",
+  "email": "jamiuoladipupo0000@gmail.com",
+  "phoneNumber": "08051268181",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Malete",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "No question ",
+  "createdAt": {
+    "$date": "2025-05-27T18:31:44.554Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T18:31:44.554Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68360c69d88672837443a3cb"
+  },
+  "firstName": "Philips ",
+  "lastName": "ADEBAYO",
+  "email": "gbengaadebayor@gmail.com",
+  "phoneNumber": "2347038192900",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "ILORIN",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "I will appreciate practical sessions for funding and investment opportunities for start-up companies. I hope to have links, platforms and referrer for start-up grants and investments opportunities ",
+  "createdAt": {
+    "$date": "2025-05-27T19:03:05.381Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T19:03:05.381Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683612acd88672837443a3d1"
+  },
+  "firstName": "Eunice ",
+  "lastName": "Ademola ",
+  "email": "euniceomololaademola@gmail.com",
+  "phoneNumber": "07052137307",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Full 4-week paid training only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T19:29:48.365Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T19:29:48.365Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68361567d88672837443a3d7"
+  },
+  "firstName": "Mubarak Olamilekan ",
+  "lastName": "Umar",
+  "email": "mubaraqumar5@gmail.com",
+  "phoneNumber": "09036272407",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin West ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "I am excited to take advantage of the benefits this program offers.",
+  "createdAt": {
+    "$date": "2025-05-27T19:41:27.294Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T19:41:27.294Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68361b13d88672837443a3d9"
+  },
+  "firstName": "Yusuf",
+  "lastName": "Jemilat ",
+  "email": "yusufjemilat254@gmail.com",
+  "phoneNumber": "08168635636",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Legal & Compliance",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T20:05:39.692Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T20:05:39.692Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68361e7bd88672837443a3db"
+  },
+  "firstName": "Hawawu",
+  "lastName": "Alli",
+  "email": "allihawawu@gmail.com",
+  "phoneNumber": "08087282386",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Ogun",
+  "city": "Sagam",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-27T20:20:11.901Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T20:20:11.901Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68364be3d88672837443a3dd"
+  },
+  "firstName": "Babalola ",
+  "lastName": "Oluwatosin mustapha ",
+  "email": "mustaphaoluwatosin438@gmail.com",
+  "phoneNumber": "07036603582",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Sango Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Am interested in the program ",
+  "createdAt": {
+    "$date": "2025-05-27T23:33:55.564Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-27T23:33:55.564Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68367a0cd88672837443a3df"
+  },
+  "firstName": "Joshua",
+  "lastName": "Nwaede",
+  "email": "Joshuaoluwadara2@gmail.com",
+  "phoneNumber": "08087372930",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Delta",
+  "city": "Niger",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T02:50:52.888Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T02:50:52.888Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683695e9d88672837443a3e1"
+  },
+  "firstName": "Okoli ",
+  "lastName": "Chidinma ",
+  "email": "chidinmagrace1999@gmail.com",
+  "phoneNumber": "07037299195",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T04:49:45.542Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T04:49:45.542Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68369a8cd88672837443a3e3"
+  },
+  "firstName": "Habibat ",
+  "lastName": "Na'Allah ",
+  "email": "keji4wisdom@yahoo.com",
+  "phoneNumber": "08132604025",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T05:09:32.688Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T05:09:32.688Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68369f12d88672837443a3e5"
+  },
+  "firstName": "KEHINDE ",
+  "lastName": "ADEBAYO ",
+  "email": "adebayotoyibat80@gmail.com",
+  "phoneNumber": "08124126680",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Lagos ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Full 4-week paid training only",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T05:28:50.998Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T05:28:50.998Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836a1f2d88672837443a3e7"
+  },
+  "firstName": "Olawale ",
+  "lastName": "Olamide ",
+  "email": "oo5234311@gmail.com",
+  "phoneNumber": "09066360257",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Osun",
+  "city": "Osogbo ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T05:41:06.577Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T05:41:06.577Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836a2fcd88672837443a3e9"
+  },
+  "firstName": "ABDUL-RASAK AYINDE ",
+  "lastName": "ILELABOYE ",
+  "email": "abdulrazaqq68@gmail.com",
+  "phoneNumber": "09032786740",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Malete ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T05:45:32.348Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T05:45:32.348Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836aedad88672837443a3eb"
+  },
+  "firstName": "Adeyeye ",
+  "lastName": "Promise Elizabeth ",
+  "email": "adepromise2@gmail.com",
+  "phoneNumber": "08079092565",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Arandun",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Legal & Compliance",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T06:36:10.770Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T06:36:10.770Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836b2cad88672837443a3ed"
+  },
+  "firstName": "Ajide",
+  "lastName": "Janet ",
+  "email": "ajidejanet8@gmail.com",
+  "phoneNumber": "09022642195",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Abuja",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T06:52:58.058Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T06:52:58.058Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836b2ddd88672837443a3f3"
+  },
+  "firstName": "Lateefat ",
+  "lastName": "Badmus ",
+  "email": "blateefat47@gmail.com",
+  "phoneNumber": "07019764366",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Lagos ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T06:53:17.461Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T06:53:17.461Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836b3c4d88672837443a3f5"
+  },
+  "firstName": "Hassan",
+  "lastName": "Olamilekan ",
+  "email": "Lekanhassan318@gmail.com",
+  "phoneNumber": "08071118560",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T06:57:08.727Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T06:57:08.727Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836be74d88672837443a3f7"
+  },
+  "firstName": "Mazeedah",
+  "lastName": "Oyewale ",
+  "email": "oyewalemazeedah320@gmail.com",
+  "phoneNumber": "09070984020",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T07:42:44.263Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T07:42:44.263Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836bfd0d88672837443a3f9"
+  },
+  "firstName": "Martins ",
+  "lastName": "Audu Abubakar ",
+  "email": "abubakararebeccah12@gmail.com",
+  "phoneNumber": "09158040361",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "ilorin",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "No.",
+  "createdAt": {
+    "$date": "2025-05-28T07:48:32.151Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T07:48:32.151Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836c217d88672837443a3fb"
+  },
+  "firstName": "Emmanuella",
+  "lastName": "Osawe",
+  "email": "emmanuella.osawe@tobamsgroup.com",
+  "phoneNumber": "09081859913",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ajah",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Pitching & Presentation Skills",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Website",
+  "expectationsOrQuestions": "Nope",
+  "createdAt": {
+    "$date": "2025-05-28T07:58:15.903Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T07:58:15.903Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836cab1d88672837443a3fd"
+  },
+  "firstName": "Zainab ",
+  "lastName": "Olajire ",
+  "email": "itzhoyindarmola@gmail.com",
+  "phoneNumber": "08168458685",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Osun",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T08:34:57.314Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T08:34:57.314Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836cce3d88672837443a3ff"
+  },
+  "firstName": "Arebiyi ",
+  "lastName": "David ",
+  "email": "aredavid74@gmail.com",
+  "phoneNumber": "08024288569",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Malete",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T08:44:19.522Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T08:44:19.522Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836d0aad88672837443a401"
+  },
+  "firstName": "Mayowa",
+  "lastName": "Alade",
+  "email": "desmondalade906@gmail.com",
+  "phoneNumber": "09043014826",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Lagos ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Not at all",
+  "createdAt": {
+    "$date": "2025-05-28T09:00:26.239Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T09:00:26.239Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836d0aad88672837443a403"
+  },
+  "firstName": "Mayowa",
+  "lastName": "Alade",
+  "email": "desmondalade906@gmail.com",
+  "phoneNumber": "09043014826",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Lagos ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Not at all",
+  "createdAt": {
+    "$date": "2025-05-28T09:00:26.248Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T09:00:26.248Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836d0aad88672837443a405"
+  },
+  "firstName": "Mayowa",
+  "lastName": "Alade",
+  "email": "desmondalade906@gmail.com",
+  "phoneNumber": "09043014826",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Lagos ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Not at all",
+  "createdAt": {
+    "$date": "2025-05-28T09:00:26.524Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T09:00:26.524Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836dc38d88672837443a411"
+  },
+  "firstName": "Wasiu ",
+  "lastName": "SADIKU ",
+  "email": "Wasboy49@gmail.com",
+  "phoneNumber": "08108284680",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Surulere ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "No",
+  "createdAt": {
+    "$date": "2025-05-28T09:49:44.965Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T09:49:44.965Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836ea13d88672837443a417"
+  },
+  "firstName": "Lukman ",
+  "lastName": "Adeyanju ",
+  "email": "adeyanjulukman48@gmail.com",
+  "phoneNumber": "08145592184",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "How do I expand the business ",
+  "createdAt": {
+    "$date": "2025-05-28T10:48:51.987Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T10:48:51.987Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6836eb0dd88672837443a419"
+  },
+  "firstName": "Mohammed ",
+  "lastName": "Ahmed ",
+  "email": "elayo.mohammed@gmail.com",
+  "phoneNumber": "08037812420",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Nasarawa",
+  "city": "karu",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Market Validation",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "I look forward to the experience ",
+  "createdAt": {
+    "$date": "2025-05-28T10:53:01.559Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T10:53:01.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683728e1d88672837443a489"
+  },
+  "firstName": "Shakirat ",
+  "lastName": "Yusuff ",
+  "email": "Shakirat.yusuff@kwasu.edu.ng",
+  "phoneNumber": "08164066079",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Hoping to get answers to why I can't seem to Kickstart any idea I get in my head and how to turn the idea into a profitable business. ",
+  "createdAt": {
+    "$date": "2025-05-28T15:16:49.240Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T15:16:49.240Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68372ebcd88672837443a497"
+  },
+  "firstName": "Al-ameen",
+  "lastName": "Ayinde",
+  "email": "alameenayinde5@gmail.com",
+  "phoneNumber": "09038897946",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Pitching & Presentation Skills",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T15:41:48.898Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T15:41:48.898Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68373f95d88672837443a49a"
+  },
+  "firstName": "Omotosho",
+  "lastName": "Lateef",
+  "email": "omotosholateefadebayo2017@gmail.com",
+  "phoneNumber": "08102876244",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "Not yet ",
+  "createdAt": {
+    "$date": "2025-05-28T16:53:41.437Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T16:53:41.437Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68375499d88672837443a49c"
+  },
+  "firstName": "Mukhtar",
+  "lastName": "Ishaq",
+  "email": "emkaaygraphics@gmail.com",
+  "phoneNumber": "09133888868",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Maraba",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T18:23:21.625Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T18:23:21.625Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68376a36d88672837443a4c9"
+  },
+  "firstName": "Sukurat ",
+  "lastName": "Saheed ",
+  "email": "sukuratsaheed4@gmail.com",
+  "phoneNumber": "07015188908",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "I  wish to know more about this program ",
+  "createdAt": {
+    "$date": "2025-05-28T19:55:34.677Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T19:55:34.677Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68379d5ad88672837443a4d7"
+  },
+  "firstName": "Oyebamiji Kaothar ",
+  "lastName": "Olamide",
+  "email": "oyebamijikaothar2000@gmail.com",
+  "phoneNumber": "08104294313",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ogun",
+  "city": "Ogun",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Pitching & Presentation Skills",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-28T23:33:46.605Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T23:33:46.605Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6837b93fd88672837443a4d9"
+  },
+  "firstName": "Nnamdi",
+  "lastName": "Raymond Nnadi",
+  "email": "nnamdi.raymondoct@gmail.com",
+  "phoneNumber": "08063290848",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Enugu",
+  "city": "Nsukka",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Website",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-29T01:32:47.284Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-29T01:32:47.284Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683885cdd88672837443a8cd"
+  },
+  "firstName": "Ruth Janet ",
+  "lastName": "Sule",
+  "email": "ruthjanetsule@gmail.com",
+  "phoneNumber": "08107676177",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Enugu",
+  "city": "Enugu",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-29T16:05:33.462Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-29T16:05:33.462Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68394b8dd88672837443a99d"
+  },
+  "firstName": "OLUWOLE",
+  "lastName": "OMOTOSO",
+  "email": "omotosooluwole100@gmail.com",
+  "phoneNumber": "08082368882",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Nasarawa",
+  "city": "Keffi",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "How will this webinar impact and influence my decision as an Aspiring entrepreneur in evolving marketplace when I have limited resources and no big brand to ride on their wings for learning and growth??",
+  "createdAt": {
+    "$date": "2025-05-30T06:09:17.206Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T06:09:17.206Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68395f04d88672837443a9c4"
+  },
+  "firstName": "Olalekan",
+  "lastName": "shola temitope ",
+  "email": "tejmokstudio@gmail.com",
+  "phoneNumber": "08035726639",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Tanke Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Am interested in it. ",
+  "createdAt": {
+    "$date": "2025-05-30T07:32:20.178Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T07:32:20.178Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68395f05d88672837443a9c6"
+  },
+  "firstName": "Olalekan",
+  "lastName": "shola temitope ",
+  "email": "tejmokstudio@gmail.com",
+  "phoneNumber": "08035726639",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Tanke Ilorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Am interested in it. ",
+  "createdAt": {
+    "$date": "2025-05-30T07:32:21.007Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T07:32:21.007Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68398bb4d88672837443aa12"
+  },
+  "firstName": "Juliana",
+  "lastName": "Awoyemi ",
+  "email": "Julianayemi10@gmail.com",
+  "phoneNumber": "09024026651",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-30T10:43:00.408Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T10:43:00.408Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6839903fd88672837443aa21"
+  },
+  "firstName": "Promise ",
+  "lastName": "Nenge_terna ",
+  "email": "nepromise9@gmail.com",
+  "phoneNumber": "07054098247",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Benue",
+  "city": "Buruku Tomb",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "No",
+  "createdAt": {
+    "$date": "2025-05-30T11:02:23.906Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T11:02:23.906Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6839962fd88672837443aa23"
+  },
+  "firstName": "Promise ",
+  "lastName": "Nenge_terna ",
+  "email": "nepromise9@gmail.com",
+  "phoneNumber": "07054098247",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Benue",
+  "city": "Buruku ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "No . Thank you ",
+  "createdAt": {
+    "$date": "2025-05-30T11:27:43.834Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T11:27:43.834Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683999bff2df731578cfcd04"
+  },
+  "firstName": "Taofeeq",
+  "lastName": "Abdulrasaq",
+  "email": "taofeeq.abdulrasaq@tobamsgroup.com",
+  "phoneNumber": "+2347069786151",
+  "ageRange": "18-25",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media",
+  "expectationsOrQuestions": "I want to learn how to scale my business idea.",
+  "createdAt": {
+    "$date": "2025-05-30T11:42:55.831Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T11:42:55.831Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68399e5ed88672837443aa25"
+  },
+  "firstName": "Jamiu",
+  "lastName": "Olaoye",
+  "email": "Jamiuolaoye@yahoo.com",
+  "phoneNumber": "08039123135",
+  "ageRange": "45+",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-30T12:02:38.211Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T12:02:38.211Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6839a4dc341be04ecc9d3a78"
+  },
+  "firstName": "Favour ",
+  "lastName": "Apara",
+  "email": "favourtemitope@gmail.com",
+  "phoneNumber": "8136336155",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kogi",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-30T12:30:20.031Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T12:30:20.031Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6839aa98341be04ecc9d3a7b"
+  },
+  "firstName": "omotosho",
+  "lastName": "Ibrahim",
+  "email": "omotoshoibrahim2020@gmail.com",
+  "phoneNumber": "7074073195",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-30T12:54:48.717Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T12:54:48.717Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683a0839341be04ecc9d3abe"
+  },
+  "firstName": "Oladapo ",
+  "lastName": "Kuforiji ",
+  "email": "dapokuforiji@yahoo.com",
+  "phoneNumber": "07061521918",
+  "ageRange": "45+",
+  "country": "Nigeria",
+  "state": "Ogun",
+  "city": "Ibadan ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-30T19:34:17.806Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T19:34:17.806Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683a1f8f341be04ecc9d3ad5"
+  },
+  "firstName": "Dolor ",
+  "lastName": "Adeyanju ",
+  "email": "adeyanjucynthia@gmail.com",
+  "phoneNumber": "08062095939",
+  "ageRange": "45+",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-30T21:13:51.269Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T21:13:51.269Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683a2102341be04ecc9d3adc"
+  },
+  "firstName": "Angela",
+  "lastName": "Ubah",
+  "email": "angelaubah10@gmail.com",
+  "phoneNumber": "08145566188",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-30T21:20:02.827Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-30T21:20:02.827Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683a4d30341be04ecc9d3b10"
+  },
+  "firstName": "VICTOR ",
+  "lastName": "AALABI",
+  "email": "bukolaalabi124@gmail.com",
+  "phoneNumber": "08158421806",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "OGBOMOSHO ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "How can be help me in my entrepreneurial journey , would I become a successful entrepreneur through the help of this program this are my question ",
+  "createdAt": {
+    "$date": "2025-05-31T00:28:32.109Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-31T00:28:32.109Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683abc69341be04ecc9d3b20"
+  },
+  "firstName": "Toritseju",
+  "lastName": "Otikpere",
+  "email": "tojujohnson011@gmail.com",
+  "phoneNumber": "07083969056",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Eti osa",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-05-31T08:23:05.177Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-31T08:23:05.177Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683b2a1f341be04ecc9d3b34"
+  },
+  "firstName": "Fatiah ",
+  "lastName": "Tiamiyu",
+  "email": "Amaltullahamaltulla00h@gmail.com",
+  "phoneNumber": "08101445815",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Full 4-week paid training only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "\nHow to start a business?\nWhat business idea is viable? How to secure funding?\nWhat's the role of innovation?\nHow to manage risk?\n",
+  "createdAt": {
+    "$date": "2025-05-31T16:11:11.121Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-31T16:11:11.121Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683d59b7341be04ecc9d3bed"
+  },
+  "firstName": "Taofeeq",
+  "lastName": "Abdulrasaq",
+  "email": "ayomiderasaq3@gmail.com",
+  "phoneNumber": "07069786151",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "To learn what Dr. have in the Arsenal for this program",
+  "createdAt": {
+    "$date": "2025-06-02T07:58:47.905Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T07:58:47.905Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683d743c341be04ecc9d3c0d"
+  },
+  "firstName": "EZEKIEL TEMITAYO",
+  "lastName": "OLAYIWOLA",
+  "email": "temitayobolaji@gmail.com",
+  "phoneNumber": "09033267104",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Osun",
+  "city": "Osogbo",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-02T09:51:56.142Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:51:56.142Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683d752c341be04ecc9d3c12"
+  },
+  "firstName": "Olaosebikan ",
+  "lastName": "Emmanuel",
+  "email": "emmanuel.olaosebikan@tobamsgroup.com",
+  "phoneNumber": "08130466995",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Abuja Municipal Area Council ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Pitching & Presentation Skills",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Yes, More Knowledge wisdom and understanding ",
+  "createdAt": {
+    "$date": "2025-06-02T09:55:56.202Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T09:55:56.202Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683dd75cf4dbc8d918898cfe"
+  },
+  "firstName": "Deborah",
+  "lastName": "Jegede",
+  "email": "jegededeborah5@gmail.com",
+  "phoneNumber": "08142342047",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "To discover profitable business ideas aligned with your passion and market needs, also guide to creating a good business plan",
+  "createdAt": {
+    "$date": "2025-06-02T16:54:52.018Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T16:54:52.018Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683deb9af4dbc8d918898d03"
+  },
+  "firstName": "David ",
+  "lastName": "Anumaka ",
+  "email": "davidanumaka31@gmail.com",
+  "phoneNumber": "08114940816",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Illorin ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-02T18:21:14.915Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T18:21:14.915Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683e26e8f4dbc8d918898d2c"
+  },
+  "firstName": "Isa",
+  "lastName": "Aminah",
+  "email": "isaaminah65@gmail.com",
+  "phoneNumber": "08065287370",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kogi",
+  "city": "Adavi",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "None",
+  "createdAt": {
+    "$date": "2025-06-02T22:34:16.094Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-02T22:34:16.094Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683e4160f4dbc8d918898d2f"
+  },
+  "firstName": "Oiza",
+  "lastName": "Okeje",
+  "email": "Okeje27@gmail.com",
+  "phoneNumber": "08129695210",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Edo",
+  "city": "Akoko Edo",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "I hope it answers all of my thought questions. ",
+  "createdAt": {
+    "$date": "2025-06-03T00:27:12.624Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-03T00:27:12.624Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683e7a11f4dbc8d918898d36"
+  },
+  "firstName": "Shittu ",
+  "lastName": "Quadri",
+  "email": "Quadrishittu04@gmail.com",
+  "phoneNumber": "08117005156",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Bariga ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-03T04:29:05.411Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-03T04:29:05.411Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683e7d16f4dbc8d918898d45"
+  },
+  "firstName": "Ajide",
+  "lastName": "Janet",
+  "email": "larajide014@gmail.com",
+  "phoneNumber": "09022642195",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Abuja",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Both the free session and the full 4-week paid training",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "I hope to learn and gain more insight in entrepreneurship ",
+  "createdAt": {
+    "$date": "2025-06-03T04:41:58.418Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-03T04:41:58.418Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683ea412d2a2bd935f2bdf11"
+  },
+  "firstName": "Oluwatoyin ",
+  "lastName": "Adetunmbi ",
+  "email": "oluwatoyinadetunmbi8@gmail.com",
+  "phoneNumber": "07071986018",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ketu ikosi ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Full 4-week paid training only",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-03T07:28:18.845Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-03T07:28:18.845Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683eb1a1d2a2bd935f2bdf2a"
+  },
+  "firstName": "Mobolaji",
+  "lastName": "Oginni",
+  "email": "mobolaji.oginni@tobamsgroup.com",
+  "phoneNumber": "08064461872",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free 1-hour introductory session only",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-03T08:26:09.041Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-03T08:26:09.041Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683f2ef8d2a2bd935f2bdfdb"
+  },
+  "firstName": "Kayode",
+  "lastName": "Tanimowo",
+  "email": "kaytanola@gmail.com",
+  "phoneNumber": "7037153540",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ogun",
+  "city": "Abeokuta",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "*Expectations:*\n\n1. *Actionable strategies*: Practical tips and techniques to grow my online business.\n2. *Expert insights*: Valuable knowledge from experienced online entrepreneurs.\n3. *Interactive sessions*: Opportunities to ask questions and engage with speakers and peers.\n4. *Resource sharing*: Access to relevant resources, tools, and templates.\n5. *Community support*: Connection with like-minded entrepreneurs for networking and support.\n\n*Questions:*\n\n1. What are the most effective marketing strategies for online businesses?\n2. How can I scale my online business while maintaining quality and customer satisfaction?\n3. What are the latest trends and best practices in e-commerce or digital marketing?\n4. How can I overcome common challenges and obstacles in online entrepreneurship?\n5. What tools and resources do you recommend for online business management and growth?",
+  "createdAt": {
+    "$date": "2025-06-03T17:20:56.579Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-03T17:20:56.579Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "683fe896d2a2bd935f2be014"
+  },
+  "firstName": "ZAINAB BOLUWATIFE",
+  "lastName": "ADERIBIGBE ",
+  "email": "boluwatifeaderibigbe82@gmail.com",
+  "phoneNumber": "07052621732",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-04T06:32:54.180Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-04T06:32:54.180Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6840415ad2a2bd935f2be072"
+  },
+  "firstName": "Emmanuel ",
+  "lastName": "Kapenda ",
+  "email": "emmanuelkapenda7@gmail.com",
+  "phoneNumber": "0978021294",
+  "ageRange": "18-24",
+  "country": "Zambia",
+  "state": "Lusaka Province",
+  "city": "LUSAKA ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Clarity on my on my business ideas and a stretch in expropriation of the business.",
+  "createdAt": {
+    "$date": "2025-06-04T12:51:38.350Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-04T12:51:38.350Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68405e78d2a2bd935f2be083"
+  },
+  "firstName": "Haggai",
+  "lastName": "Fungaloko ",
+  "email": "fungaloko.bh24@gmail.com",
+  "phoneNumber": "0976945750",
+  "ageRange": "25-34",
+  "country": "Zambia",
+  "state": "Northwestern Province",
+  "city": "Solwezi",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-04T14:55:52.685Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-04T14:55:52.685Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6840720dd2a2bd935f2be096"
+  },
+  "firstName": "Bukose ",
+  "lastName": "Chinsembu",
+  "email": "priscillachinsembu@gmail.com",
+  "phoneNumber": "0977398967",
+  "ageRange": "25-34",
+  "country": "Zambia",
+  "state": "Central Province",
+  "city": "Lusaka",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "-Do we get to ask questions?\n",
+  "createdAt": {
+    "$date": "2025-06-04T16:19:25.186Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-04T16:19:25.186Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6840ae41d2a2bd935f2be0ae"
+  },
+  "firstName": "Rodwell",
+  "lastName": "Sichinga",
+  "email": "chalorodwellsichinga@gmail.com",
+  "phoneNumber": "0964704625",
+  "ageRange": "25-34",
+  "country": "Zambia",
+  "state": "Lusaka Province",
+  "city": "Lusaka ",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-04T20:36:17.087Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-04T20:36:17.087Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "684142d6d2a2bd935f2be0be"
+  },
+  "firstName": "Esther",
+  "lastName": "Yeboah",
+  "email": "estyeb@yahoo.co.uk",
+  "phoneNumber": "07960799241",
+  "ageRange": "35-44",
+  "country": "United Kingdom",
+  "state": "London Borough of Barking and Dagenham",
+  "city": "Dagenham",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Other",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-05T07:10:14.429Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T07:10:14.429Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6841c11fa74e2a591731ad58"
+  },
+  "firstName": "Daniel",
+  "lastName": "Babatunde",
+  "email": "Danielbabatunde21@gmail.com",
+  "phoneNumber": "07081028881",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kano",
+  "city": "Kano",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-05T16:09:03.571Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T16:09:03.571Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6841c1cfa74e2a591731ad63"
+  },
+  "firstName": "Grace",
+  "lastName": "Peter",
+  "email": "petergrace1996@gmail.com",
+  "phoneNumber": "08165489319",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-05T16:11:59.487Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-05T16:11:59.487Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6849357d5ee040e9864c8081"
+  },
+  "firstName": "Ella",
+  "lastName": "Osawe",
+  "email": "jite.newton@tobamsgroup.com",
+  "phoneNumber": "09081859913",
+  "ageRange": "35-44",
+  "country": "Nigeria",
+  "state": "Abia",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Testing",
+  "createdAt": {
+    "$date": "2025-06-11T07:51:25.586Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T07:51:25.586Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6849850667ec7e4f46bae810"
+  },
+  "firstName": "ola",
+  "lastName": "tao",
+  "email": "abdulrasaq.taofeeq@tobamsgroup.com",
+  "phoneNumber": "07069786151",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "ILORIN",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Website",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-11T13:30:46.600Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T13:30:46.600Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "684987cd67ec7e4f46bae892"
+  },
+  "firstName": "Israel",
+  "lastName": "Adigun",
+  "email": "israelcollins1409@gmail.com",
+  "phoneNumber": "07031284824",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Nothing, I'm testing.",
+  "createdAt": {
+    "$date": "2025-06-11T13:42:37.878Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T13:42:37.878Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68498e088562ff36006db8fd"
+  },
+  "firstName": "cncjnj",
+  "lastName": "dnjnjnd",
+  "email": "mobolaji.oginnwi@tobamsgroup.com",
+  "phoneNumber": "08064461872",
+  "ageRange": "25-34",
+  "country": "Afghanistan",
+  "state": "Badghis",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-11T14:09:12.503Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T14:09:12.503Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68498e8c8562ff36006db90b"
+  },
+  "firstName": "sndjdnj",
+  "lastName": "ndjnjdnjd",
+  "email": "mobolaji.oginni@tobamsgroeweup.com",
+  "phoneNumber": "0806446172",
+  "ageRange": "25-34",
+  "country": "Albania",
+  "state": "Berat District",
+  "city": "bhbshw",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-11T14:11:24.941Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T14:11:24.941Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "684990b38562ff36006db964"
+  },
+  "firstName": "mdomdm",
+  "lastName": "nwjnwj",
+  "email": "mobolaji.ogwqinni@tobamsgroup.com",
+  "phoneNumber": "08064461872",
+  "ageRange": "35-44",
+  "country": "Albania",
+  "state": "Berat County",
+  "city": "MKMAA",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-11T14:20:35.540Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T14:20:35.540Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "684afc288562ff36006dc073"
+  },
+  "firstName": "Ella",
+  "lastName": "Osawe",
+  "email": "emmanuellaosawe17@gmail.com",
+  "phoneNumber": "9081859913",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Benue",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Test",
+  "createdAt": {
+    "$date": "2025-06-12T16:11:20.723Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-12T16:11:20.723Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "684afcfb8562ff36006dc077"
+  },
+  "firstName": "Ella",
+  "lastName": "Osawe",
+  "email": "osaweemmanuella25@gmail.com",
+  "phoneNumber": "09081859913",
+  "ageRange": "35-44",
+  "country": "Afghanistan",
+  "state": "Badghis",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "Test",
+  "createdAt": {
+    "$date": "2025-06-12T16:14:51.802Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-12T16:14:51.802Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68501f071de14d03c5308eb0"
+  },
+  "firstName": "qwert",
+  "lastName": "qqwer",
+  "email": "kzarza71@gmail.com",
+  "phoneNumber": "09012345678",
+  "ageRange": "45+",
+  "country": "Afghanistan",
+  "state": "Badakhshan",
+  "city": "hello",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "createdAt": {
+    "$date": "2025-06-16T13:41:27.716Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-16T13:41:27.716Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68e3ec98bbf87b182224a8aa"
+  },
+  "firstName": "Stephen ",
+  "lastName": "Acheampong ",
+  "email": "acheampongstev7@gmail.com",
+  "phoneNumber": "08094942682",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ikeja",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-06T16:21:44.714Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-06T16:21:44.714Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68e4042ebbf87b182224a8bf"
+  },
+  "firstName": "Samuel",
+  "lastName": "Makinde",
+  "email": "samuelmakinde19@gmail.com",
+  "phoneNumber": "09064766113",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-06T18:02:22.594Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-06T18:02:22.594Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68e411dbbbf87b182224a8c2"
+  },
+  "firstName": "Francis",
+  "lastName": "Dike",
+  "email": "kelechukwu.dike.246812@unn.edu.ng",
+  "phoneNumber": "08038367877",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Abuja",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-06T19:00:43.231Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-06T19:00:43.231Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68e42820bbf87b182224a8c9"
+  },
+  "firstName": "Rex",
+  "lastName": "Pepple",
+  "email": "pepplerex01@gmail.com",
+  "phoneNumber": "08068914143",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lekki",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "no",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-06T20:35:44.188Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-06T20:35:44.188Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68e4d274bbf87b182224a8d5"
+  },
+  "firstName": "Boluwatife",
+  "lastName": "Ebenezer",
+  "email": "ebenezerboluwatife14@gmail.com",
+  "phoneNumber": "09165946196",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-07T08:42:28.782Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-07T08:42:28.782Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68e515d6bbf87b182224a8e8"
+  },
+  "firstName": "Oluwaseun",
+  "lastName": "Olubunmi",
+  "email": "oolubunmi552@gmail.com",
+  "phoneNumber": "07066377948",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Osun",
+  "city": "Osogbo",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-07T13:29:58.778Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-07T13:29:58.778Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68e587edbbf87b182224a918"
+  },
+  "firstName": "Ademola",
+  "lastName": "Bolarinwa",
+  "email": "bolademola868@gmail.com",
+  "phoneNumber": "08167424917",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ogun",
+  "city": "Ota",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-07T21:36:45.404Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-07T21:36:45.404Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68e62498bbf87b182224a946"
+  },
+  "firstName": "Otobong",
+  "lastName": "Morgan",
+  "email": "otobimorgan12@gmail.com",
+  "phoneNumber": "08114117819",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Abuja",
+  "entrepreneurshipStage": "Growth Phase (My business is established, and I’m looking to scale)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "Nil",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-08T08:45:12.929Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-08T08:45:12.929Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68e7da633973121a3f74c7fe"
+  },
+  "firstName": "Stephen",
+  "lastName": "Nwabuko",
+  "email": "steveuche18@gmail.com",
+  "phoneNumber": "08165503458",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "none",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-09T15:53:07.602Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-09T15:53:07.602Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68f9ef52a7897a2b1b2b9991"
+  },
+  "firstName": "Paul",
+  "lastName": "Jibola",
+  "email": "jibolapaul11@gmail.com",
+  "phoneNumber": "08148804209",
+  "ageRange": "Under 18",
+  "country": "Nigeria",
+  "state": "Yobe",
+  "city": "Damaturu",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T09:03:14.091Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T09:03:14.091Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68f9efcca7897a2b1b2b9995"
+  },
+  "firstName": "Paul",
+  "lastName": "Jibola",
+  "email": "jibolapaul11+1@gmail.com",
+  "phoneNumber": "08148804209",
+  "ageRange": "Under 18",
+  "country": "Afghanistan",
+  "state": "Badakhshan",
+  "city": "Badakhshan",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T09:05:16.863Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T09:05:16.863Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa34ccc435b0af6e7793a2"
+  },
+  "firstName": "FAVOUR",
+  "lastName": "PETER",
+  "email": "FAVOURPETER99@GMAIL.COM",
+  "phoneNumber": "09031590927",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "LAGOS",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "6-Week Entrepreneurship Masterclass",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "H",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T13:59:40.011Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T13:59:40.011Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa3cec71141989789b4450"
+  },
+  "firstName": "Mariam",
+  "lastName": "Sodeke ",
+  "email": "mariam.sodeke@tobamsgroup.com",
+  "phoneNumber": "08085445606",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "I am hoping to leave the webinar fully knowledgeable about entrepreneurship ",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T14:34:20.479Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T14:34:20.479Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa425871141989789b4461"
+  },
+  "firstName": "Peace ",
+  "lastName": "Aielumoh",
+  "email": "hr@tobamsgroup.com",
+  "phoneNumber": "09070568952",
+  "ageRange": "25-34",
+  "country": "Afghanistan",
+  "state": "Badakhshan",
+  "city": "Benin-City",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T14:57:28.409Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T14:57:28.409Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa476e71141989789b4488"
+  },
+  "firstName": "Ericsson",
+  "lastName": "Raphael",
+  "email": "ericssonraphael@outlook.com",
+  "phoneNumber": "07039105823",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Lagos",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T15:19:10.608Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T15:19:10.608Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa4c7260a8b1ac451c12c0"
+  },
+  "firstName": "Ifeanyichukwu ",
+  "lastName": "Eze",
+  "email": "ezeifeanyij@gmail.com",
+  "phoneNumber": "09134755176",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ebonyi",
+  "city": "Abakaliki ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T15:40:34.202Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T15:40:34.202Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa4d4e60a8b1ac451c12c3"
+  },
+  "firstName": "Mbagwu",
+  "lastName": "Walter",
+  "email": "mbagwuwalterc@gmail.com",
+  "phoneNumber": "08114506538",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Enugu",
+  "city": "Enugu",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T15:44:14.050Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T15:44:14.050Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa4e3e60a8b1ac451c12c6"
+  },
+  "firstName": "Moses",
+  "lastName": "Kouakanou",
+  "email": "moses.oluwasekan@tobamsgroup.com",
+  "phoneNumber": "08109176764",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Berger",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T15:48:14.007Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T15:48:14.007Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa4fce60a8b1ac451c12d4"
+  },
+  "firstName": "Fawaz",
+  "lastName": "Abdganiyu",
+  "email": "fawaz.abdganiyu@tobamsgroup.com",
+  "phoneNumber": "08179656740",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Saki",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T15:54:54.028Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T15:54:54.028Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa50de60a8b1ac451c12dc"
+  },
+  "firstName": "Israel",
+  "lastName": "Adigun",
+  "email": "adigunisrael@gmail.com",
+  "phoneNumber": "07031284824",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T15:59:26.823Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T15:59:26.823Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa53a260a8b1ac451c12e4"
+  },
+  "firstName": "Faith",
+  "lastName": "John",
+  "email": "faith.john@tobamsgroup.com",
+  "phoneNumber": "08172395573",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Abuja Federal Capital Territory",
+  "city": "Abuja",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T16:11:14.248Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T16:11:14.248Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa598c60a8b1ac451c12ef"
+  },
+  "firstName": "Constance",
+  "lastName": "Ajuzie",
+  "email": "ajuzienarachi@gmail.com",
+  "phoneNumber": "08163031682",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Rivers",
+  "city": "Port Harcourt ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Website",
+  "expectationsOrQuestions": "To expand my knowledge ",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T16:36:28.417Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T16:36:28.417Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa616160a8b1ac451c12f6"
+  },
+  "firstName": "Mukhtar",
+  "lastName": "Ishaq",
+  "email": "emkaaygraphics@gmail.com",
+  "phoneNumber": "09133888868",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Kaduna",
+  "city": "Makera - Kakuri",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "Hopefully get a clearer vision after the call. ",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T17:09:53.132Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T17:09:53.132Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa770baa05efb67820a7d2"
+  },
+  "firstName": "Dotun",
+  "lastName": "Olatowode ",
+  "email": "olatowodedotun@gmail.com",
+  "phoneNumber": "07039857459",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Ondo",
+  "city": "Akure ",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T18:42:19.550Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T18:42:19.550Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fa8f03aa05efb67820a7d7"
+  },
+  "firstName": "Michael",
+  "lastName": "Johnson",
+  "email": "adeyinka2k@gmail.com",
+  "phoneNumber": "08167397347",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Oyo",
+  "city": "Ibadan",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T20:24:35.382Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T20:24:35.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68faba02aa05efb67820a7e5"
+  },
+  "firstName": "Omokorede",
+  "lastName": "Adeyeye",
+  "email": "omokorede.adeyeye@tobamsgroup.com",
+  "phoneNumber": "09024292976",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Lagos",
+  "city": "Ikeja",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Referral (Friend/Colleague)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-23T23:28:02.353Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-23T23:28:02.353Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fb029caa05efb67820a7ee"
+  },
+  "firstName": "Ummulkhair Olohuntoyin ",
+  "lastName": "Imam Aliagan ",
+  "email": "ummulkhairimamaliagan22@gmail.com",
+  "phoneNumber": "08132332746",
+  "ageRange": "25-34",
+  "country": "Nigeria",
+  "state": "Kwara",
+  "city": "Ilorin",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-24T04:37:48.985Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-24T04:37:48.985Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68fb2304aa48b69d1a098284"
+  },
+  "firstName": "Sarah Terry ",
+  "lastName": "Akiteng ",
+  "email": "akitengsarah2@gmail.com",
+  "phoneNumber": "0773070952",
+  "ageRange": "35-44",
+  "country": "Uganda",
+  "state": "Kampala District",
+  "city": "Kampala",
+  "entrepreneurshipStage": "Early-stage Startup (I have started but am still refining my business)",
+  "entrepreneurshipInterests": "Marketing & Branding",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "Do you have specialized personnel in the line of manufacturing and value addition who can help in especially purification of oils?",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-10-24T06:56:04.420Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-24T06:56:04.420Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6943db22a00d4e4658c33b58"
+  },
+  "firstName": "David",
+  "lastName": "Dappa",
+  "email": "david.dappa@tobamsgroup.com",
+  "phoneNumber": "084049589494",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Rivers",
+  "city": "Port Harcourt",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Business Planning & Strategy",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "howDidYouHearAboutUs": "Email Campaign",
+  "expectationsOrQuestions": "okay",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2025-12-18T10:44:50.142Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-18T10:44:50.142Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69669a57c6a42bcbfbbb906f"
+  },
+  "firstName": "Ismail ",
+  "lastName": "B khamis",
+  "email": "ismailbkhamis001@gmail.com",
+  "phoneNumber": "08107215659",
+  "ageRange": "18-24",
+  "country": "Nigeria",
+  "state": "Katsina",
+  "city": "Katsina",
+  "entrepreneurshipStage": "Idea Stage (I have an idea but haven’t started yet)",
+  "entrepreneurshipInterests": "Funding & Investment Readiness",
+  "programInterest": "Free Webinar: Entrepreneurship 101 and Free Ebook",
+  "preferredSessionDate": {
+    "$date": "2026-01-15T00:00:00.000Z"
+  },
+  "howDidYouHearAboutUs": "Social Media (Facebook, Instagram, LinkedIn, etc.)",
+  "expectationsOrQuestions": "I need more updates on the program",
+  "paymentStatus": false,
+  "paymentDetails": {
+    "amount": "0",
+    "currency": "",
+    "region": "nigeria"
+  },
+  "createdAt": {
+    "$date": "2026-01-13T19:17:43.322Z"
+  },
+  "updatedAt": {
+    "$date": "2026-01-13T19:17:43.322Z"
+  }
+}]

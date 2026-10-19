@@ -1,0 +1,31 @@
+info:
+  name: Update admin profile by ID
+  type: http
+  seq: 12
+
+http:
+  method: PATCH
+  url: "{{BASE}}/admin/:adminId"
+  params:
+    - name: adminId
+      value: ""
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "telephone": "",
+        "photo": "https://",
+        "accountStatus": "",
+        "privilege": [""]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

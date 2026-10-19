@@ -8,10 +8,363 @@ http:
   url: "{{BASE}}/interns"
   auth:
     type: bearer
-    token: "{{intern_access}}"
+    token: "{{admin_access}}"
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/interns"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: date
+          value: Tue, 18 Aug 2026 09:16:00 GMT
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: access-control-allow-headers
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PATCH, DELETE, PUT
+        - name: access-control-allow-origin
+          value: "*"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: etag
+          value: W/"1a8a-G0kWcwmPlUJ/Fcb9fzB6++qxVtk"
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: rndr-id
+          value: 66bcbc3f-56af-455b
+        - name: server
+          value: cloudflare
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: vary
+          value: Accept-Encoding
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-render-origin-server
+          value: Render
+        - name: x-request-id
+          value: 1787044557225-whz2lokjz
+        - name: x-xss-protection
+          value: "0"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: cf-ray
+          value: a2cfd11e4bae6566-AMS
+        - name: alt-svc
+          value: h3=":443"; ma=86400
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Interns retrieved successfully",
+            "data": {
+              "currentCount": 10,
+              "totalCount": 286,
+              "usersObj": [
+                {
+                  "_id": "6a0d7512c629597c60c9c022",
+                  "occupation": "Business Analyst Intern",
+                  "bio": "ipso lorem dipo",
+                  "firstName": "Ebubechukwu",
+                  "lastName": "Okoye",
+                  "email": "ebubechukwu.okoye@tobamsgroup.com",
+                  "telephone": "+2348136618551",
+                  "location": {
+                    "country": "Nigeria",
+                    "state": "Nigeria",
+                    "city": ""
+                  },
+                  "photo": "",
+                  "profile": "Intern",
+                  "accountStatus": "Active",
+                  "skills": [],
+                  "mentorshipType": [
+                    "One-to-One",
+                    "Peer-to-Peer",
+                    "Group"
+                  ],
+                  "averageRating": 0,
+                  "createdAt": "2026-05-20T08:47:14.017Z",
+                  "updatedAt": "2026-05-27T07:18:10.651Z",
+                  "yearsOfExperience": "3",
+                  "isPeer": false
+                },
+                {
+                  "_id": "6a0de3481334be917900beb5",
+                  "title": "Software Developer | Full Stack Web Developer",
+                  "occupation": "tech tutor",
+                  "bio": "Software Developer | Full Stack Web Developer\n\nI am an enthusiastic, self-motivated, reliable, responsible and hard-working developer. I build modern,",
+                  "firstName": "K. Excel",
+                  "lastName": "Acha",
+                  "email": "axceldesigns@gmail.com",
+                  "telephone": "+2348111069977",
+                  "location": {
+                    "country": "Nigeria",
+                    "state": "Nigeria",
+                    "city": "FCT"
+                  },
+                  "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1781106579907_AEXCEL2.png",
+                  "profile": "Intern",
+                  "accountStatus": "Active",
+                  "skills": [
+                    "Javascript ",
+                    "Typescript ",
+                    "reactJs",
+                    "NextJs",
+                    "ExpressJs",
+                    "Mongoose",
+                    "MongoDB",
+                    "HTML",
+                    "CSS"
+                  ],
+                  "mentorshipType": [
+                    "Group",
+                    "Peer-to-Peer",
+                    "One-to-One"
+                  ],
+                  "averageRating": 0,
+                  "createdAt": "2026-05-20T16:37:28.215Z",
+                  "updatedAt": "2026-08-14T14:04:10.410Z",
+                  "yearsOfExperience": "1+",
+                  "isPeer": false
+                },
+                {
+                  "_id": "6a0dfc8b1334be917900c244",
+                  "occupation": "Graphics designer ",
+                  "bio": "I’m a passionate tech and creative professional with growing experience in graphic design. I enjoy building clean, user-friendly digital products ",
+                  "firstName": "Victor",
+                  "lastName": "Adebiyi",
+                  "email": "adebiyivic26@gmail.com",
+                  "telephone": "+2349023892494",
+                  "location": {
+                    "country": "Nigeria"
+                  },
+                  "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1781121408036_412018.jpg",
+                  "profile": "Intern",
+                  "accountStatus": "Active",
+                  "skills": [],
+                  "mentorshipType": [
+                    "Group",
+                    "Peer-to-Peer",
+                    "One-to-One"
+                  ],
+                  "averageRating": 0,
+                  "createdAt": "2026-05-20T18:25:15.103Z",
+                  "updatedAt": "2026-06-10T19:53:49.651Z",
+                  "yearsOfExperience": "1+",
+                  "isPeer": false
+                },
+                {
+                  "_id": "6a0eefca1334be917900cef3",
+                  "occupation": "Software engineer",
+                  "firstName": "Odili",
+                  "lastName": "Triumph",
+                  "email": "odilitriumph9@gmail.com",
+                  "telephone": "+2349067397822",
+                  "photo": "",
+                  "profile": "Intern",
+                  "accountStatus": "Active",
+                  "skills": [],
+                  "mentorshipType": [
+                    "Group",
+                    "Peer-to-Peer",
+                    "One-to-One"
+                  ],
+                  "averageRating": 0,
+                  "createdAt": "2026-05-21T11:43:06.162Z",
+                  "updatedAt": "2026-05-29T22:16:36.829Z",
+                  "isPeer": false
+                },
+                {
+                  "_id": "6a0ef0d51334be917900cf9a",
+                  "occupation": "Engineer",
+                  "bio": "Software Engineer with 3+ years of experience building backend APIs and full-stack web applications using\nC#/.NET, Angular, TypeScript, NodeJs",
+                  "firstName": "Chibueze",
+                  "lastName": "Chukwuka",
+                  "email": "kendrickchuks@gmail.com",
+                  "telephone": "+2348064032254",
+                  "location": {
+                    "country": "Nigeria",
+                    "state": "Nigeria",
+                    "city": "Enugu, Nigeria"
+                  },
+                  "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1779365413578_kenmine.png",
+                  "profile": "Intern",
+                  "accountStatus": "Active",
+                  "skills": [],
+                  "mentorshipType": [],
+                  "averageRating": 0,
+                  "createdAt": "2026-05-21T11:47:33.627Z",
+                  "updatedAt": "2026-05-21T12:13:35.359Z",
+                  "yearsOfExperience": "3",
+                  "isPeer": false
+                },
+                {
+                  "_id": "6a0ef2b71334be917900cfe2",
+                  "occupation": "Student",
+                  "firstName": "Chidiebere",
+                  "lastName": "Umeokafor",
+                  "email": "umeokaforchidiebere@ymail.com",
+                  "telephone": "+2347036430573",
+                  "location": {
+                    "country": "Nigeria",
+                    "state": "Nigeria",
+                    "city": "Lagos"
+                  },
+                  "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1779368452524_pix.jpg",
+                  "profile": "Intern",
+                  "accountStatus": "Active",
+                  "skills": [],
+                  "mentorshipType": [],
+                  "averageRating": 0,
+                  "createdAt": "2026-05-21T11:55:35.826Z",
+                  "updatedAt": "2026-05-21T13:00:54.063Z",
+                  "isPeer": false
+                },
+                {
+                  "_id": "6a0efe651334be917900d925",
+                  "title": "Full Stack Developer | Cybersecurity Enthusiast",
+                  "occupation": "Software Developer",
+                  "bio": "Full Stack Web Developer with a Cybersecurity background, experienced in building secure web applications using React, Node.js, Express.js, & Mongodb",
+                  "firstName": "Peter",
+                  "lastName": "Oyishoma",
+                  "email": "oyishomapeter@gmail.com",
+                  "telephone": "+2348164804155",
+                  "location": {
+                    "country": "Nigeria",
+                    "state": "Nigeria",
+                    "city": "FCT"
+                  },
+                  "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1779530389777_IMG_20250427_142459.jpg",
+                  "profile": "Intern",
+                  "accountStatus": "Active",
+                  "skills": [],
+                  "mentorshipType": [
+                    "Group",
+                    "Peer-to-Peer",
+                    "One-to-One"
+                  ],
+                  "averageRating": 0,
+                  "createdAt": "2026-05-21T12:45:25.623Z",
+                  "updatedAt": "2026-05-23T09:59:46.144Z",
+                  "yearsOfExperience": "2",
+                  "isPeer": false
+                },
+                {
+                  "_id": "6a0ffa919544856bb283e42f",
+                  "occupation": "Data analyst",
+                  "bio": "Hello, I'm Olabode Precious Olusola, a growing Data Analyst passionate about turning data into insights.",
+                  "firstName": "Precious ",
+                  "lastName": "Olabode ",
+                  "email": "olabodeprecious113@gmail.com",
+                  "telephone": "+2347068599659",
+                  "location": {
+                    "country": "Nigeria",
+                    "state": "Nigeria",
+                    "city": "Abuja"
+                  },
+                  "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1779555793933_1000001064.jpg",
+                  "profile": "Intern",
+                  "accountStatus": "Active",
+                  "skills": [],
+                  "mentorshipType": [
+                    "One-to-One"
+                  ],
+                  "averageRating": 0,
+                  "createdAt": "2026-05-22T06:41:21.601Z",
+                  "updatedAt": "2026-05-23T17:17:52.665Z",
+                  "yearsOfExperience": "0+",
+                  "isPeer": false
+                },
+                {
+                  "_id": "6a103c4d9544856bb283ef11",
+                  "title": "Backend developer",
+                  "occupation": "None",
+                  "bio": "I m an Electronic and Computer Engineering graduate and a backend developer who is passionate about growth. I'm in search of intern/entry level roles.",
+                  "firstName": "Oluchukwu",
+                  "lastName": "Anakor",
+                  "email": "anakorafav@gmail.com",
+                  "telephone": "+2349036469521",
+                  "location": {
+                    "country": "Nigeria",
+                    "state": "Nigeria",
+                    "city": "Enugu"
+                  },
+                  "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/profiles/1783705309589_1001995082.jpg",
+                  "profile": "Intern",
+                  "accountStatus": "Active",
+                  "skills": [
+                    "TypeScript",
+                    "MongoDB",
+                    "Express.js"
+                  ],
+                  "mentorshipType": [
+                    "One-to-One"
+                  ],
+                  "averageRating": 0,
+                  "createdAt": "2026-05-22T11:21:49.806Z",
+                  "updatedAt": "2026-08-12T18:13:58.748Z",
+                  "yearsOfExperience": "0+",
+                  "isPeer": false
+                },
+                {
+                  "_id": "6a104b399544856bb283f536",
+                  "occupation": "Student ",
+                  "bio": "I am an Engineering student with a strong interest in technology and continuous learning. I am passionate about data analytics and embedded systems.",
+                  "firstName": "Cindy ",
+                  "lastName": "Akenma ",
+                  "email": "akenmacindy25@gmail.com",
+                  "telephone": "+233551972704",
+                  "location": {
+                    "country": "Ghana"
+                  },
+                  "photo": "",
+                  "profile": "Intern",
+                  "accountStatus": "Active",
+                  "skills": [
+                    "Microsoft word",
+                    "Microsoft Excel",
+                    "Data Entry and Record Keeping"
+                  ],
+                  "mentorshipType": [],
+                  "averageRating": 0,
+                  "createdAt": "2026-05-22T12:25:29.441Z",
+                  "updatedAt": "2026-07-29T15:10:53.224Z",
+                  "yearsOfExperience": "0+",
+                  "isPeer": false
+                }
+              ]
+            }
+          }

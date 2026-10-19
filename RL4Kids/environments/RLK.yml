@@ -1,0 +1,4 @@
+name: RLK
+variables:
+  - name: "LIVE "
+    value: https://rl4kids-be.onrender.com/api/v1

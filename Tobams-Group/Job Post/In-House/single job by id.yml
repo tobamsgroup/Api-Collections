@@ -1,17 +1,22 @@
 info:
   name: single job by id
   type: http
-  seq: 6
+  seq: 4
 
 http:
   method: GET
-  url: "{{BASE}}/job_in_house/id/67532398bec98bc52ebb81d7"
+  url: "{{BASE}}/job_in_house/id/:jobId"
+  params:
+    - name: jobId
+      value: 67f0c9ddc2324c0dfcf5563d
+      type: path
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: success

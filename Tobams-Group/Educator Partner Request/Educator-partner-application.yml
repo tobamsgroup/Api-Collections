@@ -1,0 +1,87 @@
+info:
+  name: Submit an Educator Partner Request Application
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/educator-partner-requests/applications"
+  body:
+    type: json
+    data: |-
+      {
+        firstName: 'Tabitha',
+        lastName: 'Imafidon',
+        phoneNumber: '+2348012345678',
+        workEmailAddress: 'tabitha@tobams.com',
+        jobRoleTitle: 'Backend Engineer',
+        applicantCountry: 'Nigeria',
+
+        institutionName: 'University of Lagos',
+        institutionType: 'University',
+        institutionWebsite: 'https://unilag.edu.ng',
+        institutionCountry: 'Nigeria',
+
+        programPathwayInterest: ['AI Challenge', 'Technology Challenge'],
+        targetStudentLevel: ['Undergraduates', 'Recent Graduates'],
+        estimatedNumberOfStudents: '51-100',
+        preferredStartDate: '2026-10-01',
+
+        supportNeedFromTGNexus: ['Program Setup', 'Student Onboarding'],
+
+        goals:
+          'We want to introduce experiential learning opportunities to our students.',
+
+        contactAgreement: true,
+      }
+
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Submit Book Giveaway Application
+    request:
+      url: "{{BASE}}/educator-partner-requests/applications"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            firstName: 'Tabitha',
+            lastName: 'Imafidon',
+            phoneNumber: '+2348012345678',
+            workEmailAddress: 'tabitha@tobams.com',
+            jobRoleTitle: 'Backend Engineer',
+            applicantCountry: 'Nigeria',
+
+            institutionName: 'University of Lagos',
+            institutionType: 'University',
+            institutionWebsite: 'https://unilag.edu.ng',
+            institutionCountry: 'Nigeria',
+
+            programPathwayInterest: ['AI Challenge', 'Technology Challenge'],
+            targetStudentLevel: ['Undergraduates', 'Recent Graduates'],
+            estimatedNumberOfStudents: '51-100',
+            preferredStartDate: '2026-10-01',
+
+            supportNeedFromTGNexus: ['Program Setup', 'Student Onboarding'],
+
+            goals:
+              'We want to introduce experiential learning opportunities to our students.',
+
+            contactAgreement: true, 
+          }
+    response:
+      statusText: "201"
+      body:
+        type: json
+        data: |-
+          {
+            "status": "success",
+            "message": "Educator partner request submitted successfully"
+          }

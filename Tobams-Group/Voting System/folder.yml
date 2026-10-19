@@ -1,0 +1,7 @@
+info:
+  name: Voting system
+  type: folder
+  seq: 4
+
+request:
+  auth: inherit

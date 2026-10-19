@@ -1,0 +1,2354 @@
+[{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4066"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "What is a business plan?",
+  "options": {
+    "a": "A document that outlines the goals and strategies of a business",
+    "b": "A financial statement",
+    "c": "A marketing brochure",
+    "d": "A list of employees"
+  },
+  "answer": "A document that outlines the goals and strategies of a business",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.748Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4065"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "Which of the following best describes an entrepreneur?",
+  "options": {
+    "a": "A person who manages an existing business",
+    "b": "A person who creates and assumes the risk for a new business venture",
+    "c": "A person who works for a large corporation",
+    "d": "A person who invests in stocks and bonds"
+  },
+  "answer": "A person who creates and assumes the risk for a new business venture",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.736Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.736Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4068"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "What is the primary purpose of market research for a new business?",
+  "options": {
+    "a": "To create advertisements",
+    "b": "To understand consumer needs and market conditions",
+    "c": "To hire employees",
+    "d": "To determine product prices"
+  },
+  "answer": "To understand consumer needs and market conditions",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.748Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4069"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "Which of the following is an example of a fixed cost in a business?",
+  "options": {
+    "a": "Raw materials",
+    "b": "Monthly rent",
+    "c": "Sales commissions",
+    "d": "Advertising expenses"
+  },
+  "answer": "Monthly rent",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.749Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.749Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e406f"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "What is bootstrapping in the context of a start-up?",
+  "options": {
+    "a": "Raising large amounts of capital from investors",
+    "b": "Starting a business with minimal financial resources and reinvesting earnings",
+    "c": "Taking out large loans to fund the business",
+    "d": "Hiring a large number of employees"
+  },
+  "answer": "Starting a business with minimal financial resources and reinvesting earnings",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.752Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.752Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4072"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "Which of the following is a common source of funding for start-ups?",
+  "options": {
+    "a": "Personal savings",
+    "b": "Venture capital",
+    "c": "Crowdfunding",
+    "d": "All of the above"
+  },
+  "answer": "All of the above",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4075"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "Which of the following is an example of a disruptive innovation?",
+  "options": {
+    "a": "Incremental improvements to an existing product",
+    "b": "A new technology that significantly alters the market and displaces established  competitors",
+    "c": "A marketing campaign",
+    "d": "A cost-cutting measure"
+  },
+  "answer": "A new technology that significantly alters the market and displaces established competitors",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e406a"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "What does ROI stand for in a business context?",
+  "options": {
+    "a": "Return on Investment",
+    "b": "Rate of Interest",
+    "c": "Return on Income",
+    "d": "Ratio of Investment"
+  },
+  "answer": "Return on Investment",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.751Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.751Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4074"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "What does the term 'scaling' refer to in a business context?",
+  "options": {
+    "a": "Reducing the size of a business",
+    "b": "Expanding a business by increasing output or market reach",
+    "c": "Changing the ownership structure",
+    "d": "Decreasing product prices"
+  },
+  "answer": "Expanding a business by increasing output or market reach",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4067"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "Which of the following is a key characteristic of a successful entrepreneur?",
+  "options": {
+    "a": "Risk aversion",
+    "b": "Dependence on others",
+    "c": "Strong leadership skills",
+    "d": "Preference for routine tasks"
+  },
+  "answer": "Strong leadership skills",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.748Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e406c"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "What is a value proposition?",
+  "options": {
+    "a": "The ownership structure of a business",
+    "b": "A statement that explains how a product or service solves a problem or provides benefits to customers",
+    "c": "A pricing strategy",
+    "d": "A market analysis report"
+  },
+  "answer": "A statement that explains how a product or service solves a problem or provides benefits to customers",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.751Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.751Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e406d"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "Why is networking important for entrepreneurs?",
+  "options": {
+    "a": "It guarantees immediate business success",
+    "b": "It helps in building relationships that can provide opportunities and support",
+    "c": "It eliminates the need for a business plan",
+    "d": "It ensures high sales volume"
+  },
+  "answer": "It helps in building relationships that can provide opportunities and support",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.752Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.752Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e406e"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "What is a minimum viable product (MVP)?",
+  "options": {
+    "a": "The cheapest product that can be made",
+    "b": "A product with the highest number of features",
+    "c": "A product with just enough features to satisfy early customers and provide feedback for future development",
+    "d": "The final version of a product"
+  },
+  "answer": "A product with just enough features to satisfy early customers and provide feedback for future development",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.752Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.752Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4073"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "What is intellectual property (IP)?",
+  "options": {
+    "a": "Physical assets of a business",
+    "b": "Financial assets of a business",
+    "c": "Creations of the mind, such as inventions, literary and artistic works, and symbols",
+    "d": "Employee benefits"
+  },
+  "answer": "Creations of the mind, such as inventions, literary and artistic works, and symbols",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4076"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "Why is a SWOT analysis useful for a new business?",
+  "options": {
+    "a": "It provides a detailed financial forecast",
+    "b": "It helps in identifying strengths, weaknesses, opportunities, and threats",
+    "c": "It outlines the company’s organizational structure",
+    "d": "It ensures regulatory compliance"
+  },
+  "answer": "It helps in identifying strengths, weaknesses, opportunities, and threats",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4078"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "Which of the following is crucial for effective time management as an entrepreneur?",
+  "options": {
+    "a": "Procrastination",
+    "b": "Setting clear priorities and goals",
+    "c": "Avoiding delegation of tasks",
+    "d": "Working without breaks"
+  },
+  "answer": "Setting clear priorities and goals",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.755Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.755Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e406b"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "Which of the following strategies is most effective for managing cash flow in a start-up?",
+  "options": {
+    "a": "Ignoring unpaid invoices",
+    "b": "Reducing expenses and closely monitoring income and expenses",
+    "c": "Increasing salaries",
+    "d": "Expanding office space immediately"
+  },
+  "answer": "Reducing expenses and closely monitoring income and expenses",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.751Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.751Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4070"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "Which of the following is an advantage of starting a business partnership?",
+  "options": {
+    "a": "Unlimited liability",
+    "b": "Shared responsibilities and resources",
+    "c": "Sole decision-making authority",
+    "d": "Simplified tax reporting"
+  },
+  "answer": "Shared responsibilities and resources",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4071"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "What is the primary goal of a social entrepreneur?",
+  "options": {
+    "a": "To maximize profits",
+    "b": "To create social and environmental value while achieving financial sustainability",
+    "c": "To reduce competition",
+    "d": "To expand into international markets"
+  },
+  "answer": "To create social and environmental value while achieving financial sustainability",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.753Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d41211ca3395984e4077"
+  },
+  "category": "null",
+  "section": "General",
+  "question": "What is the purpose of a business incubator?",
+  "options": {
+    "a": "To provide long-term loans to businesses",
+    "b": "To offer support, resources, and services to early-stage companies to help them  grow",
+    "c": "To conduct market research",
+    "d": "To manage stock portfolios"
+  },
+  "answer": "To offer support, resources, and services to early-stage companies to help them grow",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:19:46.755Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:19:46.755Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe5d"
+  },
+  "category": "null",
+  "section": "Business Planning and Strategy",
+  "question": "What is the primary purpose of a business plan?",
+  "options": {
+    "a": "To impress potential investors.",
+    "b": "To outline the goals, strategies, and actions needed to start and grow the business.",
+    "c": "To fulfill legal requirements.",
+    "d": "To estimate the personal income of the entrepreneur."
+  },
+  "answer": "To outline the goals, strategies, and actions needed to start and grow the business.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.580Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.580Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe5b"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "Which of the following best describes a successful entrepreneur's approach to idea generation?",
+  "options": {
+    "a": "Waiting for inspiration to strike.",
+    "b": "Regularly brainstorming and researching market needs.",
+    "c": "Copying ideas from existing successful businesses.",
+    "d": "Relying solely on personal experience."
+  },
+  "answer": "Regularly brainstorming and researching market needs.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.577Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.577Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe62"
+  },
+  "category": "null",
+  "section": "Marketing and Sales",
+  "question": "What is an effective method to increase sales in a start-up?",
+  "options": {
+    "a": "Aggressive price cutting.",
+    "b": "Offering high-quality customer service and building strong relationships.",
+    "c": "Reducing marketing expenses.",
+    "d": "Increasing production regardless of demand."
+  },
+  "answer": "Offering high-quality customer service and building strong relationships.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe5e"
+  },
+  "category": "null",
+  "section": "Business Planning and Strategy",
+  "question": "When developing a business strategy, what is an essential factor to consider?",
+  "options": {
+    "a": "The entrepreneur's personal preferences.",
+    "b": "Market trends and competitor analysis.",
+    "c": "The advice of friends and family.",
+    "d": "Current events in unrelated industries."
+  },
+  "answer": "Market trends and competitor analysis.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe60"
+  },
+  "category": "null",
+  "section": "Financial Management",
+  "question": "What is the most critical aspect of managing cash flow in a new business?",
+  "options": {
+    "a": "Ensuring steady sales.",
+    "b": "Minimizing expenses.",
+    "c": "Balancing incoming and outgoing funds to avoid liquidity issues.",
+    "d": "Seeking loans for large expenses."
+  },
+  "answer": "Balancing incoming and outgoing funds to avoid liquidity issues.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe64"
+  },
+  "category": "null",
+  "section": "Leadership and Team Management",
+  "question": "What is a critical factor for building an effective team?",
+  "options": {
+    "a": "Hiring people with similar personalities.",
+    "b": "Hiring quickly to fill positions.",
+    "c": "Focusing on complementary skills and shared vision.",
+    "d": "Offering the highest salaries."
+  },
+  "answer": "Focusing on complementary skills and shared vision.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe68"
+  },
+  "category": "null",
+  "section": "Innovation and Creativity",
+  "question": "Which approach fosters creativity in a start-up?",
+  "options": {
+    "a": "Following strict routines.",
+    "b": "Encouraging diverse perspectives and brainstorming.",
+    "c": "Limiting feedback from others.",
+    "d": "Adhering strictly to industry norms."
+  },
+  "answer": "Encouraging diverse perspectives and brainstorming.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe69"
+  },
+  "category": "null",
+  "section": "Ethical and Social Responsibility",
+  "question": "Why is ethical behaviour important in entrepreneurship?",
+  "options": {
+    "a": "It is required by law.",
+    "b": "It helps build trust with customers and stakeholders.",
+    "c": "It is easy to implement.",
+    "d": "It ensures quick profits."
+  },
+  "answer": "It helps build trust with customers and stakeholders.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe6b"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "How can an entrepreneur validate their business idea?",
+  "options": {
+    "a": "By conducting market research and gathering customer feedback.",
+    "b": "By discussing it with family and friends.",
+    "c": "By starting the business immediately.",
+    "d": "By avoiding any external opinions."
+  },
+  "answer": "By conducting market research and gathering customer feedback.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe6c"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What is a minimum viable product (MVP)?",
+  "options": {
+    "a": "A fully developed product.",
+    "b": "A product with the minimum features needed to satisfy early customers.",
+    "c": "A product that is not functional.",
+    "d": "A product that is sold at the lowest possible price."
+  },
+  "answer": "A product with the minimum features needed to satisfy early customers.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe6d"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "Why is it important to have a unique selling proposition (USP)?",
+  "options": {
+    "a": "It allows you to charge more for your product.",
+    "b": "It distinguishes your business from competitors.",
+    "c": "It reduces the need for marketing.",
+    "d": "It guarantees business success."
+  },
+  "answer": "It distinguishes your business from competitors.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe73"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What is the main purpose of market segmentation?",
+  "options": {
+    "a": "To increase product prices.",
+    "b": "To identify and target specific groups of potential customers.",
+    "c": "To simplify the marketing process.",
+    "d": "To reduce competition."
+  },
+  "answer": "To identify and target specific groups of potential customers.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe76"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "Which trait is essential for entrepreneurial leadership?",
+  "options": {
+    "a": "Micromanagement.",
+    "b": "Vision and the ability to inspire others.",
+    "c": "Reluctance to delegate.",
+    "d": "Sole focus on profitability."
+  },
+  "answer": "Vision and the ability to inspire others.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe79"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What should an entrepreneur do when facing a business failure?",
+  "options": {
+    "a": "Give up and close the business.",
+    "b": "Analyze the reasons for failure and pivot or adjust strategies.",
+    "c": "Blame external factors.",
+    "d": "Ignore the failure and continue as usual."
+  },
+  "answer": "Analyze the reasons for failure and pivot or adjust strategies.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe7d"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "Which of the following best describes disruptive innovation?",
+  "options": {
+    "a": "Incremental improvements to existing products.",
+    "b": "Innovations that create new markets and disrupt existing ones.",
+    "c": "Imitating competitors' products.",
+    "d": "Reducing the cost of production."
+  },
+  "answer": "Innovations that create new markets and disrupt existing ones.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe80"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "How can a business demonstrate corporate social responsibility (CSR)?",
+  "options": {
+    "a": "By focusing solely on profit maximization.",
+    "b": "By engaging in environmentally sustainable practices and supporting community initiatives.",
+    "c": "By minimizing employee wages.",
+    "d": "By ignoring social issues."
+  },
+  "answer": "By engaging in environmentally sustainable practices and supporting community initiatives.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe85"
+  },
+  "category": "null",
+  "section": "Communication Skills",
+  "question": "Why is non-verbal communication important?",
+  "options": {
+    "a": "It is not significant.",
+    "b": "It complements verbal communication and can convey emotions.",
+    "c": "It replaces verbal communication.",
+    "d": "It confuses the message."
+  },
+  "answer": "It complements verbal communication and can convey emotions.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.589Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.589Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe93"
+  },
+  "category": "null",
+  "section": "Networking and Relationship Building",
+  "question": "What is the primary benefit of networking for entrepreneurs?",
+  "options": {
+    "a": "It increases competition.",
+    "b": "It creates opportunities for collaboration and business growth.",
+    "c": "It wastes time.",
+    "d": "It is only useful for socializing."
+  },
+  "answer": "It creates opportunities for collaboration and business growth.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe9a"
+  },
+  "category": "null",
+  "section": "Communication Skills",
+  "question": "Which of the following is a key aspect of effective communication?",
+  "options": {
+    "a": "Speaking more than listening.",
+    "b": "Listening actively and providing clear feedback.",
+    "c": "Using complex jargon.",
+    "d": "Interrupting frequently to assert dominance."
+  },
+  "answer": "Listening actively and providing clear feedback.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe9b"
+  },
+  "category": "null",
+  "section": "Communication Skills",
+  "question": "Why is non-verbal communication important?",
+  "options": {
+    "a": "It is not significant.",
+    "b": "It complements verbal communication and can convey emotions.",
+    "c": "It replaces verbal communication.",
+    "d": "It confuses the message."
+  },
+  "answer": "It complements verbal communication and can convey emotions.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe9c"
+  },
+  "category": "null",
+  "section": "Communication Skills",
+  "question": "How can an entrepreneur improve their public speaking skills?",
+  "options": {
+    "a": "By avoiding public speaking opportunities.",
+    "b": "By practicing regularly and seeking feedback.",
+    "c": "By speaking quickly to get through presentations.",
+    "d": "By memorizing entire speeches."
+  },
+  "answer": "By practicing regularly and seeking feedback.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe9d"
+  },
+  "category": "null",
+  "section": "Problem-Solving and Critical Thinking",
+  "question": "What is the first step in effective problem-solving?",
+  "options": {
+    "a": "Implementing a solution immediately.",
+    "b": "Identifying and clearly defining the problem.",
+    "c": "Ignoring the problem.",
+    "d": "Delegating the problem to others."
+  },
+  "answer": "Identifying and clearly defining the problem.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe9f"
+  },
+  "category": "null",
+  "section": "Problem-Solving and Critical Thinking",
+  "question": "Which technique can help in generating creative solutions to a problem?",
+  "options": {
+    "a": "Limiting options.",
+    "b": "Brainstorming with a diverse group.",
+    "c": "Sticking to conventional methods.",
+    "d": "Avoiding feedback."
+  },
+  "answer": "Brainstorming with a diverse group.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbea2"
+  },
+  "category": "null",
+  "section": "Time Management",
+  "question": "Which tool can assist with time management?",
+  "options": {
+    "a": "Social media.",
+    "b": "A time tracking app.",
+    "c": "Television.",
+    "d": "Random task lists."
+  },
+  "answer": "A time tracking app.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbea3"
+  },
+  "category": "null",
+  "section": "Emotional Intelligence",
+  "question": "What is a key component of emotional intelligence?",
+  "options": {
+    "a": "Suppressing emotions.",
+    "b": "Understanding and managing one's own emotions.",
+    "c": "Ignoring others' emotions.",
+    "d": "Avoiding difficult conversations."
+  },
+  "answer": "Understanding and managing one's own emotions.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbea5"
+  },
+  "category": "null",
+  "section": "Emotional Intelligence",
+  "question": "Why is emotional intelligence important in leadership?",
+  "options": {
+    "a": "It complicates decision-making.",
+    "b": "It helps in building strong relationships and managing teams effectively.",
+    "c": "It reduces efficiency.",
+    "d": "It is only useful for personal life."
+  },
+  "answer": "It helps in building strong relationships and managing teams effectively.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbeac"
+  },
+  "category": "null",
+  "section": "Decision-Making",
+  "question": "What is a key factor in making effective decisions?",
+  "options": {
+    "a": "Relying solely on intuition.",
+    "b": "Gathering relevant information and analyzing options.",
+    "c": "Making impulsive choices.",
+    "d": "Avoiding input from others."
+  },
+  "answer": "Gathering relevant information and analyzing options.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe5f"
+  },
+  "category": "null",
+  "section": "Financial Management",
+  "question": "Which financial statement shows a company's profitability over a specific period?",
+  "options": {
+    "a": "Balance Sheet.",
+    "b": "Cash Flow Statement.",
+    "c": "Income Statement.",
+    "d": "Equity Statement."
+  },
+  "answer": "Income Statement.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe61"
+  },
+  "category": "null",
+  "section": "Marketing and Sales",
+  "question": "Which of the following best describes a value proposition?",
+  "options": {
+    "a": "A detailed description of the product.",
+    "b": "The unique benefits and value that a product or service offers to customers.",
+    "c": "The price point of a product or service.",
+    "d": "The company’s mission statement."
+  },
+  "answer": "The unique benefits and value that a product or service offers to customers.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe63"
+  },
+  "category": "null",
+  "section": "Leadership and Team Management",
+  "question": "Which leadership style is often most effective for start-up founders?",
+  "options": {
+    "a": "Autocratic.",
+    "b": "Democratic.",
+    "c": "Laissez-faire.",
+    "d": "Transformational."
+  },
+  "answer": "Transformational.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.581Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe6a"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What is a common characteristic of a viable business idea?",
+  "options": {
+    "a": "It targets a very niche market.",
+    "b": "It addresses a clear need or problem.",
+    "c": "It is based on a hobby.",
+    "d": "It requires no investment."
+  },
+  "answer": "It addresses a clear need or problem.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe70"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What is bootstrapping in entrepreneurship?",
+  "options": {
+    "a": "Using personal savings and revenue to fund the business.",
+    "b": "Seeking venture capital.",
+    "c": "Applying for bank loans.",
+    "d": "Selling equity in the business."
+  },
+  "answer": "Using personal savings and revenue to fund the business.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe75"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What is an effective sales tactic for a start-up?",
+  "options": {
+    "a": "Hard selling techniques.",
+    "b": "Building relationships and trust with customers.",
+    "c": "Offering significant discounts.",
+    "d": "Ignoring customer feedback."
+  },
+  "answer": "Building relationships and trust with customers.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe77"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "How can an entrepreneur foster a positive company culture?",
+  "options": {
+    "a": "By enforcing strict rules.",
+    "b": "By promoting open communication and teamwork.",
+    "c": "By minimizing employee benefits.",
+    "d": "By focusing solely on individual performance."
+  },
+  "answer": "By promoting open communication and teamwork.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe8a"
+  },
+  "category": "null",
+  "section": "Time Management",
+  "question": "What is the benefit of prioritizing tasks?",
+  "options": {
+    "a": "It increases stress.",
+    "b": "It ensures the most important tasks are completed first.",
+    "c": "It wastes time.",
+    "d": "It reduces productivity."
+  },
+  "answer": "It ensures the most important tasks are completed first.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe8b"
+  },
+  "category": "null",
+  "section": "Time Management",
+  "question": "How can entrepreneurs manage their time effectively?",
+  "options": {
+    "a": "By multitasking frequently.",
+    "b": "By setting clear goals and deadlines.",
+    "c": "By avoiding scheduling.",
+    "d": "By working without breaks."
+  },
+  "answer": "By setting clear goals and deadlines.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe8c"
+  },
+  "category": "null",
+  "section": "Time Management",
+  "question": "Which tool can assist with time management?",
+  "options": {
+    "a": "Social media.",
+    "b": "A time tracking app.",
+    "c": "Television.",
+    "d": "Random task lists."
+  },
+  "answer": "A time tracking app.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe8f"
+  },
+  "category": "null",
+  "section": "Emotional Intelligence",
+  "question": "Why is emotional intelligence important in leadership?",
+  "options": {
+    "a": "It complicates decision-making.",
+    "b": "It helps in building strong relationships and managing teams effectively.",
+    "c": "It reduces efficiency.",
+    "d": "It is only useful for personal life."
+  },
+  "answer": "It helps in building strong relationships and managing teams effectively.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe90"
+  },
+  "category": "null",
+  "section": "Adaptability and Flexibility",
+  "question": "Why is adaptability crucial for entrepreneurs?",
+  "options": {
+    "a": "It allows them to resist change.",
+    "b": "It helps them respond effectively to new challenges and opportunities.",
+    "c": "It limits their growth.",
+    "d": "It simplifies their work."
+  },
+  "answer": "It helps them respond effectively to new challenges and opportunities.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe95"
+  },
+  "category": "null",
+  "section": "Networking and Relationship Building",
+  "question": "How can entrepreneurs expand their professional network?",
+  "options": {
+    "a": "By attending industry events and engaging on professional social platforms.",
+    "b": "By staying isolated.",
+    "c": "By avoiding new connections.",
+    "d": "By focusing only on existing relationships."
+  },
+  "answer": "By attending industry events and engaging on professional social platforms.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe99"
+  },
+  "category": "null",
+  "section": "Ethical and Social Responsibility",
+  "question": "What should be a guiding principle for an entrepreneur in making ethical decisions?",
+  "options": {
+    "a": "Maximizing profits at all costs.",
+    "b": "Considering the long-term impact on stakeholders and society.",
+    "c": "Focusing only on personal gains.",
+    "d": "Ignoring ethical considerations."
+  },
+  "answer": "Considering the long-term impact on stakeholders and society.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbea0"
+  },
+  "category": "null",
+  "section": "Time Management",
+  "question": "What is the benefit of prioritizing tasks?",
+  "options": {
+    "a": "It increases stress.",
+    "b": "It ensures the most important tasks are completed first.",
+    "c": "It wastes time.",
+    "d": "It reduces productivity."
+  },
+  "answer": "It ensures the most important tasks are completed first.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbea6"
+  },
+  "category": "null",
+  "section": "Adaptability and Flexibility",
+  "question": "Why is adaptability crucial for entrepreneurs?",
+  "options": {
+    "a": "It allows them to resist change.",
+    "b": "It helps them respond effectively to new challenges and opportunities.",
+    "c": "It limits their growth.",
+    "d": "It simplifies their work."
+  },
+  "answer": "It helps them respond effectively to new challenges and opportunities.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbeaa"
+  },
+  "category": "null",
+  "section": "Networking and Relationship Building",
+  "question": "Which approach is most effective in building professional relationships?",
+  "options": {
+    "a": "Focusing solely on one's own needs.",
+    "b": "Providing value and support to others.",
+    "c": "Avoiding follow-ups.",
+    "d": "Demanding favors upfront."
+  },
+  "answer": "Providing value and support to others.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbeae"
+  },
+  "category": "null",
+  "section": "Decision-Making",
+  "question": "What is a common mistake to avoid in decision-making?",
+  "options": {
+    "a": "Seeking diverse perspectives.",
+    "b": "Overlooking potential risks.",
+    "c": "Using data and analysis.",
+    "d": "Taking calculated risks."
+  },
+  "answer": "Overlooking potential risks.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe65"
+  },
+  "category": "null",
+  "section": "Risk Management and Adaptability",
+  "question": "How should an entrepreneur handle business risks?",
+  "options": {
+    "a": "Avoid risks entirely.",
+    "b": "Take all risks without consideration.",
+    "c": "Assess and manage risks through planning and mitigation strategies.",
+    "d": "Delegate risk management to others."
+  },
+  "answer": "Assess and manage risks through planning and mitigation strategies.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe66"
+  },
+  "category": "null",
+  "section": "Risk Management and Adaptability",
+  "question": "What is a sign of a resilient entrepreneur?",
+  "options": {
+    "a": "Ignoring setbacks.",
+    "b": "Quickly abandoning ideas that encounter obstacles.",
+    "c": "Learning from failures and adapting strategies.",
+    "d": "Sticking to the original plan no matter what."
+  },
+  "answer": "Learning from failures and adapting strategies.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe6f"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What should be included in a business model?",
+  "options": {
+    "a": "Only the revenue streams.",
+    "b": "The overall strategy for creating, delivering, and capturing value.",
+    "c": "The product design.",
+    "d": "The company logo."
+  },
+  "answer": "The overall strategy for creating, delivering, and capturing value.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe72"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "Why is it important for entrepreneurs to understand their break-even point?",
+  "options": {
+    "a": "To set product prices.",
+    "b": "To know when the business will start making a profit.",
+    "c": "To calculate employee salaries.",
+    "d": "To determine marketing budgets."
+  },
+  "answer": "To know when the business will start making a profit.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe74"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "Which marketing strategy focuses on creating and sharing valuable content to attract customers?",
+  "options": {
+    "a": "Direct marketing.",
+    "b": "Content marketing.",
+    "c": "Telemarketing.",
+    "d": "Paid advertising."
+  },
+  "answer": "Content marketing.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe78"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What is a key benefit of having a diverse team?",
+  "options": {
+    "a": "Faster decision-making.",
+    "b": "A variety of perspectives and ideas.",
+    "c": "Simplified management.",
+    "d": "Uniform thinking."
+  },
+  "answer": "A variety of perspectives and ideas.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe7b"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What is a contingency plan?",
+  "options": {
+    "a": "A primary business strategy.",
+    "b": "A plan for unexpected events or emergencies.",
+    "c": "A financial forecast.",
+    "d": "A marketing campaign."
+  },
+  "answer": "A plan for unexpected events or emergencies.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe7e"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What role does creativity play in entrepreneurship?",
+  "options": {
+    "a": "It is not important.",
+    "b": "It helps in developing unique solutions and differentiating the business.",
+    "c": "It complicates the business process.",
+    "d": "It is only useful for marketing."
+  },
+  "answer": "It helps in developing unique solutions and differentiating the business.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe7f"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "How can an entrepreneur contribute to social responsibility?",
+  "options": {
+    "a": "Focusing solely on maximizing profits.",
+    "b": "Ignoring environmental concerns.",
+    "c": "Implementing sustainable practices and supporting community initiatives.",
+    "d": "Delegating social responsibility tasks to other businesses."
+  },
+  "answer": "Implementing sustainable practices and supporting community initiatives.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe81"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "Why is transparency important in business ethics?",
+  "options": {
+    "a": "It increases operational costs.",
+    "b": "It builds trust with customers, employees, and stakeholders.",
+    "c": "It reduces competition.",
+    "d": "It limits business growth."
+  },
+  "answer": "It builds trust with customers, employees, and stakeholders.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.588Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.588Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe82"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What is the impact of unethical behavior in business?",
+  "options": {
+    "a": "It can enhance short-term profits.",
+    "b": "It can lead to legal issues, reputational damage, and loss of customer trust.",
+    "c": "It always goes unnoticed.",
+    "d": "It simplifies business operations."
+  },
+  "answer": "It can lead to legal issues, reputational damage, and loss of customer trust.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.588Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.588Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe83"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What should be a guiding principle for an entrepreneur in making ethical decisions?",
+  "options": {
+    "a": "Maximizing profits at all costs.",
+    "b": "Considering the long-term impact on stakeholders and society.",
+    "c": "Focusing only on personal gains.",
+    "d": "Ignoring ethical considerations."
+  },
+  "answer": "Considering the long-term impact on stakeholders and society.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.588Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.588Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe84"
+  },
+  "category": "null",
+  "section": "Communication Skills",
+  "question": "Which of the following is a key aspect of effective communication?",
+  "options": {
+    "a": "Speaking more than listening.",
+    "b": "Listening actively and providing clear feedback.",
+    "c": "Using complex jargon.",
+    "d": "Interrupting frequently to assert dominance."
+  },
+  "answer": "Listening actively and providing clear feedback.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.589Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.589Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe86"
+  },
+  "category": "null",
+  "section": "Communication Skills",
+  "question": "How can an entrepreneur improve their public speaking skills?",
+  "options": {
+    "a": "By avoiding public speaking opportunities.",
+    "b": "By practicing regularly and seeking feedback.",
+    "c": "By speaking quickly to get through presentations.",
+    "d": "By memorizing entire speeches."
+  },
+  "answer": "By practicing regularly and seeking feedback.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.589Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.589Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe88"
+  },
+  "category": "null",
+  "section": "Problem-Solving and Critical Thinking",
+  "question": "Why is critical thinking important for entrepreneurs?",
+  "options": {
+    "a": "It slows down decision-making.",
+    "b": "It helps in making informed and effective decisions.",
+    "c": "It is only necessary for large businesses.",
+    "d": "It reduces creativity."
+  },
+  "answer": "It helps in making informed and effective decisions.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.589Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.589Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe89"
+  },
+  "category": "null",
+  "section": "Problem-Solving and Critical Thinking",
+  "question": "Which technique can help in generating creative solutions to a problem?",
+  "options": {
+    "a": "Limiting options.",
+    "b": "Brainstorming with a diverse group.",
+    "c": "Sticking to conventional methods.",
+    "d": "Avoiding feedback."
+  },
+  "answer": "Brainstorming with a diverse group.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe91"
+  },
+  "category": "null",
+  "section": "Adaptability and Flexibility",
+  "question": "What is a sign of an adaptable entrepreneur?",
+  "options": {
+    "a": "Sticking rigidly to the original plan.",
+    "b": "Being open to new ideas and willing to pivot when necessary.",
+    "c": "Avoiding risks.",
+    "d": "Ignoring feedback."
+  },
+  "answer": "Being open to new ideas and willing to pivot when necessary.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe92"
+  },
+  "category": "null",
+  "section": "Adaptability and Flexibility",
+  "question": "How can an entrepreneur cultivate adaptability?",
+  "options": {
+    "a": "By learning from diverse experiences and staying informed about industry trends.",
+    "b": "By avoiding new experiences.",
+    "c": "By focusing on a single strategy.",
+    "d": "By resisting change."
+  },
+  "answer": "By learning from diverse experiences and staying informed about industry trends.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe98"
+  },
+  "category": "null",
+  "section": "Ethical and Social Responsibility",
+  "question": "What is the impact of unethical behavior in business?",
+  "options": {
+    "a": "It can enhance short-term profits.",
+    "b": "It can lead to legal issues, reputational damage, and loss of customer trust.",
+    "c": "It always goes unnoticed.",
+    "d": "It simplifies business operations."
+  },
+  "answer": "It can lead to legal issues, reputational damage, and loss of customer trust.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe9e"
+  },
+  "category": "null",
+  "section": "Problem-Solving and Critical Thinking",
+  "question": "Why is critical thinking important for entrepreneurs?",
+  "options": {
+    "a": "It slows down decision-making.",
+    "b": "It helps in making informed and effective decisions.",
+    "c": "It is only necessary for large businesses.",
+    "d": "It reduces creativity."
+  },
+  "answer": "It helps in making informed and effective decisions.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbea8"
+  },
+  "category": "null",
+  "section": "Adaptability and Flexibility",
+  "question": "How can an entrepreneur cultivate adaptability?",
+  "options": {
+    "a": "By learning from diverse experiences and staying informed about industry trends.",
+    "b": "By avoiding new experiences.",
+    "c": "By focusing on a single strategy.",
+    "d": "By resisting change."
+  },
+  "answer": "By learning from diverse experiences and staying informed about industry trends.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbeaf"
+  },
+  "category": "null",
+  "section": "Conflict Resolution",
+  "question": "What is the first step in resolving a conflict?",
+  "options": {
+    "a": "Ignoring the conflict.",
+    "b": "Identifying the root cause of the conflict.",
+    "c": "Blaming others.",
+    "d": "Escalating the issue."
+  },
+  "answer": "Identifying the root cause of the conflict.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbeb0"
+  },
+  "category": "null",
+  "section": "Conflict Resolution",
+  "question": "How can entrepreneurs handle conflicts effectively?",
+  "options": {
+    "a": "By addressing them promptly and communicating openly.",
+    "b": "By avoiding confrontation.",
+    "c": "By imposing their decisions.",
+    "d": "By ignoring the parties involved."
+  },
+  "answer": "By addressing them promptly and communicating openly.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe5c"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What is a key characteristic of a business opportunity that is worth pursuing?",
+  "options": {
+    "a": "It is easy to implement.",
+    "b": "It has potential for high demand and profitability.",
+    "c": "It is completely unique.",
+    "d": "It requires minimal investment."
+  },
+  "answer": "It has potential for high demand and profitability.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.580Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.580Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe67"
+  },
+  "category": "null",
+  "section": "Innovation and Creativity",
+  "question": "What is the role of innovation in entrepreneurship?",
+  "options": {
+    "a": "It is optional and not crucial for business success.",
+    "b": "It is primarily for large companies.",
+    "c": "It drives business growth and helps maintain a competitive edge.",
+    "d": "It should only be pursued when there is no risk involved."
+  },
+  "answer": "It drives business growth and helps maintain a competitive edge.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.582Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe6e"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "What is the primary function of a SWOT analysis in business planning?",
+  "options": {
+    "a": "To identify strengths, weaknesses, opportunities, and threats.",
+    "b": "To develop marketing strategies.",
+    "c": "To analyze financial performance.",
+    "d": "To set pricing strategies."
+  },
+  "answer": "To identify strengths, weaknesses, opportunities, and threats.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe71"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "Which financial metric indicates the profitability of a business?",
+  "options": {
+    "a": "Current ratio.",
+    "b": "Gross profit margin.",
+    "c": "Inventory turnover.",
+    "d": "Debt-to-equity ratio."
+  },
+  "answer": "Gross profit margin.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe7a"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "Why is flexibility important for an entrepreneur?",
+  "options": {
+    "a": "It allows for spontaneous decisions.",
+    "b": "It helps in adapting to changing market conditions and customer needs.",
+    "c": "It reduces the need for planning.",
+    "d": "It eliminates risks."
+  },
+  "answer": "It helps in adapting to changing market conditions and customer needs.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe7c"
+  },
+  "category": "null",
+  "section": "Idea Generation and Opportunity Recognition",
+  "question": "How can an entrepreneur encourage innovation within their team?",
+  "options": {
+    "a": "By discouraging risk-taking.",
+    "b": "By promoting a culture of experimentation and learning from failures.",
+    "c": "By maintaining strict hierarchical structures.",
+    "d": "By focusing only on short-term goals."
+  },
+  "answer": "By promoting a culture of experimentation and learning from failures.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.587Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe87"
+  },
+  "category": "null",
+  "section": "Problem-Solving and Critical Thinking",
+  "question": "What is the first step in effective problem-solving?",
+  "options": {
+    "a": "Implementing a solution immediately.",
+    "b": "Identifying and clearly defining the problem.",
+    "c": "Ignoring the problem.",
+    "d": "Delegating the problem to others."
+  },
+  "answer": "Identifying and clearly defining the problem.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.589Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.589Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe8d"
+  },
+  "category": "null",
+  "section": "Emotional Intelligence",
+  "question": "What is a key component of emotional intelligence?",
+  "options": {
+    "a": "Suppressing emotions.",
+    "b": "Understanding and managing one's own emotions.",
+    "c": "Ignoring others' emotions.",
+    "d": "Avoiding difficult conversations."
+  },
+  "answer": "Understanding and managing one's own emotions.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe8e"
+  },
+  "category": "null",
+  "section": "Emotional Intelligence",
+  "question": "How can an entrepreneur develop empathy?",
+  "options": {
+    "a": "By focusing only on their own needs.",
+    "b": "By actively listening and understanding others' perspectives.",
+    "c": "By avoiding social interactions.",
+    "d": "By dismissing others' feelings."
+  },
+  "answer": "By actively listening and understanding others' perspectives.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.590Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe94"
+  },
+  "category": "null",
+  "section": "Networking and Relationship Building",
+  "question": "Which approach is most effective in building professional relationships?",
+  "options": {
+    "a": "Focusing solely on one's own needs.",
+    "b": "Providing value and support to others.",
+    "c": "Avoiding follow-ups.",
+    "d": "Demanding favors upfront."
+  },
+  "answer": "Providing value and support to others.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe96"
+  },
+  "category": "null",
+  "section": "Ethical and Social Responsibility",
+  "question": "How can a business demonstrate corporate social responsibility (CSR)?",
+  "options": {
+    "a": "By focusing solely on profit maximization.",
+    "b": "By engaging in environmentally sustainable practices and supporting community initiatives.",
+    "c": "By minimizing employee wages.",
+    "d": "By ignoring social issues."
+  },
+  "answer": "By engaging in environmentally sustainable practices and supporting community initiatives.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbe97"
+  },
+  "category": "null",
+  "section": "Ethical and Social Responsibility",
+  "question": "Why is transparency important in business ethics?",
+  "options": {
+    "a": "It increases operational costs.",
+    "b": "It builds trust with customers, employees, and stakeholders.",
+    "c": "It reduces competition.",
+    "d": "It limits business growth."
+  },
+  "answer": "It builds trust with customers, employees, and stakeholders.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbea1"
+  },
+  "category": "null",
+  "section": "Time Management",
+  "question": "How can entrepreneurs manage their time effectively?",
+  "options": {
+    "a": "By multitasking frequently.",
+    "b": "By setting clear goals and deadlines.",
+    "c": "By avoiding scheduling.",
+    "d": "By working without breaks."
+  },
+  "answer": "By setting clear goals and deadlines.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbea4"
+  },
+  "category": "null",
+  "section": "Emotional Intelligence",
+  "question": "How can an entrepreneur develop empathy?",
+  "options": {
+    "a": "By focusing only on their own needs.",
+    "b": "By actively listening and understanding others' perspectives.",
+    "c": "By avoiding social interactions.",
+    "d": "By dismissing others' feelings."
+  },
+  "answer": "By actively listening and understanding others' perspectives.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbea7"
+  },
+  "category": "null",
+  "section": "Adaptability and Flexibility",
+  "question": "What is a sign of an adaptable entrepreneur?",
+  "options": {
+    "a": "Sticking rigidly to the original plan.",
+    "b": "Being open to new ideas and willing to pivot when necessary.",
+    "c": "Avoiding risks.",
+    "d": "Ignoring feedback."
+  },
+  "answer": "Being open to new ideas and willing to pivot when necessary.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.592Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbea9"
+  },
+  "category": "null",
+  "section": "Networking and Relationship Building",
+  "question": "What is the primary benefit of networking for entrepreneurs?",
+  "options": {
+    "a": "It increases competition.",
+    "b": "It creates opportunities for collaboration and business growth.",
+    "c": "It wastes time.",
+    "d": "It is only useful for socializing."
+  },
+  "answer": "It creates opportunities for collaboration and business growth.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbeab"
+  },
+  "category": "null",
+  "section": "Networking and Relationship Building",
+  "question": "How can entrepreneurs expand their professional network?",
+  "options": {
+    "a": "By attending industry events and engaging on professional social platforms.",
+    "b": "By staying isolated.",
+    "c": "By avoiding new connections.",
+    "d": "By focusing only on existing relationships."
+  },
+  "answer": "By attending industry events and engaging on professional social platforms.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbead"
+  },
+  "category": "null",
+  "section": "Decision-Making",
+  "question": "Why is it important to consider both short-term and long-term impacts in decision-making?",
+  "options": {
+    "a": "It complicates the process.",
+    "b": "It ensures sustainable business growth and success.",
+    "c": "It is unnecessary.",
+    "d": "It delays action."
+  },
+  "answer": "It ensures sustainable business growth and success.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0d9b2d2fc14ddb79bbeb1"
+  },
+  "category": "null",
+  "section": "Conflict Resolution",
+  "question": "What is a benefit of resolving conflicts constructively?",
+  "options": {
+    "a": "It increases team friction.",
+    "b": "It fosters a collaborative and productive work environment.",
+    "c": "It reduces team morale.",
+    "d": "It is time-consuming."
+  },
+  "answer": "It fosters a collaborative and productive work environment.",
+  "point": 1,
+  "createdAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-10T23:43:46.593Z"
+  }
+}]

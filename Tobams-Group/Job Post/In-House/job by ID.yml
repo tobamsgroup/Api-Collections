@@ -1,11 +1,15 @@
 info:
   name: job by ID
   type: http
-  seq: 4
+  seq: 2
 
 http:
   method: DELETE
-  url: "{{BASE}}/job_in_house/67f0c9ddc2324c0dfcf5563d"
+  url: "{{BASE}}/job_in_house/:jobID"
+  params:
+    - name: jobID
+      value: 67f0c9ddc2324c0dfcf5563d
+      type: path
   auth:
     type: bearer
     token: "{{"
@@ -15,6 +19,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: success
