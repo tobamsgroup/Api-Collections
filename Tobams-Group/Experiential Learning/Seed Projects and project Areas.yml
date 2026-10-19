@@ -1,0 +1,20 @@
+info:
+  name: Seed Projects and project Areas
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE}}/experiential-learning/catalogue/seed"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
