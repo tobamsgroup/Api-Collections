@@ -10,8 +10,102 @@ http:
     type: bearer
     token: "{{access}}"
 
+docs: |-
+  Current kid's profile (Kid token). Also returns `guardianSubscription`.
+
+  Includes:
+  - `assignedBooks`: one entry per assigned Book (category, e.g. Think AI). `accessType` "full" = series assigned (counts towards the plan's booksAllowed), "chapter" = individual chapters only (free plan).
+  - `assignmentEligibility`: whether more content can be assigned, using the same rules as POST /kid/course/assign. Check `canAssign` and show `reason` when it is false. `chaptersAllowed`/`chaptersRemaining` are null when unlimited (paid plans).
+
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Current kid profile
+    request:
+      url: "{{base_url}}/kid/me"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+                "statusCode": 200,
+                "message": "Current kid profile fetched successfully",
+                "timestamp": "2026-10-19T10:00:00.000Z",
+                "path": "/api/v1/kid/me",
+                "service": "RL4KIDS",
+                "version": "1.0.0",
+                "data": {
+                  "_id": "6acc6121a57282c78ac098ad",
+                  "id": "6acc6121a57282c78ac098ad",
+                  "username": "michael",
+                  "name": "King Michael",
+                  "gender": "Male",
+                  "age": 7,
+                  "preferredLearningTopics": ["Think AI"],
+                  "role": "kid",
+                  "mood": "",
+                  "guardianId": "6ac668680038799f61f0fa1d",
+                  "picture": "",
+                  "totalXp": 0,
+                  "readingSettings": { "voice": "adult-female-us" },
+                  "freeTrialExpiresAt": "2026-11-11T04:25:05.228Z",
+                  "subscription": {
+                    "plan": "free",
+                    "status": "active",
+                    "stripeSubscriptionId": null,
+                    "stripePriceId": null,
+                    "currentPeriodEnd": "2026-11-11T04:25:05.228Z",
+                    "cancelAtPeriodEnd": false,
+                    "cancellationReason": null,
+                    "provider": null,
+                    "appleOriginalTransactionId": null,
+                    "appleProductId": null,
+                    "appleSlot": null,
+                    "appleAppAccountToken": null
+                  },
+                  "earnedBadges": [],
+                  "createdAt": "2026-10-12T04:25:05.240Z",
+                  "updatedAt": "2026-10-12T04:25:05.240Z",
+                  "guardianSubscription": {
+                    "stripeCustomerId": null,
+                    "noOfAllowedChildren": 5
+                  },
+                  "assignedBooks": [
+                    {
+                      "courseId": "6acc6200a57282c78ac09901",
+                      "bookId": "6836c8b01607a7982ff81a01",
+                      "title": "Think AI",
+                      "image": "https://res.cloudinary.com/demo/think-ai.png",
+                      "accessType": "chapter",
+                      "seriesCount": 0,
+                      "chapterCount": 1,
+                      "progressPercentage": 0,
+                      "status": "not started"
+                    }
+                  ],
+                  "assignmentEligibility": {
+                    "plan": "free",
+                    "isFreePlan": true,
+                    "canAssign": false,
+                    "canAssignBooks": false,
+                    "canAssignChapters": false,
+                    "booksAllowed": 0,
+                    "booksAssigned": 0,
+                    "booksRemaining": 0,
+                    "chaptersAllowed": 1,
+                    "chaptersAssigned": 1,
+                    "chaptersRemaining": 0,
+                    "reason": "Free plan allows 1 chapter(s). Subscribe to assign more."
+                  }
+                }
+              }

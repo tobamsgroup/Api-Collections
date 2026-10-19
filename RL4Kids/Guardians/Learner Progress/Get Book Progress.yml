@@ -1,0 +1,250 @@
+info:
+  name: Get Book Progress
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/guardian/learners/{{kid_id}}/books/{{series_id}}"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Book Progress screen for one book (series). Parent/Teacher only. Returns 404 if the book isn't assigned to the learner.
+
+  - `chapters[].status`: completed | in_progress | not_started | not_assigned. A chapter counts as completed when the kid reaches its last page.
+  - `exercises.items[].status`: completed | in_progress | not_started | locked | not_assigned. An exercise unlocks once its chapter is read.
+  - `stats.activities`: passed chapter quizzes out of 2 (mid + end) per assigned chapter.
+  - `activityHistory`: the latest 20 events for this book.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Book progress
+    request:
+      url: "{{base_url}}/guardian/learners/6acc6121a57282c78ac098ad/books/6836c8b01607a7982ff81e01"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Book progress fetched successfully",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/guardian/learners/6acc6121a57282c78ac098ad/books/6836c8b01607a7982ff81e01",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "book": {
+                "seriesId": "6836c8b01607a7982ff81e01",
+                "title": "Book 1: Our Amazing Planet",
+                "seriesIndex": 1,
+                "image": "https://res.cloudinary.com/demo/think-ai-1.png",
+                "category": { "categoryId": "6836c8b01607a7982ff81a01", "title": "Think AI" },
+                "accessType": "full",
+                "status": "in_progress",
+                "progressPercentage": 45,
+                "currentChapter": {
+                  "chapterId": "6836c8b01607a7982ff81c04",
+                  "position": 4,
+                  "title": "Smart Helpers"
+                },
+                "totalChapters": 6,
+                "assignedChapters": 5,
+                "chaptersCompleted": 3,
+                "timeSpentSeconds": 7020,
+                "activities": { "completed": 5, "total": 10 },
+                "lastReadAt": "2026-10-19T09:40:00.000Z",
+                "completedAt": null
+              },
+              "stats": {
+                "chaptersCompleted": 3,
+                "totalChapters": 6,
+                "timeSpentSeconds": 7020,
+                "workbookExercises": { "completed": 2, "total": 6 },
+                "activities": { "completed": 5, "total": 10 }
+              },
+              "chapters": [
+                {
+                  "chapterId": "6836c8b01607a7982ff81c01",
+                  "position": 1,
+                  "title": "What Is a Computer?",
+                  "totalPages": 12,
+                  "timeSpentSeconds": 1800,
+                  "status": "completed",
+                  "isAssigned": true,
+                  "currentPage": 12,
+                  "progressPercentage": 100,
+                  "completedAt": "2026-10-10T10:00:00.000Z",
+                  "quizzes": [
+                    {
+                      "quizType": "mid",
+                      "passed": true,
+                      "score": 5,
+                      "totalScore": 5,
+                      "attempts": 1,
+                      "lastAttemptAt": "2026-10-09T10:00:00.000Z"
+                    },
+                    {
+                      "quizType": "end",
+                      "passed": true,
+                      "score": 4,
+                      "totalScore": 5,
+                      "attempts": 2,
+                      "lastAttemptAt": "2026-10-10T11:00:00.000Z"
+                    }
+                  ]
+                },
+                {
+                  "chapterId": "6836c8b01607a7982ff81c04",
+                  "position": 4,
+                  "title": "Smart Helpers",
+                  "totalPages": 10,
+                  "timeSpentSeconds": 420,
+                  "status": "in_progress",
+                  "isAssigned": true,
+                  "currentPage": 6,
+                  "progressPercentage": 50,
+                  "completedAt": null,
+                  "quizzes": []
+                },
+                {
+                  "chapterId": "6836c8b01607a7982ff81c05",
+                  "position": 5,
+                  "title": "Robots Around Us",
+                  "totalPages": 10,
+                  "timeSpentSeconds": 0,
+                  "status": "not_started",
+                  "isAssigned": true,
+                  "currentPage": 1,
+                  "progressPercentage": 0,
+                  "completedAt": null,
+                  "quizzes": []
+                },
+                {
+                  "chapterId": "6836c8b01607a7982ff81c06",
+                  "position": 6,
+                  "title": "How Machines Learn",
+                  "totalPages": 11,
+                  "timeSpentSeconds": 0,
+                  "status": "not_assigned",
+                  "isAssigned": false,
+                  "currentPage": 0,
+                  "progressPercentage": 0,
+                  "completedAt": null,
+                  "quizzes": []
+                }
+              ],
+              "exercises": {
+                "available": true,
+                "workbookId": "6507f1f77bcf86cd799439099",
+                "workbookName": "Our Amazing Planet Workbook",
+                "total": 6,
+                "unlocked": 3,
+                "completed": 2,
+                "items": [
+                  {
+                    "chapterId": "6836c8b01607a7982ff81c01",
+                    "position": 1,
+                    "title": "What Is a Computer?",
+                    "pageStart": 1,
+                    "pageEnd": 3,
+                    "status": "completed",
+                    "isUnlocked": true
+                  },
+                  {
+                    "chapterId": "6836c8b01607a7982ff81c03",
+                    "position": 3,
+                    "title": "Data Everywhere",
+                    "pageStart": 7,
+                    "pageEnd": 9,
+                    "status": "not_started",
+                    "isUnlocked": true
+                  },
+                  {
+                    "chapterId": "6836c8b01607a7982ff81c04",
+                    "position": 4,
+                    "title": "Smart Helpers",
+                    "pageStart": 10,
+                    "pageEnd": 12,
+                    "status": "locked",
+                    "isUnlocked": false
+                  },
+                  {
+                    "chapterId": "6836c8b01607a7982ff81c06",
+                    "position": 6,
+                    "title": "How Machines Learn",
+                    "pageStart": 16,
+                    "pageEnd": 18,
+                    "status": "not_assigned",
+                    "isUnlocked": false
+                  }
+                ]
+              },
+              "activityHistory": [
+                {
+                  "type": "workbook_exercise",
+                  "title": "Completed Workbook Exercise",
+                  "description": "Chapter 2: Inside the Machine",
+                  "category": "Think AI",
+                  "seriesId": "6836c8b01607a7982ff81e01",
+                  "seriesTitle": "Book 1: Our Amazing Planet",
+                  "chapterId": "6836c8b01607a7982ff81c02",
+                  "occurredAt": "2026-10-19T09:20:00.000Z"
+                },
+                {
+                  "type": "video_lesson",
+                  "title": "Chapter 1: Video Lesson",
+                  "description": "Meet the Computer",
+                  "category": "Think AI",
+                  "seriesId": "6836c8b01607a7982ff81e01",
+                  "seriesTitle": "Book 1: Our Amazing Planet",
+                  "chapterId": "6836c8b01607a7982ff81c01",
+                  "occurredAt": "2026-10-18T09:00:00.000Z"
+                },
+                {
+                  "type": "quiz",
+                  "title": "Completed End-of-Chapter Quiz",
+                  "description": "Chapter 1: What Is a Computer?",
+                  "category": "Think AI",
+                  "seriesId": "6836c8b01607a7982ff81e01",
+                  "seriesTitle": "Book 1: Our Amazing Planet",
+                  "chapterId": "6836c8b01607a7982ff81c01",
+                  "occurredAt": "2026-10-10T11:00:00.000Z",
+                  "meta": { "score": 4, "totalScore": 5, "passed": true }
+                }
+              ]
+            }
+          }
+  - name: Book not assigned to learner
+    request:
+      url: "{{base_url}}/guardian/learners/6acc6121a57282c78ac098ad/books/6836c8b01607a7982ff81e99"
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 404,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/guardian/learners/6acc6121a57282c78ac098ad/books/6836c8b01607a7982ff81e99",
+            "message": "This book is not assigned to the learner",
+            "error": "Not Found",
+            "service": "RL4KIDS"
+          }

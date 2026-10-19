@@ -1,0 +1,124 @@
+info:
+  name: Record Reading Time
+  type: http
+  seq: 15
+
+http:
+  method: POST
+  url: "{{base_url}}/kid/reading-time"
+  body:
+    type: json
+    data: |-
+      {
+        "chapterId": "{{chapter_id}}",
+        "seconds": 30,
+        "date": "2026-10-19"
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Reading-time heartbeat (Kid token only). Send it about every 30s while a chapter is open, and once when the reader is backgrounded or closed. It powers "Reading Time", "Total Time Spent" and the streak on the guardian screens.
+
+  - `chapterId`: must be a chapter assigned to the kid (403 otherwise)
+  - `seconds`: 1 to 120 seconds read since the last heartbeat
+  - `date` (optional): the kid's local day as YYYY-MM-DD, so streaks follow their time zone. Falls back to the UTC date if missing or more than a day off.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Heartbeat recorded
+    request:
+      url: "{{base_url}}/kid/reading-time"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "chapterId": "6836c8b01607a7982ff81c04",
+            "seconds": 30,
+            "date": "2026-10-19"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Reading time recorded",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/reading-time",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "chapterId": "6836c8b01607a7982ff81c04",
+              "date": "2026-10-19",
+              "secondsToday": 420
+            }
+          }
+  - name: Chapter not assigned
+    request:
+      url: "{{base_url}}/kid/reading-time"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "chapterId": "6836c8b01607a7982ff81c06",
+            "seconds": 30
+          }
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 403,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/reading-time",
+            "message": "Chapter is not assigned to this learner",
+            "error": "Forbidden",
+            "service": "RL4KIDS"
+          }
+  - name: Seconds out of range
+    request:
+      url: "{{base_url}}/kid/reading-time"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "chapterId": "6836c8b01607a7982ff81c04",
+            "seconds": 600
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/reading-time",
+            "message": ["seconds must not be greater than 120"],
+            "error": "Bad Request",
+            "service": "RL4KIDS"
+          }

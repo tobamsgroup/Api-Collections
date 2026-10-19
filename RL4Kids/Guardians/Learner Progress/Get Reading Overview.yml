@@ -1,0 +1,200 @@
+info:
+  name: Get Reading Overview
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/guardian/learners/{{kid_id}}/reading-overview"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Learning Overview screen (Read Progress tab). Parent/Teacher only; 404 if the kid is not on the caller's account.
+
+  - A "book" in the UI is a Series; `category` is the Book (e.g. Think AI).
+  - `subscription.learningPaused` drives the "Learning is paused" banner.
+  - `stats.streakDays` = consecutive days with reading time (feeds both Learning Streak and Reading Streak tiles).
+  - `assignedBooks.items` and `exploreMore` are capped at 10; use "Get Assigned Books" for the full list.
+  - `recentActivity` holds the latest 6 events. Types: chapter_completed, book_completed, quiz, workbook_exercise, game, video_lesson, lesson_activity.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Reading overview
+    request:
+      url: "{{base_url}}/guardian/learners/6acc6121a57282c78ac098ad/reading-overview"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Reading overview fetched successfully",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/guardian/learners/6acc6121a57282c78ac098ad/reading-overview",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "learner": {
+                "_id": "6acc6121a57282c78ac098ad",
+                "name": "Alexander Bob",
+                "username": "alexbob1",
+                "age": 12,
+                "gender": "Male",
+                "picture": "",
+                "learningInterests": ["Think Sustainability"],
+                "totalXp": 120
+              },
+              "subscription": {
+                "plan": "starter",
+                "planName": "Starter",
+                "status": "active",
+                "currentPeriodEnd": "2026-11-11T04:25:05.228Z",
+                "freeTrialExpiresAt": "2026-11-11T04:25:05.228Z",
+                "learningPaused": false
+              },
+              "stats": {
+                "booksAssigned": 3,
+                "badgesEarned": 4,
+                "streakDays": 10,
+                "booksRead": 1,
+                "booksInProgress": 1,
+                "readingTimeSeconds": 23400
+              },
+              "currentlyReading": {
+                "seriesId": "6836c8b01607a7982ff81e01",
+                "title": "Book 1: Our Amazing Planet",
+                "seriesIndex": 1,
+                "image": "https://res.cloudinary.com/demo/think-ai-1.png",
+                "category": { "categoryId": "6836c8b01607a7982ff81a01", "title": "Think AI" },
+                "accessType": "full",
+                "status": "in_progress",
+                "progressPercentage": 80,
+                "currentChapter": {
+                  "chapterId": "6836c8b01607a7982ff81c06",
+                  "position": 6,
+                  "title": "How Machines Learn"
+                },
+                "totalChapters": 8,
+                "assignedChapters": 8,
+                "chaptersCompleted": 5,
+                "timeSpentSeconds": 7020,
+                "activities": { "completed": 10, "total": 16 },
+                "lastReadAt": "2026-10-19T09:40:00.000Z",
+                "completedAt": null
+              },
+              "recommendedNextRead": {
+                "seriesId": "6836c8b01607a7982ff81e05",
+                "title": "Series 1: What Is AI",
+                "seriesIndex": 2,
+                "image": "https://res.cloudinary.com/demo/think-ai-2.png",
+                "category": { "categoryId": "6836c8b01607a7982ff81a01", "title": "Think AI" },
+                "totalChapters": 8,
+                "isAssigned": false
+              },
+              "assignedBooks": {
+                "total": 3,
+                "items": [
+                  {
+                    "seriesId": "6836c8b01607a7982ff81e01",
+                    "title": "Book 1: Our Amazing Planet",
+                    "seriesIndex": 1,
+                    "image": "https://res.cloudinary.com/demo/think-ai-1.png",
+                    "category": { "categoryId": "6836c8b01607a7982ff81a01", "title": "Think AI" },
+                    "accessType": "full",
+                    "status": "in_progress",
+                    "progressPercentage": 80,
+                    "currentChapter": {
+                      "chapterId": "6836c8b01607a7982ff81c06",
+                      "position": 6,
+                      "title": "How Machines Learn"
+                    },
+                    "totalChapters": 8,
+                    "assignedChapters": 8,
+                    "chaptersCompleted": 5,
+                    "timeSpentSeconds": 7020,
+                    "activities": { "completed": 10, "total": 16 },
+                    "lastReadAt": "2026-10-19T09:40:00.000Z",
+                    "completedAt": null
+                  }
+                ]
+              },
+              "exploreMore": [
+                {
+                  "seriesId": "6836c8b01607a7982ff81e09",
+                  "title": "Book 1: Eco Explorers",
+                  "seriesIndex": 1,
+                  "image": "https://res.cloudinary.com/demo/think-sustainability-1.png",
+                  "category": { "categoryId": "6836c8b01607a7982ff81a02", "title": "Think Sustainability" },
+                  "totalChapters": 8,
+                  "matchesInterest": true
+                }
+              ],
+              "recentActivity": [
+                {
+                  "type": "quiz",
+                  "title": "Completed End-of-Chapter Quiz",
+                  "description": "Chapter 5: Smart Helpers",
+                  "category": "Think AI",
+                  "seriesId": "6836c8b01607a7982ff81e01",
+                  "seriesTitle": "Book 1: Our Amazing Planet",
+                  "chapterId": "6836c8b01607a7982ff81c05",
+                  "occurredAt": "2026-10-19T09:40:00.000Z",
+                  "meta": { "score": 4, "totalScore": 5, "passed": true }
+                },
+                {
+                  "type": "chapter_completed",
+                  "title": "Completed Chapter 5",
+                  "description": "Think AI: Book 1: Our Amazing Planet",
+                  "category": "Think AI",
+                  "seriesId": "6836c8b01607a7982ff81e01",
+                  "seriesTitle": "Book 1: Our Amazing Planet",
+                  "chapterId": "6836c8b01607a7982ff81c05",
+                  "occurredAt": "2026-10-18T16:12:00.000Z"
+                },
+                {
+                  "type": "book_completed",
+                  "title": "Completed a Book",
+                  "description": "Think Leadership: Book 1: Leading Together",
+                  "category": "Think Leadership",
+                  "seriesId": "6836c8b01607a7982ff81e11",
+                  "seriesTitle": "Book 1: Leading Together",
+                  "chapterId": null,
+                  "occurredAt": "2026-10-17T11:00:00.000Z"
+                }
+              ]
+            }
+          }
+  - name: Learner not on this account
+    request:
+      url: "{{base_url}}/guardian/learners/6acc6121a57282c78ac098ff/reading-overview"
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 404,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/guardian/learners/6acc6121a57282c78ac098ff/reading-overview",
+            "message": "Learner not found",
+            "error": "Not Found",
+            "service": "RL4KIDS"
+          }
