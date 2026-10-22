@@ -39,7 +39,7 @@ docs:
     - Photo with at least one other real field: **201**, same as a JSON-only update — the response already reflects the new photo URL, since the middleware persisted it first.
     - Invalid file: **400** `Profile photo must be an image (JPEG, PNG, GIF, or WebP)`, or `Profile photo must not exceed 4MB.`. More than one `photo` file: **400** `Only one profile photo is allowed`.
 
-    **`companyName` is never editable here** — it's set at registration and only an admin can change it directly on the record. Sending it in this request is silently ignored for the actual update; the response just adds a notice. An empty request (no body, no photo) is **400** `Payload is required`.
+    **`companyName` is never editable here** — it's set at registration and only an admin can change it directly on the record. Sending it alone (no photo, no other field) is a **400** `BadRequestError` `Company name cannot be edited without admin approval.` (routed through the error middleware, like every other rejection in this handler — an earlier version of this endpoint answered that case with a `success: true` body on a 400 status via `handleResponse`, fixed alongside PR #868). Sending it together with another real field still succeeds, with a notice appended to the success message. An empty request (no body, no photo) is **400** `Payload is required`.
 
     `IndustryTypes { "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Energy", "Transportation and Logistics", "Real Estate", "Hospitality and Tourism", "Entertainment and Media" }`
 
@@ -202,12 +202,13 @@ examples:
       statusText: Bad Request
       headers:
         - name: Content-Type
-          value: application/json
+          value: application/json; charset=utf-8
       body:
         type: json
         data: |-
           {
-              "success": true,
+              "success": false,
+              "error": "BadRequestError",
               "message": "Company name cannot be edited without admin approval."
           }
   - name: update companyName with about field
