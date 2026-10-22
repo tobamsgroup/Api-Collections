@@ -73,6 +73,17 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: true
 
+docs:
+  content: |-
+    Admin/super-admin only. Searches every payment bucket against the filter set below and returns a revenue summary over every match, not just the page.
+
+    **Response rows:** each row carries `userName`, the payer's resolved `"firstName lastName"` (trimmed, `null` if both are blank). It is only ever resolved for a row with a `userId` — a guest/uuid-only payment always gets `userName: null`, even when `userEmail` resolves via the uuid mapping.
+
+    **`summary`** covers every match across all pages: `totalTransactions`, `byStatus` (every `PaymentStatus`, zero-filled), `revenueByCurrency` (one entry per currency, successful payments only).
+
+    **Known-id params** (`userId`, `planId`, `subscriptionId`) are cast to `ObjectId` before filtering — `summarize()` is an aggregation and never casts, so a string id would filter the page but zero out the summary.
+  type: text/markdown
+
 examples:
   - name: Success
     request:
@@ -187,6 +198,7 @@ examples:
                 "customerId": "cus_ada",
                 "userId": "<id>",
                 "userEmail": "ada@example.com",
+                "userName": "Ada Lovelace",
                 "serviceProvider": "stripe",
                 "amount": 19.99,
                 "currency": "GBP",
@@ -211,6 +223,55 @@ examples:
               "byStatus": { "success": 1, "pending": 0, "failed": 0, "provisioned": 0 },
               "revenueByCurrency": [
                 { "currency": "GBP", "totalRevenue": 19.99, "successfulTransactions": 1 }
+              ]
+            }
+          }
+  - name: "Success (guest payer, no userName)"
+    request:
+      url: "{{BASE}}/pay/customer-buckets/search?purpose=assessment"
+      method: GET
+      params:
+        - name: purpose
+          value: assessment
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Customer payment buckets retrieved successfully",
+            "data": [
+              {
+                "transactionId": "txn_guest_assessment",
+                "customerId": "cus_guest_assessment",
+                "userId": null,
+                "userEmail": "guest@example.com",
+                "userName": null,
+                "serviceProvider": "paystack",
+                "amount": 15000,
+                "currency": "NGN",
+                "paymentStatus": "success",
+                "purpose": "Assessment",
+                "createdAt": "2026-09-10T09:00:00.000Z",
+                "referenceId": "ref_guest_assessment",
+                "paymentMethod": "card",
+                "uuid": "a1b2c3d4-e5f6-4789-9abc-1234567890ab",
+                "usedServicePaidFor": true,
+                "metadata": null
+              }
+            ],
+            "pagination": { "page": 1, "limit": 20, "total": 1, "pages": 1, "hasNext": false, "hasPrev": false },
+            "summary": {
+              "totalTransactions": 1,
+              "byStatus": { "success": 1, "pending": 0, "failed": 0, "provisioned": 0 },
+              "revenueByCurrency": [
+                { "currency": "NGN", "totalRevenue": 15000, "successfulTransactions": 1 }
               ]
             }
           }
