@@ -20,3 +20,11 @@ variables:
     name: ADMIN_EMAIL
   - secret: true
     name: ADMIN_PASSWORD
+  - secret: true
+    name: TALENT_EMAIL
+  - secret: true
+    name: TALENT_PASSWORD
+  - secret: true
+    name: CLIENT_EMAIL
+  - secret: true
+    name: CLIENT_PASSWORD
