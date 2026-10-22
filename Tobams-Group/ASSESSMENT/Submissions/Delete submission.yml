@@ -1,0 +1,118 @@
+info:
+  name: Delete submission
+  type: http
+  seq: 12
+
+http:
+  method: DELETE
+  url: "{{BASE}}/assessment/submissions/:id?uuid="
+  params:
+    - name: uuid
+      value: ""
+      type: query
+    - name: id
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Deletes a submission.
+
+    **Access:** public. Ownership is only checked when `uuid` is sent: with `uuid`, it must equal the submission's `uuid` (exact, case-sensitive). **Without `uuid` the delete goes through with no check.**
+
+    **Path params**
+    - `id` (submission `_id`, required).
+
+    **Query params**
+    - `uuid` (string, optional): submitter's uuid.
+
+    **Response 200**
+    ```json
+    { "success": true, "message": "Submission deleted successfully" }
+    ```
+
+    **Errors**
+    - `403` `You are not authorized to delete this submission`: `uuid` sent and doesn't match. Also returned when `uuid` is sent and the id doesn't exist.
+    - `404` `Assessment submission not found`: no `uuid` sent and the id doesn't exist.
+  type: text/markdown
+
+examples:
+  - name: "Deleted"
+    request:
+      url: "{{BASE}}/assessment/submissions/6717a0c4e4b0a1b2c3d4e5f6?uuid=TG-60XTA"
+      method: DELETE
+      params:
+        - name: uuid
+          value: "TG-60XTA"
+          type: query
+        - name: id
+          value: "6717a0c4e4b0a1b2c3d4e5f6"
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Submission deleted successfully"
+          }
+  - name: "Wrong uuid"
+    request:
+      url: "{{BASE}}/assessment/submissions/6717a0c4e4b0a1b2c3d4e5f6?uuid=TG-OTHER"
+      method: DELETE
+      params:
+        - name: uuid
+          value: "TG-OTHER"
+          type: query
+        - name: id
+          value: "6717a0c4e4b0a1b2c3d4e5f6"
+          type: path
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "You are not authorized to delete this submission"
+          }
+  - name: "Not found (no uuid sent)"
+    request:
+      url: "{{BASE}}/assessment/submissions/6717a0c4e4b0a1b2c3d4ffff"
+      method: DELETE
+      params:
+        - name: id
+          value: "6717a0c4e4b0a1b2c3d4ffff"
+          type: path
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Assessment submission not found"
+          }

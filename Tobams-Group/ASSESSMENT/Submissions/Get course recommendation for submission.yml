@@ -1,0 +1,155 @@
+info:
+  name: Get course recommendation for submission
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{BASE}}/assessment/submissions/:id/course-recommendation"
+  params:
+    - name: id
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Returns the AI-authored course recommendation generated for a submission.
+
+    **Access:** public. Id only, no uuid check.
+
+    **Path params**
+    - `id` (24-hex ObjectId, required): submission `_id`.
+
+    **Response 200**
+    ```json
+    {
+      "success": true,
+      "message": "Course recommendation retrieved successfully",
+      "data": {
+            "_id": "6717a0c4e4b0a1b2c3d4e5f7",
+            "userName": "Jane Doe",
+            "email": "jane.doe@example.com",
+            "source": "AI",
+            "submissionId": "66f1c2a9e4b0a1b2c3d4e5f6",
+            "category": "Career",
+            "assessmentScore": 72,
+            "recommendedCourses": [
+              {
+                "courseId": { "_id": "65e0...", "title": "..." },
+                "courseName": "API Design Fundamentals",
+                "category": "backend",
+                "relevanceScore": 0.9,
+                "reason": "Weakest section: APIs"
+              }
+            ]
+          }
+    }
+    ```
+    `data` is the stored recommendation with `source: "AI"`. `recommendedCourses[].courseId` is populated with the full course document.
+
+    **Errors**
+    - `400` `id` is not a valid ObjectId.
+    - `404` `Course recommendation not found`: no AI recommendation saved for this submission.
+  type: text/markdown
+
+examples:
+  - name: "Success"
+    request:
+      url: "{{BASE}}/assessment/submissions/6717a0c4e4b0a1b2c3d4e5f6/course-recommendation"
+      method: GET
+      params:
+        - name: id
+          value: "6717a0c4e4b0a1b2c3d4e5f6"
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Course recommendation retrieved successfully",
+            "data": {
+              "_id": "6717a0c5e4b0a1b2c3d4e901",
+              "userName": "Jane",
+              "email": "jane.doe@example.com",
+              "source": "AI",
+              "submissionId": "6717a0c4e4b0a1b2c3d4e5f6",
+              "category": "Career",
+              "assessmentScore": 84,
+              "recommendedCourses": [
+                {
+                  "courseId": {
+                    "_id": "65e0b7a2c1d4f5a6b7c8d9e0",
+                    "title": "Caching Strategies for Backend Engineers",
+                    "category": "backend",
+                    "...": "rest of the course document"
+                  },
+                  "courseName": "Caching Strategies for Backend Engineers",
+                  "category": "backend",
+                  "relevanceScore": 0.92,
+                  "reason": "Caching was your weakest section (40%).",
+                  "_id": "6717a0c5e4b0a1b2c3d4e902"
+                }
+              ],
+              "createdAt": "2026-10-22T09:40:36.120Z",
+              "updatedAt": "2026-10-22T09:40:36.120Z",
+              "__v": 0
+            }
+          }
+  - name: "Malformed id"
+    request:
+      url: "{{BASE}}/assessment/submissions/123/course-recommendation"
+      method: GET
+      params:
+        - name: id
+          value: "123"
+          type: path
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": " Invalid MongoDB ObjectId"
+          }
+  - name: "No recommendation"
+    request:
+      url: "{{BASE}}/assessment/submissions/6712f9b1e4b0a1b2c3d4e5a1/course-recommendation"
+      method: GET
+      params:
+        - name: id
+          value: "6712f9b1e4b0a1b2c3d4e5a1"
+          type: path
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Course recommendation not found"
+          }

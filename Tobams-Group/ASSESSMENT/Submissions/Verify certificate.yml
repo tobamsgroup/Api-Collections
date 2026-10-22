@@ -1,0 +1,99 @@
+info:
+  name: Verify certificate
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{BASE}}/assessment/submissions/certificates/verify/:certificateId"
+  params:
+    - name: certificateId
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Confirms a certificate is genuine using the opaque certificate ID printed on it. Does not expose the submission `_id`. Returns the details snapshotted when the certificate was issued, so they always match the printed certificate.
+
+    **Access:** public.
+
+    **Path params**
+    - `certificateId` (string, required): the ID on the certificate.
+
+    **Response 200**
+    ```json
+    {
+      "success": true,
+      "data": {
+        "valid": true,
+        "certificateId": "TGC-8F3K2Q",
+        "recipientName": "Jane Doe",
+        "area": "Backend Development",
+        "issuedOn": "2026-10-22T09:40:35.368Z"
+      }
+    }
+    ```
+    No `message` field on this response.
+
+    **Errors**
+    - `404` `Certificate not found`.
+  type: text/markdown
+
+examples:
+  - name: "Valid certificate"
+    request:
+      url: "{{BASE}}/assessment/submissions/certificates/verify/TG-3f9a1c7e5b2d8a40"
+      method: GET
+      params:
+        - name: certificateId
+          value: "TG-3f9a1c7e5b2d8a40"
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "data": {
+              "valid": true,
+              "certificateId": "TG-3f9a1c7e5b2d8a40",
+              "recipientName": "Jane Doe",
+              "area": "Backend Development",
+              "issuedOn": "2026-10-22T09:40:35.368Z"
+            }
+          }
+  - name: "Unknown certificate"
+    request:
+      url: "{{BASE}}/assessment/submissions/certificates/verify/TG-0000000000000000"
+      method: GET
+      params:
+        - name: certificateId
+          value: "TG-0000000000000000"
+          type: path
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Certificate not found"
+          }

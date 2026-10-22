@@ -1,0 +1,97 @@
+info:
+  name: Download submission certificate
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: "{{BASE}}/assessment/submissions/:id/certificate"
+  params:
+    - name: id
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: false
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Redirects to the certificate PDF generated at submit time for a passing submission.
+
+    **Access:** public. Id only, no uuid check.
+
+    **Path params**
+    - `id` (submission `_id`, required).
+
+    **Response 302**: `Location` header is the S3 certificate URL. Redirect following is off on this request so you can see the 302; turn it on to download the PDF.
+
+    **Errors**
+    - `404` `Assessment submission not found`.
+    - `404` `No certificate is available for this submission. Certificates are issued only for passing scores of <threshold>% and above.`: the submission failed. The threshold depends on the submission's `userCategory` (guests have their own pass mark).
+    - `500` a malformed id (not an ObjectId) is not validated on this route and surfaces as a cast error.
+  type: text/markdown
+
+examples:
+  - name: "Redirect to PDF"
+    request:
+      url: "{{BASE}}/assessment/submissions/6717a0c4e4b0a1b2c3d4e5f6/certificate"
+      method: GET
+      params:
+        - name: id
+          value: "6717a0c4e4b0a1b2c3d4e5f6"
+          type: path
+    response:
+      status: 302
+      statusText: Found
+      headers:
+        - name: Location
+          value: "https://tobams-group-bucket.s3.eu-west-2.amazonaws.com/certificates/TG-3f9a1c7e5b2d8a40.pdf"
+  - name: "Failed submission (no certificate)"
+    request:
+      url: "{{BASE}}/assessment/submissions/6712f9b1e4b0a1b2c3d4e5a1/certificate"
+      method: GET
+      params:
+        - name: id
+          value: "6712f9b1e4b0a1b2c3d4e5a1"
+          type: path
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "No certificate is available for this submission. Certificates are issued only for passing scores of 81% and above."
+          }
+  - name: "Not found"
+    request:
+      url: "{{BASE}}/assessment/submissions/6717a0c4e4b0a1b2c3d4ffff/certificate"
+      method: GET
+      params:
+        - name: id
+          value: "6717a0c4e4b0a1b2c3d4ffff"
+          type: path
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Assessment submission not found"
+          }

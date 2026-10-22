@@ -1,0 +1,455 @@
+info:
+  name: Get my submissions
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{BASE}}/assessment/submissions/my-submissions?page=1&limit=10&sortBy=submittedAt&sortOrder=desc"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+    - name: sortBy
+      value: submittedAt
+      type: query
+    - name: sortOrder
+      value: desc
+      type: query
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Lists the logged-in user's submissions, paginated. The uuid comes from the access token (`req.user.uuid`).
+
+    **Access:** any authenticated user (bearer token).
+
+    **Query params** (all optional)
+
+    | Param | Default | Notes |
+    | --- | --- | --- |
+    | `page` | `1` | `>= 1` |
+    | `limit` | `10` | `1`-`100` |
+    | `sortBy` | `submittedAt` | `submittedAt` or `overallScore` (sorts on `result.overallScore.percentage`) |
+    | `sortOrder` | `desc` | `asc` or `desc` |
+
+    **Response 200**
+    ```json
+    {
+      "success": true,
+      "message": "Your submissions retrieved successfully",
+      "data": {
+        "submissions": [{ "_id": "66f1c2a9e4b0a1b2c3d4e5f6", "uuid": "TG-60XTA", "result": { } }],
+        "pagination": { "page": 1, "limit": 10, "total": 3, "pages": 1, "hasNext": false, "hasPrev": false }
+      }
+    }
+    ```
+    No submissions is `200` with `submissions: []`.
+
+    **Errors**
+    - `401` missing or invalid token.
+    - `400` `Invalid pagination parameters` (`page < 1`, `limit < 1` or `> 100`).
+    - `400` `User UUID is required`: the account has no uuid.
+  type: text/markdown
+
+examples:
+  - name: "Success"
+    request:
+      url: "{{BASE}}/assessment/submissions/my-submissions?page=1&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+      auth:
+        type: bearer
+        token: "{{talent_access}}"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Your submissions retrieved successfully",
+            "data": {
+              "submissions": [
+                {
+                  "_id": "6717a0c4e4b0a1b2c3d4e5f6",
+                  "uuid": "TG-60XTA",
+                  "sessionId": "jane.doe_1776760291236_b47a1107",
+                  "answers": [
+                    {
+                      "questionId": "q_1697049132_1",
+                      "selectedOption": "a",
+                      "_id": "6717a0c4e4b0a1b2c3d4e801"
+                    },
+                    {
+                      "questionId": "q_1697049132_2",
+                      "selectedOption": "c",
+                      "_id": "6717a0c4e4b0a1b2c3d4e802"
+                    }
+                  ],
+                  "timeSpent": 1800,
+                  "result": {
+                    "category": "Career",
+                    "area": "Backend Development",
+                    "majorCategory": "Career",
+                    "criticalGaps": [
+                      "Caching"
+                    ],
+                    "strongAreas": [
+                      "APIs",
+                      "Database Management"
+                    ],
+                    "overallScore": {
+                      "percentage": 84,
+                      "totalPoints": 100,
+                      "earnedPoints": 84
+                    },
+                    "sectionBreakdown": [
+                      {
+                        "area": "APIs",
+                        "category": "technical",
+                        "percentage": 90,
+                        "totalPoints": 20,
+                        "earnedPoints": 18,
+                        "recommendation": null,
+                        "band": "strong_capability",
+                        "isCritical": false,
+                        "_id": "6717a0c4e4b0a1b2c3d4e601"
+                      },
+                      {
+                        "area": "Database Management",
+                        "category": "technical",
+                        "percentage": 80,
+                        "totalPoints": 20,
+                        "earnedPoints": 16,
+                        "recommendation": null,
+                        "band": "strong_capability",
+                        "isCritical": false,
+                        "_id": "6717a0c4e4b0a1b2c3d4e602"
+                      },
+                      {
+                        "area": "Caching",
+                        "category": "technical",
+                        "percentage": 40,
+                        "totalPoints": 10,
+                        "earnedPoints": 4,
+                        "recommendation": "Professional Development and Continuous Learning",
+                        "band": "critical_gap",
+                        "isCritical": true,
+                        "_id": "6717a0c4e4b0a1b2c3d4e603"
+                      }
+                    ],
+                    "questionResults": [
+                      {
+                        "questionId": "q_1697049132_1",
+                        "isCorrect": true,
+                        "pointsEarned": 2,
+                        "explanation": "Correct answer selected",
+                        "_id": "6717a0c4e4b0a1b2c3d4e701"
+                      },
+                      {
+                        "questionId": "q_1697049132_2",
+                        "isCorrect": false,
+                        "pointsEarned": 0,
+                        "explanation": "Correct answer was option 'b'",
+                        "_id": "6717a0c4e4b0a1b2c3d4e702"
+                      }
+                    ],
+                    "submittedAt": "2026-10-22T09:40:35.368Z",
+                    "timeSpent": 1800,
+                    "nexusEligible": true,
+                    "technicalScore": 86,
+                    "softSkillsScore": 80,
+                    "proficiency": "expert",
+                    "earnedBadges": [
+                      "Job Ready",
+                      "Workplace Ready",
+                      "Leadership Emerging"
+                    ],
+                    "careerCategoryScores": [
+                      {
+                        "categoryId": "entry",
+                        "categoryName": "Career Entry",
+                        "percentage": 83,
+                        "totalPoints": 36,
+                        "earnedPoints": 30,
+                        "description": null
+                      },
+                      {
+                        "categoryId": "effectiveness",
+                        "categoryName": "Career Effectiveness",
+                        "percentage": 84,
+                        "totalPoints": 32,
+                        "earnedPoints": 27,
+                        "description": null
+                      },
+                      {
+                        "categoryId": "acceleration",
+                        "categoryName": "Career Acceleration & Leadership",
+                        "percentage": 84,
+                        "totalPoints": 32,
+                        "earnedPoints": 27,
+                        "description": null
+                      }
+                    ]
+                  },
+                  "certificateUrl": "https://tobams-group-bucket.s3.eu-west-2.amazonaws.com/certificates/TG-3f9a1c7e5b2d8a40.pdf",
+                  "certificateId": "TG-3f9a1c7e5b2d8a40",
+                  "certificateRecipientName": "Jane Doe",
+                  "userCategory": "Platform User",
+                  "createdAt": "2026-10-22T09:40:35.368Z",
+                  "updatedAt": "2026-10-22T09:40:36.912Z",
+                  "__v": 0
+                },
+                {
+                  "_id": "6712f9b1e4b0a1b2c3d4e5a1",
+                  "uuid": "TG-60XTA",
+                  "sessionId": "jane.doe_1776500000000_a1c2e3f4",
+                  "answers": [
+                    {
+                      "questionId": "q_1697049132_1",
+                      "selectedOption": "a",
+                      "_id": "6717a0c4e4b0a1b2c3d4e801"
+                    },
+                    {
+                      "questionId": "q_1697049132_2",
+                      "selectedOption": "c",
+                      "_id": "6717a0c4e4b0a1b2c3d4e802"
+                    }
+                  ],
+                  "timeSpent": 1800,
+                  "result": {
+                    "category": "Career",
+                    "area": "Backend Development",
+                    "majorCategory": "Career",
+                    "criticalGaps": [
+                      "Caching",
+                      "Database Management"
+                    ],
+                    "strongAreas": [
+                      "APIs"
+                    ],
+                    "overallScore": {
+                      "percentage": 58,
+                      "totalPoints": 100,
+                      "earnedPoints": 58
+                    },
+                    "sectionBreakdown": [
+                      {
+                        "area": "APIs",
+                        "category": "technical",
+                        "percentage": 90,
+                        "totalPoints": 20,
+                        "earnedPoints": 18,
+                        "recommendation": null,
+                        "band": "strong_capability",
+                        "isCritical": false,
+                        "_id": "6717a0c4e4b0a1b2c3d4e601"
+                      },
+                      {
+                        "area": "Database Management",
+                        "category": "technical",
+                        "percentage": 80,
+                        "totalPoints": 20,
+                        "earnedPoints": 16,
+                        "recommendation": null,
+                        "band": "strong_capability",
+                        "isCritical": false,
+                        "_id": "6717a0c4e4b0a1b2c3d4e602"
+                      },
+                      {
+                        "area": "Caching",
+                        "category": "technical",
+                        "percentage": 40,
+                        "totalPoints": 10,
+                        "earnedPoints": 4,
+                        "recommendation": "Professional Development and Continuous Learning",
+                        "band": "critical_gap",
+                        "isCritical": true,
+                        "_id": "6717a0c4e4b0a1b2c3d4e603"
+                      }
+                    ],
+                    "questionResults": [
+                      {
+                        "questionId": "q_1697049132_1",
+                        "isCorrect": true,
+                        "pointsEarned": 2,
+                        "explanation": "Correct answer selected",
+                        "_id": "6717a0c4e4b0a1b2c3d4e701"
+                      },
+                      {
+                        "questionId": "q_1697049132_2",
+                        "isCorrect": false,
+                        "pointsEarned": 0,
+                        "explanation": "Correct answer was option 'b'",
+                        "_id": "6717a0c4e4b0a1b2c3d4e702"
+                      }
+                    ],
+                    "submittedAt": "2026-10-18T14:02:10.950Z",
+                    "timeSpent": 1800,
+                    "nexusEligible": false,
+                    "technicalScore": 60,
+                    "softSkillsScore": 55,
+                    "proficiency": "beginner",
+                    "earnedBadges": [],
+                    "careerCategoryScores": [
+                      {
+                        "categoryId": "entry",
+                        "categoryName": "Career Entry",
+                        "percentage": 83,
+                        "totalPoints": 36,
+                        "earnedPoints": 30,
+                        "description": null
+                      },
+                      {
+                        "categoryId": "effectiveness",
+                        "categoryName": "Career Effectiveness",
+                        "percentage": 84,
+                        "totalPoints": 32,
+                        "earnedPoints": 27,
+                        "description": null
+                      },
+                      {
+                        "categoryId": "acceleration",
+                        "categoryName": "Career Acceleration & Leadership",
+                        "percentage": 84,
+                        "totalPoints": 32,
+                        "earnedPoints": 27,
+                        "description": null
+                      }
+                    ]
+                  },
+                  "certificateUrl": null,
+                  "userCategory": "Platform User",
+                  "createdAt": "2026-10-18T14:02:11.004Z",
+                  "updatedAt": "2026-10-18T14:02:11.004Z",
+                  "__v": 0
+                }
+              ],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 2,
+                "pages": 1,
+                "hasNext": false,
+                "hasPrev": false
+              }
+            }
+          }
+  - name: "No submissions yet"
+    request:
+      url: "{{BASE}}/assessment/submissions/my-submissions"
+      method: GET
+      auth:
+        type: bearer
+        token: "{{talent_access}}"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Your submissions retrieved successfully",
+            "data": {
+              "submissions": [],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 0,
+                "pages": 0,
+                "hasNext": false,
+                "hasPrev": false
+              }
+            }
+          }
+  - name: "Invalid pagination"
+    request:
+      url: "{{BASE}}/assessment/submissions/my-submissions?limit=500"
+      method: GET
+      params:
+        - name: limit
+          value: "500"
+          type: query
+      auth:
+        type: bearer
+        token: "{{talent_access}}"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Invalid pagination parameters"
+          }
+  - name: "No token"
+    request:
+      url: "{{BASE}}/assessment/submissions/my-submissions"
+      method: GET
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Unauthorized access❗"
+          }
+  - name: "Expired token"
+    request:
+      url: "{{BASE}}/assessment/submissions/my-submissions"
+      method: GET
+      auth:
+        type: bearer
+        token: "{{talent_access}}"
+    response:
+      status: 401
+      statusText: Unauthorized
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthenticationError",
+            "message": "Session expired!: Login and try again"
+          }

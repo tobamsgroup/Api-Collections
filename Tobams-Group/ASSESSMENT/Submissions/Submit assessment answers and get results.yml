@@ -1,0 +1,545 @@
+info:
+  name: Submit assessment answers and get results
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE}}/assessment/submit"
+  body:
+    type: json
+    data: |-
+      {
+        "uuid": "TG-60XTA",
+        "sessionId": "jane.doe_1776760291236_b47a1107",
+        "answers": [
+          { "questionId": "q_1697049132_1", "selectedOption": "a" },
+          { "questionId": "q_1697049132_2", "selectedOption": "c" }
+        ],
+        "timeSpent": 1800
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Scores a generated assessment session, saves the submission, and updates the user's assessment status.
+
+    **Access:** public. The user is identified by `uuid` in the body (platform user uuid, or the guest user's id from guest registration).
+
+    **Body** (`AssessmentSubmissionSchema`)
+
+    | Field | Type | Required | Notes |
+    | --- | --- | --- | --- |
+    | `uuid` | string | yes | Submitter's uuid |
+    | `sessionId` | string | yes | The `sessionId` returned by `GET /assessment/generate` |
+    | `answers` | array | yes | `[{ questionId: string, selectedOption?: "a" \| "b" \| "c" \| "d" }]`. Omit `selectedOption` for an unanswered question |
+    | `timeSpent` | integer | no | Seconds, `>= 0` |
+
+    **Side effects**
+    - Pass (score at or above the pass mark for the user's category): certificate generated, outcome email sent with certificate and result link.
+    - Fail: retry email sent with the result link.
+    - Platform-user Career pass may set nexus eligibility. A guest's pass never does.
+    - The session's cached questions are cleared, so a `sessionId` can only be submitted once.
+
+    **Response 201**
+    ```json
+    {
+      "success": true,
+      "message": "Assessment submitted and scored successfully",
+      "data": {
+        "_id": "66f1c2a9e4b0a1b2c3d4e5f6",
+        "uuid": "TG-60XTA",
+        "sessionId": "jane.doe_1776760291236_b47a1107",
+        "answers": [{ "questionId": "q_1697049132_1", "selectedOption": "a" }],
+        "timeSpent": 1800,
+        "userCategory": "PLATFORM_USER",
+        "result": {
+          "category": "Career",
+          "area": "Backend Development",
+          "overallScore": { "percentage": 72, "totalPoints": 79, "earnedPoints": 57 },
+          "sectionBreakdown": [{ "section": "APIs", "category": "backend", "percentage": 71, "totalPoints": 7, "earnedPoints": 5, "recommendation": null }],
+          "questionResults": [{ "questionId": "q_1697049132_1", "isCorrect": true, "pointsEarned": 2, "explanation": "Correct answer selected" }],
+          "criticalGaps": [],
+          "strongAreas": ["APIs"],
+          "technicalScore": 74,
+          "softSkillsScore": 68,
+          "nexusEligible": true,
+          "proficiency": "Proficient",
+          "earnedBadges": [],
+          "careerCategoryScores": [],
+          "submittedAt": "2026-10-22T09:40:35.368Z"
+        },
+        "stage": null,
+        "certificateUrl": "https://<bucket>.s3.amazonaws.com/certificates/....pdf",
+        "nexusEligible": true,
+        "courseRecommendation": { }
+      }
+    }
+    ```
+    `certificateUrl` is `null` on a fail. `stage` is the user's `talentStage`, or `null`.
+
+    **Errors**
+    - `400` body fails validation (missing `uuid`/`sessionId`/`answers`, option outside `a`-`d`, negative `timeSpent`).
+    - `404` `User not found`: no user with that `uuid`.
+    - `404` `Assessment session not found or expired. Please retake the assessment.`: unknown, expired, or already submitted `sessionId`.
+  type: text/markdown
+
+examples:
+  - name: "Passed (platform user, Career)"
+    request:
+      url: "{{BASE}}/assessment/submit"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "uuid": "TG-60XTA",
+            "sessionId": "jane.doe_1776760291236_b47a1107",
+            "answers": [
+              {
+                "questionId": "q_1697049132_1",
+                "selectedOption": "a"
+              },
+              {
+                "questionId": "q_1697049132_2",
+                "selectedOption": "c"
+              }
+            ],
+            "timeSpent": 1800
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Assessment submitted and scored successfully",
+            "data": {
+              "_id": "6717a0c4e4b0a1b2c3d4e5f6",
+              "uuid": "TG-60XTA",
+              "sessionId": "jane.doe_1776760291236_b47a1107",
+              "answers": [
+                {
+                  "questionId": "q_1697049132_1",
+                  "selectedOption": "a",
+                  "_id": "6717a0c4e4b0a1b2c3d4e801"
+                },
+                {
+                  "questionId": "q_1697049132_2",
+                  "selectedOption": "c",
+                  "_id": "6717a0c4e4b0a1b2c3d4e802"
+                }
+              ],
+              "timeSpent": 1800,
+              "result": {
+                "category": "Career",
+                "area": "Backend Development",
+                "majorCategory": "Career",
+                "criticalGaps": [
+                  "Caching"
+                ],
+                "strongAreas": [
+                  "APIs",
+                  "Database Management"
+                ],
+                "overallScore": {
+                  "percentage": 84,
+                  "totalPoints": 100,
+                  "earnedPoints": 84
+                },
+                "sectionBreakdown": [
+                  {
+                    "area": "APIs",
+                    "category": "technical",
+                    "percentage": 90,
+                    "totalPoints": 20,
+                    "earnedPoints": 18,
+                    "recommendation": null,
+                    "band": "strong_capability",
+                    "isCritical": false,
+                    "_id": "6717a0c4e4b0a1b2c3d4e601"
+                  },
+                  {
+                    "area": "Database Management",
+                    "category": "technical",
+                    "percentage": 80,
+                    "totalPoints": 20,
+                    "earnedPoints": 16,
+                    "recommendation": null,
+                    "band": "strong_capability",
+                    "isCritical": false,
+                    "_id": "6717a0c4e4b0a1b2c3d4e602"
+                  },
+                  {
+                    "area": "Caching",
+                    "category": "technical",
+                    "percentage": 40,
+                    "totalPoints": 10,
+                    "earnedPoints": 4,
+                    "recommendation": "Professional Development and Continuous Learning",
+                    "band": "critical_gap",
+                    "isCritical": true,
+                    "_id": "6717a0c4e4b0a1b2c3d4e603"
+                  }
+                ],
+                "questionResults": [
+                  {
+                    "questionId": "q_1697049132_1",
+                    "isCorrect": true,
+                    "pointsEarned": 2,
+                    "explanation": "Correct answer selected",
+                    "_id": "6717a0c4e4b0a1b2c3d4e701"
+                  },
+                  {
+                    "questionId": "q_1697049132_2",
+                    "isCorrect": false,
+                    "pointsEarned": 0,
+                    "explanation": "Correct answer was option 'b'",
+                    "_id": "6717a0c4e4b0a1b2c3d4e702"
+                  }
+                ],
+                "submittedAt": "2026-10-22T09:40:35.368Z",
+                "timeSpent": 1800,
+                "nexusEligible": true,
+                "technicalScore": 86,
+                "softSkillsScore": 80,
+                "proficiency": "expert",
+                "earnedBadges": [
+                  "Job Ready",
+                  "Workplace Ready",
+                  "Leadership Emerging"
+                ],
+                "careerCategoryScores": [
+                  {
+                    "categoryId": "entry",
+                    "categoryName": "Career Entry",
+                    "percentage": 83,
+                    "totalPoints": 36,
+                    "earnedPoints": 30,
+                    "description": null
+                  },
+                  {
+                    "categoryId": "effectiveness",
+                    "categoryName": "Career Effectiveness",
+                    "percentage": 84,
+                    "totalPoints": 32,
+                    "earnedPoints": 27,
+                    "description": null
+                  },
+                  {
+                    "categoryId": "acceleration",
+                    "categoryName": "Career Acceleration & Leadership",
+                    "percentage": 84,
+                    "totalPoints": 32,
+                    "earnedPoints": 27,
+                    "description": null
+                  }
+                ]
+              },
+              "certificateUrl": "https://tobams-group-bucket.s3.eu-west-2.amazonaws.com/certificates/TG-3f9a1c7e5b2d8a40.pdf",
+              "userCategory": "Platform User",
+              "createdAt": "2026-10-22T09:40:35.368Z",
+              "updatedAt": "2026-10-22T09:40:36.912Z",
+              "__v": 0,
+              "stage": null,
+              "nexusEligible": true,
+              "courseRecommendation": {
+                "_id": "6717a0c5e4b0a1b2c3d4e901",
+                "userName": "Jane",
+                "email": "jane.doe@example.com",
+                "source": "AI",
+                "submissionId": "6717a0c4e4b0a1b2c3d4e5f6",
+                "category": "Career",
+                "assessmentScore": 84,
+                "recommendedCourses": [
+                  {
+                    "courseId": "65e0b7a2c1d4f5a6b7c8d9e0",
+                    "courseName": "Caching Strategies for Backend Engineers",
+                    "category": "backend",
+                    "relevanceScore": 0.92,
+                    "reason": "Caching was your weakest section (40%).",
+                    "_id": "6717a0c5e4b0a1b2c3d4e902"
+                  }
+                ],
+                "createdAt": "2026-10-22T09:40:36.120Z",
+                "updatedAt": "2026-10-22T09:40:36.120Z",
+                "__v": 0
+              }
+            }
+          }
+  - name: "Failed (no certificate)"
+    request:
+      url: "{{BASE}}/assessment/submit"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "uuid": "TG-60XTA",
+            "sessionId": "jane.doe_1776760291236_b47a1107",
+            "answers": [
+              {
+                "questionId": "q_1697049132_1",
+                "selectedOption": "a"
+              },
+              {
+                "questionId": "q_1697049132_2",
+                "selectedOption": "c"
+              }
+            ],
+            "timeSpent": 1800
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Assessment submitted and scored successfully",
+            "data": {
+              "_id": "6712f9b1e4b0a1b2c3d4e5a1",
+              "uuid": "TG-60XTA",
+              "sessionId": "jane.doe_1776500000000_a1c2e3f4",
+              "answers": [
+                {
+                  "questionId": "q_1697049132_1",
+                  "selectedOption": "a",
+                  "_id": "6717a0c4e4b0a1b2c3d4e801"
+                },
+                {
+                  "questionId": "q_1697049132_2",
+                  "selectedOption": "c",
+                  "_id": "6717a0c4e4b0a1b2c3d4e802"
+                }
+              ],
+              "timeSpent": 1800,
+              "result": {
+                "category": "Career",
+                "area": "Backend Development",
+                "majorCategory": "Career",
+                "criticalGaps": [
+                  "Caching",
+                  "Database Management"
+                ],
+                "strongAreas": [
+                  "APIs"
+                ],
+                "overallScore": {
+                  "percentage": 58,
+                  "totalPoints": 100,
+                  "earnedPoints": 58
+                },
+                "sectionBreakdown": [
+                  {
+                    "area": "APIs",
+                    "category": "technical",
+                    "percentage": 90,
+                    "totalPoints": 20,
+                    "earnedPoints": 18,
+                    "recommendation": null,
+                    "band": "strong_capability",
+                    "isCritical": false,
+                    "_id": "6717a0c4e4b0a1b2c3d4e601"
+                  },
+                  {
+                    "area": "Database Management",
+                    "category": "technical",
+                    "percentage": 80,
+                    "totalPoints": 20,
+                    "earnedPoints": 16,
+                    "recommendation": null,
+                    "band": "strong_capability",
+                    "isCritical": false,
+                    "_id": "6717a0c4e4b0a1b2c3d4e602"
+                  },
+                  {
+                    "area": "Caching",
+                    "category": "technical",
+                    "percentage": 40,
+                    "totalPoints": 10,
+                    "earnedPoints": 4,
+                    "recommendation": "Professional Development and Continuous Learning",
+                    "band": "critical_gap",
+                    "isCritical": true,
+                    "_id": "6717a0c4e4b0a1b2c3d4e603"
+                  }
+                ],
+                "questionResults": [
+                  {
+                    "questionId": "q_1697049132_1",
+                    "isCorrect": true,
+                    "pointsEarned": 2,
+                    "explanation": "Correct answer selected",
+                    "_id": "6717a0c4e4b0a1b2c3d4e701"
+                  },
+                  {
+                    "questionId": "q_1697049132_2",
+                    "isCorrect": false,
+                    "pointsEarned": 0,
+                    "explanation": "Correct answer was option 'b'",
+                    "_id": "6717a0c4e4b0a1b2c3d4e702"
+                  }
+                ],
+                "submittedAt": "2026-10-18T14:02:10.950Z",
+                "timeSpent": 1800,
+                "nexusEligible": false,
+                "technicalScore": 60,
+                "softSkillsScore": 55,
+                "proficiency": "beginner",
+                "earnedBadges": [],
+                "careerCategoryScores": [
+                  {
+                    "categoryId": "entry",
+                    "categoryName": "Career Entry",
+                    "percentage": 83,
+                    "totalPoints": 36,
+                    "earnedPoints": 30,
+                    "description": null
+                  },
+                  {
+                    "categoryId": "effectiveness",
+                    "categoryName": "Career Effectiveness",
+                    "percentage": 84,
+                    "totalPoints": 32,
+                    "earnedPoints": 27,
+                    "description": null
+                  },
+                  {
+                    "categoryId": "acceleration",
+                    "categoryName": "Career Acceleration & Leadership",
+                    "percentage": 84,
+                    "totalPoints": 32,
+                    "earnedPoints": 27,
+                    "description": null
+                  }
+                ]
+              },
+              "certificateUrl": null,
+              "userCategory": "Platform User",
+              "createdAt": "2026-10-18T14:02:11.004Z",
+              "updatedAt": "2026-10-18T14:02:11.004Z",
+              "__v": 0,
+              "stage": null,
+              "nexusEligible": false,
+              "courseRecommendation": null
+            }
+          }
+  - name: "Validation error"
+    request:
+      url: "{{BASE}}/assessment/submit"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "uuid": "TG-60XTA",
+            "answers": [
+              {
+                "questionId": "q_1697049132_1",
+                "selectedOption": "e"
+              }
+            ]
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "sessionId: Invalid input: expected string, received undefined; answers.0.selectedOption: Invalid option: expected one of \"a\"|\"b\"|\"c\"|\"d\""
+          }
+  - name: "Unknown uuid"
+    request:
+      url: "{{BASE}}/assessment/submit"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "uuid": "TG-XXXXX",
+            "sessionId": "jane.doe_1776760291236_b47a1107",
+            "answers": [
+              {
+                "questionId": "q_1697049132_1",
+                "selectedOption": "a"
+              },
+              {
+                "questionId": "q_1697049132_2",
+                "selectedOption": "c"
+              }
+            ],
+            "timeSpent": 1800
+          }
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "User not found"
+          }
+  - name: "Session expired or already submitted"
+    request:
+      url: "{{BASE}}/assessment/submit"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "uuid": "TG-60XTA",
+            "sessionId": "jane.doe_1776760291236_b47a1107",
+            "answers": [
+              {
+                "questionId": "q_1697049132_1",
+                "selectedOption": "a"
+              },
+              {
+                "questionId": "q_1697049132_2",
+                "selectedOption": "c"
+              }
+            ],
+            "timeSpent": 1800
+          }
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: Content-Type
+          value: "application/json; charset=utf-8"
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Assessment session not found or expired. Please retake the assessment."
+          }
