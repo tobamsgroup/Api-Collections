@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/communities/67aa81104553b79bfe89a349/messages?page=1&limit=10"
+  url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d/messages?page=1&limit=10"
   params:
     - name: page
       value: "1"
@@ -22,3 +22,139 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs:
+  content: |-
+    Lists a community's messages, newest-first pagination via `page`/`limit`.
+
+    **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted). A non-admin caller must be a member of the community.
+
+    **Asymmetric existence check:** a non-admin's membership check loads the community first, so a missing/invalid-but-well-formed id is a `404` for them. A platform admin skips that check entirely (no membership to verify) and queries messages directly — for an admin, a nonexistent `communityId` quietly returns an **empty `200`** (`currentCount: 0, totalCount: 0, messages: []`), never a `404`.
+
+    Neither `communityId` nor `page`/`limit` go through `validateParams`/`validateQuery` on this route — `communityId` is checked by the service itself (`400` if not a 24-hex id); `page`/`limit` default to `1`/`10` if omitted or non-numeric, with no upper cap.
+
+    **Path params**
+    - `communityId` (24-hex, required).
+
+    **Query params**
+    - `page` (default `1`), `limit` (default `10`).
+
+    **Response (`data`):** `{ currentCount, totalCount, messages[] }`.
+
+    **Errors**
+    - `400` `Invalid community ID` (malformed id).
+    - `403` `User not a member of the community` (non-admin, non-member caller).
+    - `404` `Community not found` (non-admin caller, id well-formed but no such community).
+  type: text/markdown
+
+examples:
+  - name: "Success (member)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d/messages?page=1&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Community messages retrieved successfully",
+            "data": {
+              "currentCount": 2,
+              "totalCount": 2,
+              "messages": [
+                {
+                  "_id": "696a5d496b4632601d56e673",
+                  "roomId": "696751b1c6a42bcbfbbb937d",
+                  "senderId": "690c58c445047c4e4030fe01",
+                  "username": "Ericsson Raphael",
+                  "replyTo": "696a2a42d8ebfb5489f4a00a",
+                  "isThreaded": true,
+                  "threadId": "696a2a42d8ebfb5489f4a00a",
+                  "content": "Hi",
+                  "status": "sent",
+                  "deliveredCount": 0,
+                  "readCount": 0,
+                  "timestamp": "2026-01-16T15:46:17.974Z",
+                  "createdAt": "2026-01-16T15:46:17.974Z",
+                  "updatedAt": "2026-01-16T15:46:17.974Z"
+                },
+                {
+                  "_id": "696a2a42d8ebfb5489f4a00a",
+                  "roomId": "696751b1c6a42bcbfbbb937d",
+                  "senderId": "6929a35296b1c0a6612823bf",
+                  "username": "Paul Jibola",
+                  "isThreaded": false,
+                  "content": "Welcome to the community!",
+                  "status": "sent",
+                  "deliveredCount": 1,
+                  "readCount": 1,
+                  "timestamp": "2026-01-16T13:02:10.044Z",
+                  "createdAt": "2026-01-16T13:02:10.044Z",
+                  "updatedAt": "2026-01-16T13:02:10.044Z"
+                }
+              ]
+            }
+          }
+  - name: "Forbidden (not a member)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d/messages?page=1&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "User not a member of the community"
+          }
+  - name: "Not found (non-admin caller)"
+    request:
+      url: "{{BASE}}/communities/6717a0c4e4b0a1b2c3d4ffff/messages?page=1&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Community not found"
+          }

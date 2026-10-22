@@ -21,8 +21,27 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
+docs:
+  content: |-
+    A member's own communities — or, for a platform admin, **every** non-deleted community in any status, whether or not the admin ever joined it.
+
+    **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted).
+
+    **Unread counts (changed):** `unreadMessageCount` now comes from the viewer's own per-room read cursor, not delivery receipts. It counts messages newer than `max(the viewer's last-read cursor, the viewer's joinedAt)` that the viewer didn't send. This fixes two bugs:
+    - a member who was offline when messages arrived used to see `0` (delivery receipts only exist for messages a connected client acked);
+    - a platform admin viewing a community they never joined used to always see `0` for the same reason — now they get a real count, computed the same way.
+
+    A brand-new member is never shown the community's pre-existing history as unread: the floor is their own `joinedAt`, not the room's creation date.
+
+    **Query params**
+    - `page` (default `1`, minimum `1`).
+    - `limit` (default `10`, clamped to `1`–`100`).
+
+    **Response (`data`)**: `{ currentCount, totalCount, communities[] }`. Each community carries `isMember`, `lastMessage` (`null` if none), `createdBy` (resolved creator, or `null` if that user can't be found), and `unreadMessageCount`.
+  type: text/markdown
+
 examples:
-  - name: Success
+  - name: Success (member)
     request:
       url: "{{BASE}}/communities/user-communities"
       method: GET
@@ -98,40 +117,10 @@ examples:
                       "joinedAt": "2026-01-14T14:38:36.476Z"
                     },
                     {
-                      "userId": "6929a35296b1c0a6612823bf",
-                      "fullName": "Paul Jibola",
-                      "_id": "6967aa6d41c1974a7a003ffb",
-                      "joinedAt": "2026-01-14T14:38:37.318Z"
-                    },
-                    {
                       "userId": "692036dc786d845942868f78",
                       "fullName": "Fawaz Abdganiyu",
                       "_id": "6967aa8941c1974a7a00401d",
                       "joinedAt": "2026-01-14T14:39:05.629Z"
-                    },
-                    {
-                      "userId": "692036dc786d845942868f78",
-                      "fullName": "Fawaz Abdganiyu",
-                      "_id": "6967aa8a41c1974a7a004021",
-                      "joinedAt": "2026-01-14T14:39:06.132Z"
-                    },
-                    {
-                      "userId": "690b9906ea45abf381cde4ab",
-                      "fullName": "Fawaz Abdganiyu",
-                      "_id": "6968f3219f11096d75484dd6",
-                      "joinedAt": "2026-01-15T14:01:05.037Z"
-                    },
-                    {
-                      "userId": "690b9906ea45abf381cde4ab",
-                      "fullName": "Fawaz Abdganiyu",
-                      "_id": "6968f3219f11096d75484ddc",
-                      "joinedAt": "2026-01-15T14:01:05.052Z"
-                    },
-                    {
-                      "userId": "6968d3f49f11096d75483a4a",
-                      "fullName": "Adeyeye Omokorede",
-                      "_id": "6969061d9f11096d7548610a",
-                      "joinedAt": "2026-01-15T15:22:05.375Z"
                     },
                     {
                       "userId": "690c58c445047c4e4030fe01",
@@ -159,16 +148,8 @@ examples:
                       "city": "Lagos"
                     },
                     "photo": "",
-                    "profile": "Intern",
                     "skills": [
                       "Team work"
-                    ],
-                    "mentorshipType": [
-                      "Peer to Peer",
-                      "Group",
-                      "One to One",
-                      "Peer-to-Peer",
-                      "One-to-One"
                     ],
                     "averageRating": 0,
                     "createdAt": "2025-11-28T13:27:46.791Z",
@@ -176,9 +157,6 @@ examples:
                   },
                   "skills": [],
                   "limit": 100,
-                  "mentorshipData": {
-                    "isActive": true
-                  },
                   "rules": [
                     "No bias discussion of best developers",
                     "No disrespects or insults to other developers",
@@ -193,18 +171,95 @@ examples:
                     "roomId": "6967533ac6a42bcbfbbb9397",
                     "senderId": "690c58c445047c4e4030fe01",
                     "username": "Ericsson Raphael",
-                    "replyTo": "696a2a42d8ebfb5489f4a00a",
-                    "isThreaded": true,
-                    "threadId": "696a2a42d8ebfb5489f4a00a",
                     "content": "Hi",
                     "status": "sent",
-                    "deliveredCount": 0,
-                    "readCount": 0,
                     "timestamp": "2026-01-16T15:46:17.974Z",
                     "createdAt": "2026-01-16T15:46:17.974Z",
                     "updatedAt": "2026-01-16T15:46:17.974Z"
                   },
-                  "unreadMessageCount": 0
+                  "unreadMessageCount": 3
+                }
+              ]
+            }
+          }
+  - name: Success (platform admin, non-member community)
+    request:
+      url: "{{BASE}}/communities/user-communities?page=1&limit=10"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "User communities retrieved successfully",
+            "data": {
+              "currentCount": 1,
+              "totalCount": 4,
+              "communities": [
+                {
+                  "_id": "6acfa92a1874ba59e07dede4",
+                  "roomName": "Frontend Developers",
+                  "photo": "",
+                  "members": [
+                    {
+                      "userId": "6929a35296b1c0a6612823bf",
+                      "fullName": "Paul Jibola",
+                      "occupation": "Developer",
+                      "role": "Intern",
+                      "joinedAt": "2026-10-14T16:09:14.736Z"
+                    }
+                  ],
+                  "roomTypes": "community",
+                  "description": "A community for frontend developers to share knowledge and grow their skills.",
+                  "admin": [
+                    "6929a35296b1c0a6612823bf"
+                  ],
+                  "createdBy": {
+                    "_id": "6929a35296b1c0a6612823bf",
+                    "occupation": "Developer",
+                    "firstName": "Paul",
+                    "lastName": "Jibola",
+                    "email": "paul.elugbaju@tobamsgroup.com",
+                    "photo": ""
+                  },
+                  "status": "active",
+                  "isDeleted": false,
+                  "restrictedUsers": [],
+                  "skills": [],
+                  "limit": 100,
+                  "rules": [
+                    "Keep discussions respectful and constructive.",
+                    "No spam, self-promotion, or unsolicited advertisements."
+                  ],
+                  "industry": "Information Technology",
+                  "createdAt": "2026-10-14T16:09:14.788Z",
+                  "updatedAt": "2026-10-14T16:09:14.788Z",
+                  "isMember": false,
+                  "lastMessage": {
+                    "_id": "6ad119aea1c91d6ea9520b10",
+                    "roomId": "6acfa92a1874ba59e07dede4",
+                    "senderId": "6929a35296b1c0a6612823bf",
+                    "username": "Paul Jibola",
+                    "content": "Anyone used the new CSS nesting syntax yet?",
+                    "status": "sent",
+                    "timestamp": "2026-10-20T09:04:11.000Z",
+                    "createdAt": "2026-10-20T09:04:11.000Z",
+                    "updatedAt": "2026-10-20T09:04:11.000Z"
+                  },
+                  "unreadMessageCount": 5
                 }
               ]
             }

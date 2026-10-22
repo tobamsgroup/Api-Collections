@@ -14,7 +14,7 @@ http:
     type: json
     data: |-
       {
-        "status": "active" | "paused" | "archived" | "deactivated"
+        "status": "active"
       }
   auth: inherit
 
@@ -24,3 +24,122 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Sets a community's moderation status — the only way to pause, archive, or deactivate one (there is no community-level delete other than the soft-delete endpoint).
+
+    **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE). A community's own admin cannot call this.
+
+    `status` must be one of `active`, `paused`, `archived`, `deactivated` (`CommunityStatus`). A non-`active` status hides the community from `GET /communities` and `GET /communities/user-communities` for non-admin viewers — see those endpoints. There's no change-detection: setting the same status again still succeeds.
+
+    **Path params**
+    - `communityId` (24-hex, required).
+
+    **Body**
+    - `status` (required, one of the four values above).
+
+    **Errors**
+    - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
+    - `400` `status: status must be one of: active, paused, archived, deactivated` (unknown value).
+    - `404` `Community not found`.
+  type: text/markdown
+
+examples:
+  - name: "Success (pause)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d/status"
+      method: PATCH
+      params:
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "status": "paused"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Community status updated successfully",
+            "data": {
+              "_id": "696751b1c6a42bcbfbbb937d",
+              "roomName": "Backend developers",
+              "status": "paused",
+              "isDeleted": false,
+              "admin": [
+                "6929a35296b1c0a6612823bf"
+              ],
+              "createdBy": "6929a35296b1c0a6612823bf",
+              "industry": "Information Technology",
+              "limit": 100,
+              "createdAt": "2026-01-14T08:20:01.328Z",
+              "updatedAt": "2026-10-22T09:30:11.001Z"
+            }
+          }
+  - name: "Bad request (invalid status)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d/status"
+      method: PATCH
+      params:
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "status": "disabled"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "status: status must be one of: active, paused, archived, deactivated"
+          }
+  - name: "Not found"
+    request:
+      url: "{{BASE}}/communities/6717a0c4e4b0a1b2c3d4ffff/status"
+      method: PATCH
+      params:
+        - name: communityId
+          value: "6717a0c4e4b0a1b2c3d4ffff"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "status": "archived"
+          }
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Community not found"
+          }

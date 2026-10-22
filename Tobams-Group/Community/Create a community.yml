@@ -37,6 +37,23 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: true
 
+docs:
+  content: |-
+    Creates a community. The creator becomes its sole member and its sole `admin`.
+
+    **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted).
+
+    **Body:** `multipart/form-data` (to include an optional `photo`) or plain JSON (text fields only). `communityName`, `industry` (≤100 chars), `description` (≤1000 chars) are required and trimmed. `rules` is optional — an array of non-blank strings (≤500 chars each); as a multipart text field it may be a JSON-array string or a single plain string (one rule).
+
+    **Duplicate names:** `roomName` must be unique; a second community with the same name is a `409`.
+
+    **Photo (optional):** JPEG/PNG/GIF/WebP, ≤4MB. Uploaded only after the duplicate-name check passes, and removed again if the insert itself then fails — a rejected request never leaves an orphaned object in S3.
+
+    **Errors**
+    - `400` validation error, e.g. `communityName: communityName is required; industry: industry is required; description: description is required` (any required field blank).
+    - `409` `Community already exists` (duplicate `roomName`).
+  type: text/markdown
+
 examples:
   - name: Success
     request:
@@ -256,4 +273,56 @@ examples:
               "createdAt": "2026-10-21T06:42:04.116Z",
               "updatedAt": "2026-10-21T06:42:04.116Z"
             }
+          }
+  - name: "Bad request (missing required fields)"
+    request:
+      url: "{{BASE}}/communities"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "communityName": "",
+              "industry": "",
+              "description": ""
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "communityName: communityName is required; industry: industry is required; description: description is required"
+          }
+  - name: "Conflict (duplicate name)"
+    request:
+      url: "{{BASE}}/communities"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+              "communityName": "Backend developers",
+              "industry": "Information Technology",
+              "description": "Another community with the same name"
+          }
+    response:
+      status: 409
+      statusText: Conflict
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "DuplicateError",
+            "message": "Community already exists"
           }

@@ -24,6 +24,19 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: true
 
+docs:
+  content: |-
+    Lists every community (not scoped to the caller's own memberships — see `GET /communities/user-communities` for that).
+
+    **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted).
+
+    **Visibility:** a non-admin caller never sees `paused`/`archived`/`deactivated` communities (a legacy row with no `status` field at all counts as active and is shown). A platform admin sees every status.
+
+    **Query params:** `page`, `limit` — hand-parsed in the controller (not the shared `parsePagination` middleware), default to `1`/`10` if omitted or non-numeric, with **no upper cap** on `limit`.
+
+    **Response (`data`):** `{ currentCount, totalCount, communities[] }`. Each community carries `isMember` (always known, since the route requires auth), `lastMessage` (`null` if none), and `createdBy` (resolved creator, or `null` if that user can no longer be found).
+  type: text/markdown
+
 examples:
   - name: Success
     request:

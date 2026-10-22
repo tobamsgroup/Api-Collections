@@ -20,8 +20,26 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
+docs:
+  content: |-
+    Fetches a single community. Any authenticated user may view any community by id — there's no membership check on this read.
+
+    **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted).
+
+    **Response:** `createdBy` is the creator's resolved profile object, or `null` if that user can no longer be found — never a bare name string. `isMember` reflects whether the caller (always known, since the route requires auth) is in `members`.
+
+    The result is cached (`Caches.getUpdatedProfileById`/`addUpdatedProfile`) and cleared on every update, so a read immediately after an edit elsewhere is consistent, not stale.
+
+    **Path params**
+    - `communityId` (24-hex, required — checked in the service, not by route-level `validateParams`).
+
+    **Errors**
+    - `400` `Invalid community ID` (malformed id).
+    - `404` `Community not found`.
+  type: text/markdown
+
 examples:
-  - name: Get a community by ID
+  - name: "Success"
     request:
       url: "{{BASE}}/communities/:communityId"
       method: GET
@@ -30,28 +48,17 @@ examples:
           value: 696751b1c6a42bcbfbbb937d
           type: path
     response:
-      statusText: "200"
+      status: 200
+      statusText: OK
       headers:
         - name: Date
           value: Wed, 14 Jan 2026 11:15:47 GMT
         - name: Content-Type
-          value: application/json
-        - name: Transfer-Encoding
-          value: chunked
-        - name: Connection
-          value: keep-alive
-        - name: CF-RAY
-          value: 9bdcb7a30ceb8897-LHR
+          value: application/json; charset=utf-8
         - name: access-control-allow-credentials
           value: "true"
-        - name: access-control-allow-headers
-          value: "*"
-        - name: access-control-allow-methods
-          value: GET, POST, PATCH, DELETE, PUT
         - name: access-control-allow-origin
           value: "*"
-        - name: Content-Encoding
-          value: br
         - name: content-security-policy
           value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
         - name: cross-origin-opener-policy
@@ -64,12 +71,8 @@ examples:
           value: ?1
         - name: referrer-policy
           value: no-referrer
-        - name: rndr-id
-          value: c99a5cc7-f6b9-40eb
         - name: strict-transport-security
           value: max-age=31536000; includeSubDomains
-        - name: vary
-          value: Accept-Encoding
         - name: x-content-type-options
           value: nosniff
         - name: x-dns-prefetch-control
@@ -80,55 +83,114 @@ examples:
           value: SAMEORIGIN
         - name: x-permitted-cross-domain-policies
           value: none
-        - name: x-render-origin-server
-          value: Render
-        - name: x-request-id
-          value: 1768389346465-v0bjuekly
         - name: x-xss-protection
           value: "0"
-        - name: cf-cache-status
-          value: DYNAMIC
-        - name: Server
-          value: cloudflare
-        - name: alt-svc
-          value: h3=":443"; ma=86400
       body:
         type: json
         data: |-
           {
-              "success": true,
-              "message": "Community retrieved successfully",
-              "data": {
-                  "mentorshipData": {
-                      "isActive": true
-                  },
-                  "photo": "",
-                  "_id": "696751b1c6a42bcbfbbb937d",
-                  "roomName": "Backend developers",
-                  "participants": [],
-                  "members": [
-                      {
-                          "userId": "6929a35296b1c0a6612823bf",
-                          "fullName": "Paul Jibola",
-                          "_id": "696751b1c6a42bcbfbbb937e",
-                          "joinedAt": "2026-01-14T08:20:01.321Z"
-                      }
-                  ],
-                  "roomTypes": "community",
-                  "description": "Very beneficial community of developers",
-                  "admin": [
-                      "6929a35296b1c0a6612823bf"
-                  ],
-                  "createdBy": "Paul Jibola",
-                  "skills": [],
-                  "limit": 100,
-                  "rules": [
-                      "No discussion of religion or politics",
-                      "No disrespects or insults, you will be removed from the group if found guilty",
-                      "Posts from companies or promoting paid services (books, courses, tools, events)"
-                  ],
-                  "industry": "Information Technology",
-                  "createdAt": "2026-01-14T08:20:01.328Z",
-                  "updatedAt": "2026-01-14T08:20:01.328Z"
-              }
+            "success": true,
+            "message": "Community retrieved successfully",
+            "data": {
+              "_id": "696751b1c6a42bcbfbbb937d",
+              "roomName": "Backend developers",
+              "photo": "",
+              "members": [
+                {
+                  "userId": "6929a35296b1c0a6612823bf",
+                  "fullName": "Paul Jibola",
+                  "_id": "69678ce69465cf43d45a1853",
+                  "joinedAt": "2026-01-14T12:32:38.570Z"
+                },
+                {
+                  "userId": "692036dc786d845942868f78",
+                  "fullName": "Fawaz Abdganiyu",
+                  "_id": "69677dc317120a8846fbe988",
+                  "joinedAt": "2026-01-14T11:28:03.628Z"
+                }
+              ],
+              "roomTypes": "community",
+              "description": "Very beneficial community of developers",
+              "admin": [
+                "6929a35296b1c0a6612823bf"
+              ],
+              "createdBy": {
+                "_id": "6929a35296b1c0a6612823bf",
+                "occupation": "Developer",
+                "bio": "Software developer with 3 years of experience",
+                "firstName": "Paul",
+                "lastName": "Jibola",
+                "email": "paul.elugbaju@tobamsgroup.com",
+                "location": {
+                  "country": "Nigeria",
+                  "state": "Nigeria",
+                  "city": "Lagos"
+                },
+                "photo": "",
+                "skills": [
+                  "Team work"
+                ],
+                "averageRating": 0,
+                "createdAt": "2025-11-28T13:27:46.791Z",
+                "updatedAt": "2026-01-28T14:06:29.241Z"
+              },
+              "status": "active",
+              "isDeleted": false,
+              "restrictedUsers": [],
+              "skills": [],
+              "limit": 100,
+              "rules": [
+                "No discussion of religion or politics",
+                "No disrespects or insults, you will be removed from the group if found guilty",
+                "Posts from companies or promoting paid services (books, courses, tools, events)"
+              ],
+              "industry": "Information Technology",
+              "createdAt": "2026-01-14T08:20:01.328Z",
+              "updatedAt": "2026-01-14T12:32:38.579Z",
+              "isMember": false
+            }
+          }
+  - name: "Bad request (malformed id)"
+    request:
+      url: "{{BASE}}/communities/:communityId"
+      method: GET
+      params:
+        - name: communityId
+          value: not-an-object-id
+          type: path
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Invalid community ID"
+          }
+  - name: "Not found"
+    request:
+      url: "{{BASE}}/communities/:communityId"
+      method: GET
+      params:
+        - name: communityId
+          value: 6717a0c4e4b0a1b2c3d4ffff
+          type: path
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Community not found"
           }

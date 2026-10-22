@@ -14,9 +14,9 @@ http:
     type: json
     data: |-
       {
-        "description":"",
+        "description": "",
         "rules": [],
-        "industry":""
+        "industry": ""
       }
   auth: inherit
 
@@ -26,3 +26,216 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Edits a community's `description`, `rules`, `industry`, and/or `photo`.
+
+    **Access (changed):** only a platform admin (`ADMIN`/`SUPER_ADMIN`) or a user listed in the community's own `admin` array may edit it — text or photo, any field. Every other member gets `403`. Before this, any member could edit a community.
+
+    **Body:** JSON (`description`/`rules`/`industry` only) or `multipart/form-data` (also lets you send a new `photo` file in the same request). At least one of `description`, `rules`, `industry`, `photo` is required. `rules` is an array of non-blank strings (≤500 chars each); as a multipart text field it may be a JSON-array string (`'["Be kind"]'`) or a single plain string (treated as one rule).
+
+    **Photo replacement:** the new file is uploaded only after the authorization check passes, and only JPEG/PNG/GIF/WebP ≤4MB is accepted. The old photo is deleted only once the new URL is saved, and only if it's an object this service actually uploaded (`communities/` folder) — a photo from elsewhere, or no previous photo, is left alone. The replaced photo is read from the same write that saves the new one, so two admins changing the photo at the same moment each delete exactly what they individually replaced; no object is ever orphaned or double-deleted.
+
+    **Path params**
+    - `communityId` (24-hex, required).
+
+    **Errors**
+    - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id, caught before the handler runs).
+    - `400` `At least one field (description, rules, industry, photo) is required` (empty body).
+    - `403` `Only a community admin can edit the community` (platform non-admin caller who also isn't in the community's `admin` array).
+    - `404` `Community not found` — **only for a non-platform-admin caller**: resolving the community-admin check requires loading the community first, so a missing id surfaces here. A platform admin skips that lookup (no community-admin check to run) and goes straight to the update — on a missing id that comes back as `400` `No update made`, not `404`.
+  type: text/markdown
+
+examples:
+  - name: "Success (community admin, text fields)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d"
+      method: PATCH
+      params:
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "description": "Backend developers across every stack — Node, Go, Java, and more.",
+            "rules": [
+              "No discussion of religion or politics",
+              "No disrespects or insults, you will be removed from the group if found guilty"
+            ],
+            "industry": "Information Technology"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Community updated successfully",
+            "data": {
+              "_id": "696751b1c6a42bcbfbbb937d",
+              "roomName": "Backend developers",
+              "photo": "",
+              "members": [
+                {
+                  "userId": "6929a35296b1c0a6612823bf",
+                  "fullName": "Paul Jibola",
+                  "_id": "69678ce69465cf43d45a1853",
+                  "joinedAt": "2026-01-14T12:32:38.570Z"
+                }
+              ],
+              "roomTypes": "community",
+              "description": "Backend developers across every stack — Node, Go, Java, and more.",
+              "admin": [
+                "6929a35296b1c0a6612823bf"
+              ],
+              "createdBy": {
+                "_id": "6929a35296b1c0a6612823bf",
+                "occupation": "Developer",
+                "firstName": "Paul",
+                "lastName": "Jibola",
+                "email": "paul.elugbaju@tobamsgroup.com",
+                "photo": ""
+              },
+              "status": "active",
+              "isDeleted": false,
+              "restrictedUsers": [],
+              "skills": [],
+              "limit": 100,
+              "rules": [
+                "No discussion of religion or politics",
+                "No disrespects or insults, you will be removed from the group if found guilty"
+              ],
+              "industry": "Information Technology",
+              "createdAt": "2026-01-14T08:20:01.328Z",
+              "updatedAt": "2026-10-22T09:15:03.102Z"
+            }
+          }
+  - name: "Success (platform admin, photo swap)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d"
+      method: PATCH
+      params:
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+      body:
+        type: multipart-form
+        data:
+          - name: photo
+            type: file
+            value:
+              - /Users/fawazabdganiyu/Downloads/new-community-logo.png
+            contentType: image/png
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Community updated successfully",
+            "data": {
+              "_id": "696751b1c6a42bcbfbbb937d",
+              "roomName": "Backend developers",
+              "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/communities/1792565912345_new-community-logo.png",
+              "members": [
+                {
+                  "userId": "6929a35296b1c0a6612823bf",
+                  "fullName": "Paul Jibola",
+                  "_id": "69678ce69465cf43d45a1853",
+                  "joinedAt": "2026-01-14T12:32:38.570Z"
+                }
+              ],
+              "roomTypes": "community",
+              "description": "Backend developers across every stack — Node, Go, Java, and more.",
+              "admin": [
+                "6929a35296b1c0a6612823bf"
+              ],
+              "createdBy": {
+                "_id": "6929a35296b1c0a6612823bf",
+                "occupation": "Developer",
+                "firstName": "Paul",
+                "lastName": "Jibola",
+                "email": "paul.elugbaju@tobamsgroup.com",
+                "photo": ""
+              },
+              "status": "active",
+              "isDeleted": false,
+              "restrictedUsers": [],
+              "skills": [],
+              "limit": 100,
+              "rules": [
+                "No discussion of religion or politics",
+                "No disrespects or insults, you will be removed from the group if found guilty"
+              ],
+              "industry": "Information Technology",
+              "createdAt": "2026-01-14T08:20:01.328Z",
+              "updatedAt": "2026-10-22T09:18:32.551Z"
+            }
+          }
+  - name: "Forbidden (not a community admin)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d"
+      method: PATCH
+      params:
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "description": "Trying to edit as a regular member"
+          }
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Only a community admin can edit the community"
+          }
+  - name: "Bad request (empty body)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d"
+      method: PATCH
+      params:
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+      body:
+        type: json
+        data: |-
+          {}
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": ": At least one field (description, rules, industry, photo) is required"
+          }

@@ -18,3 +18,65 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Soft-deletes a community: sets `isDeleted: true` and `deletedAt`, nothing else. Members, messages, and the room document itself are left alone — it's a flag that every listing (and `GET`/`PATCH .../status`) treats as gone.
+
+    **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE).
+
+    **Path params**
+    - `communityId` (24-hex, required).
+
+    **Response:** `data: null` on success.
+
+    **Errors**
+    - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
+    - `404` `Community not found` — a missing id and an **already soft-deleted** community give the same 404 (the repository filters out `isDeleted: true` rows), so this endpoint can't tell you which one it was.
+  type: text/markdown
+
+examples:
+  - name: "Success"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d"
+      method: DELETE
+      params:
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Community deleted successfully",
+            "data": null
+          }
+  - name: "Not found (missing or already deleted)"
+    request:
+      url: "{{BASE}}/communities/6717a0c4e4b0a1b2c3d4ffff"
+      method: DELETE
+      params:
+        - name: communityId
+          value: "6717a0c4e4b0a1b2c3d4ffff"
+          type: path
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Community not found"
+          }

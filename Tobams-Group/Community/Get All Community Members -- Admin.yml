@@ -24,3 +24,101 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Lists a community's members.
+
+    **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE).
+
+    **Pagination:** the shared `parsePagination` middleware — `page` default `1`, `limit` default `20`, capped at `100`. A bad value is `400` before the handler runs. Pagination is in-memory over `community.members` (capped at 100 members per community), not a DB-level skip/limit.
+
+    **Response (`data`):** `{ members, currentCount, totalCount }`. Each member carries `isBanned` (whether their `userId` is in `restrictedUsers`).
+
+    This read doesn't exclude a soft-deleted community — `findRoomById` has no `isDeleted` filter, unlike the listing endpoints.
+
+    **Path params**
+    - `communityId` (24-hex, required — validated by route-level `validateParams`).
+
+    **Errors**
+    - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
+    - `404` `Community not found`.
+  type: text/markdown
+
+examples:
+  - name: "Success"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d/members?page=1&limit=20"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "20"
+          type: query
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Community members retrieved successfully",
+            "data": {
+              "members": [
+                {
+                  "userId": "6929a35296b1c0a6612823bf",
+                  "fullName": "Paul Jibola",
+                  "_id": "69678ce69465cf43d45a1853",
+                  "joinedAt": "2026-01-14T12:32:38.570Z",
+                  "isBanned": false
+                },
+                {
+                  "userId": "690c58c445047c4e4030fe01",
+                  "fullName": "Ericsson Raphael",
+                  "occupation": "Dev",
+                  "role": "Talent",
+                  "joinedAt": "2026-01-16T15:46:03.025Z",
+                  "isBanned": true
+                }
+              ],
+              "currentCount": 2,
+              "totalCount": 2
+            }
+          }
+  - name: "Not found"
+    request:
+      url: "{{BASE}}/communities/6717a0c4e4b0a1b2c3d4ffff/members?page=1&limit=20"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "20"
+          type: query
+        - name: communityId
+          value: "6717a0c4e4b0a1b2c3d4ffff"
+          type: path
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Community not found"
+          }

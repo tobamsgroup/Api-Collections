@@ -13,6 +13,12 @@ http:
     - name: memberId
       value: ""
       type: path
+  body:
+    type: json
+    data: |-
+      {
+        "ban": false
+      }
   auth: inherit
 
 settings:
@@ -21,3 +27,185 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs:
+  content: |-
+    Removes a member from a community and, optionally, bans them from rejoining. Despite the file name, `ban` is optional — this is the general "remove member" endpoint, not ban-only.
+
+    **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE). The underlying service also lets a community's own `admin` remove a member, and backs the `community:leave` socket event for self-leave — but neither is reachable through this REST route, which is gated to platform admins only.
+
+    **`memberId` is the removed user's `userId`**, not a member sub-document's own `_id` (`GET /communities/:communityId/members` returns both on older rows).
+
+    **Body**
+    - `ban` (optional boolean). When `true`, `memberId` is also added to the community's `restrictedUsers`, which blocks them from rejoining (`AuthorizationError` on the next join attempt).
+    - `reason` (optional string, ≤500 chars) — accepted by validation but **not persisted anywhere** today; it's a known gap, not documented behavior to build on.
+
+    **Path params**
+    - `communityId`, `memberId` (both 24-hex, required).
+
+    **Errors**
+    - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` / `memberId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
+    - `400` `User not a member of the community` (`memberId` isn't currently a member).
+    - `404` `Community not found`.
+  type: text/markdown
+
+examples:
+  - name: "Success (remove only)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d/members/692036dc786d845942868f78"
+      method: DELETE
+      params:
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+        - name: memberId
+          value: "692036dc786d845942868f78"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "ban": false
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Community member removed successfully",
+            "data": {
+              "_id": "696751b1c6a42bcbfbbb937d",
+              "roomName": "Backend developers",
+              "members": [
+                {
+                  "userId": "6929a35296b1c0a6612823bf",
+                  "fullName": "Paul Jibola",
+                  "_id": "69678ce69465cf43d45a1853",
+                  "joinedAt": "2026-01-14T12:32:38.570Z"
+                }
+              ],
+              "admin": [
+                "6929a35296b1c0a6612823bf"
+              ],
+              "restrictedUsers": [],
+              "updatedAt": "2026-10-22T09:40:02.118Z"
+            }
+          }
+  - name: "Success (remove and ban)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d/members/690c58c445047c4e4030fe01"
+      method: DELETE
+      params:
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+        - name: memberId
+          value: "690c58c445047c4e4030fe01"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "ban": true,
+            "reason": "Repeated harassment of other members"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Community member removed successfully",
+            "data": {
+              "_id": "696751b1c6a42bcbfbbb937d",
+              "roomName": "Backend developers",
+              "members": [
+                {
+                  "userId": "6929a35296b1c0a6612823bf",
+                  "fullName": "Paul Jibola",
+                  "_id": "69678ce69465cf43d45a1853",
+                  "joinedAt": "2026-01-14T12:32:38.570Z"
+                }
+              ],
+              "admin": [
+                "6929a35296b1c0a6612823bf"
+              ],
+              "restrictedUsers": [
+                "690c58c445047c4e4030fe01"
+              ],
+              "updatedAt": "2026-10-22T09:41:17.804Z"
+            }
+          }
+  - name: "Bad request (not a member)"
+    request:
+      url: "{{BASE}}/communities/696751b1c6a42bcbfbbb937d/members/6968d3f49f11096d75483a4a"
+      method: DELETE
+      params:
+        - name: communityId
+          value: "696751b1c6a42bcbfbbb937d"
+          type: path
+        - name: memberId
+          value: "6968d3f49f11096d75483a4a"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "ban": false
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "User not a member of the community"
+          }
+  - name: "Not found"
+    request:
+      url: "{{BASE}}/communities/6717a0c4e4b0a1b2c3d4ffff/members/692036dc786d845942868f78"
+      method: DELETE
+      params:
+        - name: communityId
+          value: "6717a0c4e4b0a1b2c3d4ffff"
+          type: path
+        - name: memberId
+          value: "692036dc786d845942868f78"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "ban": false
+          }
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Community not found"
+          }
