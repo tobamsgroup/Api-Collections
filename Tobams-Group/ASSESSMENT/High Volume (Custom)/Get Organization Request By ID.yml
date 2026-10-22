@@ -1,5 +1,5 @@
 info:
-  name: " Get Organization Request By ID"
+  name: "Get Organization Request By ID"
   type: http
   seq: 2
 
@@ -10,10 +10,110 @@ http:
     - name: id
       value: 507f1f77bcf86cd799439011
       type: path
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs:
+  content: |-
+    Fetches a single organisation request. An admin may fetch any request; an `ORGANISATION` account only one whose `contactPersonEmail` matches its own `Contact.email` (case-insensitive) — a request owned by someone else is a 403, not a leaked read.
+
+    **Access:** `ADMIN`/`SUPER_ADMIN`/`ORGANISATION` only, token required (this was public before PR #869).
+
+    **Path params**
+    - `id` (Mongo `_id`, required). Not yet validated at the route level — a malformed id surfaces as a Mongoose cast error (500), not a 400 (tracked known gap).
+
+    **Errors**
+    - `401` `No Token Provided` (no bearer token).
+    - `403` `Restricted Action, Unauthorized Access❗` (wrong role, or an `ADMIN` without `SUPER`/`ASSESSMENT_MANAGER` privilege).
+    - `404` `Request with id: <id> not found!`.
+    - `403` `You are not authorized to access this organization request` (an organisation naming a request it doesn't own) — checked **after** the 404, so a missing id never leaks as "not yours".
+  type: text/markdown
+
+examples:
+  - name: "Success (admin)"
+    request:
+      url: "{{BASE}}/assessment/organization-request/507f1f77bcf86cd799439011"
+      method: GET
+      params:
+        - name: id
+          value: "507f1f77bcf86cd799439011"
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Organization request retrieved successfully",
+            "data": {
+              "_id": "507f1f77bcf86cd799439011",
+              "organisationName": "Tech Innovations Ltd",
+              "contactPersonName": "John Smith",
+              "contactPersonEmail": "john.smith@techinnovations.com",
+              "assessmentPurpose": "Pre-Hiring Screening",
+              "audienceType": "New Employees",
+              "participantNumber": 25,
+              "assessmentType": "Technical Skills",
+              "reasonForAssessment": "Team Expansion",
+              "assessmentReadinessTimeline": "Within 2 Weeks",
+              "specialInstructions": "Please focus on Python and JavaScript skills",
+              "createdAt": "2026-04-17T10:30:00Z",
+              "updatedAt": "2026-04-17T10:30:00Z"
+            }
+          }
+  - name: "Forbidden (organisation, not the owner)"
+    request:
+      url: "{{BASE}}/assessment/organization-request/507f1f77bcf86cd799439011"
+      method: GET
+      params:
+        - name: id
+          value: "507f1f77bcf86cd799439011"
+          type: path
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "You are not authorized to access this organization request"
+          }
+  - name: "Not found"
+    request:
+      url: "{{BASE}}/assessment/organization-request/507f1f77bcf86cd79943ffff"
+      method: GET
+      params:
+        - name: id
+          value: "507f1f77bcf86cd79943ffff"
+          type: path
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Request with id: 507f1f77bcf86cd79943ffff not found!"
+          }

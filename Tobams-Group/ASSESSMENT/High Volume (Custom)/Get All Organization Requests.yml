@@ -6,7 +6,9 @@ info:
 http:
   method: GET
   url: "{{BASE}}/assessment/organization-request"
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
 
 settings:
   encodeUrl: true
@@ -14,17 +16,79 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
+docs:
+  content: |-
+    Lists organisation assessment requests. An admin (`ADMIN` with `SUPER` or `ASSESSMENT_MANAGER` privilege, or `SUPER_ADMIN`) sees every request; an `ORGANISATION` account sees only the requests whose `contactPersonEmail` matches its own `Contact.email` (case-insensitive). Any other role, or an organisation with no email on its token, is a 403. An empty match is `200 []`, never a 404.
+
+    **Access:** `ADMIN`/`SUPER_ADMIN`/`ORGANISATION` only, token required (this was public before PR #869).
+
+    **Errors**
+    - `401` `No Token Provided` (no bearer token).
+    - `403` `Restricted Action, Unauthorized Access❗` (wrong role, or an `ADMIN` without `SUPER`/`ASSESSMENT_MANAGER` privilege).
+  type: text/markdown
+
 examples:
-  - name: Expected Response
+  - name: "Success (admin, every request)"
     request:
       url: "{{BASE}}/assessment/organization-request"
       method: GET
     response:
       status: 200
       statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
       body:
-        type: text
-        data: |
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Organization requests retrieved successfully",
+            "data": [
+              {
+                "_id": "507f1f77bcf86cd799439011",
+                "organisationName": "Tech Innovations Ltd",
+                "contactPersonName": "John Smith",
+                "contactPersonEmail": "john.smith@techinnovations.com",
+                "assessmentPurpose": "Pre-Hiring Screening",
+                "audienceType": "New Employees",
+                "participantNumber": 25,
+                "assessmentType": "Technical Skills",
+                "reasonForAssessment": "Team Expansion",
+                "assessmentReadinessTimeline": "Within 2 Weeks",
+                "specialInstructions": "Please focus on Python and JavaScript skills",
+                "createdAt": "2026-04-17T10:30:00Z",
+                "updatedAt": "2026-04-17T10:30:00Z"
+              },
+              {
+                "_id": "507f1f77bcf86cd799439099",
+                "organisationName": "Acme Corp",
+                "contactPersonName": "Jane Doe",
+                "contactPersonEmail": "jane.doe@acme.com",
+                "assessmentPurpose": "Post-Training Evaluation",
+                "audienceType": "Existing Staff",
+                "participantNumber": 50,
+                "assessmentType": "Soft Skills",
+                "reasonForAssessment": "Leadership Request",
+                "assessmentReadinessTimeline": "Within a Month",
+                "createdAt": "2026-05-02T08:00:00Z",
+                "updatedAt": "2026-05-02T08:00:00Z"
+              }
+            ]
+          }
+  - name: "Success (organisation, own requests only)"
+    request:
+      url: "{{BASE}}/assessment/organization-request"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
           {
             "success": true,
             "message": "Organization requests retrieved successfully",
@@ -45,4 +109,40 @@ examples:
                 "updatedAt": "2026-04-17T10:30:00Z"
               }
             ]
+          }
+  - name: "Unauthorized (no token)"
+    request:
+      url: "{{BASE}}/assessment/organization-request"
+      method: GET
+    response:
+      status: 401
+      statusText: Unauthorized
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthenticationError",
+            "message": "No Token Provided"
+          }
+  - name: "Forbidden (wrong role)"
+    request:
+      url: "{{BASE}}/assessment/organization-request"
+      method: GET
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
           }

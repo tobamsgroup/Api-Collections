@@ -10,6 +10,14 @@ http:
     - name: id
       value: 507f1f77bcf86cd799439011
       type: path
+  body:
+    type: json
+    data: |-
+      {
+        "participantNumber": 40,
+        "assessmentReadinessTimeline": "Immediately",
+        "specialInstructions": "Updated: now also covering SQL fundamentals"
+      }
   auth:
     type: bearer
     token: "{{org_access}}"
@@ -19,3 +27,124 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs:
+  content: |-
+    Partial update (any subset of the create-body fields). An admin may update any request; an `ORGANISATION` account only one it owns (`contactPersonEmail` matches its own `Contact.email`, case-insensitive).
+
+    **`contactPersonEmail` is admin-only to change** — it's the ownership key, so an organisation changing it could hand its own request to another account or drop it out of its own view. An organisation resending its own current email (any case) is fine; changing it to any other value is a 403, and nothing is written.
+
+    **Access:** `ADMIN`/`SUPER_ADMIN`/`ORGANISATION` only, token required (this was open to any organisation before PR #869).
+
+    **Path params**
+    - `id` (Mongo `_id`, required). Not yet validated at the route level — a malformed id surfaces as a Mongoose cast error (500), not a 400 (tracked known gap).
+
+    **Errors**
+    - `401` `No Token Provided` (no bearer token).
+    - `403` `Restricted Action, Unauthorized Access❗` (wrong role, or an `ADMIN` without `SUPER`/`ASSESSMENT_MANAGER` privilege).
+    - `404` `Request with id: <id> not found!` — checked before ownership, so a missing id never leaks as "not yours".
+    - `403` `You are not authorized to access this organization request` (an organisation naming a request it doesn't own).
+    - `403` `Only an admin can change the contact email of an organization request` (a non-admin owner sending a different `contactPersonEmail`).
+  type: text/markdown
+
+examples:
+  - name: "Success (organisation, own request)"
+    request:
+      url: "{{BASE}}/assessment/organization-request/507f1f77bcf86cd799439011"
+      method: PATCH
+      params:
+        - name: id
+          value: "507f1f77bcf86cd799439011"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "participantNumber": 40,
+            "assessmentReadinessTimeline": "Immediately",
+            "specialInstructions": "Updated: now also covering SQL fundamentals"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Organization request updated successfully",
+            "data": {
+              "_id": "507f1f77bcf86cd799439011",
+              "organisationName": "Tech Innovations Ltd",
+              "contactPersonName": "John Smith",
+              "contactPersonEmail": "john.smith@techinnovations.com",
+              "assessmentPurpose": "Pre-Hiring Screening",
+              "audienceType": "New Employees",
+              "participantNumber": 40,
+              "assessmentType": "Technical Skills",
+              "reasonForAssessment": "Team Expansion",
+              "assessmentReadinessTimeline": "Immediately",
+              "specialInstructions": "Updated: now also covering SQL fundamentals",
+              "createdAt": "2026-04-17T10:30:00Z",
+              "updatedAt": "2026-04-18T09:15:00Z"
+            }
+          }
+  - name: "Forbidden (changing contactPersonEmail as a non-admin)"
+    request:
+      url: "{{BASE}}/assessment/organization-request/507f1f77bcf86cd799439011"
+      method: PATCH
+      params:
+        - name: id
+          value: "507f1f77bcf86cd799439011"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "contactPersonEmail": "someone.else@example.com"
+          }
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Only an admin can change the contact email of an organization request"
+          }
+  - name: "Not found"
+    request:
+      url: "{{BASE}}/assessment/organization-request/507f1f77bcf86cd79943ffff"
+      method: PATCH
+      params:
+        - name: id
+          value: "507f1f77bcf86cd79943ffff"
+          type: path
+      body:
+        type: json
+        data: |-
+          {
+            "participantNumber": 40
+          }
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Request with id: 507f1f77bcf86cd79943ffff not found!"
+          }
