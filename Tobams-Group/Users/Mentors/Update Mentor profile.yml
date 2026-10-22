@@ -318,7 +318,68 @@ examples:
         type: text
         data: ""
 
+  - name: "Update profile photo only (multipart)"
+    request:
+      url: "{{BASE}}/mentors"
+      method: PATCH
+      body:
+        type: multipart-form
+        data:
+          - name: photo
+            type: file
+            value:
+              - /path/to/new-headshot.jpg
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Profile photo updated successfully",
+            "data": {
+              "_id": "67b84d72ab89ac59aaf73a00",
+              "userId": "67b84d72ab89ac59aaf73a01",
+              "photo": "https://tobams-group-bucket.s3.eu-west-2.amazonaws.com/profiles/1760000000000_new-headshot.jpg",
+              "bio": "Experienced technology mentor with 10+ years in software development",
+              "yearsOfExperience": 12,
+              "createdAt": "2026-01-10T10:00:00.000Z",
+              "updatedAt": "2026-10-22T09:00:00.000Z"
+            }
+          }
+  - name: "Invalid photo type"
+    request:
+      url: "{{BASE}}/mentors"
+      method: PATCH
+      body:
+        type: multipart-form
+        data:
+          - name: photo
+            type: file
+            value:
+              - /path/to/document.pdf
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Profile photo must be an image (JPEG, PNG, GIF, or WebP)"
+          }
+
 docs: |-
+  **Profile photo (multipart):** send `multipart/form-data` with a `photo` file field alongside, or instead of, any of the JSON fields below — nested fields (`availability`, etc.) must then be JSON-encoded strings. `attachProfilePhoto` runs before this controller, uploads to S3 (`profiles/` folder, JPEG/PNG/GIF/WebP only, ≤4MB) and deletes the previous photo; a photo-only request returns **200** `Profile photo updated successfully` instead of the usual 400 for an otherwise-empty body. Invalid file: **400** `Profile photo must be an image (JPEG, PNG, GIF, or WebP)` or `Profile photo must not exceed 4MB.`.
+
   `IndustryTypes { "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Energy", "Transportation and Logistics", "Real Estate", "Hospitality and Tourism", "Entertainment and Media",}`
 
   CompanySizeTypes {

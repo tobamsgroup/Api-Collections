@@ -5,7 +5,7 @@ info:
 
 http:
   method: PATCH
-  url: "{{BASE}}/talents/675bf7829a1531ce65eff35b"
+  url: "{{BASE}}/talents"
   body:
     type: json
     data: "{\r
@@ -260,3 +260,66 @@ examples:
                   "updatedAt": "2024-07-30T19:38:58.187Z"
               }
           }
+  - name: "Update profile photo only (multipart)"
+    request:
+      url: "{{BASE}}/talents"
+      method: PATCH
+      body:
+        type: multipart-form
+        data:
+          - name: photo
+            type: file
+            value:
+              - /path/to/new-headshot.jpg
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Profile photo updated successfully",
+            "data": {
+              "_id": "66a94152ae6b097012f43d20",
+              "firstName": "Alex",
+              "lastName": "Rodriguez",
+              "photo": "https://tobams-group-bucket.s3.eu-west-2.amazonaws.com/profiles/1760000000000_new-headshot.jpg",
+              "skills": ["JavaScript", "React", "Node.js", "Python"],
+              "createdAt": "2024-07-30T19:38:58.187Z",
+              "updatedAt": "2026-10-22T09:00:00.000Z"
+            }
+          }
+  - name: "Invalid photo type"
+    request:
+      url: "{{BASE}}/talents"
+      method: PATCH
+      body:
+        type: multipart-form
+        data:
+          - name: photo
+            type: file
+            value:
+              - /path/to/document.pdf
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Profile photo must be an image (JPEG, PNG, GIF, or WebP)"
+          }
+
+docs: |-
+  Partial update of the current talent's profile (JSON), or `multipart/form-data` to also replace the profile photo. `?userId=` lets an admin update another talent's profile instead of their own.
+
+  **Profile photo (multipart):** send a `photo` file field alongside, or instead of, any JSON fields below — nested fields (`personalInfo`, `education`, etc.) must then be JSON-encoded strings, since multipart text fields are always strings. `attachProfilePhoto` runs before the controller: uploads to S3 (`profiles/` folder, JPEG/PNG/GIF/WebP only, ≤4MB) and deletes the previous photo. A photo-only request returns **200** `Profile photo updated successfully` instead of the usual 400 for an otherwise-empty body. Invalid file: **400** `Profile photo must be an image (JPEG, PNG, GIF, or WebP)` or `Profile photo must not exceed 4MB.`. More than one file: **400** `Only one profile photo is allowed`.

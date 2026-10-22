@@ -4,14 +4,8 @@ info:
   seq: 40
 
 http:
-  method: PATCH
+  method: DELETE
   url: "{{BASE}}/users/profile-picture"
-  body:
-    type: json
-    data: |-
-      {
-          "currentPhoto": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1743514652550_iL6RUTL-akatsuki-wallpaper-hd.jpg"
-      }
   auth:
     type: bearer
     token: "{{talent_access}}"
@@ -21,3 +15,36 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs:
+  content: |-
+    Clears the caller's `photo` and deletes the stored S3 object. Legacy standalone endpoint (see `PATCH /users/profile-picture`) — no request body is read; the photo to delete is resolved from the stored user record.
+
+    `?userId=` lets an admin remove another user's photo; anyone else naming a different `userId` is a 403.
+
+    **Errors**
+    - `403` `Unauthorized to update profile` (naming another user's id without admin rights).
+  type: text/markdown
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/users/profile-picture"
+      method: DELETE
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Profile picture removed successfully",
+            "data": {
+              "_id": "66a94152ae6b097012f43d20",
+              "photo": ""
+            }
+          }

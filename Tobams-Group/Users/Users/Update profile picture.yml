@@ -9,17 +9,10 @@ http:
   body:
     type: multipart-form
     data:
-      - name: ""
-        type: file
-        value: []
       - name: file
         type: file
         value:
-          - postman-cloud:///1ef90d38-f8eb-4bd0-aa84-02f9d1b40ded
-      - name: currentPhoto
-        type: text
-        value: https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1743514652550_iL6RUTL-akatsuki-wallpaper-hd.jpg
-        description: Include current photo url if it exist with the new file
+          - /path/to/new-photo.jpg
   auth:
     type: bearer
     token: "{{talent_access}}"
@@ -29,3 +22,68 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs:
+  content: |-
+    Legacy standalone photo upload, kept for backward compatibility. **The 4 role profile endpoints (`PATCH /organisation`, `/interns`, `/talents`, `/mentors`) now also accept a `photo` file in the same request as the rest of the profile** — prefer those for a role profile update. This endpoint is still live for any authenticated role.
+
+    **Body:** multipart `file` field (note: the field name here is `file`, not `photo` — the role endpoints use `photo`). Image only, JPEG/PNG/GIF/WebP, ≤4MB.
+
+    A `currentPhoto` text field is still accepted for older clients but is **ignored** — the previous photo to delete is read from the stored user record, not from the request body.
+
+    `?userId=` lets an admin update another user's photo; anyone else naming a different `userId` is a 403.
+
+    **Errors**
+    - `400` `No file provided!` (no `file` field).
+    - `400` `Only one profile photo is allowed` (more than one file).
+    - `400` `Profile photo must be an image (JPEG, PNG, GIF, or WebP)` / `Profile photo must not exceed 4MB.`.
+    - `403` `Unauthorized to update profile` (naming another user's id without admin rights).
+  type: text/markdown
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/users/profile-picture"
+      method: PATCH
+      body:
+        type: multipart-form
+        data:
+          - name: file
+            type: file
+            value:
+              - /path/to/new-photo.jpg
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Profile picture uploaded successfully",
+            "data": {
+              "_id": "66a94152ae6b097012f43d20",
+              "photo": "https://tobams-group-bucket.s3.eu-west-2.amazonaws.com/profiles/1760000000000_new-photo.jpg"
+            }
+          }
+  - name: "No file provided"
+    request:
+      url: "{{BASE}}/users/profile-picture"
+      method: PATCH
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "No file provided!"
+          }
