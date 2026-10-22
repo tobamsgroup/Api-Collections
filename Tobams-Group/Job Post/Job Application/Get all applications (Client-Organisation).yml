@@ -597,6 +597,8 @@ examples:
             "data": {
               "result": [
                 {
+                  "applicationId": "6a7433f874176697c21deb79",
+                  "candidateId": "6a730e347077daabc897b6fa",
                   "candidateName": "David Dappa",
                   "candidateEmail": "daviddappa245@gmail.com",
                   "appliedRole": "Social Media Manager O",

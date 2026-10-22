@@ -7,18 +7,25 @@ http:
   method: POST
   url: "{{BASE}}/communities"
   body:
-    type: json
-    data: |-
-      {
-          "communityName": "Backend developers",
-          "industry": "Information Technology",
-          "description": "Very beneficial community of developers",
-          "rules": [
-              "No discussion of religion or politics",
-              "No disrespects or insults, you will be removed from the group if found guilty",
-              "Posts from companies or promoting paid services (books, courses, tools, events)"
-              ]
-      }
+    type: multipart-form
+    data:
+      - name: photo
+        type: file
+        value:
+          - /Users/fawazabdganiyu/Downloads/IMG_2127.PNG
+        contentType: image/png
+      - name: communityName
+        type: text
+        value: Backend Engineers
+      - name: industry
+        type: text
+        value: Information Technology
+      - name: description
+        type: text
+        value: Very beneficial community of developers
+      - name: rules
+        type: text
+        value: '["No discussion of religion or politics", "No disrespects or insults, you will be removed from the group if found guilty", "Posts from companies or promoting paid services (books, courses, tools, events)"]'
   auth:
     type: bearer
     token: "{{admin_access}}"
@@ -135,5 +142,118 @@ examples:
               "_id": "6ac7b71244d21e5a1842e16a",
               "createdAt": "2026-10-08T15:30:26.364Z",
               "updatedAt": "2026-10-08T15:30:26.364Z"
+            }
+          }
+  - name: Success (multimedia form)
+    request:
+      url: "{{BASE}}/communities"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: photo
+            type: file
+            value:
+              - /Users/fawazabdganiyu/Downloads/IMG_2127.PNG
+            contentType: image/png
+          - name: communityName
+            type: text
+            value: Backend Engineers
+          - name: industry
+            type: text
+            value: Information Technology
+          - name: description
+            type: text
+            value: Very beneficial community of developers
+          - name: rules
+            type: text
+            value: '["No discussion of religion or politics", "No disrespects or insults, you will be removed from the group if found guilty", "Posts from companies or promoting paid services (books, courses, tools, events)"]'
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: vary
+          value: Origin
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: content-security-policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: cross-origin-opener-policy
+          value: same-origin
+        - name: cross-origin-resource-policy
+          value: same-origin
+        - name: origin-agent-cluster
+          value: ?1
+        - name: referrer-policy
+          value: no-referrer
+        - name: strict-transport-security
+          value: max-age=31536000; includeSubDomains
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-dns-prefetch-control
+          value: off
+        - name: x-download-options
+          value: noopen
+        - name: x-frame-options
+          value: SAMEORIGIN
+        - name: x-permitted-cross-domain-policies
+          value: none
+        - name: x-xss-protection
+          value: "0"
+        - name: x-request-id
+          value: 1792564917835-34mluob3z
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: content-length
+          value: "976"
+        - name: etag
+          value: W/"3d0-16sd0884EBTpfFybL6yr5brycBo"
+        - name: date
+          value: Wed, 21 Oct 2026 06:42:04 GMT
+        - name: connection
+          value: keep-alive
+        - name: keep-alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Community created successfully",
+            "data": {
+              "roomName": "Backend Engineers",
+              "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/communities/1792564919056_IMG_2127.PNG",
+              "members": [
+                {
+                  "userId": "69e918e3860a3baf25b70170",
+                  "fullName": " ",
+                  "occupation": "",
+                  "role": "Super_Admin",
+                  "joinedAt": "2026-10-21T06:42:04.104Z"
+                }
+              ],
+              "roomTypes": "community",
+              "description": "Very beneficial community of developers",
+              "admin": [
+                "69e918e3860a3baf25b70170"
+              ],
+              "createdBy": "69e918e3860a3baf25b70170",
+              "status": "active",
+              "isDeleted": false,
+              "restrictedUsers": [],
+              "skills": [],
+              "limit": 100,
+              "mentorshipData": {
+                "isActive": true
+              },
+              "rules": [
+                "No discussion of religion or politics",
+                "No disrespects or insults, you will be removed from the group if found guilty",
+                "Posts from companies or promoting paid services (books, courses, tools, events)"
+              ],
+              "industry": "Information Technology",
+              "_id": "6ad85ebc631ca657125a2f26",
+              "createdAt": "2026-10-21T06:42:04.116Z",
+              "updatedAt": "2026-10-21T06:42:04.116Z"
             }
           }

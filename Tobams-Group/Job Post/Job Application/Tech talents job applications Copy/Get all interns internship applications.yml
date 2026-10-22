@@ -17,9 +17,10 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
-  - name: Success
+  - name: Success (old)
     request:
       url: "{{BASE}}/job-apply/tech-talents?role=intern"
       method: GET
