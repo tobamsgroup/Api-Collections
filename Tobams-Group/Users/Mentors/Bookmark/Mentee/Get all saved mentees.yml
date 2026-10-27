@@ -10,8 +10,118 @@ http:
     type: bearer
     token: "{{mentor_access}}"
 
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        test('every saved mentee carries a boolean "isApplied"', function () {
+                const mentees = res.getBody().data;
+                expect(mentees).to.be.an('array');
+                mentees.forEach(function (mentee) {
+                    expect(mentee.isApplied).to.be.a('boolean');
+                });
+            }
+        );
+
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs:
+  content: |-
+    The signed-in mentor's saved (bookmarked) mentees, in the order they were saved. It always lists the **caller's own** saved mentees. The route also admits admins and super admins, but an account with no mentor profile gets `404` `User not found`.
+
+    **`isApplied` (added in PR #888):** every mentee now carries `isApplied: boolean`, the same flag `GET /recommendations?type=mentorship` returns, so the Saved Mentees card can switch "Request Mentorship" to a disabled "Request sent". It is `true` when the mentor and that mentee have a request between them in `Pending`, `Approved` or `Accepted` state, whichever side sent it; `Rejected`, `Declined` and `Cancelled` requests do not count, so the mentor can request again. `isPeer` is returned alongside it as before.
+
+    - **Empty list:** `200` with `data: []`. It used to be a `400` `No saved mentees found`, so the frontend must render the empty state from `data: []` and stop treating a 400 here as "nothing saved".
+    - **Lookup failure:** `503` `ServiceUnavailableError` `Could not load your saved mentees right now. Please try again.` The mentees are deliberately not returned without `isApplied`: a card with no flag would show an active "Request Mentorship" button for someone who already has a request. Show a retry state instead. The underlying error is logged server-side and never sent.
+    - A saved mentee whose account no longer exists is left out of the list.
+    - No bearer token: `401`. A role other than mentor, admin or super admin: `403`.
+  type: text/markdown
+
+examples:
+  - name: Saved mentees with request state
+    request:
+      url: "{{BASE}}/mentors/mentees/bookmarks"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Saved mentees retrieved successfully",
+              "data": [
+                  {
+                      "_id": "67b661d7c84dd7079b9e7d44",
+                      "occupation": "Frontend Developer",
+                      "bio": "Early-career developer looking for guidance on system design.",
+                      "firstName": "Ada",
+                      "lastName": "Okafor",
+                      "email": "ada.okafor@example.com",
+                      "photo": "https://example.com/photos/ada.jpg",
+                      "profile": "Intern",
+                      "accountStatus": "Active",
+                      "skills": ["React", "TypeScript"],
+                      "mentorshipType": ["One-to-One"],
+                      "isPeer": false,
+                      "isApplied": true
+                  },
+                  {
+                      "_id": "67b661d7c84dd7079b9e7d51",
+                      "occupation": "Data Analyst",
+                      "firstName": "Tunde",
+                      "lastName": "Bello",
+                      "email": "tunde.bello@example.com",
+                      "profile": "Talent",
+                      "accountStatus": "Active",
+                      "skills": ["SQL", "Python"],
+                      "mentorshipType": ["One-to-One"],
+                      "isPeer": false,
+                      "isApplied": false
+                  }
+              ]
+          }
+  - name: Nothing saved yet
+    request:
+      url: "{{BASE}}/mentors/mentees/bookmarks"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+              "success": true,
+              "message": "Saved mentees retrieved successfully",
+              "data": []
+          }
+  - name: Request-state lookup failed
+    request:
+      url: "{{BASE}}/mentors/mentees/bookmarks"
+      method: GET
+    response:
+      status: 503
+      statusText: Service Unavailable
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+              "success": false,
+              "error": "ServiceUnavailableError",
+              "message": "Could not load your saved mentees right now. Please try again."
+          }
