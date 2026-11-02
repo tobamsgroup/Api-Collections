@@ -1,0 +1,112 @@
+info:
+  name: Register Push Token
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/push-tokens"
+  body:
+    type: json
+    data: |-
+      {
+        "token": "ExponentPushToken[xXyZ123AbCdEfGhIjKlMn]",
+        "deviceType": "ios",
+        "deviceId": "6F1C2A9E-3B4D-4E5F-8A7B-9C0D1E2F3A4B"
+      }
+  auth: inherit
+
+docs: |-
+  Saves the device's Expo push token at app start, before login (no token needed). Upserts by `deviceId`; call "Attach User to Push Token" after login to link it to the account. The service returns a Mongoose document, so its fields are spread into the envelope under `_doc` (plus internals like `$__`) instead of `data`.
+
+  - `token`: Expo push token, must start with `ExponentPushToken[` (400 otherwise)
+  - `deviceId`: stable device id, required, unique per device
+  - `deviceType` (optional): `ios` or `android`; stored as `unknown` if missing
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Token saved
+    request:
+      url: "{{base_url}}/push-tokens"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "token": "ExponentPushToken[xXyZ123AbCdEfGhIjKlMn]",
+            "deviceType": "ios",
+            "deviceId": "6F1C2A9E-3B4D-4E5F-8A7B-9C0D1E2F3A4B"
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/push-tokens",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "$__": {
+              "activePaths": {
+                "paths": {},
+                "states": {
+                  "require": {},
+                  "default": {},
+                  "modify": {}
+                }
+              }
+            },
+            "$isNew": false,
+            "_doc": {
+              "_id": "6905f1a2c4e8b91d2a7f3c10",
+              "token": "ExponentPushToken[xXyZ123AbCdEfGhIjKlMn]",
+              "deviceId": "6F1C2A9E-3B4D-4E5F-8A7B-9C0D1E2F3A4B",
+              "deviceType": "ios",
+              "isActive": true,
+              "lastUsedAt": "2026-11-02T10:00:00.000Z",
+              "status": "active",
+              "createdAt": "2026-11-02T10:00:00.000Z",
+              "updatedAt": "2026-11-02T10:00:00.000Z",
+              "__v": 0
+            }
+          }
+  - name: Invalid token
+    request:
+      url: "{{base_url}}/push-tokens"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "token": "abc123",
+            "deviceId": "6F1C2A9E-3B4D-4E5F-8A7B-9C0D1E2F3A4B"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/push-tokens",
+            "message": "Invalid Expo push token. Token must start with ExponentPushToken[",
+            "error": "BadRequestException",
+            "service": "RL4KIDS"
+          }

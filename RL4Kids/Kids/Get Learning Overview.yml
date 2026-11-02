@@ -1,0 +1,116 @@
+info:
+  name: Get Learning Overview
+  type: http
+  seq: 18
+
+http:
+  method: GET
+  url: "{{base_url}}/kid/{{kid_id}}/learning-overview"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  A kid's profile summary, this-week stats, assigned series with progress and their recent activities (first 10). Used by the guardian Learning Overview screens; any logged-in role is accepted and there is no check that the kid belongs to the caller.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Learning overview
+    request:
+      url: "{{base_url}}/kid/6acc6121a57282c78ac098ad/learning-overview"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/6acc6121a57282c78ac098ad/learning-overview",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "kid": {
+                "username": "michael",
+                "name": "King Michael",
+                "age": 7,
+                "picture": "",
+                "gender": "Male",
+                "subscription": {
+                  "plan": "free",
+                  "status": "active",
+                  "stripeSubscriptionId": null,
+                  "stripePriceId": null,
+                  "currentPeriodEnd": "2026-11-11T04:25:05.228Z",
+                  "cancelAtPeriodEnd": false,
+                  "cancellationReason": null,
+                  "provider": null
+                },
+                "id": "6acc6121a57282c78ac098ad"
+              },
+              "thisWeek": {
+                "lastLogin": "2026-10-19T09:30:00.000Z",
+                "lessonsCompleted": 2,
+                "assignmentsPassed": "1/4",
+                "totalTimeSpent": "25m"
+              },
+              "assignedCourses": [
+                {
+                  "bookId": "6836c8b01607a7982ff81a01",
+                  "seriesId": "6836c8b01607a7982ff81b02",
+                  "title": "Meet the Robots",
+                  "index": 1,
+                  "book": "Think AI",
+                  "progress": 20,
+                  "assignmentStatus": { "completed": 1, "total": 4 }
+                }
+              ],
+              "activityService": {
+                "activities": [
+                  {
+                    "_id": "6ad01a2fa57282c78ac09a10",
+                    "userId": "6acc6121a57282c78ac098ad",
+                    "type": "Quiz",
+                    "title": "XP ADDED",
+                    "activity": "+10XP - Completed Mid Chapter Quiz",
+                    "timestamp": "2026-10-19T09:45:00.000Z",
+                    "createdAt": "2026-10-19T09:45:00.000Z",
+                    "updatedAt": "2026-10-19T09:45:00.000Z"
+                  }
+                ],
+                "total": 1
+              }
+            }
+          }
+  - name: Kid not found
+    request:
+      url: "{{base_url}}/kid/6acc6121a57282c78ac098ff/learning-overview"
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 404,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/6acc6121a57282c78ac098ff/learning-overview",
+            "message": "Kid not found",
+            "error": "NotFoundException",
+            "service": "RL4KIDS"
+          }

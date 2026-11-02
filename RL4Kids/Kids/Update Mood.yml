@@ -1,0 +1,57 @@
+info:
+  name: Update Mood
+  type: http
+  seq: 23
+
+http:
+  method: POST
+  url: "{{base_url}}/kid/mood/update"
+  body:
+    type: json
+    data: |-
+      {
+        "mood": "happy"
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Saves the logged-in kid's mood on their profile (Kid token only). Known issue: the handler returns nothing, so the response wrapper fails and the server answers 500 even though the mood was saved.
+
+  - `mood`: free-text string, no validation (e.g. "happy")
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Mood saved (server currently returns 500)
+    request:
+      url: "{{base_url}}/kid/mood/update"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "mood": "happy"
+          }
+    response:
+      status: 500
+      statusText: Internal Server Error
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 500,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/mood/update",
+            "message": "Cannot destructure property 'statusCode' of 'data' as it is undefined.",
+            "error": "TypeError",
+            "service": "RL4KIDS"
+          }

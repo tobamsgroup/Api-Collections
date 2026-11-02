@@ -1,0 +1,69 @@
+info:
+  name: Get Active Volumes
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/guardian/curriculum/active/volumes"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Volumes (series) the guardian has assigned to at least one kid (Guardian token: parent or teacher). `totalVolumes` counts every volume in the catalogue, `assignedVolumes` is the length of `volumeStats`, and `book` is the populated parent book.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Active volumes
+    request:
+      url: "{{base_url}}/guardian/curriculum/active/volumes"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/guardian/curriculum/active/volumes",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "totalVolumes": 5,
+              "assignedVolumes": 1,
+              "volumeStats": [
+                {
+                  "seriesId": "6836c8ad1607a7982ff81c00",
+                  "index": 1,
+                  "title": "The Spark of an Idea",
+                  "description": "Kids discover where business ideas come from and how to spot problems worth solving.",
+                  "image": "https://res.cloudinary.com/djmta0726/image/upload/v1747301204/rl4kids/books/think-entrepreneurship-vol1.png",
+                  "book": {
+                    "_id": "6836c8a91607a7982ff81bf0",
+                    "title": "Think Entrepreneurship",
+                    "image": "https://res.cloudinary.com/djmta0726/image/upload/v1747301204/rl4kids/books/think-entrepreneurship.png",
+                    "series": [
+                      "6836c8ad1607a7982ff81c00",
+                      "6836c8ad1607a7982ff81c01",
+                      "6836c8ad1607a7982ff81c02"
+                    ],
+                    "createdAt": "2025-05-28T08:14:33.120Z",
+                    "updatedAt": "2025-05-28T08:14:41.517Z"
+                  },
+                  "assignedCount": 2
+                }
+              ]
+            }
+          }

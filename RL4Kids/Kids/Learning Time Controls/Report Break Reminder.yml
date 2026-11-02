@@ -1,0 +1,70 @@
+info:
+  name: Report Break Reminder
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/kid-learning-time-controls/break-reminder"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Call when the app shows the kid a short-break reminder (Kid token). It's logged to the guardian's activity feed and, if the guardian turned on `notifications.breakReminderSent`, pushed to them.
+
+  - `notified`: whether a push was sent to the guardian
+  - Returns 400 when break reminders are off
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Reminder recorded
+    request:
+      url: "{{base_url}}/kid-learning-time-controls/break-reminder"
+      method: POST
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Break reminder recorded",
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/kid-learning-time-controls/break-reminder",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "notified": true
+            }
+          }
+  - name: Break reminders off
+    request:
+      url: "{{base_url}}/kid-learning-time-controls/break-reminder"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/kid-learning-time-controls/break-reminder",
+            "message": "Break reminders are not enabled",
+            "error": "BadRequestException",
+            "service": "RL4KIDS"
+          }

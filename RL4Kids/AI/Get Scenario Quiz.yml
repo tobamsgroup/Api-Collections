@@ -1,0 +1,133 @@
+info:
+  name: Get Scenario Quiz
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/ai/scenario-quiz/{{chapter_id}}"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Generates a fresh 5-question scenario quiz from the chapter's text with OpenAI (2 multipleChoice, 1 trueOrFalse, 1 matchingScenario, 1 unscramble). Nothing is cached, so every call is a new quiz and takes a few seconds. The route has no auth guard (the app sends a Kid token). The quiz is returned in `questions` at the top level, not in `data`.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Scenario quiz
+    request:
+      url: "{{base_url}}/ai/scenario-quiz/6836c8b01607a7982ff81c04"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/ai/scenario-quiz/6836c8b01607a7982ff81c04",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "questions": {
+              "multipleChoice": [
+                {
+                  "title": "Sharing the Robot",
+                  "scenario": "Your team built a robot, but only one friend keeps controlling it.",
+                  "question": "What would a good leader do?",
+                  "options": {
+                    "A": "Let the same friend keep it",
+                    "B": "Make a plan so everyone gets a turn",
+                    "C": "Take the robot home"
+                  },
+                  "answer": "B",
+                  "feedback": {
+                    "correct": "Exactly! Leaders treat everyone fairly.",
+                    "incorrect": "Hmm, what might happen if only some people get included?"
+                  }
+                },
+                {
+                  "title": "A Robot Mistake",
+                  "scenario": "Mia's robot knocked over a classmate's tower by accident.",
+                  "question": "What should Mia do?",
+                  "options": {
+                    "A": "Say sorry and help rebuild it",
+                    "B": "Blame the robot",
+                    "C": "Walk away"
+                  },
+                  "answer": "A",
+                  "feedback": {
+                    "correct": "Great job! Taking responsibility shows you care.",
+                    "incorrect": "How would you feel if it was your tower?"
+                  }
+                }
+              ],
+              "trueOrFalse": [
+                {
+                  "statement": "Robots follow instructions that people give them.",
+                  "answer": true,
+                  "feedback": {
+                    "correct": "Yes! People tell robots what to do.",
+                    "incorrect": "Think again: who writes a robot's instructions?"
+                  }
+                }
+              ],
+              "matchingScenario": [
+                {
+                  "word": "Teamwork",
+                  "answer": "Everyone helps build the robot together",
+                  "options": [
+                    "Everyone helps build the robot together",
+                    "One person does all the work"
+                  ],
+                  "feedback": {
+                    "correct": "Well done! Teamwork means working together.",
+                    "incorrect": "Who does the work when a team works together?"
+                  }
+                }
+              ],
+              "unscramble": [
+                {
+                  "word": "BTORO",
+                  "answer": "ROBOT",
+                  "feedback": {
+                    "correct": "You got it!",
+                    "incorrect": "Hint: it's what the chapter is all about."
+                  }
+                }
+              ]
+            },
+            "status": "success"
+          }
+  - name: Chapter has no text
+    request:
+      url: "{{base_url}}/ai/scenario-quiz/6836c8b01607a7982ff81c06"
+      method: GET
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/ai/scenario-quiz/6836c8b01607a7982ff81c06",
+            "message": "No content found for this chapter",
+            "error": "BadRequestException",
+            "service": "RL4KIDS"
+          }

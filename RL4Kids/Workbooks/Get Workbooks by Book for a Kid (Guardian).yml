@@ -1,0 +1,89 @@
+info:
+  name: Get Workbooks by Book for a Kid (Guardian)
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/workbooks/kid/{{kid_id}}/book/{{book_id}}"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  A given kid's workbook chapters for a book, grouped by series, with their access and progress flags. Used by the guardian Series Overview screen; same shape as GET /workbooks/kid/book/:bookId but for any kid id. Note: this route has no auth guard, so it works with any token or none.
+
+  Only chapters assigned to the kid are listed. `isAccessible` is true once the kid has read to the chapter's last page.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Kid workbooks
+    request:
+      url: "{{base_url}}/workbooks/kid/6acc6121a57282c78ac098ad/book/6836c8b01607a7982ff81a01"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/workbooks/kid/6acc6121a57282c78ac098ad/book/6836c8b01607a7982ff81a01",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "seriesId": "6836c8b01607a7982ff81b02",
+                "seriesName": "Meet the Robots",
+                "seriesIndex": 1,
+                "seriesImage": "https://res.cloudinary.com/demo/series/meet-the-robots.png",
+                "chapters": [
+                  {
+                    "chapterId": "6836c8b01607a7982ff81c04",
+                    "chapterName": "What is a Robot?",
+                    "chapterIndex": 1,
+                    "start": 1,
+                    "end": 4,
+                    "pdfUrl": "https://res.cloudinary.com/demo/workbooks/meet-the-robots.pdf",
+                    "workbookName": "Meet the Robots Workbook",
+                    "workbookId": "6a1f0c2ea57282c78ac0a001",
+                    "isAccessible": true,
+                    "isStarted": true,
+                    "isCompleted": false
+                  }
+                ]
+              }
+            ]
+          }
+  - name: No workbooks for book
+    request:
+      url: "{{base_url}}/workbooks/kid/6acc6121a57282c78ac098ad/book/6836c8b01607a7982ff81a09"
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 404,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/workbooks/kid/6acc6121a57282c78ac098ad/book/6836c8b01607a7982ff81a09",
+            "message": "No workbooks found for book \"6836c8b01607a7982ff81a09\"",
+            "error": "NotFoundException",
+            "service": "RL4KIDS"
+          }

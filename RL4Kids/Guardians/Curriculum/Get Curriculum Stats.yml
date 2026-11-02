@@ -1,0 +1,59 @@
+info:
+  name: Get Curriculum Stats
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/guardian/curriculum"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Curriculum tab (Guardian token: parent or teacher). Lists every book with its total volume count and how many of its volumes the guardian has assigned to at least one of their kids.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Curriculum stats
+    request:
+      url: "{{base_url}}/guardian/curriculum"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Guardian's Curriculum Stats fetched successfully",
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/guardian/curriculum",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "id": "6836c8a91607a7982ff81bf0",
+                "title": "Think Entrepreneurship",
+                "image": "https://res.cloudinary.com/djmta0726/image/upload/v1747301204/rl4kids/books/think-entrepreneurship.png",
+                "totalVolumes": 3,
+                "assignedVolumes": 1
+              },
+              {
+                "id": "6836c8a91607a7982ff81bf1",
+                "title": "Think Sustainability",
+                "image": "https://res.cloudinary.com/djmta0726/image/upload/v1747301204/rl4kids/books/think-sustainability.png",
+                "totalVolumes": 2,
+                "assignedVolumes": 0
+              }
+            ]
+          }

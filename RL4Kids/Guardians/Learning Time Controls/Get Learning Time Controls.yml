@@ -1,0 +1,97 @@
+info:
+  name: Get Learning Time Controls
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/guardian/learners/{{kid_id}}/learning-time-controls"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  A learner's learning time controls (Guardian token). Created with everything off the first time it's read.
+
+  - `dailyLimit.action`: `pause` stops learning when the limit is hit, `reminder` shows a friendly reminder and lets the kid continue
+  - `schedule.startTime` / `endTime`: the kid's local time, 24h `HH:mm`
+  - Returns 404 for a learner that isn't the guardian's
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Controls fetched
+    request:
+      url: "{{base_url}}/guardian/learners/6905e1c2a1b2c3d4e5f60789/learning-time-controls"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Learning time controls fetched",
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/guardian/learners/6905e1c2a1b2c3d4e5f60789/learning-time-controls",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "kidId": "6905e1c2a1b2c3d4e5f60789",
+              "dailyLimit": {
+                "enabled": true,
+                "minutes": 30,
+                "action": "pause"
+              },
+              "breakReminder": {
+                "enabled": true,
+                "intervalMinutes": 15
+              },
+              "schedule": {
+                "enabled": true,
+                "days": [
+                  "mon",
+                  "tue",
+                  "wed",
+                  "thu",
+                  "fri"
+                ],
+                "startTime": "16:00",
+                "endTime": "17:00"
+              },
+              "notifications": {
+                "sessionStarted": true,
+                "dailyLimitReached": true,
+                "breakReminderSent": false
+              }
+            }
+          }
+  - name: Learner not yours
+    request:
+      url: "{{base_url}}/guardian/learners/{{kid_id}}/learning-time-controls"
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 404,
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/guardian/learners/6905e1c2a1b2c3d4e5f60789/learning-time-controls",
+            "message": "Learner not found",
+            "error": "NotFoundException",
+            "service": "RL4KIDS"
+          }
