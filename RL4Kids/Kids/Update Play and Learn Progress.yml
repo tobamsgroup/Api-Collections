@@ -1,0 +1,67 @@
+info:
+  name: Update Play and Learn Progress
+  type: http
+  seq: 21
+
+http:
+  method: PATCH
+  url: "{{base_url}}/kid/play-progress/update"
+  body:
+    type: json
+    data: |-
+      {
+        "chapterId": "{{chapter_id}}",
+        "newPageIndex": 4
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Saves the kid's step in a chapter's Play and Learn activities, stored as `currentPLIndex` (Kid token only, and the kid's trial/subscription must be active). Returns the raw MongoDB update result; `matchedCount` is 0 if the chapter isn't assigned to the kid.
+
+  - `chapterId`: assigned chapter id
+  - `newPageIndex`: the Play and Learn step to save (the app sends 2 to 8 as each activity finishes). Parsed with `parseInt`, no DTO validation.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Step saved
+    request:
+      url: "{{base_url}}/kid/play-progress/update"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "chapterId": "6836c8b01607a7982ff81c04",
+            "newPageIndex": 4
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/play-progress/update",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "acknowledged": true,
+              "modifiedCount": 1,
+              "upsertedId": null,
+              "upsertedCount": 0,
+              "matchedCount": 1
+            }
+          }

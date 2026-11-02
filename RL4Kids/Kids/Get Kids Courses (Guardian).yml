@@ -1,0 +1,104 @@
+info:
+  name: Get Kids Courses (Guardian)
+  type: http
+  seq: 16
+
+http:
+  method: GET
+  url: "{{base_url}}/kid/courses"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  All course records (one per kid per book) for every kid under the logged-in guardian (Guardian token: parent or teacher). Results are filtered by the token's user id as `guardianId`, so a Kid token returns an empty array. `kidId` and `bookId` are populated.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Guardian's kids courses
+    request:
+      url: "{{base_url}}/kid/courses"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/courses",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "_id": "6acc6200a57282c78ac09901",
+                "kidId": {
+                  "_id": "6acc6121a57282c78ac098ad",
+                  "username": "michael",
+                  "name": "King Michael",
+                  "gender": "Male",
+                  "age": 7,
+                  "role": "kid",
+                  "mood": "",
+                  "guardianId": "6ac668680038799f61f0fa1d",
+                  "picture": "",
+                  "totalXp": 40,
+                  "readingSettings": { "voice": "adult-female-us" },
+                  "earnedBadges": [],
+                  "createdAt": "2026-10-12T04:25:05.240Z",
+                  "updatedAt": "2026-10-19T09:40:00.000Z"
+                },
+                "guardianId": "6ac668680038799f61f0fa1d",
+                "bookId": {
+                  "_id": "6836c8b01607a7982ff81a01",
+                  "title": "Think AI",
+                  "image": "https://res.cloudinary.com/demo/think-ai.png",
+                  "series": ["6836c8b01607a7982ff81b02"],
+                  "createdAt": "2025-05-28T08:00:00.000Z",
+                  "updatedAt": "2025-05-28T08:00:00.000Z"
+                },
+                "assignedSeries": [
+                  {
+                    "seriesId": "6836c8b01607a7982ff81b02",
+                    "progress": 20,
+                    "status": "in progress",
+                    "assignedAt": "2026-10-12T04:30:00.000Z",
+                    "completedAt": null
+                  }
+                ],
+                "assignedChapters": [
+                  {
+                    "chapterId": "6836c8b01607a7982ff81c04",
+                    "completedLessons": [],
+                    "currentPageIndex": 3,
+                    "currentPLIndex": 1,
+                    "quizzes": [],
+                    "completed": false,
+                    "progress": 0,
+                    "status": "in progress",
+                    "assignedAt": "2026-10-12T04:30:00.000Z",
+                    "completedAt": null
+                  }
+                ],
+                "completedAssignments": [],
+                "assignmentsCompleted": 0,
+                "totalLearningHours": 0,
+                "progressPercentage": 20,
+                "status": "in progress",
+                "completedAt": null,
+                "createdAt": "2026-10-12T04:30:00.000Z",
+                "updatedAt": "2026-10-19T09:40:00.000Z"
+              }
+            ]
+          }

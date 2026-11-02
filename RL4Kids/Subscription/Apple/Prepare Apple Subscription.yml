@@ -1,0 +1,93 @@
+info:
+  name: Prepare Apple Subscription
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/subscription/apple/prepare"
+  body:
+    type: json
+    data: |-
+      {
+        "kidId": "{{kid_id}}",
+        "planId": "explorer"
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Step 1 of an iOS in-app purchase (Guardian token: parent or teacher). Returns the App Store `productId` (`<prefix>.slot<N>.<plan>`) and the `appAccountToken` UUID the app must pass to StoreKit for this kid. Fails with 400 for the free plan, a kid already billed through Stripe, or when all learner slots are used; 404 if the kid isn't the guardian's.
+
+  - `kidId`: the kid's id (MongoId, required)
+  - `planId`: `starter` | `explorer` | `builder` | `future_skills` | `library_pass` (`free` is rejected)
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Subscription prepared
+    request:
+      url: "{{base_url}}/subscription/apple/prepare"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "kidId": "68fa61bf5fa8660a37eaa6ee",
+            "planId": "explorer"
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Apple subscription prepared",
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/subscription/apple/prepare",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "productId": "com.tobamsgroup.rlkids.slot1.explorer",
+              "appAccountToken": "3f2b8c1e-7d4a-4f6b-9e2c-5a1d8b7c6e40",
+              "slot": 1
+            }
+          }
+  - name: Free plan rejected
+    request:
+      url: "{{base_url}}/subscription/apple/prepare"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "kidId": "68fa61bf5fa8660a37eaa6ee",
+            "planId": "free"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/subscription/apple/prepare",
+            "message": "Cannot purchase the free plan",
+            "error": "BadRequestException",
+            "service": "RL4KIDS"
+          }

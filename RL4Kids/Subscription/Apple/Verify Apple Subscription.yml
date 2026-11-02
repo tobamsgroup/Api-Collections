@@ -1,0 +1,102 @@
+info:
+  name: Verify Apple Subscription
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/subscription/apple/verify"
+  body:
+    type: json
+    data: |-
+      {
+        "kidId": "{{kid_id}}",
+        "signedTransaction": "eyJhbGciOiJFUzI1NiIsIng1YyI6WyJNSUlFTURDQ0E3YWdBd0lCQWdJUWZUbGZkMGZOdkZXdnpDMVlJQU5zWGpBS0JnZ3Foa2pPUFFRREF6QjFNVVF3UWdZRFZRUURERHRCY0hCc1pTQlhiM0pzWkhkcFpHVWdSR1YyWld4dmNHVnlJRkpsYkdGMGFXOXVjeUJEWlhKMGFXWnBZMkYwYVc5dUlFRjFkR2h2Y21sMGVURUxNQWtHQTFVRUN3d0NSell4RXpBUkJnTlZCQW9NQ2tGd2NHeGxJRWx1WXk0eEN6QUpCZ05WQkFZVEFsVlQiXX0.eyJ0cmFuc2FjdGlvbklkIjoiMjAwMDAwMDc1MjQ0MTk4MCJ9.signature"
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Step 2 of an iOS in-app purchase (Guardian token: parent or teacher). Send the StoreKit 2 signed transaction (JWS) after purchase; the backend verifies Apple's signature and current status, then activates the kid's plan and returns the kid's updated `subscription`. 400 for an invalid JWS or unknown product, 403 if the purchase belongs to another kid or account.
+
+  - `kidId`: the kid's id (MongoId, required); must be the kid the purchase was prepared for
+  - `signedTransaction`: StoreKit 2 JWS (expo-iap `purchaseToken`), required non-empty string
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Subscription activated
+    request:
+      url: "{{base_url}}/subscription/apple/verify"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "kidId": "68fa61bf5fa8660a37eaa6ee",
+            "signedTransaction": "eyJhbGciOiJFUzI1NiIsIng1YyI6WyJNSUlFTURDQ0E3YWdBd0lCQWdJUWZUbGZkMGZOdkZXdnpDMVlJQU5zWGpBS0JnZ3Foa2pPUFFRREF6QjFNVVF3UWdZRFZRUURERHRCY0hCc1pTQlhiM0pzWkhkcFpHVWdSR1YyWld4dmNHVnlJRkpsYkdGMGFXOXVjeUJEWlhKMGFXWnBZMkYwYVc5dUlFRjFkR2h2Y21sMGVURUxNQWtHQTFVRUN3d0NSell4RXpBUkJnTlZCQW9NQ2tGd2NHeGxJRWx1WXk0eEN6QUpCZ05WQkFZVEFsVlQiXX0.eyJ0cmFuc2FjdGlvbklkIjoiMjAwMDAwMDc1MjQ0MTk4MCJ9.signature"
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Subscription activated",
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/subscription/apple/verify",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "plan": "explorer",
+              "status": "active",
+              "stripeSubscriptionId": null,
+              "stripePriceId": null,
+              "currentPeriodEnd": "2026-12-02T10:00:00.000Z",
+              "cancelAtPeriodEnd": false,
+              "cancellationReason": null,
+              "provider": "apple",
+              "appleOriginalTransactionId": "2000000752441980",
+              "appleProductId": "com.tobamsgroup.rlkids.slot1.explorer",
+              "appleSlot": 1,
+              "appleAppAccountToken": "3f2b8c1e-7d4a-4f6b-9e2c-5a1d8b7c6e40"
+            }
+          }
+  - name: Purchase belongs to another kid
+    request:
+      url: "{{base_url}}/subscription/apple/verify"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "kidId": "68fa62c35fa8660a37eaa6f4",
+            "signedTransaction": "eyJhbGciOiJFUzI1NiJ9.eyJ0cmFuc2FjdGlvbklkIjoiMjAwMDAwMDc1MjQ0MTk4MCJ9.signature"
+          }
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 403,
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/subscription/apple/verify",
+            "message": "This App Store purchase does not belong to this child.",
+            "error": "ForbiddenException",
+            "service": "RL4KIDS"
+          }

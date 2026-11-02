@@ -1,0 +1,57 @@
+info:
+  name: Claim XP
+  type: http
+  seq: 25
+
+http:
+  method: POST
+  url: "{{base_url}}/kid/xp/claim"
+  body:
+    type: json
+    data: |-
+      {
+        "xp": 25
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Adds XP to the logged-in kid's `totalXp`, sets `lastLogin` to now and logs a "+{xp}XP - Daily Login" activity (Kid token only). The app calls it after a scenario quiz (25 XP for 5/5, otherwise 15).
+
+  - `xp`: number of XP to add. No validation, so any number (including negative) is accepted.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: XP added
+    request:
+      url: "{{base_url}}/kid/xp/claim"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "xp": 25
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "XP Added",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/xp/claim",
+            "service": "RL4KIDS",
+            "version": "1.0.0"
+          }

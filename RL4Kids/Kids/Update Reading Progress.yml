@@ -1,0 +1,95 @@
+info:
+  name: Update Reading Progress
+  type: http
+  seq: 20
+
+http:
+  method: PATCH
+  url: "{{base_url}}/kid/reading-progress/update"
+  body:
+    type: json
+    data: |-
+      {
+        "chapterId": "{{chapter_id}}",
+        "newPageIndex": 3
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Saves the page the kid is on in Read mode (Kid token only, and the kid's trial/subscription must be active). Reaching the chapter's last page also marks the chapter completed and may award a badge in the background. Returns the raw MongoDB update result; `matchedCount` is 0 if the chapter isn't assigned to the kid (still 200).
+
+  - `chapterId`: assigned chapter id
+  - `newPageIndex`: page number (the app sends a number; the server runs `parseInt` on it). No DTO validation.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Page saved
+    request:
+      url: "{{base_url}}/kid/reading-progress/update"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "chapterId": "6836c8b01607a7982ff81c04",
+            "newPageIndex": 3
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/reading-progress/update",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "acknowledged": true,
+              "modifiedCount": 1,
+              "upsertedId": null,
+              "upsertedCount": 0,
+              "matchedCount": 1
+            }
+          }
+  - name: Free trial expired
+    request:
+      url: "{{base_url}}/kid/reading-progress/update"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "chapterId": "6836c8b01607a7982ff81c04",
+            "newPageIndex": 3
+          }
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 403,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/reading-progress/update",
+            "message": "Your free trial has expired. Please ask your guardian to subscribe to continue.",
+            "error": "ForbiddenException",
+            "service": "RL4KIDS"
+          }

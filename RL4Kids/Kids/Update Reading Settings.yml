@@ -1,0 +1,113 @@
+info:
+  name: Update Reading Settings
+  type: http
+  seq: 22
+
+http:
+  method: PATCH
+  url: "{{base_url}}/kid/me/reading-settings"
+  body:
+    type: json
+    data: |-
+      {
+        "voice": "young-female-uk"
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Sets the narration voice for Read mode (Kid token only). Returns the updated kid profile (without password). Page audio from GET /tts/:id/audio is generated and cached per voice.
+
+  - `voice` (required): one of `adult-female-us`, `adult-male-us`, `adult-female-uk`, `adult-male-uk`, `adult-female-au`, `adult-male-au`, `adult-female-in`, `adult-male-in`, `young-female-us`, `young-male-us`, `young-female-uk`, `young-male-uk`, `young-female-au`, `young-male-au`, `young-female-in`, `young-male-in`
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Voice updated
+    request:
+      url: "{{base_url}}/kid/me/reading-settings"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "voice": "young-female-uk"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Reading settings updated successfully",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/me/reading-settings",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "_id": "6acc6121a57282c78ac098ad",
+              "username": "michael",
+              "name": "King Michael",
+              "gender": "Male",
+              "age": 7,
+              "preferredLearningTopics": ["Think AI"],
+              "role": "kid",
+              "mood": "",
+              "guardianId": "6ac668680038799f61f0fa1d",
+              "picture": "",
+              "earnedBadges": [],
+              "totalXp": 40,
+              "readingSettings": { "voice": "young-female-uk" },
+              "freeTrialExpiresAt": "2026-11-11T04:25:05.228Z",
+              "subscription": {
+                "plan": "free",
+                "status": "active",
+                "stripeSubscriptionId": null,
+                "stripePriceId": null,
+                "currentPeriodEnd": "2026-11-11T04:25:05.228Z",
+                "cancelAtPeriodEnd": false,
+                "cancellationReason": null,
+                "provider": null
+              },
+              "lastLogin": "2026-10-19T09:30:00.000Z",
+              "createdAt": "2026-10-12T04:25:05.240Z",
+              "updatedAt": "2026-10-19T10:00:00.000Z"
+            }
+          }
+  - name: Invalid voice
+    request:
+      url: "{{base_url}}/kid/me/reading-settings"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "voice": "robot"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/me/reading-settings",
+            "message": ["voice must be one of the following values: adult-female-us, adult-male-us, adult-female-uk, adult-male-uk, adult-female-au, adult-male-au, adult-female-in, adult-male-in, young-female-us, young-male-us, young-female-uk, young-male-uk, young-female-au, young-male-au, young-female-in, young-male-in"],
+            "error": "BadRequestException",
+            "service": "RL4KIDS"
+          }

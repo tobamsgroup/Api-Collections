@@ -1,0 +1,82 @@
+info:
+  name: Get My Learning Time Controls
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/kid-learning-time-controls?date=2026-11-02"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  The kid's own learning time rules plus today's learning time, so the app can enforce them on the device (Kid token).
+
+  - `date` (optional query): the kid's local day as YYYY-MM-DD. Defaults to the UTC date.
+  - `usage.secondsToday`: engaged learning time today (from Record Reading Time heartbeats)
+  - `usage.limitSeconds`: `null` when the daily limit is off
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Controls with usage
+    request:
+      url: "{{base_url}}/kid-learning-time-controls?date=2026-11-02"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Learning time controls fetched",
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/kid-learning-time-controls",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "kidId": "6905e1c2a1b2c3d4e5f60789",
+              "dailyLimit": {
+                "enabled": true,
+                "minutes": 30,
+                "action": "pause"
+              },
+              "breakReminder": {
+                "enabled": true,
+                "intervalMinutes": 15
+              },
+              "schedule": {
+                "enabled": true,
+                "days": [
+                  "mon",
+                  "tue",
+                  "wed",
+                  "thu",
+                  "fri"
+                ],
+                "startTime": "16:00",
+                "endTime": "17:00"
+              },
+              "notifications": {
+                "sessionStarted": true,
+                "dailyLimitReached": true,
+                "breakReminderSent": false
+              },
+              "usage": {
+                "date": "2026-11-02",
+                "secondsToday": 1260,
+                "limitSeconds": 1800,
+                "limitReached": false
+              }
+            }
+          }

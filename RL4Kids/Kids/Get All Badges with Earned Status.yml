@@ -1,0 +1,69 @@
+info:
+  name: Get All Badges with Earned Status
+  type: http
+  seq: 26
+
+http:
+  method: GET
+  url: "{{base_url}}/kid/badges-with-earned/all"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Every badge in the system, each flagged with `earned` for the logged-in kid. Use a Kid token: parent/teacher tokens pass the role check, but the token's user id is looked up as a kid, so they get 404 "Kid not found".
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Badges with earned flag
+    request:
+      url: "{{base_url}}/kid/badges-with-earned/all"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "All badges with earned status fetched successfully",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/badges-with-earned/all",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "_id": "68fa61bf5fa8660a37eaa6ee",
+                "name": "Robot Rookie",
+                "description": "Finished the first chapter of a series",
+                "type": "Learning Journey",
+                "category": "Learning Progress",
+                "subcategory": "Think AI",
+                "imageUrl": "https://res.cloudinary.com/demo/badges/robot-rookie.png",
+                "index": 1,
+                "color": "#FFB020",
+                "earned": true
+              },
+              {
+                "_id": "68fa61bf5fa8660a37eaa6ef",
+                "name": "Week Warrior",
+                "description": "Learned 7 days in a row",
+                "type": "All Series",
+                "category": "Consistency",
+                "subcategory": "",
+                "imageUrl": "https://res.cloudinary.com/demo/badges/week-warrior.png",
+                "index": null,
+                "color": "",
+                "earned": false
+              }
+            ]
+          }

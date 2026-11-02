@@ -17,7 +17,8 @@ docs: |-
   - `subscription.learningPaused` drives the "Learning is paused" banner.
   - `stats.streakDays` = consecutive days with reading time (feeds both Learning Streak and Reading Streak tiles).
   - `assignedBooks.items` and `exploreMore` are capped at 10; use "Get Assigned Books" for the full list.
-  - `recentActivity` holds the latest 6 events. Types: chapter_completed, book_completed, quiz, workbook_exercise, game, video_lesson, lesson_activity.
+  - `recentActivity` holds the latest 8 events. Types: chapter_completed, book_completed, quiz, workbook_exercise, game, video_lesson, lesson_activity, reading, login.
+  - Learning time control events (tap to expand in the app): `session_started`, `daily_limit_reached`, `break_reminder`. They have no book; their details are in `meta`: `sessionStartedAt`, plus `limitMinutes` and `action` (`pause` → "Paused", `reminder` → "Can Continue") for the limit, and `intervalMinutes` for the break reminder. Logged whether or not the guardian turned on push notifications.
 
 settings:
   encodeUrl: true
@@ -143,6 +144,46 @@ examples:
                 }
               ],
               "recentActivity": [
+                {
+                  "type": "daily_limit_reached",
+                  "title": "Alexander reached his 30-minute daily learning limit.",
+                  "description": "",
+                  "category": "",
+                  "seriesId": null,
+                  "seriesTitle": "",
+                  "chapterId": null,
+                  "occurredAt": "2026-10-19T09:50:00.000Z",
+                  "meta": {
+                    "sessionStartedAt": "2026-10-19T09:20:00.000Z",
+                    "limitMinutes": 30,
+                    "action": "pause"
+                  }
+                },
+                {
+                  "type": "break_reminder",
+                  "title": "Alexander received a reminder to take a short break.",
+                  "description": "",
+                  "category": "",
+                  "seriesId": null,
+                  "seriesTitle": "",
+                  "chapterId": null,
+                  "occurredAt": "2026-10-19T09:35:00.000Z",
+                  "meta": {
+                    "sessionStartedAt": "2026-10-19T09:20:00.000Z",
+                    "intervalMinutes": 15
+                  }
+                },
+                {
+                  "type": "session_started",
+                  "title": "Alexander has started a learning session.",
+                  "description": "",
+                  "category": "",
+                  "seriesId": null,
+                  "seriesTitle": "",
+                  "chapterId": null,
+                  "occurredAt": "2026-10-19T09:20:00.000Z",
+                  "meta": { "sessionStartedAt": "2026-10-19T09:20:00.000Z" }
+                },
                 {
                   "type": "quiz",
                   "title": "Completed End-of-Chapter Quiz",

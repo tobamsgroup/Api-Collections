@@ -1,0 +1,117 @@
+info:
+  name: Submit Quiz Result
+  type: http
+  seq: 24
+
+http:
+  method: POST
+  url: "{{base_url}}/kid/quiz/result"
+  body:
+    type: json
+    data: |-
+      {
+        "bookId": "{{book_id}}",
+        "chapterId": "{{chapter_id}}",
+        "quiz": {
+          "quizType": "mid",
+          "score": 20,
+          "totalScore": 25,
+          "attempts": 1,
+          "passed": true,
+          "xpEarned": 10
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Saves a chapter quiz result for the logged-in kid (Kid token only). The first result per quiz type awards XP and logs an activity; later results overwrite the score and add 1 to `attempts`. The chapter is marked completed once both quizzes are passed. No DTO validation.
+
+  - `bookId`: book the chapter belongs to (404 if the kid has no course for it)
+  - `chapterId`: chapter assigned to the kid (404 otherwise)
+  - `quiz.quizType`: "mid" or "end"
+  - `quiz.score` / `quiz.totalScore`: the app uses 25 for mid and 50 for end
+  - `quiz.passed`: the app sends true when score is at least 12 (mid) or 25 (end)
+  - `quiz.attempts`: sent as 1; the server keeps its own count
+  - `quiz.xpEarned` (optional): kept on retakes; on the first attempt the server sets its own XP value
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Result saved
+    request:
+      url: "{{base_url}}/kid/quiz/result"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "bookId": "6836c8b01607a7982ff81a01",
+            "chapterId": "6836c8b01607a7982ff81c04",
+            "quiz": {
+              "quizType": "mid",
+              "score": 20,
+              "totalScore": 25,
+              "attempts": 1,
+              "passed": true,
+              "xpEarned": 10
+            }
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Result Saved",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/quiz/result",
+            "service": "RL4KIDS",
+            "version": "1.0.0"
+          }
+  - name: Chapter not assigned
+    request:
+      url: "{{base_url}}/kid/quiz/result"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "bookId": "6836c8b01607a7982ff81a01",
+            "chapterId": "6836c8b01607a7982ff81c06",
+            "quiz": {
+              "quizType": "end",
+              "score": 50,
+              "totalScore": 50,
+              "attempts": 1,
+              "passed": true,
+              "xpEarned": 45
+            }
+          }
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 404,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/quiz/result",
+            "message": "Assigned chapter not found",
+            "error": "NotFoundException",
+            "service": "RL4KIDS"
+          }

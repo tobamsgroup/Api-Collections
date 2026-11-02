@@ -1,0 +1,73 @@
+info:
+  name: Get Chapter Page Audio
+  type: http
+  seq: 27
+
+http:
+  method: GET
+  url: "{{base_url}}/tts/{{chapter_id}}/audio?page=1"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Narration audio URL for one chapter page in the kid's chosen voice (Kid token only). Generated with Google TTS on first request, then cached per chapter, page and voice, so the first call can be slow. `marks` holds word/segment timings for highlighting (often empty: Chirp3-HD voices return none).
+
+  - `page` (query, required): the page's `index` from the chapter pages (the app sends `page.index`). 400 if not an integer, 404 if the chapter has no page with that index.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Page audio
+    request:
+      url: "{{base_url}}/tts/6836c8b01607a7982ff81c04/audio?page=1"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Audio fetched successfully",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/tts/6836c8b01607a7982ff81c04/audio?page=1",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "audioUrl": "https://res.cloudinary.com/demo/raw/upload/v1760868000/tts/6836c8b01607a7982ff81c04/1-adult-female-us",
+              "marks": [
+                { "segIndex": 0, "charIndex": 0, "time": 0.12 },
+                { "segIndex": 0, "charIndex": 4, "time": 0.41 }
+              ]
+            }
+          }
+  - name: Page not found
+    request:
+      url: "{{base_url}}/tts/6836c8b01607a7982ff81c04/audio?page=99"
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 404,
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/tts/6836c8b01607a7982ff81c04/audio?page=99",
+            "message": "Page with index 99 not found",
+            "error": "NotFoundException",
+            "service": "RL4KIDS"
+          }

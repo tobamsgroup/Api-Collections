@@ -19,11 +19,12 @@ http:
     token: "{{access}}"
 
 docs: |-
-  Reading-time heartbeat (Kid token only). Send it about every 30s while a chapter is open, and once when the reader is backgrounded or closed. It powers "Reading Time", "Total Time Spent" and the streak on the guardian screens.
+  Learning-time heartbeat (Kid token only). Send it about every 30s while the kid is engaged on a chapter (reading, Playground activities, the workbook) and once when the screen is backgrounded or closed. Idle time isn't sent. It powers "Reading Time", "Total Time Spent" and the streak on the guardian screens, and the learning time controls: it starts a new session after a 30-minute gap and logs the daily limit being reached.
 
   - `chapterId`: must be a chapter assigned to the kid (403 otherwise)
   - `seconds`: 1 to 120 seconds read since the last heartbeat
   - `date` (optional): the kid's local day as YYYY-MM-DD, so streaks follow their time zone. Falls back to the UTC date if missing or more than a day off.
+  - `usage` in the response: today's learning time against the daily limit, so the app can enforce it without polling (`limitSeconds` is `null` when the limit is off). `null` if it couldn't be computed.
 
 settings:
   encodeUrl: true
@@ -63,7 +64,13 @@ examples:
             "data": {
               "chapterId": "6836c8b01607a7982ff81c04",
               "date": "2026-10-19",
-              "secondsToday": 420
+              "secondsToday": 420,
+              "usage": {
+                "date": "2026-10-19",
+                "secondsToday": 1260,
+                "limitSeconds": 1800,
+                "limitReached": false
+              }
             }
           }
   - name: Chapter not assigned
@@ -91,7 +98,7 @@ examples:
             "timestamp": "2026-10-19T10:00:00.000Z",
             "path": "/api/v1/kid/reading-time",
             "message": "Chapter is not assigned to this learner",
-            "error": "Forbidden",
+            "error": "ForbiddenException",
             "service": "RL4KIDS"
           }
   - name: Seconds out of range
@@ -119,6 +126,6 @@ examples:
             "timestamp": "2026-10-19T10:00:00.000Z",
             "path": "/api/v1/kid/reading-time",
             "message": ["seconds must not be greater than 120"],
-            "error": "Bad Request",
+            "error": "BadRequestException",
             "service": "RL4KIDS"
           }

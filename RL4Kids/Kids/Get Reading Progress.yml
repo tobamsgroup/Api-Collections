@@ -1,0 +1,72 @@
+info:
+  name: Get Reading Progress
+  type: http
+  seq: 19
+
+http:
+  method: GET
+  url: "{{base_url}}/kid/reading-progress"
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  The logged-in kid's reading position per assigned chapter, grouped by series (Kid token only). `currentPageIndex` (Read mode) and `currentPLIndex` (Play and Learn) default to 1; `quiz` lists saved mid/end quiz results.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Reading progress
+    request:
+      url: "{{base_url}}/kid/reading-progress"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Success",
+            "timestamp": "2026-10-19T10:00:00.000Z",
+            "path": "/api/v1/kid/reading-progress",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": [
+              {
+                "seriesId": "6836c8b01607a7982ff81b02",
+                "title": "Meet the Robots",
+                "index": 1,
+                "book": "Think AI",
+                "chapters": [
+                  {
+                    "chapterId": "6836c8b01607a7982ff81c04",
+                    "title": "What is a Robot?",
+                    "index": 1,
+                    "currentPageIndex": 3,
+                    "currentPLIndex": 2,
+                    "totalPages": 8,
+                    "quiz": [
+                      {
+                        "quizType": "mid",
+                        "score": 20,
+                        "totalScore": 25,
+                        "attempts": 1,
+                        "passed": true,
+                        "lastAttemptAt": "2026-10-18T15:20:00.000Z",
+                        "xpEarned": 10
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }

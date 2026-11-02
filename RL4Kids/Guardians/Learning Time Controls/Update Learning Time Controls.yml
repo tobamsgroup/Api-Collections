@@ -1,0 +1,159 @@
+info:
+  name: Update Learning Time Controls
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{base_url}}/guardian/learners/{{kid_id}}/learning-time-controls"
+  body:
+    type: json
+    data: |-
+      {
+        "dailyLimit": {
+          "enabled": true,
+          "minutes": 30,
+          "action": "pause"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Update one or more sections (Guardian token). Every section and field is optional, so each settings screen saves only its own part; fields you leave out keep their value.
+
+  - `dailyLimit`: `enabled`, `minutes` (20, 30, 45 or 60), `action` (`pause` | `reminder`)
+  - `breakReminder`: `enabled`, `intervalMinutes` (15, 20 or 30)
+  - `schedule`: `enabled`, `days` (`mon`…`sun`, at least one when enabled), `startTime` / `endTime` (`HH:mm`, end after start)
+  - `notifications`: `sessionStarted`, `dailyLimitReached`, `breakReminderSent` — push the guardian when these happen. Turning off the daily limit or break reminder also turns off its notification.
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Daily limit saved
+    request:
+      url: "{{base_url}}/guardian/learners/6905e1c2a1b2c3d4e5f60789/learning-time-controls"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "dailyLimit": {
+              "enabled": true,
+              "minutes": 30,
+              "action": "pause"
+            }
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Learning time controls updated",
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/guardian/learners/6905e1c2a1b2c3d4e5f60789/learning-time-controls",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "kidId": "6905e1c2a1b2c3d4e5f60789",
+              "dailyLimit": {
+                "enabled": true,
+                "minutes": 30,
+                "action": "pause"
+              },
+              "breakReminder": {
+                "enabled": true,
+                "intervalMinutes": 15
+              },
+              "schedule": {
+                "enabled": true,
+                "days": [
+                  "mon",
+                  "tue",
+                  "wed",
+                  "thu",
+                  "fri"
+                ],
+                "startTime": "16:00",
+                "endTime": "17:00"
+              },
+              "notifications": {
+                "sessionStarted": true,
+                "dailyLimitReached": true,
+                "breakReminderSent": false
+              }
+            }
+          }
+  - name: Schedule end before start
+    request:
+      url: "{{base_url}}/guardian/learners/6905e1c2a1b2c3d4e5f60789/learning-time-controls"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "schedule": {
+              "enabled": true,
+              "startTime": "17:00",
+              "endTime": "16:00"
+            }
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/guardian/learners/6905e1c2a1b2c3d4e5f60789/learning-time-controls",
+            "message": "End time must be after start time",
+            "error": "BadRequestException",
+            "service": "RL4KIDS"
+          }
+  - name: Minutes not allowed
+    request:
+      url: "{{base_url}}/guardian/learners/6905e1c2a1b2c3d4e5f60789/learning-time-controls"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "dailyLimit": {
+              "minutes": 10
+            }
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 400,
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/guardian/learners/6905e1c2a1b2c3d4e5f60789/learning-time-controls",
+            "message": [
+              "minutes must be one of the following values: 20, 30, 45, 60"
+            ],
+            "error": "BadRequestException",
+            "service": "RL4KIDS"
+          }

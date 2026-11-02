@@ -1,0 +1,64 @@
+info:
+  name: Restore Apple Subscriptions
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/subscription/apple/restore"
+  body:
+    type: json
+    data: |-
+      {
+        "signedTransactions": [
+          "eyJhbGciOiJFUzI1NiJ9.eyJ0cmFuc2FjdGlvbklkIjoiMjAwMDAwMDc1MjQ0MTk4MCJ9.signature"
+        ]
+      }
+  auth:
+    type: bearer
+    token: "{{access}}"
+
+docs: |-
+  Re-links App Store subscriptions on this Apple ID to the guardian's kids, e.g. after a reinstall (Guardian token: parent or teacher). Each transaction is matched to a kid by original transaction id or appAccountToken; ones that are invalid, duplicated or belong to another account are skipped silently. `restored` is how many were applied.
+
+  - `signedTransactions`: array of StoreKit 2 JWS strings, at most 50 (required; an empty array is allowed and restores 0)
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Purchases restored
+    request:
+      url: "{{base_url}}/subscription/apple/restore"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "signedTransactions": [
+              "eyJhbGciOiJFUzI1NiJ9.eyJ0cmFuc2FjdGlvbklkIjoiMjAwMDAwMDc1MjQ0MTk4MCJ9.signature"
+            ]
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "statusCode": 200,
+            "message": "Purchases restored",
+            "timestamp": "2026-11-02T10:00:00.000Z",
+            "path": "/api/v1/subscription/apple/restore",
+            "service": "RL4KIDS",
+            "version": "1.0.0",
+            "data": {
+              "restored": 1
+            }
+          }
