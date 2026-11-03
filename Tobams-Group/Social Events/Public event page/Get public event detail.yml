@@ -19,9 +19,10 @@ runtime:
         test('returns the public shape and never the private fields', function () {
                 const event = res.getBody().data;
                 expect(event.title).to.be.a('string');
+                expect(event.extra).to.be.a('string');
                 expect(event.durationMinutes === null || typeof event.durationMinutes === 'number').to.equal(true);
                 expect(['upcoming', 'today', 'past']).to.include(event.status);
-                ['userId', 'externalLink', 'extra'].forEach(function (key) {
+                ['userId', 'externalLink'].forEach(function (key) {
                     expect(event).to.not.have.property(key);
                 });
             }
@@ -37,17 +38,17 @@ docs:
   content: |-
     One event for the **logged-out** event page (title, host, price, date and time, details). **No token needed.** The authenticated screens can use it too; the only thing it cannot give is the viewer's registered state (`isApplied`), which stays on the authenticated `GET /social_events/:eventId`.
 
-    This is an allowlist, not the raw document. **Never returned:** `userId` (the owner), `externalLink` (the event link, which would bypass registration) and `extra`.
+    This is an allowlist, not the raw document. **Never returned:** `userId` (the owner) and `externalLink` (the event link, for example a Zoom URL, which would bypass registration).
 
     - **`isPaid`:** `{ status, currency, price }`. Show "Paid £20.99" when `status` is `true`, otherwise a free label.
     - **`durationMinutes`:** end minus start from `interval.*.date` and `interval.*.time` (`HH:mm` or `h:mm AM/PM`). `11:30` to `12:00` is `30`, for the "(30 min)" label. It is `null` when a time cannot be read or the end is not after the start; omit the label then.
     - **`status`:** `upcoming`, `today` (the event spans today) or `past`. Compared by **UTC day**, so around local midnight it can be a few hours off. Use it to disable "Register For Event" on a `past` event.
-    - **`about`, `eventsDetails`:** the Event Details tab. `eventsDetails` is a free-form object set by whoever created the event (for example key highlights and why attend).
+    - **`about`, `eventsDetails`, `extra`:** the Event Details tab. `eventsDetails` is a free-form object set by whoever created the event (headings with text or lists, for example key highlights and why attend). `extra` is the closing paragraph shown after them.
     - **`applicantCount`:** registrations so far.
 
     **Errors:** `400` when `:eventId` is not a 24-character id, `404` when no event has that id. The path `public` is never read as an event id.
 
-    **Existing `GET /social_events/:eventId` and `/with/feedback/:eventId`:** also reachable without a token but return the raw event, including `externalLink`, `userId` and `extra`. Use these `/public` routes for the logged-out page.
+    **Existing `GET /social_events/:eventId` and `/with/feedback/:eventId`:** also reachable without a token but return the raw event, including `externalLink` and `userId`. Use these `/public` routes for the logged-out page.
   type: text/markdown
 
 examples:
@@ -103,6 +104,7 @@ examples:
                           "Collaborate with diverse stakeholders"
                       ]
                   },
+                  "extra": "Join us on this journey toward a more sustainable, inclusive, and resilient future. Together, let's transform goals into action and make a lasting difference for generations to come.",
                   "applicantCount": 12,
                   "createdAt": "2026-11-01T09:15:00.000Z"
               }

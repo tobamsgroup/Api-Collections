@@ -48,7 +48,7 @@ settings:
 
 docs:
   content: |-
-    Events for the **Other Events** panel on the event page. **No token needed.** Cards only (no `about`, `description` or `eventsDetails`), with enough for the thumbnail, date line, title and duration.
+    Events for the **Other Events** panel on the event page. **No token needed.** Cards only (no `about`, `description`, `eventsDetails` or `extra`), with enough for the thumbnail, date line, title and duration.
 
     | Query | Meaning |
     | --- | --- |
@@ -61,7 +61,7 @@ docs:
 
     **Response:** `data` is the list of cards, `pagination` is beside it (`page`, `limit`, `total`, `pages`, `hasNext`, `hasPrev`). **An empty result is `200` with `data: []`**, never `404`: render the "No Other Events" screen from an empty `data`. "See All" links to the events list.
 
-    **Card fields:** `_id`, `title`, `image`, `eventType`, `host`, `isPaid`, `timezone`, `location`, `interval`, `durationMinutes`, `status` (`upcoming` / `today` / `past`, by UTC day). `upcoming` includes events happening today. Never returned: `userId`, `externalLink`, `extra`.
+    **Card fields:** `_id`, `title`, `image`, `eventType`, `host`, `isPaid`, `timezone`, `location`, `interval`, `durationMinutes`, `status` (`upcoming` / `today` / `past`, by UTC day). `upcoming` includes events happening today. Never returned: `userId`, `externalLink`. Long-form fields (`about`, `description`, `eventsDetails`, `extra`) are on the detail route only.
   type: text/markdown
 
 examples:

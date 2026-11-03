@@ -21,9 +21,9 @@ settings:
 
 docs:
   content: |-
-    Returns the **raw event document**, with or without a token. No token means `isApplied` is never set, and the response includes `userId`, `externalLink` and `extra`.
+    Returns the **raw event document**, with or without a token. No token means `isApplied` is never set, and the response includes `userId` and `externalLink`.
 
-    For the **logged-out event page**, use `GET /social_events/public/:eventId` (see *Public event page*): same display fields plus `durationMinutes` and `status`, and it never returns `userId`, `externalLink` or `extra`. Keep this route for authenticated screens that need `isApplied`.
+    For the **logged-out event page**, use `GET /social_events/public/:eventId` (see *Public event page*): same display fields plus `durationMinutes` and `status`, and it never returns `userId` or `externalLink`. Keep this route for authenticated screens that need `isApplied`.
   type: text/markdown
 
 examples:
