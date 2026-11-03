@@ -19,6 +19,13 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: true
 
+docs:
+  content: |-
+    Returns the event plus its first page of feedback, with or without a token. Each feedback row nests the **whole event** as `receiver` (including `externalLink` and `userId`) and carries `reviewerId`.
+
+    For the **logged-out Feedback tab**, use `GET /social_events/public/:eventId/feedback` (see *Public event page*): paginated, with replies, an `isAdmin` flag for the Admin badge and no ids or event data.
+  type: text/markdown
+
 examples:
   - name: Success
     request:
