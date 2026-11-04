@@ -19,6 +19,16 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: true
 
+docs:
+  content: |-
+    One event for the event page. **The same request serves the logged-out page and the signed-in one**, with the same response; the frontend applies the guest overlay.
+
+    - **Token optional.** Without an `Authorization` header you get the event as stored. With a valid bearer token you also get `isApplied`: `true` when the signed-in user has registered for this event, else `false`. Guests get no `isApplied` key; otherwise the two responses are identical.
+    - **A token that is sent must be valid.** An expired or malformed token is `401`/`403`, not a silent guest response, so the client's refresh flow runs.
+    - **`userId`** is the creator of the event: the organisation that created it (or that an admin created it for). For Tobams Group events created by an admin it is that admin's id.
+    - **Errors:** `400` when `:eventId` is not a 24-character id (it used to be a `500`), `404` when no event has that id.
+  type: text/markdown
+
 examples:
   - name: Success
     request:
