@@ -12,3 +12,7 @@ variables:
     name: ADMIN_EMAIL
   - secret: true
     name: ADMIN_PASSWORD
+  - secret: true
+    name: SUPER_ADMIN_PASSWORD
+  - secret: true
+    name: SUPER_ADMIN_EMAIL
