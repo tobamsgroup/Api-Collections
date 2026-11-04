@@ -24,6 +24,15 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
+docs:
+  content: |-
+    Verifies a checkout when the gateway sends the browser back (`ref` is the Paystack reference or the Stripe Checkout Session id). Response shape unchanged.
+
+    - **Webinar and social event registrations are also settled here**, not only by the webhook, so a seat is confirmed even if the webhook is late or lost. Settling twice (webhook and verify, or a refresh) is harmless: the seat is counted once.
+    - A social event registration becomes `paid` only when the amount and currency match what checkout quoted; otherwise it becomes `disputed` and the admin is emailed. A second payment for a registration that is already settled (two checkout tabs) is reported to the admin once for a refund; the seat does not change.
+    - A failure to settle never turns a successful verification into an error: it is logged for the webhook to pick up.
+  type: text/markdown
+
 examples:
   - name: Veification Payload
     request:

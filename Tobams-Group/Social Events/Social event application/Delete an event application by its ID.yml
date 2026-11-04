@@ -13,3 +13,11 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs:
+  content: |-
+    `DELETE /social_events/applications/:applicationId`, the applicant's own application only.
+
+    - The event's `applicantCount` goes down only when the deleted application was a confirmed seat (`paid`, or created before payments existed). Deleting a `pending`, `failed` or `disputed` one leaves the count alone, since it was never counted.
+    - Deleting an application while its checkout is still open, then paying, leaves the payment unmatched (recorded in the payment history only). Do not offer delete during checkout.
+  type: text/markdown

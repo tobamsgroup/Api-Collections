@@ -1,0 +1,168 @@
+info:
+  name: Pay for an event
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{BASE}}/pay/initialize?paymentProvider=paystack&purpose=social%20event"
+  params:
+    - name: paymentProvider
+      value: paystack
+      type: query
+    - name: purpose
+      value: social event
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "applicationId": "6a9955ea568a07e019d1a707",
+        "callback_url": "https://nexus.tobamsgroup.com/talent/events/60d21b4667d0d8992e610c85"
+      }
+  auth:
+    type: bearer
+    token: "{{talent_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+docs:
+  content: |-
+    Opens the gateway checkout for a paid event registration (the **Pay Now** button). `POST /pay/checkout` with the same query and body does the same thing.
+
+    **Flow:** Apply for an event (`paymentStatus: "pending"`) -> this request -> redirect the browser to the returned URL -> the gateway sends the browser back to `callback_url` -> Verify payment (`GET /pay/verify?paymentProvider=...&ref=...`). The webhook confirms the seat too, whichever arrives first.
+
+    - **Query:** `paymentProvider` is `paystack` or `stripe`; `purpose` is `social event` (URL-encoded `social%20event`).
+    - **Auth required.** Send the applicant's bearer token (or an admin's). `/pay/initialize` is public for other purposes but not this one, because the checkout page shows the registration email. No token is `403`; someone else's application is `404`, the same as an unknown one.
+    - **Body:** `applicationId` (required, the `_id` from Apply for an event) and an optional `callback_url`. `callback_url` is used only when it is on the platform frontend's own origin; otherwise the gateway returns to the event page for the applicant's role (`/talent/events/:eventId`, `/intern/events/:eventId`, `/client/events/:eventId`, ...).
+    - **The server sets the charge.** Amount and currency come from the event (`isPaid.price`, `isPaid.currency`); the payer's email and name come from the registration. `email`, `firstName`, `lastName`, `amount`, `price`, `currency`, `discountCode` and `addOns` in the body are ignored, so the billing form can keep sending them.
+    - Every attempt records the quote shown (`quotedAmount`, `quotedCurrency` on the application). A payment that does not match it exactly is marked `disputed` and the admin is emailed instead of granting the seat.
+    - **Response:** `201`, `data` is the provider's result. Paystack: `data.data.authorization_url` (plus `access_code`, `reference`). Stripe: `data.data.checkoutUrl` and `data.data.reference` (the Checkout Session id, used as `ref` when verifying).
+
+    **Errors (`success: false`, `message`):**
+
+    | Status | When |
+    | --- | --- |
+    | `400` | `applicationId is required to pay for an event` |
+    | `400` | Already paid: `This registration is already paid for. Check your email for the confirmation.` |
+    | `400` | Payment under review: `There is a problem with the payment on this registration...` (application is `disputed`; do not offer payment) |
+    | `400` | `This event does not require payment.` (free event; the registration is already a seat) |
+    | `400` | The event is stored with a currency other than NGN, GBP or USD: `This event cannot take payments right now. Please contact support.` |
+    | `403` | No bearer token |
+    | `404` | `Event application not found` (unknown id, or someone else's application) or `Event not found` |
+  type: text/markdown
+
+examples:
+  - name: Paystack checkout
+    request:
+      url: "{{BASE}}/pay/initialize?paymentProvider=paystack&purpose=social%20event"
+      method: POST
+      params:
+        - name: paymentProvider
+          value: paystack
+          type: query
+        - name: purpose
+          value: social event
+          type: query
+      body:
+        type: json
+        data: |-
+          {
+            "applicationId": "6a9955ea568a07e019d1a707"
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Payment Initiated Successfully",
+            "data": {
+              "status": true,
+              "message": "Authorization URL created",
+              "data": {
+                "authorization_url": "https://checkout.paystack.com/6t086u41va2xkib",
+                "access_code": "6t086u41va2xkib",
+                "reference": "1uecivwcd1"
+              }
+            }
+          }
+  - name: Stripe checkout
+    request:
+      url: "{{BASE}}/pay/initialize?paymentProvider=stripe&purpose=social%20event"
+      method: POST
+      params:
+        - name: paymentProvider
+          value: stripe
+          type: query
+        - name: purpose
+          value: social event
+          type: query
+      body:
+        type: json
+        data: |-
+          {
+            "applicationId": "6a9955ea568a07e019d1a707"
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Payment Initiated Successfully",
+            "data": {
+              "status": true,
+              "message": "Checkout session initialized successfully",
+              "data": {
+                "reference": "cs_test_a1Bqxew4SM6CSuOrgsRqrctcjs9vFY4KE1DpQHC0gH51hherF9mWgcCjrv",
+                "checkoutUrl": "https://checkout.stripe.com/c/pay/cs_test_a1Bqxew4SM6CSuOrgsRqrctcjs9vFY4KE1DpQHC0gH51hherF9mWgcCjrv"
+              }
+            }
+          }
+  - name: Already paid
+    request:
+      url: "{{BASE}}/pay/initialize?paymentProvider=paystack&purpose=social%20event"
+      method: POST
+      params:
+        - name: paymentProvider
+          value: paystack
+          type: query
+        - name: purpose
+          value: social event
+          type: query
+      body:
+        type: json
+        data: |-
+          {
+            "applicationId": "6a9955ea568a07e019d1a707"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "This registration is already paid for. Check your email for the confirmation."
+          }

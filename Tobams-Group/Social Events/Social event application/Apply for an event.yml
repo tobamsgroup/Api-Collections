@@ -27,6 +27,17 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: true
 
+docs:
+  content: |-
+    Registers the signed-in user for an event. Request body and response envelope are unchanged; `data` now also carries `paymentStatus`.
+
+    - **Free event** (`isPaid.status` false, or a price of 0): `paymentStatus: "paid"` straight away. The seat is counted (`applicantCount`, `isApplied`, the organiser's list).
+    - **Paid event** (`isPaid.status: true` and `isPaid.price` > 0): `paymentStatus: "pending"`. This is a reservation, not a seat: it is **not** counted until payment is confirmed. Next step is **Pay for an event** with `data._id` as `applicationId`.
+    - **Registering again** while the application is `pending` or `failed` (checkout abandoned or declined) refreshes the same application: `201` with the **same `_id`**, so the applicant can get back to checkout.
+    - **`409`** when the application is already `paid`, `disputed`, or was created before payments existed.
+    - Only `fullName`, `emailAddress`, `phoneNumber` and `companyName` are read from the body. `paymentStatus`, amounts and references sent by a client are ignored.
+  type: text/markdown
+
 examples:
   - name: Success
     request:
@@ -117,6 +128,7 @@ examples:
               "emailAddress": "john.doe@example.com",
               "companyName": "Talent Company",
               "phoneNumber": "+1234567890",
+              "paymentStatus": "paid",
               "_id": "6a9955ea568a07e019d1a707",
               "createdAt": "2026-09-03T11:11:38.207Z",
               "updatedAt": "2026-09-03T11:11:38.207Z"
