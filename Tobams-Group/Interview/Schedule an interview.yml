@@ -146,6 +146,8 @@ docs: |-
 
   **Company:** the caller. An organisation can only schedule on its own applications. Admins and super admins may schedule as themselves, or name the owning organisation with `?userId`. A non-admin naming a different id gets a 403.
 
+  **In-house:** an admin scheduling as themselves does so for Tobams Group: `companyName` is `Tobams Group`, and that admin is the interview's company for later updates.
+
   **Stage:** scheduling moves the application forward to `Interview`. `Hired` stays `Hired`. A `Rejected` applicant is a 400 and no interview is created.
 
   Later accept, reschedule, complete or cancel changes only the interview's own `status`, never the application's stage.

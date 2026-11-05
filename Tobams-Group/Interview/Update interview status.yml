@@ -366,6 +366,8 @@ examples:
           }
 
 docs: |-
+  **Who:** only the interview's applicant or company. The company is an organisation, or the admin who scheduled an in-house interview for Tobams Group. Only the company can complete.
+
   **Final statuses:** `Cancelled` and `Completed` are final. Accepting or cancelling either one again is a 400.
 
   **Cancelling:** if the organisation cancels, the applicant gets an in-app notification and an email with the reason. Applicants aren't notified of their own cancellation.
