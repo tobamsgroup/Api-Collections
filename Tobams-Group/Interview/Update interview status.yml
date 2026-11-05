@@ -366,6 +366,8 @@ examples:
           }
 
 docs: |-
+  **Final statuses:** `Cancelled` and `Completed` are final. Accepting or cancelling either one again is a 400.
+
   **Cancelling:** if the organisation cancels, the applicant gets an in-app notification and an email with the reason. Applicants aren't notified of their own cancellation.
 
   **Stage:** this changes only the interview's own `status`. It never changes the application's stage: accepting, declining, rescheduling, completing or cancelling all leave the candidate where they are. The stage moves to `Interview` when the interview is scheduled.

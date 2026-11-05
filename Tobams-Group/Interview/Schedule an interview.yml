@@ -140,6 +140,8 @@ examples:
           }
 
 docs: |-
+  **Ids:** a malformed `jobPostId` or `applicantId` is a 400.
+
   **Application required:** `applicantId` must have applied to `jobPostId`. Otherwise this is a 404 with `No application found for this applicant on this job post`, and no interview is created. The same 404 covers another company's application. Hiring goes through the application process, so a talent found through Explore Talents has to apply first.
 
   **Company:** the caller. An organisation can only schedule on its own applications. Admins and super admins may schedule as themselves, or name the owning organisation with `?userId`. A non-admin naming a different id gets a 403.
