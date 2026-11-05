@@ -367,6 +367,6 @@ examples:
 
 docs:
   content: |-
-    **Not on `dev` yet:** this body form ships with `fawaz/interview-status-body-bulk-cancel`. Until that merges, `dev` reads `?status=` and `rescheduleReason` on `PATCH /interviews/:interviewId`.
+    **Not on `dev` yet:** this body form ships with the job application stages PR. Until that merges, `dev` reads `?status=` and `rescheduleReason` on `PATCH /interviews/:interviewId`.
 
     **Stage:** this changes only the interview's own `status`. It never changes the application's stage: accepting, declining, rescheduling, completing or cancelling all leave the candidate where they are. The stage moves to `Interview` when the interview is scheduled.
