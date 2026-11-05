@@ -25,25 +25,23 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Sets a community's moderation status — the only way to pause, archive, or deactivate one (there is no community-level delete other than the soft-delete endpoint).
+docs: |-
+  Sets a community's moderation status — the only way to pause, archive, or deactivate one (there is no community-level delete other than the soft-delete endpoint).
 
-    **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE). A community's own admin cannot call this.
+  **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE). A community's own admin cannot call this.
 
-    `status` must be one of `active`, `paused`, `archived`, `deactivated` (`CommunityStatus`). A non-`active` status hides the community from `GET /communities` and `GET /communities/user-communities` for non-admin viewers — see those endpoints. There's no change-detection: setting the same status again still succeeds.
+  `status` must be one of `active`, `paused`, `archived`, `deactivated` (`CommunityStatus`). A non-`active` status hides the community from `GET /communities` and `GET /communities/user-communities` for non-admin viewers — see those endpoints. There's no change-detection: setting the same status again still succeeds.
 
-    **Path params**
-    - `communityId` (24-hex, required).
+  **Path params**
+  - `communityId` (24-hex, required).
 
-    **Body**
-    - `status` (required, one of the four values above).
+  **Body**
+  - `status` (required, one of the four values above).
 
-    **Errors**
-    - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
-    - `400` `status: status must be one of: active, paused, archived, deactivated` (unknown value).
-    - `404` `Community not found`.
-  type: text/markdown
+  **Errors**
+  - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
+  - `400` `status: status must be one of: active, paused, archived, deactivated` (unknown value).
+  - `404` `Community not found`.
 
 examples:
   - name: "Success (pause)"

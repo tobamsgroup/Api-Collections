@@ -20,21 +20,19 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    Fetches a single organisation request. An admin may fetch any request; an `ORGANISATION` account only one whose `contactPersonEmail` matches its own `Contact.email` (case-insensitive) — a request owned by someone else is a 403, not a leaked read.
+docs: |-
+  Fetches a single organisation request. An admin may fetch any request; an `ORGANISATION` account only one whose `contactPersonEmail` matches its own `Contact.email` (case-insensitive) — a request owned by someone else is a 403, not a leaked read.
 
-    **Access:** `ADMIN`/`SUPER_ADMIN`/`ORGANISATION` only, token required (this was public before PR #869).
+  **Access:** `ADMIN`/`SUPER_ADMIN`/`ORGANISATION` only, token required (this was public before PR #869).
 
-    **Path params**
-    - `id` (Mongo `_id`, required). Not yet validated at the route level — a malformed id surfaces as a Mongoose cast error (500), not a 400 (tracked known gap).
+  **Path params**
+  - `id` (Mongo `_id`, required). Not yet validated at the route level — a malformed id surfaces as a Mongoose cast error (500), not a 400 (tracked known gap).
 
-    **Errors**
-    - `401` `No Token Provided` (no bearer token).
-    - `403` `Restricted Action, Unauthorized Access❗` (wrong role, or an `ADMIN` without `SUPER`/`ASSESSMENT_MANAGER` privilege).
-    - `404` `Request with id: <id> not found!`.
-    - `403` `You are not authorized to access this organization request` (an organisation naming a request it doesn't own) — checked **after** the 404, so a missing id never leaks as "not yours".
-  type: text/markdown
+  **Errors**
+  - `401` `No Token Provided` (no bearer token).
+  - `403` `Restricted Action, Unauthorized Access❗` (wrong role, or an `ADMIN` without `SUPER`/`ASSESSMENT_MANAGER` privilege).
+  - `404` `Request with id: <id> not found!`.
+  - `403` `You are not authorized to access this organization request` (an organisation naming a request it doesn't own) — checked **after** the 404, so a missing id never leaks as "not yours".
 
 examples:
   - name: "Success (admin)"

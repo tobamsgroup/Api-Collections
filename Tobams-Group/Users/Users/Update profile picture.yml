@@ -23,22 +23,20 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    Legacy standalone photo upload, kept for backward compatibility. **The 4 role profile endpoints (`PATCH /organisation`, `/interns`, `/talents`, `/mentors`) now also accept a `photo` file in the same request as the rest of the profile** — prefer those for a role profile update. This endpoint is still live for any authenticated role.
+docs: |-
+  Legacy standalone photo upload, kept for backward compatibility. **The 4 role profile endpoints (`PATCH /organisation`, `/interns`, `/talents`, `/mentors`) now also accept a `photo` file in the same request as the rest of the profile** — prefer those for a role profile update. This endpoint is still live for any authenticated role.
 
-    **Body:** multipart `file` field (note: the field name here is `file`, not `photo` — the role endpoints use `photo`). Image only, JPEG/PNG/GIF/WebP, ≤4MB.
+  **Body:** multipart `file` field (note: the field name here is `file`, not `photo` — the role endpoints use `photo`). Image only, JPEG/PNG/GIF/WebP, ≤4MB.
 
-    A `currentPhoto` text field is still accepted for older clients but is **ignored** — the previous photo to delete is read from the stored user record, not from the request body.
+  A `currentPhoto` text field is still accepted for older clients but is **ignored** — the previous photo to delete is read from the stored user record, not from the request body.
 
-    `?userId=` lets an admin update another user's photo; anyone else naming a different `userId` is a 403.
+  `?userId=` lets an admin update another user's photo; anyone else naming a different `userId` is a 403.
 
-    **Errors**
-    - `400` `No file provided!` (no `file` field).
-    - `400` `Only one profile photo is allowed` (more than one file).
-    - `400` `Profile photo must be an image (JPEG, PNG, GIF, or WebP)` / `Profile photo must not exceed 4MB.`.
-    - `403` `Unauthorized to update profile` (naming another user's id without admin rights).
-  type: text/markdown
+  **Errors**
+  - `400` `No file provided!` (no `file` field).
+  - `400` `Only one profile photo is allowed` (more than one file).
+  - `400` `Profile photo must be an image (JPEG, PNG, GIF, or WebP)` / `Profile photo must not exceed 4MB.`.
+  - `403` `Unauthorized to update profile` (naming another user's id without admin rights).
 
 examples:
   - name: Success

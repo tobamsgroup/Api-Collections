@@ -19,22 +19,20 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Redirects to the certificate PDF generated at submit time for a passing submission.
+docs: |-
+  Redirects to the certificate PDF generated at submit time for a passing submission.
 
-    **Access:** public. Id only, no uuid check.
+  **Access:** public. Id only, no uuid check.
 
-    **Path params**
-    - `id` (submission `_id`, required).
+  **Path params**
+  - `id` (submission `_id`, required).
 
-    **Response 302**: `Location` header is the S3 certificate URL. Redirect following is off on this request so you can see the 302; turn it on to download the PDF.
+  **Response 302**: `Location` header is the S3 certificate URL. Redirect following is off on this request so you can see the 302; turn it on to download the PDF.
 
-    **Errors**
-    - `404` `Assessment submission not found`.
-    - `404` `No certificate is available for this submission. Certificates are issued only for passing scores of <threshold>% and above.`: the submission failed. The threshold depends on the submission's `userCategory` (guests have their own pass mark).
-    - `500` a malformed id (not an ObjectId) is not validated on this route and surfaces as a cast error.
-  type: text/markdown
+  **Errors**
+  - `404` `Assessment submission not found`.
+  - `404` `No certificate is available for this submission. Certificates are issued only for passing scores of <threshold>% and above.`: the submission failed. The threshold depends on the submission's `userCategory` (guests have their own pass mark).
+  - `500` a malformed id (not an ObjectId) is not validated on this route and surfaces as a cast error.
 
 examples:
   - name: "Redirect to PDF"

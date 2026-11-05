@@ -16,15 +16,13 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    Clears the caller's `photo` and deletes the stored S3 object. Legacy standalone endpoint (see `PATCH /users/profile-picture`) — no request body is read; the photo to delete is resolved from the stored user record.
+docs: |-
+  Clears the caller's `photo` and deletes the stored S3 object. Legacy standalone endpoint (see `PATCH /users/profile-picture`) — no request body is read; the photo to delete is resolved from the stored user record.
 
-    `?userId=` lets an admin remove another user's photo; anyone else naming a different `userId` is a 403.
+  `?userId=` lets an admin remove another user's photo; anyone else naming a different `userId` is a 403.
 
-    **Errors**
-    - `403` `Unauthorized to update profile` (naming another user's id without admin rights).
-  type: text/markdown
+  **Errors**
+  - `403` `Unauthorized to update profile` (naming another user's id without admin rights).
 
 examples:
   - name: Success

@@ -40,43 +40,41 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Lists submissions whose `result.submittedAt` falls in a date range, optionally narrowed to one user and a score band.
+docs: |-
+  Lists submissions whose `result.submittedAt` falls in a date range, optionally narrowed to one user and a score band.
 
-    **Access:** public. No auth and no ownership check: returns every user's submissions in the range unless `uuid` is set.
+  **Access:** public. No auth and no ownership check: returns every user's submissions in the range unless `uuid` is set.
 
-    **Query params**
+  **Query params**
 
-    | Param | Required | Notes |
-    | --- | --- | --- |
-    | `startDate` | yes | Any date string `new Date()` parses, e.g. `2026-10-01` or an ISO datetime |
-    | `endDate` | yes | Must be after `startDate` |
-    | `uuid` | no | Only this user's submissions |
-    | `minScore` | no | Lower bound on `result.overallScore.percentage`. `minScore=0` is ignored (treated as no bound) |
-    | `maxScore` | no | Upper bound on `result.overallScore.percentage` |
-    | `page` | no | Default `1`, `>= 1` |
-    | `limit` | no | Default `10`, `1`-`100` |
+  | Param | Required | Notes |
+  | --- | --- | --- |
+  | `startDate` | yes | Any date string `new Date()` parses, e.g. `2026-10-01` or an ISO datetime |
+  | `endDate` | yes | Must be after `startDate` |
+  | `uuid` | no | Only this user's submissions |
+  | `minScore` | no | Lower bound on `result.overallScore.percentage`. `minScore=0` is ignored (treated as no bound) |
+  | `maxScore` | no | Upper bound on `result.overallScore.percentage` |
+  | `page` | no | Default `1`, `>= 1` |
+  | `limit` | no | Default `10`, `1`-`100` |
 
-    A bare `YYYY-MM-DD` is midnight UTC, so `endDate=2026-10-31` does **not** include submissions later on the 31st. Use `2026-11-01` or a full datetime to cover the whole day.
+  A bare `YYYY-MM-DD` is midnight UTC, so `endDate=2026-10-31` does **not** include submissions later on the 31st. Use `2026-11-01` or a full datetime to cover the whole day.
 
-    **Response 200**
-    ```json
-    {
-      "success": true,
-      "message": "Submissions retrieved successfully",
-      "data": {
-        "submissions": [{ "_id": "66f1c2a9e4b0a1b2c3d4e5f6", "uuid": "TG-60XTA", "result": { } }],
-        "pagination": { "page": 1, "limit": 10, "total": 1, "pages": 1, "hasNext": false, "hasPrev": false }
-      }
+  **Response 200**
+  ```json
+  {
+    "success": true,
+    "message": "Submissions retrieved successfully",
+    "data": {
+      "submissions": [{ "_id": "66f1c2a9e4b0a1b2c3d4e5f6", "uuid": "TG-60XTA", "result": { } }],
+      "pagination": { "page": 1, "limit": 10, "total": 1, "pages": 1, "hasNext": false, "hasPrev": false }
     }
-    ```
+  }
+  ```
 
-    **Errors**
-    - `400` `Start date and end date are required`.
-    - `400` `Start date must be before end date`.
-    - `400` `Invalid pagination parameters`.
-  type: text/markdown
+  **Errors**
+  - `400` `Start date and end date are required`.
+  - `400` `Start date must be before end date`.
+  - `400` `Invalid pagination parameters`.
 
 examples:
   - name: "Success"

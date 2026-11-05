@@ -28,24 +28,22 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    Partial update (any subset of the create-body fields). An admin may update any request; an `ORGANISATION` account only one it owns (`contactPersonEmail` matches its own `Contact.email`, case-insensitive).
+docs: |-
+  Partial update (any subset of the create-body fields). An admin may update any request; an `ORGANISATION` account only one it owns (`contactPersonEmail` matches its own `Contact.email`, case-insensitive).
 
-    **`contactPersonEmail` is admin-only to change** — it's the ownership key, so an organisation changing it could hand its own request to another account or drop it out of its own view. An organisation resending its own current email (any case) is fine; changing it to any other value is a 403, and nothing is written.
+  **`contactPersonEmail` is admin-only to change** — it's the ownership key, so an organisation changing it could hand its own request to another account or drop it out of its own view. An organisation resending its own current email (any case) is fine; changing it to any other value is a 403, and nothing is written.
 
-    **Access:** `ADMIN`/`SUPER_ADMIN`/`ORGANISATION` only, token required (this was open to any organisation before PR #869).
+  **Access:** `ADMIN`/`SUPER_ADMIN`/`ORGANISATION` only, token required (this was open to any organisation before PR #869).
 
-    **Path params**
-    - `id` (Mongo `_id`, required). Not yet validated at the route level — a malformed id surfaces as a Mongoose cast error (500), not a 400 (tracked known gap).
+  **Path params**
+  - `id` (Mongo `_id`, required). Not yet validated at the route level — a malformed id surfaces as a Mongoose cast error (500), not a 400 (tracked known gap).
 
-    **Errors**
-    - `401` `No Token Provided` (no bearer token).
-    - `403` `Restricted Action, Unauthorized Access❗` (wrong role, or an `ADMIN` without `SUPER`/`ASSESSMENT_MANAGER` privilege).
-    - `404` `Request with id: <id> not found!` — checked before ownership, so a missing id never leaks as "not yours".
-    - `403` `You are not authorized to access this organization request` (an organisation naming a request it doesn't own).
-    - `403` `Only an admin can change the contact email of an organization request` (a non-admin owner sending a different `contactPersonEmail`).
-  type: text/markdown
+  **Errors**
+  - `401` `No Token Provided` (no bearer token).
+  - `403` `Restricted Action, Unauthorized Access❗` (wrong role, or an `ADMIN` without `SUPER`/`ASSESSMENT_MANAGER` privilege).
+  - `404` `Request with id: <id> not found!` — checked before ownership, so a missing id never leaks as "not yours".
+  - `403` `You are not authorized to access this organization request` (an organisation naming a request it doesn't own).
+  - `403` `Only an admin can change the contact email of an organization request` (a non-admin owner sending a different `contactPersonEmail`).
 
 examples:
   - name: "Success (organisation, own request)"

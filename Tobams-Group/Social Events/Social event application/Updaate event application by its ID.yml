@@ -14,9 +14,7 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    `PATCH /social_events/applications/:applicationId`, the applicant's own application only.
+docs: |-
+  `PATCH /social_events/applications/:applicationId`, the applicant's own application only.
 
-    - Only `fullName`, `emailAddress`, `phoneNumber` and `companyName` can change. Payment fields (`paymentStatus`, `amountPaid`, `paymentReference`, ...) in the body are ignored, so a PATCH can never confirm an unpaid seat.
-  type: text/markdown
+  - Only `fullName`, `emailAddress`, `phoneNumber` and `companyName` can change. Payment fields (`paymentStatus`, `amountPaid`, `paymentReference`, ...) in the body are ignored, so a PATCH can never confirm an unpaid seat.

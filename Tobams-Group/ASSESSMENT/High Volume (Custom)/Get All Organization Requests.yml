@@ -16,16 +16,14 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    Lists organisation assessment requests. An admin (`ADMIN` with `SUPER` or `ASSESSMENT_MANAGER` privilege, or `SUPER_ADMIN`) sees every request; an `ORGANISATION` account sees only the requests whose `contactPersonEmail` matches its own `Contact.email` (case-insensitive). Any other role, or an organisation with no email on its token, is a 403. An empty match is `200 []`, never a 404.
+docs: |-
+  Lists organisation assessment requests. An admin (`ADMIN` with `SUPER` or `ASSESSMENT_MANAGER` privilege, or `SUPER_ADMIN`) sees every request; an `ORGANISATION` account sees only the requests whose `contactPersonEmail` matches its own `Contact.email` (case-insensitive). Any other role, or an organisation with no email on its token, is a 403. An empty match is `200 []`, never a 404.
 
-    **Access:** `ADMIN`/`SUPER_ADMIN`/`ORGANISATION` only, token required (this was public before PR #869).
+  **Access:** `ADMIN`/`SUPER_ADMIN`/`ORGANISATION` only, token required (this was public before PR #869).
 
-    **Errors**
-    - `401` `No Token Provided` (no bearer token).
-    - `403` `Restricted Action, Unauthorized Access❗` (wrong role, or an `ADMIN` without `SUPER`/`ASSESSMENT_MANAGER` privilege).
-  type: text/markdown
+  **Errors**
+  - `401` `No Token Provided` (no bearer token).
+  - `403` `Restricted Action, Unauthorized Access❗` (wrong role, or an `ADMIN` without `SUPER`/`ASSESSMENT_MANAGER` privilege).
 
 examples:
   - name: "Success (admin, every request)"

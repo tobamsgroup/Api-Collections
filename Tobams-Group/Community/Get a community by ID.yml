@@ -20,23 +20,21 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    Fetches a single community. Any authenticated user may view any community by id — there's no membership check on this read.
+docs: |-
+  Fetches a single community. Any authenticated user may view any community by id — there's no membership check on this read.
 
-    **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted).
+  **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted).
 
-    **Response:** `createdBy` is the creator's resolved profile object, or `null` if that user can no longer be found — never a bare name string. `isMember` reflects whether the caller (always known, since the route requires auth) is in `members`.
+  **Response:** `createdBy` is the creator's resolved profile object, or `null` if that user can no longer be found — never a bare name string. `isMember` reflects whether the caller (always known, since the route requires auth) is in `members`.
 
-    The result is cached (`Caches.getUpdatedProfileById`/`addUpdatedProfile`) and cleared on every update, so a read immediately after an edit elsewhere is consistent, not stale.
+  The result is cached (`Caches.getUpdatedProfileById`/`addUpdatedProfile`) and cleared on every update, so a read immediately after an edit elsewhere is consistent, not stale.
 
-    **Path params**
-    - `communityId` (24-hex, required — checked in the service, not by route-level `validateParams`).
+  **Path params**
+  - `communityId` (24-hex, required — checked in the service, not by route-level `validateParams`).
 
-    **Errors**
-    - `400` `Invalid community ID` (malformed id).
-    - `404` `Community not found`.
-  type: text/markdown
+  **Errors**
+  - `400` `Invalid community ID` (malformed id).
+  - `404` `Community not found`.
 
 examples:
   - name: "Success"

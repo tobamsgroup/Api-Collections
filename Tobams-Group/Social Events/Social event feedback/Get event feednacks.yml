@@ -30,14 +30,12 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Comments for an event's **Feedback** tab, newest first, paginated. Response: `{ currentCount, totalCount, feedbacks }`; `totalCount` is the "Comments (n)" header. Each row is the stored feedback (with `replies`) plus `receiver` (the event) and `reviewer` (name, company, role, photo, rating).
+docs: |-
+  Comments for an event's **Feedback** tab, newest first, paginated. Response: `{ currentCount, totalCount, feedbacks }`; `totalCount` is the "Comments (n)" header. Each row is the stored feedback (with `replies`) plus `receiver` (the event) and `reviewer` (name, company, role, photo, rating).
 
-    - **`type=Events` needs no token**, so the logged-out event page reads the same data as the signed-in one. A token that is sent must be valid (`401`/`403` otherwise).
-    - **Any other `type` (e.g. `Mentorship`), or no `type`, still requires a token** (`401` without one).
-    - `400` for a malformed `:receiverId`, a missing `type` (when signed in) or an unknown `type`.
-  type: text/markdown
+  - **`type=Events` needs no token**, so the logged-out event page reads the same data as the signed-in one. A token that is sent must be valid (`401`/`403` otherwise).
+  - **Any other `type` (e.g. `Mentorship`), or no `type`, still requires a token** (`401` without one).
+  - `400` for a malformed `:receiverId`, a missing `type` (when signed in) or an unknown `type`.
 
 examples:
   - name: Empty feedbacks

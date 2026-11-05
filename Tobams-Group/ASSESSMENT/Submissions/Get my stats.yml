@@ -17,35 +17,33 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Assessment statistics for the logged-in user. The uuid comes from the access token.
+docs: |-
+  Assessment statistics for the logged-in user. The uuid comes from the access token.
 
-    **Access:** any authenticated user (bearer token).
+  **Access:** any authenticated user (bearer token).
 
-    **Response 200**
-    ```json
-    {
-      "success": true,
-      "message": "Your statistics retrieved successfully",
-      "data": {
-        "totalSubmissions": 3,
-        "averageScore": 64.3,
-        "bestScore": 72,
-        "latestSubmission": "2026-10-22T09:40:35.368Z",
-        "sectionPerformance": [{ "section": "APIs", "averagePercentage": 66 }],
-        "performanceTrend": "improving"
-      }
+  **Response 200**
+  ```json
+  {
+    "success": true,
+    "message": "Your statistics retrieved successfully",
+    "data": {
+      "totalSubmissions": 3,
+      "averageScore": 64.3,
+      "bestScore": 72,
+      "latestSubmission": "2026-10-22T09:40:35.368Z",
+      "sectionPerformance": [{ "section": "APIs", "averagePercentage": 66 }],
+      "performanceTrend": "improving"
     }
-    ```
-    - Scores are `result.overallScore.percentage` values.
-    - `latestSubmission` is `null` with no submissions.
-    - `performanceTrend`: `improving`, `declining`, `stable`, or `insufficient_data` (fewer than 2 submissions). Computed from the latest 5 submissions.
+  }
+  ```
+  - Scores are `result.overallScore.percentage` values.
+  - `latestSubmission` is `null` with no submissions.
+  - `performanceTrend`: `improving`, `declining`, `stable`, or `insufficient_data` (fewer than 2 submissions). Computed from the latest 5 submissions.
 
-    **Errors**
-    - `401` missing or invalid token.
-    - `400` `User UUID is required`: the account has no uuid.
-  type: text/markdown
+  **Errors**
+  - `401` missing or invalid token.
+  - `400` `User UUID is required`: the account has no uuid.
 
 examples:
   - name: "Success"

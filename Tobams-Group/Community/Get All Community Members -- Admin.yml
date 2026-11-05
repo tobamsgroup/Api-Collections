@@ -25,25 +25,23 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Lists a community's members.
+docs: |-
+  Lists a community's members.
 
-    **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE).
+  **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE).
 
-    **Pagination:** the shared `parsePagination` middleware — `page` default `1`, `limit` default `20`, capped at `100`. A bad value is `400` before the handler runs. Pagination is in-memory over `community.members` (capped at 100 members per community), not a DB-level skip/limit.
+  **Pagination:** the shared `parsePagination` middleware — `page` default `1`, `limit` default `20`, capped at `100`. A bad value is `400` before the handler runs. Pagination is in-memory over `community.members` (capped at 100 members per community), not a DB-level skip/limit.
 
-    **Response (`data`):** `{ members, currentCount, totalCount }`. Each member carries `isBanned` (whether their `userId` is in `restrictedUsers`).
+  **Response (`data`):** `{ members, currentCount, totalCount }`. Each member carries `isBanned` (whether their `userId` is in `restrictedUsers`).
 
-    This read doesn't exclude a soft-deleted community — `findRoomById` has no `isDeleted` filter, unlike the listing endpoints.
+  This read doesn't exclude a soft-deleted community — `findRoomById` has no `isDeleted` filter, unlike the listing endpoints.
 
-    **Path params**
-    - `communityId` (24-hex, required — validated by route-level `validateParams`).
+  **Path params**
+  - `communityId` (24-hex, required — validated by route-level `validateParams`).
 
-    **Errors**
-    - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
-    - `404` `Community not found`.
-  type: text/markdown
+  **Errors**
+  - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
+  - `404` `Community not found`.
 
 examples:
   - name: "Success"

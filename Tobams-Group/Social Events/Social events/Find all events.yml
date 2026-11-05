@@ -22,13 +22,11 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: true
 
-docs:
-  content: |-
-    Paginated events, for the events list and the **Other Events** panel on the event page (drop the event being viewed on the client). Same request for guests and signed-in users.
+docs: |-
+  Paginated events, for the events list and the **Other Events** panel on the event page (drop the event being viewed on the client). Same request for guests and signed-in users.
 
-    - `skip` is the **page number** (default `1`), `limit` the page size (default `10`). No sort is applied.
-    - **Token optional.** With a valid bearer token every row also carries `isApplied` for the signed-in user (`true` only for a confirmed seat: a free registration, or a paid one that has been paid); guests get no `isApplied` key. A token that is sent but expired or malformed is `401`/`403`.
-  type: text/markdown
+  - `skip` is the **page number** (default `1`), `limit` the page size (default `10`). No sort is applied.
+  - **Token optional.** With a valid bearer token every row also carries `isApplied` for the signed-in user (`true` only for a confirmed seat: a free registration, or a paid one that has been paid); guests get no `isApplied` key. A token that is sent but expired or malformed is `401`/`403`.
 
 examples:
   - name: Success

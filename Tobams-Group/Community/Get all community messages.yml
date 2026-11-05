@@ -23,29 +23,27 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    Lists a community's messages, newest-first pagination via `page`/`limit`.
+docs: |-
+  Lists a community's messages, newest-first pagination via `page`/`limit`.
 
-    **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted). A non-admin caller must be a member of the community.
+  **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted). A non-admin caller must be a member of the community.
 
-    **Asymmetric existence check:** a non-admin's membership check loads the community first, so a missing/invalid-but-well-formed id is a `404` for them. A platform admin skips that check entirely (no membership to verify) and queries messages directly — for an admin, a nonexistent `communityId` quietly returns an **empty `200`** (`currentCount: 0, totalCount: 0, messages: []`), never a `404`.
+  **Asymmetric existence check:** a non-admin's membership check loads the community first, so a missing/invalid-but-well-formed id is a `404` for them. A platform admin skips that check entirely (no membership to verify) and queries messages directly — for an admin, a nonexistent `communityId` quietly returns an **empty `200`** (`currentCount: 0, totalCount: 0, messages: []`), never a `404`.
 
-    Neither `communityId` nor `page`/`limit` go through `validateParams`/`validateQuery` on this route — `communityId` is checked by the service itself (`400` if not a 24-hex id); `page`/`limit` default to `1`/`10` if omitted or non-numeric, with no upper cap.
+  Neither `communityId` nor `page`/`limit` go through `validateParams`/`validateQuery` on this route — `communityId` is checked by the service itself (`400` if not a 24-hex id); `page`/`limit` default to `1`/`10` if omitted or non-numeric, with no upper cap.
 
-    **Path params**
-    - `communityId` (24-hex, required).
+  **Path params**
+  - `communityId` (24-hex, required).
 
-    **Query params**
-    - `page` (default `1`), `limit` (default `10`).
+  **Query params**
+  - `page` (default `1`), `limit` (default `10`).
 
-    **Response (`data`):** `{ currentCount, totalCount, messages[] }`.
+  **Response (`data`):** `{ currentCount, totalCount, messages[] }`.
 
-    **Errors**
-    - `400` `Invalid community ID` (malformed id).
-    - `403` `User not a member of the community` (non-admin, non-member caller).
-    - `404` `Community not found` (non-admin caller, id well-formed but no such community).
-  type: text/markdown
+  **Errors**
+  - `400` `Invalid community ID` (malformed id).
+  - `403` `User not a member of the community` (non-admin, non-member caller).
+  - `404` `Community not found` (non-admin caller, id well-formed but no such community).
 
 examples:
   - name: "Success (member)"

@@ -6,6 +6,4 @@ info:
 request:
   auth: inherit
 
-docs:
-  content: In-House or Client job fetch
-  type: text/markdown
+docs: In-House or Client job fetch

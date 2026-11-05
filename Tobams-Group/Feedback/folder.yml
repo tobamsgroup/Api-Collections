@@ -6,6 +6,4 @@ info:
 request:
   auth: inherit
 
-docs:
-  content: User feedback
-  type: text/markdown
+docs: User feedback

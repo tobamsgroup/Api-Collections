@@ -31,33 +31,31 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Lists one user's submissions by uuid, paginated. Same data as `GET /assessment/submissions/my-submissions`, but the uuid is in the path instead of the token.
+docs: |-
+  Lists one user's submissions by uuid, paginated. Same data as `GET /assessment/submissions/my-submissions`, but the uuid is in the path instead of the token.
 
-    **Access:** public. No auth: anyone who knows a uuid can list that user's submissions.
+  **Access:** public. No auth: anyone who knows a uuid can list that user's submissions.
 
-    **Path params**
-    - `uuid` (string, required): exact match on the submission `uuid`.
+  **Path params**
+  - `uuid` (string, required): exact match on the submission `uuid`.
 
-    **Query params** (all optional): `page` (default `1`), `limit` (default `10`, max `100`), `sortBy` (`submittedAt` default, or `overallScore`), `sortOrder` (`desc` default, or `asc`).
+  **Query params** (all optional): `page` (default `1`), `limit` (default `10`, max `100`), `sortBy` (`submittedAt` default, or `overallScore`), `sortOrder` (`desc` default, or `asc`).
 
-    **Response 200**
-    ```json
-    {
-      "success": true,
-      "message": "User submissions retrieved successfully",
-      "data": {
-        "submissions": [{ "_id": "66f1c2a9e4b0a1b2c3d4e5f6", "uuid": "TG-60XTA", "result": { } }],
-        "pagination": { "page": 1, "limit": 10, "total": 1, "pages": 1, "hasNext": false, "hasPrev": false }
-      }
+  **Response 200**
+  ```json
+  {
+    "success": true,
+    "message": "User submissions retrieved successfully",
+    "data": {
+      "submissions": [{ "_id": "66f1c2a9e4b0a1b2c3d4e5f6", "uuid": "TG-60XTA", "result": { } }],
+      "pagination": { "page": 1, "limit": 10, "total": 1, "pages": 1, "hasNext": false, "hasPrev": false }
     }
-    ```
-    An unknown uuid is `200` with `submissions: []`, not a 404.
+  }
+  ```
+  An unknown uuid is `200` with `submissions: []`, not a 404.
 
-    **Errors**
-    - `400` `Invalid pagination parameters`.
-  type: text/markdown
+  **Errors**
+  - `400` `Invalid pagination parameters`.
 
 examples:
   - name: "Success (sorted by score)"

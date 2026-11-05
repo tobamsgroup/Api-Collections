@@ -19,32 +19,30 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Assessment statistics for one user by uuid. Same shape as `GET /assessment/submissions/my-stats`.
+docs: |-
+  Assessment statistics for one user by uuid. Same shape as `GET /assessment/submissions/my-stats`.
 
-    **Access:** public. No auth.
+  **Access:** public. No auth.
 
-    **Path params**
-    - `uuid` (string, required).
+  **Path params**
+  - `uuid` (string, required).
 
-    **Response 200**
-    ```json
-    {
-      "success": true,
-      "message": "User statistics retrieved successfully",
-      "data": {
-        "totalSubmissions": 3,
-        "averageScore": 64.3,
-        "bestScore": 72,
-        "latestSubmission": "2026-10-22T09:40:35.368Z",
-        "sectionPerformance": [{ "section": "APIs", "averagePercentage": 66 }],
-        "performanceTrend": "improving"
-      }
+  **Response 200**
+  ```json
+  {
+    "success": true,
+    "message": "User statistics retrieved successfully",
+    "data": {
+      "totalSubmissions": 3,
+      "averageScore": 64.3,
+      "bestScore": 72,
+      "latestSubmission": "2026-10-22T09:40:35.368Z",
+      "sectionPerformance": [{ "section": "APIs", "averagePercentage": 66 }],
+      "performanceTrend": "improving"
     }
-    ```
-    `performanceTrend`: `improving`, `declining`, `stable`, or `insufficient_data` (fewer than 2 submissions). Computed from the latest 5 submissions.
-  type: text/markdown
+  }
+  ```
+  `performanceTrend`: `improving`, `declining`, `stable`, or `insufficient_data` (fewer than 2 submissions). Computed from the latest 5 submissions.
 
 examples:
   - name: "Success"

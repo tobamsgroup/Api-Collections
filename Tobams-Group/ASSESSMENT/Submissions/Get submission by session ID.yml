@@ -19,37 +19,35 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Returns the saved submission for an assessment session.
+docs: |-
+  Returns the saved submission for an assessment session.
 
-    **Access:** public. No ownership check: anyone holding the `sessionId` can read the submission.
+  **Access:** public. No ownership check: anyone holding the `sessionId` can read the submission.
 
-    **Path params**
-    - `sessionId` (string, required): the session id used in `POST /assessment/submit`.
+  **Path params**
+  - `sessionId` (string, required): the session id used in `POST /assessment/submit`.
 
-    **Response 200**
-    ```json
-    {
-      "success": true,
-      "message": "Submission retrieved successfully",
-      "data": {
-        "_id": "66f1c2a9e4b0a1b2c3d4e5f6",
-        "uuid": "TG-60XTA",
-        "sessionId": "jane.doe_1776760291236_b47a1107",
-        "answers": [],
-        "timeSpent": 1800,
-        "userCategory": "PLATFORM_USER",
-        "result": { "overallScore": { "percentage": 72, "totalPoints": 79, "earnedPoints": 57 } },
-        "certificateUrl": null
-      }
+  **Response 200**
+  ```json
+  {
+    "success": true,
+    "message": "Submission retrieved successfully",
+    "data": {
+      "_id": "66f1c2a9e4b0a1b2c3d4e5f6",
+      "uuid": "TG-60XTA",
+      "sessionId": "jane.doe_1776760291236_b47a1107",
+      "answers": [],
+      "timeSpent": 1800,
+      "userCategory": "PLATFORM_USER",
+      "result": { "overallScore": { "percentage": 72, "totalPoints": 79, "earnedPoints": 57 } },
+      "certificateUrl": null
     }
-    ```
-    `data` is the full submission document (same shape as the submit response, without `stage`/`courseRecommendation`).
+  }
+  ```
+  `data` is the full submission document (same shape as the submit response, without `stage`/`courseRecommendation`).
 
-    **Errors**
-    - `404` `Assessment submission not found`.
-  type: text/markdown
+  **Errors**
+  - `404` `Assessment submission not found`.
 
 examples:
   - name: "Success"

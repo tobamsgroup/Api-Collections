@@ -21,24 +21,22 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    A member's own communities — or, for a platform admin, **every** non-deleted community in any status, whether or not the admin ever joined it.
+docs: |-
+  A member's own communities — or, for a platform admin, **every** non-deleted community in any status, whether or not the admin ever joined it.
 
-    **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted).
+  **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted).
 
-    **Unread counts (changed):** `unreadMessageCount` now comes from the viewer's own per-room read cursor, not delivery receipts. It counts messages newer than `max(the viewer's last-read cursor, the viewer's joinedAt)` that the viewer didn't send. This fixes two bugs:
-    - a member who was offline when messages arrived used to see `0` (delivery receipts only exist for messages a connected client acked);
-    - a platform admin viewing a community they never joined used to always see `0` for the same reason — now they get a real count, computed the same way.
+  **Unread counts (changed):** `unreadMessageCount` now comes from the viewer's own per-room read cursor, not delivery receipts. It counts messages newer than `max(the viewer's last-read cursor, the viewer's joinedAt)` that the viewer didn't send. This fixes two bugs:
+  - a member who was offline when messages arrived used to see `0` (delivery receipts only exist for messages a connected client acked);
+  - a platform admin viewing a community they never joined used to always see `0` for the same reason — now they get a real count, computed the same way.
 
-    A brand-new member is never shown the community's pre-existing history as unread: the floor is their own `joinedAt`, not the room's creation date.
+  A brand-new member is never shown the community's pre-existing history as unread: the floor is their own `joinedAt`, not the room's creation date.
 
-    **Query params**
-    - `page` (default `1`, minimum `1`).
-    - `limit` (default `10`, clamped to `1`–`100`).
+  **Query params**
+  - `page` (default `1`, minimum `1`).
+  - `limit` (default `10`, clamped to `1`–`100`).
 
-    **Response (`data`)**: `{ currentCount, totalCount, communities[] }`. Each community carries `isMember`, `lastMessage` (`null` if none), `createdBy` (resolved creator, or `null` if that user can't be found), and `unreadMessageCount`.
-  type: text/markdown
+  **Response (`data`)**: `{ currentCount, totalCount, communities[] }`. Each community carries `isMember`, `lastMessage` (`null` if none), `createdBy` (resolved creator, or `null` if that user can't be found), and `unreadMessageCount`.
 
 examples:
   - name: Success (member)

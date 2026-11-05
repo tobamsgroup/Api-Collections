@@ -73,16 +73,14 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: true
 
-docs:
-  content: |-
-    Admin/super-admin only. Searches every payment bucket against the filter set below and returns a revenue summary over every match, not just the page.
+docs: |-
+  Admin/super-admin only. Searches every payment bucket against the filter set below and returns a revenue summary over every match, not just the page.
 
-    **Response rows:** each row carries `userName`, the payer's resolved `"firstName lastName"` (trimmed, `null` if both are blank). It is only ever resolved for a row with a `userId` — a guest/uuid-only payment always gets `userName: null`, even when `userEmail` resolves via the uuid mapping.
+  **Response rows:** each row carries `userName`, the payer's resolved `"firstName lastName"` (trimmed, `null` if both are blank). It is only ever resolved for a row with a `userId` — a guest/uuid-only payment always gets `userName: null`, even when `userEmail` resolves via the uuid mapping.
 
-    **`summary`** covers every match across all pages: `totalTransactions`, `byStatus` (every `PaymentStatus`, zero-filled), `revenueByCurrency` (one entry per currency, successful payments only).
+  **`summary`** covers every match across all pages: `totalTransactions`, `byStatus` (every `PaymentStatus`, zero-filled), `revenueByCurrency` (one entry per currency, successful payments only).
 
-    **Known-id params** (`userId`, `planId`, `subscriptionId`) are cast to `ObjectId` before filtering — `summarize()` is an aggregation and never casts, so a string id would filter the page but zero out the summary.
-  type: text/markdown
+  **Known-id params** (`userId`, `planId`, `subscriptionId`) are cast to `ObjectId` before filtering — `summarize()` is an aggregation and never casts, so a string id would filter the page but zero out the summary.
 
 examples:
   - name: Success

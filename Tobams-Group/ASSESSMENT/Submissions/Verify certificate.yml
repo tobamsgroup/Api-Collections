@@ -19,33 +19,31 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Confirms a certificate is genuine using the opaque certificate ID printed on it. Does not expose the submission `_id`. Returns the details snapshotted when the certificate was issued, so they always match the printed certificate.
+docs: |-
+  Confirms a certificate is genuine using the opaque certificate ID printed on it. Does not expose the submission `_id`. Returns the details snapshotted when the certificate was issued, so they always match the printed certificate.
 
-    **Access:** public.
+  **Access:** public.
 
-    **Path params**
-    - `certificateId` (string, required): the ID on the certificate.
+  **Path params**
+  - `certificateId` (string, required): the ID on the certificate.
 
-    **Response 200**
-    ```json
-    {
-      "success": true,
-      "data": {
-        "valid": true,
-        "certificateId": "TGC-8F3K2Q",
-        "recipientName": "Jane Doe",
-        "area": "Backend Development",
-        "issuedOn": "2026-10-22T09:40:35.368Z"
-      }
+  **Response 200**
+  ```json
+  {
+    "success": true,
+    "data": {
+      "valid": true,
+      "certificateId": "TGC-8F3K2Q",
+      "recipientName": "Jane Doe",
+      "area": "Backend Development",
+      "issuedOn": "2026-10-22T09:40:35.368Z"
     }
-    ```
-    No `message` field on this response.
+  }
+  ```
+  No `message` field on this response.
 
-    **Errors**
-    - `404` `Certificate not found`.
-  type: text/markdown
+  **Errors**
+  - `404` `Certificate not found`.
 
 examples:
   - name: "Valid certificate"

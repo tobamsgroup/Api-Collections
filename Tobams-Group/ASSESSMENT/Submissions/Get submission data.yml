@@ -22,31 +22,29 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Returns one submission, only to its submitter. Backs the result-page link in the outcome and retry emails (`{FRONTEND_URL}/assessment/assessment?submissionId=<id>&uuid=<uuid>`), so users who can't log in yet can revisit their result.
+docs: |-
+  Returns one submission, only to its submitter. Backs the result-page link in the outcome and retry emails (`{FRONTEND_URL}/assessment/assessment?submissionId=<id>&uuid=<uuid>`), so users who can't log in yet can revisit their result.
 
-    **Access:** public, but `uuid` must match the submission's `uuid` (trimmed, case-insensitive).
+  **Access:** public, but `uuid` must match the submission's `uuid` (trimmed, case-insensitive).
 
-    **Path params**
-    - `id` (24-hex ObjectId, required): submission `_id`.
+  **Path params**
+  - `id` (24-hex ObjectId, required): submission `_id`.
 
-    **Query params**
-    - `uuid` (string, required, non-blank): the submitter's uuid.
+  **Query params**
+  - `uuid` (string, required, non-blank): the submitter's uuid.
 
-    **Response 200**
-    ```json
-    {
-      "success": true,
-      "message": "Submission retrieved successfully",
-      "data": { "_id": "66f1c2a9e4b0a1b2c3d4e5f6", "uuid": "TG-60XTA", "sessionId": "...", "result": { }, "certificateUrl": null }
-    }
-    ```
+  **Response 200**
+  ```json
+  {
+    "success": true,
+    "message": "Submission retrieved successfully",
+    "data": { "_id": "66f1c2a9e4b0a1b2c3d4e5f6", "uuid": "TG-60XTA", "sessionId": "...", "result": { }, "certificateUrl": null }
+  }
+  ```
 
-    **Errors**
-    - `400` `id` is not a 24-hex ObjectId, or `uuid` is missing/blank.
-    - `404` `Assessment submission not found`: the id doesn't exist **or** the uuid doesn't own it. Same response for both on purpose, so the route can't be used to probe which ids exist.
-  type: text/markdown
+  **Errors**
+  - `400` `id` is not a 24-hex ObjectId, or `uuid` is missing/blank.
+  - `404` `Assessment submission not found`: the id doesn't exist **or** the uuid doesn't own it. Same response for both on purpose, so the route can't be used to probe which ids exist.
 
 examples:
   - name: "Success"

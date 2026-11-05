@@ -22,27 +22,25 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Deletes a submission.
+docs: |-
+  Deletes a submission.
 
-    **Access:** public. Ownership is only checked when `uuid` is sent: with `uuid`, it must equal the submission's `uuid` (exact, case-sensitive). **Without `uuid` the delete goes through with no check.**
+  **Access:** public. Ownership is only checked when `uuid` is sent: with `uuid`, it must equal the submission's `uuid` (exact, case-sensitive). **Without `uuid` the delete goes through with no check.**
 
-    **Path params**
-    - `id` (submission `_id`, required).
+  **Path params**
+  - `id` (submission `_id`, required).
 
-    **Query params**
-    - `uuid` (string, optional): submitter's uuid.
+  **Query params**
+  - `uuid` (string, optional): submitter's uuid.
 
-    **Response 200**
-    ```json
-    { "success": true, "message": "Submission deleted successfully" }
-    ```
+  **Response 200**
+  ```json
+  { "success": true, "message": "Submission deleted successfully" }
+  ```
 
-    **Errors**
-    - `403` `You are not authorized to delete this submission`: `uuid` sent and doesn't match. Also returned when `uuid` is sent and the id doesn't exist.
-    - `404` `Assessment submission not found`: no `uuid` sent and the id doesn't exist.
-  type: text/markdown
+  **Errors**
+  - `403` `You are not authorized to delete this submission`: `uuid` sent and doesn't match. Also returned when `uuid` is sent and the id doesn't exist.
+  - `404` `Assessment submission not found`: no `uuid` sent and the id doesn't exist.
 
 examples:
   - name: "Deleted"

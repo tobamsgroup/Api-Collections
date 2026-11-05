@@ -30,39 +30,37 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Lists the logged-in user's submissions, paginated. The uuid comes from the access token (`req.user.uuid`).
+docs: |-
+  Lists the logged-in user's submissions, paginated. The uuid comes from the access token (`req.user.uuid`).
 
-    **Access:** any authenticated user (bearer token).
+  **Access:** any authenticated user (bearer token).
 
-    **Query params** (all optional)
+  **Query params** (all optional)
 
-    | Param | Default | Notes |
-    | --- | --- | --- |
-    | `page` | `1` | `>= 1` |
-    | `limit` | `10` | `1`-`100` |
-    | `sortBy` | `submittedAt` | `submittedAt` or `overallScore` (sorts on `result.overallScore.percentage`) |
-    | `sortOrder` | `desc` | `asc` or `desc` |
+  | Param | Default | Notes |
+  | --- | --- | --- |
+  | `page` | `1` | `>= 1` |
+  | `limit` | `10` | `1`-`100` |
+  | `sortBy` | `submittedAt` | `submittedAt` or `overallScore` (sorts on `result.overallScore.percentage`) |
+  | `sortOrder` | `desc` | `asc` or `desc` |
 
-    **Response 200**
-    ```json
-    {
-      "success": true,
-      "message": "Your submissions retrieved successfully",
-      "data": {
-        "submissions": [{ "_id": "66f1c2a9e4b0a1b2c3d4e5f6", "uuid": "TG-60XTA", "result": { } }],
-        "pagination": { "page": 1, "limit": 10, "total": 3, "pages": 1, "hasNext": false, "hasPrev": false }
-      }
+  **Response 200**
+  ```json
+  {
+    "success": true,
+    "message": "Your submissions retrieved successfully",
+    "data": {
+      "submissions": [{ "_id": "66f1c2a9e4b0a1b2c3d4e5f6", "uuid": "TG-60XTA", "result": { } }],
+      "pagination": { "page": 1, "limit": 10, "total": 3, "pages": 1, "hasNext": false, "hasPrev": false }
     }
-    ```
-    No submissions is `200` with `submissions: []`.
+  }
+  ```
+  No submissions is `200` with `submissions: []`.
 
-    **Errors**
-    - `401` missing or invalid token.
-    - `400` `Invalid pagination parameters` (`page < 1`, `limit < 1` or `> 100`).
-    - `400` `User UUID is required`: the account has no uuid.
-  type: text/markdown
+  **Errors**
+  - `401` missing or invalid token.
+  - `400` `Invalid pagination parameters` (`page < 1`, `limit < 1` or `> 100`).
+  - `400` `User UUID is required`: the account has no uuid.
 
 examples:
   - name: "Success"

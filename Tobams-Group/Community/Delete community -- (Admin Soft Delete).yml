@@ -19,21 +19,19 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Soft-deletes a community: sets `isDeleted: true` and `deletedAt`, nothing else. Members, messages, and the room document itself are left alone — it's a flag that every listing (and `GET`/`PATCH .../status`) treats as gone.
+docs: |-
+  Soft-deletes a community: sets `isDeleted: true` and `deletedAt`, nothing else. Members, messages, and the room document itself are left alone — it's a flag that every listing (and `GET`/`PATCH .../status`) treats as gone.
 
-    **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE).
+  **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE).
 
-    **Path params**
-    - `communityId` (24-hex, required).
+  **Path params**
+  - `communityId` (24-hex, required).
 
-    **Response:** `data: null` on success.
+  **Response:** `data: null` on success.
 
-    **Errors**
-    - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
-    - `404` `Community not found` — a missing id and an **already soft-deleted** community give the same 404 (the repository filters out `isDeleted: true` rows), so this endpoint can't tell you which one it was.
-  type: text/markdown
+  **Errors**
+  - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
+  - `404` `Community not found` — a missing id and an **already soft-deleted** community give the same 404 (the repository filters out `isDeleted: true` rows), so this endpoint can't tell you which one it was.
 
 examples:
   - name: "Success"

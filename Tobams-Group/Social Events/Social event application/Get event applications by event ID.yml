@@ -14,10 +14,8 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    `GET /social_events/applications/:eventId`. The event's attendee list, for the organisation that owns the event or an admin (`403` for anyone else, `404` for an unknown event).
+docs: |-
+  `GET /social_events/applications/:eventId`. The event's attendee list, for the organisation that owns the event or an admin (`403` for anyone else, `404` for an unknown event).
 
-    - **Confirmed seats only:** applications with `paymentStatus: "paid"`, plus applications created before payments existed (no `paymentStatus`). `pending`, `failed` and `disputed` applications to a paid event are not attendees and are left out.
-    - Each row carries its payment fields when set: `paymentStatus`, `quotedAmount`, `quotedCurrency`, `amountPaid`, `paymentCurrency`, `paymentProvider`, `paymentReference`, `paidAt`.
-  type: text/markdown
+  - **Confirmed seats only:** applications with `paymentStatus: "paid"`, plus applications created before payments existed (no `paymentStatus`). `pending`, `failed` and `disputed` applications to a paid event are not attendees and are left out.
+  - Each row carries its payment fields when set: `paymentStatus`, `quotedAmount`, `quotedCurrency`, `amountPaid`, `paymentCurrency`, `paymentProvider`, `paymentReference`, `paidAt`.

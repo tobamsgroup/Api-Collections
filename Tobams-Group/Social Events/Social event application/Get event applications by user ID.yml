@@ -14,9 +14,7 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    The applicant's own applications, in **every** payment state, so the frontend can offer "Complete payment" on a `pending` or `failed` one.
+docs: |-
+  The applicant's own applications, in **every** payment state, so the frontend can offer "Complete payment" on a `pending` or `failed` one.
 
-    - `paymentStatus`: `paid` (confirmed seat, also every free event), `pending` (paid event, not yet paid), `failed` (the gateway reported a failed charge; can pay again), `disputed` (charged an amount that did not match the quote; seat withheld, the admin has been told; do not pay again). No `paymentStatus` means an application from before payments existed: treat it as `paid`.
-  type: text/markdown
+  - `paymentStatus`: `paid` (confirmed seat, also every free event), `pending` (paid event, not yet paid), `failed` (the gateway reported a failed charge; can pay again), `disputed` (charged an amount that did not match the quote; seat withheld, the admin has been told; do not pay again). No `paymentStatus` means an application from before payments existed: treat it as `paid`.

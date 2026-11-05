@@ -28,26 +28,24 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
-docs:
-  content: |-
-    Removes a member from a community and, optionally, bans them from rejoining. Despite the file name, `ban` is optional — this is the general "remove member" endpoint, not ban-only.
+docs: |-
+  Removes a member from a community and, optionally, bans them from rejoining. Despite the file name, `ban` is optional — this is the general "remove member" endpoint, not ban-only.
 
-    **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE). The underlying service also lets a community's own `admin` remove a member, and backs the `community:leave` socket event for self-leave — but neither is reachable through this REST route, which is gated to platform admins only.
+  **Access:** platform admins only (`ADMIN`/`SUPER_ADMIN`; `ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE). The underlying service also lets a community's own `admin` remove a member, and backs the `community:leave` socket event for self-leave — but neither is reachable through this REST route, which is gated to platform admins only.
 
-    **`memberId` is the removed user's `userId`**, not a member sub-document's own `_id` (`GET /communities/:communityId/members` returns both on older rows).
+  **`memberId` is the removed user's `userId`**, not a member sub-document's own `_id` (`GET /communities/:communityId/members` returns both on older rows).
 
-    **Body**
-    - `ban` (optional boolean). When `true`, `memberId` is also added to the community's `restrictedUsers`, which blocks them from rejoining (`AuthorizationError` on the next join attempt).
-    - `reason` (optional string, ≤500 chars) — accepted by validation but **not persisted anywhere** today; it's a known gap, not documented behavior to build on.
+  **Body**
+  - `ban` (optional boolean). When `true`, `memberId` is also added to the community's `restrictedUsers`, which blocks them from rejoining (`AuthorizationError` on the next join attempt).
+  - `reason` (optional string, ≤500 chars) — accepted by validation but **not persisted anywhere** today; it's a known gap, not documented behavior to build on.
 
-    **Path params**
-    - `communityId`, `memberId` (both 24-hex, required).
+  **Path params**
+  - `communityId`, `memberId` (both 24-hex, required).
 
-    **Errors**
-    - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` / `memberId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
-    - `400` `User not a member of the community` (`memberId` isn't currently a member).
-    - `404` `Community not found`.
-  type: text/markdown
+  **Errors**
+  - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` / `memberId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
+  - `400` `User not a member of the community` (`memberId` isn't currently a member).
+  - `404` `Community not found`.
 
 examples:
   - name: "Success (remove only)"

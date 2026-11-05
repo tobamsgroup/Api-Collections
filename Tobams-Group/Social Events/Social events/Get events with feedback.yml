@@ -19,12 +19,10 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: true
 
-docs:
-  content: |-
-    The event plus its first 20 comments (`feedback`), newest first. No token needed. For the paginated Feedback tab with a total count use `GET /feedbacks/receiver/:receiverId?type=Events`.
+docs: |-
+  The event plus its first 20 comments (`feedback`), newest first. No token needed. For the paginated Feedback tab with a total count use `GET /feedbacks/receiver/:receiverId?type=Events`.
 
-    **Errors:** `400` when `:eventId` is not a 24-character id (it used to be a `500`), `404` when no event has that id.
-  type: text/markdown
+  **Errors:** `400` when `:eventId` is not a 24-character id (it used to be a `500`), `404` when no event has that id.
 
 examples:
   - name: Success

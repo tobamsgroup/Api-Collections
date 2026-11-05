@@ -6,15 +6,13 @@ info:
 request:
   auth: inherit
 
-docs:
-  content: |-
-    Assessment submission endpoints: submit answers for scoring, read submissions and stats, course recommendations, and certificates.
+docs: |-
+  Assessment submission endpoints: submit answers for scoring, read submissions and stats, course recommendations, and certificates.
 
-    `POST {{BASE}}/assessment/submit` submits answers. Every read and the delete live under `{{BASE}}/assessment/submissions/<route>` (for example `{{BASE}}/assessment/submissions/session/:sessionId`).
+  `POST {{BASE}}/assessment/submit` submits answers. Every read and the delete live under `{{BASE}}/assessment/submissions/<route>` (for example `{{BASE}}/assessment/submissions/session/:sessionId`).
 
-    **Deprecated:** the same reads and delete still answer at the old root paths (`{{BASE}}/assessment/<route>`, for example `{{BASE}}/assessment/my-stats`) for clients not yet migrated. Use `/assessment/submissions/...` for anything new.
+  **Deprecated:** the same reads and delete still answer at the old root paths (`{{BASE}}/assessment/<route>`, for example `{{BASE}}/assessment/my-stats`) for clients not yet migrated. Use `/assessment/submissions/...` for anything new.
 
-    Only `GET /my-submissions` and `GET /my-stats` need a bearer token. Every other route is public.
+  Only `GET /my-submissions` and `GET /my-stats` need a bearer token. Every other route is public.
 
-    Success responses: `{ "success": true, "message": "...", "data": ... }`. Errors: `{ "success": false, "error": "<ErrorName>", "message": "..." }`.
-  type: text/markdown
+  Success responses: `{ "success": true, "message": "...", "data": ... }`. Errors: `{ "success": false, "error": "<ErrorName>", "message": "..." }`.

@@ -29,17 +29,15 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    The signed-in mentor's saved (bookmarked) mentees, in the order they were saved. It always lists the **caller's own** saved mentees. The route also admits admins and super admins, but an account with no mentor profile gets `404` `User not found`.
+docs: |-
+  The signed-in mentor's saved (bookmarked) mentees, in the order they were saved. It always lists the **caller's own** saved mentees. The route also admits admins and super admins, but an account with no mentor profile gets `404` `User not found`.
 
-    **`isApplied` (added in PR #888):** every mentee now carries `isApplied: boolean`, the same flag `GET /recommendations?type=mentorship` returns, so the Saved Mentees card can switch "Request Mentorship" to a disabled "Request sent". It is `true` when the mentor and that mentee have a request between them in `Pending`, `Approved` or `Accepted` state, whichever side sent it; `Rejected`, `Declined` and `Cancelled` requests do not count, so the mentor can request again. `isPeer` is returned alongside it as before.
+  **`isApplied` (added in PR #888):** every mentee now carries `isApplied: boolean`, the same flag `GET /recommendations?type=mentorship` returns, so the Saved Mentees card can switch "Request Mentorship" to a disabled "Request sent". It is `true` when the mentor and that mentee have a request between them in `Pending`, `Approved` or `Accepted` state, whichever side sent it; `Rejected`, `Declined` and `Cancelled` requests do not count, so the mentor can request again. `isPeer` is returned alongside it as before.
 
-    - **Empty list:** `200` with `data: []`. It used to be a `400` `No saved mentees found`, so the frontend must render the empty state from `data: []` and stop treating a 400 here as "nothing saved".
-    - **Lookup failure:** `503` `ServiceUnavailableError` `Could not load your saved mentees right now. Please try again.` The mentees are deliberately not returned without `isApplied`: a card with no flag would show an active "Request Mentorship" button for someone who already has a request. Show a retry state instead. The underlying error is logged server-side and never sent.
-    - A saved mentee whose account no longer exists is left out of the list.
-    - No bearer token: `401`. A role other than mentor, admin or super admin: `403`.
-  type: text/markdown
+  - **Empty list:** `200` with `data: []`. It used to be a `400` `No saved mentees found`, so the frontend must render the empty state from `data: []` and stop treating a 400 here as "nothing saved".
+  - **Lookup failure:** `503` `ServiceUnavailableError` `Could not load your saved mentees right now. Please try again.` The mentees are deliberately not returned without `isApplied`: a card with no flag would show an active "Request Mentorship" button for someone who already has a request. Show a retry state instead. The underlying error is logged server-side and never sent.
+  - A saved mentee whose account no longer exists is left out of the list.
+  - No bearer token: `401`. A role other than mentor, admin or super admin: `403`.
 
 examples:
   - name: Saved mentees with request state
