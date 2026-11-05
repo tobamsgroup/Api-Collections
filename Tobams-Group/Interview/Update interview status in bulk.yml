@@ -70,19 +70,4 @@ examples:
             }
           }
 
-docs:
-  content: |-
-    **Not on `dev` yet:** this route ships with the job application stages PR. Until that merges, `dev` has no `PATCH /interviews/bulk`.
-
-    **Who:** only each interview's own organisation or applicant. Anyone else, admins included, gets a 403 for that id in `failed`.
-
-    **Rules per id, same as the single update:**
-
-    - `Cancelled`: refused with a 400 if the interview is already `Cancelled` or `Completed`.
-    - `Completed`: the interview must be `Scheduled` and the caller must be the organisation, otherwise a 400.
-
-    **Response:** always 200 on a valid body. Read each id's outcome from `data.updated` and `data.failed`; one failure never stops the rest.
-
-    **Notifications:** each company gets one summary of its updated interviews, not one per interview.
-
-    **Stage:** this changes only each interview's own `status`. It never reads or changes the application, so the candidate stays at the same stage, and an interview on a post with no application still updates.
+docs: Hello test
