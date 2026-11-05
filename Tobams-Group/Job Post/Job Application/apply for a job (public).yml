@@ -132,6 +132,8 @@ docs: |-
   - Application still at `Applied`: updates the same application, 201. `data` has the same fields as a new application and holds only what this request sent.
   - Application past `Applied`: 400 with `We could not accept your application for this job`. Nothing changes, and the message names no stage.
 
+  The update while at `Applied` is intentional: applicants can correct an application while it is still open, instead of raising a complaint. There is no email verification on this route.
+
   Request body is unchanged. Client-sent `stage` and other server-managed fields are ignored.
 
   JobRoles { 

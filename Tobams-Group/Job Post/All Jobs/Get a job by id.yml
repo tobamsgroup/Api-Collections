@@ -410,3 +410,7 @@ examples:
                   "isApplied": false
               }
           }
+
+docs:
+  content: |-
+    `isApplied` is matched on the signed-in user's email in any case, the same way applying matches it.

@@ -124,3 +124,11 @@ examples:
                   }
               ]
           }
+
+docs:
+  content: |-
+    **Inputs ignore case and surrounding spaces:** `stage`, `role`, `dateFilter`, `sortPreset`. `stage=Interviewed` is still accepted and means `Interview`. Unknown values are a 400.
+
+    **Rows** include `rejectedAtStage`: the stage a rejected applicant had reached, `null` otherwise and on rows rejected before the field existed.
+
+    **`stageCounts`** feeds the tabs. It ignores the `stage` filter and respects the other filters.

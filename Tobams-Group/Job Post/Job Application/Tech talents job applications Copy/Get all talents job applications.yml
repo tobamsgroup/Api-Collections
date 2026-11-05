@@ -5,17 +5,17 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/job-apply/tech-talents?sortPresent=most_recent"
+  url: "{{BASE}}/job-apply/tech-talents?sortPreset=most_recent"
   params:
     - name: role
       value: talent
       type: query
-      description: intern|talent
+      description: Talent|Intern. Any case
       disabled: true
     - name: stage
       value: ""
       type: query
-      description: "'Applied'|'Shortlisted'|'Assessment'|'Interview'|'Hired'|'Rejected'"
+      description: "'Applied'|'Shortlisted'|'Assessment'|'Interview'|'Hired'|'Rejected'. Any case"
       disabled: true
     - name: clientId
       value: ""
@@ -38,7 +38,7 @@ http:
       value: ""
       type: query
       disabled: true
-    - name: sortPresent
+    - name: sortPreset
       value: most_recent
       type: query
       description: "'most_recent'|'seven_days_ago'|'this_month'|'last_month'"
@@ -168,17 +168,17 @@ examples:
           }
   - name: Empty
     request:
-      url: "{{BASE}}/job-apply/tech-talents?role=talent&sortPresent=most_recent"
+      url: "{{BASE}}/job-apply/tech-talents?role=talent&sortPreset=most_recent"
       method: GET
       params:
         - name: role
           value: talent
           type: query
-          description: intern|talent
+          description: Talent|Intern. Any case
         - name: stage
           value: ""
           type: query
-          description: "'Applied'|'Shortlisted'|'Assessment'|'Interview'|'Hired'|'Rejected'"
+          description: "'Applied'|'Shortlisted'|'Assessment'|'Interview'|'Hired'|'Rejected'. Any case"
           disabled: true
         - name: clientId
           value: ""
@@ -201,7 +201,7 @@ examples:
           value: ""
           type: query
           disabled: true
-        - name: sortPresent
+        - name: sortPreset
           value: most_recent
           type: query
           description: "'most_recent'|'seven_days_ago'|'this_month'|'last_month'"
@@ -297,18 +297,18 @@ examples:
           }
   - name: Success
     request:
-      url: "{{BASE}}/job-apply/tech-talents?sortPresent=most_recent"
+      url: "{{BASE}}/job-apply/tech-talents?sortPreset=most_recent"
       method: GET
       params:
         - name: role
           value: talent
           type: query
-          description: intern|talent
+          description: Talent|Intern. Any case
           disabled: true
         - name: stage
           value: ""
           type: query
-          description: "'Applied'|'Shortlisted'|'Assessment'|'Interview'|'Hired'|'Rejected'"
+          description: "'Applied'|'Shortlisted'|'Assessment'|'Interview'|'Hired'|'Rejected'. Any case"
           disabled: true
         - name: clientId
           value: ""
@@ -331,7 +331,7 @@ examples:
           value: ""
           type: query
           disabled: true
-        - name: sortPresent
+        - name: sortPreset
           value: most_recent
           type: query
           description: "'most_recent'|'seven_days_ago'|'this_month'|'last_month'"
@@ -437,3 +437,11 @@ examples:
               }
             }
           }
+
+docs:
+  content: |-
+    **Inputs ignore case and surrounding spaces:** `stage`, `role`, `dateFilter`, `sortPreset`. `stage=Interviewed` is still accepted and means `Interview`. Unknown values are a 400.
+
+    **Rows** include `rejectedAtStage`: the stage a rejected applicant had reached, `null` otherwise and on rows rejected before the field existed.
+
+    **`stageCounts`** feeds the tabs. It ignores the `stage` filter and respects the other filters.

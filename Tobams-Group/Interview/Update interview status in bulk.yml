@@ -68,3 +68,9 @@ examples:
               ]
             }
           }
+
+docs:
+  content: |-
+    **Not on `dev` yet:** this route ships with `fawaz/interview-status-body-bulk-cancel`. Until that merges, `dev` has no `PATCH /interviews/bulk`.
+
+    **Stage:** this changes only each interview's own `status`, never the application's stage.
