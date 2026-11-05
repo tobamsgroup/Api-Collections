@@ -71,8 +71,6 @@ examples:
           }
 
 docs: |-
-  **Not on `dev` yet:** this route ships with the job application stages PR. Until that merges, `dev` has no `PATCH /interviews/bulk`.
-
   **Who:** only each interview's own organisation or applicant. Anyone else, admins included, gets a 403 for that id in `failed`.
 
   **Rules per id, same as the single update:**
