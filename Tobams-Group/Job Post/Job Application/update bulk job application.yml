@@ -63,3 +63,18 @@ examples:
               
             }
           }
+
+docs:
+  content: |-
+    **Forward only:** `Applied` > `Shortlisted` > `Assessment` > `Interview` > `Hired`.
+
+    - Skipping forward is allowed, except `Hired` needs `Interview`.
+    - `Rejected` is reachable from anything except `Hired`, and is final.
+    - Failing an assessment or interview moves nobody. They stay where they are until rejected.
+    - A refused move is a 400. `Applied` is never a target.
+
+    `ADMIN` and `SUPER_ADMIN` may move backward or undo a rejection to correct mistakes, but can't move anyone out of `Hired` or into it from before `Interview`.
+
+    `stage` ignores case and surrounding spaces. `Interviewed` is accepted and means `Interview`.
+
+    One refused move refuses the whole batch and nothing is written. 1 to 100 distinct `applicationIds`.

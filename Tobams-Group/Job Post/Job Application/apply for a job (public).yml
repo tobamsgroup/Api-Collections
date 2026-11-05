@@ -19,9 +19,7 @@ http:
           "reasonForInterest": "iusbu ib uucniunvahsdihfsiuivjnfdindvubsbjvlseinwvubnsunvniuvwuhfuwqu",
           "attachment": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1782082562110_Abdulrasaq Taofeeq Olarewaju CV (2).pdf"
       }
-  auth:
-    type: bearer
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2FhMGVmZTJmOGEzNWUxN2UzOGU2MWUiLCJlbWFpbCI6ImVyaWNzc29ucmFwaGFlbEBnbWFpbC5jb20iLCJyb2xlIjoiSW50ZXJuIiwiaWF0IjoxNzM5NDY0MTQxLCJleHAiOjE3Mzk1NTA1NDF9.EdYyH9F9JZdHXUp6hEKfYhek5yJHayYD0y9Kcuju31M
+  auth: none
 
 settings:
   encodeUrl: true
@@ -126,6 +124,16 @@ examples:
           }
 
 docs: |-
+  No token needed.
+
+  **Applying again:** email matches in any case, so `Ada@x.com` and `ada@x.com` are the same applicant on a post.
+
+  - No application yet: creates one, 201.
+  - Application still at `Applied`: updates the same application, 201. `data` has the same fields as a new application and holds only what this request sent.
+  - Application past `Applied`: 400 with `We could not accept your application for this job`. Nothing changes, and the message names no stage.
+
+  Request body is unchanged. Client-sent `stage` and other server-managed fields are ignored.
+
   JobRoles { 
 
   "Video Content Creator", 

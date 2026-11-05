@@ -19,10 +19,7 @@ http:
           "portfolioLink": "portfolio Link",
           "resume": "image url in cloudinary",
           "coverLetter": "cover letter url",
-          "postId": "69456564af239e8238541b15",
-          "jobTitle": "Fullstack Developer",
-          "organisationId" : "690c63fc45047c4e4030fee3"
-          // "owner": "In-House" // For in house job application only
+          "postId": "69456564af239e8238541b15"
       }
   auth:
     type: bearer
@@ -64,3 +61,11 @@ examples:
       body:
         type: json
         data: ""
+
+docs:
+  content: |-
+    `email` must be the signed-in user's own address, in any case. Any other address is a 403.
+
+    Applying again updates the same application's form fields and keeps its stage. Email matches in any case.
+
+    Server-managed fields are ignored if sent: `stage`, `rejectedAtStage`, `assessmentDetails`, `assessmentAttachments`, `organisationId`, `company`, `applicantRole`, `userId`, `jobTitle`. `jobTitle`, `company` and `organisationId` come from the post.

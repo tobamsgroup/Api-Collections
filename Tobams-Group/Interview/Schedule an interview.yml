@@ -6,6 +6,12 @@ info:
 http:
   method: POST
   url: "{{BASE}}/interviews/schedule"
+  params:
+    - name: userId
+      value: ""
+      type: query
+      description: Admins and super admins only. The company to schedule for
+      disabled: true
   body:
     type: json
     data: "{\r
@@ -132,3 +138,11 @@ examples:
                   "updatedAt": "2025-12-27T14:15:25.317Z"
               }
           }
+
+docs:
+  content: |-
+    **Company:** the caller. Admins and super admins may name another with `?userId`. Anyone else naming a different id gets a 403.
+
+    **Stage:** scheduling moves a matching application (same company, post and applicant) forward to `Interview`. `Hired` stays `Hired`. A `Rejected` applicant is a 400 and no interview is created.
+
+    Later accept, reschedule, complete or cancel changes only the interview's own `status`, never the application's stage.

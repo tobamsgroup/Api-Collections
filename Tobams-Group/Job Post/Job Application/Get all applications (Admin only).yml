@@ -10,6 +10,7 @@ http:
     - name: stage
       value: ""
       type: query
+      description: Applied|Shortlisted|Assessment|Interview|Hired|Rejected. Any case
       disabled: true
     - name: page
       value: ""
@@ -40,7 +41,7 @@ http:
       value: 2026-09-01
       type: query
       disabled: true
-    - name: sortPresent
+    - name: sortPreset
       value: last_month
       type: query
       description: most_recent|seven_days_ago|this_month|last_month Default to most_recent
@@ -156,11 +157,10 @@ examples:
               "stageCounts": {
                 "Applied": 0,
                 "Shortlisted": 0,
-                "Scheduled for Interview": 0,
-                "Interviewed": 0,
-                "Rejected": 0,
-                "Reviewed": 0,
-                "Hired": 0
+                "Assessment": 0,
+                "Interview": 0,
+                "Hired": 0,
+                "Rejected": 0
               }
             }
           }
@@ -198,7 +198,7 @@ examples:
                   "appliedRole": "Frontend Developer",
                   "company": "Tobams Group",
                   "applicationDate": "2026-06-01T10:00:00.000Z",
-                  "currentStage": "Interviewed"
+                  "currentStage": "Interview"
                 }
               ],
               "pagination": {
@@ -212,11 +212,10 @@ examples:
               "stageCounts": {
                 "Applied": 0,
                 "Shortlisted": 0,
-                "Scheduled for Interview": 0,
-                "Interviewed": 1,
-                "Rejected": 0,
-                "Reviewed": 0,
-                "Hired": 0
+                "Assessment": 0,
+                "Interview": 1,
+                "Hired": 0,
+                "Rejected": 0
               }
             }
           }
@@ -253,7 +252,7 @@ examples:
         - name: to
           value: 2026-09-01
           type: query
-        - name: sortPresent
+        - name: sortPreset
           value: last_month
           type: query
           description: most_recent|seven_days_ago|this_month|last_month Default to most_recent
@@ -359,7 +358,7 @@ examples:
           value: 2026-09-01
           type: query
           disabled: true
-        - name: sortPresent
+        - name: sortPreset
           value: last_month
           type: query
           description: most_recent|seven_days_ago|this_month|last_month Default to most_recent
@@ -465,7 +464,7 @@ examples:
           value: 2026-09-01
           type: query
           disabled: true
-        - name: sortPresent
+        - name: sortPreset
           value: last_month
           type: query
           description: most_recent|seven_days_ago|this_month|last_month Default to most_recent
@@ -591,7 +590,7 @@ examples:
           value: 2026-09-01
           type: query
           disabled: true
-        - name: sortPresent
+        - name: sortPreset
           value: last_month
           type: query
           description: most_recent|seven_days_ago|this_month|last_month Default to most_recent
@@ -725,3 +724,13 @@ examples:
               }
             }
           }
+
+docs:
+  content: |-
+    **Inputs ignore case and surrounding spaces:** `stage`, `role`, `dateFilter`, `sortPreset`. `stage=Interviewed` is still accepted and means `Interview`. Unknown values are a 400.
+
+    **Stages:** `Applied`, `Shortlisted`, `Assessment`, `Interview`, `Hired`, `Rejected`.
+
+    **Rows** include `rejectedAtStage`: the stage a rejected applicant had reached, `null` otherwise and on rows rejected before the field existed.
+
+    **`stageCounts`** feeds the tabs. It ignores the `stage` filter and respects the other filters.

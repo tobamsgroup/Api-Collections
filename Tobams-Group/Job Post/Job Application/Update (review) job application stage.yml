@@ -11,7 +11,7 @@ http:
     data: |-
       {
           "postId": "67d95578b3ea8eee43ef5ce4",
-          "stage": "Rejected"  // Applied | Shortlisted | Interviewed | Rejected | Reviewed | Hired
+          "stage": "Rejected"  // Shortlisted | Assessment | Interview | Hired | Rejected
       }
   auth:
     type: bearer
@@ -33,7 +33,7 @@ examples:
         data: |-
           {
               "postId": "67d95578b3ea8eee43ef5ce4",
-              "stage": "Shortlisted" // Shortlisted | Rejected | Reviewed | Hired
+              "stage": "Shortlisted" // Shortlisted | Assessment | Interview | Hired | Rejected
           }
     response:
       statusText: "200"
@@ -116,7 +116,7 @@ examples:
         data: |-
           {
               "postId": "67d95578b3ea8eee43ef5ce4",
-              "stage": "Rejected"  //  Shortlisted | Rejected | Reviewed | Hired
+              "stage": "Rejected"  // Shortlisted | Assessment | Interview | Hired | Rejected
           }
     response:
       body:
@@ -131,9 +131,24 @@ examples:
         data: |-
           {
               "postId": "67d95578b3ea8eee43ef5ce4",
-              "stage": "Hired"  // Shortlisted | Rejected | Reviewed | Hired
+              "stage": "Hired"  // Shortlisted | Assessment | Interview | Hired | Rejected
           }
     response:
       body:
         type: text
         data: ""
+
+docs:
+  content: |-
+    **Forward only:** `Applied` > `Shortlisted` > `Assessment` > `Interview` > `Hired`.
+
+    - Skipping forward is allowed, except `Hired` needs `Interview`.
+    - `Rejected` is reachable from anything except `Hired`, and is final.
+    - Failing an assessment or interview moves nobody. They stay where they are until rejected.
+    - A refused move is a 400. `Applied` is never a target.
+
+    `ADMIN` and `SUPER_ADMIN` may move backward or undo a rejection to correct mistakes, but can't move anyone out of `Hired` or into it from before `Interview`.
+
+    `stage` ignores case and surrounding spaces. `Interviewed` is accepted and means `Interview`.
+
+    `postId` is optional. When sent, it must match the application's post.
