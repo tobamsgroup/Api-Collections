@@ -97,14 +97,13 @@ examples:
               }
           }
 
-docs:
-  content: |-
-    One application by id. Allowed roles: `Super_Admin`, `Admin` (`SUPER`, `JOB POST MANAGEMENT` or `USER MANAGEMENT`), `Organisation`, `Talent`, `Intern`.
+docs: |-
+  One application by id. Allowed roles: `Super_Admin`, `Admin` (`SUPER`, `JOB POST MANAGEMENT` or `USER MANAGEMENT`), `Organisation`, `Talent`, `Intern`.
 
-    **Which applications:**
+  **Which applications:**
 
-    - Admins and super admins: any.
-    - Organisation: applications on its own posts.
-    - Talent or intern: their own, the same ones `GET /job-apply/my-applications` lists.
+  - Admins and super admins: any.
+  - Organisation: applications on its own posts.
+  - Talent or intern: their own, the same ones `GET /job-apply/my-applications` lists.
 
-    Anyone else's application is the same 404 as a missing id, `Job application not found`. A malformed id is a 400. Response shape is unchanged.
+  Anyone else's application is the same 404 as a missing id, `Job application not found`. A malformed id is a 400. Response shape is unchanged.

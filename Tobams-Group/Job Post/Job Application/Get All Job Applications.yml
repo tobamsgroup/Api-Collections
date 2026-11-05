@@ -16,13 +16,12 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
-docs:
-  content: |-
-    Every application on the platform, with applicant contact details, so it needs a token.
+docs: |-
+  Every application on the platform, with applicant contact details, so it needs a token.
 
-    Allowed: `Super_Admin`, or `Admin` with `SUPER`, `JOB POST MANAGEMENT` or `USER MANAGEMENT`.
+  Allowed: `Super_Admin`, or `Admin` with `SUPER`, `JOB POST MANAGEMENT` or `USER MANAGEMENT`.
 
-    - No token: 401
-    - Any other role, or an admin without one of those privileges: 403
+  - No token: 401
+  - Any other role, or an admin without one of those privileges: 403
 
-    Response shape is unchanged: `data: { count, result }`. Query: `page` (default 1), `limit` (default 10).
+  Response shape is unchanged: `data: { count, result }`. Query: `page` (default 1), `limit` (default 10).

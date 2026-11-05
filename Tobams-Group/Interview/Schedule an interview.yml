@@ -139,12 +139,11 @@ examples:
               }
           }
 
-docs:
-  content: |-
-    **Application required:** `applicantId` must have applied to `jobPostId`. Otherwise this is a 404 with `No application found for this applicant on this job post`, and no interview is created. The same 404 covers another company's application. Hiring goes through the application process, so a talent found through Explore Talents has to apply first.
+docs: |-
+  **Application required:** `applicantId` must have applied to `jobPostId`. Otherwise this is a 404 with `No application found for this applicant on this job post`, and no interview is created. The same 404 covers another company's application. Hiring goes through the application process, so a talent found through Explore Talents has to apply first.
 
-    **Company:** the caller. An organisation can only schedule on its own applications. Admins and super admins may schedule as themselves, or name the owning organisation with `?userId`. A non-admin naming a different id gets a 403.
+  **Company:** the caller. An organisation can only schedule on its own applications. Admins and super admins may schedule as themselves, or name the owning organisation with `?userId`. A non-admin naming a different id gets a 403.
 
-    **Stage:** scheduling moves the application forward to `Interview`. `Hired` stays `Hired`. A `Rejected` applicant is a 400 and no interview is created.
+  **Stage:** scheduling moves the application forward to `Interview`. `Hired` stays `Hired`. A `Rejected` applicant is a 400 and no interview is created.
 
-    Later accept, reschedule, complete or cancel changes only the interview's own `status`, never the application's stage.
+  Later accept, reschedule, complete or cancel changes only the interview's own `status`, never the application's stage.
