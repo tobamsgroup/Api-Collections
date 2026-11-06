@@ -132,7 +132,6 @@ examples:
                   "startTime": "10:00 AM",
                   "endTime": "11:00 AM",
                   "status": "Pending",
-                  "meetLink": "https://meet.google.com/jip-rhii-eaf",
                   "_id": "694fe9fdd5b7639cb19b1ef6",
                   "createdAt": "2025-12-27T14:15:25.317Z",
                   "updatedAt": "2025-12-27T14:15:25.317Z"

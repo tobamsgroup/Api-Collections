@@ -372,4 +372,6 @@ docs: |-
 
   **Cancelling:** if the organisation cancels, the applicant gets an in-app notification and an email with the reason. Applicants aren't notified of their own cancellation.
 
+  **Meeting link:** created when the interview is accepted, and returned as `meetLink`. Accept and reschedule messages include it, in the email and at the end of the in-app `message`: the applicant's, the company's, and the applicant's reminder when the interview is the next day. Cancel and complete messages don't.
+
   **Stage:** this changes only the interview's own `status`. It never changes the application's stage: accepting, declining, rescheduling, completing or cancelling all leave the candidate where they are. The stage moves to `Interview` when the interview is scheduled.
