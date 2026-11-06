@@ -27,8 +27,7 @@ http:
               "industryOfInterest": ["Technology", "Healthcare"],
               "experienceLevel": ["Mid-Level"],
               "mentorshipType": ["Group"]
-          },
-          "yearsOfExperience": "5 years"
+          }
       }
   auth:
     type: bearer
@@ -67,8 +66,7 @@ examples:
                   "industryOfInterest": ["Technology", "Healthcare"],
                   "experienceLevel": ["Mid-Level"],
                   "mentorshipType": ["Group"]
-              },
-              "yearsOfExperience": "2 years"
+              }
           }
     response:
       body:
@@ -104,10 +102,12 @@ examples:
                   "industryOfInterest": ["Technology", "Healthcare"],
                   "experienceLevel": ["Mid-Level"],
                   "mentorshipType": ["Group"]
-              },
-              "yearsOfExperience": "2 years"
+              }
           }
     response:
       body:
         type: text
         data: ""
+
+docs: |-
+  **`yearsOfExperience`** is not an input. The backend calculates it from `workExperiences`, and a value sent here is ignored.
