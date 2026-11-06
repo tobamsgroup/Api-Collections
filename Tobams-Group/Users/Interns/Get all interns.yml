@@ -35,7 +35,7 @@ http:
     - name: dateFilter
       value: "1 week ago"
       type: query
-      description: "Optional. Exact: 'last 24 hours'|'3 days ago'|'1 week ago'|'1 month ago'|'custom'. Omit for all time. Date the account joined"
+      description: "Optional. 'last 24 hours'|'3 days ago'|'1 week ago'|'1 month ago'|'custom'. Any case. Omit for all time. Date the account joined"
       disabled: true
     - name: from
       value: "2026-08-01"
