@@ -56,6 +56,26 @@ http:
       type: query
       description: "Optional. Default 10, max 100"
       disabled: true
+    - name: workMode
+      value: "remote"
+      type: query
+      description: "Optional. onsite|remote. Any case; on-site is accepted. Hybrid matches neither"
+      disabled: true
+    - name: location
+      value: "lagos"
+      type: query
+      description: "Optional. Free text, up to 100 characters. Commas split terms and every term must match"
+      disabled: true
+    - name: experienceLevel
+      value: "mid"
+      type: query
+      description: "Optional. any|entry|mid|senior. Any case. entry 0-1 years or none recorded, mid 2-5, senior 6+"
+      disabled: true
+    - name: employmentType
+      value: "full-time"
+      type: query
+      description: "Optional. full-time|part-time|temporary. Repeat it or use commas; any selected matches. temporary means Contract, Freelance or Temporary"
+      disabled: true
   auth:
     type: bearer
     token: "{{admin_access}}"
@@ -444,9 +464,95 @@ examples:
             }
           }
 
+  - name: "Filtered by candidate profile"
+    request:
+      url: "{{BASE}}/job-apply/tech-talents?role=talent&workMode=remote&experienceLevel=mid&location=lagos&page=1&limit=10"
+      method: GET
+      params:
+        - name: role
+          value: "talent"
+          type: query
+        - name: workMode
+          value: "remote"
+          type: query
+        - name: experienceLevel
+          value: "mid"
+          type: query
+        - name: location
+          value: "lagos"
+          type: query
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Client job applications fetched successfully",
+            "data": {
+              "result": [
+                {
+                  "applicationId": "6aed993e908dcdffc8b031fe",
+                  "candidateId": "6aed993e908dcdffc8b031d9",
+                  "candidateName": "Ada Example",
+                  "candidateEmail": "candidate1@example.com",
+                  "appliedRole": "Product Designer",
+                  "company": "Example Ltd",
+                  "applicationDate": "2026-11-06T09:09:18.980Z",
+                  "currentStage": "Applied",
+                  "attachmentCount": 1
+                }
+              ],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 1,
+                "pages": 1,
+                "hasNext": false,
+                "hasPrev": false
+              },
+              "stageCounts": {
+                "Applied": 1,
+                "Shortlisted": 0,
+                "Assessment": 0,
+                "Interview": 0,
+                "Hired": 0,
+                "Rejected": 0
+              }
+            }
+          }
+
 docs: |-
   **Inputs ignore case and surrounding spaces:** `stage`, `role`, `dateFilter`, `sortPreset`. `stage=Interviewed` is still accepted and means `Interview`. Unknown values are a 400.
 
   **Rows** include `rejectedAtStage`: the stage a rejected applicant had reached, `null` otherwise and on rows rejected before the field existed.
 
   **`stageCounts`** feeds the tabs. It ignores the `stage` filter and respects the other filters.
+
+  **Candidate filters (all optional):** `workMode`, `location`, `experienceLevel`, `employmentType`. They read the applicant's profile and work alongside the other filters.
+
+  **Filter panel to query param:**
+
+  | Panel | Param | Values | Matches |
+  | --- | --- | --- | --- |
+  | Location: Onsite / Remote | `workMode` | `onsite`, `remote` | The candidate's preferred work mode (`jobPreferences.workMode`, `internshipPreferences.workMode`). Hybrid matches neither |
+  | Location: Exact location | `location` | free text | Every comma-separated term in the account's city, state or country, or the preferred location |
+  | Date of posting | `dateFilter` | `last 24 hours`, `3 days ago`, `1 week ago`, `1 month ago`, `custom`; omit for All time | The date of the application. `custom` needs `from` and `to` |
+  | Work experience | `experienceLevel` | `any`, `entry`, `mid`, `senior` | Stored `yearsOfExperience`: entry 0-1 years or none recorded, mid 2-5, senior 6+ |
+  | Type of employment | `employmentType` | `full-time`, `part-time`, `temporary` | Any selected, on the preferred `workType` (interns also `internshipType`). `temporary` means Contract, Freelance or Temporary |
+
+  **Rules:** blank means no filter. An unknown value is a 400. `from` or `to` without `dateFilter=custom` is a 400. `search` here keeps its own fields (name, email, job title and so on), not the profile fields above.
+
+  **Guest applications** have no profile, so the profile filters exclude them. `location` still matches their own `location` and `country`.
+
+  **`stageCounts`** follows these filters too.

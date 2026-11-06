@@ -5,12 +5,56 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/users/internsandtalents?search"
+  url: "{{BASE}}/users/internsandtalents?page=1&limit=10"
   params:
-    - name: search
-      value: ""
+    - name: workMode
+      value: "remote"
       type: query
-      description: Search by name (first or lastname)
+      description: "Optional. onsite|remote. Any case; on-site is accepted. Hybrid matches neither"
+      disabled: true
+    - name: location
+      value: "lagos"
+      type: query
+      description: "Optional. Free text, up to 100 characters. Commas split terms and every term must match"
+      disabled: true
+    - name: experienceLevel
+      value: "mid"
+      type: query
+      description: "Optional. any|entry|mid|senior. Any case. entry 0-1 years or none recorded, mid 2-5, senior 6+"
+      disabled: true
+    - name: employmentType
+      value: "full-time"
+      type: query
+      description: "Optional. full-time|part-time|temporary. Repeat it or use commas; any selected matches. temporary means Contract, Freelance or Temporary"
+      disabled: true
+    - name: search
+      value: "designer"
+      type: query
+      description: "Optional. 1 to 200 characters. Whitespace splits terms, at most 6, and every term must match"
+      disabled: true
+    - name: dateFilter
+      value: "1 week ago"
+      type: query
+      description: "Optional. Exact: 'last 24 hours'|'3 days ago'|'1 week ago'|'1 month ago'|'custom'. Omit for all time. Date the account joined"
+      disabled: true
+    - name: from
+      value: "2026-08-01"
+      type: query
+      description: "YYYY-MM-DD. Only with dateFilter=custom, where it is required"
+      disabled: true
+    - name: to
+      value: "2026-09-01"
+      type: query
+      description: "YYYY-MM-DD. Only with dateFilter=custom, where it is required. Not before from"
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      description: "Optional. Default 1. A bad value falls back to the default"
+    - name: limit
+      value: "10"
+      type: query
+      description: "Optional. Default 10, max 100. A bad value falls back to the default"
   auth:
     type: bearer
     token: "{{talent_access}}"
@@ -22,498 +66,87 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Get all interns and talents
+  - name: "Filtered"
     request:
-      url: "{{BASE}}/users/internsandtalents?search"
+      url: "{{BASE}}/users/internsandtalents?experienceLevel=senior&page=1&limit=10"
       method: GET
       params:
-        - name: search
-          value: ""
+        - name: experienceLevel
+          value: "senior"
           type: query
-          description: Search by name (first or lastname)
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
     response:
-      statusText: "200"
+      status: 200
+      statusText: OK
       headers:
-        - name: Access-Control-Allow-Origin
-          value: "*"
-        - name: Access-Control-Allow-Credentials
-          value: "true"
-        - name: Content-Security-Policy
-          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
-        - name: Cross-Origin-Opener-Policy
-          value: same-origin
-        - name: Cross-Origin-Resource-Policy
-          value: same-origin
-        - name: Origin-Agent-Cluster
-          value: ?1
-        - name: Referrer-Policy
-          value: no-referrer
-        - name: Strict-Transport-Security
-          value: max-age=31536000; includeSubDomains
-        - name: X-Content-Type-Options
-          value: nosniff
-        - name: X-DNS-Prefetch-Control
-          value: off
-        - name: X-Download-Options
-          value: noopen
-        - name: X-Frame-Options
-          value: SAMEORIGIN
-        - name: X-Permitted-Cross-Domain-Policies
-          value: none
-        - name: X-XSS-Protection
-          value: "0"
-        - name: Access-Control-Allow-Methods
-          value: GET, POST, PATCH, DELETE, PUT
-        - name: Access-Control-Allow-Headers
-          value: "*"
-        - name: X-Request-ID
-          value: 1767873900738-0e8mlke1w
-        - name: Content-Type
-          value: application/json
-        - name: Content-Length
-          value: "7789"
-        - name: ETag
-          value: W/"1e6d-b60tXKVhKmlYHmUbJIcAmDSeIrw"
-        - name: Date
-          value: Thu, 08 Jan 2026 12:05:07 GMT
-        - name: Connection
-          value: keep-alive
-        - name: Keep-Alive
-          value: timeout=5
+        - name: content-type
+          value: application/json; charset=utf-8
       body:
         type: json
         data: |-
           {
-              "success": true,
-              "message": "Users fetched successfully",
-              "data": {
-                  "usersObj": [
-                      {
-                          "Contact": {
-                              "email": "theteam@tobamsgroup.com",
-                              "telephone": "+2347069786151",
-                              "location": {
-                                  "country": "Nigeria",
-                                  "state": "Lagos",
-                                  "city": "Ikeja"
-                              }
-                          },
-                          "grantedServicePermissions": [],
-                          "_id": "68ede811542f5fdb2f6b540b",
-                          "firstName": "jite",
-                          "lastName": "newton",
-                          "role": "Super_Admin",
-                          "isVerified": true,
-                          "assessmentRetryCount": 0,
-                          "assessmentRetryPaymentCount": 0,
-                          "hasPassedAssessment": false,
-                          "hasTakenAssessment": false,
-                          "accountStatus": "Active",
-                          "newsletterStatus": false,
-                          "notificationPreference": [
-                              "Email",
-                              "Push",
-                              "Sms"
-                          ],
-                          "photo": "",
-                          "blockedUsers": [],
-                          "averageRating": 0,
-                          "ratingCount": 0,
-                          "isOnline": false,
-                          "lastSeen": "Active now",
-                          "chatRequests": [],
-                          "createdAt": "2025-10-14T06:05:05.392Z",
-                          "updatedAt": "2025-10-14T06:05:05.392Z"
-                      },
-                      {
-                          "Contact": {
-                              "email": "goriolaagbajje@gmail.com",
-                              "telephone": "+2347048847309",
-                              "location": {
-                                  "country": "Nigeria"
-                              }
-                          },
-                          "social": {
-                              "facebook": "",
-                              "linkedIn": "",
-                              "github": "",
-                              "twitter": ""
-                          },
-                          "grantedServicePermissions": [],
-                          "_id": "690b717dea45abf381cde45c",
-                          "firstName": "Goriola",
-                          "lastName": "Agbaje",
-                          "occupation": "Frontend Dev",
-                          "role": "Talent",
-                          "isVerified": false,
-                          "assessmentRetryCount": 0,
-                          "hasPassedAssessment": false,
-                          "hasTakenAssessment": false,
-                          "accountStatus": "Active",
-                          "newsletterStatus": false,
-                          "notificationPreference": [
-                              "Email",
-                              "Push",
-                              "Sms"
-                          ],
-                          "photo": "",
-                          "blockedUsers": [],
-                          "averageRating": 0,
-                          "ratingCount": 0,
-                          "isOnline": false,
-                          "lastSeen": "Active now",
-                          "chatRequests": [],
-                          "createdAt": "2025-11-05T15:47:10.118Z",
-                          "updatedAt": "2025-11-05T15:47:10.118Z"
-                      },
-                      {
-                          "Contact": {
-                              "email": "goriolaagbaje@gmail.com",
-                              "telephone": "+2347048847309",
-                              "location": {
-                                  "country": "Nigeria"
-                              }
-                          },
-                          "social": {
-                              "facebook": "",
-                              "linkedIn": "",
-                              "github": "",
-                              "twitter": ""
-                          },
-                          "grantedServicePermissions": [],
-                          "_id": "690b7217ea45abf381cde465",
-                          "firstName": "Goriola",
-                          "lastName": "Agbaje",
-                          "occupation": "Frontend Dev",
-                          "role": "Talent",
-                          "isVerified": true,
-                          "assessmentRetryCount": 0,
-                          "hasPassedAssessment": false,
-                          "hasTakenAssessment": false,
-                          "accountStatus": "Active",
-                          "newsletterStatus": false,
-                          "notificationPreference": [
-                              "Email",
-                              "Push",
-                              "Sms"
-                          ],
-                          "photo": "",
-                          "blockedUsers": [],
-                          "averageRating": 0,
-                          "ratingCount": 0,
-                          "isOnline": false,
-                          "lastSeen": "Active now",
-                          "chatRequests": [],
-                          "createdAt": "2025-11-05T15:49:44.038Z",
-                          "updatedAt": "2025-11-05T15:50:41.429Z",
-                          "uuid": "TG-9XTA"
-                      },
-                      {
-                          "Contact": {
-                              "email": "fawazabdganiyu@gmail.com",
-                              "telephone": "+234123456789",
-                              "location": {
-                                  "country": "Nigeria",
-                                  "state": "Nigeria",
-                                  "city": "Saki"
-                              }
-                          },
-                          "social": {
-                              "facebook": "",
-                              "linkedIn": "",
-                              "github": "",
-                              "twitter": ""
-                          },
-                          "_id": "690b9906ea45abf381cde4ab",
-                          "firstName": "Fawaz",
-                          "lastName": "Abdganiyu",
-                          "occupation": "Backend Developer",
-                          "role": "Intern",
-                          "isVerified": true,
-                          "assessmentRetryCount": 2,
-                          "hasPassedAssessment": true,
-                          "hasTakenAssessment": true,
-                          "accountStatus": "Active",
-                          "newsletterStatus": false,
-                          "notificationPreference": [
-                              "Email",
-                              "Push",
-                              "Sms"
-                          ],
-                          "photo": "",
-                          "blockedUsers": [],
-                          "averageRating": 0,
-                          "ratingCount": 0,
-                          "isOnline": false,
-                          "lastSeen": "Active now",
-                          "chatRequests": [
-                              {
-                                  "friendId": "6929a35296b1c0a6612823bf",
-                                  "status": "accepted",
-                                  "type": "received",
-                                  "createdAt": "2026-01-08T11:22:09.635Z",
-                                  "_id": "695f93612ad78035ca74f166"
-                              }
-                          ],
-                          "createdAt": "2025-11-05T18:35:50.420Z",
-                          "updatedAt": "2026-01-08T11:57:49.737Z",
-                          "uuid": "TG-1XIN",
-                          "grantedServicePermissions": []
-                      },
-                      {
-                          "Contact": {
-                              "email": "ericssonraphael@gmail.com",
-                              "telephone": "+2347039105823",
-                              "location": {
-                                  "country": "Nigeria",
-                                  "state": "Nigeria",
-                                  "city": "Lagos"
-                              }
-                          },
-                          "social": {
-                              "facebook": "",
-                              "linkedIn": "",
-                              "github": "",
-                              "twitter": ""
-                          },
-                          "grantedServicePermissions": [],
-                          "_id": "690c58c445047c4e4030fe01",
-                          "firstName": "Ericsson",
-                          "lastName": "Raphael",
-                          "occupation": "Dev",
-                          "role": "Talent",
-                          "isVerified": true,
-                          "assessmentRetryCount": 0,
-                          "hasPassedAssessment": true,
-                          "hasTakenAssessment": true,
-                          "accountStatus": "Active",
-                          "newsletterStatus": false,
-                          "notificationPreference": [
-                              "Email",
-                              "Push",
-                              "Sms"
-                          ],
-                          "photo": "",
-                          "blockedUsers": [],
-                          "averageRating": 0,
-                          "ratingCount": 0,
-                          "isOnline": false,
-                          "lastSeen": "Active now",
-                          "chatRequests": [],
-                          "createdAt": "2025-11-06T08:13:57.293Z",
-                          "updatedAt": "2025-12-30T10:22:57.710Z",
-                          "uuid": "TG-10XTA",
-                          "title": "Dev"
-                      },
-                      {
-                          "Contact": {
-                              "email": "ericsson.raphael@tobamsgroup.com",
-                              "telephone": "+2347039105823"
-                          },
-                          "grantedServicePermissions": [],
-                          "_id": "690c63fc45047c4e4030fee3",
-                          "companyName": "Ericsson",
-                          "role": "Organisation",
-                          "isVerified": true,
-                          "assessmentRetryCount": 0,
-                          "hasPassedAssessment": false,
-                          "hasTakenAssessment": false,
-                          "accountStatus": "Active",
-                          "newsletterStatus": false,
-                          "notificationPreference": [
-                              "Email",
-                              "Push",
-                              "Sms"
-                          ],
-                          "photo": "",
-                          "blockedUsers": [],
-                          "averageRating": 0,
-                          "ratingCount": 0,
-                          "isOnline": false,
-                          "lastSeen": "Active now",
-                          "chatRequests": [],
-                          "createdAt": "2025-11-06T09:01:48.847Z",
-                          "updatedAt": "2025-12-17T16:18:19.232Z",
-                          "uuid": "TG-1XOR"
-                      },
-                      {
-                          "Contact": {
-                              "email": "visifel579@fermiro.com",
-                              "telephone": "+2349159888225",
-                              "location": {
-                                  "country": "Nigeria"
-                              }
-                          },
-                          "social": {
-                              "facebook": "",
-                              "linkedIn": "",
-                              "github": "",
-                              "twitter": ""
-                          },
-                          "grantedServicePermissions": [],
-                          "_id": "6916ec77786d8459428689ce",
-                          "firstName": "Visi",
-                          "lastName": "Fel",
-                          "occupation": "Lavarel Developer",
-                          "role": "Intern",
-                          "isVerified": true,
-                          "assessmentRetryCount": 2,
-                          "hasPassedAssessment": false,
-                          "hasTakenAssessment": true,
-                          "accountStatus": "Active",
-                          "newsletterStatus": false,
-                          "notificationPreference": [
-                              "Email",
-                              "Push",
-                              "Sms"
-                          ],
-                          "photo": "",
-                          "blockedUsers": [],
-                          "averageRating": 0,
-                          "ratingCount": 0,
-                          "isOnline": false,
-                          "lastSeen": "Active now",
-                          "chatRequests": [],
-                          "createdAt": "2025-11-14T08:46:47.583Z",
-                          "updatedAt": "2025-11-14T09:27:10.500Z",
-                          "uuid": "TG-2XIN"
-                      },
-                      {
-                          "Contact": {
-                              "email": "fawaz.abdganiyu+t1@tobamsgroup.com",
-                              "telephone": "+234123456789",
-                              "location": {
-                                  "country": "Nigeria"
-                              }
-                          },
-                          "social": {
-                              "facebook": "",
-                              "linkedIn": "",
-                              "github": "",
-                              "twitter": ""
-                          },
-                          "grantedServicePermissions": [],
-                          "_id": "691ae593786d845942868c54",
-                          "firstName": "Fawaz",
-                          "lastName": "Abdganiyu",
-                          "occupation": "Backend Developer",
-                          "role": "Talent",
-                          "isVerified": true,
-                          "assessmentRetryCount": 0,
-                          "hasPassedAssessment": false,
-                          "hasTakenAssessment": false,
-                          "accountStatus": "Active",
-                          "newsletterStatus": false,
-                          "notificationPreference": [
-                              "Email",
-                              "Push",
-                              "Sms"
-                          ],
-                          "photo": "",
-                          "blockedUsers": [],
-                          "averageRating": 0,
-                          "ratingCount": 0,
-                          "isOnline": false,
-                          "lastSeen": "Active now",
-                          "chatRequests": [],
-                          "createdAt": "2025-11-17T09:06:27.785Z",
-                          "updatedAt": "2025-11-17T09:07:12.680Z",
-                          "uuid": "TG-13XTA"
-                      },
-                      {
-                          "Contact": {
-                              "email": "theoluwatosinsaeedat@gmail.com",
-                              "telephone": "+2348107294762",
-                              "location": {
-                                  "country": "Nigeria"
-                              }
-                          },
-                          "social": {
-                              "facebook": "",
-                              "linkedIn": "",
-                              "github": "",
-                              "twitter": ""
-                          },
-                          "grantedServicePermissions": [],
-                          "_id": "691ed8bf786d845942868ec3",
-                          "firstName": "Saeedah",
-                          "lastName": "Sarumi",
-                          "role": "Intern",
-                          "isVerified": true,
-                          "assessmentRetryCount": 0,
-                          "hasPassedAssessment": false,
-                          "hasTakenAssessment": false,
-                          "accountStatus": "Active",
-                          "newsletterStatus": false,
-                          "notificationPreference": [
-                              "Email",
-                              "Push",
-                              "Sms"
-                          ],
-                          "photo": "",
-                          "blockedUsers": [],
-                          "averageRating": 0,
-                          "ratingCount": 0,
-                          "isOnline": false,
-                          "lastSeen": "Active now",
-                          "chatRequests": [],
-                          "createdAt": "2025-11-20T09:00:47.586Z",
-                          "updatedAt": "2025-11-20T09:01:19.389Z",
-                          "uuid": "TG-3XIN"
-                      },
-                      {
-                          "Contact": {
-                              "email": "fawaz.abdganiyu@tobamsgroup.com",
-                              "telephone": "+234123456789",
-                              "location": {
-                                  "country": "Nigeria",
-                                  "state": "Nigeria",
-                                  "city": "Saki"
-                              }
-                          },
-                          "social": {
-                              "facebook": "",
-                              "linkedIn": "",
-                              "github": "",
-                              "twitter": ""
-                          },
-                          "_id": "692036dc786d845942868f78",
-                          "firstName": "Fawaz",
-                          "lastName": "Abdganiyu",
-                          "occupation": "Backend Developer",
-                          "role": "Talent",
-                          "isVerified": true,
-                          "assessmentRetryCount": 2,
-                          "hasPassedAssessment": true,
-                          "hasTakenAssessment": true,
-                          "accountStatus": "Active",
-                          "newsletterStatus": false,
-                          "notificationPreference": [
-                              "Email",
-                              "Push",
-                              "Sms"
-                          ],
-                          "photo": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1767173233469_TSTS1CH5_7.png",
-                          "blockedUsers": [],
-                          "averageRating": 0,
-                          "ratingCount": 0,
-                          "isOnline": false,
-                          "lastSeen": "Active now",
-                          "chatRequests": [
-                              {
-                                  "friendId": "6931f140606533d27c2d6b2d",
-                                  "status": "pending",
-                                  "type": "sent",
-                                  "_id": "695f8fbacdf4cc4be3603836",
-                                  "createdAt": "2026-01-08T11:06:34.824Z"
-                              }
-                          ],
-                          "createdAt": "2025-11-21T09:54:37.179Z",
-                          "updatedAt": "2026-01-08T11:06:34.829Z",
-                          "uuid": "TG-14XTA",
-                          "title": "Backend Developer",
-                          "grantedServicePermissions": []
-                      }
-                  ]
+            "success": true,
+            "message": "Users fetched successfully",
+            "data": {
+              "usersObj": [
+                {
+                  "_id": "6aed993e908dcdffc8b031e6",
+                  "occupation": "Backend Engineer",
+                  "bio": "Backend engineer.",
+                  "firstName": "Ben",
+                  "lastName": "Sample",
+                  "email": "candidate2@example.com",
+                  "telephone": "+2348000000000",
+                  "location": {
+                    "city": "Abuja",
+                    "country": "Nigeria"
+                  },
+                  "photo": "",
+                  "profile": "Talent",
+                  "accountStatus": "Active",
+                  "skills": [
+                    "Node.js",
+                    "MongoDB"
+                  ],
+                  "mentorshipType": [],
+                  "averageRating": 0,
+                  "createdAt": "2026-11-06T09:09:18.875Z",
+                  "updatedAt": "2026-11-06T09:09:18.875Z",
+                  "yearsOfExperience": "7"
+                }
+              ],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 1,
+                "pages": 1,
+                "hasNext": false,
+                "hasPrev": false
               }
+            }
           }
+
+docs: |-
+  **Who can call:** any signed-in user.
+
+  **Required:** nothing but the bearer token. Every query param is optional.
+
+  **Filter panel to query param:**
+
+  | Panel | Param | Values | Matches |
+  | --- | --- | --- | --- |
+  | Location: Onsite / Remote | `workMode` | `onsite`, `remote` | The candidate's preferred work mode (`jobPreferences.workMode`, `internshipPreferences.workMode`). Hybrid matches neither |
+  | Location: Exact location | `location` | free text | Every comma-separated term in the account's city, state or country, or the preferred location |
+  | Date of posting | `dateFilter` | `last 24 hours`, `3 days ago`, `1 week ago`, `1 month ago`, `custom`; omit for All time | The date the account joined. `custom` needs `from` and `to` |
+  | Search bar | `search` | free text | Every whitespace-separated term in the name, `occupation`, `title`, `skills`, bio, job titles, or preferred `role` |
+  | Work experience | `experienceLevel` | `any`, `entry`, `mid`, `senior` | Stored `yearsOfExperience`: entry 0-1 years or none recorded, mid 2-5, senior 6+ |
+  | Type of employment | `employmentType` | `full-time`, `part-time`, `temporary` | Any selected, on the preferred `workType` (interns also `internshipType`). `temporary` means Contract, Freelance or Temporary |
+
+  **Rules:** blank means no filter. An unknown value is a 400. `from` or `to` without `dateFilter=custom` is a 400. `page` and `limit` never 400: a bad value falls back to the default (1 and 10), and `limit` caps at 100.
+
+  **Response (`data`):** `{ usersObj, pagination }`. `pagination.total` follows the filters. Rows here carry no `isOnline`, `lastSeen` or `isSaved`.

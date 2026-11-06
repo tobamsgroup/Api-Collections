@@ -11,6 +11,71 @@ http:
       value: intern
       type: query
       description: "Optional. Talent|Intern. Any case"
+    - name: dateFilter
+      value: "3 days ago"
+      type: query
+      description: "Optional. 'last 24 hours'|'3 days ago'|'1 week ago'|'1 month ago'|'custom'. Any case"
+      disabled: true
+    - name: search
+      value: "developer"
+      type: query
+      description: "Optional. 1 to 500 characters"
+      disabled: true
+    - name: sortPreset
+      value: "last_month"
+      type: query
+      description: "Optional. most_recent|seven_days_ago|this_month|last_month. Default most_recent"
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      description: "Optional. Default 1"
+      disabled: true
+    - name: limit
+      value: "8"
+      type: query
+      description: "Optional. Default 10, max 100"
+      disabled: true
+    - name: stage
+      value: ""
+      type: query
+      description: "Optional. Applied|Shortlisted|Assessment|Interview|Hired|Rejected. Any case"
+      disabled: true
+    - name: clientId
+      value: ""
+      type: query
+      description: "Optional. 24-hex id of an organisation. Ignored for an organisation, which only sees its own"
+      disabled: true
+    - name: from
+      value: "2026-08-01"
+      type: query
+      description: "YYYY-MM-DD. Only with dateFilter=custom, where it is required"
+      disabled: true
+    - name: to
+      value: "2026-09-01"
+      type: query
+      description: "YYYY-MM-DD. Only with dateFilter=custom, where it is required. Not before from"
+      disabled: true
+    - name: workMode
+      value: "remote"
+      type: query
+      description: "Optional. onsite|remote. Any case; on-site is accepted. Hybrid matches neither"
+      disabled: true
+    - name: location
+      value: "lagos"
+      type: query
+      description: "Optional. Free text, up to 100 characters. Commas split terms and every term must match"
+      disabled: true
+    - name: experienceLevel
+      value: "mid"
+      type: query
+      description: "Optional. any|entry|mid|senior. Any case. entry 0-1 years or none recorded, mid 2-5, senior 6+"
+      disabled: true
+    - name: employmentType
+      value: "full-time"
+      type: query
+      description: "Optional. full-time|part-time|temporary. Repeat it or use commas; any selected matches. temporary means Contract, Freelance or Temporary"
+      disabled: true
   auth: inherit
 
 settings:
@@ -126,9 +191,89 @@ examples:
               ]
           }
 
+  - name: "Filtered by candidate profile"
+    request:
+      url: "{{BASE}}/job-apply/tech-talents?role=intern&employmentType=part-time&page=1&limit=10"
+      method: GET
+      params:
+        - name: role
+          value: "intern"
+          type: query
+        - name: employmentType
+          value: "part-time"
+          type: query
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Client job applications fetched successfully",
+            "data": {
+              "result": [
+                {
+                  "applicationId": "6aed993e908dcdffc8b031ff",
+                  "candidateId": "6aed993e908dcdffc8b031f0",
+                  "candidateName": "Cleo Example",
+                  "candidateEmail": "candidate3@example.com",
+                  "appliedRole": "Product Designer",
+                  "company": "Example Ltd",
+                  "applicationDate": "2026-11-06T09:09:18.980Z",
+                  "currentStage": "Shortlisted",
+                  "attachmentCount": 1
+                }
+              ],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 1,
+                "pages": 1,
+                "hasNext": false,
+                "hasPrev": false
+              },
+              "stageCounts": {
+                "Applied": 0,
+                "Shortlisted": 1,
+                "Assessment": 0,
+                "Interview": 0,
+                "Hired": 0,
+                "Rejected": 0
+              }
+            }
+          }
+
 docs: |-
   **Inputs ignore case and surrounding spaces:** `stage`, `role`, `dateFilter`, `sortPreset`. `stage=Interviewed` is still accepted and means `Interview`. Unknown values are a 400.
 
   **Rows** include `rejectedAtStage`: the stage a rejected applicant had reached, `null` otherwise and on rows rejected before the field existed.
 
   **`stageCounts`** feeds the tabs. It ignores the `stage` filter and respects the other filters.
+
+  **Candidate filters (all optional):** `workMode`, `location`, `experienceLevel`, `employmentType`. They read the applicant's profile and work alongside the other filters.
+
+  **Filter panel to query param:**
+
+  | Panel | Param | Values | Matches |
+  | --- | --- | --- | --- |
+  | Location: Onsite / Remote | `workMode` | `onsite`, `remote` | The candidate's preferred work mode (`jobPreferences.workMode`, `internshipPreferences.workMode`). Hybrid matches neither |
+  | Location: Exact location | `location` | free text | Every comma-separated term in the account's city, state or country, or the preferred location |
+  | Date of posting | `dateFilter` | `last 24 hours`, `3 days ago`, `1 week ago`, `1 month ago`, `custom`; omit for All time | The date of the application. `custom` needs `from` and `to` |
+  | Work experience | `experienceLevel` | `any`, `entry`, `mid`, `senior` | Stored `yearsOfExperience`: entry 0-1 years or none recorded, mid 2-5, senior 6+ |
+  | Type of employment | `employmentType` | `full-time`, `part-time`, `temporary` | Any selected, on the preferred `workType` (interns also `internshipType`). `temporary` means Contract, Freelance or Temporary |
+
+  **Rules:** blank means no filter. An unknown value is a 400. `from` or `to` without `dateFilter=custom` is a 400. `search` here keeps its own fields (name, email, job title and so on), not the profile fields above.
+
+  **Guest applications** have no profile, so the profile filters exclude them. `location` still matches their own `location` and `country`.
+
+  **`stageCounts`** follows these filters too.

@@ -7,14 +7,54 @@ http:
   method: GET
   url: "{{BASE}}/talents?page=1&limit=10"
   params:
+    - name: workMode
+      value: "remote"
+      type: query
+      description: "Optional. onsite|remote. Any case; on-site is accepted. Hybrid matches neither"
+      disabled: true
+    - name: location
+      value: "lagos"
+      type: query
+      description: "Optional. Free text, up to 100 characters. Commas split terms and every term must match"
+      disabled: true
+    - name: experienceLevel
+      value: "mid"
+      type: query
+      description: "Optional. any|entry|mid|senior. Any case. entry 0-1 years or none recorded, mid 2-5, senior 6+"
+      disabled: true
+    - name: employmentType
+      value: "full-time"
+      type: query
+      description: "Optional. full-time|part-time|temporary. Repeat it or use commas; any selected matches. temporary means Contract, Freelance or Temporary"
+      disabled: true
+    - name: search
+      value: "designer"
+      type: query
+      description: "Optional. 1 to 200 characters. Whitespace splits terms, at most 6, and every term must match"
+      disabled: true
+    - name: dateFilter
+      value: "1 week ago"
+      type: query
+      description: "Optional. Exact: 'last 24 hours'|'3 days ago'|'1 week ago'|'1 month ago'|'custom'. Omit for all time. Date the account joined"
+      disabled: true
+    - name: from
+      value: "2026-08-01"
+      type: query
+      description: "YYYY-MM-DD. Only with dateFilter=custom, where it is required"
+      disabled: true
+    - name: to
+      value: "2026-09-01"
+      type: query
+      description: "YYYY-MM-DD. Only with dateFilter=custom, where it is required. Not before from"
+      disabled: true
     - name: page
       value: "1"
       type: query
-      description: Default to 1
+      description: "Optional. Default 1. A bad value falls back to the default"
     - name: limit
       value: "10"
       type: query
-      description: Default to 10
+      description: "Optional. Default 10, max 100. A bad value falls back to the default"
   auth:
     type: bearer
     token: "{{client_access}}"
@@ -24,3 +64,189 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: "Filtered, organisation viewer"
+    request:
+      url: "{{BASE}}/talents?workMode=remote&experienceLevel=mid&employmentType=full-time&location=lagos&search=designer&page=1&limit=10"
+      method: GET
+      params:
+        - name: workMode
+          value: "remote"
+          type: query
+        - name: experienceLevel
+          value: "mid"
+          type: query
+        - name: employmentType
+          value: "full-time"
+          type: query
+        - name: location
+          value: "lagos"
+          type: query
+        - name: search
+          value: "designer"
+          type: query
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Talents retrieved successfully",
+            "data": {
+              "currentCount": 1,
+              "totalCount": 1,
+              "counts": {
+                "talents": 1,
+                "interns": 0
+              },
+              "usersObj": [
+                {
+                  "_id": "6aed993e908dcdffc8b031d9",
+                  "title": "Senior Product Designer",
+                  "occupation": "Product Designer",
+                  "bio": "Product designer focused on fintech.",
+                  "firstName": "Ada",
+                  "lastName": "Example",
+                  "email": "candidate1@example.com",
+                  "telephone": "+2348000000000",
+                  "location": {
+                    "city": "Lagos",
+                    "state": "Lagos",
+                    "country": "Nigeria"
+                  },
+                  "photo": "",
+                  "profile": "Talent",
+                  "accountStatus": "Active",
+                  "skills": [
+                    "Figma",
+                    "User Research"
+                  ],
+                  "mentorshipType": [],
+                  "currentCompany": "Example Ltd",
+                  "currentRole": "Product Designer",
+                  "averageRating": 0,
+                  "createdAt": "2026-11-06T09:09:18.749Z",
+                  "updatedAt": "2026-11-06T09:09:18.749Z",
+                  "yearsOfExperience": "3+",
+                  "isPeer": false,
+                  "isOnline": true,
+                  "lastSeen": "2026-11-06T08:15:00.000Z",
+                  "isSaved": true
+                }
+              ]
+            }
+          }
+
+  - name: "No match"
+    request:
+      url: "{{BASE}}/talents?location=nowhere"
+      method: GET
+      params:
+        - name: location
+          value: "nowhere"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Talents retrieved successfully",
+            "data": {
+              "currentCount": 0,
+              "totalCount": 0,
+              "counts": {
+                "talents": 0,
+                "interns": 0
+              },
+              "usersObj": []
+            }
+          }
+
+  - name: "Unknown filter value"
+    request:
+      url: "{{BASE}}/talents?experienceLevel=expert"
+      method: GET
+      params:
+        - name: experienceLevel
+          value: "expert"
+          type: query
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "experienceLevel: Invalid option: expected one of \"any\"|\"entry\"|\"mid\"|\"senior\""
+          }
+
+  - name: "from without dateFilter=custom"
+    request:
+      url: "{{BASE}}/talents?from=2026-01-01"
+      method: GET
+      params:
+        - name: from
+          value: "2026-01-01"
+          type: query
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: content-type
+          value: application/json; charset=utf-8
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "dateFilter: from and to dates require dateFilter=custom"
+          }
+
+docs: |-
+  **Who can call:** `Super_Admin`, `Admin`, `Talent`, `Organisation`, `Mentor`. Needs the `TALENT_POOL_SEARCH` subscription feature.
+
+  **Required:** nothing but the bearer token. Every query param is optional.
+
+  **Filter panel to query param:**
+
+  | Panel | Param | Values | Matches |
+  | --- | --- | --- | --- |
+  | Location: Onsite / Remote | `workMode` | `onsite`, `remote` | The candidate's preferred work mode (`jobPreferences.workMode`, `internshipPreferences.workMode`). Hybrid matches neither |
+  | Location: Exact location | `location` | free text | Every comma-separated term in the account's city, state or country, or the preferred location |
+  | Date of posting | `dateFilter` | `last 24 hours`, `3 days ago`, `1 week ago`, `1 month ago`, `custom`; omit for All time | The date the account joined. `custom` needs `from` and `to` |
+  | Search bar | `search` | free text | Every whitespace-separated term in the name, `occupation`, `title`, `skills`, bio, job titles, or preferred `role` |
+  | Work experience | `experienceLevel` | `any`, `entry`, `mid`, `senior` | Stored `yearsOfExperience`: entry 0-1 years or none recorded, mid 2-5, senior 6+ |
+  | Type of employment | `employmentType` | `full-time`, `part-time`, `temporary` | Any selected, on the preferred `workType` (interns also `internshipType`). `temporary` means Contract, Freelance or Temporary |
+
+  **Rules:** blank means no filter. An unknown value is a 400. `from` or `to` without `dateFilter=custom` is a 400. `page` and `limit` never 400: a bad value falls back to the default (1 and 10), and `limit` caps at 100.
+
+  **Response (`data`):** `{ currentCount, totalCount, counts: { talents, interns }, usersObj }`.
+
+  - `totalCount` is the number of talents matching the filters. `counts` answers both tab badges under the same filters.
+  - `isOnline` and `lastSeen` appear only when the candidate's privacy settings allow it.
+  - `isSaved` appears only for an `Organisation` viewer: whether this talent is in its saved list.
+  - No match is a `200` with an empty `usersObj`. Order is `_id` ascending.
