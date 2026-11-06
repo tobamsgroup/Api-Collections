@@ -16,6 +16,59 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/job-apply/all"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Jobs Applications found",
+            "data": {
+              "count": 1,
+              "result": [
+                {
+                  "_id": "67d95f590b44aad1ccf50a4e",
+                  "fullName": "Ada Lovelace",
+                  "phoneNumber": "+2348012345678",
+                  "email": "ada@example.com",
+                  "country": "Nigeria",
+                  "bio": "Frontend engineer with three years of experience.",
+                  "portfolioLink": "https://portfolio.example.com/ada",
+                  "resume": "https://cdn.example.com/ada-cv.pdf",
+                  "postId": "67d95578b3ea8eee43ef5ce4",
+                  "jobTitle": "Software Engineer",
+                  "stage": "Interview",
+                  "applicantRole": "Talent",
+                  "organisationId": "67bf2c6a974a6b52304105a0",
+                  "userId": "67b661d7c84dd7079b9e7d56",
+                  "createdAt": "2026-11-01T09:00:00.000Z"
+                }
+              ]
+            }
+          }
+  - name: Not an admin
+    request:
+      url: "{{BASE}}/job-apply/all"
+      method: GET
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
+          }
+
 docs: |-
   Every application on the platform, with applicant contact details, so it needs a token.
 

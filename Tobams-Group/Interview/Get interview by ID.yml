@@ -19,6 +19,142 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/interviews/6721f0c2a1b2c3d4e5f60718"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Interview retrieved successfully",
+            "data": {
+              "_id": "6721f0c2a1b2c3d4e5f60718",
+              "companyName": "Acme Ltd",
+              "companyId": "6721f0c2a1b2c3d4e5f60701",
+              "role": "Software Engineer",
+              "jobPostId": "6941a7eef0746ae602693990",
+              "applicantId": "6721f0c2a1b2c3d4e5f60702",
+              "message": "We would like to invite you to an interview.",
+              "date": "2027-03-15T00:00:00.000Z",
+              "startTime": "10:00 AM",
+              "endTime": "11:00 AM",
+              "status": "Scheduled",
+              "meetLink": "https://meet.google.com/abc-defg-hij",
+              "createdAt": "2026-11-01T09:00:00.000Z",
+              "updatedAt": "2026-11-02T09:00:00.000Z",
+              "applicant": {
+                "userId": "6721f0c2a1b2c3d4e5f60702",
+                "firstName": "Tolu",
+                "lastName": "Ade",
+                "email": "tolu@example.com",
+                "photo": "...",
+                "lastSeen": "online"
+              },
+              "company": {
+                "userId": "6721f0c2a1b2c3d4e5f60701",
+                "companyName": "Acme Ltd",
+                "email": "hr@acme.com",
+                "photo": "...",
+                "lastSeen": "online"
+              }
+            }
+          }
+  - name: Pending, no meeting link yet
+    request:
+      url: "{{BASE}}/interviews/6721f0c2a1b2c3d4e5f60718"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Interview retrieved successfully",
+            "data": {
+              "_id": "6721f0c2a1b2c3d4e5f60718",
+              "companyName": "Acme Ltd",
+              "companyId": "6721f0c2a1b2c3d4e5f60701",
+              "role": "Software Engineer",
+              "jobPostId": "6941a7eef0746ae602693990",
+              "applicantId": "6721f0c2a1b2c3d4e5f60702",
+              "message": "We would like to invite you to an interview.",
+              "date": "2027-03-15T00:00:00.000Z",
+              "startTime": "10:00 AM",
+              "endTime": "11:00 AM",
+              "status": "Pending",
+              "createdAt": "2026-11-01T09:00:00.000Z",
+              "updatedAt": "2026-11-02T09:00:00.000Z",
+              "applicant": {
+                "userId": "6721f0c2a1b2c3d4e5f60702",
+                "firstName": "Tolu",
+                "lastName": "Ade",
+                "email": "tolu@example.com",
+                "photo": "...",
+                "lastSeen": "online"
+              },
+              "company": {
+                "userId": "6721f0c2a1b2c3d4e5f60701",
+                "companyName": "Acme Ltd",
+                "email": "hr@acme.com",
+                "photo": "...",
+                "lastSeen": "online"
+              }
+            }
+          }
+  - name: Malformed id
+    request:
+      url: "{{BASE}}/interviews/not-an-id"
+      method: GET
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "interviewId: Invalid MongoDB ObjectId"
+          }
+  - name: Someone else's interview
+    request:
+      url: "{{BASE}}/interviews/6721f0c2a1b2c3d4e5f60718"
+      method: GET
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "You are not authorized to view this interview"
+          }
+  - name: Not found
+    request:
+      url: "{{BASE}}/interviews/6721f0c2a1b2c3d4e5f60718"
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Interview not found"
+          }
+
 docs: |-
   **Who:** `Admin` and `Super_Admin` can read any interview. An organisation can read interviews where it is the company. An intern or talent can read their own. Anything else is a 403.
 

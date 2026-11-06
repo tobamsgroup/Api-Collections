@@ -19,6 +19,67 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/interviews/6721f0c2a1b2c3d4e5f60718"
+      method: DELETE
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Interview deleted successfully"
+          }
+  - name: Malformed id
+    request:
+      url: "{{BASE}}/interviews/not-an-id"
+      method: DELETE
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "interviewId: Invalid MongoDB ObjectId"
+          }
+  - name: Another organisation's interview
+    request:
+      url: "{{BASE}}/interviews/6721f0c2a1b2c3d4e5f60718"
+      method: DELETE
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "You are not authorized to view this interview"
+          }
+  - name: Not found
+    request:
+      url: "{{BASE}}/interviews/6721f0c2a1b2c3d4e5f60718"
+      method: DELETE
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Interview not found"
+          }
+
 docs: |-
   **Who:** `Admin`, `Super_Admin` and `Organisation` only. An organisation can only delete interviews where it is the company, otherwise a 403.
 

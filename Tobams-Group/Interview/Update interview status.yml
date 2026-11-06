@@ -14,11 +14,11 @@ http:
     type: json
     data: |-
       {
-        "status": "Rescheduled",
-        "reason": "Hiring panel unavailable on the original date",
-        "date": "2026-11-12",
-        "startTime": "02:00 PM",
-        "endTime": "03:00 PM"
+        "status": "Rescheduled", // required. Accepted | Rescheduled | Completed | Cancelled
+        "reason": "Hiring panel unavailable on the original date", // required for Rescheduled, optional for Cancelled
+        "date": "2026-11-12", // required for Rescheduled
+        "startTime": "02:00 PM", // required for Rescheduled
+        "endTime": "03:00 PM" // required for Rescheduled
       } 
   auth:
     type: bearer
@@ -41,7 +41,7 @@ examples:
         type: json
         data: |-
           {
-            "status": "Accepted"
+            "status": "Accepted" // required. Accepted | Rescheduled | Completed | Cancelled
           }
     response:
       statusText: "200"
@@ -95,7 +95,7 @@ examples:
         data: |-
           {
               "success": true,
-              "message": "Interview status updated to Accepted successfully",
+              "message": "Interview status updated to Scheduled successfully",
               "data": {
                   "_id": "67c1d1a9d249829a71370378",
                   "companyId": "67bf1b8f8b03e7875cb2bf0b",
@@ -126,11 +126,11 @@ examples:
         type: json
         data: |-
           {
-            "status": "Rescheduled",
-            "reason": "Hiring panel unavailable on the original date",
-            "date": "2026-11-12",
-            "startTime": "02:00 PM",
-            "endTime": "03:00 PM"
+            "status": "Rescheduled", // required. Accepted | Rescheduled | Completed | Cancelled
+            "reason": "Hiring panel unavailable on the original date", // required for Rescheduled, optional for Cancelled
+            "date": "2026-11-12", // required for Rescheduled
+            "startTime": "02:00 PM", // required for Rescheduled
+            "endTime": "03:00 PM" // required for Rescheduled
           }
     response:
       statusText: "200"
@@ -212,8 +212,8 @@ examples:
         type: json
         data: |-
           {
-            "status": "Cancelled",
-            "reason": "Position has been filled"
+            "status": "Cancelled", // required. Accepted | Rescheduled | Completed | Cancelled
+            "reason": "Position has been filled" // required for Rescheduled, optional for Cancelled
           }
     response:
       statusText: "200"
@@ -292,7 +292,7 @@ examples:
         type: json
         data: |-
           {
-            "status": "Completed"
+            "status": "Completed" // required. Accepted | Rescheduled | Completed | Cancelled
           }
     response:
       statusText: "200"

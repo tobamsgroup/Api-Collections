@@ -10,14 +10,14 @@ http:
     type: json
     data: |-
       {
-          "fullName": "abdulrasaq ola",
-          "email": "taofeeq.abdulrasaq@tobamsgroup.com",
-          "bio": "iusbu ib uucniunvahsdihfsiuivjnfdindvubsbjvlseinwvubnsunvniuvwuhfuwqu",
-          "phoneNumber": "+2347012345678",
-          "country": "Nigeria",
-          "postId": "69ca45374e5d9fe46aef7613",
-          "reasonForInterest": "iusbu ib uucniunvahsdihfsiuivjnfdindvubsbjvlseinwvubnsunvniuvwuhfuwqu",
-          "attachment": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1782082562110_Abdulrasaq Taofeeq Olarewaju CV (2).pdf"
+          "fullName": "abdulrasaq ola", // required. 2 to 100 characters
+          "email": "taofeeq.abdulrasaq@tobamsgroup.com", // required
+          "bio": "iusbu ib uucniunvahsdihfsiuivjnfdindvubsbjvlseinwvubnsunvniuvwuhfuwqu", // optional. 10 to 1000 characters
+          "phoneNumber": "+2347012345678", // required. 7 to 20 characters
+          "country": "Nigeria", // required. 2 to 50 characters
+          "postId": "69ca45374e5d9fe46aef7613", // required
+          "reasonForInterest": "iusbu ib uucniunvahsdihfsiuivjnfdindvubsbjvlseinwvubnsunvniuvwuhfuwqu", // optional. Up to 1000 characters
+          "attachment": "https://dev-talent-form-test.s3.eu-north-1.amazonaws.com/uploads/1782082562110_Abdulrasaq Taofeeq Olarewaju CV (2).pdf" // optional. Up to 500 characters
       }
   auth: none
 
@@ -34,25 +34,17 @@ examples:
       method: POST
       body:
         type: json
-        data: "{\r
-
-          \    \"fullName\": \"Inem2 Udo 2\",\r
-
-          \    \"phoneNumber\": \"+2340970087834\",\r
-
-          \    \"email\": \"enamesit@gmail.com\",\r
-
-          \    \"country\": \"Nigeria\",\r
-
-          \    \"bio\": \"this is a brief summary of me\",\r
-
-          \    \"portfolioLink\": \"portfolio Link\",\r
-
-          \    \"attachment\": \"image url in cloudinary\",\r
-
-          \    \"postId\": \"66b9d53a660e581e661d4db6\"\r
-
-          }"
+        data: |-
+          {
+              "fullName": "Inem2 Udo 2", // required. 2 to 100 characters
+              "phoneNumber": "+2340970087834", // required. 7 to 20 characters
+              "email": "enamesit@gmail.com", // required
+              "country": "Nigeria", // required. 2 to 50 characters
+              "bio": "this is a brief summary of me", // optional. 10 to 1000 characters
+              "portfolioLink": "https://portfolio.example.com/ada", // optional. Must be a valid URL, up to 500 characters
+              "attachment": "image url in cloudinary", // optional. Up to 500 characters
+              "postId": "66b9d53a660e581e661d4db6" // required
+          }
     response:
       statusText: "201"
       headers:
@@ -106,6 +98,7 @@ examples:
         type: json
         data: |-
           {
+              "success": true,
               "message": "Job Application successfully",
               "data": {
                   "fullName": "Inem2 Udo 2",
@@ -113,7 +106,7 @@ examples:
                   "email": "enamesit@gmail.com",
                   "country": "Nigeria",
                   "bio": "this is a brief summary of me",
-                  "portfolioLink": "portfolio Link",
+                  "portfolioLink": "https://portfolio.example.com/ada",
                   "attachment": "image url in cloudinary",
                   "postId": "66b9d53a660e581e661d4db6",
                   "jobTitle": "Intern React/Nextjs Developer",
@@ -121,6 +114,21 @@ examples:
                   "createdAt": "2024-08-12T10:37:48.870Z",
                   "updatedAt": "2024-08-12T10:37:48.870Z"
               }
+          }
+  - name: Already past Applied
+    request:
+      url: "{{BASE}}/job-apply/public"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "We could not accept your application for this job"
           }
 
 docs: |-

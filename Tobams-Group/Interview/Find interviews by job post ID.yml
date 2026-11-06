@@ -19,6 +19,115 @@ settings:
   maxRedirects: 5
   forwardAuthorizationHeader: false
 
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/interviews/job/6941a7eef0746ae602693990"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Interviews by job post ID retrieved successfully",
+            "data": [
+              {
+                "_id": "6721f0c2a1b2c3d4e5f60718",
+                "companyName": "Acme Ltd",
+                "companyId": "6721f0c2a1b2c3d4e5f60701",
+                "role": "Software Engineer",
+                "jobPostId": "6941a7eef0746ae602693990",
+                "applicantId": "6721f0c2a1b2c3d4e5f60702",
+                "message": "We would like to invite you to an interview.",
+                "date": "2027-03-15T00:00:00.000Z",
+                "startTime": "10:00 AM",
+                "endTime": "11:00 AM",
+                "status": "Scheduled",
+                "meetLink": "https://meet.google.com/abc-defg-hij",
+                "createdAt": "2026-11-01T09:00:00.000Z",
+                "updatedAt": "2026-11-02T09:00:00.000Z",
+                "applicant": {
+                  "userId": "6721f0c2a1b2c3d4e5f60702",
+                  "firstName": "Tolu",
+                  "lastName": "Ade",
+                  "email": "tolu@example.com",
+                  "photo": "...",
+                  "lastSeen": "online"
+                },
+                "company": {
+                  "userId": "6721f0c2a1b2c3d4e5f60701",
+                  "companyName": "Acme Ltd",
+                  "email": "hr@acme.com",
+                  "photo": "...",
+                  "lastSeen": "online"
+                }
+              },
+              {
+                "_id": "6721f0c2a1b2c3d4e5f60719",
+                "companyName": "Acme Ltd",
+                "companyId": "6721f0c2a1b2c3d4e5f60701",
+                "role": "Software Engineer",
+                "jobPostId": "6941a7eef0746ae602693990",
+                "applicantId": "6721f0c2a1b2c3d4e5f60702",
+                "message": "We would like to invite you to an interview.",
+                "date": "2027-03-15T00:00:00.000Z",
+                "startTime": "10:00 AM",
+                "endTime": "11:00 AM",
+                "status": "Pending",
+                "createdAt": "2026-11-01T09:00:00.000Z",
+                "updatedAt": "2026-11-02T09:00:00.000Z",
+                "applicant": {
+                  "userId": "6721f0c2a1b2c3d4e5f60702",
+                  "firstName": "Tolu",
+                  "lastName": "Ade",
+                  "email": "tolu@example.com",
+                  "photo": "...",
+                  "lastSeen": "online"
+                },
+                "company": {
+                  "userId": "6721f0c2a1b2c3d4e5f60701",
+                  "companyName": "Acme Ltd",
+                  "email": "hr@acme.com",
+                  "photo": "...",
+                  "lastSeen": "online"
+                }
+              }
+            ]
+          }
+  - name: No interviews
+    request:
+      url: "{{BASE}}/interviews/job/6941a7eef0746ae602693990"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Interviews by job post ID retrieved successfully",
+            "data": []
+          }
+  - name: Malformed id
+    request:
+      url: "{{BASE}}/interviews/job/not-an-id"
+      method: GET
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "jobPostId: Invalid MongoDB ObjectId"
+          }
+
 docs: |-
   **Who sees what:** same rule as the list. Admins get every interview on the post. Everyone else gets only their own on it, so this never answers 403 for someone else's post.
 

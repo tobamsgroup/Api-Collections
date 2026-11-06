@@ -13,8 +13,8 @@ http:
         "applicationIds": [
           "67d95f590b44aad1ccf50a4e",
           "67d95f590b44aad1ccf50a4f"
-        ],
-        "stage": "Shortlisted"
+        ], // required. 1 to 100 distinct ids
+        "stage": "Shortlisted" // required. Shortlisted | Assessment | Interview | Hired | Rejected. Any case
       }
   auth:
     type: bearer
@@ -39,8 +39,8 @@ examples:
             "applicationIds": [
               "67d95f590b44aad1ccf50a4e",
               "67d95f590b44aad1ccf50a4f"
-            ],
-            "stage": "Shortlisted"
+            ], // required. 1 to 100 distinct ids
+            "stage": "Shortlisted" // required. Shortlisted | Assessment | Interview | Hired | Rejected. Any case
           }
     response:
       statusText: "200"

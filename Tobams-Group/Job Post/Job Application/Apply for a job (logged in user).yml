@@ -10,16 +10,16 @@ http:
     type: json
     data: |-
       {
-          "fullName": "Fawaz Agara",
-          "phoneNumber": "+2340970087834",
-          "email": "fawazabdganiyu@gmail.com",
-          "location": "Lokoja, Kogi State",
-          "country": "Nigeria",
-          "bio": "Here is my brief bio",
-          "portfolioLink": "portfolio Link",
-          "resume": "image url in cloudinary",
-          "coverLetter": "cover letter url",
-          "postId": "69456564af239e8238541b15"
+          "fullName": "Fawaz Agara", // required. 2 to 100 characters
+          "phoneNumber": "+2340970087834", // required. 7 to 20 characters
+          "email": "fawazabdganiyu@gmail.com", // required. Must be your own account's email
+          "location": "Lokoja, Kogi State", // optional. Up to 100 characters
+          "country": "Nigeria", // required. 2 to 50 characters
+          "bio": "Here is my brief bio", // optional. 10 to 1000 characters
+          "portfolioLink": "https://portfolio.example.com/ada", // optional. Must be a valid URL, up to 500 characters
+          "resume": "image url in cloudinary", // optional. Up to 500 characters
+          "coverLetter": "cover letter url", // optional. Up to 3000 characters
+          "postId": "69456564af239e8238541b15" // required
       }
   auth:
     type: bearer
@@ -40,28 +40,47 @@ examples:
         type: json
         data: |-
           {
-              "fullName": "Fawaz Abdganiyu",
-              "phoneNumber": "+2340970087834",
-              "email": "fawaztalent@gmail.com",
-              "location": "Lokoja, Kogi State",
-              "country": "Nigeria",
-              "bio": "Here is my brief bio",
-              "portfolioLink": "portfolio Link",
-              "resume": "image url in cloudinary",
-              "coverLetter": "cover letter url",
-              "postId": "67d95578b3ea8eee43ef5ce4",
-              "jobTitle": "Software Engineer",
-              "organisationId" : "67bf2c6a974a6b52304105a0"
-              // "owner": "In-House" // For in house job application only
+              "fullName": "Fawaz Abdganiyu", // required. 2 to 100 characters
+              "phoneNumber": "+2340970087834", // required. 7 to 20 characters
+              "email": "fawaztalent@gmail.com", // required. Must be your own account's email
+              "location": "Lokoja, Kogi State", // optional. Up to 100 characters
+              "country": "Nigeria", // required. 2 to 50 characters
+              "bio": "Here is my brief bio", // optional. 10 to 1000 characters
+              "portfolioLink": "https://portfolio.example.com/ada", // optional. Must be a valid URL, up to 500 characters
+              "resume": "image url in cloudinary", // optional. Up to 500 characters
+              "coverLetter": "cover letter url", // optional. Up to 3000 characters
+              "postId": "67d95578b3ea8eee43ef5ce4" // required
           }
     response:
-      headers:
-        - name: Content-Type
-          value: application/json
+      status: 201
+      statusText: Created
       body:
         type: json
-        data: ""
-
+        data: |-
+          {
+            "success": true,
+            "message": "Job Application successfully",
+            "data": {
+              "_id": "67d95f590b44aad1ccf50a4e",
+              "fullName": "Ada Lovelace",
+              "phoneNumber": "+2348012345678",
+              "email": "ada@example.com",
+              "country": "Nigeria",
+              "bio": "Frontend engineer with three years of experience.",
+              "portfolioLink": "https://portfolio.example.com/ada",
+              "resume": "https://cdn.example.com/ada-cv.pdf",
+              "postId": "67d95578b3ea8eee43ef5ce4",
+              "jobTitle": "Software Engineer",
+              "stage": "Applied",
+              "applicantRole": "Talent",
+              "organisationId": "67bf2c6a974a6b52304105a0",
+              "userId": "67b661d7c84dd7079b9e7d56",
+              "createdAt": "2026-11-01T09:00:00.000Z",
+              "location": "Lokoja, Kogi State",
+              "coverLetter": "cover letter url",
+              "updatedAt": "2026-11-02T09:00:00.000Z"
+            }
+          }
 docs: |-
   `email` must be the signed-in user's own address, in any case. Any other address is a 403.
 

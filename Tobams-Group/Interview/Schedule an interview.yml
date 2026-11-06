@@ -14,23 +14,16 @@ http:
       disabled: true
   body:
     type: json
-    data: "{\r
-
-      \  \"role\": \"Business Development & Marketing Manager\",\r
-
-      \  \"jobPostId\": \"6941a7eef0746ae602693990\",\r
-
-      \  \"applicantId\": \"691ec925d5b3456cd06e5ce0\",\r
-
-      \  \"message\": \"Congratulations! You have been shortlisted for an interview. We are impressed with your qualifications and would like to proceed with the next step in the hiring process.\\n\\nPlease accept the interview schedule to let us know if it is suitable for you or if you would like to reschedule.\\nThank you\",\r
-
-      \  \"date\": \"2028-03-15T00:00:00.000Z\",\r
-
-      \  \"startTime\": \"10:00 AM\",\r
-
-      \  \"endTime\": \"11:00 AM\"\r
-
-      }"
+    data: |-
+      {
+        "role": "Business Development & Marketing Manager", // required. Job title shown to the applicant
+        "jobPostId": "6941a7eef0746ae602693990", // required. 24-hex id. The applicant must have applied to this post
+        "applicantId": "691ec925d5b3456cd06e5ce0", // required. 24-hex id
+        "message": "Congratulations! You have been shortlisted for an interview. We are impressed with your qualifications and would like to proceed with the next step in the hiring process.\n\nPlease accept the interview schedule to let us know if it is suitable for you or if you would like to reschedule.\nThank you", // optional. Shown to the applicant
+        "date": "2028-03-15T00:00:00.000Z", // required. Date of the interview
+        "startTime": "10:00 AM", // required
+        "endTime": "11:00 AM" // required
+      }
   auth:
     type: bearer
     token: "{{org_access}}"
@@ -49,23 +42,16 @@ examples:
       method: POST
       body:
         type: json
-        data: "{\r
-
-          \  \"role\": \"Business Development & Marketing Manager\",\r
-
-          \  \"jobPostId\": \"6941a7eef0746ae602693990\",\r
-
-          \  \"applicantId\": \"691ec925d5b3456cd06e5ce0\",\r
-
-          \  \"message\": \"Congratulations! You have been shortlisted for an interview. We are impressed with your qualifications and would like to proceed with the next step in the hiring process.\\n\\nPlease accept the interview schedule to let us know if it is suitable for you or if you would like to reschedule.\\nThank you\",\r
-
-          \  \"date\": \"2028-03-15T00:00:00.000Z\",\r
-
-          \  \"startTime\": \"10:00 AM\",\r
-
-          \  \"endTime\": \"11:00 AM\"\r
-
-          }"
+        data: |-
+          {
+            "role": "Business Development & Marketing Manager", // required. Job title shown to the applicant
+            "jobPostId": "6941a7eef0746ae602693990", // required. 24-hex id. The applicant must have applied to this post
+            "applicantId": "691ec925d5b3456cd06e5ce0", // required. 24-hex id
+            "message": "Congratulations! You have been shortlisted for an interview. We are impressed with your qualifications and would like to proceed with the next step in the hiring process.\n\nPlease accept the interview schedule to let us know if it is suitable for you or if you would like to reschedule.\nThank you", // optional. Shown to the applicant
+            "date": "2028-03-15T00:00:00.000Z", // required. Date of the interview
+            "startTime": "10:00 AM", // required
+            "endTime": "11:00 AM" // required
+          }
     response:
       statusText: "201"
       headers:

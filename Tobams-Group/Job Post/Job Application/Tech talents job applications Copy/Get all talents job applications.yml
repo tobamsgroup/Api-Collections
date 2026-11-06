@@ -10,45 +10,51 @@ http:
     - name: role
       value: talent
       type: query
-      description: Talent|Intern. Any case
+      description: "Optional. Talent|Intern. Any case"
       disabled: true
     - name: stage
       value: ""
       type: query
-      description: "'Applied'|'Shortlisted'|'Assessment'|'Interview'|'Hired'|'Rejected'. Any case"
+      description: "Optional. Applied|Shortlisted|Assessment|Interview|Hired|Rejected. Any case"
       disabled: true
     - name: clientId
       value: ""
       type: query
+      description: "Optional. 24-hex id of an organisation. Ignored for an organisation, which only sees its own"
       disabled: true
     - name: search
       value: ""
       type: query
+      description: "Optional. 1 to 500 characters"
       disabled: true
     - name: dateFilter
       value: ""
       type: query
-      description: "'last 24 hours'|'3 days ago'|'1 week ago'|'1 month ago'|'custom'"
+      description: "Optional. 'last 24 hours'|'3 days ago'|'1 week ago'|'1 month ago'|'custom'. Any case"
       disabled: true
     - name: from
       value: ""
       type: query
+      description: "YYYY-MM-DD. Only with dateFilter=custom, where it is required"
       disabled: true
     - name: to
       value: ""
       type: query
+      description: "YYYY-MM-DD. Only with dateFilter=custom, where it is required. Not before from"
       disabled: true
     - name: sortPreset
       value: most_recent
       type: query
-      description: "'most_recent'|'seven_days_ago'|'this_month'|'last_month'"
+      description: "Optional. most_recent|seven_days_ago|this_month|last_month. Default most_recent"
     - name: page
       value: ""
       type: query
+      description: "Optional. Default 1"
       disabled: true
     - name: limit
       value: ""
       type: query
+      description: "Optional. Default 10, max 100"
       disabled: true
   auth:
     type: bearer
@@ -131,7 +137,7 @@ examples:
                       "email": "inem.udousoro@tobamsgroup.com",
                       "country": "Nigeria",
                       "bio": "this is a brief summary of me",
-                      "portfolioLink": "portfolio Link",
+                      "portfolioLink": "https://portfolio.example.com/ada",
                       "attachment": "image url in cloudinary",
                       "postId": "667a805338d13808521275e7",
                       "createdAt": "2024-06-27T20:26:50.101Z",
@@ -151,7 +157,7 @@ examples:
                       "email": "fawazintern@gmail.com",
                       "country": "Nigeria",
                       "bio": "Here is my brief bio",
-                      "portfolioLink": "portfolio Link",
+                      "portfolioLink": "https://portfolio.example.com/ada",
                       "attachment": "image url in cloudinary",
                       "postId": "67d95578b3ea8eee43ef5ce4",
                       "jobTitle": "Software Engineer",

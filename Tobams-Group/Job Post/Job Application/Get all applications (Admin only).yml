@@ -10,55 +10,51 @@ http:
     - name: stage
       value: ""
       type: query
-      description: Applied|Shortlisted|Assessment|Interview|Hired|Rejected. Any case
-      disabled: true
-    - name: page
-      value: ""
-      type: query
-      disabled: true
-    - name: limit
-      value: ""
-      type: query
+      description: "Optional. Applied|Shortlisted|Assessment|Interview|Hired|Rejected. Any case"
       disabled: true
     - name: clientId
       value: ""
       type: query
+      description: "Optional. 24-hex id of an organisation"
       disabled: true
     - name: dateFilter
       value: 3 days ago
       type: query
-      description: "'last 24 hours'|'3 days ago'|'1 week ago'|'1 month ago'|'custom'"
+      description: "Optional. 'last 24 hours'|'3 days ago'|'1 week ago'|'1 month ago'|'custom'. Any case"
       disabled: true
     - name: search
       value: developer
       type: query
+      description: "Optional. 1 to 500 characters"
       disabled: true
     - name: from
       value: 2026-08-01
       type: query
+      description: "YYYY-MM-DD. Only with dateFilter=custom, where it is required"
       disabled: true
     - name: to
       value: 2026-09-01
       type: query
+      description: "YYYY-MM-DD. Only with dateFilter=custom, where it is required. Not before from"
       disabled: true
     - name: sortPreset
       value: last_month
       type: query
-      description: most_recent|seven_days_ago|this_month|last_month Default to most_recent
+      description: "Optional. most_recent|seven_days_ago|this_month|last_month. Default most_recent"
       disabled: true
     - name: role
       value: Talent
       type: query
-      description: Talent|Intern
+      description: "Optional. Talent|Intern. Any case"
       disabled: true
     - name: page
       value: "1"
       type: query
-      description: default to 1
+      description: "Optional. Default 1"
     - name: limit
       value: "8"
       type: query
-      description: default to 10
+      description: "Optional. Default 10, max 100"
   auth:
     type: bearer
     token: "{{admin_access}}"

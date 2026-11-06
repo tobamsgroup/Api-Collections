@@ -10,8 +10,8 @@ http:
     type: json
     data: |-
       {
-          "postId": "67d95578b3ea8eee43ef5ce4",
-          "stage": "Rejected"  // Shortlisted | Assessment | Interview | Hired | Rejected
+          "postId": "67d95578b3ea8eee43ef5ce4", // optional. When sent, must match the application's post
+          "stage": "Rejected" // required. Shortlisted | Assessment | Interview | Hired | Rejected. Any case
       }
   auth:
     type: bearer
@@ -32,8 +32,8 @@ examples:
         type: json
         data: |-
           {
-              "postId": "67d95578b3ea8eee43ef5ce4",
-              "stage": "Shortlisted" // Shortlisted | Assessment | Interview | Hired | Rejected
+              "postId": "67d95578b3ea8eee43ef5ce4", // optional. When sent, must match the application's post
+              "stage": "Shortlisted" // required. Shortlisted | Assessment | Interview | Hired | Rejected. Any case
           }
     response:
       statusText: "200"
@@ -87,7 +87,7 @@ examples:
         data: |-
           {
               "success": true,
-              "message": "Application stage updated successfully",
+              "message": "Applicant stage updated to Shortlisted successfully",
               "data": {
                   "_id": "67d95f590b44aad1ccf50a4e",
                   "fullName": "Fawaz Abdganiyu",
@@ -95,7 +95,7 @@ examples:
                   "email": "fawazintern@gmail.com",
                   "country": "Nigeria",
                   "bio": "Here is my brief bio",
-                  "portfolioLink": "portfolio Link",
+                  "portfolioLink": "https://portfolio.example.com/ada",
                   "attachment": "image url in cloudinary",
                   "postId": "67d95578b3ea8eee43ef5ce4",
                   "jobTitle": "Software Development",
@@ -115,13 +115,38 @@ examples:
         type: json
         data: |-
           {
-              "postId": "67d95578b3ea8eee43ef5ce4",
-              "stage": "Rejected"  // Shortlisted | Assessment | Interview | Hired | Rejected
+              "postId": "67d95578b3ea8eee43ef5ce4", // optional. When sent, must match the application's post
+              "stage": "Rejected" // required. Shortlisted | Assessment | Interview | Hired | Rejected. Any case
           }
     response:
+      status: 200
+      statusText: OK
       body:
-        type: text
-        data: ""
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Applicant stage updated to Rejected successfully",
+            "data": {
+              "_id": "67d95f590b44aad1ccf50a4e",
+              "fullName": "Ada Lovelace",
+              "phoneNumber": "+2348012345678",
+              "email": "ada@example.com",
+              "country": "Nigeria",
+              "bio": "Frontend engineer with three years of experience.",
+              "portfolioLink": "https://portfolio.example.com/ada",
+              "resume": "https://cdn.example.com/ada-cv.pdf",
+              "postId": "67d95578b3ea8eee43ef5ce4",
+              "jobTitle": "Software Engineer",
+              "stage": "Rejected",
+              "applicantRole": "Talent",
+              "organisationId": "67bf2c6a974a6b52304105a0",
+              "userId": "67b661d7c84dd7079b9e7d56",
+              "createdAt": "2026-11-01T09:00:00.000Z",
+              "rejectedAtStage": "Shortlisted",
+              "updatedAt": "2026-11-02T09:00:00.000Z"
+            }
+          }
   - name: To hire
     request:
       url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
@@ -130,13 +155,53 @@ examples:
         type: json
         data: |-
           {
-              "postId": "67d95578b3ea8eee43ef5ce4",
-              "stage": "Hired"  // Shortlisted | Assessment | Interview | Hired | Rejected
+              "postId": "67d95578b3ea8eee43ef5ce4", // optional. When sent, must match the application's post
+              "stage": "Hired" // required. Shortlisted | Assessment | Interview | Hired | Rejected. Any case
           }
     response:
+      status: 200
+      statusText: OK
       body:
-        type: text
-        data: ""
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Applicant stage updated to Hired successfully",
+            "data": {
+              "_id": "67d95f590b44aad1ccf50a4e",
+              "fullName": "Ada Lovelace",
+              "phoneNumber": "+2348012345678",
+              "email": "ada@example.com",
+              "country": "Nigeria",
+              "bio": "Frontend engineer with three years of experience.",
+              "portfolioLink": "https://portfolio.example.com/ada",
+              "resume": "https://cdn.example.com/ada-cv.pdf",
+              "postId": "67d95578b3ea8eee43ef5ce4",
+              "jobTitle": "Software Engineer",
+              "stage": "Hired",
+              "applicantRole": "Talent",
+              "organisationId": "67bf2c6a974a6b52304105a0",
+              "userId": "67b661d7c84dd7079b9e7d56",
+              "createdAt": "2026-11-01T09:00:00.000Z",
+              "updatedAt": "2026-11-02T09:00:00.000Z"
+            }
+          }
+  - name: Refused move
+    description: Hired needs the applicant to be at Interview
+    request:
+      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
+      method: PATCH
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Applicant must be interviewed before hiring"
+          }
 
 docs: |-
   **Forward only:** `Applied` > `Shortlisted` > `Assessment` > `Interview` > `Hired`.

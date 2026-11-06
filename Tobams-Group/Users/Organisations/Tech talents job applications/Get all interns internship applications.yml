@@ -10,6 +10,7 @@ http:
     - name: role
       value: intern
       type: query
+      description: "Optional. Talent|Intern. Any case"
   auth: inherit
 
 settings:
@@ -88,7 +89,7 @@ examples:
                       "email": "fawazintern@gmail.com",
                       "country": "Nigeria",
                       "bio": "Here is my brief bio",
-                      "portfolioLink": "portfolio Link",
+                      "portfolioLink": "https://portfolio.example.com/ada",
                       "attachment": "image url in cloudinary",
                       "postId": "67d95578b3ea8eee43ef5ce4",
                       "jobTitle": "Software Engineer",

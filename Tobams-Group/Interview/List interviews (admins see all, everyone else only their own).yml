@@ -10,29 +10,31 @@ http:
     - name: status
       value: ""
       type: query
-      description: Scheduled|Accepted|Completed|Cancelled|Pending|Rescheduled
+      description: "Optional. Pending|Scheduled|Rescheduled|Completed|Cancelled. Exact case"
     - name: companyId
       value: ""
       type: query
-      description: Not usable by organisation
+      description: "Optional. 24-hex id. An organisation can only name itself, another id is a 403"
     - name: applicantId
       value: ""
       type: query
-      description: Not usable either interns or talents
+      description: "Optional. 24-hex id. An intern or talent can only name themselves, another id is a 403"
     - name: startDate
       value: ""
       type: query
-      description: "YYYY-MM-DD "
+      description: "Optional. YYYY-MM-DD, or an ISO datetime with an offset"
     - name: endDate
       value: ""
       type: query
-      description: "YYYY-MM-DD "
+      description: "Optional. YYYY-MM-DD, or an ISO datetime with an offset. Not before startDate"
     - name: page
       value: ""
       type: query
+      description: "Optional. Default 1"
     - name: limit
       value: ""
       type: query
+      description: "Optional. Default 10, max 100"
   auth:
     type: bearer
     token: "{{admin_access}}"
@@ -193,9 +195,60 @@ examples:
           value: Cancelled
           type: query
     response:
+      status: 200
+      statusText: OK
       body:
-        type: text
-        data: ""
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Cancelled interviews retrieved successfully",
+            "data": {
+              "count": 1,
+              "interviews": [
+                {
+                  "_id": "6721f0c2a1b2c3d4e5f60718",
+                  "companyName": "Acme Ltd",
+                  "companyId": "6721f0c2a1b2c3d4e5f60701",
+                  "role": "Software Engineer",
+                  "jobPostId": "6941a7eef0746ae602693990",
+                  "applicantId": "6721f0c2a1b2c3d4e5f60702",
+                  "message": "We would like to invite you to an interview.",
+                  "date": "2027-03-15T00:00:00.000Z",
+                  "startTime": "10:00 AM",
+                  "endTime": "11:00 AM",
+                  "status": "Cancelled",
+                  "meetLink": "https://meet.google.com/abc-defg-hij",
+                  "createdAt": "2026-11-01T09:00:00.000Z",
+                  "updatedAt": "2026-11-02T09:00:00.000Z",
+                  "applicant": {
+                    "userId": "6721f0c2a1b2c3d4e5f60702",
+                    "firstName": "Tolu",
+                    "lastName": "Ade",
+                    "email": "tolu@example.com",
+                    "photo": "...",
+                    "lastSeen": "online"
+                  },
+                  "company": {
+                    "userId": "6721f0c2a1b2c3d4e5f60701",
+                    "companyName": "Acme Ltd",
+                    "email": "hr@acme.com",
+                    "photo": "...",
+                    "lastSeen": "online"
+                  },
+                  "cancellationReason": "Position has been filled"
+                }
+              ],
+              "pagination": {
+                "page": 1,
+                "limit": 10,
+                "total": 1,
+                "pages": 1,
+                "hasNext": false,
+                "hasPrev": false
+              }
+            }
+          }
   - name: Empty
     request:
       url: "{{BASE}}/interviews?status=&companyId=&applicantId=&startDate=&endDate=&page=&limit="

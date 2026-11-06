@@ -214,3 +214,6 @@ examples:
                   ]
               }
           }
+
+docs: |-
+  The signed-in user's own applications. Any role in the job routes can call it. No applications is a 200 with `count: 0`.
