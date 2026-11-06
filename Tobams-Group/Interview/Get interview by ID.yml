@@ -18,3 +18,10 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs: |-
+  **Who:** `Admin` and `Super_Admin` can read any interview. An organisation can read interviews where it is the company. An intern or talent can read their own. Anything else is a 403.
+
+  **Errors:** a malformed id is a 400, an unknown id is a 404.
+
+  **Response:** the interview with `applicant` and `company` profiles, `null` if that account no longer exists. `meetLink` only appears once the interview has been accepted.

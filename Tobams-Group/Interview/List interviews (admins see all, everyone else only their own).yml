@@ -503,3 +503,21 @@ examples:
               }
             }
           }
+
+docs: |-
+  **Who sees what:**
+
+  - `Admin` and `Super_Admin`: every interview.
+  - `Organisation`: only interviews where it is the company.
+  - `Intern` and `Talent`: only their own.
+  - Any other role: 403.
+
+  Naming someone else in your own pinned field is a 403, not an empty page: `companyId` for an organisation, `applicantId` for an intern or talent. The other party's id is a normal filter.
+
+  **Query:** `status` (exact case), `companyId`, `applicantId` (24-hex ids), `startDate`, `endDate`, `page` (default 1), `limit` (default 10, max 100). Blank values mean no filter.
+
+  **Dates** filter the interview's `date`, inclusive at both ends. `YYYY-MM-DD` covers the whole UTC day. A full ISO datetime with an offset is that exact instant, and one with no offset is a 400. `endDate` before `startDate` is a 400.
+
+  **Response:** `data: { count, interviews, pagination }`. `count` is the total across all pages. Each row has `applicant` and `company` profiles, `null` if that account no longer exists. Newest interview date first.
+
+  **`meetLink`** only appears once an interview has been accepted.

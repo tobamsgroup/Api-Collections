@@ -149,4 +149,6 @@ docs: |-
 
   **Stage:** scheduling moves the application forward to `Interview`. `Hired` stays `Hired`. A `Rejected` applicant is a 400 and no interview is created.
 
+  **Meeting link:** none yet, so the response and the scheduling notification have no `meetLink`. It is created when the interview is accepted.
+
   Later accept, reschedule, complete or cancel changes only the interview's own `status`, never the application's stage.

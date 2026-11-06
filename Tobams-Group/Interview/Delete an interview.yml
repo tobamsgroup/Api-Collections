@@ -18,3 +18,10 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs: |-
+  **Who:** `Admin`, `Super_Admin` and `Organisation` only. An organisation can only delete interviews where it is the company, otherwise a 403.
+
+  **Errors:** a malformed id is a 400, an unknown id is a 404.
+
+  **Known gap:** deleting an active interview doesn't lower the applicant's `interviewSchedulesCount`. Cancel it first if the count matters.

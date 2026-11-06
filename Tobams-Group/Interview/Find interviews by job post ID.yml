@@ -18,3 +18,8 @@ settings:
   followRedirects: true
   maxRedirects: 5
   forwardAuthorizationHeader: false
+
+docs: |-
+  **Who sees what:** same rule as the list. Admins get every interview on the post. Everyone else gets only their own on it, so this never answers 403 for someone else's post.
+
+  **Response:** newest first, not paginated. No interviews is a 200 with `[]`, not a 404. A malformed id is a 400.
