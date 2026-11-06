@@ -824,7 +824,7 @@ docs: |-
   | Work experience | `experienceLevel` | `any`, `entry`, `mid`, `senior` | Stored `yearsOfExperience`: entry 0-1 years or none recorded, mid 2-5, senior 6+ |
   | Type of employment | `employmentType` | `full-time`, `part-time`, `temporary` | Any selected, on the preferred `workType` (interns also `internshipType`). `temporary` means Contract, Freelance or Temporary |
 
-  **Rules:** blank means no filter. An unknown value is a 400. `from` or `to` without `dateFilter=custom` is a 400. `search` here keeps its own fields (name, email, job title and so on), not the profile fields above.
+  **Rules:** a blank `workMode`, `location`, `experienceLevel`, `employmentType`, `dateFilter`, `from` or `to` means no filter. A blank `stage`, `search`, `page` or `limit` is a 400. An unknown value is a 400. `from` or `to` without `dateFilter=custom` is a 400. `search` here keeps its own fields (name, email, job title and so on), not the profile fields above.
 
   **Guest applications** have no profile, so the profile filters exclude them. `location` still matches their own `location` and `country`.
 
