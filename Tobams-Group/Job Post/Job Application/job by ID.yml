@@ -30,7 +30,6 @@ examples:
             "message": "Job Application Deleted"
           }
   - name: Malformed id
-    description: "Current behaviour: success is true on this 400"
     request:
       url: "{{BASE}}/job-apply/not-an-id"
       method: DELETE
@@ -41,24 +40,24 @@ examples:
         type: json
         data: |-
           {
-            "success": true,
-            "message": "Invalid job ID format"
+            "success": false,
+            "error": "ValidationError",
+            "message": "jobID: Invalid application ID format"
           }
   - name: Not found
-    description: "Current behaviour: an unknown id is a 500, not a 404"
     request:
       url: "{{BASE}}/job-apply/65e616b42acf83a9a2608d31"
       method: DELETE
     response:
-      status: 500
-      statusText: Internal Server Error
+      status: 404
+      statusText: Not Found
       body:
         type: json
         data: |-
           {
             "success": false,
-            "error": "Error",
-            "message": "Job not foundC"
+            "error": "NotFoundError",
+            "message": "Job application not found"
           }
   - name: Not allowed
     request:
@@ -77,6 +76,8 @@ examples:
           }
 
 docs: |-
-  **Who:** `Super_Admin`, or `Admin` with `SUPER` or `USER MANAGEMENT`.
+  Deletes one job application. The id in the path is the application's id.
 
-  **Known issues in the current code:** a malformed id answers 400 with `success: true`, and an unknown id is a 500 rather than a 404.
+  **Who:** `Super_Admin`, or `Admin` with `SUPER` or `USER MANAGEMENT`. Anyone else is a 403.
+
+  **Errors:** a malformed id is a 400, and an unknown or already deleted id is a 404.
