@@ -8,7 +8,7 @@ http:
   url: "{{BASE}}/admin/users/:userId"
   params:
     - name: userId
-      value: ""
+      value: 6af1e79cc9503e19405f7d9d
       type: path
   body:
     type: json
@@ -28,3 +28,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
