@@ -15,6 +15,11 @@ http:
       }
 
 runtime:
+  variables:
+    - name: SUPER_ADMIN_EMAIL
+      value: ""
+    - name: SUPER_ADMIN_PASSWORD
+      value: ""
   scripts:
     - type: after-response
       code: |-
