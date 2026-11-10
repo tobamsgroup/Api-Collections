@@ -5,7 +5,20 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/admin/mentors/requests"
+  url: "{{BASE}}/admin/mentors/requests?page=1&limit=2&search=ada&status=rejected"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "2"
+      type: query
+    - name: search
+      value: ada
+      type: query
+    - name: status
+      value: rejected
+      type: query
   auth: inherit
 
 settings:
