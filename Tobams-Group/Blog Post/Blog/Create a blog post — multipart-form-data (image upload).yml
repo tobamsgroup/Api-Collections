@@ -11,34 +11,34 @@ http:
     data:
       - name: title
         type: text
-        value: "From Campus to Career: Why Universities Need Industry Partnerships More Than Ever"
+        value: "Microlearning: The Future of Workplace Training"
       - name: content
         type: text
-        value: <p>A university degree remains a valuable foundation, but today&rsquo;s employers are looking for more than academic knowledge. They want graduates who can solve problems, adapt quickly, collaborate effectively, communicate confidently, and contribute from day one.</p><p>&nbsp;</p><p>The challenge is that many graduates leave university equipped with theoretical knowledge but limited exposure to the realities of the workplace. As industries evolve rapidly through digital transformation, artificial intelligence, and changing business needs, the gap between education and employment continues to widen. Closing that gap requires more than curriculum updates&mdash;it requires collaboration.</p><p>&nbsp;</p><p>This is why strong partnerships between universities and industry have become more important than ever. Through internships, mentorship programmes, industry-led projects, guest lectures, apprenticeships, innovation hubs, and work-integrated learning, students gain practical experience while developing the technical and professional skills employers value most. At the same time, organisations build a stronger pipeline of future-ready talent, reduce recruitment challenges, and help shape the workforce they will eventually hire.</p><p>&nbsp;</p><p>These partnerships also benefit universities by ensuring academic programmes remain relevant to current industry needs. When employers contribute insights into curriculum design and emerging trends, graduates are better prepared for real-world challenges rather than simply passing examinations.</p><p>&nbsp;</p><p>For students, the impact goes beyond employability. Exposure to experienced professionals builds confidence, expands networks, encourages innovation, and provides clarity about career paths long before graduation. It transforms learning from something that happens only in lecture halls into an experience that prepares students to thrive in dynamic workplaces.</p><p>&nbsp;</p><p>The future of higher education is not about choosing between academic excellence and practical experience&mdash;it is about combining both. Universities and employers each have a critical role to play, but lasting impact happens when they work together.</p><p>&nbsp;</p><p>Closing the gap between classroom learning and workplace expectations requires collaboration, not competition. The journey from campus to career should not begin after graduation&mdash;it should start while students are still learning.</p>
+        value: "<p><strong>Microlearning: The Future of Workplace Training</strong></p><p>&nbsp;</p><p>In today&rsquo;s fast-paced work environment, employees need flexible and effective ways to develop new skills without disrupting their daily responsibilities. This is where <strong>microlearning</strong> comes in.</p><p>&nbsp;</p><p>Microlearning is an approach to training that delivers information in short, focused learning sessions, usually lasting between 3 and 10 minutes. Instead of overwhelming employees with lengthy training programmes, it breaks complex topics into smaller, easier-to-understand lessons.</p><p>&nbsp;</p><p><strong>Why Is Microlearning Important?</strong></p><p>&nbsp;</p><p>One of the biggest benefits of microlearning is improved knowledge retention. When employees learn in smaller portions, they can process, understand, and remember information more effectively. Short lessons also encourage active participation, making learning more engaging and less overwhelming.</p><p>&nbsp;</p><p>Microlearning also supports continuous professional development. Employees can access relevant training materials, videos, quizzes, and tutorials at their convenience, allowing them to build new skills and improve existing ones while keeping up with workplace demands.</p><p>&nbsp;</p><p><strong>The Future of Workplace Learning</strong></p><p>&nbsp;</p><p>As organisations continue to embrace digital transformation, microlearning is becoming an increasingly valuable training strategy. It promotes flexibility, saves time, improves employee engagement, and creates opportunities for continuous growth.</p><p>&nbsp;</p><p>Ultimately, workplace training should not just be about completing courses; it should be about creating a culture where learning is accessible, practical, and continuous.</p><p>&nbsp;</p><p><strong>Remember, Small lessons. Better retention. Continuous growth.</strong> That is the power of microlearning.</p>"
       - name: description
         type: text
         value: ""
         disabled: true
       - name: duration
         type: text
-        value: 3 mins read
+        value: 2 mins read
       - name: author
         type: text
-        value: Ona Newton
+        value: Dr. Ona Newton
       - name: url
         type: text
-        value: why-universities-need-industry-partnerships-more-than-ever
+        value: the-future-of-workplace-training
       - name: status
         type: text
         value: published
       - name: categories
         type: text
-        value: Career Advice
+        value: Learning and Development
       - name: file
         type: file
         value:
-          - /Users/fawazabdganiyu/Downloads/From Campus to Career.jpg
-        contentType: image/jpeg
+          - /Users/fawazabdganiyu/Desktop/Microlearning-The_Future_of_Workplace_Training.png
+        contentType: image/png
         description: Binary image, field name "file"
   auth: inherit
 
@@ -47,6 +47,7 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: Invalid category
