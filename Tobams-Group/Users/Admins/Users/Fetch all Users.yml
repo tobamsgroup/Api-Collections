@@ -6,6 +6,18 @@ info:
 http:
   method: GET
   url: "{{BASE}}/admin/users"
+  body:
+    type: json
+    data: |-
+      {
+        "role": "Talent", // Intern, Talent, Mentor, Organisation, Admin, or Super_Admin,
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "user@example.com",
+        "telephone": "+2340000000000",
+        "password": "Password123!"
+      //   "privilege": [] // Optional current admin privileges: 'SUPER', 'JOB POST MANAGEMENT', 'USER MANAGEMENT', 'CUSTOMER SERVICE', 'ASSESSMENT MANAGER', 'CONTENT MANAGEMENT'
+      }
   auth: inherit
 
 settings:
@@ -25,10 +37,10 @@ examples:
         data: |-
           {
             "role": "Talent", // Intern, Talent, Mentor, Organisation, Admin, or Super_Admin,
-            "firstName": "Fawaz",
-            "lastName": "Abdganiyu",
-            "email": "fawaz.abdganiyu+addUserTest@tobamsgroup.com",
-            "telephone": "+2348179656740",
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "user@example.com",
+            "telephone": "+2340000000000",
             "password": "Password123!"
           //   "privilege": [""] // Optional current admin privileges: 'SUPER', 'JOB POST MANAGEMENT', 'USER MANAGEMENT', 'CUSTOMER SERVICE', 'ASSESSMENT MANAGER', 'CONTENT MANAGEMENT'
           }
@@ -99,10 +111,10 @@ examples:
         data: |-
           {
             "role": "Talent", // Intern, Talent, Mentor, Organisation, Admin, or Super_Admin,
-            "firstName": "Fawaz",
-            "lastName": "Abdganiyu",
-            "email": "fawaz.abdganiyu+addUserTest@tobamsgroup.com",
-            "telephone": "+2348179656740",
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "user@example.com",
+            "telephone": "+2340000000000",
             "password": "Password123!"
           //   "privilege": [] // Optional current admin privileges: 'SUPER', 'JOB POST MANAGEMENT', 'USER MANAGEMENT', 'CUSTOMER SERVICE', 'ASSESSMENT MANAGER', 'CONTENT MANAGEMENT'
           }
