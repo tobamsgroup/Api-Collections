@@ -36,7 +36,8 @@ examples:
               "stage": "Shortlisted" // required. Shortlisted | Assessment | Interview | Hired | Rejected. Any case
           }
     response:
-      statusText: "200"
+      status: 200
+      statusText: OK
       headers:
         - name: Access-Control-Allow-Origin
           value: "*"
@@ -200,7 +201,60 @@ examples:
           {
             "success": false,
             "error": "BadRequestError",
-            "message": "Applicant must be interviewed before hiring"
+            "message": "Stage update not allowed. Applicant must be interviewed before hiring"
+          }
+
+  - name: Not found or another organisation's application
+    description: Also returned when postId is sent and does not match the application's post
+    request:
+      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4f"
+      method: PATCH
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Job application not found"
+          }
+  - name: Invalid stage
+    request:
+      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+              "stage": "Applied"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "stage: stage must be one of: Shortlisted, Assessment, Interview, Hired, Rejected"
+          }
+  - name: Changed by another request
+    request:
+      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
+      method: PATCH
+    response:
+      status: 409
+      statusText: Conflict
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "DuplicateError",
+            "message": "Application stage was changed by another request. Refresh and try again."
           }
 
 docs: |-

@@ -43,13 +43,14 @@ examples:
             "stage": "Shortlisted" // required. Shortlisted | Assessment | Interview | Hired | Rejected. Any case
           }
     response:
-      statusText: "200"
+      status: 200
+      statusText: OK
       body:
         type: json
         data: |-
           {
             "success": true,
-            "message": "2 applicant stages updated successfully",
+            "message": "2 applicant stage(s) updated to Shortlisted",
             "data": {
               "stage": "Shortlisted",
               "matchedCount": 2,
@@ -60,8 +61,106 @@ examples:
               ],
               "unchangedApplicationIds": [],
               "conflictedApplicationIds": []
-              
             }
+          }
+
+  - name: Refused move
+    description: One refused move refuses the whole batch. Each refused id is listed with its reason
+    request:
+      url: "{{BASE}}/job-apply/stages/bulk"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "applicationIds": ["67d95f590b44aad1ccf50a4e", "67d95f590b44aad1ccf50a4f"],
+            "stage": "Hired"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Stage update not allowed. 67d95f590b44aad1ccf50a4e: Applicant must be interviewed before hiring; 67d95f590b44aad1ccf50a4f: Applicant has already been rejected"
+          }
+  - name: Invalid stage
+    request:
+      url: "{{BASE}}/job-apply/stages/bulk"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "applicationIds": ["67d95f590b44aad1ccf50a4e"],
+            "stage": "Applied"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "stage: stage must be one of: Shortlisted, Assessment, Interview, Hired, Rejected"
+          }
+  - name: Duplicate ids
+    request:
+      url: "{{BASE}}/job-apply/stages/bulk"
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "applicationIds": ["67d95f590b44aad1ccf50a4e", "67d95f590b44aad1ccf50a4e"],
+            "stage": "Shortlisted"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "applicationIds: Application IDs must be unique"
+          }
+  - name: Not found or another organisation's application
+    description: Any id that is missing, or not on the organisation's own posts, fails the whole batch
+    request:
+      url: "{{BASE}}/job-apply/stages/bulk"
+      method: PATCH
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "One or more job applications were not found"
+          }
+  - name: Role not allowed
+    request:
+      url: "{{BASE}}/job-apply/stages/bulk"
+      method: PATCH
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
           }
 
 docs: |-

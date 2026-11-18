@@ -81,6 +81,103 @@ examples:
               "updatedAt": "2026-11-02T09:00:00.000Z"
             }
           }
+  - name: Email does not match
+    description: email must be the signed-in account's own address
+    request:
+      url: "{{BASE}}/job-apply/"
+      method: POST
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Email does not match"
+          }
+  - name: Missing required fields
+    request:
+      url: "{{BASE}}/job-apply/"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {}
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "fullName: Invalid input: expected string, received undefined; phoneNumber: Invalid input: expected string, received undefined; email: Invalid email address; country: Invalid input: expected string, received undefined; postId: Invalid input: expected string, received undefined"
+          }
+  - name: Intern applying to a talents-only post
+    request:
+      url: "{{BASE}}/job-apply/"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "This job is not open to intern applicants"
+          }
+  - name: Post closed
+    description: The post is not Published
+    request:
+      url: "{{BASE}}/job-apply/"
+      method: POST
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "This job posting has expired or closed. Please watch out for new job opportunities."
+          }
+  - name: Post not found
+    request:
+      url: "{{BASE}}/job-apply/"
+      method: POST
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Post not found"
+          }
+  - name: Client post whose organisation is gone
+    request:
+      url: "{{BASE}}/job-apply/"
+      method: POST
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "This job post is no longer available"
+          }
+
 docs: |-
   `email` must be the signed-in user's own address, in any case. Any other address is a 403.
 

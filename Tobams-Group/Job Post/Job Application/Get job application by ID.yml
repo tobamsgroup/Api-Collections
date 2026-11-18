@@ -22,7 +22,8 @@ examples:
       url: "{{BASE}}/job-apply/67d956adb3ea8eee43ef5cf4"
       method: GET
     response:
-      statusText: "200"
+      status: 200
+      statusText: OK
       headers:
         - name: Access-Control-Allow-Origin
           value: "*"
@@ -95,6 +96,54 @@ examples:
                   "resume": "image url in cloudinary",
                   "location": "Lokoja, Kogi State"
               }
+          }
+
+  - name: Malformed id
+    description: Status is 400 but the body says success true (the controller answers this one itself)
+    request:
+      url: "{{BASE}}/job-apply/not-an-id"
+      method: GET
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Invalid application ID format"
+          }
+  - name: Not found or not yours
+    description: Someone else's application gets the same 404 as a missing id
+    request:
+      url: "{{BASE}}/job-apply/67d956adb3ea8eee43ef5cf5"
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Job application not found"
+          }
+  - name: Role not allowed
+    description: e.g. a mentor, or an admin without SUPER, JOB POST MANAGEMENT or USER MANAGEMENT
+    request:
+      url: "{{BASE}}/job-apply/67d956adb3ea8eee43ef5cf4"
+      method: GET
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
           }
 
 docs: |-
