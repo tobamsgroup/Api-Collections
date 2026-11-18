@@ -5,26 +5,19 @@ info:
 
 http:
   method: PATCH
-  url: "{{BASE}}/mentor_session/session/67dcb34298f81f4f8ce1123f"
+  url: "{{BASE}}/mentor_session/session/:sessionId"
+  params:
+    - name: sessionId
+      value: 67dcb34298f81f4f8ce1123f
+      type: path
   body:
     type: json
-    data: "{\r
-
-      \r
-
-      \  \"date\": \"2023-10-15T10:00:00Z\",\r
-
-      \  \"time\": \"9:00 a.m\",\r
-
-      \  \"whyRescheduled\": \"Tired\",\r
-
-      \  \"cancelled\": true,\r
-
-      \  \"whyCancelled\": \"Emergency\"\r
-
-      \r
-
-      }"
+    data: |-
+      {
+        "date": "2026-11-25T00:00:00.000Z",
+        "time": "2:00 PM - 3:00 PM",
+        "whyReschedule": "Clash with a team meeting"
+      }
   auth:
     type: bearer
     token: "{{mentor_access}}"
@@ -34,3 +27,429 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Rescheduled by the mentor
+    description: Mentors skip the availability check. Both parties get a "Mentorship Session Rescheduled" notification and the calendar event moves.
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce1123f
+          type: path
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "date": "2026-11-25T00:00:00.000Z",
+            "time": "2:00 PM - 3:00 PM",
+            "whyReschedule": "Clash with a team meeting"
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Mentor session updated successfully",
+            "data": {
+              "_id": "67dcb34298f81f4f8ce1123f",
+              "agenda": "Portfolio review and next steps",
+              "mentorId": "67b66148ad4271308086ad89",
+              "menteeId": "67b65c0c2478ee6593c49846",
+              "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+              "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+              "status": "Accepted",
+              "date": "2026-11-25T00:00:00.000Z",
+              "time": "2:00 PM - 3:00 PM",
+              "notes": [
+                "Discuss project progress",
+                "Feedback on performance"
+              ],
+              "cancelled": false,
+              "whyReschedule": "Clash with a team meeting",
+              "initiatedBy": "Intern",
+              "createdAt": "2026-11-16T09:00:00.000Z",
+              "updatedAt": "2026-11-18T10:15:00.000Z"
+            }
+          }
+  - name: Rescheduled by the mentee (inside availability)
+    description: Sent with an intern or talent token. The mentor's availability covers Wednesday 2-3 PM (a WEEKDAYS entry counts).
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce1123f
+          type: path
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "date": "2026-11-25T00:00:00.000Z",
+            "time": "2:00 PM - 3:00 PM",
+            "whyReschedule": "Exam on Monday"
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Mentor session updated successfully",
+            "data": {
+              "_id": "67dcb34298f81f4f8ce1123f",
+              "agenda": "Portfolio review and next steps",
+              "mentorId": "67b66148ad4271308086ad89",
+              "menteeId": "67b65c0c2478ee6593c49846",
+              "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+              "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+              "status": "Accepted",
+              "date": "2026-11-25T00:00:00.000Z",
+              "time": "2:00 PM - 3:00 PM",
+              "notes": [
+                "Discuss project progress",
+                "Feedback on performance"
+              ],
+              "cancelled": false,
+              "whyReschedule": "Exam on Monday",
+              "initiatedBy": "Intern",
+              "createdAt": "2026-11-16T09:00:00.000Z",
+              "updatedAt": "2026-11-18T10:15:00.000Z"
+            }
+          }
+  - name: Accepted
+    description: Both parties get a "Mentorship Session Status Updated" notification and the calendar event title becomes "Mentorship Session - Accepted".
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce1123f
+          type: path
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "status": "Accepted"
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Mentor session updated successfully",
+            "data": {
+              "_id": "67dcb34298f81f4f8ce1123f",
+              "agenda": "Portfolio review and next steps",
+              "mentorId": "67b66148ad4271308086ad89",
+              "menteeId": "67b65c0c2478ee6593c49846",
+              "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+              "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+              "status": "Accepted",
+              "date": "2026-11-23T00:00:00.000Z",
+              "time": "10:00 AM - 11:00 AM",
+              "notes": [
+                "Discuss project progress",
+                "Feedback on performance"
+              ],
+              "cancelled": false,
+              "initiatedBy": "Intern",
+              "createdAt": "2026-11-16T09:00:00.000Z",
+              "updatedAt": "2026-11-17T12:30:00.000Z"
+            }
+          }
+  - name: Cancelled
+    description: Both parties get the status notification only (no reschedule notification, even if date/time were also sent), and the calendar event is cancelled.
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce1123f
+          type: path
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "status": "Cancelled",
+            "cancelled": true,
+            "whyCancel": "Family emergency"
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Mentor session updated successfully",
+            "data": {
+              "_id": "67dcb34298f81f4f8ce1123f",
+              "agenda": "Portfolio review and next steps",
+              "mentorId": "67b66148ad4271308086ad89",
+              "menteeId": "67b65c0c2478ee6593c49846",
+              "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+              "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+              "status": "Cancelled",
+              "date": "2026-11-23T00:00:00.000Z",
+              "time": "10:00 AM - 11:00 AM",
+              "notes": [
+                "Discuss project progress",
+                "Feedback on performance"
+              ],
+              "cancelled": true,
+              "whyCancel": "Family emergency",
+              "initiatedBy": "Intern",
+              "createdAt": "2026-11-16T09:00:00.000Z",
+              "updatedAt": "2026-11-18T10:20:00.000Z"
+            }
+          }
+  - name: Fields outside the allowlist are dropped
+    description: menteeId, mentorId, eventId, meetingLink, initiatedBy and any $set/$unset operator are ignored. Only agenda is written here.
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce1123f
+          type: path
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "agenda": "Portfolio review",
+            "menteeId": "67b65c0c2478ee6593c49999",
+            "$set": { "mentorId": "67b66148ad4271308086ad99" }
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Mentor session updated successfully",
+            "data": {
+              "_id": "67dcb34298f81f4f8ce1123f",
+              "agenda": "Portfolio review",
+              "mentorId": "67b66148ad4271308086ad89",
+              "menteeId": "67b65c0c2478ee6593c49846",
+              "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+              "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+              "status": "Accepted",
+              "date": "2026-11-23T00:00:00.000Z",
+              "time": "10:00 AM - 11:00 AM",
+              "notes": [
+                "Discuss project progress",
+                "Feedback on performance"
+              ],
+              "cancelled": false,
+              "initiatedBy": "Intern",
+              "createdAt": "2026-11-16T09:00:00.000Z",
+              "updatedAt": "2026-11-18T10:25:00.000Z"
+            }
+          }
+  - name: Mentee reschedule outside availability
+    description: Intern or talent token. Mentors and admins never get this.
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce1123f
+          type: path
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "date": "2026-11-28T00:00:00.000Z",
+            "time": "8:00 PM"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Mentor is not available on saturday at the requested time"
+          }
+  - name: Mentee reschedule, mentor has no availability
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce1123f
+          type: path
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "time": "2:00 PM"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Mentor has not set their availability yet"
+          }
+  - name: Mentee reschedule, bad time format
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce1123f
+          type: path
+      method: PATCH
+      body:
+        type: json
+        data: |-
+          {
+            "time": "afternoon"
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Invalid time format. Expected e.g. \"9:00 AM\" or \"9:00 AM - 10:00 AM\""
+          }
+  - name: Malformed session id
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: not-an-id
+          type: path
+      method: PATCH
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Invalid session id"
+          }
+  - name: Session not found
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce11240
+          type: path
+      method: PATCH
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Session not found"
+          }
+  - name: Someone else's session
+    description: A mentor who is not the mentorId, or an intern/talent who is not the menteeId. Nothing is written.
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce1123f
+          type: path
+      method: PATCH
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "You can only update your own mentorship sessions"
+          }
+  - name: Role not allowed
+    description: Organisation, super admin, or an admin without SUPER
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67dcb34298f81f4f8ce1123f
+          type: path
+      method: PATCH
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
+          }
+
+docs: |-
+  Updates one mentorship session: reschedule, accept, decline, cancel, or edit the agenda and notes.
+
+  **Who can call:** `MENTOR`, `INTERN`, `TALENT`, or `ADMIN` with the `SUPER` privilege. `Super_Admin` is not in the route's role list, so it gets a 403.
+
+  **Which session:**
+  - Admins can update any session.
+  - A mentor can update only sessions where they are the `mentorId`.
+  - An intern or talent can update only sessions where they are the `menteeId`.
+  - Anyone else gets a 403 "You can only update your own mentorship sessions", and nothing is written.
+
+  Checks run in this order: malformed id (400), missing session (404), ownership (403).
+
+  **Body:** JSON. Only these fields are written; anything else is silently dropped, including `menteeId`, `mentorId`, `eventId`, `meetingLink`, `initiatedBy`, `$set`/`$unset` and dotted paths. This applies to admins too.
+
+  | Field | Type | Notes |
+  | --- | --- | --- |
+  | `agenda` | string | |
+  | `date` | ISO date | Reschedule. Weekday is worked out in Africa/Lagos time. |
+  | `time` | string | `"9:00 AM"` (one hour by default) or `"9:00 AM - 10:00 AM"`. |
+  | `status` | string | `Pending`, `Accepted`, `Declined`, `Cancelled`, `Approved`, `Rejected`. |
+  | `notes` | string[] | Replaces the whole list. |
+  | `cancelled` | boolean | |
+  | `whyCancel` | string | Max 100 characters. |
+  | `whyReschedule` | string | Max 100 characters. |
+
+  The old field names `whyRescheduled` and `whyCancelled` were never stored; use `whyReschedule` and `whyCancel`.
+
+  **Availability (mentees only):** when an intern or talent sends `date` or `time`, the new slot must be inside the mentor's `availability`. Single days in any spelling (`MON`, `Monday`) and the groups `WEEKDAYS`/`WEEKENDS` both count. A field that isn't sent keeps its stored value for the check. Mentors and admins skip the check.
+
+  **Side effects:**
+  - **Status change:** both parties get an in-app "Mentorship Session Status Updated" notification. `Cancelled`, `Declined` and `Rejected` cancel the Google Calendar event; `Accepted` and `Approved` retitle it "Mentorship Session - <status>".
+  - **Reschedule** (the stored date or time actually changed): both parties get an in-app "Mentorship Session Rescheduled" notification with the new date and time, and the calendar event moves to the new slot. Its title, attendees and Meet link stay. Resending the same date and time sends nothing.
+  - A session that ends up `Cancelled`, `Declined` or `Rejected` gets the status notification only, never a reschedule one.
+  - Notification and calendar failures are logged and never fail the request; the update is already saved.
+
+  **Response:** the updated session.

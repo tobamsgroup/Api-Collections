@@ -8,19 +8,14 @@ http:
   url: "{{BASE}}/mentor_session/"
   body:
     type: json
-    data: "{\r
-
-      \  \"agenda\": \"Session with Ericsson Doe\",\r
-
-      \  \"mentorId\": \"67b66148ad4271308086ad89\",\r
-
-      \  \"date\": \"2022-10-15T10:00:00Z\",\r
-
-      \  \"time\": \"9:00 a.m\",\r
-
-      \  \"notes\": [\"Discuss project progress\", \"Feedback on performance\"]\r
-
-      }"
+    data: |-
+      {
+        "agenda": "Portfolio review and next steps",
+        "mentorId": "67b66148ad4271308086ad89",
+        "date": "2026-11-23T00:00:00.000Z",
+        "time": "10:00 AM - 11:00 AM",
+        "notes": ["Discuss project progress", "Feedback on performance"]
+      }
   auth:
     type: bearer
     token: "{{intern_access}}"
@@ -32,7 +27,7 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Success
+  - name: Success (old response shape)
     request:
       url: "{{BASE}}/mentor_session/"
       method: POST
@@ -130,3 +125,151 @@ examples:
                   "updatedAt": "2025-03-11T14:22:20.711Z"
               }
           }
+  - name: Created
+    description: The mentor's availability covers Monday 10-11 AM. A WEEKDAYS entry counts. Both parties get an in-app "Upcoming Mentorship Session" notification.
+    request:
+      url: "{{BASE}}/mentor_session/"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "agenda": "Portfolio review and next steps",
+            "mentorId": "67b66148ad4271308086ad89",
+            "date": "2026-11-23T00:00:00.000Z",
+            "time": "10:00 AM - 11:00 AM",
+            "notes": ["Discuss project progress", "Feedback on performance"]
+          }
+    response:
+      status: 201
+      statusText: Created
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Mentor session created successfully",
+            "data": {
+              "agenda": "Portfolio review and next steps",
+              "mentorId": "67b66148ad4271308086ad89",
+              "menteeId": "67b65c0c2478ee6593c49846",
+              "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+              "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+              "status": "Pending",
+              "date": "2026-11-23T00:00:00.000Z",
+              "time": "10:00 AM - 11:00 AM",
+              "notes": [
+                "Discuss project progress",
+                "Feedback on performance"
+              ],
+              "cancelled": false,
+              "initiatedBy": "Intern",
+              "_id": "67dcb34298f81f4f8ce1123f",
+              "createdAt": "2026-11-18T09:00:00.000Z",
+              "updatedAt": "2026-11-18T09:00:00.000Z"
+            }
+          }
+  - name: Missing mentorId
+    request:
+      url: "{{BASE}}/mentor_session/"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "MentorId is required"
+          }
+  - name: Outside the mentor's availability
+    description: The weekday in the message is lowercase and worked out in Africa/Lagos time.
+    request:
+      url: "{{BASE}}/mentor_session/"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Mentor is not available on saturday at the requested time"
+          }
+  - name: Mentor has no availability
+    description: Also returned when mentorId is not a mentor.
+    request:
+      url: "{{BASE}}/mentor_session/"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Mentor has not set their availability yet"
+          }
+  - name: Bad time format
+    request:
+      url: "{{BASE}}/mentor_session/"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Invalid time format. Expected e.g. \"9:00 AM\" or \"9:00 AM - 10:00 AM\""
+          }
+  - name: Role not allowed
+    description: Organisation, super admin, or an admin without SUPER
+    request:
+      url: "{{BASE}}/mentor_session/"
+      method: POST
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
+          }
+
+docs: |-
+  Books a mentorship session, as the mentee (intern or talent). The mentor version of this request is in **Mentor View**.
+
+  **Who can call:** `INTERN` or `TALENT` here. `MENTOR` and `ADMIN` (with `SUPER`) use the same route. `Super_Admin` gets a 403.
+
+  **Body (intern or talent token):** JSON.
+
+  | Field | Type | Notes |
+  | --- | --- | --- |
+  | `agenda` | string | Required. |
+  | `mentorId` | id | Required. `menteeId` is always the caller. |
+  | `date` | ISO date | Required. |
+  | `time` | string | Required. `"9:00 AM"` (one hour by default) or `"9:00 AM - 10:00 AM"`. |
+  | `notes` | string[] | Optional. |
+
+  **Availability:** the slot must fall inside one of the mentor's `availability` entries.
+  - The weekday comes from `date` in Africa/Lagos time.
+  - A day entry can be a single day in any spelling (`MON`, `Monday`) or a group, `WEEKDAYS` or `WEEKENDS`, in any case.
+  - A time entry can be a window (`"10:00 AM - 1:00 PM"`): the whole session must fit inside it. Or it can be a single start time (`"10:00 AM"`): the session must start exactly then.
+
+  A mentor with no availability is a 400 "Mentor has not set their availability yet".
+
+  **Side effects:** a Google Calendar event with a Meet link is created on the mentor's calendar (`meetingLink`, `eventId`), and both parties get an in-app "Upcoming Mentorship Session" notification.
+
+  **Response:** 201 with the stored session, `status: "Pending"`. The mentor accepts or declines with `PATCH /mentor_session/session/:sessionId`.

@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/mentor_session/session/67d16c865859941ee9f83837"
+  url: "{{BASE}}/mentor_session/session/:sessionId"
+  params:
+    - name: sessionId
+      value: 67d16c865859941ee9f83837
+      type: path
   auth:
     type: bearer
     token: "{{mentor_access}}"
@@ -15,3 +19,133 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67d16c865859941ee9f83837
+          type: path
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Mentor session retrieved successfully",
+            "data": {
+              "_id": "67d16c865859941ee9f83837",
+              "agenda": "Portfolio review and next steps",
+              "mentorId": "67b66148ad4271308086ad89",
+              "menteeId": "67b65c0c2478ee6593c49846",
+              "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+              "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+              "status": "Accepted",
+              "date": "2026-11-23T00:00:00.000Z",
+              "time": "10:00 AM - 11:00 AM",
+              "notes": [
+                "Discuss project progress",
+                "Feedback on performance"
+              ],
+              "cancelled": false,
+              "initiatedBy": "Intern",
+              "createdAt": "2026-11-16T09:00:00.000Z",
+              "updatedAt": "2026-11-17T12:30:00.000Z"
+            }
+          }
+  - name: Malformed session id
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: not-an-id
+          type: path
+      method: GET
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Invalid session id"
+          }
+  - name: Session not found
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67d16c865859941ee9f83838
+          type: path
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Session not found"
+          }
+  - name: Another mentor's session
+    description: A mentor reading a session where they are not the mentorId
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67d16c865859941ee9f83837
+          type: path
+      method: GET
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "You can only view your own mentorship sessions"
+          }
+  - name: Role not allowed
+    description: Intern, talent, organisation, super admin, or an admin without SUPER
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67d16c865859941ee9f83837
+          type: path
+      method: GET
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
+          }
+
+docs: |-
+  Returns one mentorship session.
+
+  **Who can call:** `MENTOR`, or `ADMIN` with the `SUPER` privilege. Interns and talents can't use this route (403). `Super_Admin` is not in the route's role list either, so it also gets a 403.
+
+  **Which session:**
+  - Admins can read any session.
+  - A mentor can read only sessions where they are the `mentorId`. Anyone else's is a 403 "You can only view your own mentorship sessions".
+
+  **Order of checks:** a malformed id is a 400, then a missing session is a 404, then the ownership check. So a 404 never reveals ownership, but a 403 confirms the id exists.
+
+  **Response:** the stored session as is. `mentorId` and `menteeId` are plain ids, not populated profiles.

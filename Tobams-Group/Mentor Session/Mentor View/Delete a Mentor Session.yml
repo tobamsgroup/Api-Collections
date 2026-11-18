@@ -5,7 +5,11 @@ info:
 
 http:
   method: DELETE
-  url: "{{BASE}}/mentor_session/session/67d168bb475b00405cec62ec"
+  url: "{{BASE}}/mentor_session/session/:sessionId"
+  params:
+    - name: sessionId
+      value: 67d168bb475b00405cec62ec
+      type: path
   auth:
     type: bearer
     token: "{{mentor_access}}"
@@ -15,3 +19,135 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Deleted
+    description: The session's Google Calendar event is cancelled on the mentor's calendar after the delete.
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67d168bb475b00405cec62ec
+          type: path
+      method: DELETE
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Mentor session deleted successfully",
+            "data": {
+              "_id": "67d168bb475b00405cec62ec",
+              "agenda": "Portfolio review and next steps",
+              "mentorId": "67b66148ad4271308086ad89",
+              "menteeId": "67b65c0c2478ee6593c49846",
+              "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+              "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+              "status": "Accepted",
+              "date": "2026-11-23T00:00:00.000Z",
+              "time": "10:00 AM - 11:00 AM",
+              "notes": [
+                "Discuss project progress"
+              ],
+              "cancelled": false,
+              "initiatedBy": "Intern",
+              "createdAt": "2026-11-16T09:00:00.000Z",
+              "updatedAt": "2026-11-17T12:30:00.000Z"
+            }
+          }
+  - name: Malformed session id
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: not-an-id
+          type: path
+      method: DELETE
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Invalid session id"
+          }
+  - name: Session not found (or already deleted)
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67d168bb475b00405cec62ed
+          type: path
+      method: DELETE
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Session not found"
+          }
+  - name: Another mentor's session
+    description: Nothing is deleted and the calendar event is left alone.
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67d168bb475b00405cec62ec
+          type: path
+      method: DELETE
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "You can only delete your own mentorship sessions"
+          }
+  - name: Role not allowed
+    description: Intern, talent, organisation, super admin, or an admin without SUPER
+    request:
+      url: "{{BASE}}/mentor_session/session/:sessionId"
+      params:
+        - name: sessionId
+          value: 67d168bb475b00405cec62ec
+          type: path
+      method: DELETE
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
+          }
+
+docs: |-
+  Deletes one mentorship session.
+
+  **Who can call:** `MENTOR`, or `ADMIN` with the `SUPER` privilege. Interns and talents can't delete (403); they cancel with `PATCH` and `"status": "Cancelled"`. `Super_Admin` is not in the route's role list, so it gets a 403.
+
+  **Which session:**
+  - Admins can delete any session.
+  - A mentor can delete only sessions where they are the `mentorId`. Anyone else's is a 403 "You can only delete your own mentorship sessions".
+
+  Checks run in this order: malformed id (400), missing session (404), ownership (403). Deleting twice is a 200, then a 404.
+
+  **Calendar:** after the delete succeeds, the session's Google Calendar event is cancelled on the mentor's calendar. This is skipped when the session has no `eventId`, or is already `Cancelled`, `Declined` or `Rejected` (its event was cancelled at that point). A refused delete cancels nothing. A failed cancellation is logged and the delete still succeeds.
+
+  **Response:** the deleted session. No notification is sent to either party.
