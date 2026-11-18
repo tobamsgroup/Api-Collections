@@ -5,7 +5,11 @@ info:
 
 http:
   method: DELETE
-  url: "{{BASE}}/job-apply/65e616b42acf83a9a2608d31"
+  url: "{{BASE}}/job-apply/:applicationId"
+  params:
+    - name: applicationId
+      value: 65e616b42acf83a9a2608d31
+      type: path
   auth: inherit
 
 settings:
@@ -17,7 +21,11 @@ settings:
 examples:
   - name: Success
     request:
-      url: "{{BASE}}/job-apply/65e616b42acf83a9a2608d31"
+      url: "{{BASE}}/job-apply/:applicationId"
+      params:
+        - name: applicationId
+          value: 65e616b42acf83a9a2608d31
+          type: path
       method: DELETE
     response:
       status: 200
@@ -31,7 +39,11 @@ examples:
           }
   - name: Malformed id
     request:
-      url: "{{BASE}}/job-apply/not-an-id"
+      url: "{{BASE}}/job-apply/:applicationId"
+      params:
+        - name: applicationId
+          value: not-an-id
+          type: path
       method: DELETE
     response:
       status: 400
@@ -46,7 +58,11 @@ examples:
           }
   - name: Not found
     request:
-      url: "{{BASE}}/job-apply/65e616b42acf83a9a2608d31"
+      url: "{{BASE}}/job-apply/:applicationId"
+      params:
+        - name: applicationId
+          value: 65e616b42acf83a9a2608d31
+          type: path
       method: DELETE
     response:
       status: 404
@@ -61,7 +77,11 @@ examples:
           }
   - name: Not allowed
     request:
-      url: "{{BASE}}/job-apply/65e616b42acf83a9a2608d31"
+      url: "{{BASE}}/job-apply/:applicationId"
+      params:
+        - name: applicationId
+          value: 65e616b42acf83a9a2608d31
+          type: path
       method: DELETE
     response:
       status: 403

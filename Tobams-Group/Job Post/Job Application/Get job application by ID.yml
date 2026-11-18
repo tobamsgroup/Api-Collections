@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/job-apply/67d956adb3ea8eee43ef5cf4"
+  url: "{{BASE}}/job-apply/:applicationId"
+  params:
+    - name: applicationId
+      value: 67d956adb3ea8eee43ef5cf4
+      type: path
   auth:
     type: bearer
     token: "{{client_access}}"
@@ -19,7 +23,11 @@ settings:
 examples:
   - name: Success
     request:
-      url: "{{BASE}}/job-apply/67d956adb3ea8eee43ef5cf4"
+      url: "{{BASE}}/job-apply/:applicationId"
+      params:
+        - name: applicationId
+          value: 67d956adb3ea8eee43ef5cf4
+          type: path
       method: GET
     response:
       status: 200
@@ -101,7 +109,11 @@ examples:
   - name: Malformed id
     description: Status is 400 but the body says success true (the controller answers this one itself)
     request:
-      url: "{{BASE}}/job-apply/not-an-id"
+      url: "{{BASE}}/job-apply/:applicationId"
+      params:
+        - name: applicationId
+          value: not-an-id
+          type: path
       method: GET
     response:
       status: 400
@@ -116,7 +128,11 @@ examples:
   - name: Not found or not yours
     description: Someone else's application gets the same 404 as a missing id
     request:
-      url: "{{BASE}}/job-apply/67d956adb3ea8eee43ef5cf5"
+      url: "{{BASE}}/job-apply/:applicationId"
+      params:
+        - name: applicationId
+          value: 67d956adb3ea8eee43ef5cf5
+          type: path
       method: GET
     response:
       status: 404
@@ -132,7 +148,11 @@ examples:
   - name: Role not allowed
     description: e.g. a mentor, or an admin without SUPER, JOB POST MANAGEMENT or USER MANAGEMENT
     request:
-      url: "{{BASE}}/job-apply/67d956adb3ea8eee43ef5cf4"
+      url: "{{BASE}}/job-apply/:applicationId"
+      params:
+        - name: applicationId
+          value: 67d956adb3ea8eee43ef5cf4
+          type: path
       method: GET
     response:
       status: 403

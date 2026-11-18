@@ -5,7 +5,11 @@ info:
 
 http:
   method: POST
-  url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+  url: "{{BASE}}/job-apply/:applicationId/assessment"
+  params:
+    - name: applicationId
+      value: 67d95f590b44aad1ccf50a4e
+      type: path
   body:
     type: multipart-form
     data:
@@ -32,7 +36,11 @@ settings:
 examples:
   - name: Sent with attachment
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: POST
       body:
         type: multipart-form
@@ -81,7 +89,11 @@ examples:
           }
   - name: Sent without attachment
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: POST
       body:
         type: multipart-form
@@ -121,7 +133,11 @@ examples:
           }
   - name: Not at Assessment stage
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: POST
     response:
       status: 400
@@ -136,7 +152,11 @@ examples:
           }
   - name: Missing details
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: POST
     response:
       status: 400
@@ -151,7 +171,11 @@ examples:
           }
   - name: Blank details
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: POST
     response:
       status: 400
@@ -166,7 +190,11 @@ examples:
           }
   - name: Details over 2000 words
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: POST
     response:
       status: 400
@@ -181,7 +209,11 @@ examples:
           }
   - name: Attachment not a PDF
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: POST
     response:
       status: 400
@@ -196,7 +228,11 @@ examples:
           }
   - name: Attachment over 4MB
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: POST
     response:
       status: 400
@@ -211,7 +247,11 @@ examples:
           }
   - name: More than 5 attachments
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: POST
     response:
       status: 400
@@ -226,7 +266,11 @@ examples:
           }
   - name: Malformed application id
     request:
-      url: "{{BASE}}/job-apply/not-an-id/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: not-an-id
+          type: path
       method: POST
     response:
       status: 400
@@ -241,7 +285,11 @@ examples:
           }
   - name: Not found or another organisation's application
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4f/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4f
+          type: path
       method: POST
     response:
       status: 404
@@ -257,7 +305,11 @@ examples:
   - name: Role not allowed
     description: Talent, intern, mentor, or an admin without SUPER, JOB_POST or USER_MANAGEMENT
     request:
-      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: POST
     response:
       status: 403

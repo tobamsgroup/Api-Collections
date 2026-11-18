@@ -5,7 +5,11 @@ info:
 
 http:
   method: PATCH
-  url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
+  url: "{{BASE}}/job-apply/stages/:applicationId"
+  params:
+    - name: applicationId
+      value: 67d95f590b44aad1ccf50a4e
+      type: path
   body:
     type: json
     data: |-
@@ -26,7 +30,11 @@ settings:
 examples:
   - name: To Shortlist
     request:
-      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
+      url: "{{BASE}}/job-apply/stages/:applicationId"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: PATCH
       body:
         type: json
@@ -110,7 +118,11 @@ examples:
           }
   - name: To reject
     request:
-      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
+      url: "{{BASE}}/job-apply/stages/:applicationId"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: PATCH
       body:
         type: json
@@ -150,7 +162,11 @@ examples:
           }
   - name: To hire
     request:
-      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
+      url: "{{BASE}}/job-apply/stages/:applicationId"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: PATCH
       body:
         type: json
@@ -190,7 +206,11 @@ examples:
   - name: Refused move
     description: Hired needs the applicant to be at Interview
     request:
-      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
+      url: "{{BASE}}/job-apply/stages/:applicationId"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: PATCH
     response:
       status: 400
@@ -207,7 +227,11 @@ examples:
   - name: Not found or another organisation's application
     description: Also returned when postId is sent and does not match the application's post
     request:
-      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4f"
+      url: "{{BASE}}/job-apply/stages/:applicationId"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4f
+          type: path
       method: PATCH
     response:
       status: 404
@@ -222,7 +246,11 @@ examples:
           }
   - name: Invalid stage
     request:
-      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
+      url: "{{BASE}}/job-apply/stages/:applicationId"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: PATCH
       body:
         type: json
@@ -243,7 +271,11 @@ examples:
           }
   - name: Changed by another request
     request:
-      url: "{{BASE}}/job-apply/stages/67d95f590b44aad1ccf50a4e"
+      url: "{{BASE}}/job-apply/stages/:applicationId"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
       method: PATCH
     response:
       status: 409
