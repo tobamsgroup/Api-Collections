@@ -4,13 +4,25 @@ variables:
     value: https://tobams-group-be-development.onrender.com/api/v1
   - secret: true
     name: LOGIN_EMAIL
+    description: ""
   - secret: true
     name: LOGIN_PASSWORD
+    description: ""
   - secret: true
     name: ADMIN_EMAIL
+    description: ""
   - secret: true
     name: ADMIN_PASSWORD
+    description: ""
   - secret: true
     name: SUPER_ADMIN_PASSWORD
+    description: ""
   - secret: true
     name: SUPER_ADMIN_EMAIL
+    description: ""
+  - secret: true
+    name: ORGANISATION_EMAIL
+    description: ""
+  - secret: true
+    name: ORGANISATION_PASSWORD
+    description: ""

@@ -6,4 +6,4 @@ info:
 request:
   auth:
     type: bearer
-    token: "{{client_access}}"
+    token: "{{org_access}}"

@@ -10,8 +10,8 @@ http:
     type: json
     data: |-
       {
-        "email": "{{SUPER_ADMIN_EMAIL}}",
-        "password": "{{SUPER_ADMIN_PASSWORD}}"
+        "email": "{{ORGANISATION_EMAIL}}",
+        "password": "{{ORGANISATION_PASSWORD}}"
       }
 
 runtime:
