@@ -110,6 +110,7 @@ examples:
             "message": "stage: stage must be one of: Shortlisted, Assessment, Interview, Hired, Rejected"
           }
   - name: Duplicate ids
+    description: Ids are compared case-insensitively, so the same id in upper and lower case is also a duplicate
     request:
       url: "{{BASE}}/job-apply/stages/bulk"
       method: PATCH
@@ -117,7 +118,7 @@ examples:
         type: json
         data: |-
           {
-            "applicationIds": ["67d95f590b44aad1ccf50a4e", "67d95f590b44aad1ccf50a4e"],
+            "applicationIds": ["67d95f590b44aad1ccf50a4e", "67D95F590B44AAD1CCF50A4E"],
             "stage": "Shortlisted"
           }
     response:
@@ -175,4 +176,4 @@ docs: |-
 
   `stage` ignores case and surrounding spaces. `Interviewed` is accepted and means `Interview`.
 
-  One refused move refuses the whole batch and nothing is written. 1 to 100 distinct `applicationIds`.
+  One refused move refuses the whole batch and nothing is written. 1 to 100 distinct `applicationIds`. Ids are compared case-insensitively, so `67d9...` and `67D9...` count as the same id and the request is a 400 "Application IDs must be unique".

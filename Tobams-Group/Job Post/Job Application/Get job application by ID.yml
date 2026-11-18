@@ -107,7 +107,6 @@ examples:
           }
 
   - name: Malformed id
-    description: Status is 400 but the body says success true (the controller answers this one itself)
     request:
       url: "{{BASE}}/job-apply/:applicationId"
       params:
@@ -122,7 +121,8 @@ examples:
         type: json
         data: |-
           {
-            "success": true,
+            "success": false,
+            "error": "BadRequestError",
             "message": "Invalid application ID format"
           }
   - name: Not found or not yours
