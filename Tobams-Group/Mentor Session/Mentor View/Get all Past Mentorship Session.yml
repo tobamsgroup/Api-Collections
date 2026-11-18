@@ -24,8 +24,49 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Always empty
-    description: "What every mentor gets today, even with matching sessions (see docs)"
+  - name: Success
+    request:
+      url: "{{BASE}}/mentor_session/past?pageNumber=1&limit=10"
+      params:
+        - name: pageNumber
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Past mentor sessions retrieved successfully",
+            "data": {
+              "sessions": [
+                {
+                  "_id": "67dcb34298f81f4f8ce11241",
+                  "agenda": "Portfolio review and next steps",
+                  "mentorId": "67b66148ad4271308086ad89",
+                  "menteeId": "67b65c0c2478ee6593c49846",
+                  "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+                  "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+                  "status": "Accepted",
+                  "date": "2026-11-10T00:00:00.000Z",
+                  "time": "10:00 AM - 11:00 AM",
+                  "notes": [
+                    "Discuss project progress"
+                  ],
+                  "cancelled": false,
+                  "initiatedBy": "Intern"
+                }
+              ],
+              "count": 1
+            }
+          }
+  - name: No sessions
     request:
       url: "{{BASE}}/mentor_session/past?pageNumber=1&limit=10"
       params:
@@ -47,11 +88,33 @@ examples:
             "message": "Past mentor sessions retrieved successfully",
             "data": {
               "sessions": [],
-              "count": 148
+              "count": 0
             }
           }
+  - name: Bad limit
+    request:
+      url: "{{BASE}}/mentor_session/past?pageNumber=1&limit=101"
+      params:
+        - name: pageNumber
+          value: "1"
+          type: query
+        - name: limit
+          value: "101"
+          type: query
+      method: GET
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "limit: limit must be 100 or less"
+          }
   - name: Role not allowed
-    description: "Intern, talent, organisation, super admin, or an admin without SUPER"
+    description: "Intern, talent, organisation, or an admin without SUPER"
     request:
       url: "{{BASE}}/mentor_session/past?pageNumber=1&limit=10"
       params:
@@ -75,21 +138,21 @@ examples:
           }
 
 docs: |-
-  Meant to list the calling mentor's sessions dated now or earlier (cancelled ones included).
+  Lists the calling mentor's sessions dated before now, newest first. Cancelled sessions are left out (they are under cancelled).
   
-  **Known bug: always returns `sessions: []`.** The query filters on a `mentor` field, but sessions store the mentor as `mentorId`, so nothing ever matches. Until it's fixed, use `GET /mentor_session/` and filter on the client.
+  Upcoming, past and cancelled never overlap, and together they are the full list. `Declined` and `Rejected` sessions are not cancelled, so they stay under upcoming or past by date.
   
-  **Who can call:** `MENTOR`, or `ADMIN` with the `SUPER` privilege. `Super_Admin` is not in the route's role list, so it gets a 403. An admin gets the sessions where the admin's own id is on the session, normally none.
+  **Who can call:** `MENTOR`, `Super_Admin`, or `ADMIN` with the `SUPER` privilege. Lists are always the caller's own sessions, so an admin gets only sessions carrying the admin's own id (normally none).
   
   **Query:**
   
   | Param | Notes |
   | --- | --- |
-  | `pageNumber` | Page, from 1. Leave out both params to get every session. `0` or a negative number is a 500 (MongoDB rejects a negative skip). |
-  | `limit` | Page size. No maximum. |
+  | `pageNumber` | Optional, from 1. Defaults to 1 when `limit` is set. |
+  | `limit` | Optional, 1 to 100. Leave it out to get the whole list. |
   
-  Neither param is validated, and there is no sort, so order is MongoDB's natural order (usually oldest created first).
+  Anything that isn't a positive whole number, or a `limit` over 100, is a 400.
   
-  **`count` is not the caller's total.** It is the number of sessions in the whole collection, every mentor and mentee, so don't use it for pagination.
+  **`count`** is the caller's total for this list, so `Math.ceil(count / limit)` is the page count.
   
-  Rows (once fixed) are the stored session without `createdAt`/`updatedAt`, and without a `mentee` profile.
+  **Rows:** the stored session without `createdAt`/`updatedAt`, and without a `mentee` profile (`GET /mentor_session/` has it).

@@ -21,8 +21,8 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Always empty
-    description: "What every call gets today (see docs)"
+  - name: Success
+    description: "Newest first"
     request:
       url: "{{BASE}}/mentor_session/email/:email"
       params:
@@ -39,10 +39,67 @@ examples:
           {
             "success": true,
             "message": "Mentor session retrieved successfully",
+            "data": [
+              {
+                "_id": "67dcb34298f81f4f8ce11240",
+                "agenda": "Portfolio review and next steps",
+                "mentorId": "67b66148ad4271308086ad89",
+                "menteeId": "67b65c0c2478ee6593c49846",
+                "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+                "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+                "status": "Cancelled",
+                "date": "2026-11-10T00:00:00.000Z",
+                "time": "10:00 AM - 11:00 AM",
+                "notes": [
+                  "Discuss project progress"
+                ],
+                "cancelled": true,
+                "initiatedBy": "Intern",
+                "whyCancel": "Family emergency",
+                "createdAt": "2026-11-16T09:00:00.000Z",
+                "updatedAt": "2026-11-17T12:30:00.000Z"
+              },
+              {
+                "_id": "67dcb34298f81f4f8ce1123f",
+                "agenda": "Portfolio review and next steps",
+                "mentorId": "67b66148ad4271308086ad89",
+                "menteeId": "67b65c0c2478ee6593c49846",
+                "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+                "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+                "status": "Accepted",
+                "date": "2026-11-23T00:00:00.000Z",
+                "time": "10:00 AM - 11:00 AM",
+                "notes": [
+                  "Discuss project progress"
+                ],
+                "cancelled": false,
+                "initiatedBy": "Intern",
+                "createdAt": "2026-11-16T09:00:00.000Z",
+                "updatedAt": "2026-11-17T12:30:00.000Z"
+              }
+            ]
+          }
+  - name: No account or no sessions
+    request:
+      url: "{{BASE}}/mentor_session/email/:email"
+      params:
+        - name: email
+          value: nobody@example.com
+          type: path
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Mentor session retrieved successfully",
             "data": []
           }
   - name: Role not allowed
-    description: "Intern, talent, organisation, super admin, or an admin without SUPER"
+    description: "Intern, talent, organisation, or an admin without SUPER"
     request:
       url: "{{BASE}}/mentor_session/email/:email"
       params:
@@ -63,10 +120,10 @@ examples:
           }
 
 docs: |-
-  Meant to list the calling mentor's sessions with the mentee whose email is `:email`.
+  Lists the calling mentor's sessions with one mentee, found by the mentee's account email.
   
-  **Known bug: always returns `data: []` with a 200.** The query filters on `menteeEmail` and `mentor`, and sessions have neither field (they store `menteeId` and `mentorId`), so nothing ever matches. The "Mentor's session not found" 404 in the code can't happen, because an empty list is not treated as missing.
+  `:email` is trimmed and lowercased, then matched against account emails. An email with no account, or a mentee with no sessions with this mentor, is `200` with `data: []`. Not paginated; newest first.
   
-  **Who can call:** `MENTOR`, or `ADMIN` with the `SUPER` privilege. `Super_Admin` is not in the route's role list, so it gets a 403. An admin gets the sessions where the admin's own id is on the session, normally none.
+  **Who can call:** `MENTOR`, `Super_Admin`, or `ADMIN` with the `SUPER` privilege. An admin gets only sessions where the admin is the mentor (normally none).
   
-  The frontend should not rely on this route until it's fixed.
+  **Response:** `data` is an array of stored sessions (no `mentee` profile).

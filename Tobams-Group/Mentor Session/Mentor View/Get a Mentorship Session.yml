@@ -117,7 +117,7 @@ examples:
             "message": "You can only view your own mentorship sessions"
           }
   - name: Role not allowed
-    description: Intern, talent, organisation, super admin, or an admin without SUPER
+    description: Intern, talent, organisation, or an admin without SUPER
     request:
       url: "{{BASE}}/mentor_session/session/:sessionId"
       params:
@@ -140,10 +140,10 @@ examples:
 docs: |-
   Returns one mentorship session.
 
-  **Who can call:** `MENTOR`, or `ADMIN` with the `SUPER` privilege. Interns and talents can't use this route (403). `Super_Admin` is not in the route's role list either, so it also gets a 403.
+  **Who can call:** `MENTOR`, `Super_Admin`, or `ADMIN` with the `SUPER` privilege. Interns and talents can't use this route (403).
 
   **Which session:**
-  - Admins can read any session.
+  - Admins and super admins can read any session.
   - A mentor can read only sessions where they are the `mentorId`. Anyone else's is a 403 "You can only view your own mentorship sessions".
 
   **Order of checks:** a malformed id is a 400, then a missing session is a 404, then the ownership check. So a 404 never reveals ownership, but a 403 confirms the id exists.

@@ -117,7 +117,7 @@ examples:
             "message": "You can only delete your own mentorship sessions"
           }
   - name: Role not allowed
-    description: Intern, talent, organisation, super admin, or an admin without SUPER
+    description: Intern, talent, organisation, or an admin without SUPER
     request:
       url: "{{BASE}}/mentor_session/session/:sessionId"
       params:
@@ -140,10 +140,10 @@ examples:
 docs: |-
   Deletes one mentorship session.
 
-  **Who can call:** `MENTOR`, or `ADMIN` with the `SUPER` privilege. Interns and talents can't delete (403); they cancel with `PATCH` and `"status": "Cancelled"`. `Super_Admin` is not in the route's role list, so it gets a 403.
+  **Who can call:** `MENTOR`, `Super_Admin`, or `ADMIN` with the `SUPER` privilege. Interns and talents can't delete (403); they cancel with `PATCH` and `"status": "Cancelled"`.
 
   **Which session:**
-  - Admins can delete any session.
+  - Admins and super admins can delete any session.
   - A mentor can delete only sessions where they are the `mentorId`. Anyone else's is a 403 "You can only delete your own mentorship sessions".
 
   Checks run in this order: malformed id (400), missing session (404), ownership (403). Deleting twice is a 200, then a 404.

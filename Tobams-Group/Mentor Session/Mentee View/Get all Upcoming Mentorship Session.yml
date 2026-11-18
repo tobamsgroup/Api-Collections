@@ -63,11 +63,10 @@ examples:
                   "initiatedBy": "Intern"
                 }
               ],
-              "count": 148
+              "count": 1
             }
           }
   - name: No sessions
-    description: "count is still the whole collection"
     request:
       url: "{{BASE}}/mentor_session/mentee/upcoming?pageNumber=1&limit=10"
       params:
@@ -89,11 +88,33 @@ examples:
             "message": "Upcoming intern sessions retrieved successfully",
             "data": {
               "sessions": [],
-              "count": 148
+              "count": 0
             }
           }
+  - name: Bad pageNumber
+    request:
+      url: "{{BASE}}/mentor_session/mentee/upcoming?pageNumber=0&limit=10"
+      params:
+        - name: pageNumber
+          value: "0"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+      method: GET
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "pageNumber: pageNumber must be 1 or more"
+          }
   - name: Role not allowed
-    description: "Mentor, organisation, super admin, or an admin without SUPER"
+    description: "Mentor, organisation, or an admin without SUPER"
     request:
       url: "{{BASE}}/mentor_session/mentee/upcoming?pageNumber=1&limit=10"
       params:
@@ -117,19 +138,21 @@ examples:
           }
 
 docs: |-
-  Lists the calling intern's or talent's sessions dated now or later. Cancelled sessions are included; filter on `status` or `cancelled` if they shouldn't show. `date` is compared to the current instant, so a session stored at midnight UTC today counts as past.
+  Lists the calling intern's or talent's sessions dated now or later, soonest first. Cancelled sessions are left out (they are under cancelled). `date` is compared with the current instant, so a session stored at midnight UTC today already counts as past.
   
-  **Who can call:** `INTERN` or `TALENT`, or `ADMIN` with the `SUPER` privilege. `Super_Admin` is not in the route's role list, so it gets a 403. An admin gets the sessions where the admin's own id is on the session, normally none.
+  Upcoming, past and cancelled never overlap, and together they are the full list. `Declined` and `Rejected` sessions are not cancelled, so they stay under upcoming or past by date.
+  
+  **Who can call:** `INTERN` or `TALENT`, `Super_Admin`, or `ADMIN` with the `SUPER` privilege. Lists are always the caller's own sessions, so an admin gets only sessions carrying the admin's own id (normally none).
   
   **Query:**
   
   | Param | Notes |
   | --- | --- |
-  | `pageNumber` | Page, from 1. Leave out both params to get every session. `0` or a negative number is a 500 (MongoDB rejects a negative skip). |
-  | `limit` | Page size. No maximum. |
+  | `pageNumber` | Optional, from 1. Defaults to 1 when `limit` is set. |
+  | `limit` | Optional, 1 to 100. Leave it out to get the whole list. |
   
-  Neither param is validated, and there is no sort, so order is MongoDB's natural order (usually oldest created first).
+  Anything that isn't a positive whole number, or a `limit` over 100, is a 400.
   
-  **`count` is not the caller's total.** It is the number of sessions in the whole collection, every mentor and mentee, so don't use it for pagination.
+  **`count`** is the caller's total for this list, so `Math.ceil(count / limit)` is the page count.
   
   **Rows:** the stored session without `createdAt`/`updatedAt`. There is no mentor profile on the row; `mentorId` is a plain id.

@@ -185,7 +185,7 @@ examples:
             "message": "MenteeId is required"
           }
   - name: Role not allowed
-    description: Organisation, super admin, or an admin without SUPER
+    description: Organisation, or an admin without SUPER
     request:
       url: "{{BASE}}/mentor_session/"
       method: POST
@@ -204,7 +204,7 @@ examples:
 docs: |-
   Creates a mentorship session, as the mentor. The mentee version of this request is in **Mentee View**.
 
-  **Who can call:** `MENTOR`, `INTERN`, `TALENT`, or `ADMIN` with the `SUPER` privilege. `Super_Admin` is not in the route's role list, so it gets a 403.
+  **Who can call:** `MENTOR`, `INTERN`, `TALENT`, `Super_Admin`, or `ADMIN` with the `SUPER` privilege.
 
   **Body (mentor token):** JSON.
 
@@ -217,7 +217,7 @@ docs: |-
   | `notes` | string[] | Optional. |
   | `status` | string | Optional, defaults to `Pending`. |
 
-  **Availability:** mentors (and admins) skip the availability check and can book any date and time.
+  **Availability:** mentors and admins (including `Super_Admin`) skip the availability check and can book any date and time.
 
   **Side effects:** a Google Calendar event with a Meet link is created on the mentor's calendar (`meetingLink`, `eventId`), and both parties get an in-app "Upcoming Mentorship Session" notification.
 

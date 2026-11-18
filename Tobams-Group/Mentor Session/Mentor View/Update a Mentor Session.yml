@@ -396,7 +396,7 @@ examples:
             "message": "You can only update your own mentorship sessions"
           }
   - name: Role not allowed
-    description: Organisation, super admin, or an admin without SUPER
+    description: Organisation, or an admin without SUPER
     request:
       url: "{{BASE}}/mentor_session/session/:sessionId"
       params:
@@ -419,10 +419,10 @@ examples:
 docs: |-
   Updates one mentorship session: reschedule, accept, decline, cancel, or edit the agenda and notes.
 
-  **Who can call:** `MENTOR`, `INTERN`, `TALENT`, or `ADMIN` with the `SUPER` privilege. `Super_Admin` is not in the route's role list, so it gets a 403.
+  **Who can call:** `MENTOR`, `INTERN`, `TALENT`, `Super_Admin`, or `ADMIN` with the `SUPER` privilege.
 
   **Which session:**
-  - Admins can update any session.
+  - Admins and super admins can update any session.
   - A mentor can update only sessions where they are the `mentorId`.
   - An intern or talent can update only sessions where they are the `menteeId`.
   - Anyone else gets a 403 "You can only update your own mentorship sessions", and nothing is written.
@@ -444,7 +444,7 @@ docs: |-
 
   The old field names `whyRescheduled` and `whyCancelled` were never stored; use `whyReschedule` and `whyCancel`.
 
-  **Availability (mentees only):** when an intern or talent sends `date` or `time`, the new slot must be inside the mentor's `availability`. Single days in any spelling (`MON`, `Monday`) and the groups `WEEKDAYS`/`WEEKENDS` both count. A field that isn't sent keeps its stored value for the check. Mentors and admins skip the check.
+  **Availability (mentees only):** when an intern or talent sends `date` or `time`, the new slot must be inside the mentor's `availability`. Single days in any spelling (`MON`, `Monday`) and the groups `WEEKDAYS`/`WEEKENDS` both count. A field that isn't sent keeps its stored value for the check. Mentors and admins (including `Super_Admin`) skip the check.
 
   **Side effects:**
   - **Status change:** both parties get an in-app "Mentorship Session Status Updated" notification. `Cancelled`, `Declined` and `Rejected` cancel the Google Calendar event; `Accepted` and `Approved` retitle it "Mentorship Session - <status>".

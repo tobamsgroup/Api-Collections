@@ -122,11 +122,10 @@ examples:
                   }
                 }
               ],
-              "count": 148
+              "count": 2
             }
           }
   - name: No sessions
-    description: "count is still the whole collection"
     request:
       url: "{{BASE}}/mentor_session/?pageNumber=1&limit=10"
       params:
@@ -148,7 +147,7 @@ examples:
             "message": "All mentor sessions retrieved successfully",
             "data": {
               "sessions": [],
-              "count": 148
+              "count": 0
             }
           }
   - name: pageNumber 0
@@ -163,18 +162,18 @@ examples:
           type: query
       method: GET
     response:
-      status: 500
-      statusText: Internal Server Error
+      status: 400
+      statusText: Bad Request
       body:
         type: json
         data: |-
           {
             "success": false,
-            "error": "MongoServerError",
-            "message": "BSON field 'skip' value must be >= 0, actual value '-10'"
+            "error": "ValidationError",
+            "message": "pageNumber: pageNumber must be 1 or more"
           }
   - name: Role not allowed
-    description: "Intern, talent, organisation, super admin, or an admin without SUPER"
+    description: "Intern, talent, organisation, or an admin without SUPER"
     request:
       url: "{{BASE}}/mentor_session/?pageNumber=1&limit=10"
       params:
@@ -198,19 +197,19 @@ examples:
           }
 
 docs: |-
-  Lists the calling mentor's sessions, every status, past and future.
+  Lists the calling mentor's sessions, every status, past and future, newest first.
   
-  **Who can call:** `MENTOR`, or `ADMIN` with the `SUPER` privilege. `Super_Admin` is not in the route's role list, so it gets a 403. An admin gets the sessions where the admin's own id is on the session, normally none.
+  **Who can call:** `MENTOR`, `Super_Admin`, or `ADMIN` with the `SUPER` privilege. Lists are always the caller's own sessions, so an admin gets only sessions carrying the admin's own id (normally none).
   
   **Query:**
   
   | Param | Notes |
   | --- | --- |
-  | `pageNumber` | Page, from 1. Leave out both params to get every session. `0` or a negative number is a 500 (MongoDB rejects a negative skip). |
-  | `limit` | Page size. No maximum. |
+  | `pageNumber` | Optional, from 1. Defaults to 1 when `limit` is set. |
+  | `limit` | Optional, 1 to 100. Leave it out to get the whole list. |
   
-  Neither param is validated, and there is no sort, so order is MongoDB's natural order (usually oldest created first).
+  Anything that isn't a positive whole number, or a `limit` over 100, is a 400.
   
-  **`count` is not the caller's total.** It is the number of sessions in the whole collection, every mentor and mentee, so don't use it for pagination.
+  **`count`** is the caller's total for this list, so `Math.ceil(count / limit)` is the page count.
   
   **Rows:** the stored session plus `mentee`, the mentee's profile summary (name, email, photo, occupation, bio, location, role, skills). `mentee` is missing when the mentee's account no longer exists.

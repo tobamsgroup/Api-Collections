@@ -232,7 +232,7 @@ examples:
             "message": "Invalid time format. Expected e.g. \"9:00 AM\" or \"9:00 AM - 10:00 AM\""
           }
   - name: Role not allowed
-    description: Organisation, super admin, or an admin without SUPER
+    description: Organisation, or an admin without SUPER
     request:
       url: "{{BASE}}/mentor_session/"
       method: POST
@@ -251,7 +251,7 @@ examples:
 docs: |-
   Books a mentorship session, as the mentee (intern or talent). The mentor version of this request is in **Mentor View**.
 
-  **Who can call:** `INTERN` or `TALENT` here. `MENTOR` and `ADMIN` (with `SUPER`) use the same route. `Super_Admin` gets a 403.
+  **Who can call:** `INTERN` or `TALENT` here. `MENTOR`, `Super_Admin` and `ADMIN` (with `SUPER`) use the same route.
 
   **Body (intern or talent token):** JSON.
 
