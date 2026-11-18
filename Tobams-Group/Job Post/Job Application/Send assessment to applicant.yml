@@ -1,0 +1,292 @@
+info:
+  name: Send assessment to applicant
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+  body:
+    type: multipart-form
+    data:
+      - name: details
+        type: text
+        value: |-
+          Build a small React page that lists jobs from a public API, with search and pagination.
+          Submit a GitHub link within 3 days.
+      - name: attachments
+        type: file
+        value:
+          - /path/to/assessment-brief.pdf
+        contentType: application/pdf
+  auth:
+    type: bearer
+    token: "{{client_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sent with attachment
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: details
+            type: text
+            value: |-
+              Build a small React page that lists jobs from a public API, with search and pagination.
+              Submit a GitHub link within 3 days.
+          - name: attachments
+            type: file
+            value:
+              - /path/to/assessment-brief.pdf
+            contentType: application/pdf
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Assessment sent to candidate successfully",
+            "data": {
+              "_id": "67d95f590b44aad1ccf50a4e",
+              "fullName": "Ada Lovelace",
+              "phoneNumber": "+2348012345678",
+              "email": "ada@example.com",
+              "country": "Nigeria",
+              "bio": "Frontend engineer with three years of experience.",
+              "portfolioLink": "https://portfolio.example.com/ada",
+              "resume": "https://cdn.example.com/ada-cv.pdf",
+              "postId": "67d95578b3ea8eee43ef5ce4",
+              "jobTitle": "Software Engineer",
+              "stage": "Assessment",
+              "applicantRole": "Talent",
+              "organisationId": "67bf2c6a974a6b52304105a0",
+              "userId": "67b661d7c84dd7079b9e7d56",
+              "assessmentDetails": "Build a small React page that lists jobs from a public API, with search and pagination.\nSubmit a GitHub link within 3 days.",
+              "assessmentAttachments": [
+                "https://tobams-bucket.s3.amazonaws.com/assessments/1731920000000-attachment.pdf"
+              ],
+              "createdAt": "2026-11-01T09:00:00.000Z",
+              "updatedAt": "2026-11-03T09:00:00.000Z"
+            }
+          }
+  - name: Sent without attachment
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: details
+            type: text
+            value: Answer the three questions in the brief and reply to this email with your answers.
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Assessment sent to candidate successfully",
+            "data": {
+              "_id": "67d95f590b44aad1ccf50a4e",
+              "fullName": "Ada Lovelace",
+              "phoneNumber": "+2348012345678",
+              "email": "ada@example.com",
+              "country": "Nigeria",
+              "bio": "Frontend engineer with three years of experience.",
+              "portfolioLink": "https://portfolio.example.com/ada",
+              "resume": "https://cdn.example.com/ada-cv.pdf",
+              "postId": "67d95578b3ea8eee43ef5ce4",
+              "jobTitle": "Software Engineer",
+              "stage": "Assessment",
+              "applicantRole": "Talent",
+              "organisationId": "67bf2c6a974a6b52304105a0",
+              "userId": "67b661d7c84dd7079b9e7d56",
+              "assessmentDetails": "Answer the three questions in the brief and reply to this email with your answers.",
+              "assessmentAttachments": [],
+              "createdAt": "2026-11-01T09:00:00.000Z",
+              "updatedAt": "2026-11-03T09:00:00.000Z"
+            }
+          }
+  - name: Not at Assessment stage
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Application must be moved to the Assessment stage before sending an assessment"
+          }
+  - name: Missing details
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "details: Invalid input: expected string, received undefined"
+          }
+  - name: Blank details
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "details: Assessment details are required"
+          }
+  - name: Details over 2000 words
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "details: Assessment details must not exceed 2,000 words"
+          }
+  - name: Attachment not a PDF
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Only PDF files are allowed as assessment attachments."
+          }
+  - name: Attachment over 4MB
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Each attachment must not exceed 4MB."
+          }
+  - name: More than 5 attachments
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "No more than 5 attachments are allowed."
+          }
+  - name: Malformed application id
+    request:
+      url: "{{BASE}}/job-apply/not-an-id/assessment"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Invalid application ID format"
+          }
+  - name: Not found or another organisation's application
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4f/assessment"
+      method: POST
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "NotFoundError",
+            "message": "Job application not found"
+          }
+  - name: Role not allowed
+    description: Talent, intern, mentor, or an admin without SUPER, JOB_POST or USER_MANAGEMENT
+    request:
+      url: "{{BASE}}/job-apply/67d95f590b44aad1ccf50a4e/assessment"
+      method: POST
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
+          }
+
+docs: |-
+  Sends an assessment to one applicant by email (and in-app notification when the applicant has an account), and stores it on the application.
+
+  **Who can call:** `ORGANISATION` (only its own applications), `SUPER_ADMIN`, or `ADMIN` with `SUPER`, `JOB_POST` or `USER_MANAGEMENT`. Admins can send for any application. Someone else's application is the same 404 as a missing one.
+
+  **Precondition:** the application must already be at `Assessment`. Move it there first with `PATCH /job-apply/stages/:applicationId` (or the bulk route) and `"stage": "Assessment"`. Any other stage is a 400.
+
+  **Body:** `multipart/form-data`.
+
+  | Field | Type | Rules |
+  | --- | --- | --- |
+  | `details` | text | Required. Trimmed, not blank, at most 2,000 words. |
+  | `attachments` | file, repeatable | Optional. PDF only, 4MB each, at most 5. Send the field once per file. |
+
+  Files are uploaded to S3 and their URLs stored as `assessmentAttachments`. A client-sent `attachmentUrls` is ignored and replaced by the uploaded URLs. Every file is checked before any is uploaded, so one bad file uploads nothing.
+
+  **Response:** the updated application, with `assessmentDetails` and `assessmentAttachments` set. Sending again overwrites both.
+
+  **Delivery:** the applicant's email comes from their account, or from the application for a guest applicant. Replies go to the organisation's email. Guests get the email only (no in-app notification). Delivery is in the background and does not affect the response.
