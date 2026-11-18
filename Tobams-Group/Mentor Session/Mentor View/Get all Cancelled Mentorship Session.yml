@@ -22,3 +22,74 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Always empty
+    description: "What every mentor gets today, even with matching sessions (see docs)"
+    request:
+      url: "{{BASE}}/mentor_session/cancelled?pageNumber=1&limit=10"
+      params:
+        - name: pageNumber
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Cancelled mentor sessions retrieved successfully",
+            "data": {
+              "sessions": [],
+              "count": 148
+            }
+          }
+  - name: Role not allowed
+    description: "Intern, talent, organisation, super admin, or an admin without SUPER"
+    request:
+      url: "{{BASE}}/mentor_session/cancelled?pageNumber=1&limit=10"
+      params:
+        - name: pageNumber
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+      method: GET
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
+          }
+
+docs: |-
+  Meant to list the calling mentor's sessions with `cancelled: true`.
+  
+  **Known bug: always returns `sessions: []`.** The query filters on a `mentor` field, but sessions store the mentor as `mentorId`, so nothing ever matches. Until it's fixed, use `GET /mentor_session/` and filter on the client.
+  
+  **Who can call:** `MENTOR`, or `ADMIN` with the `SUPER` privilege. `Super_Admin` is not in the route's role list, so it gets a 403. An admin gets the sessions where the admin's own id is on the session, normally none.
+  
+  **Query:**
+  
+  | Param | Notes |
+  | --- | --- |
+  | `pageNumber` | Page, from 1. Leave out both params to get every session. `0` or a negative number is a 500 (MongoDB rejects a negative skip). |
+  | `limit` | Page size. No maximum. |
+  
+  Neither param is validated, and there is no sort, so order is MongoDB's natural order (usually oldest created first).
+  
+  **`count` is not the caller's total.** It is the number of sessions in the whole collection, every mentor and mentee, so don't use it for pagination.
+  
+  Rows (once fixed) are the stored session without `createdAt`/`updatedAt`, and without a `mentee` profile.

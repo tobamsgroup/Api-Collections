@@ -22,3 +22,195 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Success
+    request:
+      url: "{{BASE}}/mentor_session/?pageNumber=1&limit=10"
+      params:
+        - name: pageNumber
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "All mentor sessions retrieved successfully",
+            "data": {
+              "sessions": [
+                {
+                  "_id": "67dcb34298f81f4f8ce1123f",
+                  "agenda": "Portfolio review and next steps",
+                  "mentorId": "67b66148ad4271308086ad89",
+                  "menteeId": "67b65c0c2478ee6593c49846",
+                  "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+                  "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+                  "status": "Accepted",
+                  "date": "2026-11-23T00:00:00.000Z",
+                  "time": "10:00 AM - 11:00 AM",
+                  "notes": [
+                    "Discuss project progress"
+                  ],
+                  "cancelled": false,
+                  "initiatedBy": "Intern",
+                  "createdAt": "2026-11-16T09:00:00.000Z",
+                  "updatedAt": "2026-11-17T12:30:00.000Z",
+                  "mentee": {
+                    "userId": "67b65c0c2478ee6593c49846",
+                    "firstName": "Ada",
+                    "lastName": "Okafor",
+                    "email": "ada.okafor@example.com",
+                    "photo": "https://cdn.example.com/ada.jpg",
+                    "title": "Ms",
+                    "occupation": "Frontend Developer",
+                    "bio": "Junior developer moving into product design.",
+                    "location": {
+                      "city": "Lagos",
+                      "country": "Nigeria"
+                    },
+                    "profile": "Intern",
+                    "skills": [
+                      "React",
+                      "Figma"
+                    ]
+                  }
+                },
+                {
+                  "_id": "67dcb34298f81f4f8ce11240",
+                  "agenda": "Portfolio review and next steps",
+                  "mentorId": "67b66148ad4271308086ad89",
+                  "menteeId": "67b65c0c2478ee6593c49846",
+                  "meetingLink": "https://meet.google.com/qjz-fwyr-miy",
+                  "eventId": "5k2j8f0q1v9r3m7c4n6b0a1d2e",
+                  "status": "Cancelled",
+                  "date": "2026-11-10T00:00:00.000Z",
+                  "time": "10:00 AM - 11:00 AM",
+                  "notes": [
+                    "Discuss project progress"
+                  ],
+                  "cancelled": true,
+                  "initiatedBy": "Intern",
+                  "whyCancel": "Family emergency",
+                  "createdAt": "2026-11-16T09:00:00.000Z",
+                  "updatedAt": "2026-11-17T12:30:00.000Z",
+                  "mentee": {
+                    "userId": "67b65c0c2478ee6593c49846",
+                    "firstName": "Ada",
+                    "lastName": "Okafor",
+                    "email": "ada.okafor@example.com",
+                    "photo": "https://cdn.example.com/ada.jpg",
+                    "title": "Ms",
+                    "occupation": "Frontend Developer",
+                    "bio": "Junior developer moving into product design.",
+                    "location": {
+                      "city": "Lagos",
+                      "country": "Nigeria"
+                    },
+                    "profile": "Intern",
+                    "skills": [
+                      "React",
+                      "Figma"
+                    ]
+                  }
+                }
+              ],
+              "count": 148
+            }
+          }
+  - name: No sessions
+    description: "count is still the whole collection"
+    request:
+      url: "{{BASE}}/mentor_session/?pageNumber=1&limit=10"
+      params:
+        - name: pageNumber
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "All mentor sessions retrieved successfully",
+            "data": {
+              "sessions": [],
+              "count": 148
+            }
+          }
+  - name: pageNumber 0
+    request:
+      url: "{{BASE}}/mentor_session/?pageNumber=0&limit=10"
+      params:
+        - name: pageNumber
+          value: "0"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+      method: GET
+    response:
+      status: 500
+      statusText: Internal Server Error
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "MongoServerError",
+            "message": "BSON field 'skip' value must be >= 0, actual value '-10'"
+          }
+  - name: Role not allowed
+    description: "Intern, talent, organisation, super admin, or an admin without SUPER"
+    request:
+      url: "{{BASE}}/mentor_session/?pageNumber=1&limit=10"
+      params:
+        - name: pageNumber
+          value: "1"
+          type: query
+        - name: limit
+          value: "10"
+          type: query
+      method: GET
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
+          }
+
+docs: |-
+  Lists the calling mentor's sessions, every status, past and future.
+  
+  **Who can call:** `MENTOR`, or `ADMIN` with the `SUPER` privilege. `Super_Admin` is not in the route's role list, so it gets a 403. An admin gets the sessions where the admin's own id is on the session, normally none.
+  
+  **Query:**
+  
+  | Param | Notes |
+  | --- | --- |
+  | `pageNumber` | Page, from 1. Leave out both params to get every session. `0` or a negative number is a 500 (MongoDB rejects a negative skip). |
+  | `limit` | Page size. No maximum. |
+  
+  Neither param is validated, and there is no sort, so order is MongoDB's natural order (usually oldest created first).
+  
+  **`count` is not the caller's total.** It is the number of sessions in the whole collection, every mentor and mentee, so don't use it for pagination.
+  
+  **Rows:** the stored session plus `mentee`, the mentee's profile summary (name, email, photo, occupation, bio, location, role, skills). `mentee` is missing when the mentee's account no longer exists.

@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{BASE}}/mentor_session/email/johndoe@example.com"
+  url: "{{BASE}}/mentor_session/email/:email"
+  params:
+    - name: email
+      value: johndoe@example.com
+      type: path
   auth:
     type: bearer
     token: "{{mentor_access}}"
@@ -15,3 +19,54 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+examples:
+  - name: Always empty
+    description: "What every call gets today (see docs)"
+    request:
+      url: "{{BASE}}/mentor_session/email/:email"
+      params:
+        - name: email
+          value: johndoe@example.com
+          type: path
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Mentor session retrieved successfully",
+            "data": []
+          }
+  - name: Role not allowed
+    description: "Intern, talent, organisation, super admin, or an admin without SUPER"
+    request:
+      url: "{{BASE}}/mentor_session/email/:email"
+      params:
+        - name: email
+          value: johndoe@example.com
+          type: path
+      method: GET
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
+          }
+
+docs: |-
+  Meant to list the calling mentor's sessions with the mentee whose email is `:email`.
+  
+  **Known bug: always returns `data: []` with a 200.** The query filters on `menteeEmail` and `mentor`, and sessions have neither field (they store `menteeId` and `mentorId`), so nothing ever matches. The "Mentor's session not found" 404 in the code can't happen, because an empty list is not treated as missing.
+  
+  **Who can call:** `MENTOR`, or `ADMIN` with the `SUPER` privilege. `Super_Admin` is not in the route's role list, so it gets a 403. An admin gets the sessions where the admin's own id is on the session, normally none.
+  
+  The frontend should not rely on this route until it's fixed.
