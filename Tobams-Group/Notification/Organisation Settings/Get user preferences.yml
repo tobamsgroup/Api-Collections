@@ -101,3 +101,24 @@ examples:
               }
             }
           }
+
+docs: |-
+  ## Notification settings
+
+  `GET /notifications/settings` and `PATCH /notifications/settings`.
+
+  **Roles with settings:** `Talent`, `Intern`, `Mentor`, `Organisation`. Each gets its own shape (see the role folders). **`Admin` and `Super_Admin` have no notification settings:** both calls answer
+  ```json
+  { "success": false, "error": "BadRequestError", "message": "Notification settings are not available for role: Super_Admin" }
+  ```
+  with HTTP 400. This is expected today: admin notifications are not preference-gated. Do not show a settings page to admins unless a backend contract for it is agreed.
+
+  **Two-factor authentication** is a separate endpoint and does work for admins: `PATCH /auth/update-mfa/:email` (see `Users/Authentications/Update MFA`).
+
+  ### Notification `category` vs. what the user sees
+  `category: "job"` is the canonical category for a new job **or internship** post, because one post can target both roles. Each notification row is stored per receiver with `receiverRole`, and `actionUrl` already points to the right page. Present it by the viewer's role:
+  - `Intern` → label **Internship**, link `/intern/internships/:postId`
+  - `Talent` → label **Job**, link `/talent/my-jobs/:postId`
+  - `Organisation` / `Admin` → their own job pages (`/client/jobs`, `/admin/jobs/:id`)
+
+  The shared category stays `job`. `internship`, `new_internship` and `new_internships` are older intern-only categories (internship application updates and legacy alerts); show those as Internship.

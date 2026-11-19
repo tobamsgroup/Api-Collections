@@ -29,7 +29,7 @@ settings:
   forwardAuthorizationHeader: true
 
 examples:
-  - name: Empty mentors
+  - name: Empty mentors (legacy GET /admin/mentors, not this route)
     request:
       url: "{{BASE}}/admin/mentors"
       method: GET
@@ -95,7 +95,7 @@ examples:
               "usersObj": []
             }
           }
-  - name: Success
+  - name: Success (legacy GET /admin/mentors, not this route)
     request:
       url: "{{BASE}}/admin/mentors"
       method: GET
@@ -272,3 +272,34 @@ examples:
               ]
             }
           }
+
+docs: |-
+  ## Mentor registrations (merged list)
+
+  `GET /admin/mentors/requests`. Roles: `Super_Admin`, or `Admin` with `SUPER` or `USER MANAGEMENT`.
+
+  > The two saved examples were captured from the older `GET /admin/mentors`, not from this route. Use the schema below.
+
+  **Query**
+  - `page` (default 1), `limit` (default 10, max 100). A blank `page` or `limit` is a 400.
+  - `status`: `Pending`, `Approved`, `Rejected`, any case. Blank = all. Anything else is a 400.
+  - `search`: whitespace-split, max 6 terms; every term must match `firstName`, `lastName`, `email`, `companyName` or `telephone`.
+  - **No server-side sort.** Order is fixed: newest `createdAt` first, `_id` as tie-break. Keep the Admin sort control hidden.
+
+  **Success 200**
+  ```json
+  { "success": true, "message": "Mentor requests retrieved successfully",
+    "data": [ { "_id": "…", "userId": "…", "title": "…", "firstName": "…", "lastName": "…", "email": "…", "telephone": "…",
+      "location": {}, "photo": "…", "companyName": "…", "occupation": "…", "bio": "…", "profile": "Mentor",
+      "accountStatus": "Active", "mentorshipType": "…", "yearsOfExperience": "…", "averageRating": 0,
+      "availability": [], "status": "Approved", "createdAt": "…", "updatedAt": "…" } ],
+    "pagination": { "total": 2, "page": 1, "limit": 10, "pages": 1, "hasNext": false, "hasPrev": false },
+    "counts": { "total": 3, "Pending": 0, "Approved": 2, "Rejected": 1 } }
+  ```
+  - `pagination.total` follows `status` and `search`. `counts` follow `search` only and **ignore `status`** (tab badges). So `status=approved` gives `pagination.total` 2 and counts `3/0/2/1`. Intentional.
+  - Row ids: a live mentor's `_id`/`userId` is the account id (use with `PATCH /admin/mentorship-review/:mentorId`). A rejected row's `_id` is the rejected-mentor record (use with `GET /admin/mentors/rejected/:id`); its `userId` is the original account id and it carries `feedback`.
+  - Empty: `200`, `data: []`.
+
+  **400** `{ "success": false, "error": "ValidationError", "message": "status: …" }`
+
+  **Verify (read-only):** `?page=1&limit=2`, `?page=2&limit=2`, `?status=approved`, `?status=rejected&search=<name>`.

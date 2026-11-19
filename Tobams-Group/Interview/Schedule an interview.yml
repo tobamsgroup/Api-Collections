@@ -138,3 +138,16 @@ docs: |-
   **Meeting link:** none yet, so the response and the scheduling notification have no `meetLink`. It is created when the interview is accepted.
 
   Later accept, reschedule, complete or cancel changes only the interview's own `status`, never the application's stage.
+
+  ### One active interview per slot (BE PR)
+
+  > Behaviour marked **(BE PR)** ships with backend branch `fawaz/admin-api-findings`; staging shows the old behaviour until it is deployed.
+
+  A schedule request for an applicant, job post, `date` and `startTime` that already has a `Pending`, `Accepted`, `Scheduled` or `Rescheduled` interview answers **409** and creates nothing:
+  ```json
+  { "success": false, "error": "DuplicateError", "message": "An interview is already Pending for this applicant, job post and time slot (interviewId: 6a…)" }
+  ```
+  - Retrying a create is safe: the retry gets 409 with the existing id. Read it with `GET /interviews/:interviewId`.
+  - `Completed` and `Cancelled` free the slot. Another time or day for the same applicant and post is allowed (several rounds).
+  - Not atomic: two requests sent at the same moment can both pass. A reschedule into a held slot is not checked.
+  - Interviews **never change status on their own** when the slot passes. A past `Pending` stays `Pending` until someone cancels it; a past `Scheduled` stays until the company marks it `Completed`.

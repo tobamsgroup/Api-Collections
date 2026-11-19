@@ -25,7 +25,7 @@ http:
     - name: purpose
       value: ""
       type: query
-      description: "'assessment'|'project building'|'hosting event'|'join our platform'|'training'|'recruitment'|'subscription only'|'subscription with addOns'|'addOns only'|'hatt_support'|'webinar'|'course'"
+      description: "Subscription|Assessment|Course|Other (exact case). Groups of stored purposes, not raw purpose values"
     - name: startDate
       value: ""
       type: query
@@ -391,3 +391,21 @@ examples:
               "limit": 20
             }
           }
+
+docs: |-
+  ## Platform transactions (Admin payment history)
+
+  `GET /pay/customer-buckets/platform-transactions`. Roles: `Admin`, `Super_Admin` (no privilege check).
+
+  **Query** — send only the keys you use. A key sent **blank** (`status=`) is validated as a value and fails with 400, except `page`/`limit`, which fall back to defaults.
+  | Key | Values |
+  | --- | --- |
+  | `purpose` | `Subscription`, `Assessment`, `Course`, `Other` (exact case). Each is a group of stored purposes, e.g. `Subscription` = subscription only / with add-ons / add-ons only. Raw values such as `assessment` or `webinar` are a 400 here |
+  | `status` | `success`, `pending`, `failed`, `provisioned` |
+  | `provider` | `paystack`, `stripe`, `admin` |
+  | `paymentMethod` | `card`, `transfer`, `ussd` |
+  | `startDate` / `endDate` | any date string; `endDate` before `startDate` is a 400 |
+  | `search` | up to 100 characters |
+  | `page` / `limit` | default 1 / 20, `limit` capped at 100 |
+
+  **400:** `{ "success": false, "error": "ValidationError", "message": "purpose: <list of allowed values>" }`

@@ -145,3 +145,27 @@ examples:
                   }
               ]
           }
+
+docs: |-
+  ## Admin feedback list
+
+  `GET /feedbacks?type=&page=&limit=`. Roles: `Super_Admin`, or `Admin` with any privilege.
+
+  **Query:** `type` required, `Mentorship` or `Events` (exact case). `page` (default 1), `limit` (default 10). No search, no sort: newest `createdAt` first, `_id` tie-break **(BE PR)**.
+
+  **Response 200**
+  ```json
+  { "success": true, "message": "Feedbacks fetched successfully",
+    "data": { "currentCount": 10, "totalCount": 42,
+      "feedbacks": [ { "_id": "…", "reviewerId": "…", "receiverId": "…", "type": "Mentorship",
+        "feedback": "…", "rating": 4, "fullname": "…", "replies": [ { "reviewerId": "…", "fullname": "…", "feedback": "…", "createdAt": "…" } ],
+        "createdAt": "…", "updatedAt": "…",
+        "receiver": { "firstName", "lastName", "currentCompany", "companyName", "currentRole", "occupation", "title", "photo", "averageRating" },
+        "reviewer": [ { …same profile shape } ] } ] } }
+  ```
+  - `totalCount` is every feedback of that `type`; there is no `pagination` object. Pages = `ceil(totalCount / limit)`.
+  - `rating` is 1-5 or absent. `fullname` is the author's name as stored.
+  - `reviewer` is the profiles of the **reply** authors, present only when there are replies. The feedback's own author is `reviewerId` + `fullname`.
+  - For `type=Events`, `receiver` is the event document instead of a profile.
+
+  **400:** `{ "success": false, "error": "ValidationError", "message": "type: Feedback type is required" }`

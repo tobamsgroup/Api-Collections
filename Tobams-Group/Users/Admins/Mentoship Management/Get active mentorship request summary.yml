@@ -93,3 +93,10 @@ examples:
               "oneToOne": 0
             }
           }
+
+docs: |-
+  ## Mentorship summary (tab badges)
+
+  `GET /admin/mentorship/summary`. Same roles as the lists. No query.
+
+  `data: { peerToPeer, group, oneToOne }`: unfiltered totals of each list (accepted peer relationships, group rooms, accepted one-to-one requests).

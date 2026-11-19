@@ -43,6 +43,8 @@ docs: |-
   - `400` `communityId: Must be a valid 24-character hexadecimal ObjectId` (malformed id).
   - `404` `Community not found`.
 
+  **Member search: not supported.** Members are returned in join order (the stored order), paged in memory: `page` default 1, `limit` default 20 (max 100). `data: { members[], currentCount, totalCount }`, `totalCount` = all members. Each member has `userId`, `fullName`, `photo`, `occupation`, `role`, `joinedAt`, `isBanned`.
+
 examples:
   - name: "Success"
     request:

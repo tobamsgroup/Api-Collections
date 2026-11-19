@@ -88,3 +88,17 @@ examples:
               "error": "Error",
               "message": "Invoice with transaction reference :reference not found"
           }
+
+docs: |-
+  ## Subscription invoice
+
+  `GET /subscriptions/transactions/:reference/invoice`. Roles on the route: `Organisation`, `Corporate`, `Admin` (`SUPER` or `JOB POST`), `Super_Admin`.
+
+  **Who actually gets an invoice:** only an organisation or corporate account, for its own payment. The route needs the caller's loaded subscription, which only organisation/corporate accounts have. So:
+  - **Admin / Super_Admin: always 403** `{ "success": false, "error": "AuthorizationError", "message": "Subscription not loaded" }`. There is no Admin invoice retrieval or resend endpoint today. Do not show an Admin invoice action.
+  - Organisation, someone else's reference: 403 `Access denied`.
+  - Unknown reference: 404 `Customer not found` (see the saved example).
+
+  **Success (organisation):** headers `Content-Type: application/pdf`, `Content-Disposition: attachment; filename=subscription-invoice-<reference>.pdf`. The body is currently the invoice's **URL as text**, not PDF bytes (the PDF is generated, stored in S3, and its link returned). Treat it as a link until this is fixed.
+
+  **Verify:** with `{{org_access}}`, take a `referenceId` from `GET /subscriptions/payment-history` and call this route. No resend exists.

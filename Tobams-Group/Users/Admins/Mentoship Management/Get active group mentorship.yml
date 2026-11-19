@@ -139,3 +139,25 @@ examples:
               }
             }
           }
+
+docs: |-
+  ## Group list
+
+  `GET /admin/mentorship/group`. Every group room.
+
+  **Roles:** `Super_Admin`, or `Admin` with `SUPER` or `USER MANAGEMENT`.
+
+  > Behaviour marked **(BE PR)** ships with backend branch `fawaz/admin-api-findings`; staging shows the old behaviour until it is deployed.
+
+  **Query** (unknown keys ignored)
+  - `page` (default 1), `limit` (default 10, max 100; `0` or a non-integer is a 400).
+  - `sort`: `asc` | `desc` (default `desc`), on the date column, `_id` tie-break **(BE PR)**. No other sort key.
+  - `search`: blank = no filter **(BE PR)**. Split on whitespace (max 6 terms); every term must match one of the fields below, case-insensitive substring **(BE PR)**. On staging the search matched a single name field only, so a full name, an email or the other party's name returned zero rows; that is the zero-result case, a defect.
+
+  **Response:** `data: { data: rows, pagination: { total, page, limit, pages, hasNext, hasPrev } }`. `pagination.total` follows `search`. Badge counts come from `GET /admin/mentorship/summary` and ignore search.
+
+  **400:** `{ "success": false, "error": "ValidationError", "message": "limit: …" }`. 401 no token, 403 other roles or missing privilege.
+
+  **Search fields:** `groupName` (every word, any order).
+
+  **Row:** `{ id, groupName, createdBy: { id, name, email, photo, occupation } | null, dateCreated, noOfMembers, sessions: null }`.

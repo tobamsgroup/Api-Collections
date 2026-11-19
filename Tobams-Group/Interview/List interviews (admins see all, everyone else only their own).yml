@@ -574,3 +574,9 @@ docs: |-
   **Response:** `data: { count, interviews, pagination }`. `count` is the total across all pages. Each row has `applicant` and `company` profiles, `null` if that account no longer exists. Newest interview date first.
 
   **`meetLink`** only appears once an interview has been accepted.
+
+  ### Status filter and the Scheduled tab
+
+  `status` takes **one** value. There is no multi-status query. `Scheduled` returns only `Scheduled`; it does **not** include `Rescheduled`. A `Rescheduled` interview is waiting for the applicant to accept the new time and becomes `Scheduled` again when they do, so show it under its own tab (or a pending-action tab), not under Scheduled. `Accepted` is stored as `Scheduled`, so no row ever has status `Accepted`.
+
+  **Fixture:** none on staging. To create one without touching real users, use a test organisation and test applicant: schedule, accept as the applicant, then `PATCH /interviews/:id` with `{ "status": "Rescheduled", "date", "startTime", "endTime", "reason" }` as the organisation.

@@ -13,3 +13,29 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs: |-
+  ## Update an event (partial)
+
+  `PATCH /social_events/:eventId`. Roles: `Super_Admin`, `Admin` (`SUPER` or `USER MANAGEMENT`) on any event; `Organisation` on its own events only.
+
+  > Behaviour marked **(BE PR)** ships with backend branch `fawaz/admin-api-findings`; staging shows the old behaviour until it is deployed.
+
+  **Body:** JSON, or `multipart/form-data` when changing the image. Send only the fields to change; each follows the create rules.
+  `title`, `eventType`, `externalLink` (URL), `host`, `timezone`, `location`, `about`, `description`, `extra` (non-blank strings), `interval` (`{ start: { date, time }, end: { date, time } }`, replaces the whole interval), `eventsDetails` (object), `isPaid` (`{ status?, currency?, price? (>= 0) }`; only the sub-fields sent change, so the currency is kept when only the price changes).
+  In multipart, `isPaid`, `interval` and `eventsDetails` are JSON strings.
+
+  **Image:** optional multipart file field `image` (one file, image or video, same type/size limits as create). A text `image` URL is ignored. The previous file is not deleted.
+
+  **Ignored:** `userId`, `applicantCount`, any other key. **(BE PR)** On staging the body is written as sent and an image file is dropped.
+
+  **Responses**
+  - 200 `{ "success": true, "message": "Event updated successfully", "data": { …updated event } }`
+  - 400 validation (`{ "success": false, "error": "ValidationError", "message": "title: Title cannot be empty" }`), empty update, broken JSON field, two image files
+  - 403 `Only the event owner or an admin can modify this event`
+  - 404 `Event with id <id> not found` (also for a malformed id)
+
+  **Example JSON body**
+  ```json
+  { "title": "Career Fair 2026", "isPaid": { "price": 30 } }
+  ```

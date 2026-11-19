@@ -297,3 +297,41 @@ examples:
               "updatedAt": "2026-08-21T18:07:19.650Z"
             }
           }
+
+docs: |-
+  ## Admin user directory
+
+  `GET /admin/users`. Roles: `Super_Admin`, or `Admin` with `SUPER` or `USER MANAGEMENT`. No request body (ignore the body tab).
+
+  **Query** (blank = no filter; an unknown *value* is a 400; enum values are case-insensitive)
+  | Key | Values |
+  | --- | --- |
+  | `role` | `Individual`, `Student`, `Corporate`, `Super_Admin`, `Organisation`, `Admin`, `Mentor`, `Talent`, `Intern`; repeat or comma-separate |
+  | `accountStatus` | `Active`, `Inactive`, `Suspended` |
+  | `category` | `Platform User` (also matches accounts with no category), `Guest User` |
+  | `isVerified` | `true`, `false` (`false` also matches a missing flag) |
+  | `search` | whitespace-split, max 6 terms; every term must match `firstName`, `lastName`, `companyName`, `Contact.email` or `Contact.telephone` (case-insensitive substring) |
+  | `dateFilter` | account `createdAt`: `last 24 hours`, `3 days ago`, `1 week ago`, `1 month ago`, `custom` (needs `from` and `to`, `YYYY-MM-DD`) |
+  | `sort` | `newest` (default) or `oldest`, on `createdAt` then `_id` |
+  | `page` / `limit` | default 1 / 10, `limit` max 100 |
+
+  **Unsupported keys are ignored, not rejected:** `userType`, `sortBy`, `sortOrder` and any other key have no effect. Use `role` for the user type and `sort` for order. There is no sort by name.
+
+  Filters and sort run in the database before pagination.
+
+  **Counts:** `counts.byRole` and `counts.total` keep every filter **except `role`** (they are the role tab badges), so a `search` narrows them and a `role` does not. Intentional. `pagination.total` is the filtered total.
+
+  **Success 200**
+  ```json
+  { "success": true, "message": "Users retrieved successfully",
+    "data": [ { "_id": "<BaseUser id>", "userId": "<same id>", "firstName": "Favour", "lastName": "…", "companyName": null,
+      "email": "…", "telephone": "…", "photo": "…", "role": "Intern", "profile": "Intern", "category": "Platform User",
+      "accountStatus": "Active", "isVerified": true, "createdAt": "…" } ],
+    "pagination": { "total": 5, "page": 1, "limit": 10, "pages": 1, "hasNext": false, "hasPrev": false },
+    "counts": { "total": 19, "byRole": { "Intern": 5, "Talent": 6, "Mentor": 3, "Admin": 2, "Super_Admin": 1, "Organisation": 2, "Individual": 0, "Student": 0, "Corporate": 0 } } }
+  ```
+  Admin rows also carry `privilege`. Empty result is `200` with `data: []`.
+
+  **400** `{ "success": false, "error": "ValidationError", "message": "role: …" }` (unknown enum value, `limit=0`, `custom` without dates).
+
+  **Verify (read-only):** `?role=Intern`, `?search=Favour`, `?role=Intern&search=Favour` (counts change with search only), `?sort=oldest`.

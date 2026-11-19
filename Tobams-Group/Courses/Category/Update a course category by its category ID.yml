@@ -10,6 +10,13 @@ http:
     - name: id
       value: ""
       type: path
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Software Engineering", // optional, trimmed, 1-100 chars, unique
+        "description": "Frontend, backend and DevOps courses" // optional, up to 1000 chars
+      }
   auth: inherit
 
 settings:
@@ -17,3 +24,21 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs: |-
+  ## Update a course category
+
+  `PATCH /courses/category/:id`. Roles: `Super_Admin`, or `Admin` with `SUPER` or `ASSESSMENT MANAGER`.
+
+  > Behaviour marked **(BE PR)** ships with backend branch `fawaz/admin-api-findings`; staging shows the old behaviour until it is deployed.
+
+  **Body (BE PR):** `name` and/or `description`, at least one. Any other key (`courses`, operators) is ignored. On staging the body is written as sent.
+
+  **Rename:** courses are linked to their category by name, so a rename also moves every course under the old name **(BE PR)**.
+
+  **Responses**
+  - 200 `{ "success": true, "message": "Course category updated successfully", "data": { "_id", "name", "description", "courses": [ids], "createdAt", "updatedAt" } }`
+  - 400 malformed id (`Invalid course category ID`), empty body, blank name
+  - 404 unknown id (staging: 400 `No course category updated`)
+  - 409 `Course category already exists` (name used by another category)
+  - 401 / 403

@@ -25,15 +25,14 @@ settings:
   forwardAuthorizationHeader: true
 
 docs: |-
-  Lists every community (not scoped to the caller's own memberships — see `GET /communities/user-communities` for that).
+  ## All communities
 
-  **Access:** any authenticated role (`ADMIN` additionally needs `AdminPrivilege` SUPER/USER MANAGEMENT/CUSTOMER SERVICE; `SUPER_ADMIN` is unrestricted).
+  `GET /communities?page=&limit=`. Any authenticated role (`Admin` needs `SUPER`, `USER MANAGEMENT` or `CUSTOMER SERVICE`).
 
-  **Visibility:** a non-admin caller never sees `paused`/`archived`/`deactivated` communities (a legacy row with no `status` field at all counts as active and is shown). A platform admin sees every status.
+  - `page` default 1, `limit` default 10. Response `data: { currentCount, totalCount, communities[] }`; `totalCount` is the filtered total, `currentCount` the rows on this page. Each row has `isMember` and `lastMessage`.
+  - The Admin community table should use `GET /communities/user-communities`, which shows admins every non-deleted community in any status with unread counts.
 
-  **Query params:** `page`, `limit` — hand-parsed in the controller (not the shared `parsePagination` middleware), default to `1`/`10` if omitted or non-numeric, with **no upper cap** on `limit`.
-
-  **Response (`data`):** `{ currentCount, totalCount, communities[] }`. Each community carries `isMember` (always known, since the route requires auth), `lastMessage` (`null` if none), and `createdBy` (resolved creator, or `null` if that user can no longer be found).
+  **Search and sorting: not supported.** Unknown query keys (`search`, `sort`, …) are ignored. Rows come in `_id` order (creation order). Hide search and sort controls on this list.
 
 examples:
   - name: Success

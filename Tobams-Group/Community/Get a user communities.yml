@@ -38,6 +38,8 @@ docs: |-
 
   **Response (`data`)**: `{ currentCount, totalCount, communities[] }`. Each community carries `isMember`, `lastMessage` (`null` if none), `createdBy` (resolved creator, or `null` if that user can't be found), and `unreadMessageCount`.
 
+  **Search and sorting: not supported.** Unknown query keys (`search`, `sort`, …) are ignored. Rows come in `_id` order (creation order). Hide search and sort controls on this list.
+
 examples:
   - name: Success (member)
     request:

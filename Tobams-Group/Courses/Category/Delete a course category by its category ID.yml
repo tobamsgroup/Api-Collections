@@ -4,7 +4,7 @@ info:
   seq: 5
 
 http:
-  method: PATCH
+  method: DELETE
   url: "{{BASE}}/courses/category/:id"
   params:
     - name: id
@@ -17,3 +17,18 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs: |-
+  ## Delete a course category
+
+  `DELETE /courses/category/:id` (this entry used to say PATCH; the method is DELETE). Roles: `Super_Admin`, or `Admin` with `SUPER` or `ASSESSMENT MANAGER`.
+
+  **Deletes the category and every course in its `courses` list.** Not reversible.
+
+  **Responses**
+  - 200 `{ "success": true, "message": "Course category deleted successfully", "data": { …the deleted category } }`
+  - 400 `Invalid course category ID`
+  - 404 `Course category not found` (also on a second delete; `GET /courses/category/:id` then reads 404)
+  - 401 / 403
+
+  **Verify safely:** create a throwaway category (`POST /courses/category`), delete it, then GET it (404).

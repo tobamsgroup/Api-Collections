@@ -119,3 +119,34 @@ examples:
               }
             }
           }
+
+docs: |-
+  ## Admin dashboard metrics
+
+  `GET /analytics/metrics`. Roles: `Admin`, `Super_Admin` (no privilege check).
+
+  > Behaviour marked **(BE PR)** ships with backend branch `fawaz/admin-api-findings`; staging shows the old behaviour until it is deployed.
+
+  **Query** (both optional, both filter each record's `createdAt`; unknown keys ignored)
+  - `startDate`: `YYYY-MM-DD` (00:00:00.000Z that UTC day) or ISO-8601 with `Z`/offset (exact instant).
+  - `endDate`: `YYYY-MM-DD` (23:59:59.999Z that UTC day) or ISO-8601 with `Z`/offset.
+  - Both ends are inclusive. `startDate=endDate=2026-11-15` is the whole UTC day.
+  - **Cumulative as of a date:** send `endDate` only. `startDate` alone means "created on or after", so `startDate=<today>` returns 0 when nothing was created today.
+  - A future range returns `200` with zeros.
+
+  **Counts:** `totalUsers` (every account, guests included), `totalApplications`, `activeJobPosts` (Published in-house + client posts), each created inside the range. `dateRange` echoes the normalised bounds, `null` when not sent.
+
+  **Success 200**
+  ```json
+  { "success": true, "message": "Metrics retrieved successfully",
+    "data": { "totalUsers": 19, "totalApplications": 5, "activeJobPosts": 13,
+      "dateRange": { "startDate": null, "endDate": "2026-10-13T23:59:59.999Z" } } }
+  ```
+
+  **400** (malformed date, or `startDate` after `endDate`). Same body for both **(BE PR)**; staging still answers the reversed range with `success: true`.
+  ```json
+  { "success": false, "error": "ValidationError", "message": "endDate: startDate must be before or equal to endDate" }
+  ```
+  401 no token, 403 any other role.
+
+  **Verify (read-only):** `?endDate=2026-10-13`, then `?startDate=2026-10-13&endDate=2026-10-13`, then `?startDate=2026-11-15&endDate=2026-10-13` (expect 400).

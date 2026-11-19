@@ -16,3 +16,16 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+
+docs: |-
+  ## Toggle two-factor authentication (any role, admins included)
+
+  `PATCH /auth/update-mfa/:email`, bearer token. Roles: every role; `Admin` needs `SUPER` or `USER MANAGEMENT`.
+
+  **Body:** `{ "password": "<the account's password>" }`. The call **toggles** MFA (on → off, off → on); there is no explicit on/off value. `:email` is the account's own email; the password must match that account.
+
+  **Success 200:** `{ "success": true, "message": "MFA updated successfully", "data": { …account } }` and an email "Multi-Factor Authentication Status Update". `data` does not include the `MFA` flag (it is a hidden field), so the client cannot read the new state from this response, and no read endpoint returns it today.
+
+  **Errors:** 400 `Password is required`, 400 `User not found`, 401 `Invalid password`.
+
+  **Login with MFA on:** `POST /auth/login` returns no tokens and emails a code; finish with `POST /auth/verify-otp` body `{ "email", "otp", "type": "2FAOtp" }`, which returns the tokens.
