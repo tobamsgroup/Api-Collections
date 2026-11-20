@@ -1,0 +1,49 @@
+info:
+  name: Download payment invoice -- Admin
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{BASE}}/pay/customer-buckets/transaction/:transactionId/invoice"
+  params:
+    - name: transactionId
+      value: "6237845600"
+      type: path
+      description: The payment's provider transaction id (the transactionId column of platform-transactions)
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  ## Download a payment invoice (Admin)
+
+  `GET /pay/customer-buckets/transaction/:transactionId/invoice`. Roles: `Admin`, `Super_Admin`.
+
+  > Ships with backend PR tobamsgroup/Tobams-Group-BE#921. Not on staging until it is merged and deployed.
+
+  Works for **any successful payment, whatever its purpose**: subscription, add-ons, assessment, course, webinar, social event, HATT support, recruitment, and so on. Use the `transactionId` from a `GET /pay/customer-buckets/platform-transactions` row.
+
+  **Invoice number:** each payment gets one number, the first time anyone (admin or payer) asks for its invoice. Later downloads, the payer's own download and resends all use that same number. A subscription invoice the Paystack webhook already wrote for the same reference is reused.
+
+  **Success 200: the PDF file itself**, not JSON.
+  - `Content-Type: application/pdf`
+  - `Content-Disposition: attachment; filename="invoice-000123.pdf"`
+  - `X-Invoice-Number: 123` (exposed to the browser)
+
+  Frontend: request with `responseType: 'blob'` (axios) or `await res.blob()` (fetch), then save it with the filename from `Content-Disposition`.
+
+  The PDF shows: invoice number, issue and payment dates, a PAID mark, billed-to name, email and location, the line items (a subscription lists the plan with interval and period, then add-ons; any other purpose is one line), the total paid in the payment's currency, the payment reference, provider and method.
+
+  **Errors** (JSON)
+  - 400 `{ "success": false, "error": "BadRequestError", "message": "Invoices are issued for successful payments only; this payment is pending" }`. Pending, failed and `provisioned` (admin grants, no money taken) payments have no invoice.
+  - 404 `{ "success": false, "error": "NotFoundError", "message": "Payment not found" }`
+  - 401 no token, 403 any other role.
+
+  **Verify (read-only apart from numbering the invoice):** take a `success` row from `platform-transactions?status=success&purpose=Assessment` and download its invoice.

@@ -1,0 +1,52 @@
+info:
+  name: Resend payment invoice -- Admin
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{BASE}}/pay/customer-buckets/transaction/:transactionId/invoice/resend"
+  params:
+    - name: transactionId
+      value: "6237845600"
+      type: path
+      description: The payment's provider transaction id
+  auth:
+    type: bearer
+    token: "{{admin_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  ## Resend a payment invoice (Admin)
+
+  `POST /pay/customer-buckets/transaction/:transactionId/invoice/resend`. Roles: `Admin`, `Super_Admin`. **No request body.**
+
+  > Ships with backend PR tobamsgroup/Tobams-Group-BE#921. Not on staging until it is merged and deployed.
+
+  For when a user asks for their invoice: emails the invoice PDF (the same file and number as the download) as an attachment to the payer's **email on file**. That is the account's current email, or for a guest payment the email linked to its uuid. The recipient is never taken from the request, so the button cannot send an invoice to anyone else. If the user's address is wrong, update it on their account first.
+
+  **Success 202**
+  ```json
+  { "success": true, "message": "Invoice #123 is on its way to billing@acme.test",
+    "data": { "invoiceNumber": 123, "transactionId": "6237845600", "sentTo": "billing@acme.test",
+      "sentAt": "2026-11-20T10:00:00.000Z", "resendAvailableAt": "2026-11-20T10:05:00.000Z" } }
+  ```
+  202 means the email is queued; delivery itself is asynchronous.
+
+  **Cooldown:** one email per invoice every **5 minutes**. Two clicks at the same time send one email.
+  - 429 `{ "success": false, "error": "RateLimitError", "message": "This invoice was emailed less than 5 minutes ago. Try again after 2026-11-20T10:05:00.000Z" }`
+
+  **Other errors**
+  - 400 the payment is not successful (same message as the download), or the payer has no email on file
+  - 404 `Payment not found`
+  - 503 `The invoice email could not be sent. Try again shortly.` Nothing is sent and the cooldown is not used, so retry straight away.
+  - 401 / 403
+
+  **Suggested button behaviour:** disable it while the request runs. On 202, show "Invoice sent to {sentTo}" and keep it disabled until `resendAvailableAt`. On 429, show the time in the message. On 503, offer a retry.
+
+  Every send is recorded on the invoice (time, recipient, admin) for audit.
