@@ -1,0 +1,255 @@
+info:
+  name: Send assessment to many applicants (bulk)
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{BASE}}/job-apply/assessment/bulk"
+  body:
+    type: multipart-form
+    data:
+      - name: applicationIds
+        type: text
+        value: 67d95f590b44aad1ccf50a4e,67d95f590b44aad1ccf50a50
+      - name: details
+        type: text
+        value: |-
+          Build a small React page that lists jobs from a public API, with search and pagination.
+          Submit a GitHub link within 3 days.
+      - name: attachments
+        type: file
+        value:
+          - /path/to/assessment-brief.pdf
+        contentType: application/pdf
+  auth:
+    type: bearer
+    token: "{{client_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: All sent
+    request:
+      url: "{{BASE}}/job-apply/assessment/bulk"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "applicationIds": ["67d95f590b44aad1ccf50a4e", "67d95f590b44aad1ccf50a50"],
+            "details": "Answer the three questions in the brief and reply to this email with your answers."
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Assessment sent to 2 of 2 candidate(s)",
+            "data": {
+              "requested": 2,
+              "sentCount": 2,
+              "failedCount": 0,
+              "sentApplicationIds": ["67d95f590b44aad1ccf50a4e", "67d95f590b44aad1ccf50a50"],
+              "failed": []
+            }
+          }
+  - name: Some ids failed
+    description: Still a 200. Each failed id carries the status the single route would have answered. Someone else's application is the same 404 as a missing one.
+    request:
+      url: "{{BASE}}/job-apply/assessment/bulk"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "applicationIds": ["67d95f590b44aad1ccf50a4e", "67d95f590b44aad1ccf50a51", "67d95f590b44aad1ccf50a52"],
+            "details": "Answer the three questions in the brief and reply to this email with your answers."
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "success": true,
+            "message": "Assessment sent to 1 of 3 candidate(s)",
+            "data": {
+              "requested": 3,
+              "sentCount": 1,
+              "failedCount": 2,
+              "sentApplicationIds": ["67d95f590b44aad1ccf50a4e"],
+              "failed": [
+                {
+                  "applicationId": "67d95f590b44aad1ccf50a51",
+                  "statusCode": 400,
+                  "message": "Application must be moved to the Assessment stage before sending an assessment"
+                },
+                {
+                  "applicationId": "67d95f590b44aad1ccf50a52",
+                  "statusCode": 404,
+                  "message": "Job application not found"
+                }
+              ]
+            }
+          }
+  - name: Missing applicationIds
+    request:
+      url: "{{BASE}}/job-apply/assessment/bulk"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "applicationIds: applicationIds must be an array of application IDs"
+          }
+  - name: Empty applicationIds
+    request:
+      url: "{{BASE}}/job-apply/assessment/bulk"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "applicationIds: At least one application ID is required"
+          }
+  - name: More than 100 ids
+    request:
+      url: "{{BASE}}/job-apply/assessment/bulk"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "applicationIds: A maximum of 100 applications can be sent an assessment at once"
+          }
+  - name: Duplicate ids
+    description: The same id in any letter case counts as a repeat.
+    request:
+      url: "{{BASE}}/job-apply/assessment/bulk"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "applicationIds: Application IDs must be unique"
+          }
+  - name: Malformed id
+    request:
+      url: "{{BASE}}/job-apply/assessment/bulk"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "applicationIds.1: Invalid application ID format"
+          }
+  - name: Blank details
+    request:
+      url: "{{BASE}}/job-apply/assessment/bulk"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "ValidationError",
+            "message": "details: Assessment details are required"
+          }
+  - name: Attachment not a PDF
+    request:
+      url: "{{BASE}}/job-apply/assessment/bulk"
+      method: POST
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "BadRequestError",
+            "message": "Only PDF files are allowed as assessment attachments."
+          }
+  - name: Role not allowed
+    description: Talent, intern, mentor, or an admin without SUPER, JOB_POST or USER_MANAGEMENT
+    request:
+      url: "{{BASE}}/job-apply/assessment/bulk"
+      method: POST
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "AuthorizationError",
+            "message": "Restricted Action, Unauthorized Access❗"
+          }
+
+docs: |-
+  Sends the same assessment (details and PDFs) to many applicants in one request. Each id is handled exactly like `POST /job-apply/:applicationId/assessment`: same ownership rule, same Assessment-stage precondition, same email and in-app notification.
+
+  **Who can call:** `ORGANISATION` (only its own applications), `SUPER_ADMIN`, or `ADMIN` with `SUPER`, `JOB_POST` or `USER_MANAGEMENT`. Admins can send for any application, including in-house (Tobams Group) ones. Someone else's application is the same 404 as a missing one.
+
+  **Body:** JSON, or `multipart/form-data` when attaching PDFs.
+
+  | Field | Type | Rules |
+  | --- | --- | --- |
+  | `applicationIds` | array of ids | Required. 1-100 application ids (24-hex), no repeats in any case. In multipart send it as a repeated field, a JSON array string (`["id1","id2"]`) or one comma-separated string. |
+  | `details` | text | Required. Trimmed, not blank, at most 2,000 words. |
+  | `attachments` | file, repeatable | Optional, multipart only. PDF only, 4MB each, at most 5. Shared by every applicant. |
+
+  The body is validated before any file is uploaded, so a bad body uploads nothing. A client-sent `attachmentUrls` is ignored.
+
+  **Response:** always 200 on a valid body, even if every id fails. `data`:
+
+  | Field | Meaning |
+  | --- | --- |
+  | `requested` | number of ids sent |
+  | `sentCount` / `failedCount` | how many were sent / failed |
+  | `sentApplicationIds` | ids that were sent, lower-cased |
+  | `failed` | `[{ applicationId, statusCode, message }]`, the status and message the single route would have answered (404 missing or not yours, 400 not at `Assessment`, 409 stage changed during the send). An unexpected error is `500` with `Failed to send assessment`. |
+
+  One failing id never stops the rest. This is not all-or-nothing: emails already sent can't be taken back, so retry only the `failed` ids.
+
+  **Files:** uploaded once and shared by every sent application. If no id is sent (every id fails, or the request fails or the client disconnects before anything is saved), the uploaded files are deleted again.
+
+  **Delivery:** as the single route. Replies go to the hiring organisation's email; for in-house applications to the sending admin's email (falling back to the platform admin address). Guests get the email only.

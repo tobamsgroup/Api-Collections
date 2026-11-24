@@ -150,6 +150,26 @@ examples:
             "error": "BadRequestError",
             "message": "Application must be moved to the Assessment stage before sending an assessment"
           }
+  - name: Stage changed during the send
+    description: Another request moved the application (for example rejected it) between the read and the write. Nothing is written or sent.
+    request:
+      url: "{{BASE}}/job-apply/:applicationId/assessment"
+      params:
+        - name: applicationId
+          value: 67d95f590b44aad1ccf50a4e
+          type: path
+      method: POST
+    response:
+      status: 409
+      statusText: Conflict
+      body:
+        type: json
+        data: |-
+          {
+            "success": false,
+            "error": "DuplicateError",
+            "message": "Application stage was changed by another request. Refresh and try again."
+          }
   - name: Missing details
     request:
       url: "{{BASE}}/job-apply/:applicationId/assessment"
@@ -337,8 +357,10 @@ docs: |-
   | `details` | text | Required. Trimmed, not blank, at most 2,000 words. |
   | `attachments` | file, repeatable | Optional. PDF only, 4MB each, at most 5. Send the field once per file. |
 
-  Files are uploaded to S3 and their URLs stored as `assessmentAttachments`. A client-sent `attachmentUrls` is ignored and replaced by the uploaded URLs. Every file is checked before any is uploaded, so one bad file uploads nothing.
+  Files are uploaded to S3 under a unique key and their URLs stored as `assessmentAttachments`. A client-sent `attachmentUrls` is ignored and replaced by the uploaded URLs. Every file is checked before any is uploaded, so one bad file uploads nothing. Uploaded files that no application ends up storing (any error response, a failed validation, or the client disconnecting before the send saves) are deleted again.
 
-  **Response:** the updated application, with `assessmentDetails` and `assessmentAttachments` set. Sending again overwrites both.
+  **Response:** the updated application, with `assessmentDetails` and `assessmentAttachments` set. Sending again overwrites both. If another request moves the application off `Assessment` while the send runs, it is a 409 and nothing is written or sent.
 
-  **Delivery:** the applicant's email comes from their account, or from the application for a guest applicant. Replies go to the organisation's email. Guests get the email only (no in-app notification). Delivery is in the background and does not affect the response.
+  **Bulk:** to send the same assessment to many applicants, use `POST /job-apply/assessment/bulk`.
+
+  **Delivery:** the applicant's email comes from their account, or from the application for a guest applicant. Replies go to the hiring organisation's email. For in-house (Tobams Group) applications, which only admins can reach, the email is sent as the stored company or Tobams Group and replies go to the sending admin's own email (falling back to the platform admin address). Guests get the email only (no in-app notification). Delivery is in the background and does not affect the response.
