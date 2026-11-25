@@ -213,6 +213,6 @@ docs: |-
 
   **Rows** include `rejectedAtStage`: the stage a rejected applicant had reached, `null` otherwise and on rows rejected before the field existed.
 
-  **Rows** include `candidatePhoto`: the applicant account's profile photo URL, for talents and interns. `null` for a guest application (no account), an account with no photo, or an account deleted after applying.
+  **Rows** include `candidatePhoto`: the applicant account's profile photo URL, for talents and interns. `null` for a guest application (no account), an account with no photo, or an account deleted after applying. If the photo lookup fails, the list still loads and every `candidatePhoto` is `null`.
 
   **`stageCounts`** feeds the tabs. It ignores the `stage` filter and respects the other filters.
