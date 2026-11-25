@@ -1,0 +1,96 @@
+info:
+  name: Schedule interviews in bulk
+  type: http
+  seq: 28
+
+http:
+  method: POST
+  url: "{{BASE}}/interviews/schedule/bulk"
+  params:
+    - name: userId
+      value: ""
+      type: query
+      description: Admins and super admins only. Must be the organisation that owns the applications
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "jobPostId": "6941a7eef0746ae602693990", // required. 24-hex id. Every applicant must have applied to this post
+        "role": "Frontend Developer", // required. Job title shown to the applicants
+        "message": "You have been shortlisted for an interview.", // optional. Shown to every applicant
+        "interviews": [
+          { "applicantId": "691ec925d5b3456cd06e5ce0", "date": "2028-03-15", "startTime": "10:00 AM", "endTime": "10:30 AM" },
+          { "applicantId": "691ec925d5b3456cd06e5ce1", "date": "2028-03-15", "startTime": "10:30 AM", "endTime": "11:00 AM" },
+          { "applicantId": "691ec925d5b3456cd06e5ce2", "date": "2028-03-15", "startTime": "12:00 PM", "endTime": "12:30 PM" }
+        ] // required. 1 to 50 items, one per applicant. date: YYYY-MM-DD or ISO datetime. Times: "10:00 AM" or "10:00"
+      }
+  auth:
+    type: bearer
+    token: "{{org_access}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
+
+examples:
+  - name: Sample Success
+    request:
+      url: "{{BASE}}/interviews/schedule/bulk"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "jobPostId": "6941a7eef0746ae602693990",
+            "role": "Frontend Developer",
+            "interviews": [
+              { "applicantId": "691ec925d5b3456cd06e5ce0", "date": "2028-03-15", "startTime": "10:00 AM", "endTime": "10:30 AM" },
+              { "applicantId": "691ec925d5b3456cd06e5ce1", "date": "2028-03-15", "startTime": "10:30 AM", "endTime": "11:00 AM" },
+              { "applicantId": "691ec925d5b3456cd06e5ce2", "date": "2028-03-15", "startTime": "12:00 PM", "endTime": "12:30 PM" }
+            ]
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: |-
+          {
+            "success": true,
+            "message": "2 of 3 interviews scheduled",
+            "data": {
+              "requested": 3,
+              "scheduledCount": 2,
+              "failedCount": 1,
+              "scheduled": [
+                { "_id": "6a01f0c2a1b2c3d4e5f60718", "applicantId": "691ec925d5b3456cd06e5ce0", "companyId": "694fe5a0f25f5a8a99b11376", "companyName": "Progress Hub", "role": "Frontend Developer", "date": "2028-03-15T00:00:00.000Z", "startTime": "10:00 AM", "endTime": "10:30 AM", "status": "Pending" },
+                { "_id": "6a01f0c2a1b2c3d4e5f60719", "applicantId": "691ec925d5b3456cd06e5ce1", "companyId": "694fe5a0f25f5a8a99b11376", "companyName": "Progress Hub", "role": "Frontend Developer", "date": "2028-03-15T00:00:00.000Z", "startTime": "10:30 AM", "endTime": "11:00 AM", "status": "Pending" }
+              ],
+              "failed": [
+                { "applicantId": "691ec925d5b3456cd06e5ce2", "statusCode": 409, "message": "An interview is already scheduled from 12:00 PM to 1:00 PM on 2028-03-15. Pick a time that does not overlap it." }
+              ]
+            }
+          }
+
+docs: |-
+  > Ships with backend branch `fawaz/bulk-interview-scheduling-88e2de`; staging returns 404 for this route until it is deployed.
+
+  **Who:** same as `POST /interviews/schedule`. An organisation schedules on its own applications; admins and super admins schedule as themselves (Tobams Group, in-house) or name the owning organisation with `?userId`. A non-admin naming another id gets a 403.
+
+  **Body:** one `jobPostId`, `role` and optional `message` for the batch, and one item per applicant with its own `date`, `startTime` and `endTime`. The frontend spaces the times out.
+
+  **No overlaps (also applies to `POST /interviews/schedule`):** a time is refused with 409 when the company already has a `Pending`, `Scheduled` or `Rescheduled` interview that overlaps it on the same day (Africa/Lagos). The company is the organisation, or the admin when scheduling in-house. `Cancelled` and `Completed` interviews free the slot. Back-to-back is fine: 10:00-10:30 then 10:30-11:00. The applicant's interviews with other companies are not checked.
+
+  **400, nothing created:** the same applicant twice, two items that overlap each other, an end time not after the start, an unreadable date or time, no items, or more than 50.
+
+  **Response:** always 200 on a valid body. Each item runs like a single schedule, in order, so an item can be refused because an earlier item in the same batch took the time. Read each outcome from `data.scheduled` and `data.failed` (`applicantId`, `statusCode`, `message`); one failure never stops the rest. Typical failures: 409 overlap, 404 no application on this post (or another company's), 400 rejected applicant.
+
+  **Notifications:** each applicant gets the usual interview invitation. The company gets one summary email and in-app message listing every interview created, not one per interview, and nothing if none were created.
+
+  **Stage:** each created interview moves its application to `Interview`, same as the single route.
+
+  **Not atomic:** two requests at the same moment can both pass and overlap. Reschedules are not checked for overlap.
