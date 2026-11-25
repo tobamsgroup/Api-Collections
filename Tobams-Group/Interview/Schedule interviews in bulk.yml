@@ -85,7 +85,7 @@ docs: |-
 
   **No overlaps (also applies to `POST /interviews/schedule`):** a time is refused with 409 when the company already has a `Pending`, `Scheduled` or `Rescheduled` interview that overlaps it on the same day (Africa/Lagos). The company is the organisation, or the admin when scheduling in-house. `Cancelled` and `Completed` interviews free the slot. Back-to-back is fine: 10:00-10:30 then 10:30-11:00. The applicant's interviews with other companies are not checked.
 
-  **400, nothing created:** the same applicant twice, two items that overlap each other, an end time not after the start, an unreadable date or time, no items, or more than 50.
+  **400, nothing created:** the same applicant twice, two items that overlap each other, equal start and end times or an interview over 12 hours (an end time before the start ends the next day, e.g. 11:00 PM to 1:00 AM), an unreadable date or time, no items, or more than 50.
 
   **Response:** always 200 on a valid body. Each item runs like a single schedule, in order, so an item can be refused because an earlier item in the same batch took the time. Read each outcome from `data.scheduled` and `data.failed` (`applicantId`, `statusCode`, `message`); one failure never stops the rest. Typical failures: 409 overlap, 404 no application on this post (or another company's), 400 rejected applicant.
 
@@ -93,4 +93,4 @@ docs: |-
 
   **Stage:** each created interview moves its application to `Interview`, same as the single route.
 
-  **Not atomic:** two requests at the same moment can both pass and overlap. Reschedules are not checked for overlap.
+  **Simultaneous requests:** checks and writes for one company run one at a time, so two batches sent together never double-book. An item that waits more than 5 seconds for another write fails with 503 in `failed`; retry it. Reschedules are checked for overlap too.

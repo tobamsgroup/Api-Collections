@@ -376,4 +376,6 @@ docs: |-
 
   **Reminder:** the applicant gets one reminder with the link the day before: from a daily job at 09:00 Lagos time, or straight away if they accept after that. Only `Scheduled` interviews get one. A reschedule resets it, so the new date gets its own reminder once accepted.
 
+  **Reschedule overlap (BE PR):** a new time that overlaps another `Pending`, `Scheduled` or `Rescheduled` interview of the same company is a **409** (`An interview is already scheduled from 10:00 AM to 11:00 AM on 2028-03-15. Pick a time that does not overlap it.`), whichever party reschedules, and nothing changes. The interview's own old time never blocks it; back-to-back is fine. An end time before the start time ends the next day, up to 12 hours; longer, or equal times, is a 400. If another schedule for the same company is being written at that moment and doesn't finish within 5 seconds, the answer is **503**: retry. Ships with backend branch `fawaz/bulk-interview-scheduling-88e2de`.
+
   **Stage:** this changes only the interview's own `status`. It never changes the application's stage: accepting, declining, rescheduling, completing or cancelling all leave the candidate where they are. The stage moves to `Interview` when the interview is scheduled.
