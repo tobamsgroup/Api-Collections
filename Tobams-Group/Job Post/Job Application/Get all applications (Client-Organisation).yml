@@ -638,4 +638,6 @@ docs: |-
 
   **Rows** include `rejectedAtStage`: the stage a rejected applicant had reached, `null` otherwise and on rows rejected before the field existed.
 
+  **`jobPostId`** on every row is the application's job post id. Send it as `jobPostId` to `POST /interviews/schedule` and `POST /interviews/schedule/bulk`.
+
   **`stageCounts`** feeds the tabs. It ignores the `stage` filter and respects the other filters.
