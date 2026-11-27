@@ -731,6 +731,8 @@ docs: |-
 
   **Rows** include `rejectedAtStage`: the stage a rejected applicant had reached, `null` otherwise and on rows rejected before the field existed.
 
+  **Rows** include `candidatePhoto`: the applicant account's profile photo URL, for talents and interns. `null` for a guest application (no account), an account with no photo, or an account deleted after applying. If the photo lookup fails, the list still loads and every `candidatePhoto` is `null`.
+
   **`jobPostId`** on every row is the application's job post id. Send it as `jobPostId` to `POST /interviews/schedule` and `POST /interviews/schedule/bulk`.
 
   **`stageCounts`** feeds the tabs. It ignores the `stage` filter and respects the other filters.
